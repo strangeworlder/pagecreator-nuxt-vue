@@ -425,6 +425,3 @@ Best practice: use SSR for dynamic features or ISR; use static when fully pre-re
 
 ### License
 MIT (to be confirmed)
-
-
-# pagecreator-nuxt-vue

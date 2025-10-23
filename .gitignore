@@ -1,0 +1,66 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Node / package managers
+node_modules/
+.pnpm-store/
+.pnpm/
+.npm/
+
+# Nuxt / build output
+.nuxt/
+.output/
+dist/
+build/
+.cache/
+.temp/
+
+# Vite / TS
+.vite/
+*.tsbuildinfo
+vite.svg
+
+# Coverage
+coverage/
+
+# Environment
+.env
+.env.*.local
+.env.local
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Test artifacts
+playwright-report/
+test-results/
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Lighthouse / CI
+.lighthouseci/
+
+# Public generated (if any)
+public/.generated/
+
+# Nuxt Content caches
+content/.cache/
+

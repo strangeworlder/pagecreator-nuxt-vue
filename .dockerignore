@@ -1,0 +1,16 @@
+node_modules
+.pnpm-store
+.nuxt
+.output
+dist
+coverage
+.git
+.gitignore
+Dockerfile
+docker-compose*.yml
+.env*
+npm-debug.log*
+pnpm-debug.log*
+.vscode
+.idea
+

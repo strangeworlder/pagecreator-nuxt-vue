@@ -34,9 +34,27 @@ function onInput(e: Event) {
     :placeholder="placeholder"
     :aria-describedby="ariaDescribedby"
     :disabled="disabled"
-    class="block w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm shadow-sm focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600"
     @input="onInput"
   />
 </template>
+
+<style scoped>
+input {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-fg);
+  border-radius: var(--radius-md);
+  padding: 0.5rem 0.75rem;
+  font-size: var(--size-2);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+input:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-color: var(--color-accent);
+}
+</style>
 
 

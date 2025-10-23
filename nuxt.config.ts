@@ -1,13 +1,19 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 const env: Record<string, string | undefined> =
-  (globalThis as unknown as { process?: { env?: Record<string, string | undefined> } }).process?.env || {}
+  (globalThis as unknown as { process?: { env?: Record<string, string | undefined> } }).process
+    ?.env || {};
 
-const ISR_TTL = Number(env.NUXT_ISR_TTL || (env.NODE_ENV === 'production' ? 21600 : 60))
-const API_MAX_AGE = Number(env.NUXT_API_MAX_AGE || (env.NODE_ENV === 'production' ? 300 : 60))
-const API_STALE = Number(env.NUXT_API_STALE || (env.NODE_ENV === 'production' ? 21600 : 600))
+const ISR_TTL = Number(env.NUXT_ISR_TTL || (env.NODE_ENV === "production" ? 21600 : 60));
+const API_MAX_AGE = Number(env.NUXT_API_MAX_AGE || (env.NODE_ENV === "production" ? 300 : 60));
+const API_STALE = Number(env.NUXT_API_STALE || (env.NODE_ENV === "production" ? 21600 : 600));
 export default {
   components: [{ path: "~/components", pathPrefix: false }],
   modules: ["@nuxt/content"],
+  css: [
+    "~/assets/styles/tokens.css",
+    "~/assets/styles/prose.css",
+    "~/assets/styles/components.css",
+  ],
   typescript: {
     strict: true,
     shim: false,

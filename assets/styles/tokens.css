@@ -1,0 +1,31 @@
+:root {
+  /* colors */
+  --color-bg: #ffffff;
+  --color-fg: #111827;
+  --color-muted: #6b7280;
+  --color-accent: #2563eb;
+  --color-border: #e5e7eb;
+
+  /* radii */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* typography */
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --size-1: 12px;
+  --size-2: 14px;
+  --size-3: 16px;
+  --size-4: 20px;
+  --size-5: 24px;
+  --size-6: 30px;
+}
+
+html[data-theme="dark"] {
+  --color-bg: #0b1020;
+  --color-fg: #e5e7eb;
+  --color-muted: #94a3b8;
+  --color-accent: #60a5fa;
+  --color-border: #1f2937;
+}

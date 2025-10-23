@@ -1,7 +1,14 @@
 <template>
-  <p class="text-gray-700 leading-6">
+  <p>
     <slot />
   </p>
 </template>
 
+
+<style scoped>
+p {
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+</style>
 

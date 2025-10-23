@@ -1,16 +1,44 @@
 <script setup lang="ts">
 // @ts-nocheck
-import { ref, computed } from "vue";
+import { computed, ref } from "vue";
+import ProseA from "~/components/prose/ProseA.vue";
+import ProseBlockquote from "~/components/prose/ProseBlockquote.vue";
+import ProseCode from "~/components/prose/ProseCode.vue";
+import ProseH1 from "~/components/prose/ProseH1.vue";
+import ProseH2 from "~/components/prose/ProseH2.vue";
+import ProseH3 from "~/components/prose/ProseH3.vue";
+import ProseLi from "~/components/prose/ProseLi.vue";
+import ProseOl from "~/components/prose/ProseOl.vue";
+import ProseP from "~/components/prose/ProseP.vue";
+import ProsePre from "~/components/prose/ProsePre.vue";
+import ProseUl from "~/components/prose/ProseUl.vue";
 import { queryContent } from "#imports";
 const initial = await queryContent("/en").where({ _path: "/en" }).findOne();
-const docState = useState<any>("content-doc", () => null);
-const version = useState<number>("content-doc-version", () => 0)
-const data = computed(() => (version.value, docState.value || initial));
+const docState = useState<Record<string, unknown> | null>("content-doc", () => null);
+const version = useState<number>("content-doc-version", () => 0);
+const data = computed(() => {
+  void version.value; // depend on version updates
+  return docState.value ?? initial;
+});
 const email = ref("");
+
+const proseComponents = {
+  h1: ProseH1,
+  h2: ProseH2,
+  h3: ProseH3,
+  p: ProseP,
+  a: ProseA,
+  code: ProseCode,
+  pre: ProsePre,
+  ul: ProseUl,
+  ol: ProseOl,
+  li: ProseLi,
+  blockquote: ProseBlockquote,
+};
 </script>
 
 <template>
-  <div class="prose mx-auto p-6">
+  <div class="prose">
     <BaseHeader :level="1">Welcome</BaseHeader>
     <BaseParagraph>This is the TSS starter. Content below is rendered from Markdown.</BaseParagraph>
 
@@ -20,12 +48,12 @@ const email = ref("");
       </template>
     </FormField>
 
-    <div class="mt-4">
+    <div>
       <BaseButton variant="primary" @click="() => alert(`Email: ${email}`)">Submit</BaseButton>
     </div>
 
-    <div class="mt-8">
-      <ContentRenderer v-if="data" :key="version" :value="data" />
+    <div>
+      <ContentRenderer v-if="data" :key="version" :value="data" :components="proseComponents" />
     </div>
   </div>
 </template>

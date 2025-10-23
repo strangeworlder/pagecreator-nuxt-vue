@@ -1,0 +1,30 @@
+/* Global element defaults using tokens */
+html,
+body {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Links outside prose */
+a {
+  color: var(--color-accent);
+}
+
+/* Code blocks outside prose */
+pre {
+  background: color-mix(in oklab, var(--color-border), transparent 60%);
+  padding: 1em;
+  border-radius: var(--radius-md);
+  overflow: auto;
+}
+code {
+  background: color-mix(in oklab, var(--color-border), transparent 70%);
+  padding: 0.15em 0.35em;
+  border-radius: var(--radius-sm);
+}

@@ -25,20 +25,39 @@ const describedBy = computed(() => {
 </script>
 
 <template>
-  <div class="w-full">
+  <div>
     <BaseLabel :for-id="id">
-      {{ label }}<span v-if="required" aria-hidden="true" class="text-red-600"> *</span>
+      {{ label }}<span v-if="required" aria-hidden="true"> *</span>
     </BaseLabel>
 
     <slot name="control" :id="id" :ariaDescribedBy="describedBy" />
 
-    <p v-if="helpText" :id="`${id}-help`" class="mt-1 text-xs text-gray-500">
+    <p v-if="helpText" :id="`${id}-help`">
       {{ helpText }}
     </p>
-    <p v-if="error" :id="`${id}-error`" class="mt-1 text-xs text-red-600">
+    <p v-if="error" :id="`${id}-error`">
       {{ error }}
     </p>
   </div>
 </template>
+
+<style scoped>
+div {
+  width: 100%;
+}
+label span[aria-hidden="true"] {
+  color: #dc2626;
+}
+p[id$="-help"] {
+  margin-top: 0.25rem;
+  font-size: var(--size-1);
+  color: var(--color-muted);
+}
+p[id$="-error"] {
+  margin-top: 0.25rem;
+  font-size: var(--size-1);
+  color: #dc2626;
+}
+</style>
 
 

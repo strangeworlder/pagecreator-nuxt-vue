@@ -117,10 +117,27 @@ llmPriority: 0.8                              # optional signal for inclusion in
 Your Markdown content starts here.
 ```
 
-### Routing and localization (optional)
-- **URL strategy**: Prefix routes with locale (`/en/...`, `/fi/...`). Provide `x-default` home route.
-- **Hreflang**: Emit `hreflang` for each localized variant and `x-default` for SERP disambiguation.
-- **Canonical**: Normalize canonical to the localized path to avoid duplicate content.
+### Routing and localization
+- **URL strategy**: Prefix routes with locale (`/en/...`, `/fi/...`). `/` resolves to `NUXT_PUBLIC_DEFAULT_LOCALE`.
+- **Rendering**: `pages/index.vue` renders `/`; `pages/[...slug].vue` renders any Markdown doc at its `_path`.
+- **Hreflang**: Add `alternateLocales` in front‑matter to emit `hreflang` for each variant; `x-default` points to the default locale.
+- **Canonical**: Defaults to the document `_path` under `siteUrl`; override via `canonical` in front‑matter.
+
+### Head/meta from content
+Per‑page `<head>` is generated from Markdown front‑matter via `useContentHead(doc)`:
+- `title`, `description`
+- `image` (used for Open Graph/Twitter cards)
+- `canonical` (fallback: `_path` + `siteUrl`)
+- `noindex` (adds `robots: noindex, nofollow`)
+- `alternateLocales` (emits `hreflang` + `x-default`)
+- `structuredData` (merged with base WebPage/Article JSON‑LD)
+
+Usage in pages:
+```ts
+import { useContentHead } from "~/composables/useContentHead";
+// after computing `data` (the current content doc):
+useContentHead(data);
+```
 
 ### Generative Engine Optimization (LLM‑facing)
 - **Information architecture**: One primary question per page; clear H1; concise lead; scannable sections (H2/H3); bullets for lists; definitions and glossary pages for entities.

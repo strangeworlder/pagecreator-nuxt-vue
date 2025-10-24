@@ -1,13 +1,14 @@
 ---
-title: "Mustan kilven kantoni"
-description: "Mustan kilven kantoni"
+title: "Mustan kilven kantoni: Analyysi maailmasta, teemoista ja tyylistä"
+description: "Kattava kuvaus Mustan kilven kantoni -pelimaailman teemoista ja tyylistä ja valinnoista"
 datePublished: 2025-10-23
 dateModified: 2025-10-23
 tags: ["L&L", "maailma"]
+canonical: "/fi/mustan-kilven-kantoni"
+alternateLocales: ["en"]
 summary: |
   Mustan kilven kantoni on seikkailumaailma.
 ---
-# Mustan kilven kantoni: Analyysi maailmasta, teemoista ja tyylistä
 Petri Leinosen luoma Mustan kilven kantonin seikkailumaailma on poikkeuksellisen syvällinen fantasiamaailma, joka ammentaa suomalaisesta kansanperinteestä, historiasta ja luontosuhteesta. Kyseessä ei ole perinteinen korkean fantasian näyttämö, vaan melankolinen ja samalla toiveikas maailma, joka on toipumassa aiemmasta, sivilisaation romahduttaneesta mullistuksesta. Menneisyyden haamut ja luonnon mysteerit ovat siinä alati läsnä. Tämä syväluotaava analyysi tarkastelee kantonin ydintä, teemoja, keskeisiä vaikutteita ja tyyliä pohjautuen kaikkiin toimitettuihin lähdeaineistoihin.
 ## Maailma tuhon jälkeen: Perusasetelma
 Maailman lähtökohtana on maaginen mullistus, joka tuhosi tunnetun sivilisaation. Ihmiskunnan rippeet, yhdeksän kansakuntaa, tekivät sopimuksen auringonjumala Aureliuksen kanssa. Jumala loi kansakuntien ympärille suojaavan rajan, jonka sisäpuolelle tuho ei ulottunut. Tästä syntyi Pyhä konfederaatio ja sen yhdeksän kantonia.
@@ -18,6 +19,8 @@ Pelaajahahmot kuuluvat "Rediscovery Company" -retkikuntaan, joka on yksi harvois
 
 ## Mustan kilven kantoni: Pohjoinen erämaa
 Mustan kilven kantoni on konfederaation pohjoisin linnake. Se on karu, metsäinen ja järvien täplittämä maa, jonka vuodenajat ovat ankarat ja selkeät. Pääelinkeinoja ovat puutavarakauppa ja vaatimaton maanviljely. Elämä on maanläheistä ja käytännöllistä.Yhteiskunnassa yhdistyvät järjestys ja vanhat perinteet. Vaikka Aureliuksen kirkolla on vahva asema, pohjoisessa turvaudutaan yhä vanhoihin metsänjumaliin: Karhuun (metsän kuningas), Ilvekseen (salaisuuksien vartija) ja Oravaan (kuoleman jumala). Tämä virallisen, järjestäytyneen uskonnon ja animistisen, kunnioittavan luontosuhteen välinen kaksijakoisuus muodostaa yhden maailman keskeisistä jännitteistä.
+
+![A descriptive alt text](/images/test-troll.webp)
 
 ## Keskeiset teemat ja vaikutteet
 Maailman omaleimaisuus kumpuaa siitä, että se poikkeaa tietoisesti angloamerikkalaisen fantasian vakiintuneimmista käytänteistä ja rakentaa tilalle jotain aidosti suomalaista.

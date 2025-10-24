@@ -3,7 +3,7 @@
 FROM node:20-alpine AS base
 WORKDIR /app
 ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
-RUN corepack enable && corepack prepare pnpm@10.19.0 --activate && apk add --no-cache libc6-compat
+RUN corepack enable && corepack prepare pnpm@10.19.0 --activate && apk add --no-cache libc6-compat imagemagick libwebp-tools
 
 FROM base AS deps
 COPY package.json pnpm-lock.yaml* ./
@@ -25,6 +25,7 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV NITRO_PORT=3000
 ENV HOST=0.0.0.0
+RUN apk add --no-cache imagemagick libwebp-tools
 COPY --from=build-ssr /app/.output ./.output
 EXPOSE 3000
 CMD ["node", ".output/server/index.mjs"]

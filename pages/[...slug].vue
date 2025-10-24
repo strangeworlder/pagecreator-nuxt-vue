@@ -1,7 +1,8 @@
 <script setup lang="ts">
 // @ts-nocheck
-import { computed, ref, watch } from "vue";
+import { computed, watch } from "vue";
 import { queryContent } from "#imports";
+import { useCustomContentHead } from "~/composables/useContentHead";
 import ProseA from "~/components/prose/ProseA.vue";
 import ProseBlockquote from "~/components/prose/ProseBlockquote.vue";
 import ProseCode from "~/components/prose/ProseCode.vue";
@@ -13,6 +14,9 @@ import ProseOl from "~/components/prose/ProseOl.vue";
 import ProseP from "~/components/prose/ProseP.vue";
 import ProsePre from "~/components/prose/ProsePre.vue";
 import ProseUl from "~/components/prose/ProseUl.vue";
+import ProseImg from "~/components/prose/ProseImg.vue";
+import PageHeader from "~/components/molecules/PageHeader.vue";
+import PageFooter from "~/components/molecules/PageFooter.vue";
 
 const route = useRoute();
 const runtime = useRuntimeConfig();
@@ -32,7 +36,7 @@ const data = computed(() => {
   void version.value; // depend on version updates
   return docState.value ?? initial;
 });
-const email = ref("");
+useCustomContentHead(data);
 
 watch(
   () => route.fullPath,
@@ -59,27 +63,28 @@ const proseComponents = {
   ol: ProseOl,
   li: ProseLi,
   blockquote: ProseBlockquote,
+  img: ProseImg,
 };
+
+// Get title and description from front-matter
+const pageTitle = computed(() => {
+  return (data.value as any)?.title || "Welcome";
+});
+
+const pageDescription = computed(() => {
+  return (data.value as any)?.description || "This is the TSS starter. Content below is rendered from Markdown.";
+});
 </script>
 
 <template>
   <div class="prose">
-    <BaseHeader :level="1">Welcome</BaseHeader>
-    <BaseParagraph>This is the TSS starter. Content below is rendered from Markdown.</BaseParagraph>
-
-    <FormField id="email" label="Email" help-text="We will not share your email.">
-      <template #control="{ id, ariaDescribedBy }">
-        <BaseInput v-model="email" :id="id" type="email" :aria-describedby="ariaDescribedBy" />
-      </template>
-    </FormField>
-
-    <div>
-      <BaseButton variant="primary" @click="() => alert(`Email: ${email}`)">Submit</BaseButton>
-    </div>
+    <PageHeader :title="pageTitle" :description="pageDescription" />
 
     <div>
       <ContentRenderer v-if="data" :key="version" :value="data" :components="proseComponents" />
     </div>
+
+    <PageFooter />
   </div>
 </template>
 

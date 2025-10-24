@@ -4,6 +4,8 @@ description: "TSS Starter Home"
 datePublished: 2025-10-23
 dateModified: 2025-10-23
 tags: ["starter"]
+canonical: "/en"
+alternateLocales: ["fi"]
 summary: |
   This is the home page rendered from Markdown using @nuxt/content.
 ---

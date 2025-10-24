@@ -15,6 +15,7 @@ sh:
 build-ssr:
 	docker build -t tss-ssr --target runner-ssr .
 
+
 run-ssr:
 	docker run --rm -p 3000:3000 --env-file .env tss-ssr
 

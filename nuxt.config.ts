@@ -19,7 +19,7 @@ export default {
     shim: false,
   },
   nitro: {
-    compatibilityDate: "2025-10-23",
+    compatibilityDate: "2025-10-24",
     experimental: {
       websocket: true,
     },
@@ -36,6 +36,7 @@ export default {
     "/api/**": { cache: { swr: API_STALE, maxAge: API_MAX_AGE } },
     "/ws": { cors: true, websocket: true },
     "/api/ws": { cors: true, websocket: true },
+    // "/api/image": { cache: { maxAge: 300, swr: 300 } },
   },
   runtimeConfig: {
     public: {
@@ -45,6 +46,7 @@ export default {
       defaultLocale: env.NUXT_PUBLIC_DEFAULT_LOCALE || "en",
     },
   },
+  // Using custom /api/i endpoint for transforms to avoid native deps
   content: {
     highlight: {
       theme: "github-dark",

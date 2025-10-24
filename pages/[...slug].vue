@@ -1,6 +1,7 @@
 <script setup lang="ts">
 // @ts-nocheck
 import { computed, ref, watch } from "vue";
+import { queryContent } from "#imports";
 import ProseA from "~/components/prose/ProseA.vue";
 import ProseBlockquote from "~/components/prose/ProseBlockquote.vue";
 import ProseCode from "~/components/prose/ProseCode.vue";
@@ -12,7 +13,6 @@ import ProseOl from "~/components/prose/ProseOl.vue";
 import ProseP from "~/components/prose/ProseP.vue";
 import ProsePre from "~/components/prose/ProsePre.vue";
 import ProseUl from "~/components/prose/ProseUl.vue";
-import { queryContent } from "#imports";
 
 const route = useRoute();
 const runtime = useRuntimeConfig();
@@ -25,6 +25,7 @@ const resolveContentPath = (path: string) => {
 const initial = await queryContent(resolveContentPath(route.path))
   .where({ _path: resolveContentPath(route.path) })
   .findOne();
+
 const docState = useState<Record<string, unknown> | null>("content-doc", () => null);
 const version = useState<number>("content-doc-version", () => 0);
 const data = computed(() => {
@@ -81,4 +82,5 @@ const proseComponents = {
     </div>
   </div>
 </template>
+
 

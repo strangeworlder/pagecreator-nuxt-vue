@@ -18,4 +18,4 @@ This is interesting. I'm seeing one version old stuff!
 
 ## Testing
 
-[http://google.fi]
+[Text](http://google.fi).

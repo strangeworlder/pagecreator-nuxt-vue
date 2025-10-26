@@ -31,7 +31,6 @@ const EXTERNAL_RE = /^(https?:)?\/\//
 
 <style scoped>
   a[href^="http"]::after {
-    content: "🔗";
-    margin-left: 0.25em;
+    content: " ↗";
   }
 </style>

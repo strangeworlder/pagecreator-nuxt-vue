@@ -4,14 +4,10 @@ import { computed, watch } from "vue";
 import { queryContent } from "#imports";
 import { useCustomContentHead } from "~/composables/useContentHead";
 import ProseA from "~/components/prose/ProseA.vue";
-import { defineAsyncComponent } from "vue";
+import { defineAsyncComponent, defineComponent, h } from "vue";
 import ProseBlockquote from "~/components/prose/ProseBlockquote.vue";
 import ProseCode from "~/components/prose/ProseCode.vue";
-import ProseH1 from "~/components/prose/ProseH1.vue";
-import ProseH2 from "~/components/prose/ProseH2.vue";
-import ProseH3 from "~/components/prose/ProseH3.vue";
-import ProseH4 from "~/components/prose/ProseH4.vue";
-import ProseH5 from "~/components/prose/ProseH5.vue";
+import ProseHeading from "~/components/prose/ProseHeading.vue";
 import ProseLi from "~/components/prose/ProseLi.vue";
 import ProseOl from "~/components/prose/ProseOl.vue";
 import ProseP from "~/components/prose/ProseP.vue";
@@ -126,14 +122,27 @@ watch(
 
 const enhancementsEnabled = useState<boolean>("content-enhance-ready", () => false);
 
+const EnhancedHeadingComp = defineAsyncComponent(() => import("~/components/prose/ProseHeadingEnhanced.client.vue"))
+
+const makeHeading = (level: 1 | 2 | 3 | 4 | 5 | 6) =>
+  defineComponent({
+    name: `ProseH${level}Wrapper`,
+    inheritAttrs: false,
+    setup(_, { slots, attrs }) {
+      return () => {
+        const Comp: any = enhancementsEnabled.value ? EnhancedHeadingComp : ProseHeading
+        return h(Comp, { ...attrs, level }, slots)
+      }
+    },
+  })
+
 const proseComponents = computed(() => ({
-  h1: ProseH1,
-  h2: enhancementsEnabled.value
-    ? defineAsyncComponent(() => import("~/components/prose/ProseH2Enhanced.client.vue"))
-    : ProseH2,
-  h3: ProseH3,
-  h4: ProseH4,
-  h5: ProseH5,
+  h1: makeHeading(1),
+  h2: makeHeading(2),
+  h3: makeHeading(3),
+  h4: makeHeading(4),
+  h5: makeHeading(5),
+  h6: makeHeading(6),
   p: ProseP,
   a: enhancementsEnabled.value
     ? defineAsyncComponent(() => import("~/components/prose/ProseAEnhanced.client.vue"))

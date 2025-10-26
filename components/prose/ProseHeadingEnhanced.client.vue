@@ -1,14 +1,16 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onUnmounted, computed } from 'vue'
 
-// Accept common heading attributes via $attrs, especially id
+const props = defineProps<{ level?: 1 | 2 | 3 | 4 | 5 | 6 }>()
 
 const copying = ref(false)
-const h2Ref = ref<any>()
-const copiedTimeout = ref<NodeJS.Timeout>()
+const headingRef = ref<any>()
+const copiedTimeout = ref<NodeJS.Timeout | null>(null)
+
+const tag = computed(() => `h${props.level || 2}`)
 
 const getId = (): string | undefined => {
-  const raw = h2Ref.value as any
+  const raw = headingRef.value as any
   const el: HTMLElement | null = raw instanceof HTMLElement ? raw : (raw?.$el as HTMLElement | null)
   const id = el?.getAttribute('id') || (el?.id ?? undefined)
   return id || undefined
@@ -34,7 +36,6 @@ const copyLink = async () => {
       copying.value = false
     }, 1200)
   } catch (e) {
-    // fallback if clipboard API is blocked
     const textarea = document.createElement('textarea')
     textarea.value = fullUrl
     textarea.setAttribute('readonly', '')
@@ -53,7 +54,6 @@ const copyLink = async () => {
 }
 
 const handleKeydown = (e: KeyboardEvent) => {
-  // Support Enter/Space on the icon button
   if ((e.key === 'Enter' || e.key === ' ') && !e.defaultPrevented) {
     e.preventDefault()
     copyLink()
@@ -67,7 +67,14 @@ onUnmounted(() => {
 
 <template>
   <a v-if="$attrs.id" :name="$attrs.id"></a>
-  <h2 ref="h2Ref" v-bind="$attrs">
+  <component
+    ref="headingRef"
+    :is="tag"
+    v-bind="{
+      ...$attrs,
+      class: ['prose-heading', $attrs.class].filter(Boolean).join(' ')
+    }"
+  >
     <slot />
     <button
       class="copy-link"
@@ -76,37 +83,35 @@ onUnmounted(() => {
       @click="copyLink"
       @keydown="handleKeydown"
     >
-      <span v-if="!copying">#</span>
-      <span v-else>✓</span>
+      <sup v-if="!copying">#</sup>
+      <sup v-else>✓ Link copied</sup>
     </button>
-  </h2>
+  </component>
 </template>
 
 <style scoped>
-  .h2-wrap {
-    position: relative;
-  }
-  h2 {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.375rem;
-  }
-  .copy-link {
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    font: inherit;
-    padding: 0 0.125rem;
-    color: var(--link-color, inherit);
-    opacity: 0;
-    margin-left: 0.375rem;
-  }
-  h2:hover .copy-link {
-    opacity: 1;
-  }
-  .copy-link:hover, .copy-link:focus {
-    outline: none;
-  }
+.prose-heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+.copy-link {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  padding: 0 0.125rem;
+  color: var(--link-color, inherit);
+  opacity: 0;
+  margin-left: 0.375rem;
+}
+*:hover > .copy-link {
+  opacity: 0.75;
+}
+.copy-link:hover, .copy-link:focus {
+  opacity: 1;
+  outline: none;
+}
 </style>
 
 

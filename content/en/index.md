@@ -40,7 +40,7 @@ Gogam is a full on indie powerhouse, churning out small, super-innovative games 
 
 ### Projects in various stage of completion
 
-- **Night of the Thirteenth** &mdash; a tabletop RPG that flawlessly simulates a slasher movie, casting you as a most-likely-doomed main character whose only goal is to survive until sunrise. It’s heavily influenced by classic horror films, setting the action in places like a deserted summer camp and rewarding you with "Genre Points" for playing into horror tropes. The game's brilliance lies in its unique "d13" (d10+d4) system, where the d4 "Fallout die" dictates the consequences of every action. Even a successful roll can have a 'Dire' (a 4) result, causing you to make noise or lead the relentless killer right to you &mdash pushing you one step closer to your third and final Strike. 
+- **Night of the Thirteenth** &mdash; a tabletop RPG that flawlessly simulates a slasher movie, casting you as a most-likely-doomed main character whose only goal is to survive until sunrise. It’s heavily influenced by classic horror films, setting the action in places like a deserted summer camp and rewarding you with "Genre Points" for playing into horror tropes. The game's brilliance lies in its unique "d13" (d10+d4) system, where the d4 "Fallout die" dictates the consequences of every action. Even a successful roll can have a 'Dire' (a 4) result, causing you to make noise or lead the relentless killer right to you &mdash; pushing you one step closer to your third and final Strike. 
   - [Read more about Night of the Thirteenth](/en/nott)
   - [itch.io: Night of the Thirteenth](https://strangeworlder.itch.io/night-of-the-thirteenth)
 - **Them Deeper Bones** &mdash; a post-post-apocalyptic fantasy RPG where you explore a world generations after a magical cataclysm reshaped history. As part of a rare, officially sanctioned "Rediscovery Company", you venture beyond the borders of the known world to uncover lost treasures, forgotten lore, and the truth behind the official history's "Lie". Explicitly rejecting the colonialist Frontier Myth, the game draws inspiration from Finnish folklore, presenting a wilderness full of ancient magic to be respected and ruins that whisper tales of your own ancestors. Its excellence shines through its discovery-focused XP system, the unique magical birthrights that shape your character, and smooth pacing managed by distinct Gameplay Frames, all driving a sense of wonder and adventurous historical investigation.
@@ -83,7 +83,7 @@ Publishes primarily in Finnish. Products are related to the [Black Shield Canton
 - [Legendoja & lohikäärmeitä](https://myrrys.com/legendoja-lohikaarmeita/) — Finnish 5e-compatible fantasy RPG.
   - **Pelaajan kirja**: Layout
   - **Pelinjohtajan kirja**: Development, layout
-  - **Suuri Seikkailu**: Development, layout
+  - **Suuri Seikkailu**: Development, design, layout
   - **Velhon torni**: Development, layout
 - [The Quick](http://www.drivethrurpg.com/product/245906/The-Quick) — Role-playing game of death and ghosts and Nordic Noir. Role in project: Game Designer.
 - [The Broken Knight](http://www.drivethrurpg.com/product/236543/The-Broken-Knight-Powered-by-Fate) — Science Fiction Adventure for Fate Core. Role in project: System Consultant.

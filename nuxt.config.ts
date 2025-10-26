@@ -6,6 +6,7 @@ const env: Record<string, string | undefined> =
 const ISR_TTL = Number(env.NUXT_ISR_TTL || (env.NODE_ENV === "production" ? 21600 : 60));
 const API_MAX_AGE = Number(env.NUXT_API_MAX_AGE || (env.NODE_ENV === "production" ? 300 : 60));
 const API_STALE = Number(env.NUXT_API_STALE || (env.NODE_ENV === "production" ? 21600 : 600));
+const DEFAULT_LOCALE = env.NUXT_PUBLIC_DEFAULT_LOCALE || "en";
 export default {
   components: [{ path: "~/components", pathPrefix: false }],
   modules: ["@nuxt/content"],
@@ -14,6 +15,24 @@ export default {
     "~/assets/styles/prose.css",
     "~/assets/styles/components.css",
   ],
+  app: {
+    head: {
+      meta: [
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        { name: "theme-color", content: "#405e95" },
+        { name: "referrer", content: "origin" },
+        { name: "google-site-verification", content: "gg3Wz2OOtdYQCHFwae6F6PToGHUWQbUWaieUS1SwiI0" },
+        { name: "msapplication-TileColor", content: "#304e85" },
+      ],
+      link: [
+        { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
+        { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
+        { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
+        { rel: "manifest", href: "/site.webmanifest" },
+        { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#405e95" },
+      ],
+    },
+  },
   typescript: {
     strict: true,
     shim: false,
@@ -28,11 +47,14 @@ export default {
     },
   },
   routeRules: {
+    // Root should serve canonical homepage at '/' and use ISR like other pages
     "/": { isr: ISR_TTL },
     "/en/**": { isr: ISR_TTL },
     "/fi/**": { isr: ISR_TTL },
     "/sv/**": { isr: ISR_TTL },
     "/**": { isr: ISR_TTL },
+    // Disable caching for dynamic binary responses to prevent hangs on large payloads
+    "/api/image": { cache: false },
     "/api/**": { cache: { swr: API_STALE, maxAge: API_MAX_AGE } },
     "/ws": { cors: true, websocket: true },
     "/api/ws": { cors: true, websocket: true },

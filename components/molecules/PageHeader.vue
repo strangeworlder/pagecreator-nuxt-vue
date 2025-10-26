@@ -17,7 +17,7 @@ const pageTitle = computed(() => props.title);
 
 <template>
   <div>
-    <BaseHeader :level="1">{{ pageTitle }}</BaseHeader>
-    <BaseParagraph>{{ description }}</BaseParagraph>
+    <h1>{{ pageTitle }}</h1>
+    <p>{{ description }}</p>
   </div>
 </template>

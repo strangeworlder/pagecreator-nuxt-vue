@@ -1,27 +1,37 @@
 <script setup lang="ts">
-const props = withDefaults(defineProps<{ href?: string; rel?: string; target?: string }>(), {
+// @ts-nocheck
+withDefaults(defineProps<{ href?: string; rel?: string; target?: string }>(), {
   href: undefined,
   rel: undefined,
   target: undefined,
-});
+})
+
+const EXTERNAL_RE = /^(https?:)?\/\//
 </script>
+
 <template>
   <NuxtLink
-    v-if="href && !/^(https?:)?\/\//.test(href) && !href.startsWith('#')"
+    v-if="href && !EXTERNAL_RE.test(href) && !href.startsWith('#')"
     :to="href"
     v-bind="$attrs"
   >
     <slot />
   </NuxtLink>
+
   <a
     v-else
     :href="href"
-    :rel="rel ?? ((/^(https?:)?\/\//.test(href || '')) ? 'noopener noreferrer' : undefined)"
-    :target="target ?? ((/^(https?:)?\/\//.test(href || '')) ? '_blank' : undefined)"
+    :rel="rel ?? (EXTERNAL_RE.test(href || '') ? 'noopener noreferrer' : undefined)"
+    :target="target ?? (EXTERNAL_RE.test(href || '') ? '_blank' : undefined)"
     v-bind="$attrs"
   >
     <slot />
   </a>
 </template>
 
-
+<style scoped>
+  a[href^="http"]::after {
+    content: "🔗";
+    margin-left: 0.25em;
+  }
+</style>

@@ -1,6 +1,5 @@
-import { createError, getQuery, setHeader, send } from "h3";
+import { createError, getQuery, setHeader } from "h3";
 import { promises as fs } from "node:fs";
-import { createReadStream } from "node:fs";
 import { resolve, extname, basename, dirname, join } from "node:path";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
@@ -8,8 +7,77 @@ import { promisify } from "node:util";
 const run = promisify(execFile);
 
 const PUBLIC_DIR = resolve(process.cwd(), "public");
-const SIZES = [480, 768, 1024, 1280, 1536];
+const SIZES = [150, 480, 768, 1024, 1200, 1280, 1536];
 const QUALITY = 80;
+
+// Helper function to get dominant color from an image
+async function getDominantColor(imagePath: string): Promise<string> {
+  try {
+    // Use ImageMagick to get the dominant color
+    const args = [imagePath, "-scale", "1x1", "-format", "%[pixel:s]", "info:"];
+    const result = await run("convert", args);
+    const colorString = result.stdout.trim();
+    
+    console.log("Raw color string:", colorString);
+    
+    // Extract RGB values from the color string - handle percentage format
+    const percentMatch = colorString.match(/srgb\(([\d.]+)%,([\d.]+)%,([\d.]+)%\)/);
+    if (percentMatch) {
+      const r = Math.round(parseFloat(percentMatch[1]) * 255 / 100);
+      const g = Math.round(parseFloat(percentMatch[2]) * 255 / 100);
+      const b = Math.round(parseFloat(percentMatch[3]) * 255 / 100);
+      const color = `rgb(${r},${g},${b})`;
+      console.log("Extracted dominant color (percentage):", color);
+      return color;
+    }
+    
+    // Try integer format parsing
+    const rgbMatch = colorString.match(/srgb\((\d+),(\d+),(\d+)\)/);
+    if (rgbMatch) {
+      const r = parseInt(rgbMatch[1]);
+      const g = parseInt(rgbMatch[2]);
+      const b = parseInt(rgbMatch[3]);
+      const color = `rgb(${r},${g},${b})`;
+      console.log("Extracted dominant color (integer):", color);
+      return color;
+    }
+    
+    // Try alternative format parsing
+    const altMatch = colorString.match(/(\d+),(\d+),(\d+)/);
+    if (altMatch) {
+      const r = parseInt(altMatch[1]);
+      const g = parseInt(altMatch[2]);
+      const b = parseInt(altMatch[3]);
+      const color = `rgb(${r},${g},${b})`;
+      console.log("Extracted dominant color (alt format):", color);
+      return color;
+    }
+    
+    console.warn("Could not parse color string:", colorString);
+    // Fallback to white if we can't extract the color
+    return "rgb(255,255,255)";
+  } catch (error) {
+    console.warn("Failed to extract dominant color:", error);
+    return "rgb(255,255,255)"; // Fallback to white
+  }
+}
+
+// Helper function to blend a color with black at a given ratio
+function blendColorWithBlack(color: string, ratio: number): string {
+  const rgbMatch = color.match(/rgb\((\d+),(\d+),(\d+)\)/);
+  if (!rgbMatch) {
+    console.warn("Could not parse color for blending:", color);
+    return color;
+  }
+  
+  const r = Math.round(parseInt(rgbMatch[1]) * ratio);
+  const g = Math.round(parseInt(rgbMatch[2]) * ratio);
+  const b = Math.round(parseInt(rgbMatch[3]) * ratio);
+  
+  const blendedColor = `rgb(${r},${g},${b})`;
+  console.log(`Blending ${color} with black at ratio ${ratio} = ${blendedColor}`);
+  return blendedColor;
+}
 
 export default defineEventHandler(async (event) => {
   const q = getQuery(event) as Record<string, string | undefined>;
@@ -100,9 +168,10 @@ export default defineEventHandler(async (event) => {
       }
     }
     
-    // Set headers and stream the file
-    setHeader(event, "content-length", String(stats.size));
-    return send(event, outputPath);
+    // Set headers and return the file bytes
+    const buf = await fs.readFile(outputPath);
+    setHeader(event, "content-length", String(buf.length));
+    return buf;
   } catch (error: any) {
     console.log(`Failed to serve existing file: ${error.message}, will generate new one`);
     // File doesn't exist, is corrupted, or read failed - generate it
@@ -123,8 +192,31 @@ export default defineEventHandler(async (event) => {
       await fs.writeFile(tempPath, buf);
     } else {
       // For other formats, convert to WebP
-      const args = [abs, "-q", String(QUALITY), "-resize", String(size), "0", "-quiet", "-o", tempPath];
-      await run("cwebp", args);
+      if (size === 1200 || size === 150) {
+        // Get dominant color from the image
+        const dominantColor = await getDominantColor(abs);
+        const blendedColor = blendColorWithBlack(dominantColor, 0.5);
+        
+        const targetSize = size === 1200 ? "1200x630" : "150x150";
+        const intermediatePath = `${tempPath}.png`;
+        const magickArgs = [abs, "-resize", targetSize, "-background", blendedColor, "-gravity", "center", "-extent", targetSize, intermediatePath];
+        await run("convert", magickArgs);
+        
+        // Then convert to WebP
+        const cwebpArgs = [intermediatePath, "-q", String(QUALITY), "-quiet", "-o", tempPath];
+        await run("cwebp", cwebpArgs);
+        
+        // Clean up intermediate file
+        try {
+          await fs.unlink(intermediatePath);
+        } catch {
+          // Ignore cleanup errors
+        }
+      } else {
+        // Other sizes: maintain aspect ratio using cwebp directly
+        const args = [abs, "-q", String(QUALITY), "-quiet", "-resize", String(size), "0", "-o", tempPath];
+        await run("cwebp", args);
+      }
     }
 
     // Verify the generated file is complete before moving it
@@ -141,12 +233,12 @@ export default defineEventHandler(async (event) => {
     // Atomically move the temporary file to the final location
     await fs.rename(tempPath, outputPath);
 
-    // Serve the newly created file using streaming
-    const stats = await fs.stat(outputPath);
+    // Serve the newly created file
+    const buf = await fs.readFile(outputPath);
     setHeader(event, "content-type", "image/webp");
     setHeader(event, "cache-control", "public, max-age=300");
-    setHeader(event, "content-length", String(stats.size));
-    return send(event, outputPath);
+    setHeader(event, "content-length", String(buf.length));
+    return buf;
   } catch (error: any) {
     // Clean up temporary file if it exists
     try {

@@ -35,9 +35,23 @@ export function useCustomContentHead(docRef: Ref<Record<string, any> | null | un
 
     const title: string | undefined = doc.title;
     const description: string | undefined = doc.description;
-    const image: string | undefined = doc.image;
+    const rawImage: string | undefined = doc.image || doc.cover;
+    
+    // Generate social media optimized image URL (1200x630) for Open Graph and Twitter Cards
+    const getSocialImageUrl = (imagePath: string): string => {
+      if (imagePath.startsWith("http")) {
+        return imagePath;
+      }
+      // Use the image API to get the social media optimized version
+      return `${siteUrl}/api/image?src=${ensureLeadingSlash(imagePath)}&size=1200`;
+    };
+    
+    const image: string | undefined = rawImage
+      ? getSocialImageUrl(rawImage)
+      : undefined;
     const noindex: boolean | undefined = doc.noindex === true;
-    const type = doc.datePublished ? "article" : "website";
+    // Allow explicit override via front matter: contentType: "article" | "website"
+    const type = doc.contentType ? String(doc.contentType) : (doc.datePublished ? "article" : "website");
 
     const meta: any[] = [];
     if (description) meta.push({ name: "description", content: description });
@@ -47,7 +61,12 @@ export function useCustomContentHead(docRef: Ref<Record<string, any> | null | un
     if (description) meta.push({ property: "og:description", content: description });
     meta.push({ property: "og:type", content: type });
     meta.push({ property: "og:url", content: url });
-    if (image) meta.push({ property: "og:image", content: image });
+    if (image) {
+      meta.push({ property: "og:image", content: image });
+      meta.push({ property: "og:image:width", content: "1200" });
+      meta.push({ property: "og:image:height", content: "630" });
+      meta.push({ property: "og:image:type", content: "image/webp" });
+    }
     // Twitter card
     meta.push({ name: "twitter:card", content: image ? "summary_large_image" : "summary" });
     if (title) meta.push({ name: "twitter:title", content: title });

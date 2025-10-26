@@ -10,6 +10,8 @@ import ProseCode from "~/components/prose/ProseCode.vue";
 import ProseH1 from "~/components/prose/ProseH1.vue";
 import ProseH2 from "~/components/prose/ProseH2.vue";
 import ProseH3 from "~/components/prose/ProseH3.vue";
+import ProseH4 from "~/components/prose/ProseH4.vue";
+import ProseH5 from "~/components/prose/ProseH5.vue";
 import ProseLi from "~/components/prose/ProseLi.vue";
 import ProseOl from "~/components/prose/ProseOl.vue";
 import ProseP from "~/components/prose/ProseP.vue";
@@ -126,8 +128,12 @@ const enhancementsEnabled = useState<boolean>("content-enhance-ready", () => fal
 
 const proseComponents = computed(() => ({
   h1: ProseH1,
-  h2: ProseH2,
+  h2: enhancementsEnabled.value
+    ? defineAsyncComponent(() => import("~/components/prose/ProseH2Enhanced.client.vue"))
+    : ProseH2,
   h3: ProseH3,
+  h4: ProseH4,
+  h5: ProseH5,
   p: ProseP,
   a: enhancementsEnabled.value
     ? defineAsyncComponent(() => import("~/components/prose/ProseAEnhanced.client.vue"))

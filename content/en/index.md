@@ -20,15 +20,18 @@ I'm Petri Leinonen, a TTRPG creator. I am active under three brands:
 
 Gogam is a full on indie powerhouse, churning out small, super-innovative games one after the other. 
 
-### Fully published products
+### Fully completed products
 
 - **Cars & Family** &mdash; this TTRPG puts you in the driver's seat as *Fast & Furious*-style international thieves using their incredible street racing skills for daring heists. Built on the elegantly simple Lasers & Feelings system, you define your character with a single number (2-5); roll under for high-octane "Cars" actions (stunts, solo driving) or over for crucial "Family" actions (teamwork, social bonds). It enhances the core L&F experience with a couple of key thematic twists: rolling your exact number grants insight from your injured boss Von Petrol, which allows you, if you want, to change your approach to reroll your dice when your priorities shift, and a once-per-session "NOS" boost adds an extra hit with the risk of things literally or figuratively exploding.
   - [Read more about Cars & Family](/en/cars-and-family)
   - [itch.io: Cars & Family (en) / Autot ja Perhe (fi)](https://strangeworlder.itch.io/cars-and-family) Version 2.  
-  - [google docs: Cars & Family Version 1 (English)](https://docs.google.com/document/d/1hIsLmmoRwm8upOu6tc1Amvqlads-SSX2O33rEB9yGX4/edit?usp=sharing)
-  - [google docs: Autot ja Perhe Version 1 (Finnish)](https://docs.google.com/document/d/1VP7Ga9dVXVrfYmtfmjXyV2gJXKoBRw7rkeALg7PkYfH0/edit?usp=sharing))
-- [Pros & Cons](https://strangeworlder.itch.io/pros-and-cons) &mdash; Lasers & Feelings hack of high stakes heists. In the vein of La Papa De Castel, Oceans 11 and Leverage. Uses playing cards for randomiser.
-- [Cyberpunk is Dead](https://strangeworlder.itch.io/cyberpunk-is-dead)
+  - Old version on GDocs: [en](https://docs.google.com/document/d/1hIsLmmoRwm8upOu6tc1Amvqlads-SSX2O33rEB9yGX4/edit?usp=sharing)/[fi](https://docs.google.com/document/d/1VP7Ga9dVXVrfYmtfmjXyV2gJXKoBRw7rkeALg7PkYfH0/edit?usp=sharing)
+- **Pros & Cons** &mdash; drops you into a high-stakes heist movie like *Ocean's Eleven*, playing criminals pulling off an impossible job. It builds on the elegant simplicity of Lasers & Feelings, defining your character with a single playing card (2-9, plus a suit for your strength); you succeed at "Pro" actions (practical, efficient) by drawing a card lower than or equal to yours, and "Con" actions (creative, flashy) by drawing higher or equal. Its brilliance lies in ditching dice for cards: the suit of the drawn card determines the degree of success or complication, face cards trigger escalating narrative "Twists" about the Mark, Prize, or Crew, and a slick "Flashback" mechanic lets you retroactively set up success by re-attempting checks.
+  - [Read more about Pros & Cons](/en/pros-and-cons)
+  - [itch.io: Pros & Cons](https://strangeworlder.itch.io/pros-and-cons)
+- **Cyberpunk is Dead** &mdash; this FitD game flips the script on the cyberpunk genre: you're not rebellious heroes fighting the corps, you are the corps' disposable, underpaid hit squad, enforcing petty interests against often sympathetic targets. It masterfully subverts its Blades in the Dark inspiration by replacing playbooks with numbered, interchangeable "Operatives" and focusing on a unique core mechanic: roll 3d12, dropping two dice based on your current alertness state (Relaxed, Prepared, Alert). Success often comes with "overreaction," escalating situations, while failure piles on Stress, Harm, and mandatory, debt-inducing Cyberware —pushing your character towards inevitable burnout or corporate repossession. It's a bleakly fascinating critique of cyberpunk tropes through elegantly minimalist, pressure-cooker mechanics.
+  - [Read more about Cyberpunk is Dead](/en/cyberpunk-is-dead)
+  - [itch.io: Cyberpunk is Dead](https://strangeworlder.itch.io/cyberpunk-is-dead)
 - [We can't stop here... (Mörk Borg compatible)](https://strangeworlder.itch.io/we-cant-stop-here)
 - [Grapple: The RPG](https://strangeworlder.itch.io/grapple-the-rpg) &mdash; game/shitpost about grappling and the core activity in your game.
 - [The Necessary Eagle vs. The Good Cad](https://strangeworlder.itch.io/the-necessary-eagle-vs-the-good-cad)
@@ -69,20 +72,25 @@ Gogam is a full on indie powerhouse, churning out small, super-innovative games 
 
 ## Kustannusosakeyhtiö Gogam
 Publishes primarily in Finnish. Products are related to the [Black Shield Canton](/en/mustan-kilven-kantoni) campaign setting. 
-- [Hirviökirja](/hirviokirja/) — monster supplement compatible with Legendoja & lohikäärmeitä, in Finnish.
+- [Hirviökirja](/en/hirviokirja/) — monster supplement compatible with Legendoja & lohikäärmeitä, in Finnish.
 
 ## Coming soon
 
-- [Sulkavan sointu](/hirviokirja/) — 1st level adventure compatible with Legendoja & lohikäärmeitä, in Finnish.
+- [Sulkavan sointu](/en/sulkavansointu/) — 1st level adventure compatible with Legendoja & lohikäärmeitä, in Finnish.
 
 ## From other publishers
 
-- [Legendoja & lohikäärmeitä](https://myrrys.com/legendoja-lohikaarmeita/) — Finnish 5e-compatible fantasy RPG. Role in project: Layout.
+- [Legendoja & lohikäärmeitä](https://myrrys.com/legendoja-lohikaarmeita/) — Finnish 5e-compatible fantasy RPG.
+  - **Pelaajan kirja**: Layout
+  - **Pelinjohtajan kirja**: Development, layout
+  - **Suuri Seikkailu**: Development, layout
+  - **Velhon torni**: Development, layout
 - [The Quick](http://www.drivethrurpg.com/product/245906/The-Quick) — Role-playing game of death and ghosts and Nordic Noir. Role in project: Game Designer.
 - [The Broken Knight](http://www.drivethrurpg.com/product/236543/The-Broken-Knight-Powered-by-Fate) — Science Fiction Adventure for Fate Core. Role in project: System Consultant.
 - [Legendoja & lohikäärmeitä: Traakinlyöjä](https://myrrys.com/2023/01/30/ll-traakinlyoja/) — Finnish-language adventure for Legendoja & lohikäärmeitä. Role in project: Layout.
 - [Of Fathers...](https://www.drivethrurpg.com/product/429719/Of-Fathers?cPath=29274) — Call of Cthulhu adventure for one player character and one keeper. Role in project: Layout.
 - [Legendoja & lohikäärmeitä: Majakkakeikka](https://myrrys.com/2023/04/06/ll-majakkakeikka/) — Finnish-language adventure for Legendoja & lohikäärmeitä. Role in project: Layout, Maps, Design, Development.
+- [Legendoja & lohikäärmeitä: Ametistiviidakko](https://myrrys.com/2023/04/06/ll-majakkakeikka/) — Finnish-language adventure for Legendoja & lohikäärmeitä. Role in project: Project manager, Layout, Maps, Design, Development.
 
 ## Articles, for free for you to read
 

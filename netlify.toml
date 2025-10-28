@@ -1,5 +1,5 @@
 [build]
-  command = "corepack enable && corepack prepare pnpm@10.19.0 --activate && pnpm install --no-frozen-lockfile && pnpm build && rm -rf .netlify/publish && mkdir -p .netlify/publish/_nuxt && cp -a .nuxt/dist/client/_nuxt/. .netlify/publish/_nuxt/ && cp -a public/. .netlify/publish/ && echo '--- PUBLISH LIST ---' && ls -la .netlify/publish | sed -n '1,200p' && echo '--- NUXT CLIENT TOP ---' && ls -la .netlify/publish/_nuxt | sed -n '1,200p' && echo '--- NUXT BUILDS META ---' && ls -la .netlify/publish/_nuxt/builds/meta | sed -n '1,200p' || true"
+  command = "corepack enable && corepack prepare pnpm@10.19.0 --activate && pnpm install --no-frozen-lockfile && pnpm build"
   publish = ".netlify/publish"
 
 [build.environment]

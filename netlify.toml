@@ -9,17 +9,6 @@
   NUXT_PUBLIC_DISABLE_FRESHNESS = "0"
   PNPM_FLAGS = "--no-frozen-lockfile"
 
-[[redirects]]
-  from = "/site.webmanifest"
-  to = "/api/site.webmanifest"
-  status = 200
-
-# Route APIs to SSR function
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/server"
-  status = 200
-
 # SSR hosting: Nitro functions handle APIs and dynamic images
 
 # Headers for security and performance

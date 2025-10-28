@@ -57,6 +57,9 @@ export default {
     experimental: {
       websocket: true,
     },
+    output: {
+      publicDir: "dist",
+    },
     prerender: {
       crawlLinks: true,
       routes: contentRoutes,

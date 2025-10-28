@@ -45,7 +45,8 @@ export default defineEventHandler(async (event) => {
   const xfHost = getRequestHeader(event, "x-forwarded-host");
   const host = xfHost || getRequestHeader(event, "host");
   const proto = (xfProto && xfProto.split(",")[0].trim()) || "https";
-  const baseUrl = (cfg.public?.siteUrl && String(cfg.public.siteUrl)) || (host ? `${proto}://${host}` : "");
+  // Prefer request host/proto from the platform; fall back to configured siteUrl
+  const baseUrl = host ? `${proto}://${host}` : (cfg.public?.siteUrl ? String(cfg.public.siteUrl) : "");
   if (!baseUrl) {
     throw createError({ statusCode: 500, statusMessage: "Cannot determine site URL for image fetch" });
   }

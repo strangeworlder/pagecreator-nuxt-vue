@@ -6,6 +6,7 @@
     "dev": "nuxt dev --host 0.0.0.0 --port 3000",
     "build": "nuxt build",
     "generate": "nuxt generate",
+    "build:content-index": "tsx scripts/build-content-index.ts .output/public",
     "preview": "nuxt preview",
     "validate:content": "tsx scripts/validate-content.ts",
     "test": "vitest",

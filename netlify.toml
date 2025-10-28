@@ -1,16 +1,14 @@
 [build]
-  command = "pnpm generate"
+  command = "pnpm generate && pnpm build:content-index && rm -rf dist && cp -r .output/public dist"
   publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20"
   NODE_ENV = "production"
+  NUXT_PUBLIC_STATIC_HOSTING = "1"
+  NUXT_PUBLIC_DISABLE_FRESHNESS = "0"
 
-# Redirect rules for SPA behavior (if needed)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Static hosting: no API routes; client-side plugin reads content-index.json
 
 # Headers for security and performance
 [[headers]]

@@ -66,6 +66,8 @@ export default {
       buildAt: env.BUILD_AT || new Date().toISOString(),
       redirectContentWS: env.CONTENT_WS_REDIRECT ?? "1",
       defaultLocale: env.NUXT_PUBLIC_DEFAULT_LOCALE || "en",
+      disableFreshness: env.NUXT_PUBLIC_DISABLE_FRESHNESS || (env.NUXT_PUBLIC_STATIC_HOSTING ? "1" : "0"),
+      staticHosting: env.NUXT_PUBLIC_STATIC_HOSTING || "",
     },
   },
   // Using custom /api/i endpoint for transforms to avoid native deps

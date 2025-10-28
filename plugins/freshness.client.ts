@@ -1,7 +1,11 @@
 // @ts-nocheck
 export default defineNuxtPlugin(async () => {
-  const route = useRoute();
   const runtime = useRuntimeConfig();
+  if (runtime.public.disableFreshness === '1' || runtime.public.disableFreshness === 1) {
+    return;
+  }
+  const staticHosting = runtime.public.staticHosting === '1' || runtime.public.staticHosting === 1 || runtime.public.staticHosting === true;
+  const route = useRoute();
   const ssrRenderedAt = useState<string>("ssrRenderedAt").value;
   const buildAt = ssrRenderedAt || runtime.public.buildAt;
   // Track the timestamp of the version currently shown to the user
@@ -15,7 +19,9 @@ export default defineNuxtPlugin(async () => {
   // Attempt a lightweight freshness check on client
   const poll = async () => {
     let updated = false;
-    const url = `/api/content-index?ts=${Date.now()}&locale=${encodeURIComponent(defaultLocale)}`;
+    const url = staticHosting
+      ? `/content-index.json?ts=${Date.now()}`
+      : `/api/content-index?ts=${Date.now()}&locale=${encodeURIComponent(defaultLocale)}`;
     const { data } = await useFetch<{
       items: Array<{ _path: string; dateModified?: string | number }>;
     }>(url, { server: false, headers: { "cache-control": "no-cache" } });
@@ -48,12 +54,13 @@ export default defineNuxtPlugin(async () => {
       const shouldUpdate = modified > seenMax;
       if (process.dev) console.log("[freshness] Modified:", modified, "Shown:", shown, "Built:", built, "LS:", lsSeen, "ShouldUpdate:", shouldUpdate, "Current time:", new Date().getTime());
       if (shouldUpdate) {
-        // Prefer a server API to fetch the fully-resolved doc; bust any caches with a ts param
-        const freshResp = await $fetch<{ doc: Record<string, unknown> | null }>("/api/content-doc", {
-          params: { path: candidatePath, ts: Date.now() },
-          headers: { "cache-control": "no-cache" },
-        });
-        const fresh = freshResp?.doc || (await queryContent(normalize(candidatePath)).findOne());
+        // On static hosting, skip API and use content query
+        const fresh = staticHosting
+          ? await queryContent(normalize(candidatePath)).findOne()
+          : (await $fetch<{ doc: Record<string, unknown> | null }>("/api/content-doc", {
+              params: { path: candidatePath, ts: Date.now() },
+              headers: { "cache-control": "no-cache" },
+            })).doc || (await queryContent(normalize(candidatePath)).findOne());
         if (fresh) {
           // Log exactly where we swap in the fresh document
           const prev = useState<Record<string, unknown> | null>("content-doc", () => null).value as any;

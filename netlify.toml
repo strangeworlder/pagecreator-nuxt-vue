@@ -1,5 +1,5 @@
 [build]
-  command = "corepack enable && corepack prepare pnpm@10.19.0 --activate && pnpm install --no-frozen-lockfile && pnpm build && rm -rf .netlify/publish && mkdir -p .netlify/publish && cp -a .nuxt/dist/client/. .netlify/publish/ && cp -a public/. .netlify/publish/ && echo '--- PUBLISH TOP ---' && ls -la .netlify/publish | sed -n '1,200p' && echo '--- PUBLISH _nUXT ---' && ls -la .netlify/publish/_nuxt | sed -n '1,200p' && echo '--- PUBLISH _nUXT BUILDS/META ---' && ls -la .netlify/publish/_nuxt/builds/meta | sed -n '1,200p' || true"
+  command = "corepack enable && corepack prepare pnpm@10.19.0 --activate && pnpm install --no-frozen-lockfile && pnpm build && rm -rf .netlify/publish && mkdir -p .netlify/publish && if [ -d .output/public ]; then cp -a .output/public/. .netlify/publish/; fi && if [ -d .nuxt/dist/client ]; then cp -a .nuxt/dist/client/. .netlify/publish/; fi && if [ -d public ]; then cp -a public/. .netlify/publish/; fi && echo '--- PUBLISH TOP ---' && ls -la .netlify/publish | sed -n '1,200p' && echo '--- PUBLISH _nUXT ---' && ls -la .netlify/publish/_nuxt | sed -n '1,200p' && echo '--- PUBLISH _nUXT BUILDS/META ---' && ls -la .netlify/publish/_nuxt/builds/meta | sed -n '1,200p' || true"
   publish = ".netlify/publish"
 
 [build.environment]

@@ -6,7 +6,20 @@ import { useRuntimeConfig } from "#imports";
 import sharp from "sharp";
 
 const PUBLIC_DIR = resolve(process.cwd(), "public");
-const OUTPUT_CACHE_DIR = process.env.NETLIFY ? "/tmp/gen_images" : join(PUBLIC_DIR, "gen_images");
+
+async function resolveCacheDir(): Promise<string> {
+  const candidates = ["/tmp/gen_images", join(process.cwd(), "gen_images")];
+  for (const dir of candidates) {
+    try {
+      await fs.mkdir(dir, { recursive: true });
+      return dir;
+    } catch {
+      // try next
+    }
+  }
+  // Last resort: current working directory
+  return process.cwd();
+}
 const SIZES = [150, 480, 768, 1024, 1200, 1280, 1536];
 const QUALITY = 80;
 
@@ -36,7 +49,8 @@ export default defineEventHandler(async (event) => {
   const srcUrl = new URL(src, baseUrl).toString();
 
   const baseName = basename(src, ext);
-  const outputPath = join(OUTPUT_CACHE_DIR, `${baseName}-${size}.webp`);
+  const cacheDir = await resolveCacheDir();
+  const outputPath = join(cacheDir, `${baseName}-${size}.webp`);
   // Serve cached derivative if present
   try {
     const buf = await fs.readFile(outputPath);

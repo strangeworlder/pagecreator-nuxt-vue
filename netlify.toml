@@ -1,5 +1,5 @@
 [build]
-  command = "pnpm generate && pnpm build:content-index && rm -rf dist && cp -r .output/public dist"
+  command = "corepack enable && corepack prepare pnpm@10.19.0 --activate && pnpm install --frozen-lockfile || pnpm install && pnpm generate && rm -rf dist && mkdir -p dist && cp -a .output/public/. dist/ && pnpm build:content-index dist"
   publish = "dist"
 
 [build.environment]

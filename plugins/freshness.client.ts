@@ -31,8 +31,10 @@ export default defineNuxtPlugin(async () => {
     const isLocalized = /^\/[a-z]{2}(?:\/|$)/i.test(route.path);
     const normalize = (p: string) => {
       const withSlash = p.startsWith('/') ? p : `/${p}`
-      const collapsed = withSlash.replace(/\/{2,}/g, '/')
-      return collapsed !== '/' && collapsed.endsWith('/') ? collapsed.slice(0, -1) : collapsed
+      let collapsed = withSlash.replace(/\/{2,}/g, '/')
+      if (collapsed !== '/' && collapsed.endsWith('/')) collapsed = collapsed.slice(0, -1)
+      collapsed = collapsed.replace(/^\/(\w{2})\/index$/i, '/$1')
+      return collapsed
     }
     const candidatePath = normalize(
       isLocalized

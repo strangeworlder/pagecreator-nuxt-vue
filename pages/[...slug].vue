@@ -24,7 +24,12 @@ const runtime = useRuntimeConfig();
 const defaultLocale = runtime.public.defaultLocale || "en";
 
 const resolveContentPath = (path: string) => {
-  return path === "/" ? `/${defaultLocale}` : path;
+  // Normalize path: ensure leading slash, collapse duplicates, drop trailing slash, map '/:locale/index' -> '/:locale'
+  const withSlash = path.startsWith('/') ? path : `/${path}`
+  let normalized = withSlash.replace(/\/{2,}/g, '/');
+  if (normalized !== '/' && normalized.endsWith('/')) normalized = normalized.slice(0, -1);
+  normalized = normalized.replace(/^\/(\w{2})\/index$/i, '/$1');
+  return normalized === "/" ? `/${defaultLocale}` : normalized;
 };
 
 // SSR-first initial doc with hydration cache to avoid client refetch overriding SSR

@@ -7,10 +7,8 @@
   NODE_ENV = "production"
   NUXT_PUBLIC_STATIC_HOSTING = "0"
   NUXT_PUBLIC_DISABLE_FRESHNESS = "0"
-  NUXT_PUBLIC_STATIC_HOSTING = "1"
-  NUXT_PUBLIC_DISABLE_FRESHNESS = "0"
 
-# Static hosting: no API routes; client-side plugin reads content-index.json
+# SSR hosting: Nitro functions handle APIs and dynamic images
 
 # Headers for security and performance
 [[headers]]

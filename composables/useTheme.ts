@@ -8,26 +8,33 @@ export function useTheme() {
     if (process.client) {
       document.documentElement.dataset.theme = next;
       try {
-        localStorage.setItem("ui-theme", next);
+        // Keep standard CSS color-scheme in sync for form controls, etc.
+        (document.documentElement as HTMLElement).style.colorScheme = next;
       } catch {}
     }
   };
 
-  const toggleTheme = () => applyTheme(theme.value === "light" ? "dark" : "light");
-
   if (process.client) {
-    // Initialize on first use
-    if (!document.documentElement.dataset.theme) {
-      try {
-        const saved = localStorage.getItem("ui-theme") as UiTheme | null;
-        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        applyTheme(saved ?? (prefersDark ? "dark" : "light"));
-      } catch {
-        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        applyTheme(prefersDark ? "dark" : "light");
-      }
+    const mql = window.matchMedia("(prefers-color-scheme: dark)");
+    const updateFromSystem = () => applyTheme(mql.matches ? "dark" : "light");
+    // Initialize immediately
+    updateFromSystem();
+    // React to system preference changes
+    try {
+      mql.addEventListener("change", updateFromSystem);
+      onBeforeUnmount(() => {
+        mql.removeEventListener("change", updateFromSystem);
+      });
+    } catch {
+      // Safari < 14 fallback
+      // @ts-ignore
+      mql.addListener && mql.addListener(updateFromSystem);
+      onBeforeUnmount(() => {
+        // @ts-ignore
+        mql.removeListener && mql.removeListener(updateFromSystem);
+      });
     }
   }
 
-  return { theme, setTheme: applyTheme, toggleTheme };
+  return { theme };
 }

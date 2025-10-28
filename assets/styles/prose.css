@@ -1,5 +1,8 @@
 .prose {
   color: var(--color-fg);
+  font-family: var(--font-sans);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
 }
 .prose a {
   color: var(--color-accent);
@@ -7,22 +10,25 @@
 }
 .prose h1 {
   font-family: var(--font-sans);
-  font-size: var(--size-6);
+  font-size: var(--h1-font-size, var(--size-6));
+  font-weight: var(--h1-font-weight, 600);
   margin: 0 0 0.5em;
 }
 .prose h2 {
   font-family: var(--font-sans);
-  font-size: var(--size-5);
+  font-size: var(--h2-font-size, var(--size-5));
+  font-weight: var(--h2-font-weight, 600);
   margin: 1.25em 0 0.5em;
 }
 .prose h3 {
   font-family: var(--font-sans);
-  font-size: var(--size-4);
+  font-size: var(--h3-font-size, var(--size-4));
+  font-weight: var(--h3-font-weight, 600);
   margin: 1em 0 0.5em;
 }
 .prose p {
-  font-size: var(--size-3);
-  line-height: 1.7;
+  font-size: var(--font-size, var(--size-3));
+  line-height: var(--line-height, 1.7);
   margin: 0.8em 0;
 }
 .prose blockquote {
@@ -43,11 +49,13 @@
 }
 .prose ul {
   list-style: disc;
-  padding-left: 1.2em;
+  padding-left: 2em;
+  margin-bottom: 1em;
 }
 .prose ol {
   list-style: decimal;
-  padding-left: 1.2em;
+  padding-left: 2em;
+  margin-bottom: 1em;
 }
 .prose table {
   border-collapse: collapse;

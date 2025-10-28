@@ -1,26 +1,27 @@
 <script setup lang="ts">
-// Apply saved/system theme as early as possible to avoid FOUC
+// Apply system theme and default page theme early to avoid FOUC
 if (process.client) {
-  const saved = (() => {
-    try {
-      return localStorage.getItem("ui-theme");
-    } catch {
-      return null;
-    }
-  })();
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const next = saved === "dark" || saved === "light" ? saved : prefersDark ? "dark" : "light";
-  if (document.documentElement.dataset.theme !== next) {
-    document.documentElement.dataset.theme = next;
+  const html = document.documentElement;
+  if (!html.dataset.pageTheme) html.dataset.pageTheme = "classic"; // default page theme
+
+  const mql = window.matchMedia("(prefers-color-scheme: dark)");
+  const setTheme = () => {
+    const next = mql.matches ? "dark" : "light";
+    if (html.dataset.theme !== next) html.dataset.theme = next;
+    try { (html as HTMLElement).style.colorScheme = next; } catch {}
+  };
+  setTheme();
+  try {
+    mql.addEventListener("change", setTheme);
+  } catch {
+    // @ts-ignore legacy Safari
+    mql.addListener && mql.addListener(setTheme);
   }
 }
 </script>
 
 <template>
   <NuxtLayout>
-    <div>
-      <BaseThemeToggle />
-    </div>
     <NuxtPage />
   </NuxtLayout>
 </template>

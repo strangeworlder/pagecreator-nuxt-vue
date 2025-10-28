@@ -16,6 +16,7 @@ import ProseUl from "~/components/prose/ProseUl.vue";
 import ProseImg from "~/components/prose/ProseImg.vue";
 import PageHeader from "~/components/molecules/PageHeader.vue";
 import PageFooter from "~/components/molecules/PageFooter.vue";
+import Navigation from "~/components/molecules/Navigation.vue";
 import HeaderImage from "~/components/atoms/HeaderImage.vue";
 
 const route = useRoute();
@@ -136,6 +137,8 @@ const makeHeading = (level: 1 | 2 | 3 | 4 | 5 | 6) =>
     },
   })
 
+const EnhancedNavigationComp = defineAsyncComponent(() => import("~/components/molecules/NavigationEnhanced.client.vue"))
+
 const proseComponents = computed(() => ({
   h1: makeHeading(1),
   h2: makeHeading(2),
@@ -173,6 +176,17 @@ const pageTitle = computed(() => {
 const pageDescription = computed(() => {
   return (data.value as any)?.description || "This is the TSS starter. Content below is rendered from Markdown.";
 });
+// Page theme from front matter; default to 'classic' when not set
+const pageTheme = computed(() => {
+  const theme = String(((renderDoc.value as any)?.theme || (renderDoc.value as any)?.pageTheme || "classic")).toLowerCase();
+  return theme === "modern" ? "modern" : "classic";
+});
+if (process.client) {
+  watch(pageTheme, (t) => {
+    const html = document.documentElement;
+    if (html.dataset.pageTheme !== t) html.dataset.pageTheme = t;
+  }, { immediate: true });
+}
 // Template selection and hero image handling (decoupled from `cover`)
 const templateName = computed(() => String(((renderDoc.value as any)?.template || "")).toLowerCase());
 const isPlainTemplate = computed(() => !templateName.value || templateName.value === "plain");
@@ -181,11 +195,21 @@ const heroImage = computed(() => {
   return d?.heroImage || d?.hero || d?.image || d?.cover || undefined;
 });
 const useHeroLayout = computed(() => !isPlainTemplate.value && !!heroImage.value);
+
+// Check if we're on the index page
+const isIndexPage = computed(() => {
+  const path = (data.value as any)?._path;
+  return path === `/${defaultLocale}` || path === "/";
+});
 </script>
 
 <template>
   <div>
     <PageHeader :title="pageTitle" :description="pageDescription" />
+    <component 
+      :is="enhancementsEnabled ? EnhancedNavigationComp : Navigation" 
+      v-if="isIndexPage" 
+    />
     <div class="content-layout" :class="{ 'single-column': !useHeroLayout }">
       <div class="content-column prose">
         <ContentRenderer v-if="data" :key="version" :value="data" :components="proseComponents" />
@@ -204,8 +228,11 @@ const useHeroLayout = computed(() => !isPlainTemplate.value && !!heroImage.value
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   min-height: 100vh;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 980px;
+}
+
+.content-layout:has(.image-column) {
+  max-width: 1680px;
 }
 
 .content-layout.single-column {

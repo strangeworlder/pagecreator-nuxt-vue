@@ -72,6 +72,7 @@ onUnmounted(() => {
     :is="tag"
     v-bind="{
       ...$attrs,
+      id: $attrs.id ? `header-${$attrs.id}` : undefined,
       class: ['prose-heading', $attrs.class].filter(Boolean).join(' ')
     }"
   >
@@ -83,15 +84,14 @@ onUnmounted(() => {
       @click="copyLink"
       @keydown="handleKeydown"
     >
-      <sup v-if="!copying">#</sup>
-      <sup v-else>✓ Link copied</sup>
+      <span v-if="!copying">#</span>
+      <span v-else>✓ Link copied</span>
     </button>
   </component>
 </template>
 
 <style scoped>
 .prose-heading {
-  display: inline-flex;
   align-items: center;
   gap: 0.375rem;
 }
@@ -111,6 +111,11 @@ onUnmounted(() => {
 .copy-link:hover, .copy-link:focus {
   opacity: 1;
   outline: none;
+}
+a[name] {
+  display: block;
+  position: relative;
+  top: -20px;
 }
 </style>
 

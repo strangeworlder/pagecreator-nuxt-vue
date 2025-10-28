@@ -8,6 +8,7 @@ canonical: "/en/pros-and-cons"
 alternateLocales: ["fi"]
 cover: "/images/pros-and-cons-cover.jpg"
 template: "hero"
+theme: "modern"
 heroImage: "/images/pros-and-cons-cover.jpg"
 summary: |
   A quick, player-facing intro to Pros & Cons — a cinematic heist TTRPG

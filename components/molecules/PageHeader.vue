@@ -1,6 +1,8 @@
 <script setup lang="ts">
 // @ts-nocheck
 import { computed } from "vue";
+import BaseHeader from "~/components/atoms/BaseHeader.vue";
+import BaseParagraph from "~/components/atoms/BaseParagraph.vue";
 
 interface Props {
   title?: string;
@@ -16,8 +18,8 @@ const pageTitle = computed(() => props.title);
 </script>
 
 <template>
-  <div>
-    <h1>{{ pageTitle }}</h1>
-    <p>{{ description }}</p>
-  </div>
+  <header>
+    <BaseHeader>{{ pageTitle }}</BaseHeader>
+    <BaseParagraph>{{ description }}</BaseParagraph>
+  </header>
 </template>

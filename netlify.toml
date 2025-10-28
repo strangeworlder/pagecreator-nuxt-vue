@@ -7,6 +7,7 @@
   NODE_ENV = "production"
   NUXT_PUBLIC_STATIC_HOSTING = "0"
   NUXT_PUBLIC_DISABLE_FRESHNESS = "0"
+  PNPM_FLAGS = "--no-frozen-lockfile"
 
 # SSR hosting: Nitro functions handle APIs and dynamic images
 

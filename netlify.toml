@@ -14,26 +14,9 @@
   to = "/api/site.webmanifest"
   status = 200
 
-# Serve static assets directly
-[[redirects]]
-  from = "/_nuxt/*"
-  to = "/_nuxt/:splat"
-  status = 200
-
-[[redirects]]
-  from = "/images/*"
-  to = "/images/:splat"
-  status = 200
-
 # Route APIs to SSR function
 [[redirects]]
   from = "/api/*"
-  to = "/.netlify/functions/server"
-  status = 200
-
-# Route all other requests to SSR function (Nuxt renderer)
-[[redirects]]
-  from = "/*"
   to = "/.netlify/functions/server"
   status = 200
 

@@ -25,6 +25,9 @@ const contentRoutes = Array.from(new Set(["/", `/${DEFAULT_LOCALE}`, ...contentF
 export default {
   components: [{ path: "~/components", pathPrefix: false }],
   modules: ["@nuxt/content"],
+  experimental: {
+    appManifest: false,
+  },
   css: [
     "~/assets/styles/tokens.css",
     "~/assets/styles/prose.css",

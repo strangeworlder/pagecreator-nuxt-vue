@@ -1,5 +1,5 @@
 [build]
-  command = "corepack enable && corepack prepare pnpm@10.19.0 --activate && pnpm install --no-frozen-lockfile && pnpm build"
+  command = "corepack enable && corepack prepare pnpm@10.19.0 --activate && pnpm install --no-frozen-lockfile && pnpm build && mkdir -p .netlify/publish && if [ -d .output/public ]; then cp -a .output/public/. .netlify/publish/; else cp -a public/. .netlify/publish/; fi"
   publish = ".netlify/publish"
 
 [build.environment]

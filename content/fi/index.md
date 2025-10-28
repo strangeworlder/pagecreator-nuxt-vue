@@ -41,11 +41,11 @@ Olen Petri Leinonen. Teen työksekseni verkkosivuja ja harrastan pöytäroolipel
 
 - [The Necessary Eagle vs. The Good Cad](https://strangeworlder.itch.io/the-necessary-eagle-vs-the-good-cad) — kahden pelaajan, korttipohjainen kilpailullinen roolipeli siitä, kuinka voimaton ihminen yrittää kaataa supersankarin. Innoittajana The Boys.
 - [Cyberpunk is Dead](https://strangeworlder.itch.io/cyberpunk-is-dead) — pöytäroolipeli kasvottomasta yritysten iskujoukosta dystooppisessa ultrakapitalistisessa kyberpunk-maailmassa
-- [Hirviökirja](/hirviokirja/) — hirviölisäosa yhteensopiva Legendoja & lohikäärmeitä -pelin kanssa, suomeksi.
+- [Hirviökirja](/) — hirviölisäosa yhteensopiva Legendoja & lohikäärmeitä -pelin kanssa, suomeksi.
 
 ## Tulossa pian
 
-- [Sulkavan sointu](/hirviokirja/) — 1. tason seikkailu yhteensopiva Legendoja & lohikäärmeitä -pelin kanssa, suomeksi.
+- [Sulkavan sointu](/) — 1. tason seikkailu yhteensopiva Legendoja & lohikäärmeitä -pelin kanssa, suomeksi.
 
 ## Muilta julkaisijoilta
 

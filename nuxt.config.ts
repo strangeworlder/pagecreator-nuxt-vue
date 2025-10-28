@@ -53,6 +53,7 @@ export default {
     shim: false,
   },
   nitro: {
+    preset: "netlify",
     compatibilityDate: "2025-10-24",
     experimental: {
       websocket: true,

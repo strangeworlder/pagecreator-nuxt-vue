@@ -41,12 +41,17 @@ export default defineEventHandler(async (event) => {
 
   // Build absolute URL to the source image (functions cannot always read site files)
   const cfg = useRuntimeConfig();
-  const host = getRequestHeader(event, "host");
-  const baseUrl = (cfg.public?.siteUrl && String(cfg.public.siteUrl)) || (host ? `https://${host}` : "");
+  const xfProto = getRequestHeader(event, "x-forwarded-proto");
+  const xfHost = getRequestHeader(event, "x-forwarded-host");
+  const host = xfHost || getRequestHeader(event, "host");
+  const proto = (xfProto && xfProto.split(",")[0].trim()) || "https";
+  const baseUrl = (cfg.public?.siteUrl && String(cfg.public.siteUrl)) || (host ? `${proto}://${host}` : "");
   if (!baseUrl) {
     throw createError({ statusCode: 500, statusMessage: "Cannot determine site URL for image fetch" });
   }
   const srcUrl = new URL(src, baseUrl).toString();
+  // Helpful log for platform debugging
+  console.log("[image] srcUrl", srcUrl, "base", baseUrl, "host", host, "proto", proto);
 
   const baseName = basename(src, ext);
   const cacheDir = await resolveCacheDir();

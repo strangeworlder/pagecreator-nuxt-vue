@@ -13,7 +13,13 @@ const DEFAULT_LOCALE = env.NUXT_PUBLIC_DEFAULT_LOCALE || "en";
 const contentFiles = globSync("content/**/*.{md,mdx,markdown}", { dot: false });
 const fileToRoute = (file: string) => {
   const rel = file.replace(/^content\//, "").replace(/\.(md|mdx|markdown)$/i, "");
-  return `/${rel}`;
+  // Map .../index to its directory root
+  let route = `/${rel}`;
+  route = route.replace(/\/?index$/i, "");
+  // Collapse duplicate slashes and ensure leading slash only
+  route = route.replace(/\/+/, "/");
+  if (route === "") route = "/";
+  return route;
 };
 const contentRoutes = Array.from(new Set(["/", `/${DEFAULT_LOCALE}`, ...contentFiles.map(fileToRoute)]));
 export default {

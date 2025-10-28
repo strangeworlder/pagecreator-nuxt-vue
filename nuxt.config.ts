@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { globSync } from "glob";
 const env: Record<string, string | undefined> =
   (globalThis as unknown as { process?: { env?: Record<string, string | undefined> } }).process
     ?.env || {};
@@ -7,6 +8,14 @@ const ISR_TTL = Number(env.NUXT_ISR_TTL || (env.NODE_ENV === "production" ? 2160
 const API_MAX_AGE = Number(env.NUXT_API_MAX_AGE || (env.NODE_ENV === "production" ? 300 : 60));
 const API_STALE = Number(env.NUXT_API_STALE || (env.NODE_ENV === "production" ? 21600 : 600));
 const DEFAULT_LOCALE = env.NUXT_PUBLIC_DEFAULT_LOCALE || "en";
+
+// Prerender all content routes for static export
+const contentFiles = globSync("content/**/*.{md,mdx,markdown}", { dot: false });
+const fileToRoute = (file: string) => {
+  const rel = file.replace(/^content\//, "").replace(/\.(md|mdx|markdown)$/i, "");
+  return `/${rel}`;
+};
+const contentRoutes = Array.from(new Set(["/", `/${DEFAULT_LOCALE}`, ...contentFiles.map(fileToRoute)]));
 export default {
   components: [{ path: "~/components", pathPrefix: false }],
   modules: ["@nuxt/content"],
@@ -44,6 +53,7 @@ export default {
     },
     prerender: {
       crawlLinks: true,
+      routes: contentRoutes,
     },
   },
   routeRules: {

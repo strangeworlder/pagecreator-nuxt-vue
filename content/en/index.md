@@ -81,11 +81,11 @@ Gogam is a full on indie powerhouse, churning out small, super-innovative games 
 
 ## Kustannusosakeyhtiö Gogam
 Publishes primarily in Finnish. Products are related to the [Black Shield Canton](/en/mustan-kilven-kantoni) campaign setting. 
-- [Hirviökirja](/en/hirviokirja/) — monster supplement compatible with Legendoja & lohikäärmeitä, in Finnish.
+- [Hirviökirja](/) — monster supplement compatible with Legendoja & lohikäärmeitä, in Finnish.
 
 ### Coming soon
 
-- [Sulkavan sointu](/en/sulkavansointu/) — 1st level adventure compatible with Legendoja & lohikäärmeitä, in Finnish.
+- [Sulkavan sointu](/) — 1st level adventure compatible with Legendoja & lohikäärmeitä, in Finnish.
 
 ## Gogam Entertainment
 

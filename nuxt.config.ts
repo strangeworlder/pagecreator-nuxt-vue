@@ -57,9 +57,7 @@ export default {
     experimental: {
       websocket: true,
     },
-    output: {
-      publicDir: "dist",
-    },
+    // When deploying SSR (Netlify functions), don't override output dir
     prerender: {
       crawlLinks: true,
       routes: contentRoutes,

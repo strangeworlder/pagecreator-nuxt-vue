@@ -23,6 +23,16 @@ async function resolveCacheDir(): Promise<string> {
 const SIZES = [150, 480, 768, 1024, 1200, 1280, 1536];
 const QUALITY = 80;
 
+async function computeDominantBackgroundColor(input: Buffer): Promise<{ r: number; g: number; b: number }> {
+  try {
+    const stats = await sharp(input).stats();
+    const { r, g, b } = stats.dominant;
+    return { r, g, b };
+  } catch {
+    return { r: 24, g: 24, b: 24 };
+  }
+}
+
 export default defineEventHandler(async (event) => {
   const q = getQuery(event) as Record<string, string | undefined>;
   const src = q.src;
@@ -74,18 +84,10 @@ export default defineEventHandler(async (event) => {
   const inputBuf = Buffer.from(await res.arrayBuffer());
   // Special canvas sizes
   if (ext !== ".gif" && (size === 1200 || size === 150)) {
-    // Fit inside target box and extend canvas with blurred background
     const target = size === 1200 ? { w: 1200, h: 630 } : { w: 150, h: 150 };
-    const input = sharp(inputBuf);
-    const resized = await input
-      .resize(target.w, target.h, { fit: "inside", withoutEnlargement: true, background: { r: 0, g: 0, b: 0, alpha: 1 } })
-      .toBuffer();
-    const meta = await sharp(resized).metadata();
-    const compositeLeft = Math.floor((target.w - (meta.width || target.w)) / 2);
-    const compositeTop = Math.floor((target.h - (meta.height || target.h)) / 2);
-    const canvas = sharp({ create: { width: target.w, height: target.h, channels: 3, background: { r: 24, g: 24, b: 24 } } });
-    const outBuf = await canvas
-      .composite([{ input: resized, left: compositeLeft, top: compositeTop }])
+    const bg = await computeDominantBackgroundColor(inputBuf);
+    const outBuf = await sharp(inputBuf)
+      .resize(target.w, target.h, { fit: "contain", withoutEnlargement: true, background: bg })
       .webp({ quality: QUALITY })
       .toBuffer();
     await fs.writeFile(outputPath, outBuf);

@@ -19,13 +19,6 @@ export default defineNuxtPlugin(async () => {
   // Attempt a lightweight freshness check on client
   const poll = async () => {
     let updated = false;
-    const url = staticHosting
-      ? `/content-index.json?ts=${Date.now()}`
-      : `/api/content-index?ts=${Date.now()}&locale=${encodeURIComponent(defaultLocale)}`;
-    const { data } = await useFetch<{
-      items: Array<{ _path: string; dateModified?: string | number }>;
-    }>(url, { server: false, headers: { "cache-control": "no-cache" } });
-    const items = data.value?.items || [];
     // Normalize path: if route already starts with a locale (e.g., /en, /fi, /sv), use it as-is.
     // Otherwise, prefix with defaultLocale. This avoids generating "/en/fi/..." paths.
     const isLocalized = /^\/[a-z]{2}(?:\/|$)/i.test(route.path);
@@ -43,6 +36,13 @@ export default defineNuxtPlugin(async () => {
           ? `/${defaultLocale}`
           : `/${defaultLocale}${route.path}`,
     );
+    const url = staticHosting
+      ? `/content-index.json?ts=${Date.now()}`
+      : `/api/content-index?ts=${Date.now()}&locale=${encodeURIComponent(defaultLocale)}&path=${encodeURIComponent(candidatePath)}`;
+    const { data } = await useFetch<{
+      items: Array<{ _path: string; dateModified?: string | number }>;
+    }>(url, { server: false, headers: { "cache-control": "no-cache" } });
+    const items = data.value?.items || [];
     const current = items.find((i) => i._path === candidatePath || i._path === route.path);
     if (current?.dateModified) {
       const modified = new Date(current.dateModified).getTime();
@@ -123,26 +123,29 @@ export default defineNuxtPlugin(async () => {
   } catch {}
 
   // Progressive interval: first check after 5s, then +1s more after each reload (5s, 6s, 7s, ...)
-  const baseSec = 5;
-  let reloadCount = 0; // number of successful client-side content reloads
-  let nextDelaySec = baseSec; // time until the next check
-  let timer: ReturnType<typeof setTimeout> | null = null;
+  // Skip polling entirely for static hosting since content won't change until redeployment
+  if (!staticHosting) {
+    const baseSec = 5;
+    let reloadCount = 0; // number of successful client-side content reloads
+    let nextDelaySec = baseSec; // time until the next check
+    let timer: ReturnType<typeof setTimeout> | null = null;
 
-  const schedule = async () => {
-    try {
-      const changed = await poll();
-      if (changed) {
-        reloadCount += 1;
-        // Increase the gap between checks by 1s after each reload
-        nextDelaySec = baseSec + reloadCount;
-      }
-      // If no change, keep the current delay as-is
-    } catch {}
+    const schedule = async () => {
+      try {
+        const changed = await poll();
+        if (changed) {
+          reloadCount += 1;
+          // Increase the gap between checks by 1s after each reload
+          nextDelaySec = baseSec + reloadCount;
+        }
+        // If no change, keep the current delay as-is
+      } catch {}
+      timer = setTimeout(schedule, nextDelaySec * 1000);
+    };
+
     timer = setTimeout(schedule, nextDelaySec * 1000);
-  };
-
-  timer = setTimeout(schedule, nextDelaySec * 1000);
-  onBeforeUnmount(() => {
-    if (timer) clearTimeout(timer);
-  });
+    onBeforeUnmount(() => {
+      if (timer) clearTimeout(timer);
+    });
+  }
 });

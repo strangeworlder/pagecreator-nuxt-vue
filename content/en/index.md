@@ -10,12 +10,6 @@ summary: |
   Roleplaying games by Petri Leinonen. Indie tabletop RPGs like Cars & Family,
   Vuosisata, and more.
 ---
-
-I'm Petri Leinonen, a TTRPG creator. I am active under three brands:
-- **Gogam** &mdash; My "online indie games" brand. Stuff I make and these days publish for free, mostly on itch.io. 
-- **Kustannusosakeyhtiö Gogam** &mdash; A mainly Finnish language publishing house that is also in charge of print versions of my indie games.
-- **Gogam Entertainment** &mdash; A TTRPG entertainment company. I create actual plays under this banner.
-
 ## Gogam
 
 Gogam is a full on indie powerhouse, churning out small, super-innovative games one after the other. 
@@ -93,17 +87,36 @@ Youtube
 
 ## From other publishers
 
+Petri Leinonen has worked for various other tabletop roleplaying game publishers over the years in freelance capacity.
+
+### Myrrys
+
+Myrrys is the publisher of Legendoja & lohikäärmeitä, the most popular Finnish tabletop RPG.
+
+#### Print Books
+
 - [Legendoja & lohikäärmeitä](https://myrrys.com/legendoja-lohikaarmeita/) — Finnish 5e-compatible fantasy RPG.
   - **Pelaajan kirja**: Layout
-  - **Pelinjohtajan kirja**: Development, layout
-  - **Suuri Seikkailu**: Development, design, layout
-  - **Velhon torni**: Development, layout
+  - **Pelinjohtajan kirja**: Game design, development, layout
+  - **Suuri Seikkailu**: Design, layout
+  - **Velhon torni**: Game design, layout
 - [The Quick](http://www.drivethrurpg.com/product/245906/The-Quick) — Role-playing game of death and ghosts and Nordic Noir. Role in project: Game Designer.
-- [The Broken Knight](http://www.drivethrurpg.com/product/236543/The-Broken-Knight-Powered-by-Fate) — Science Fiction Adventure for Fate Core. Role in project: System Consultant.
+
+#### Downloadable PDFs
+
 - [Legendoja & lohikäärmeitä: Traakinlyöjä](https://myrrys.com/2023/01/30/ll-traakinlyoja/) — Finnish-language adventure for Legendoja & lohikäärmeitä. Role in project: Layout.
+- [Legendoja & lohikäärmeitä: Majakkakeikka](https://myrrys.com/2023/04/06/ll-majakkakeikka/) — Finnish-language adventure for Legendoja & lohikäärmeitä. Role in project: Layout, Maps, Design, Game design.
+- [Legendoja & lohikäärmeitä: Ametistiviidakko](https://myrrys.com/2023/04/06/ll-majakkakeikka/) — Finnish-language adventure for Legendoja & lohikäärmeitä. Role in project: Project manager, Layout, Maps, Game design.
+
+### Ironspine Press
+
+- [The Broken Knight](http://www.drivethrurpg.com/product/236543/The-Broken-Knight-Powered-by-Fate) — Science Fiction Adventure for Fate Core. Role in project: System Consultant.
+
+### Chaosium (Miskatonic Repository)
+
 - [Of Fathers...](https://www.drivethrurpg.com/product/429719/Of-Fathers?cPath=29274) — Call of Cthulhu adventure for one player character and one keeper. Role in project: Layout.
-- [Legendoja & lohikäärmeitä: Majakkakeikka](https://myrrys.com/2023/04/06/ll-majakkakeikka/) — Finnish-language adventure for Legendoja & lohikäärmeitä. Role in project: Layout, Maps, Design, Development.
-- [Legendoja & lohikäärmeitä: Ametistiviidakko](https://myrrys.com/2023/04/06/ll-majakkakeikka/) — Finnish-language adventure for Legendoja & lohikäärmeitä. Role in project: Project manager, Layout, Maps, Design, Development.
+
+
 
 ## Articles, for free for you to read
 

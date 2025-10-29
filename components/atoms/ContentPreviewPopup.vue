@@ -93,12 +93,12 @@ const handleMouseLeave = () => {
                 {{ preview.title }}
               </h3>
               
-              <p v-if="preview.description" class="preview-description">
-                {{ preview.description }}
+              <p v-if="preview.summary" class="preview-summary">
+                {{ preview.summary }}
               </p>
               
-              <p v-else-if="preview.summary" class="preview-summary">
-                {{ preview.summary }}
+              <p v-else-if="preview.description" class="preview-description">
+                {{ preview.description }}
               </p>
 
               <!-- Metadata -->

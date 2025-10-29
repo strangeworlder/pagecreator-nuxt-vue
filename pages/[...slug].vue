@@ -129,43 +129,70 @@ watch(
 const enhancementsEnabled = useState<boolean>("content-enhance-ready", () => false);
 
 const EnhancedHeadingComp = defineAsyncComponent(() => import("~/components/prose/ProseHeadingEnhanced.client.vue"))
+const EnhancedAComp = defineAsyncComponent(() => import("~/components/prose/ProseAEnhanced.client.vue"))
 
 const makeHeading = (level: 1 | 2 | 3 | 4 | 5 | 6) =>
   defineComponent({
     name: `ProseH${level}Wrapper`,
     inheritAttrs: false,
-    setup(_, { slots, attrs }) {
+    props: { id: String },
+    setup(props, { slots, attrs }) {
       return () => {
         const Comp: any = enhancementsEnabled.value ? EnhancedHeadingComp : ProseHeading
-        return h(Comp, { ...attrs, level }, slots)
+        // Pass slots as render function to preserve slot context
+        return h(Comp, { ...attrs, ...props, level }, slots)
       }
     },
   })
 
 const EnhancedNavigationComp = defineAsyncComponent(() => import("~/components/molecules/NavigationEnhanced.client.vue"))
 
-const proseComponents = computed(() => ({
+// Generic wrapper that preserves slot render context
+const wrap = (Target: any) => defineComponent({
+  name: `WrappedComponent`,
+  inheritAttrs: false,
+  setup(_, { slots, attrs }) {
+    // Return render function; h() with slots object will properly forward slots
+    return () => h(Target, attrs, slots)
+  }
+})
+
+// Anchor wrapper to choose between enhanced/basic while preserving slot context
+const AWrapper = defineComponent({
+  name: 'ProseAWrapper',
+  inheritAttrs: false,
+  props: { href: String, rel: String, target: String },
+  setup(props, { slots, attrs }) {
+    return () => {
+      const Comp: any = enhancementsEnabled.value ? EnhancedAComp : ProseA
+      // Pass slots directly to preserve render context
+      return h(Comp, { ...attrs, ...props }, slots)
+    }
+  }
+})
+
+// Create components ONCE at module level, not inside computed
+// This prevents recreating components on every render
+const proseComponents = {
   h1: makeHeading(1),
   h2: makeHeading(2),
   h3: makeHeading(3),
   h4: makeHeading(4),
   h5: makeHeading(5),
   h6: makeHeading(6),
-  p: ProseP,
-  a: enhancementsEnabled.value
-    ? defineAsyncComponent(() => import("~/components/prose/ProseAEnhanced.client.vue"))
-    : ProseA,
-  code: ProseCode,
-  pre: ProsePre,
-  ul: ProseUl,
-  ol: ProseOl,
-  li: ProseLi,
-  blockquote: ProseBlockquote,
-  img: ProseImg,
-}));
+  p: wrap(ProseP),
+  a: AWrapper,
+  code: wrap(ProseCode),
+  pre: wrap(ProsePre),
+  ul: wrap(ProseUl),
+  ol: wrap(ProseOl),
+  li: wrap(ProseLi),
+  blockquote: wrap(ProseBlockquote),
+  img: wrap(ProseImg),
+};
 
 if (process.dev) {
-  for (const [k, v] of Object.entries(proseComponents.value)) {
+  for (const [k, v] of Object.entries(proseComponents)) {
     if (!v) {
       // eslint-disable-next-line no-console
       console.warn('[proseComponents] Missing component for key:', k);
@@ -216,12 +243,12 @@ const isIndexPage = computed(() => {
       v-if="isIndexPage" 
     />
     <div class="content-layout" :class="{ 'single-column': !useHeroLayout }">
-      <div class="content-column prose">
+      <main class="content-column prose">
         <ContentRenderer v-if="data" :key="version" :value="data" :components="proseComponents" />
-      </div>
-      <div v-if="useHeroLayout" class="image-column">
+      </main>
+      <aside v-if="useHeroLayout" class="image-column">
         <HeaderImage :image="heroImage" :alt="pageTitle" />
-      </div>
+      </aside>
     </div>
     <PageFooter />
   </div>

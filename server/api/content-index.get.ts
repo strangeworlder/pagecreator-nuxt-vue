@@ -8,13 +8,18 @@ const API_MAX_AGE = Number(process.env.NUXT_API_MAX_AGE || 60);
 const API_STALE = Number(process.env.NUXT_API_STALE || 600);
 
 async function handler(event: any) {
-  const { locale } = getQuery(event);
+  const { locale, path } = getQuery(event);
   const base = typeof locale === "string" && locale ? `/${locale}` : undefined;
 
   let q = serverQueryContent(event)
     .where({ _partial: false })
     .only(["_path", "title", "description", "datePublished", "dateModified", "tags", "_file"]);
-  if (base) {
+  
+  // If a specific path is requested, filter to just that page
+  if (typeof path === "string" && path) {
+    q = q.where({ _path: path });
+  } else if (base) {
+    // Otherwise, filter by locale if provided
     q = q.where({ _path: { $regex: `^${base}(?:/|$)` } });
   }
   const rawItems = await q.sort({ datePublished: -1 }).find();

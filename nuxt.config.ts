@@ -25,6 +25,18 @@ const contentRoutes = Array.from(new Set(["/", `/${DEFAULT_LOCALE}`, ...contentF
 export default {
   components: [{ path: "~/components", pathPrefix: false }],
   modules: ["@nuxt/content"],
+  vue: {
+    compilerOptions: {
+      warnHandler: (msg: string) => {
+        // Suppress the NuxtLink slot warning
+        if (msg.includes('Slot "default" invoked outside of the render function')) {
+          return;
+        }
+        // Show other warnings
+        console.warn(msg);
+      },
+    },
+  },
   experimental: {
     appManifest: false,
   },

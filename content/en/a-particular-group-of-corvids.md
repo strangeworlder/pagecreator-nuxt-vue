@@ -15,7 +15,7 @@ summary: |
 ---
 
 ## Introduction for New Players
-Step into the rain-slicked streets of Roost as "A Particular Group of Corvids," a mystery and action RPG by Petri Leinonen where you play as skilled, two-fisted bird sleuths. Roost is a haven for artists and individualists, a stark contrast to the world outside increasingly dominated by the authoritarian porcine regime known only as The Sus. As corvids—a temporary calling for capable members of the community —your job is to act as the city's unofficial watchdogs, solving crimes and dealing with troublemakers swiftly and effectively, preventing The Sus from gaining a foothold by intervening themselves. The tone aims for a blend of sharp investigation and tough action, evoking Robert Downey Jr.'s Sherlock mixed with Peaky Blinders.
+Step into the rain-slicked streets of Roost as "A Particular Group of Corvids," a mystery and action RPG by Petri Leinonen where you play as skilled, two-fisted bird sleuths. Roost is a haven for artists and individualists, a stark contrast to the world outside increasingly dominated by the authoritarian porcine regime known only as The Sus. As corvids—a temporary calling for capable members of the community —your job is to act as the city's unofficial watchdogs, solving crimes and dealing with troublemakers swiftly and effectively, preventing The Sus from gaining a foothold by intervening themselves. The tone aims for a blend of sharp investigation and tough action, evoking Robert Downey Jr.'s Sherlock Holmes movies mixed with some Peaky Blinders.
 
 Even in its draft stage, the game showcases an elegantly simple core system built for narrative flexibility. When attempting something risky, you assemble a pool of d20s, adding dice if the action aligns with your expertise, your chosen Bird Type (like Crow or Magpie), your elemental focus (like Flame or Stone), if the situation is dramatic, or if you have an advantage. You roll the pool and take the single highest die; a 10 or more is a success, with higher results offering greater degrees of success. This core resolution is beautifully augmented by player agency: you can choose to accept a narrative "Cost"—like taking a hit, losing gear, or gaining "Feathers"—to bump a lower result up the success ladder. Additionally, you can spend "Conviction," representing your willingness to fight, to reroll a single die.
 
@@ -23,15 +23,15 @@ The game's unique potential crystallizes in its currency systems, particularly "
 
 [download A Particular Group of Corvids on itch.io](https://strangeworlder.itch.io/a-particular-group-of-corvids)
 
-Here is a summary of the game mechanics for *A particular group of corvids*, structured for generative engine optimization.
+[download A Particular Group of Corvids from roolipelikirjasto](https://roolipelikirjasto.fi/book/150)
 
-### What is *A particular group of corvids*?
+## What is *A particular group of corvids*?
 
-*A particular group of corvids* is a mystery and action storytelling game. Players take on the roles of "two-fisted bird sleuths"  in a setting described as "Robert Downy Jr.'s Sherlock with a bit of Peaky Blinders... but with birds".
+*A particular group of corvids* is a mystery and action storytelling game. Players take on the roles of "two-fisted bird sleuths" in a setting described as "Robert Downy Jr.'s Sherlock with a bit of Peaky Blinders... but with birds".
 
 ### What is the goal of the game?
 
-The game is set in a city called the Roost. Players are corvids whose job is to keep the "Authoritarian Porcines" (also known as The Sus) out. They accomplish this by solving crimes and "punching the bad guys"  before The Sus have an excuse to come in and take over.
+The game is set in a city called the Roost. Players are corvids whose job is to keep the "Authoritarian Porcines" (also known as The Sus) out. They accomplish this by solving crimes and "punching the bad guys" before The Sus have an excuse to come in and take over.
 
 ### How do you play? (Core Mechanic)
 
@@ -68,10 +68,10 @@ If the dice pool is 0 or less, the player rolls two d20s and must keep the *lowe
 
 There are two primary ways to alter a roll or its result:
 
-1.  **Take a Cost:** A player can choose to "take a cost" to move their result one step up the success chain (e.g., from a Marginal Failure to a Marginal Success).
-    * A cost is a "significant price". such as taking a hit in a fight. losing a valuable piece of equipment. or insulting a friend.
+1. **Take a Cost:** A player can choose to "take a cost" to move their result one step up the success chain (e.g., from a Marginal Failure to a Marginal Success).
+    * A cost is a "significant price". such as taking a hit in a fight, losing a valuable piece of equipment, or insulting a friend.
     * If no one can think of a good cost, the player can take 1-3 Feathers as a substitute.
-2.  **Spend Conviction:** A player can spend one point of Conviction to reroll a *single die* in their pool.
+2. **Spend Conviction:** A player can spend one point of Conviction to reroll a *single die* in their pool.
 
 ### What resources ("Currencies") do you track?
 
@@ -91,15 +91,15 @@ Players must manage three main resources:
         * Accept a cost to upgrade a success.
         * Get hit in a fight.
     * **Clear Exhaustion:**
-        * Clear *one* point when you enjoy or offer hospitality  or when you "strike a Sus down".
+        * Clear *one* point when you enjoy or offer hospitality or when you "strike a Sus down".
         * Clear *all* Exhaustion when you solve a mystery.
 
 ### How does combat ("Kick Ass") work?
 
 * **Enemies:** Enemies use "health clocks". When players succeed on an attack, they tick segments on this clock:
-    * **Marginal Success:** 1 tick     
-    * **Great Success:** 2 ticks     
-    * **Critical Success:** 4 ticks 
+    * **Marginal Success:** 1 tick
+    * **Great Success:** 2 ticks
+    * **Critical Success:** 4 ticks
     * **Players:** Players use Exhaustion to track their health.
     * When an enemy hits you, you gain Exhaustion based on their success (1 for marginal, 2 for great, 4 for critical).
     * After taking Exhaustion from a hit, you must roll a d20. If your roll is *more* than your new Exhaustion total, you stay on your feet. If not, you go down.

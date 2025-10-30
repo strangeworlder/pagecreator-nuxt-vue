@@ -14,7 +14,6 @@ export default defineEventHandler(async (event) => {
   const q = getQuery(event) as Record<string, string | undefined>;
   const src = q.src;
   const size = q.size ? Number(q.size) : undefined;
-  console.log("Src", src);
   if (!src || !src.startsWith("/")) {
     throw createError({ statusCode: 400, statusMessage: "Missing or invalid src" });
   }
@@ -43,15 +42,12 @@ export default defineEventHandler(async (event) => {
 
   const baseName = basename(src, ext);
   const outputPath = join(PUBLIC_DIR, "gen_images", `${baseName}-${size}.webp`);
-  console.log("Output path", outputPath);
   // Check if processed image already exists
   try {
-    console.log("Checking if file exists", outputPath);
     await fs.access(outputPath);
     // File exists, serve it directly from filesystem
     setHeader(event, "content-type", "image/webp");
     setHeader(event, "cache-control", "public, max-age=300");
-    console.log("Serving existing file", outputPath);
     const buf = await fs.readFile(outputPath);
     setHeader(event, "content-length", String(buf.length));
     return buf;

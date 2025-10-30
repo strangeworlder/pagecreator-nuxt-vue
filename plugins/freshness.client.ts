@@ -1,5 +1,5 @@
 // @ts-nocheck
-export default defineNuxtPlugin(async () => {
+export default defineNuxtPlugin((nuxtApp) => {
   const runtime = useRuntimeConfig();
   if (runtime.public.disableFreshness === '1' || runtime.public.disableFreshness === 1) {
     return;
@@ -110,47 +110,51 @@ export default defineNuxtPlugin(async () => {
     return updated;
   };
 
-  // Perform an immediate freshness check on client mount
-  try {
-    const changed = await poll();
-    if (!enhancementsEnabled.value) enhancementsEnabled.value = true;
-    if (!firstCheckDone.value && !changed) {
-      // Force a one-time re-render so enhanced components can mount even without content change
-      const version = useState<number>("content-doc-version", () => 0);
-      version.value = (version.value || 0) + 1;
-    }
-    firstCheckDone.value = true;
-  } catch {}
+  // Perform an immediate freshness check on client mount, but delay state changes until after hydration
+  nuxtApp.hook('app:mounted', async () => {
+    try {
+      const changed = await poll();
+      if (!enhancementsEnabled.value) enhancementsEnabled.value = true;
+      if (!firstCheckDone.value && !changed) {
+        // Force a one-time re-render so enhanced components can mount even without content change
+        const version = useState<number>("content-doc-version", () => 0);
+        version.value = (version.value || 0) + 1;
+      }
+      firstCheckDone.value = true;
+    } catch {}
 
-  // Progressive interval with backoff: check at 5s, then back off if no changes
-  // If content changed: reset to 5s (content actively updating, check frequently)
-  // If no changes: increase delay (5s → 11s → 18s → 26s → ...)
-  // Skip polling entirely for static hosting since content won't change until redeployment
-  if (!staticHosting) {
-    const baseSec = 5;
-    let pollsWithoutChange = 0; // number of consecutive polls without finding changes
-    let nextDelaySec = baseSec; // time until the next check
-    let timer: ReturnType<typeof setTimeout> | null = null;
+    // Progressive interval with backoff: check at 5s, then back off if no changes
+    // If content changed: reset to 5s (content actively updating, check frequently)
+    // If no changes: increase delay (5s → 11s → 18s → 26s → ...)
+    // Skip polling entirely for static hosting since content won't change until redeployment
+    if (!staticHosting) {
+      const baseSec = 5;
+      let pollsWithoutChange = 0; // number of consecutive polls without finding changes
+      let nextDelaySec = baseSec; // time until the next check
+      let timer: ReturnType<typeof setTimeout> | null = null;
 
-    const schedule = async () => {
-      try {
-        const changed = await poll();
-        if (changed) {
-          // Content changed: reset to frequent polling
-          pollsWithoutChange = 0;
-          nextDelaySec = baseSec;
-        } else {
-          // No changes: back off exponentially
-          pollsWithoutChange += 1;
-          nextDelaySec = nextDelaySec + baseSec + pollsWithoutChange;
-        }
-      } catch {}
+      const schedule = async () => {
+        try {
+          const changed = await poll();
+          if (changed) {
+            // Content changed: reset to frequent polling
+            pollsWithoutChange = 0;
+            nextDelaySec = baseSec;
+          } else {
+            // No changes: back off exponentially
+            pollsWithoutChange += 1;
+            nextDelaySec = nextDelaySec + baseSec + pollsWithoutChange;
+          }
+        } catch {}
+        timer = setTimeout(schedule, nextDelaySec * 1000);
+      };
+
       timer = setTimeout(schedule, nextDelaySec * 1000);
-    };
-
-    timer = setTimeout(schedule, nextDelaySec * 1000);
-    onBeforeUnmount(() => {
-      if (timer) clearTimeout(timer);
-    });
-  }
+      
+      // Clean up timer when app is unmounted
+      nuxtApp.hook('app:beforeUnmount', () => {
+        if (timer) clearTimeout(timer);
+      });
+    }
+  });
 });

@@ -22,7 +22,6 @@ async function main() {
     console.error(errors.join("\n\n"));
     process.exit(1);
   }
-  console.log("Front-matter OK");
 }
 
 main().catch((e) => {

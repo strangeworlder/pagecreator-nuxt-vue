@@ -26,3 +26,11 @@ if (process.client) {
   </NuxtLayout>
 </template>
 
+<style>
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 16px;
+}
+</style>

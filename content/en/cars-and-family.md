@@ -10,8 +10,7 @@ cover: "/images/cars-and-family-cover.png"
 template: "hero"
 heroImage: "/images/cars-and-family-cover.png"
 summary: |
-  A quick introduction to Cars & Family — a Fast & Furious-inspired
-  heist and found-family TTRPG built on Lasers & Feelings.
+  A a one-page TTRPG that's a "hack" (a modification) of the popular game Lasers & Feelings, built to feel exactly like a Fast & Furious movie. You play as a member of an elite crew of street-racing thieves.
 ---
 
 ## Introduction to the player of Cars & Family

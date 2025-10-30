@@ -21,7 +21,6 @@ async function main() {
   const target = join(outDir, 'content-index.json')
   await mkdir(dirname(target), { recursive: true })
   await writeFile(target, json)
-  console.log(`[build-content-index] wrote ${items.length} items to ${target}`)
 }
 
 main().catch((err) => {

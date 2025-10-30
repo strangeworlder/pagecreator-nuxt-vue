@@ -24,13 +24,9 @@ The system builds upon the minimalist foundation of John Harper's Lasers & Feeli
 
 "Pros & Cons" significantly innovates on the L&F structure through its unique card mechanics. Jokers always count as critical successes. More importantly, drawing a face card (Jack, Queen, or King) introduces a narrative "Twist" instead of resolving the action normally . These Twists focus on the Mark (Jack), the Prize (Queen), or the Crew (King), posing escalating questions to the table each time a card of that value appears, dynamically generating personal stakes and plot complications . Furthermore, the game embraces the genre's non-linear storytelling with a "Flashback" mechanic: after a check without a Twist, you can narrate how you prepared for this exact situation, allowing you to re-attempt the check using the opposite approach (Pro or Con) and treating any face cards drawn during the flashback as successes (though they still trigger Twists) . These elements combine to create a fast-paced, player-driven narrative experience true to its cinematic inspirations.
 
-Here is a summary of the game mechanics for *Pros & Cons*, optimized for web search and answer engines.
-
-### What is *Pros & Cons*?
+## What is *Pros & Cons*?
 
 *Pros & Cons* is a rules-light, one-page tabletop role-playing game designed by Petri Leinonen. It is based on the *Lasers & Feelings* TTRPG system. In the game, players are a "group of criminals working to pull off a heist that was supposed to be impossible". The game begins *in media res*, with the crew already in the middle of the job and running into trouble.
-
----
 
 ### How do you create a character?
 
@@ -39,8 +35,6 @@ To create your character, you make four choices:
 2.  **Choose your Energy:** Your character's personality, such as "No-nonsense," "High-energy," or "Posh".
 3.  **Choose your Card:** Pick a number from 2 to 9 and one of the four suits (Hearts, Diamonds, Spades, Clubs). This is your character's core statistic.
 4.  **Choose a Name**
-
----
 
 ### How does the "Pro vs. Con" mechanic work?
 
@@ -55,8 +49,6 @@ Your character's "Card" (your number and suit) is the key to all mechanics.
     * **Spades:** You're rough.
     * **Clubs:** You're savvy.
 
----
-
 ### How do you make a check?
 
 When your character attempts something "significant and risky," you make a check by drawing cards from a standard playing deck.
@@ -64,8 +56,6 @@ When your character attempts something "significant and risky," you make a check
 * **Draw 1 card** for the attempt.
 * **Draw +1 card** (for a total of two) if the task fits your **Role** (e.g., a Hacker is hacking).
 * **Draw +1 card** (for a total of two, or three if it also fits your Role) if the action is aimed "directly at the mark or the prize".
-
----
 
 ### How do you know if you succeed?
 
@@ -82,8 +72,6 @@ Next, you compare the suit of the card you chose to your character's suit to see
 * **Same Color:** It's a **simple success** (you get what you wanted) or a **simple failure** (you just don't get it).
 * **Opposite Color:** It's a **marginal success** or **total failure**, and you also suffer a **complication**.
 
----
-
 ### What are Twists? (Face Cards)
 
 If you draw a **Face Card** (Jack, Queen, or King), it is **not counted as a success**. Instead, it triggers a "Twist" in the story.
@@ -97,8 +85,6 @@ When a twist occurs, the GM asks the table a specific question from a list. The 
 
 A **Joker** is always a **critical success**.
 
----
-
 ### What is a Flashback?
 
 After any check that did *not* result in a twist, you can choose to have a **Flashback**.
@@ -106,8 +92,6 @@ After any check that did *not* result in a twist, you can choose to have a **Fla
 * This allows you to **re-attempt the check**.
 * When you re-roll, you *must* use the **opposite approach** (e.g., if you failed being a Pro, you must now try it as a Con).
 * During a flashback, any face cards drawn are counted as **successes**, but they still trigger their twists.
-
----
 
 ### How does the GM set up the game?
 

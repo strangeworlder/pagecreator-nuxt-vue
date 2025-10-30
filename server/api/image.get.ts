@@ -61,8 +61,6 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 500, statusMessage: "Cannot determine site URL for image fetch" });
   }
   const srcUrl = new URL(src, baseUrl).toString();
-  // Helpful log for platform debugging
-  console.log("[image] srcUrl", srcUrl, "base", baseUrl, "host", host, "proto", proto);
 
   const baseName = basename(src, ext);
   const cacheDir = await resolveCacheDir();

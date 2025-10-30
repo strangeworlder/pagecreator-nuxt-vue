@@ -10,9 +10,7 @@ cover: "/images/we-cant-stop-here-cover.png"
 template: "hero"
 heroImage: "/images/we-cant-stop-here-cover.png"
 summary: |
-  A player-facing intro to "We can't stop here..." — a doom-metal
-  Mörk Borg supplement about a sentient herb wagon whose hallucinogenic
-  cargo fuels risky travel, addiction, and reality-blurring encounters.
+  This is a third-party supplement for the doom-metal RPG Mörk Borg that forces players into a grimy, psychedelic road trip. The centerpiece is a sentient, decaying wagon full of dangerous, hallucinogenic herbs.
 ---
 
 ## Introduction for New Players

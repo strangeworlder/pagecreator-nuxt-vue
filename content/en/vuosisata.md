@@ -21,7 +21,7 @@ Character depth comes from interpretive attributes and unique mechanics. Player�
 
 Here’s the breakdown:
 
-### What is Vuosisata?
+## What is Vuosisata?
 
 Vuosisata is a tabletop role‑playing game system designed by Petri Leinonen, derived from a specific campaign spanning an alternate history from 1912 to 2012. It posits a world much like ours that experienced a cataclysm, introducing magic and "gifted ones" capable of shaping destiny against the backdrop of a century counting down to the world's end. The system emphasizes player narrative input ("fast‑talking"), low entry complexity, and meaningful consequences, using a Tarot deck as its core resolution tool.
 

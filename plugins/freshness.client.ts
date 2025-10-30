@@ -122,11 +122,13 @@ export default defineNuxtPlugin(async () => {
     firstCheckDone.value = true;
   } catch {}
 
-  // Progressive interval: first check after 5s, then +1s more after each reload (5s, 6s, 7s, ...)
+  // Progressive interval with backoff: check at 5s, then back off if no changes
+  // If content changed: reset to 5s (content actively updating, check frequently)
+  // If no changes: increase delay (5s → 11s → 18s → 26s → ...)
   // Skip polling entirely for static hosting since content won't change until redeployment
   if (!staticHosting) {
     const baseSec = 5;
-    let reloadCount = 0; // number of successful client-side content reloads
+    let pollsWithoutChange = 0; // number of consecutive polls without finding changes
     let nextDelaySec = baseSec; // time until the next check
     let timer: ReturnType<typeof setTimeout> | null = null;
 
@@ -134,11 +136,14 @@ export default defineNuxtPlugin(async () => {
       try {
         const changed = await poll();
         if (changed) {
-          reloadCount += 1;
-          // Increase the gap between checks by 1s after each reload
-          nextDelaySec = baseSec + reloadCount;
+          // Content changed: reset to frequent polling
+          pollsWithoutChange = 0;
+          nextDelaySec = baseSec;
+        } else {
+          // No changes: back off exponentially
+          pollsWithoutChange += 1;
+          nextDelaySec = nextDelaySec + baseSec + pollsWithoutChange;
         }
-        // If no change, keep the current delay as-is
       } catch {}
       timer = setTimeout(schedule, nextDelaySec * 1000);
     };

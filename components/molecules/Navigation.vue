@@ -14,7 +14,7 @@
         <a href="#from-other-publishers">Other publishers</a> &mdash; Other publishers I have worked with or published games for.
       </li>
       <li>
-        <a href="#articles-for-free-to-read">Articles</a> &mdash; Articles I have written for free, mostly on my blog.
+        <a href="#articles-for-free-for-you-to-read">Articles</a> &mdash; Articles I have written for free, mostly on my blog.
       </li>
     </ul>
   </nav>

@@ -20,7 +20,8 @@ const buildUrl = (id?: string): string | undefined => {
   if (!id) return undefined
   if (typeof window === 'undefined') return undefined
   const url = new URL(window.location.href)
-  url.hash = id
+  // Remove 'header-' prefix to link to the <a name> instead of the heading
+  url.hash = id.startsWith('header-') ? id.slice(7) : id
   return url.toString()
 }
 

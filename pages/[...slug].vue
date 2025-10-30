@@ -1,10 +1,10 @@
 <script setup lang="ts">
 // @ts-nocheck
-import { computed, watch } from "vue";
+import { computed, watch, markRaw, shallowRef } from "vue";
 import { queryContent } from "#imports";
 import { useCustomContentHead } from "~/composables/useContentHead";
 import ProseA from "~/components/prose/ProseA.vue";
-import { defineAsyncComponent, defineComponent, h } from "vue";
+import { defineComponent, h } from "vue";
 import ProseBlockquote from "~/components/prose/ProseBlockquote.vue";
 import ProseCode from "~/components/prose/ProseCode.vue";
 import ProseHeading from "~/components/prose/ProseHeading.vue";
@@ -128,8 +128,30 @@ watch(
 
 const enhancementsEnabled = useState<boolean>("content-enhance-ready", () => false);
 
-const EnhancedHeadingComp = defineAsyncComponent(() => import("~/components/prose/ProseHeadingEnhanced.client.vue"))
-const EnhancedAComp = defineAsyncComponent(() => import("~/components/prose/ProseAEnhanced.client.vue"))
+// Store the dynamically loaded enhanced components
+const enhancedHeadingComp = shallowRef<any>(null);
+const enhancedAComp = shallowRef<any>(null);
+const enhancedNavigationComp = shallowRef<any>(null);
+
+// Track when enhanced components are loaded
+const enhancedComponentsLoaded = useState<boolean>("enhanced-components-loaded", () => false);
+
+// Load enhanced components on client
+if (process.client) {
+  Promise.all([
+    import("~/components/prose/ProseHeadingEnhanced.client.vue"),
+    import("~/components/prose/ProseAEnhanced.client.vue"),
+    import("~/components/molecules/NavigationEnhanced.client.vue"),
+  ]).then(([heading, anchor, nav]) => {
+    enhancedHeadingComp.value = heading.default;
+    enhancedAComp.value = anchor.default;
+    enhancedNavigationComp.value = nav.default;
+    enhancedComponentsLoaded.value = true;
+    if (process.dev) console.log('[enhancements] Enhanced components loaded and ready');
+  }).catch(err => {
+    if (process.dev) console.warn('[enhancements] Failed to load enhanced components', err);
+  });
+}
 
 const makeHeading = (level: 1 | 2 | 3 | 4 | 5 | 6) =>
   defineComponent({
@@ -138,14 +160,12 @@ const makeHeading = (level: 1 | 2 | 3 | 4 | 5 | 6) =>
     props: { id: String },
     setup(props, { slots, attrs }) {
       return () => {
-        const Comp: any = enhancementsEnabled.value ? EnhancedHeadingComp : ProseHeading
+        const Comp: any = (enhancementsEnabled.value && enhancedHeadingComp.value) ? enhancedHeadingComp.value : ProseHeading
         // Pass slots as render function to preserve slot context
         return h(Comp, { ...attrs, ...props, level }, slots)
       }
     },
   })
-
-const EnhancedNavigationComp = defineAsyncComponent(() => import("~/components/molecules/NavigationEnhanced.client.vue"))
 
 // Generic wrapper that preserves slot render context
 const wrap = (Target: any) => defineComponent({
@@ -164,7 +184,7 @@ const AWrapper = defineComponent({
   props: { href: String, rel: String, target: String },
   setup(props, { slots, attrs }) {
     return () => {
-      const Comp: any = enhancementsEnabled.value ? EnhancedAComp : ProseA
+      const Comp: any = (enhancementsEnabled.value && enhancedAComp.value) ? enhancedAComp.value : ProseA
       // Pass slots directly to preserve render context
       return h(Comp, { ...attrs, ...props }, slots)
     }
@@ -173,6 +193,7 @@ const AWrapper = defineComponent({
 
 // Create components ONCE at module level, not inside computed
 // This prevents recreating components on every render
+// Use markRaw on static wrappers to prevent unnecessary re-renders when enhancementsEnabled changes
 const proseComponents = {
   h1: makeHeading(1),
   h2: makeHeading(2),
@@ -180,15 +201,15 @@ const proseComponents = {
   h4: makeHeading(4),
   h5: makeHeading(5),
   h6: makeHeading(6),
-  p: wrap(ProseP),
+  p: markRaw(wrap(ProseP)),
   a: AWrapper,
-  code: wrap(ProseCode),
-  pre: wrap(ProsePre),
-  ul: wrap(ProseUl),
-  ol: wrap(ProseOl),
-  li: wrap(ProseLi),
-  blockquote: wrap(ProseBlockquote),
-  img: wrap(ProseImg),
+  code: markRaw(wrap(ProseCode)),
+  pre: markRaw(wrap(ProsePre)),
+  ul: markRaw(wrap(ProseUl)),
+  ol: markRaw(wrap(ProseOl)),
+  li: markRaw(wrap(ProseLi)),
+  blockquote: markRaw(wrap(ProseBlockquote)),
+  img: markRaw(wrap(ProseImg)),
 };
 
 if (process.dev) {
@@ -239,7 +260,7 @@ const isIndexPage = computed(() => {
   <div>
     <PageHeader :title="pageTitle" :description="pageDescription" />
     <component 
-      :is="enhancementsEnabled ? EnhancedNavigationComp : Navigation" 
+      :is="(enhancementsEnabled && enhancedNavigationComp) ? enhancedNavigationComp : Navigation" 
       v-if="isIndexPage" 
     />
     <div class="content-layout" :class="{ 'single-column': !useHeroLayout }">

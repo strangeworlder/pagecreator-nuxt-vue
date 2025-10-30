@@ -16,6 +16,31 @@ export default defineNuxtPlugin((nuxtApp) => {
   const enhancementsEnabled = useState<boolean>("content-enhance-ready", () => false);
   const firstCheckDone = useState<boolean>("content-first-check-done", () => false);
 
+  const enhancedComponentsLoaded = useState<boolean>("enhanced-components-loaded", () => false);
+
+  const ensureEnhancementsReady = async () => {
+    if (enhancementsEnabled.value) {
+      return;
+    }
+    
+    // Wait for enhanced components to be fully loaded in the page component
+    // They're loaded via dynamic imports in [slug].vue
+    const maxAttempts = 50; // 5 seconds max
+    let attempts = 0;
+    
+    while (attempts < maxAttempts && !enhancedComponentsLoaded.value) {
+      await new Promise(resolve => setTimeout(resolve, 100));
+      attempts++;
+    }
+    
+    if (!enhancedComponentsLoaded.value && process.dev) {
+      console.warn("[freshness] Enhanced components not loaded after timeout, enabling anyway");
+    }
+    
+    enhancementsEnabled.value = true;
+    if (process.dev) console.log("[freshness] Enhancements enabled", { path: route.path, componentsLoaded: enhancedComponentsLoaded.value });
+  };
+
   // Attempt a lightweight freshness check on client
   const poll = async () => {
     let updated = false;
@@ -83,10 +108,7 @@ export default defineNuxtPlugin((nuxtApp) => {
           // Persist the last shown content mtime so future polls don't loop
           if (typeof localStorage !== 'undefined') localStorage.setItem(lsKey, String(modified));
           updated = true;
-          if (!enhancementsEnabled.value) {
-            enhancementsEnabled.value = true;
-            if (process.dev) console.log("[freshness] Enhancements enabled after content swap", { path: route.path });
-          }
+          await ensureEnhancementsReady();
         } else {
           // Log fallback refresh when fresh doc query didn't resolve
           if (process.dev) console.log("[freshness] Fresh content detected; falling back to refreshNuxtData()", {
@@ -100,10 +122,7 @@ export default defineNuxtPlugin((nuxtApp) => {
           shownAtState.value = modified;
           if (typeof localStorage !== 'undefined') localStorage.setItem(lsKey, String(modified));
           updated = true;
-          if (!enhancementsEnabled.value) {
-            enhancementsEnabled.value = true;
-            if (process.dev) console.log("[freshness] Enhancements enabled after refreshNuxtData", { path: route.path });
-          }
+          await ensureEnhancementsReady();
         }
       }
     }
@@ -113,13 +132,8 @@ export default defineNuxtPlugin((nuxtApp) => {
   // Perform an immediate freshness check on client mount, but delay state changes until after hydration
   nuxtApp.hook('app:mounted', async () => {
     try {
-      const changed = await poll();
-      if (!enhancementsEnabled.value) enhancementsEnabled.value = true;
-      if (!firstCheckDone.value && !changed) {
-        // Force a one-time re-render so enhanced components can mount even without content change
-        const version = useState<number>("content-doc-version", () => 0);
-        version.value = (version.value || 0) + 1;
-      }
+      await poll();
+      await ensureEnhancementsReady();
       firstCheckDone.value = true;
     } catch {}
 

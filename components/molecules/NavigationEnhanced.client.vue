@@ -89,7 +89,7 @@ onUnmounted(() => {
           <a href="#from-other-publishers" @click.prevent="scrollToSection('header-from-other-publishers')">Other publishers</a>
         </li>
         <li>
-          <a href="#articles-for-free-to-read" @click.prevent="scrollToSection('header-articles-for-free-to-read')">Articles</a>
+          <a href="#articles-for-free-for-you-to-read" @click.prevent="scrollToSection('header-articles-for-free-for-you-to-read')">Articles</a>
         </li>
       </ul>
     </nav>

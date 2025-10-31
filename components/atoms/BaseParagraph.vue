@@ -7,8 +7,9 @@
 
 <style scoped>
 p {
-  color: var(--color-muted);
-  line-height: 1.6;
+  font-size: var(--font-size, var(--size-3));
+  line-height: var(--line-height, 1.7);
+  margin: 0.8em 0;
 }
 </style>
 

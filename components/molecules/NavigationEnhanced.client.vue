@@ -4,9 +4,6 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const navRef = ref<HTMLElement>()
 const floatingNavRef = ref<HTMLElement>()
 const isFloating = ref(false)
-const originalNavHeight = ref(0)
-const lastScrollY = ref(0)
-const scrollDirection = ref<'up' | 'down' | null>(null)
 
 const handleScroll = () => {
   if (!navRef.value) return
@@ -35,9 +32,6 @@ const scrollToSection = (sectionId: string) => {
 }
 
 onMounted(() => {
-  if (navRef.value) {
-    originalNavHeight.value = navRef.value.offsetHeight
-  }
   window.addEventListener('scroll', handleScroll, { passive: true })
 })
 

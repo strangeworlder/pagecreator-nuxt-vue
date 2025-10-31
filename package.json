@@ -3,8 +3,11 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "predev": "tsx scripts/generate-image-meta.ts",
     "dev": "nuxt dev --host 0.0.0.0 --port 3000",
+    "prebuild": "tsx scripts/generate-image-meta.ts",
     "build": "nuxt build",
+    "pregenerate": "tsx scripts/generate-image-meta.ts",
     "generate": "nuxt generate",
     "build:content-index": "tsx scripts/build-content-index.ts .output/public",
     "preview": "nuxt preview",

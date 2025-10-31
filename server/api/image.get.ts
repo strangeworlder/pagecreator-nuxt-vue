@@ -20,7 +20,7 @@ async function resolveCacheDir(): Promise<string> {
   // Last resort: current working directory
   return process.cwd();
 }
-const SIZES = [150, 480, 768, 1024, 1200, 1280, 1536];
+const SIZES = [150, 320, 480, 768, 1024, 1200, 1280, 1536];
 const QUALITY = 80;
 
 async function computeDominantBackgroundColor(input: Buffer): Promise<{ r: number; g: number; b: number }> {

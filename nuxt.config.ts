@@ -1,5 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { globSync } from "glob";
+import fs from "node:fs";
+import matter from "gray-matter";
 const env: Record<string, string | undefined> =
   (globalThis as unknown as { process?: { env?: Record<string, string | undefined> } }).process
     ?.env || {};
@@ -21,7 +23,27 @@ const fileToRoute = (file: string) => {
   if (route === "") route = "/";
   return route;
 };
-const contentRoutes = Array.from(new Set(["/", `/${DEFAULT_LOCALE}`, ...contentFiles.map(fileToRoute)]));
+// Extract alias routes from front matter
+const aliasRoutes = new Set<string>();
+for (const file of contentFiles) {
+  try {
+    const src = fs.readFileSync(file, "utf8");
+    const fm = matter(src).data as Record<string, any>;
+    const aliases: unknown = fm.aliases;
+    if (Array.isArray(aliases)) {
+      for (const a of aliases) {
+        if (typeof a === "string" && a.trim()) {
+          const route = a.startsWith("/") ? a : `/${a}`;
+          aliasRoutes.add(route);
+        }
+      }
+    } else if (typeof aliases === "string" && aliases.trim()) {
+      const route = aliases.startsWith("/") ? aliases : `/${aliases}`;
+      aliasRoutes.add(route);
+    }
+  } catch {}
+}
+const contentRoutes = Array.from(new Set(["/", `/${DEFAULT_LOCALE}`, ...contentFiles.map(fileToRoute), ...aliasRoutes]));
 export default {
   components: [{ path: "~/components", pathPrefix: false }],
   modules: ["@nuxt/content"],
@@ -44,6 +66,7 @@ export default {
     "~/assets/styles/tokens.css",
     "~/assets/styles/prose.css",
     "~/assets/styles/components.css",
+    "~/assets/styles/product.css",
   ],
   app: {
     head: {

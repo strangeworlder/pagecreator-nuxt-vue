@@ -1,0 +1,113 @@
+/* Product theme visuals; structure is in pages/[...slug].vue */
+
+/* Token overrides for product pages (fonts, sizes, accent color) */
+html[data-page-theme="product"] {
+  /* Typography */
+  --font-sans: Arial, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", "Apple Color Emoji", "Segoe UI Emoji";
+  /* 1.2rem baseline (relative to 16px root) → 19.2px */
+  --font-size: 19.2px;
+  --line-height: 1.5;
+  /* Links use prose.css var(--color-accent) */
+  --color-accent: #00095e;
+}
+
+html[data-page-theme="product"],
+html[data-page-theme="product"] body {
+  background-image: var(--product-bg-full);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Sidebar visuals */
+html[data-page-theme="product"] .product-nav {
+  background-image: var(--product-bg-tile);
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  display: flex;
+  flex-direction: column;
+}
+
+html[data-page-theme="product"] .product-logo {
+  width: 30%;
+  margin: 20px 22%;
+  aspect-ratio: 1 / 1;
+  background-image: var(--product-side-logo);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+/* Content column visuals */
+html[data-page-theme="product"] .product-main {
+  border-top: 3px black solid;
+}
+html[data-page-theme="product"] .product-content {
+  background: rgba(240, 246, 255, 0.6);
+  padding: 30px;
+}
+
+/* H1 as centered logo image */
+html[data-page-theme="product"] h1 {
+  background-image: var(--product-h1-logo);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 120px;
+  background-position: center;
+  overflow: hidden;
+  text-indent: -600vw;
+  margin: 0 0 0.5rem;
+}
+
+/* Headings spacing consistent with provided CSS */
+html[data-page-theme="product"] .prose h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Links styling */
+html[data-page-theme="product"] a {
+  color: #00095e;
+  font-weight: 700;
+  text-decoration: none;
+}
+html[data-page-theme="product"] a:hover {
+  color: #0000dd;
+  text-decoration: underline;
+}
+html[data-page-theme="product"] a[rel="external"]::after {
+  display: inline-block;
+  content: '↗';
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.5rem;
+}
+
+/* Images inside main */
+html[data-page-theme="product"] .product-main img {
+  display: block;
+  margin: auto;
+  max-width: 500px;
+}
+
+/* Mobile sidebar adjustments matching provided behavior */
+@media (max-width: 748px) {
+  html[data-page-theme="product"] .product-layout {
+    flex-direction: column;
+  }
+  html[data-page-theme="product"] .product-nav {
+    flex-direction: row-reverse;
+    max-width: 100%;
+    justify-content: space-between;
+    background-size: 200% auto;
+  }
+  html[data-page-theme="product"] .product-logo {
+    margin: 20px 40px;
+    width: 90px;
+  }
+}
+html[data-page-theme="product"] header {
+  margin-bottom: 24px;
+}

@@ -47,9 +47,9 @@ const imageSrc = computed(() => {
 /* Mobile styles */
 @media (max-width: 768px) {
   .header-image {
-    height: auto;
-    min-height: 50vh;
-    max-height: 90vh;
+    height: fit-content;
+    min-height: 0;
+    max-height: 75vh;
     display: block;
   }
   

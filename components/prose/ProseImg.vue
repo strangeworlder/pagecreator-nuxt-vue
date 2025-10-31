@@ -1,33 +1,21 @@
 <template>
-  <div :style="wrapperStyle">
-    <picture v-if="!isGif">
-      <source :srcset="srcsetWebp" type="image/webp" />
-      <img
-        :src="fallbackSrc"
-        :alt="alt"
-        :sizes="sizes"
-        loading="lazy"
-        decoding="async"
-        :width="dimensions?.width"
-        :height="dimensions?.height"
-        style="width: 100%; height: auto; display: block;"
-      />
-    </picture>
+  <picture ref="rootRef" data-img-kind="basic">
+    <source v-if="!isGif" :srcset="srcsetWebp" type="image/webp" />
     <img
-      v-else
-      :src="src"
+      :src="lowResSrc"
       :alt="alt"
+      :sizes="sizes"
       loading="lazy"
       decoding="async"
       :width="dimensions?.width"
       :height="dimensions?.height"
-      style="width: 100%; height: auto; display: block;"
+      :style="imgStyle"
     />
-  </div>
+  </picture>
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, ref, onMounted, onUpdated } from "vue";
 
 const props = defineProps<{
   src: string;
@@ -37,13 +25,28 @@ const props = defineProps<{
 }>();
 
 const isGif = computed(() => props.src?.toLowerCase().endsWith(".gif"));
-const isWebp = computed(() => props.src?.toLowerCase().endsWith(".webp"));
+
+// Use on-demand processing endpoint
+const getProcessedPath = (w: number) => `/api/image?src=${encodeURIComponent(props.src)}&size=${w}`;
+
+// Always load a very low-resolution image (or original GIF)
+const lowWidth = 320;
+const lowResSrc = computed(() => {
+  if (!props.src) return "";
+  if (isGif.value) return props.src;
+  return getProcessedPath(lowWidth);
+});
+
+const widths = [320, 480, 768, 1024, 1280, 1536];
+
+const srcsetWebp = computed(() => {
+  if (!props.src || isGif.value) return "";
+  return widths.map((w) => `${getProcessedPath(w)} ${w}w`).join(", ");
+});
 
 const sizes = "(min-width: 1280px) 1200px, (min-width: 768px) 768px, 100vw";
-const baseImgAttrs = { loading: "lazy", decoding: "async" } as const;
 
-// Optional: width/height metadata to reserve space and avoid CLS
-// Add entries in assets/imageMeta.json like { "/images/foo.jpg": { width: 1600, height: 900 } }
+// SSR-friendly: use provided props or optional metadata to set aspect-ratio
 let meta: Record<string, { width: number; height: number }> = {};
 try {
   meta = (await import("~/assets/imageMeta.json")).default as typeof meta;
@@ -56,26 +59,52 @@ const dimensions = computed(() => {
   return props.src ? meta[props.src] : undefined;
 });
 
-const wrapperStyle = computed(() => {
+const aspectRatio = computed(() => {
   const dim = dimensions.value;
-  if (dim) {
-    return { aspectRatio: `${dim.width} / ${dim.height}` } as Record<string, string>;
-  }
-  return null as unknown as Record<string, string>;
+  return dim ? `${dim.width} / ${dim.height}` : undefined;
 });
 
-const widths = [480, 768, 1024, 1280, 1536];
+const imgStyle = computed(() => (aspectRatio.value ? { aspectRatio: aspectRatio.value } : {}));
 
-// Use on-demand processing endpoint
-const getProcessedPath = (w: number) => `/api/image?src=${encodeURIComponent(props.src)}&size=${w}`;
+// Debug logs (enable with ?debugHydration in URL, dev only)
+const isDebug = () => {
+  try {
+    return process.dev && typeof window !== "undefined" && typeof URLSearchParams !== "undefined" && new URLSearchParams(window.location.search).has("debugHydration");
+  } catch {
+    return false;
+  }
+};
+const rootRef = ref<HTMLElement | null>(null);
 
-const srcsetWebp = computed(() => widths.map((w) => `${getProcessedPath(w)} ${w}w`).join(", "));
+onMounted(() => {
+  if (isDebug()) {
+    const el = rootRef.value as HTMLElement | null;
+    console.log("[ProseImg] mounted", {
+      src: props.src,
+      isGif: isGif.value,
+      dims: dimensions.value,
+      node: el?.nodeName,
+    });
+  }
+});
 
-// Fallback: use original for GIFs, or smallest processed size for others
-const fallbackSrc = computed(() => {
-  if (isGif.value) return props.src;
-  return getProcessedPath(widths[0]);
+onUpdated(() => {
+  if (isDebug()) {
+    const el = rootRef.value as HTMLElement | null;
+    console.log("[ProseImg] updated", {
+      src: props.src,
+      isGif: isGif.value,
+      dims: dimensions.value,
+      node: el?.nodeName,
+    });
+  }
 });
 </script>
 
-
+<style scoped>
+img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+</style>

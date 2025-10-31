@@ -17,6 +17,7 @@ import ProseImg from "~/components/prose/ProseImg.vue";
 import PageHeader from "~/components/molecules/PageHeader.vue";
 import PageFooter from "~/components/molecules/PageFooter.vue";
 import Navigation from "~/components/molecules/Navigation.vue";
+import ProductNavigation from "~/components/molecules/ProductNavigation.vue";
 import HeaderImage from "~/components/atoms/HeaderImage.vue";
 
 const route = useRoute();
@@ -37,9 +38,20 @@ const ssrDocKey = `ssr-initial-doc:${resolveContentPath(route.path)}`;
 const ssrInitialDoc = useState<Record<string, unknown> | null>(ssrDocKey, () => null);
 let initial = ssrInitialDoc.value;
 if (!initial) {
-  const fetched = await queryContent(resolveContentPath(route.path))
-    .where({ _path: resolveContentPath(route.path) })
-    .findOne();
+  const tryPath = resolveContentPath(route.path)
+  // 1) Try exact _path
+  let fetched = await queryContent(tryPath).where({ _path: tryPath }).findOne();
+  // 2) Try alias match (if supported by content index)
+  if (!fetched) {
+    try {
+      fetched = await queryContent().where({ aliases: { $contains: tryPath } }).findOne();
+    } catch {}
+  }
+  // 3) Fallback: prepend '/fi' for root-level paths when not found
+  if (!fetched && !/^\/\w{2}\b/.test(tryPath)) {
+    const fiPath = `/fi${tryPath}`;
+    fetched = await queryContent(fiPath).where({ _path: fiPath }).findOne();
+  }
   ssrInitialDoc.value = fetched;
   initial = fetched;
   if (process.dev) console.log('[initial-doc] fetched initial doc', { path: resolveContentPath(route.path), _path: (fetched as any)?._path });
@@ -50,7 +62,9 @@ if (!initial) {
 const getLocaleFromPath = (path: string) => {
   const p = resolveContentPath(path);
   const parts = p.split("/");
-  return parts[1] || defaultLocale;
+  const first = parts[1] || "";
+  // Only treat a 2-letter code as locale; otherwise fall back to default
+  return /^[a-z]{2}$/i.test(first) ? first : defaultLocale;
 };
 
 const initialLocale = getLocaleFromPath(route.path);
@@ -109,7 +123,17 @@ watch(
   () => route.fullPath,
   async () => {
     const path = resolveContentPath(route.path);
-    const next = await queryContent(path).where({ _path: path }).findOne();
+    // Re-run the same lookup strategy on navigation
+    let next = await queryContent(path).where({ _path: path }).findOne();
+    if (!next) {
+      try {
+        next = await queryContent().where({ aliases: { $contains: path } }).findOne();
+      } catch {}
+    }
+    if (!next && !/^\/\w{2}\b/.test(path)) {
+      const fiPath = `/fi${path}`;
+      next = await queryContent(fiPath).where({ _path: fiPath }).findOne();
+    }
     const nextLocale = getLocaleFromPath(route.path);
     const nextIndex = await queryContent(`/${nextLocale}`)
       .where({ _path: `/${nextLocale}` })
@@ -132,6 +156,9 @@ const enhancementsEnabled = useState<boolean>("content-enhance-ready", () => fal
 const enhancedHeadingComp = shallowRef<any>(null);
 const enhancedAComp = shallowRef<any>(null);
 const enhancedNavigationComp = shallowRef<any>(null);
+const enhancedProductNavigationComp = shallowRef<any>(null);
+const enhancedImgComp = shallowRef<any>(null);
+const enhancedPComp = shallowRef<any>(null);
 
 // Track when enhanced components are loaded
 const enhancedComponentsLoaded = useState<boolean>("enhanced-components-loaded", () => false);
@@ -142,10 +169,16 @@ if (process.client) {
     import("~/components/prose/ProseHeadingEnhanced.client.vue"),
     import("~/components/prose/ProseAEnhanced.client.vue"),
     import("~/components/molecules/NavigationEnhanced.client.vue"),
-  ]).then(([heading, anchor, nav]) => {
+    import("~/components/molecules/ProductNavigationEnhanced.client.vue"),
+    import("~/components/prose/ProseImgEnhanced.client.vue"),
+    import("~/components/prose/ProsePEnhanced.client.vue"),
+  ]).then(([heading, anchor, nav, pnav, imgEnh, pEnh]) => {
     enhancedHeadingComp.value = heading.default;
     enhancedAComp.value = anchor.default;
     enhancedNavigationComp.value = nav.default;
+    enhancedProductNavigationComp.value = pnav.default;
+    enhancedImgComp.value = imgEnh.default;
+    enhancedPComp.value = pEnh.default;
     enhancedComponentsLoaded.value = true;
     if (process.dev) console.log('[enhancements] Enhanced components loaded and ready');
   }).catch(err => {
@@ -191,9 +224,51 @@ const AWrapper = defineComponent({
   }
 })
 
+// Image wrapper to switch between basic and enhanced img
+const ImgWrapper = defineComponent({
+  name: 'ProseImgWrapper',
+  inheritAttrs: false,
+  props: { src: String, alt: String, width: Number, height: Number },
+  setup(props, { slots, attrs }) {
+    const isDebug = () => {
+      try {
+        return process.dev && (typeof window !== 'undefined') && typeof URLSearchParams !== 'undefined' && new URLSearchParams(window.location.search).has('debugHydration')
+      } catch {
+        return false
+      }
+    }
+    let lastKind: string | null = null
+    return () => {
+      // Always use the basic image component to avoid remounts on enhancement
+      const useEnhanced = false
+      const Comp: any = ProseImg
+      if (isDebug()) {
+        const kind = 'basic'
+        if (kind !== lastKind) {
+          console.log('[ProseImgWrapper] rendering', { kind, src: (props as any)?.src, attrs })
+          lastKind = kind
+        }
+      }
+      return h(Comp, { ...attrs, ...props }, slots)
+    }
+  }
+})
+
 // Create components ONCE at module level, not inside computed
 // This prevents recreating components on every render
 // Use markRaw on static wrappers to prevent unnecessary re-renders when enhancementsEnabled changes
+const PWrapper = defineComponent({
+  name: 'ProsePWrapper',
+  inheritAttrs: false,
+  setup(_, { slots, attrs }) {
+    return () => {
+      // Always use the basic paragraph to avoid parent-type swaps remounting children
+      const Comp: any = ProseP
+      return h(Comp, attrs, slots)
+    }
+  }
+})
+
 const proseComponents = {
   h1: makeHeading(1),
   h2: makeHeading(2),
@@ -201,7 +276,7 @@ const proseComponents = {
   h4: makeHeading(4),
   h5: makeHeading(5),
   h6: makeHeading(6),
-  p: markRaw(wrap(ProseP)),
+  p: PWrapper,
   a: AWrapper,
   code: markRaw(wrap(ProseCode)),
   pre: markRaw(wrap(ProsePre)),
@@ -209,7 +284,7 @@ const proseComponents = {
   ol: markRaw(wrap(ProseOl)),
   li: markRaw(wrap(ProseLi)),
   blockquote: markRaw(wrap(ProseBlockquote)),
-  img: markRaw(wrap(ProseImg)),
+  img: markRaw(ImgWrapper),
 };
 
 if (process.dev) {
@@ -229,10 +304,13 @@ const pageTitle = computed(() => {
 const pageDescription = computed(() => {
   return (data.value as any)?.description || "This is the TSS starter. Content below is rendered from Markdown.";
 });
-// Page theme from front matter; default to 'classic' when not set
+// Page theme from front matter or template; default to 'classic' when not set
 const pageTheme = computed(() => {
-  const theme = String(((renderDoc.value as any)?.theme || (renderDoc.value as any)?.pageTheme || "classic")).toLowerCase();
-  return theme === "modern" ? "modern" : "classic";
+  const tpl = String(((renderDoc.value as any)?.template || "")).toLowerCase();
+  if (tpl === "product") return "product" as const;
+  const raw = (renderDoc.value as any)?.theme || (renderDoc.value as any)?.pageTheme || "classic";
+  const theme = String(raw).toLowerCase();
+  return ["classic","modern","product"].includes(theme) ? theme : "classic";
 });
 if (process.client) {
   watch(pageTheme, (t) => {
@@ -240,6 +318,24 @@ if (process.client) {
     if (html.dataset.pageTheme !== t) html.dataset.pageTheme = t;
   }, { immediate: true });
 }
+// Ensure SSR also sets page theme and product CSS variables on <html>
+useHead(() => {
+  const d: any = renderDoc.value || {};
+  const pt = d?.productTheme || {};
+  const cssVarStyle = [
+    pt.bgFull ? `--product-bg-full: url(${pt.bgFull})` : '',
+    pt.bgTile ? `--product-bg-tile: url(${pt.bgTile})` : '',
+    pt.h1Logo ? `--product-h1-logo: url(${pt.h1Logo})` : '',
+    pt.sideLogo ? `--product-side-logo: url(${pt.sideLogo})` : '',
+  ].filter(Boolean).join('; ');
+  return {
+    htmlAttrs: {
+      'data-page-theme': pageTheme.value,
+      // inline CSS variables on the html element so SSR has visuals
+      style: cssVarStyle || undefined,
+    }
+  }
+});
 // Template selection and hero image handling (decoupled from `cover`)
 const templateName = computed(() => String(((renderDoc.value as any)?.template || "")).toLowerCase());
 const isPlainTemplate = computed(() => !templateName.value || templateName.value === "plain");
@@ -254,16 +350,60 @@ const isIndexPage = computed(() => {
   const path = (data.value as any)?._path;
   return path === `/${defaultLocale}` || path === "/";
 });
+
+// Product template specifics
+const isProductTemplate = computed(() => templateName.value === "product");
+const productNav = computed(() => {
+  const links = (renderDoc.value as any)?.productNav;
+  return Array.isArray(links) ? links : [];
+});
+// Apply product CSS variables from front matter to <html> for theming
+if (process.client) {
+  watch(
+    () => (renderDoc.value as any)?.productTheme,
+    (pt) => {
+      if (!pt) return;
+      const html = document.documentElement as HTMLElement;
+      const setVar = (k: string, v?: string) => {
+        if (typeof v === 'string' && v) html.style.setProperty(k, `url(${v})`);
+      };
+      setVar('--product-bg-full', (pt as any).bgFull);
+      setVar('--product-bg-tile', (pt as any).bgTile);
+      setVar('--product-h1-logo', (pt as any).h1Logo);
+      setVar('--product-side-logo', (pt as any).sideLogo);
+    },
+    { immediate: true, deep: true }
+  );
+}
 </script>
 
 <template>
   <div>
-    <PageHeader :title="pageTitle" :description="pageDescription" />
+    <PageHeader v-if="!isProductTemplate" :title="pageTitle" :description="pageDescription" />
     <component 
       :is="(enhancementsEnabled && enhancedNavigationComp) ? enhancedNavigationComp : Navigation" 
       v-if="isIndexPage" 
     />
-    <div class="content-layout" :class="{ 'single-column': !useHeroLayout }">
+
+    <!-- Product template layout -->
+    <div v-if="isProductTemplate" class="product-layout">
+      <aside class="product-nav">
+        <component
+          :is="(enhancementsEnabled && enhancedProductNavigationComp) ? enhancedProductNavigationComp : ProductNavigation"
+          :links="productNav"
+        />
+      </aside>
+      <main class="product-main prose">
+        <div class="product-content">
+          <PageHeader :title="pageTitle" :description="pageDescription" />
+          <ContentRenderer v-if="data" :key="version" :value="data" :components="proseComponents" />
+          <PageFooter />
+        </div>
+      </main>
+    </div>
+
+    <!-- Default content layout -->
+    <div v-else class="content-layout" :class="{ 'single-column': !useHeroLayout }">
       <main class="content-column prose">
         <ContentRenderer v-if="data" :key="version" :value="data" :components="proseComponents" />
       </main>
@@ -271,7 +411,8 @@ const isIndexPage = computed(() => {
         <HeaderImage :image="heroImage" :alt="pageTitle" />
       </aside>
     </div>
-    <PageFooter />
+
+    <PageFooter v-if="!isProductTemplate" />
   </div>
 </template>
 
@@ -322,6 +463,27 @@ const isIndexPage = computed(() => {
     height: auto;
     order: 1;
     overflow: visible;
+  }
+}
+
+/* Product layout styles (structure only; visuals in product.css) */
+.product-layout {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+.product-nav {
+  flex: 1 1 232px;
+  max-width: 400px;
+}
+.product-main {
+  flex: 3 1 500px;
+  max-width: 860px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .product-layout {
+    flex-direction: column;
   }
 }
 </style>

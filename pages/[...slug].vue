@@ -39,8 +39,11 @@ const ssrInitialDoc = useState<Record<string, unknown> | null>(ssrDocKey, () => 
 let initial = ssrInitialDoc.value;
 if (!initial) {
   const tryPath = resolveContentPath(route.path)
-  // 1) Try exact _path
-  let fetched = await queryContent(tryPath).where({ _path: tryPath }).findOne();
+  // 1) Try exact _path (gracefully handle 404 from content API)
+  let fetched: any = null
+  try {
+    fetched = await queryContent(tryPath).where({ _path: tryPath }).findOne();
+  } catch {}
   // 2) Try alias match (if supported by content index)
   if (!fetched) {
     try {
@@ -67,7 +70,13 @@ const getLocaleFromPath = (path: string) => {
   return /^[a-z]{2}$/i.test(first) ? first : defaultLocale;
 };
 
-const initialLocale = getLocaleFromPath(route.path);
+// Prefer locale from the fetched document when the route lacks locale
+const initialLocale = (() => {
+  const docPath = typeof (initial as any)?._path === 'string' ? (initial as any)?._path as string : ''
+  const fromDoc = (docPath.split('/')[1] || '').trim()
+  if (/^[a-z]{2}$/i.test(fromDoc)) return fromDoc
+  return getLocaleFromPath(route.path)
+})()
 const ssrIdxKey = `ssr-locale-index:${initialLocale}`;
 const ssrLocaleIndex = useState<Record<string, unknown> | null>(ssrIdxKey, () => null);
 let initialLocaleIndex = ssrLocaleIndex.value;
@@ -124,7 +133,10 @@ watch(
   async () => {
     const path = resolveContentPath(route.path);
     // Re-run the same lookup strategy on navigation
-    let next = await queryContent(path).where({ _path: path }).findOne();
+    let next: any = null
+    try {
+      next = await queryContent(path).where({ _path: path }).findOne();
+    } catch {}
     if (!next) {
       try {
         next = await queryContent().where({ aliases: { $contains: path } }).findOne();

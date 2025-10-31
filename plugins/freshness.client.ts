@@ -54,16 +54,21 @@ export default defineNuxtPlugin((nuxtApp) => {
       collapsed = collapsed.replace(/^\/(\w{2})\/index$/i, '/$1')
       return collapsed
     }
+    // Prefer the currently rendered document's path (includes locale) to avoid wrong-locale lookups
+    const currentDoc = useState<Record<string, unknown> | null>("content-doc", () => null).value as any
+    const docPath = typeof currentDoc?._path === 'string' ? currentDoc._path as string : null
     const candidatePath = normalize(
-      isLocalized
-        ? route.path
-        : route.path === "/"
-          ? `/${defaultLocale}`
-          : `/${defaultLocale}${route.path}`,
+      docPath
+        || (isLocalized
+          ? route.path
+          : route.path === "/"
+            ? `/${defaultLocale}`
+            : `/${defaultLocale}${route.path}`)
     );
+    const localeForApi = (candidatePath.split('/')[1] || defaultLocale)
     const url = staticHosting
       ? `/content-index.json?ts=${Date.now()}`
-      : `/api/content-index?ts=${Date.now()}&locale=${encodeURIComponent(defaultLocale)}&path=${encodeURIComponent(candidatePath)}`;
+      : `/api/content-index?ts=${Date.now()}&locale=${encodeURIComponent(localeForApi)}&path=${encodeURIComponent(candidatePath)}`;
     const { data } = await useFetch<{
       items: Array<{ _path: string; dateModified?: string | number }>;
     }>(url, { server: false, headers: { "cache-control": "no-cache" } });

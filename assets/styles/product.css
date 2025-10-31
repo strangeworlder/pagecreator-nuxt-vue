@@ -9,6 +9,7 @@ html[data-page-theme="product"] {
   --line-height: 1.5;
   /* Links use prose.css var(--color-accent) */
   --color-accent: #00095e;
+  --color-bg: rgba(240, 246, 255, 0.95);
 }
 
 html[data-page-theme="product"],

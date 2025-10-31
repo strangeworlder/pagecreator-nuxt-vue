@@ -100,6 +100,10 @@ export default {
     prerender: {
       crawlLinks: true,
       routes: contentRoutes,
+      // Don't fail the whole build on missing content during prerender
+      failOnError: false,
+      // Avoid trying to prerender Nuxt Content API query endpoints discovered by the crawler
+      ignore: ["/api/_content/**"],
     },
   },
   routeRules: {

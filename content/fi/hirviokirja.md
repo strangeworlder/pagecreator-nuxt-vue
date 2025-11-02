@@ -3,6 +3,7 @@ title: Hirviökirja
 description: Valikoima vaarallisia vastustajia aloitteleville hahmoille maailman suosituimpaan roolipeliin.
 canonical: "/hirviokirja"
 template: product
+cover: "/images/products/hirviokirja/kansi.webp"
 aliases:
   - "/hirviokirja"
 productTheme:

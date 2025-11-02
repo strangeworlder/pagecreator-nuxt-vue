@@ -108,6 +108,12 @@ html[data-page-theme="product"] .product-main img {
     margin: 20px 40px;
     width: 90px;
   }
+  html[data-page-theme="product"] .product-nav nav {
+    display: flex;
+  }
+}
+html[data-page-theme="product"] body {
+  margin: 0px;
 }
 html[data-page-theme="product"] header {
   margin-bottom: 24px;

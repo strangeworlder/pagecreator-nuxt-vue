@@ -8,6 +8,7 @@ canonical: "/en/cyberpunk-is-dead"
 alternateLocales: ["fi"]
 cover: "/images/cyberpunk-is-dead-cover.jpg"
 template: "hero"
+theme: "modern"
 heroImage: "/images/cyberpunk-is-dead-cover.jpg"
 summary: |
   Cyberpunk is Dead — a minimalist Blades-in-the-Dark
@@ -22,6 +23,16 @@ summary: |
 Mechanically, "Cyberpunk is Dead" takes the chassis of Blades in the Dark and radically modifies it towards minimalism and disposability. Character individuality is suppressed; instead of distinct playbooks, you are simply designated Operatives with numbers, defined primarily by a chosen Approach (Tech, Brute force, Calculating) and a single piece of starting Cyberware. The core resolution mechanic is innovative: you roll 3d12, then discard two dice based on your character's current STATE (0: Relaxed drops highest two, 1: Prepared drops highest and lowest, 2: Alert drops lowest two), leaving a single die result. Results determine Failure, Success, or Success with Overreaction, the latter often escalating the situation and increasing Stress, reflecting the messy reality of corporate wetwork. Resources like Equipment and Cyberware can modify rolls or turn failures into successes, but often at the cost of Stress and mission Expense.
 
 What makes "Cyberpunk is Dead" compelling is its tight focus on the cycle of corporate exploitation. Stress accumulates rapidly through overreactions and failures. Between missions, high Stress forces a choice: gain Trauma or install more Cyberware. Suffering Harm or being taken Down/Out also results in mandatory Cyberware installation. This creates a relentless downward spiral: operatives become laden with corporate-owned cybernetics, racking up debt (tracked abstractly via failed d12 rolls between missions based on cyberware count) and Trauma until they inevitably break—either removed for breach of contract (repossession of body parts implied) or burning out from psychological strain. Even the team unit is precarious, risking dissolution if deemed too "profitable" (expensive) by the corporation. It's a game that uses its mechanics to deliver a potent, uncomfortable message about the genre and the systems it portrays.
+
+## Where can I get *Cyberpunk is Dead*?
+  - [itch.io: Cyberpunk is Dead](https://strangeworlder.itch.io/cyberpunk-is-dead)
+  - [roolipelikirjasto: Cyberpunk is Dead](https://roolipelikirjasto.fi/book/148)
+
+## Where can I see *Cyberpunk is Dead* being played?
+
+There are two actual plays that you can go watch on Youtube:
+ - [One Shot Cyberpunk is Dead Actual Play](https://www.youtube.com/watch?v=5kiEqSCwEoM)
+ - [An eight-episode campaign of Cyberpunk is Dead](https://www.youtube.com/playlist?list=PLrGQRhJOhSdoOgu0FYQyxchYqDdfyqJ6D) is the most popular actual play of Cyberpunk is Dead.
 
 ## What is *Cyberpunk is Dead*?
 

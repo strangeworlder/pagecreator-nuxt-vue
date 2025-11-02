@@ -27,8 +27,11 @@ if (process.client) {
 </template>
 
 <style>
-body, html {
+html {
   margin: 0;
   padding: 0;
+}
+body {
+  margin: 16px;
 }
 </style>

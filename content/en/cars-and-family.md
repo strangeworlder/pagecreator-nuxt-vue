@@ -6,8 +6,8 @@ dateModified: 2025-10-26
 tags: ["game", "heist", "action"]
 canonical: "/en/cars-and-family"
 alternateLocales: ["fi"]
-cover: "/images/cars-and-family-cover.png"
 template: "hero"
+theme: "modern"
 heroImage: "/images/cars-and-family-cover.png"
 summary: |
   A a one-page TTRPG that's a "hack" (a modification) of the popular game Lasers & Feelings, built to feel exactly like a Fast & Furious movie. You play as a member of an elite crew of street-racing thieves.
@@ -23,11 +23,18 @@ The game's engine is a smart adaptation of John Harper's minimalist classic, Las
 
 No wonder Cars & Family is one of the most popular Lasers & Feelings hacks out there. It's a perfect use for the belowed system.
 
+## Where can I get *Cars & Family*?
+  - [itch.io: Cars & Family (en) / Autot & Perhe (fi)](https://strangeworlder.itch.io/cars-and-family)
+  - [roolipelikirjasto: Autot ja Perhe / Cars and Family](https://roolipelikirjasto.fi/series/stored/7)
+  - [Carros & Familia](/downloads/carros-familia.pdf), a portugese translation by Vila Nova
+
 ## What is *Cars & Family*?
 
 *Cars & Family* is a rules-light, one-page tabletop role-playing game designed by Petri Leinonen. It is one of the most belowed adaptations, or "hacks," of the *Lasers & Feelings* TTRPG system created by John Harper.
 
 The game's premise is that the players are a "crew of international thieves" who use "incredible street racing skills to pull off daring heists". The crew's boss, Von Petrol, is incapacitated in a hospital, and the players must complete the job they are in the middle of.
+
+It is also avaialbe in Finnish as "Autot ja Perhe" and a Portugese version called "Carros & Família" also exists.
 
 ## How do you create a character?
 

@@ -8,7 +8,8 @@ import sharp from "sharp";
 const PUBLIC_DIR = resolve(process.cwd(), "public");
 
 async function resolveCacheDir(): Promise<string> {
-  const candidates = ["/tmp/gen_images", join(process.cwd(), "gen_images")];
+  // Prefer storing under the public directory so files persist and can be served statically if needed
+  const candidates = [join(PUBLIC_DIR, "gen_images"), join(process.cwd(), "gen_images"), "/tmp/gen_images"];
   for (const dir of candidates) {
     try {
       await fs.mkdir(dir, { recursive: true });
@@ -64,7 +65,12 @@ export default defineEventHandler(async (event) => {
 
   const baseName = basename(src, ext);
   const cacheDir = await resolveCacheDir();
-  const outputPath = join(cacheDir, `${baseName}-${size}.webp`);
+  // Mirror the source directory structure under the cache directory to avoid name collisions
+  const relDir = dirname(src.replace(/^\/+/, ""))
+    .split("/")
+    .filter((seg) => seg && seg !== "." && seg !== "..")
+    .join("/");
+  const outputPath = join(cacheDir, relDir, `${baseName}-${size}.webp`);
   // Serve cached derivative if present
   try {
     const buf = await fs.readFile(outputPath);

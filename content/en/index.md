@@ -20,13 +20,16 @@ Gogam is a full on indie powerhouse, churning out small, super-innovative games 
   - [Read more about Cars & Family](/en/cars-and-family)
   - [itch.io: Cars & Family (en) / Autot & Perhe (fi)](https://strangeworlder.itch.io/cars-and-family)
   - [roolipelikirjasto: Autot ja Perhe / Cars and Family](https://roolipelikirjasto.fi/series/stored/7)
+  - [Carros & Família](/Carros%20&%20Fam%C3%ADlia.pdf) — Portugese translation of Cars & Family, translated and enhanced by Vila Nova.
 - **Pros & Cons** drops you into a high-stakes heist movie like *Ocean's Eleven*, playing criminals pulling off an impossible job. It builds on the elegant simplicity of Lasers & Feelings, but instead of just a number, Pros & Cons defines your character with a single playing card (2-9, plus a suit for your strength). It also includes rules for genre staples - Twists and flashbacks.
   - [Read more about Pros & Cons](/en/pros-and-cons)
   - [itch.io: Pros & Cons](https://strangeworlder.itch.io/pros-and-cons)
   - [roolipelikirjasto: Pros & Cons](https://roolipelikirjasto.fi/book/147)
+  - [コンズ & プロズ](https://twitter.com/feltk/status/1376309603734937600) — Japanese translation of Pros & Cons, translated by [@feltk](https://twitter.com/feltk).
 - **Cyberpunk is Dead** &mdash; this FitD game flips the script on the cyberpunk genre: you're not rebellious heroes fighting the corps, you are the corps' disposable, underpaid hit squad, enforcing petty interests against often sympathetic targets. It masterfully subverts its Blades in the Dark inspiration by replacing playbooks with numbered, interchangeable "Operatives" and focuses the system on an unique 3d12 system where success often comes with overreaction and your life is a debt-inducing death spiral waiting to end. It's a bleakly fascinating critique of cyberpunk tropes through elegantly minimalist, pressure-cooker mechanics.
   - [Read more about Cyberpunk is Dead](/en/cyberpunk-is-dead)
   - [itch.io: Cyberpunk is Dead](https://strangeworlder.itch.io/cyberpunk-is-dead)
+  - [roolipelikirjasto: Cyberpunk is Dead](https://roolipelikirjasto.fi/book/148)
 - **The Necessary Eagle vs. The Good Cad** is a 2-player PvP card game that brilliantly simulates the core conflict of "arrogant superhero vs. a mere mortal" from such post-modern superhero stories such as of *The Boys*.
   - [Read more about The Necessary Eagle vs. The Good Cad](/en/the-necessary-eagle-vs-the-good-cad)
   - [itch.io: The Necessary Eagle vs. The Good Cad](https://strangeworlder.itch.io/the-necessary-eagle-vs-the-good-cad)
@@ -67,11 +70,6 @@ Gogam is a full on indie powerhouse, churning out small, super-innovative games 
   - [itch.io: Satyrs](https://strangeworlder.itch.io/satyrs) &mdash; Caltrop Core game of adventuring Satyrs with messy relationships.
 - **Fate of Atreus** &mdash;
   - [google docs: Fate of Atreus](https://docs.google.com/document/d/11tqoXZCX3p7sl_kwvq--pNPFoup_oV5gRu1eXELQ9m4/edit?usp=sharing) — Fate Core hack for Giant Robots, much like Battletech
-
-### Versions
-
-- [Carros & Família](/Carros%20&%20Fam%C3%ADlia.pdf) — Portugese translation of Cars & Family, translated and enhanced by Vila Nova.
-- [コンズ & プロズ](https://twitter.com/feltk/status/1376309603734937600) — Japanese translation of Pros & Cons, translated by [@feltk](https://twitter.com/feltk).
 
 ## Kustannusosakeyhtiö Gogam
 Publishes primarily in Finnish. Products are related to the [Black Shield Canton](/en/mustan-kilven-kantoni) campaign setting. 

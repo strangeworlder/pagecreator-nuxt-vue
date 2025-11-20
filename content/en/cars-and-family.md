@@ -8,6 +8,7 @@ canonical: "/en/cars-and-family"
 alternateLocales: ["fi"]
 template: "hero"
 theme: "modern"
+cover: "/images/cars-and-family-cover.png"
 heroImage: "/images/cars-and-family-cover.png"
 summary: |
   A a one-page TTRPG that's a "hack" (a modification) of the popular game Lasers & Feelings, built to feel exactly like a Fast & Furious movie. You play as a member of an elite crew of street-racing thieves.

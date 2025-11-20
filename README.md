@@ -1,7 +1,7 @@
 ## TSS: Generative‑Engine‑Optimized Vue SSR Starter (Nuxt 3 + Markdown)
 
 ### Overview
-This project is a minimal, production‑ready starter for a server‑side rendered Vue site focused on Generative Engine Optimization (GEO) — making content maximally understandable and discoverable by large language model (LLM) crawlers — with content stored as Markdown files. It uses Nuxt 3 (SSR by default) and the Nuxt Content module to source Markdown with rich front‑matter, enabling fast authoring with strong SEO and LLM‑friendly structure out of the box.
+This project is a minimal, production‑ready starter for a server‑side rendered Vue site focused on Generative Engine Optimization (GEO) — making content maximally understandable and discoverable by large language model (LLM) crawlers — with content stored as Markdown files. It uses Nuxt 3 (SSR by default) and the Nuxt Content module to source Markdown with rich front‑matter, enabling fast authoring with strong SEO and LLM‑friendly structure out of the box!
 
 ### Primary goals
 - **SSR by default**: Fast first byte, crawlable HTML, stable rendering for search engines.

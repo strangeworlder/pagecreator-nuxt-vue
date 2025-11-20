@@ -93,3 +93,7 @@ The goal is not to save the world or topple the corporations. The goal is to see
 The person running the game (the "Corporation") is explicitly instructed to make mission targets—like people pirating life-saving drugs or operatives who defaulted on their cybernetic eye payments—"likeable" and to "portray the actions of the team in a bad light."
 
 You are the bad guys. Your job is to repossess a stolen pacemaker, destroy a farm's "pirated" crops, or "neutralize" counterculture activists. *Cyberpunk is Dead* is a powerful, satirical look at the genre, using its mechanics to force players to confront the true meaning of being corporate property.
+
+## Outside mentions
+ - https://ttrpg.in/2021/10/10/61-finland-%F0%9F%87%AB%F0%9F%87%AE/
+ 

@@ -36,19 +36,24 @@ export function useCustomContentHead(docRef: Ref<Record<string, any> | null | un
     const title: string | undefined = doc.title;
     const description: string | undefined = doc.description;
     const rawImage: string | undefined = doc.image || doc.cover;
-    
+
     // Generate social media optimized image URL (1200x630) for Open Graph and Twitter Cards
-    const getSocialImageUrl = (imagePath: string): string => {
+    const getSocialImage = (imagePath: string): { url: string; type?: string } => {
       if (imagePath.startsWith("http")) {
-        return imagePath;
+        return { url: imagePath };
       }
-      // Use the image API to get the social media optimized version
-      return `${siteUrl}/api/image?src=${ensureLeadingSlash(imagePath)}&size=1200`;
+      const encodedSrc = encodeURIComponent(ensureLeadingSlash(imagePath));
+      return {
+        url: `${siteUrl}/api/image?src=${encodedSrc}&size=1200&format=png`,
+        type: "image/png",
+      };
     };
-    
-    const image: string | undefined = rawImage
-      ? getSocialImageUrl(rawImage)
-      : undefined;
+
+    const socialImage = rawImage ? getSocialImage(rawImage) : undefined;
+    const image: string | undefined = socialImage?.url;
+    const imageType: string | undefined = socialImage?.type;
+    const fallbackImageType = image && image.includes("/api/image") ? "image/png" : undefined;
+    const finalImageType = imageType || fallbackImageType;
     const noindex: boolean | undefined = doc.noindex === true;
     // Allow explicit override via front matter: contentType: "article" | "website"
     const type = doc.contentType ? String(doc.contentType) : (doc.datePublished ? "article" : "website");
@@ -65,7 +70,9 @@ export function useCustomContentHead(docRef: Ref<Record<string, any> | null | un
       meta.push({ property: "og:image", content: image });
       meta.push({ property: "og:image:width", content: "1200" });
       meta.push({ property: "og:image:height", content: "630" });
-      meta.push({ property: "og:image:type", content: "image/webp" });
+      if (finalImageType) {
+        meta.push({ property: "og:image:type", content: finalImageType });
+      }
     }
     // Twitter card
     meta.push({ name: "twitter:card", content: image ? "summary_large_image" : "summary" });

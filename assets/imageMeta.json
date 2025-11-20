@@ -139,18 +139,6 @@
     "width": 338,
     "height": 538
   },
-  "/gen_images/images/products/sulkavansointu/sulkava-1536.webp": {
-    "width": 1536,
-    "height": 1536
-  },
-  "/gen_images/images/products/sulkavansointu/silmat-1536.webp": {
-    "width": 1536,
-    "height": 1024
-  },
-  "/gen_images/images/products/sulkavansointu/kansi-1536.webp": {
-    "width": 1536,
-    "height": 2012
-  },
   "/gen_images/images/products/hirviokirja/nokiporo-1536.webp": {
     "width": 1536,
     "height": 1536
@@ -162,6 +150,18 @@
   "/gen_images/images/products/hirviokirja/kansi-150.webp": {
     "width": 150,
     "height": 150
+  },
+  "/gen_images/images/products/sulkavansointu/sulkava-1536.webp": {
+    "width": 1536,
+    "height": 1536
+  },
+  "/gen_images/images/products/sulkavansointu/silmat-1536.webp": {
+    "width": 1536,
+    "height": 1024
+  },
+  "/gen_images/images/products/sulkavansointu/kansi-1536.webp": {
+    "width": 1536,
+    "height": 2012
   },
   "/images/spinskull.gif": {
     "width": 100,

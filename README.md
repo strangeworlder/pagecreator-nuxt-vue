@@ -204,6 +204,13 @@ https://example.com/sitemap.xml   type=sitemap
 - Image optimization with responsive `srcset`, AVIF/WebP, and placeholders
 - Minimal JS on content pages; progressive enhancement for interactive widgets
 
+### Image API (`/api/image`)
+- `src`: absolute path under `public/` (e.g., `/gogam-facebook-etc.png`) or a fully-qualified `https://` URL. Local paths are read directly from disk (no internal HTTP fetch), guarding against traversal.
+- `size`: one of `150, 320, 480, 768, 1024, 1200, 1280, 1536`. The `1200` preset renders a 1200×630 canvas for OG/Twitter.
+- `format` (optional): defaults to `webp`, but the 1200 preset falls back to `png` when unspecified so that `og:image` is always a PNG. You can force `format=png|webp|jpeg`.
+- Responses are cached under `public/gen_images` with filenames like `<name>-<size>.<format>` and returned with the correct `Content-Type`.
+- Components requesting responsive content images should keep using the default WebP derivatives; Open Graph metadata now requests PNG variants via `format=png`.
+
 ### Security and compliance
 - Content Security Policy (CSP) with nonces/hashes
 - Cookie categories (strictly necessary vs analytics/marketing)

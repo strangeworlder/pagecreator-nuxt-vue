@@ -210,6 +210,7 @@ https://example.com/sitemap.xml   type=sitemap
 - `format` (optional): defaults to `webp`, but the 1200 preset falls back to `png` when unspecified so that `og:image` is always a PNG. You can force `format=png|webp|jpeg`.
 - Responses are cached under `public/gen_images` with filenames like `<name>-<size>.<format>` and returned with the correct `Content-Type`.
 - Components requesting responsive content images should keep using the default WebP derivatives; Open Graph metadata now requests PNG variants via `format=png`.
+- If a local file is missing inside the serverless bundle (e.g., Netlify function runtime), the handler automatically retries by fetching the same path from `siteUrl`/request host so OG images continue to work in production.
 
 ### Security and compliance
 - Content Security Policy (CSP) with nonces/hashes

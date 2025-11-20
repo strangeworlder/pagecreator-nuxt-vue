@@ -1,7 +1,8 @@
 // @ts-nocheck
-import { createError, getQuery, setHeader } from "h3";
+import { createError, getQuery, setHeader, getRequestHeader } from "h3";
 import { promises as fs } from "node:fs";
 import { resolve, extname, basename, dirname, join } from "node:path";
+import { useRuntimeConfig } from "#imports";
 import sharp from "sharp";
 
 const PUBLIC_DIR = resolve(process.cwd(), "public");
@@ -47,6 +48,47 @@ function applyOutputFormat(instance: sharp.Sharp, format: (typeof OUTPUT_FORMATS
   }
 }
 
+function resolveBaseUrlCandidates(event: any, runtime: any): string[] {
+  const candidates = new Set<string>();
+  const siteUrl = runtime?.public?.siteUrl;
+  if (siteUrl) {
+    candidates.add(String(siteUrl));
+  }
+  const xfProto = getRequestHeader(event, "x-forwarded-proto");
+  const xfHost = getRequestHeader(event, "x-forwarded-host");
+  const host = xfHost || getRequestHeader(event, "host");
+  const proto = (xfProto && xfProto.split(",")[0].trim()) || "https";
+  if (host) {
+    candidates.add(`${proto}://${host}`);
+  }
+  return Array.from(candidates).filter(Boolean);
+}
+
+async function fetchFromSite(rawSrc: string, event: any, runtime: any): Promise<Buffer> {
+  const bases = resolveBaseUrlCandidates(event, runtime);
+  if (!bases.length) {
+    throw createError({ statusCode: 500, statusMessage: "Cannot determine site URL for fetch" });
+  }
+  const attempts: string[] = [];
+  for (const base of bases) {
+    try {
+      const url = new URL(rawSrc, base).toString();
+      const res = await fetch(url);
+      if (!res.ok) {
+        attempts.push(`${url} -> ${res.status}`);
+        continue;
+      }
+      return Buffer.from(await res.arrayBuffer());
+    } catch (error: any) {
+      attempts.push(`${base}: ${error?.message || "network error"}`);
+    }
+  }
+  throw createError({
+    statusCode: 404,
+    statusMessage: `Source fetch failed (${attempts.join("; ")})`,
+  });
+}
+
 async function computeDominantBackgroundColor(input: Buffer): Promise<{ r: number; g: number; b: number }> {
   try {
     const stats = await sharp(input).stats();
@@ -58,6 +100,7 @@ async function computeDominantBackgroundColor(input: Buffer): Promise<{ r: numbe
 }
 
 export default defineEventHandler(async (event) => {
+  const runtime = useRuntimeConfig();
   const q = getQuery(event) as Record<string, string | undefined>;
   const rawSrc = q.src?.trim();
   const size = q.size ? Number(q.size) : undefined;
@@ -119,10 +162,10 @@ export default defineEventHandler(async (event) => {
     try {
       inputBuf = await fs.readFile(absPath);
     } catch (error: any) {
-      if (error?.code === "ENOENT") {
-        throw createError({ statusCode: 404, statusMessage: "Source image not found" });
+      if (error?.code !== "ENOENT") {
+        throw error;
       }
-      throw error;
+      inputBuf = await fetchFromSite(rawSrc, event, runtime);
     }
     baseName = basename(absPath, inputExt) || "image";
     relDir = sanitizeSegments(dirname(normalizedPath)).join("/");

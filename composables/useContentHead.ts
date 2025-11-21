@@ -16,6 +16,65 @@ function replaceFirstPathSegment(inputPath: string, newFirst: string): string {
   return `/${newFirst}`;
 }
 
+function isLikelyLocale(value: unknown): value is string {
+  if (typeof value !== "string") return false;
+  const trimmed = value.trim();
+  if (!trimmed) return false;
+  return /^[a-z]{2}(?:-[a-z]{2})?$/i.test(trimmed);
+}
+
+function localeFromPathLike(value?: string | null | undefined): string | undefined {
+  if (!value) return undefined;
+  const segment = ensureLeadingSlash(value)
+    .split("/")
+    .find((part) => !!part);
+  if (isLikelyLocale(segment)) return segment as string;
+  return undefined;
+}
+
+function resolveDocumentLocale(doc: Record<string, any>, fallback: string): string {
+  const explicit =
+    doc.lang ||
+    doc.language ||
+    doc.locale ||
+    doc._locale ||
+    doc._lang;
+  if (isLikelyLocale(explicit)) {
+    return String(explicit).trim();
+  }
+
+  const pathCandidates = [doc._path, doc._id, doc._file, doc.canonical];
+  for (const candidate of pathCandidates) {
+    const locale = localeFromPathLike(typeof candidate === "string" ? candidate : undefined);
+    if (locale) return locale;
+  }
+
+  return fallback;
+}
+
+function formatHreflang(code: string): string {
+  const trimmed = code.trim();
+  if (!trimmed) return trimmed;
+  const [language, region] = trimmed.split("-");
+  if (!region) return language.toLowerCase();
+  return `${language.toLowerCase()}-${region.toUpperCase()}`;
+}
+
+function localeToPathSegment(code: string): string {
+  return code.split("-")[0]?.toLowerCase() || code.toLowerCase();
+}
+
+function dedupe<T>(items: T[]): T[] {
+  const seen = new Set<T>();
+  const result: T[] = [];
+  for (const item of items) {
+    if (seen.has(item)) continue;
+    seen.add(item);
+    result.push(item);
+  }
+  return result;
+}
+
 export function useCustomContentHead(docRef: Ref<Record<string, any> | null | undefined>) {
   const runtime = useRuntimeConfig();
   const defaultLocale = runtime.public.defaultLocale || "en";
@@ -26,12 +85,12 @@ export function useCustomContentHead(docRef: Ref<Record<string, any> | null | un
     if (!doc) return;
 
     const path: string = ensureLeadingSlash(doc.canonical || doc._path || "/");
+    const sourcePath: string = ensureLeadingSlash(doc._path || path);
     const url = `${siteUrl}${path}`;
 
-    const localeFromPath = (() => {
-      const parts = path.split("/");
-      return parts[1] || defaultLocale;
-    })();
+    const documentLocale = resolveDocumentLocale(doc, defaultLocale);
+    const formattedDocumentLocale = formatHreflang(documentLocale);
+    const localeSegment = localeToPathSegment(documentLocale);
 
     const title: string | undefined = doc.title;
     const description: string | undefined = doc.description;
@@ -83,19 +142,57 @@ export function useCustomContentHead(docRef: Ref<Record<string, any> | null | un
     const link: any[] = [];
     link.push({ rel: "canonical", href: url });
 
-    const alternates: string[] = Array.isArray(doc.alternateLocales) ? doc.alternateLocales : [];
-    for (const alt of alternates) {
-      const altPath = replaceFirstPathSegment(path, alt);
-      link.push({ rel: "alternate", hreflang: alt, href: `${siteUrl}${altPath}` });
+    const alternatesRaw: unknown = doc.alternateLocales;
+    const alternates = Array.isArray(alternatesRaw)
+      ? alternatesRaw
+          .map((value) => (typeof value === "string" ? value.trim() : ""))
+          .filter((value): value is string => isLikelyLocale(value))
+      : [];
+
+    const alternateLocaleSet = new Set(alternates.map(formatHreflang));
+    const hasDefaultLocaleVariant =
+      formattedDocumentLocale === formatHreflang(defaultLocale) ||
+      alternateLocaleSet.has(formatHreflang(defaultLocale));
+
+    const basePathForAlternates = (() => {
+      const sourceParts = sourcePath.split("/");
+      if (sourceParts[1]?.toLowerCase() === localeSegment) return sourcePath;
+      const canonicalParts = path.split("/");
+      if (canonicalParts[1]?.toLowerCase() === localeSegment) return path;
+      return sourcePath;
+    })();
+
+    const addHrefLang = (hreflang: string, hrefPath: string) => {
+      if (!hreflang || !hrefPath) return;
+      link.push({
+        rel: "alternate",
+        hreflang,
+        href: `${siteUrl}${ensureLeadingSlash(hrefPath)}`,
+      });
+    };
+
+    addHrefLang(formattedDocumentLocale, path);
+
+    for (const alt of dedupe(alternates.map(formatHreflang))) {
+      if (!alt || alt === formattedDocumentLocale) continue;
+      const segment = localeToPathSegment(alt);
+      const altPath = replaceFirstPathSegment(basePathForAlternates, segment);
+      addHrefLang(alt, altPath);
     }
-    // x-default to default locale
-    const xDefaultPath = replaceFirstPathSegment(path, defaultLocale);
-    link.push({ rel: "alternate", hreflang: "x-default", href: `${siteUrl}${xDefaultPath}` });
+
+    if (hasDefaultLocaleVariant) {
+      const defaultSegment = localeToPathSegment(formatHreflang(defaultLocale));
+      const defaultHrefPath =
+        formatHreflang(defaultLocale) === formattedDocumentLocale
+          ? path
+          : replaceFirstPathSegment(basePathForAlternates, defaultSegment);
+      addHrefLang("x-default", defaultHrefPath);
+    }
 
     const ldBase: Record<string, any> = {
       "@context": "https://schema.org",
       "@type": type === "article" ? "Article" : "WebPage",
-      inLanguage: localeFromPath,
+      inLanguage: documentLocale,
       name: title,
       description,
       url,
@@ -107,7 +204,7 @@ export function useCustomContentHead(docRef: Ref<Record<string, any> | null | un
 
     useHead({
       title,
-      htmlAttrs: { lang: localeFromPath },
+      htmlAttrs: { lang: documentLocale },
       meta,
       link,
       script: [

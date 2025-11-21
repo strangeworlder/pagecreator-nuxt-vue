@@ -5,6 +5,7 @@
       :src="lowResSrc"
       :alt="alt"
       :sizes="sizes"
+      :srcset="imgSrcset"
       loading="lazy"
       decoding="async"
       :width="dimensions?.width"
@@ -16,6 +17,7 @@
 
 <script setup lang="ts">
 import { computed, ref, onMounted, onUpdated } from "vue";
+import { buildImageSrcset, buildImageUrl, normalizeImageWidths } from "~/utils/image";
 
 const props = defineProps<{
   src: string;
@@ -26,22 +28,22 @@ const props = defineProps<{
 
 const isGif = computed(() => props.src?.toLowerCase().endsWith(".gif"));
 
-// Use on-demand processing endpoint
-const getProcessedPath = (w: number) => `/api/image?src=${encodeURIComponent(props.src)}&size=${w}`;
+const normalizedWidths = computed(() => normalizeImageWidths());
 
-// Always load a very low-resolution image (or original GIF)
-const lowWidth = 320;
 const lowResSrc = computed(() => {
   if (!props.src) return "";
   if (isGif.value) return props.src;
-  return getProcessedPath(lowWidth);
+  return buildImageUrl(props.src, normalizedWidths.value[0], "jpeg");
 });
-
-const widths = [320, 480, 768, 1024, 1280, 1536];
 
 const srcsetWebp = computed(() => {
   if (!props.src || isGif.value) return "";
-  return widths.map((w) => `${getProcessedPath(w)} ${w}w`).join(", ");
+  return buildImageSrcset(props.src, normalizedWidths.value, "webp");
+});
+
+const imgSrcset = computed(() => {
+  if (!props.src || isGif.value) return "";
+  return buildImageSrcset(props.src, normalizedWidths.value, "jpeg");
 });
 
 const sizes = "(min-width: 1280px) 1200px, (min-width: 768px) 768px, 100vw";

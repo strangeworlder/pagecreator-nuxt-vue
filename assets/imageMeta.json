@@ -63,17 +63,9 @@
     "width": 1024,
     "height": 1536
   },
-  "/gen_images/images/nott-cover-1280.webp": {
-    "width": 1280,
-    "height": 1816
-  },
-  "/gen_images/images/cyberpunk-is-dead-cover-150.webp": {
+  "/gen_images/images/pros-and-cons-cover-150.webp": {
     "width": 150,
     "height": 150
-  },
-  "/gen_images/images/cyberpunk-is-dead-cover-1280.webp": {
-    "width": 1280,
-    "height": 492
   },
   "/gen_images/images/cars-and-family-cover-150.webp": {
     "width": 150,
@@ -138,30 +130,6 @@
   "/images/products/hirviokirja/TDB-logo.webp": {
     "width": 338,
     "height": 538
-  },
-  "/gen_images/images/products/hirviokirja/nokiporo-1536.webp": {
-    "width": 1536,
-    "height": 1536
-  },
-  "/gen_images/images/products/hirviokirja/kansi-1536.webp": {
-    "width": 1536,
-    "height": 2012
-  },
-  "/gen_images/images/products/hirviokirja/kansi-150.webp": {
-    "width": 150,
-    "height": 150
-  },
-  "/gen_images/images/products/sulkavansointu/sulkava-1536.webp": {
-    "width": 1536,
-    "height": 1536
-  },
-  "/gen_images/images/products/sulkavansointu/silmat-1536.webp": {
-    "width": 1536,
-    "height": 1024
-  },
-  "/gen_images/images/products/sulkavansointu/kansi-1536.webp": {
-    "width": 1536,
-    "height": 2012
   },
   "/images/spinskull.gif": {
     "width": 100,

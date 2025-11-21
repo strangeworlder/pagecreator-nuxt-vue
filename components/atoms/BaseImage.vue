@@ -6,11 +6,12 @@
         :src="fallbackSrc"
         :alt="alt"
         :sizes="resolvedSizes"
+        :srcset="imgSrcset"
         :loading="loadingAttr"
         :decoding="decodingAttr"
         :width="dimensions?.width"
         :height="dimensions?.height"
-        style="width: 100%; height: auto; display: block;"
+        :style="resolvedImgStyle"
       />
     </picture>
     <img
@@ -21,13 +22,14 @@
       :decoding="decodingAttr"
       :width="dimensions?.width"
       :height="dimensions?.height"
-      style="width: 100%; height: auto; display: block;"
+      :style="resolvedImgStyle"
     />
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, type CSSProperties } from "vue";
+import { buildImageSrcset, buildImageUrl, normalizeImageWidths } from "~/utils/image";
 
 const props = defineProps<{
   src: string;
@@ -38,6 +40,7 @@ const props = defineProps<{
   widths?: number[];
   eager?: boolean;
   decoding?: "sync" | "async" | "auto";
+  imgStyle?: CSSProperties;
 }>();
 
 const isGif = computed(() => props.src?.toLowerCase().endsWith(".gif"));
@@ -67,18 +70,33 @@ const wrapperStyle = computed(() => {
   return null as unknown as Record<string, string>;
 });
 
-const widths = computed(() => props.widths ?? [480, 768, 1024, 1280, 1536]);
+const normalizedWidths = computed(() => normalizeImageWidths(props.widths));
 
-// On-demand processing endpoint (expects src and size)
-const getProcessedPath = (w: number) => `/api/image?src=${encodeURIComponent(props.src)}&size=${w}`;
-
-const srcsetWebp = computed(() => widths.value.map((w) => `${getProcessedPath(w)} ${w}w`).join(", "));
-
-// Fallback: use original for GIFs, or smallest processed size for others
-const fallbackSrc = computed(() => {
-  if (isGif.value) return props.src;
-  return getProcessedPath(widths.value[0]);
+const srcsetWebp = computed(() => {
+  if (!props.src || isGif.value) return "";
+  return buildImageSrcset(props.src, normalizedWidths.value, "webp");
 });
+
+const srcsetFallback = computed(() => {
+  if (!props.src || isGif.value) return "";
+  return buildImageSrcset(props.src, normalizedWidths.value, "jpeg");
+});
+
+const fallbackSrc = computed(() => {
+  if (!props.src) return "";
+  if (isGif.value) return props.src;
+  return buildImageUrl(props.src, normalizedWidths.value[0], "jpeg");
+});
+
+const imgSrcset = computed(() => (srcsetFallback.value ? srcsetFallback.value : undefined));
+
+const defaultImgStyle: CSSProperties = {
+  width: "100%",
+  height: "auto",
+  display: "block",
+};
+
+const resolvedImgStyle = computed(() => ({ ...defaultImgStyle, ...(props.imgStyle ?? {}) }));
 
 const loadingAttr = computed(() => (props.eager ? "eager" : "lazy"));
 const decodingAttr = computed(() => props.decoding ?? "async");

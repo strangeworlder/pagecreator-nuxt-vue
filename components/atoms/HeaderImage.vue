@@ -1,6 +1,6 @@
 <script setup lang="ts">
-// @ts-nocheck
 import { computed } from "vue";
+import BaseImage from "~/components/atoms/BaseImage.vue";
 
 interface Props {
   image?: string;
@@ -8,21 +8,31 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  alt: ""
+  alt: "",
 });
 
-const imageSrc = computed(() => {
-  const src = props.image as unknown as string | undefined;
-  if (!src) return undefined;
-  if (src.startsWith("http")) return src;
-  const encoded = encodeURIComponent(src);
-  return `/api/image?src=${encoded}&size=1280`;
-});
+const headerWidths = [768, 1024, 1200, 1280, 1536];
+const headerSizes = "(min-width: 1280px) 1200px, 100vw";
+const headerImgStyle = {
+  height: "100%",
+  objectFit: "contain",
+};
+
+const imageSrc = computed(() => props.image?.trim() ?? "");
+const hasImage = computed(() => Boolean(imageSrc.value));
 </script>
 
 <template>
-  <div v-if="imageSrc" class="header-image">
-    <img :src="imageSrc" :alt="alt" />
+  <div v-if="hasImage" class="header-image">
+    <BaseImage
+      :src="imageSrc"
+      :alt="alt"
+      :sizes="headerSizes"
+      :widths="headerWidths"
+      :img-style="headerImgStyle"
+      eager
+      decoding="auto"
+    />
   </div>
 </template>
 

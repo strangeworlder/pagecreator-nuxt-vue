@@ -73,15 +73,41 @@ Gogam is a full on indie powerhouse, churning out small, super-innovative games 
 
 ## Kustannusosakeyhtiö Gogam
 Publishes primarily in Finnish. Products are related to the [Black Shield Canton](/en/mustan-kilven-kantoni) campaign setting. 
-- [Hirviökirja](/) — monster supplement compatible with Legendoja & lohikäärmeitä, in Finnish.
-
-### Coming soon
-
-- [Sulkavan sointu](/) — 1st level adventure compatible with Legendoja & lohikäärmeitä, in Finnish.
+- [Hirviökirja](/hirviokirja) — monster supplement compatible with Legendoja & lohikäärmeitä, in Finnish.
+- [Sulkavan sointu](/sulkavansointu) — 1st level adventure compatible with Legendoja & lohikäärmeitä, in Finnish.
 
 ## Gogam Entertainment
 
-Youtube
+- [Gogam Entertainment youtube channel](https://www.youtube.com/@gogameu) The English Speaking main channel
+
+### Rajatiloja
+- [+H: Rajatiloja](/fi/rajatiloja) - a +H actual play, hosts also Finnish oneshots
+  - [Roachsphere](https://www.youtube.com/@Roachsphere). The home of +H: Rajatiloja on Youtube, as well as individual one-shots
+    - [+H: Rajatiloja playlist](https://www.youtube.com/playlist?list=PLxGtzhc7G6T-y5KxEfrzZSvIBeR9P9Ekz). The playlist that contains all the episodes.
+  - [Spotify](https://open.spotify.com/show/28etjaN8Wshrcwiw2ge0Vi?si=bebb1d24c4544acc). Rajatiloja is also available on Spotify.
+
+### Fate-akatemia
+- [Fate-akatemia](https://www.youtube.com/@FateAkatemia) Youtube channel
+  - [Hyvät, pahat ja psyykkiset](https://www.youtube.com/playlist?list=PLTBP_e2hqXr8Mu3tChuAP-aSUx0D341R2) 6 episodes
+  - [Lazuman sininen käärme](https://www.youtube.com/playlist?list=PLTBP_e2hqXr-LPAwfKlq9qwPWgNPJuIdk) 5 episodes
+
+### Oneshots and mini-campaigns
+
+#### In Finnish
+- [Trophy Dark oneshot](https://youtu.be/OoKVGIpLFVg)
+- [The Zone oneshot](https://www.youtube.com/watch?v=eolksQeSWhw)
+- [Quietus oneshot](https://www.youtube.com/watch?v=tZOTTfSZxYw)
+
+#### In English
+- [The Quick miniseries](https://www.youtube.com/playlist?list=PLrGQRhJOhSdo1RSO9M_0J25wWfbB0XxWI) 7 episodes
+- [Them Deeper Bones: Old Bear House miniseries](https://www.youtube.com/playlist?list=PLrGQRhJOhSdrXvSN5pGQWQn-eiMaoKY7G) 5 episodes
+- [Cyberpunk is Dead miniseries](https://www.youtube.com/playlist?list=PLrGQRhJOhSdoOgu0FYQyxchYqDdfyqJ6D) 8 episodes
+- [Them Deeper Bones demos](https://www.youtube.com/playlist?list=PLrGQRhJOhSdrri9AuwFfWPmJX4cQzAbm4) 2 episodes
+- [A Particular Group of Corvids oneshot](https://www.youtube.com/watch?v=vynLZbKVP90)
+- [Cyberpunk is Dead oneshot](https://www.youtube.com/watch?v=5kiEqSCwEoM)
+
+### Collabs and other videos
+- [Luolamestari podcast](https://www.luolamestari.com/) - Petri Leinonen and Miska Fredman host a weekly TTRPG podcast.
 
 ## From other publishers
 
@@ -113,8 +139,6 @@ Myrrys is the publisher of Legendoja & lohikäärmeitä, the most popular Finnis
 ### Chaosium (Miskatonic Repository)
 
 - [Of Fathers...](https://www.drivethrurpg.com/product/429719/Of-Fathers?cPath=29274) — Call of Cthulhu adventure for one player character and one keeper. Role in project: Layout.
-
-
 
 ## Articles, for free for you to read
 

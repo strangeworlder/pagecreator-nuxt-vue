@@ -17,6 +17,38 @@ export const frontMatterSchema = z.object({
   noindex: z.boolean().optional(),
   canonical: z.string().optional(),
   llmPriority: z.number().min(0).max(1).optional(),
+  lastValidated: z.union([z.string(), z.date()]).optional(),
+  facts: z
+    .array(z.object({ label: z.string(), value: z.string() }))
+    .optional(),
+  stats: z
+    .array(
+      z.object({
+        metric: z.string(),
+        value: z.string(),
+        date: z.union([z.string(), z.date()]).optional(),
+        source: z.string().optional(),
+      }),
+    )
+    .optional(),
+  quotes: z
+    .array(
+      z.object({
+        source: z.string(),
+        text: z.string(),
+        date: z.union([z.string(), z.date()]).optional(),
+        url: z.string().url().optional(),
+      }),
+    )
+    .optional(),
+  template: z.string().optional(),
+  theme: z.string().optional(),
+  cover: z.string().optional(),
+  heroImage: z.string().optional(),
+  productTheme: z.any().optional(),
+  productNav: z.any().optional(),
+  aliases: z.array(z.string()).optional(),
+  alternateLocales: z.array(z.string()).optional(),
 });
 
 export type FrontMatter = z.infer<typeof frontMatterSchema>;

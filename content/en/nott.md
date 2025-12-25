@@ -6,12 +6,37 @@ dateModified: 2025-10-25
 tags: ["game", "horror"]
 canonical: "/en/nott"
 alternateLocales: ["fi"]
-cover: "/images/nott-cover.png"
 template: "hero"
+theme: "classic"
+cover: "/images/nott-cover.png"
 heroImage: "/images/nott-cover.png"
 summary: |
   A quick, player-facing intro to Night of the Thirteenth —
   a slasher-inspired horror role-playing game of desperate survival.
+lastValidated: 2025-11-28
+facts:
+  - label: "System"
+    value: "d13 roll (d10+d4)"
+  - label: "Table size"
+    value: "1 Director + 4 Players"
+stats:
+  - metric: "Word count"
+    value: "1500"
+    date: 2025-10-25
+    source: "Rules text"
+  - metric: "Format"
+    value: "Digital"
+    date: 2025-10-25
+    source: "Rules text"
+quotes:
+  - source: "Petri Leinonen"
+    text: "Most of you won't make it."
+    date: 2025-11-28
+entities:
+  - type: "CreativeWork"
+    name: "Night of the Thirteenth"
+    sameAs:
+      - "https://strangeworlder.itch.io/night-of-the-thirteenth"
 ---
 
 ## Introduction for New Players

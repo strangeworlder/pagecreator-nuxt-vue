@@ -11,7 +11,31 @@ theme: "modern"
 cover: "/images/cars-and-family-cover.png"
 heroImage: "/images/cars-and-family-cover.png"
 summary: |
-  A a one-page TTRPG that's a "hack" (a modification) of the popular game Lasers & Feelings, built to feel exactly like a Fast & Furious movie. You play as a member of an elite crew of street-racing thieves.
+  A one-page TTRPG that's a "hack" (a modification) of the popular game Lasers & Feelings, built to feel exactly like a Fast & Furious movie. You play as a member of an elite crew of street-racing thieves.
+lastValidated: 2025-11-28
+facts:
+  - label: "System"
+    value: "Lasers & Feelings hack"
+  - label: "Tone"
+    value: "Fast & Furious"
+stats:
+  - metric: "Page count"
+    value: "1"
+    date: 2025-10-26
+    source: "Rules text"
+  - metric: "Word count"
+    value: "1000"
+    date: 2025-10-26
+    source: "Rules text"
+quotes:
+  - source: "Petri Leinonen"
+    text: "High-speed heists and chosen family."
+    date: 2025-11-28
+entities:
+  - type: "CreativeWork"
+    name: "Cars & Family"
+    sameAs:
+      - "https://strangeworlder.itch.io/cars-and-family"
 ---
 
 ## Introduction to the player of Cars & Family
@@ -22,7 +46,7 @@ The game's engine is a smart adaptation of John Harper's minimalist classic, Las
 
 "Cars & Family" builds upon its Lasers & Feelings foundation with several clever, thematic mechanics. If any die in your roll lands exactly on your number, you gain a moment of clarity, reflecting on past rides with your boss; you can ask the GM a question about the situation, and they'll answer as Von Petrol would. If your initial approach isn't working, you can choose to "Change Approach" (from Cars to Family or vice-versa), rerolling your dice pool, but now your number itself counts as a hit, offering tactical flexibility. Finally, channeling the source material's energy, you have a once-per-session "NOS" boost: push the button to gain an extra hit on any roll, but you must roll a d6 – if it matches your number, things get even crazier as something "EXPLODES AROUND YOU"!
 
-No wonder Cars & Family is one of the most popular Lasers & Feelings hacks out there. It's a perfect use for the belowed system.
+No wonder Cars & Family is one of the most popular Lasers & Feelings hacks out there. It's a perfect use for the beloved system.
 
 ## Where can I get *Cars & Family*?
   - [itch.io: Cars & Family (en) / Autot & Perhe (fi)](https://strangeworlder.itch.io/cars-and-family)
@@ -31,11 +55,11 @@ No wonder Cars & Family is one of the most popular Lasers & Feelings hacks out t
 
 ## What is *Cars & Family*?
 
-*Cars & Family* is a rules-light, one-page tabletop role-playing game designed by Petri Leinonen. It is one of the most belowed adaptations, or "hacks," of the *Lasers & Feelings* TTRPG system created by John Harper.
+*Cars & Family* is a rules-light, one-page tabletop role-playing game designed by Petri Leinonen. It is one of the most beloved adaptations, or "hacks," of the *Lasers & Feelings* TTRPG system created by John Harper.
 
 The game's premise is that the players are a "crew of international thieves" who use "incredible street racing skills to pull off daring heists". The crew's boss, Von Petrol, is incapacitated in a hospital, and the players must complete the job they are in the middle of.
 
-It is also avaialbe in Finnish as "Autot ja Perhe" and a Portugese version called "Carros & Família" also exists.
+It is also available in Finnish as "Autot ja Perhe" and a Portugese version called "Carros & Família" also exists.
 
 ## How do you create a character?
 
@@ -75,7 +99,7 @@ You count your total number of hits to determine the outcome of your action.
 *Cars & Family* has two special mechanics that modify the basic rules.
 
 ### Von's Insight
-This mechanic is an adaptation of the "LASER FEELINGS" roll in the original game. If *any* of your dice lands *exactly on* your number, you gain an "insight to the situation" from your past experiences with Von. You can then ask the GM any one question about the situation, and they will answer "what Von would say to you". If you want to change your approach based on this (from cars to family or vice versa), you can reroll all your dice, and exact numbers are treated as successess on that roll instead of insight.
+This mechanic is an adaptation of the "LASER FEELINGS" roll in the original game. If *any* of your dice lands *exactly on* your number, you gain an "insight to the situation" from your past experiences with Von. You can then ask the GM any one question about the situation, and they will answer "what Von would say to you". If you want to change your approach based on this (from cars to family or vice versa), you can reroll all your dice, and exact numbers are treated as successes on that roll instead of insight.
 
 ### NOS
 Once per game session, you can "hit the Nitro" to "up the stakes". This gives you **one extra, automatic hit** on a roll.

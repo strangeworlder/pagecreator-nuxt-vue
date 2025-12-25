@@ -6,9 +6,37 @@ dateModified: 2025-01-27
 tags: ["game", "tactical", "combat", "prototype"]
 canonical: "/en/the-pig-is-sus"
 alternateLocales: ["fi"]
+template: "hero"
+theme: "classic"
+cover: "/images/the-pig-is-sus-cover.png"
+heroImage: "/images/the-pig-is-sus-cover.png"
 summary: |
   A prototype tactical RPG combat system that shifts focus from character stats 
   to player skill, timing, and strategic planning through its unique Action Dice economy.
+lastValidated: 2025-11-28
+facts:
+  - label: "System"
+    value: "Action Dice economy"
+  - label: "Format"
+    value: "Tactical combat prototype"
+stats:
+  - metric: "Word count"
+    value: "1000"
+    date: 2025-01-27
+    source: "Rules text"
+  - metric: "Status"
+    value: "Prototype"
+    date: 2025-01-27
+    source: "Rules text"
+quotes:
+  - source: "Petri Leinonen"
+    text: "Rewards player skill over character stats."
+    date: 2025-11-28
+entities:
+  - type: "CreativeWork"
+    name: "The Pig Is Sus. Eliminate the Pig."
+    sameAs:
+      - "https://strangeworlder.itch.io/the-pig-is-sus"
 ---
 
 Introduction for New Players

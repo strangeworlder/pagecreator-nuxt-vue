@@ -5,15 +5,39 @@ datePublished: 2025-10-28
 dateModified: 2025-10-28
 tags: ["game", "ttrpg"]
 canonical: "/en/the-necessary-eagle-vs-the-good-cad"
-cover: "/images/the-necessary-eagle-vs-the-good-cad-cover.png"
+alternateLocales: ["fi"]
 template: "hero"
 theme: "modern"
+cover: "/images/the-necessary-eagle-vs-the-good-cad-cover.png"
 heroImage: "/images/the-necessary-eagle-vs-the-good-cad-cover.png"
-alternateLocales: ["fi"]
 summary: |
   Two-player, competitive TTRPG where a sociopathic superhero faces the
   vigilante they created. Uses a standard deck of cards to model
   asymmetrical power, PR fallout, and a parasitic cat-and-mouse dynamic.
+lastValidated: 2025-11-28
+facts:
+  - label: "System"
+    value: "Asymmetrical card-based"
+  - label: "Tone"
+    value: "Superhero deconstruction"
+stats:
+  - metric: "Word count"
+    value: "2000"
+    date: 2025-10-28
+    source: "Rules text"
+  - metric: "Format"
+    value: "Digital"
+    date: 2025-10-28
+    source: "Rules text"
+quotes:
+  - source: "Petri Leinonen"
+    text: "The powerless fighting the super‑powerful."
+    date: 2025-11-28
+entities:
+  - type: "CreativeWork"
+    name: "The Necessary Eagle vs. The Good Cad"
+    sameAs:
+      - "https://strangeworlder.itch.io/the-necessary-eagle-vs-the-good-cad"
 ---
 
 ## Introduction for New Players

@@ -19,7 +19,7 @@ Olen Petri Leinonen. Teen työksekseni verkkosivuja ja harrastan pöytäroolipel
 
 - [Cars and Family / Autot ja perhe](https://strangeworlder.itch.io/cars-and-family) — Lasers & Feelings -hack katukilpailevista rikollisista, Fast & The Furious -elokuvien hengessä. Versio 2, sekä englanniksi että suomeksi.  
   (Versio 1: [Cars & Family (English)](https://docs.google.com/document/d/1hIsLmmoRwm8upOu6tc1Amvqlads-SSX2O33rEB9yGX4/edit?usp=sharing), [Autot ja Perhe (Finnish)](https://docs.google.com/document/d/1VP7Ga9dVXVrfYmtfmjXyV2gJXKoBRw7rkeALg7PkYfH0/edit?usp=sharing))
-- [Pros & Cons](https://strangeworlder.itch.io/pros-and-cons) — Lasers & Feelings -hack korkeiden panosten keikoista. Henkisesti La Papa De Castel, Oceans 11 ja Leverage. Käyttää pelikortteja satunnaistimena.
+- [Pros & Cons](https://strangeworlder.itch.io/pros-and-cons) — Lasers & Feelings -hack korkeiden panosten keikoista. Henkisesti La Casa de Papel, Oceans 11 ja Leverage. Käyttää pelikortteja satunnaistimena.
 - [Fate of Atreus](https://docs.google.com/document/d/11tqoXZCX3p7sl_kwvq--pNPFoup_oV5gRu1eXELQ9m4/edit?usp=sharing) — Fate Core -hack jättiroboteista, kuten BattleTech
 - [Vuosisata.](https://docs.google.com/document/d/1VYxmFq2ik5Wszqpo6jYv5GJXKoBRw7rkeALg7PkYfH0/edit?usp=sharing) — Eeppisten tarinoiden roolipelijärjestelmä. Osa I.
 - [Satyrs](https://strangeworlder.itch.io/satyrs) — Caltrop Core -peli seikkailevista satyyreista, sotkuisilla ihmissuhteilla.

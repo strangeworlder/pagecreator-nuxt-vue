@@ -1,6 +1,8 @@
 ---
 title: Sulkavan sointu
 description: Seikkailu 1. kokemustason hahmoille maailman suosituimpaan roolipeliin.
+datePublished: 2023-07-28
+dateModified: 2023-08-01
 canonical: "/sulkavansointu"
 template: product
 aliases:
@@ -16,6 +18,30 @@ productNav:
   - { href: "#mikä-sulkavan-soinnusta-tekee-huomionarvoisen", text: "Miksi?" }
   - { href: "#tekijän-kommentit", text: "Kuka?" }
   - { href: "#mitä-muut-sanovat", text: "Lainauksia" }
+lastValidated: 2025-12-10
+facts:
+  - label: "System"
+    value: "Legendoja & lohikäärmeitä (5e)"
+  - label: "Tone"
+    value: "Tukkilaisromantiikka"
+stats:
+  - metric: "Sivumäärä"
+    value: "20"
+    date: 2023-07-28
+    source: "Sääntökirja"
+  - metric: "Taso"
+    value: "1"
+    date: 2023-07-28
+    source: "Sääntökirja"
+quotes:
+  - source: "Mikko Meriläinen"
+    text: "Sulkavan sointu on ennen kaikkea virkistävää vaihtelua angloamerikkalaiseen roolipelikuvastoon."
+    date: 2025-12-10
+entities:
+  - type: "CreativeWork"
+    name: "Sulkavan sointu"
+    sameAs:
+      - "https://www.drivethrurpg.com/product/436237/Sulkavan-sointu"
 ---
 
 _**Tuore seikkailijajoukko pysähtyy Ristijärven rannassa olevaan tukkilaisleiriin yöksi tarkoituksenaan jatkaa matkaa rajan taakse korpimaille, mutta päätyykin nokat vastakkain aluetta riivaavien höyhenpeitteisten jokirosvojen kanssa..**_

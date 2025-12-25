@@ -1,6 +1,8 @@
 ---
 title: Hirviökirja
 description: Valikoima vaarallisia vastustajia aloitteleville hahmoille maailman suosituimpaan roolipeliin.
+datePublished: 2022-11-11
+dateModified: 2022-12-07
 canonical: "/hirviokirja"
 template: product
 cover: "/images/products/hirviokirja/kansi.webp"
@@ -18,11 +20,35 @@ productNav:
   - { href: "#tekijän-kommentit", text: "Kuka?" }
   - { href: "#mitä-muut-sanovat", text: "Lainauksia" }
   - { href: "#mediassa", text: "Mediassa" }
+lastValidated: 2025-12-10
+facts:
+  - label: "System"
+    value: "Legendoja & lohikäärmeitä (5e)"
+  - label: "Tone"
+    value: "Suomalainen fantasia"
+stats:
+  - metric: "Sivumäärä"
+    value: "64"
+    date: 2022-11-11
+    source: "Sääntökirja"
+  - metric: "Formaatti"
+    value: "Kovakantinen / PDF"
+    date: 2022-11-11
+    source: "Sääntökirja"
+quotes:
+  - source: "Mika Loponen"
+    text: "Leinosen Hirviökirja päivittää fantasiahirviöt riemastuttavalla tavalla modernille yleisölle."
+    date: 2025-12-10
+entities:
+  - type: "CreativeWork"
+    name: "Hirviökirja"
+    sameAs:
+      - "https://www.drivethrurpg.com/product/417980/Hirviokirja"
 ---
 
 Hirviökirja tarjoaa laajan kattauksen vastustajia haastamaan alhaisten kokemustasojen hahmoja. Sen sivuilta löytyy kaikenlaista vipeltäjää sulkavista konteloihin; luomoja, kalmoja, mämmilimoja ja ilmeksiä unohtamatta. Kyseessä on siis hirviömäinen kokoelma, joka laajentaa Legendoja & lohikäärmeissä esiteltyä vastustajavalikoimaa pohjoisista maista ammentavilla fantastisilla olennoilla. L&L pohjaa Wizards of the Coastin julkaisemaan viidennen laitoksen sääntöaihioon (SRD), joten kaikki Hirviökirjan vastustajat ovat siten käytettävissä myös maailman suosituimmassa roolipelissä.
 
-Hirviökirja julkaistiin 11. marraskuuta 2022 kovakantisena kirjana, ja 7.12 PDF-muotoisena sähköisenä kirjana, jossa erityisesti otettu huomioon sen saavutettavuus ja käyttö ruudunlukijoilla ja muilla assistiivisilla teknologioilla.
+Hirviökirja julkaistiin 11. marraskuuta 2022 kovakantisena kirjana, ja 7.12 PDF-muotoisena sähköisenä kirjana, jossa on erityisesti otettu huomioon sen saavutettavuus ja käyttö ruudunlukijoilla ja muilla assistiivisilla teknologioilla.
 
 ![Hirviökirjan kansikuva. Seikkailija kuusimetsän aukiolla miekka kädessään tuijottaa edessään nousevaa krokraks-lintua.](/images/products/hirviokirja/kansi.webp)
 

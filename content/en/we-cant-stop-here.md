@@ -6,11 +6,36 @@ dateModified: 2025-10-27
 tags: ["game", "mork-borg"]
 canonical: "/en/we-cant-stop-here"
 alternateLocales: ["fi"]
-cover: "/images/we-cant-stop-here-cover.png"
 template: "hero"
+theme: "classic"
+cover: "/images/we-cant-stop-here-cover.png"
 heroImage: "/images/we-cant-stop-here-cover.png"
 summary: |
   This is a third-party supplement for the doom-metal RPG Mörk Borg that forces players into a grimy, psychedelic road trip. The centerpiece is a sentient, decaying wagon full of dangerous, hallucinogenic herbs.
+lastValidated: 2025-11-28
+facts:
+  - label: "System"
+    value: "Mörk Borg supplement"
+  - label: "Tone"
+    value: "Psychedelic Road Trip"
+stats:
+  - metric: "Word count"
+    value: "1500"
+    date: 2025-10-27
+    source: "Rules text"
+  - metric: "Format"
+    value: "Digital"
+    date: 2025-10-27
+    source: "Rules text"
+quotes:
+  - source: "Petri Leinonen"
+    text: "A grimy, psychedelic road trip through the dying world."
+    date: 2025-11-28
+entities:
+  - type: "CreativeWork"
+    name: "We can't stop here..."
+    sameAs:
+      - "https://strangeworlder.itch.io/we-cant-stop-here"
 ---
 
 ## Introduction for New Players
@@ -55,7 +80,7 @@ The supplement introduces several new mechanics centered around the herb wagon:
 
 5.  **Trip Encounters:**
     * While traveling, each character makes a daily roll (usually d4, but some herbs modify this) on the Trip Encounter table.
-    * Encounters range from strange sky shapes and other travelers to swarms of animals, hermits, parents, sky morays, or even the wagon's Skull or Yrzaakko herself.
+    * Encounters range from strange sky shapes and other travelers to swarms of animals, hermits, parents, sky morays, or even the wagon's Skull or Yrtlepakko herself.
     * Crucially: An encounter is only real if two or more characters roll the same result. Otherwise, it's a hallucination that fades or can be dismissed with a DR10 Presence test. Hallucinations can still potentially harm the character.
 
 6.  **The Skull:**

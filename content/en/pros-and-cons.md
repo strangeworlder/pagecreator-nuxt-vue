@@ -6,14 +6,38 @@ dateModified: 2025-10-26
 tags: ["game", "heist"]
 canonical: "/en/pros-and-cons"
 alternateLocales: ["fi"]
-cover: "/images/pros-and-cons-cover.jpg"
 template: "hero"
 theme: "modern"
+cover: "/images/pros-and-cons-cover.jpg"
 heroImage: "/images/pros-and-cons-cover.jpg"
 summary: |
   A quick, player-facing intro to Pros & Cons — a cinematic heist TTRPG
   that replaces dice with playing cards. Balance Pro vs Con approaches,
   trigger Twists with face cards, and use Flashbacks to outsmart the mark.
+lastValidated: 2025-11-28
+facts:
+  - label: "System"
+    value: "Lasers & Feelings with cards"
+  - label: "Tone"
+    value: "Cinematic Heist"
+stats:
+  - metric: "Page count"
+    value: "1"
+    date: 2025-10-26
+    source: "Rules text"
+  - metric: "Word count"
+    value: "1000"
+    date: 2025-10-26
+    source: "Rules text"
+quotes:
+  - source: "Petri Leinonen"
+    text: "A heist RPG built on Lasers & Feelings."
+    date: 2025-11-28
+entities:
+  - type: "CreativeWork"
+    name: "Pros & Cons"
+    sameAs:
+      - "https://strangeworlder.itch.io/pros-and-cons"
 ---
 
 ## Introduction for New Players

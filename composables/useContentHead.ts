@@ -198,6 +198,67 @@ export function useCustomContentHead(docRef: Ref<Record<string, any> | null | un
       url,
     };
 
+    // Use server-side logic if available, or lightweight client construction
+    // Since geoGraph is a server util, we can't import it directly in client composable easily 
+    // without nuxt-layer complexity or making it shared. 
+    // For now, we will construct the rich data structure here mirroring geoGraph logic 
+    // to ensure client-side hydration matches.
+    
+    // 1. Facts & Stats -> additionalProperty
+    const additionalProperty: any[] = [];
+    
+    if (doc.facts && Array.isArray(doc.facts)) {
+      doc.facts.forEach((f: any) => {
+        additionalProperty.push({
+          "@type": "PropertyValue",
+          name: f.label,
+          value: f.value
+        });
+      });
+    }
+
+    if (doc.stats && Array.isArray(doc.stats)) {
+      doc.stats.forEach((s: any) => {
+        additionalProperty.push({
+          "@type": "PropertyValue",
+          name: s.metric,
+          value: s.value,
+          dateObserved: s.date,
+          description: s.source ? `Source: ${s.source}` : undefined
+        });
+      });
+    }
+
+    if (additionalProperty.length > 0) {
+      ldBase.additionalProperty = additionalProperty;
+    }
+
+    // 2. Quotes -> Review
+    if (doc.quotes && Array.isArray(doc.quotes)) {
+      ldBase.review = doc.quotes.map((q: any) => ({
+        "@type": "Review",
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5"
+        },
+        author: {
+          "@type": "Person",
+          name: q.source
+        },
+        reviewBody: q.text,
+        datePublished: q.date
+      }));
+    }
+
+    // 3. Entities -> sameAs
+    if (doc.entities && Array.isArray(doc.entities)) {
+      const links = doc.entities.flatMap((e: any) => e.sameAs).filter(Boolean);
+      if (links.length > 0) {
+        ldBase.sameAs = links;
+      }
+    }
+
     const structured = Array.isArray(doc.structuredData)
       ? [ldBase, ...doc.structuredData]
       : [ldBase];

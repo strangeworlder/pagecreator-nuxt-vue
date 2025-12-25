@@ -7,11 +7,36 @@ tags: ["game", "mystery", "action", "corvids", "investigation"]
 canonical: "/en/a-particular-group-of-corvids"
 alternateLocales: ["fi"]
 template: "hero"
-heroImage: "/images/a-particular-group-of-corvids-cover.jpg"
+theme: "classic"
 cover: "/images/a-particular-group-of-corvids-cover.jpg"
+heroImage: "/images/a-particular-group-of-corvids-cover.jpg"
 summary: |
   A mystery and action RPG where you play as skilled corvid sleuths protecting 
   the artistic haven of Roost from the authoritarian regime known as The Sus.
+lastValidated: 2025-11-28
+facts:
+  - label: "System"
+    value: "d20 pool with narrative constraints"
+  - label: "Tone"
+    value: "Sherlock Holmes meets Peaky Blinders"
+stats:
+  - metric: "Word count"
+    value: "1500"
+    date: 2025-01-27
+    source: "Rules text"
+  - metric: "Status"
+    value: "Draft"
+    date: 2025-01-27
+    source: "Rules text"
+quotes:
+  - source: "Petri Leinonen"
+    text: "Two-fisted bird sleuths."
+    date: 2025-11-28
+entities:
+  - type: "CreativeWork"
+    name: "A Particular Group of Corvids"
+    sameAs:
+      - "https://strangeworlder.itch.io/a-particular-group-of-corvids"
 ---
 
 ## Introduction for New Players
@@ -27,7 +52,7 @@ The game's unique potential crystallizes in its currency systems, particularly "
 
 ## What is *A particular group of corvids*?
 
-*A particular group of corvids* is a mystery and action storytelling game. Players take on the roles of "two-fisted bird sleuths" in a setting described as "Robert Downy Jr.'s Sherlock with a bit of Peaky Blinders... but with birds".
+*A particular group of corvids* is a mystery and action storytelling game. Players take on the roles of "two-fisted bird sleuths" in a setting described as "Robert Downey Jr.'s Sherlock with a bit of Peaky Blinders... but with birds".
 
 ### What is the goal of the game?
 
@@ -69,7 +94,7 @@ If the dice pool is 0 or less, the player rolls two d20s and must keep the *lowe
 There are two primary ways to alter a roll or its result:
 
 1. **Take a Cost:** A player can choose to "take a cost" to move their result one step up the success chain (e.g., from a Marginal Failure to a Marginal Success).
-    * A cost is a "significant price". such as taking a hit in a fight, losing a valuable piece of equipment, or insulting a friend.
+    * A cost is a "significant price", such as taking a hit in a fight, losing a valuable piece of equipment, or insulting a friend.
     * If no one can think of a good cost, the player can take 1-3 Feathers as a substitute.
 2. **Spend Conviction:** A player can spend one point of Conviction to reroll a *single die* in their pool.
 
@@ -83,7 +108,7 @@ Players must manage three main resources:
 * **Feathers:** This tracks the character being drawn away from their controlled investigator self and back toward their base corvid instincts.
     * **Gaining:** When you gain a Feather, you must roll a d20.
     * **Check:** If you roll *over* your current total number of Feathers, you are fine.
-    * **Succumbing:** If you roll equal to or under (implied by "Otherwise"), you "succumb to the base instinct" of your Bird Type for the rest of the scene. Your Feathers then reset to half their value, rounded down.
+    * **Succumbing:** If you roll equal to or under your current total, you "succumb to the base instinct" of your Bird Type for the rest of the scene. Your Feathers then reset to half their value, rounded down.
 * **Exhaustion:** This tracks how tired the character is.
     * **Gain 1 Exhaustion when you:**
         * Witness injustice.
@@ -113,8 +138,8 @@ When inspecting a scene for clues, players roll dice as normal.
 ### How do you create a character?
 
 Follow these steps to create your bird sleuth:
-1.  **Choose your Bird Type:** Select from Crow (The Muscle). Jackdaw (The Spy). Magpie (The Thief). Raven (The Leader). or Rook (The Arcanist).
-2.  **Choose your Element:** This is your area of expertise. Options include Blood (The Medic). Breath (The Voice). Flame (The Keen-Eyed). Soul (The Empath). or Stone (The Font of Knowledge).
+1.  **Choose your Bird Type:** Select from Crow (The Muscle), Jackdaw (The Spy), Magpie (The Thief), Raven (The Leader), or Rook (The Arcanist).
+2.  **Choose your Element:** This is your area of expertise. Options include Blood (The Medic), Breath (The Voice), Flame (The Keen-Eyed), Soul (The Empath), or Stone (The Font of Knowledge).
 3.  **Determine Starting Stats:** Your chosen Element determines your starting Conviction, Exhaustion, and Feathers.
 4.  **Select Bird Powers:** You get all Level 1 powers and choose one Level 2 power from your Bird Type's list. Bird powers can only be used once per scene.
 5.  **Finalize:** Create a background for your corvid and discuss with the other players how your characters know each other.

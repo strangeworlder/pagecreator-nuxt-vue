@@ -6,10 +6,37 @@ dateModified: 2025-10-28
 tags: ["game", "ttrpg"]
 canonical: "/en/vuosisata"
 alternateLocales: ["fi"]
+template: "hero"
 theme: "modern"
+cover: "/images/vuosisata-cover.png"
+heroImage: "/images/vuosisata-cover.png"
 summary: |
   Post‑cataclysm RPG where history meets magic (1912–2012), powered entirely by
   Tarot. Succeed by interpreting card meanings; risk Catastrophes on matches.
+lastValidated: 2025-11-28
+facts:
+  - label: "System"
+    value: "Tarot-driven resolution"
+  - label: "Tone"
+    value: "Historical Magic"
+stats:
+  - metric: "Word count"
+    value: "2500"
+    date: 2025-10-28
+    source: "Rules text"
+  - metric: "Status"
+    value: "Creative Commons"
+    date: 2025-10-28
+    source: "Rules text"
+quotes:
+  - source: "Petri Leinonen"
+    text: "History meets magic."
+    date: 2025-11-28
+entities:
+  - type: "CreativeWork"
+    name: "Vuosisata."
+    sameAs:
+      - "https://docs.google.com/document/d/1VYxmFq2ik5Wszqpo6jYv5GJXKoBRw7rkeALg7PkYfH0/edit?usp=sharing"
 ---
 
 ## Introduction for New Players

@@ -1,15 +1,41 @@
 ---
 title: "+H"
 description: "A roleplaying game of modern science horror where players take on the roles of a highly competent field team working for New Horizons, a massive biotechnology corporation."
-date: 2024-01-01
+datePublished: 2024-01-01
+dateModified: 2024-01-01
 tags: ["roleplaying", "horror", "science fiction", "PbtA", "tabletop"]
-category: "games"
-cover: "/images/new-horizons-logo.png"
+canonical: "/en/plus-h"
+alternateLocales: ["fi"]
 template: "hero"
 theme: "modern"
+cover: "/images/new-horizons-logo.png"
 heroImage: "/images/new-horizons-logo.png"
 summary: |
   +H is a modern science horror RPG where you play as a team of highly competent professionals working for a massive biotech corporation. You investigate the "shadow biosphere" — a hypothetical, non-carbon-based "Life 2.0" that has always existed alongside us and is now becoming dangerously active.
+lastValidated: 2025-11-28
+facts:
+  - label: "System"
+    value: "Powered by the Apocalypse"
+  - label: "Tone"
+    value: "Modern Science Horror"
+stats:
+  - metric: "Word count"
+    value: "2000"
+    date: 2024-01-01
+    source: "Rules text"
+  - metric: "Status"
+    value: "In development"
+    date: 2024-01-01
+    source: "Rules text"
+quotes:
+  - source: "Petri Leinonen"
+    text: "Encountering the shadow biosphere is a misstep away from body horror."
+    date: 2025-11-28
+entities:
+  - type: "CreativeWork"
+    name: "+H"
+    sameAs:
+      - "https://roachsphere.com"
 ---
 
 ## Introduction to new players

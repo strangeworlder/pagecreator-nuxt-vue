@@ -26,7 +26,9 @@ Mustan kilven kantoni on konfederaation pohjoisin linnake. Se on karu, metsäine
 Maailman omaleimaisuus kumpuaa siitä, että se poikkeaa tietoisesti angloamerikkalaisen fantasian vakiintuneimmista käytänteistä ja rakentaa tilalle jotain aidosti suomalaista.
 
 ### 1. Suomalainen luontomystiikka vastaan
-Amerikan "rajaseutumyytti"Lähdekirjallisuudessa tekijä torjuu avoimesti amerikkalaisen "rajaseutumyytin" (Frontier Myth), jossa erämaa nähdään valloitettavana ja alistettavana vihollisena. Mustan kilven kantonissa asetelma on päinvastainen. Rajan tehtävä ei ole erottaa sivistystä raakalaisuudesta, vaan se erottaa nykyisen, turvallisen maailman maagisesta, muinaisesta ja kunnioitusta vaativasta luonnosta.
+Amerikan "rajaseutumyytti"
+
+Lähdekirjallisuudessa tekijä torjuu avoimesti amerikkalaisen "rajaseutumyytin" (Frontier Myth), jossa erämaa nähdään valloitettavana ja alistettavana vihollisena. Mustan kilven kantonissa asetelma on päinvastainen. Rajan tehtävä ei ole erottaa sivistystä raakalaisuudesta, vaan se erottaa nykyisen, turvallisen maailman maagisesta, muinaisesta ja kunnioitusta vaativasta luonnosta.
 
 Tämä näkyy vahvasti Hirviökirjan olennoissa. Ne eivät ole satunnaisia vastustajia, vaan kiinteä osa maailman ekologiaa ja mytologiaa. Yöjoen raivo -seikkailu syventää teemaa esittelemällä luonnon tasapainon järkkymisen konkrettisena uhkana. Asetelma korostaa, että erämaalla on omat sääntönsä, ja niiden rikkomisella on vakavat seurauksensa.
 

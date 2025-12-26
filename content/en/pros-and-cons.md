@@ -1,6 +1,6 @@
 ---
 title: "Pros & Cons"
-description: "Introduction for new players to Pros & Cons — a heist RPG built on Lasers & Feelings."
+description: "Introduction for new players to Pros & Cons: a heist RPG built on Lasers & Feelings."
 datePublished: 2025-10-26
 dateModified: 2025-10-26
 tags: ["game", "heist"]
@@ -11,7 +11,7 @@ theme: "modern"
 cover: "/images/pros-and-cons-cover.jpg"
 heroImage: "/images/pros-and-cons-cover.jpg"
 summary: |
-  A quick, player-facing intro to Pros & Cons — a cinematic heist TTRPG
+  A quick, player-facing intro to Pros & Cons: a cinematic heist TTRPG
   that replaces dice with playing cards. Balance Pro vs Con approaches,
   trigger Twists with face cards, and use Flashbacks to outsmart the mark.
 lastValidated: 2025-11-28
@@ -22,11 +22,11 @@ facts:
     value: "Cinematic Heist"
 stats:
   - metric: "Page count"
-    value: "1"
+    value: "2"
     date: 2025-10-26
     source: "Rules text"
   - metric: "Word count"
-    value: "1000"
+    value: "1352"
     date: 2025-10-26
     source: "Rules text"
 quotes:
@@ -38,92 +38,86 @@ entities:
     name: "Pros & Cons"
     sameAs:
       - "https://strangeworlder.itch.io/pros-and-cons"
+      - "https://roolipelikirjasto.fi/book/147"
 ---
 
-## Introduction for New Players
 
-"Pros & Cons" is a tabletop RPG designed to emulate the thrill and intricate plotting of heist films like Ocean's Eleven, Leverage, or The Italian Job. Players form a crew of specialized criminals—Driver, Hacker, Hitter, Grifter, Mastermind, or Thief —already in the midst of executing a supposedly impossible robbery when unexpected trouble arises . The game focuses on balancing calculated professionalism ("Pros") against daring improvisation ("Cons") as the crew navigates unforeseen obstacles and shifting circumstances. Crew creation establishes shared strengths ("Aces up your sleeve") and a central problem facing the current heist, setting the stage for drama and action from the first scene .
+## What is **Pros & Cons?**
 
-The system builds upon the minimalist foundation of John Harper's Lasers & Feelings, replacing its core dice mechanic with a standard deck of playing cards. Each character is defined by a single number card (2 through 9) and its suit. The number represents your balance between two approaches: a high number makes you better at being a "Pro" (practical, logical, efficient), while a low number makes you better at running a "Con" (creative, flashy, spontaneous) . The suit denotes a specific strength: Hearts for likeability, Diamonds for quickness, Spades for toughness, and Clubs for savviness . When attempting something risky, you draw one card, plus another if the task fits your Role, and a third if targeting the mark or prize directly . You choose one drawn number card: if acting as a Pro, success is drawing equal to or lower than your number; if running a Con, success is drawing equal to or higher . The suit of the chosen card then modifies the outcome: matching your suit is a critical success/marginal failure, same color is standard success/failure, and opposite color adds a complication regardless of success .
+**Pros & Cons** is widely cited as one of the most clever and innovative hacks of the *Lasers & Feelings* system. By replacing dice with a standard deck of playing cards, it does more than just randomize result, but fundamentally changes the feel of the game to match the genre. It captures the slick, high-tension pacing of films like *Ocean's Eleven* or *Leverage*, where professional planning constantly wars with desperate improvisation.
 
-"Pros & Cons" significantly innovates on the L&F structure through its unique card mechanics. Jokers always count as critical successes. More importantly, drawing a face card (Jack, Queen, or King) introduces a narrative "Twist" instead of resolving the action normally . These Twists focus on the Mark (Jack), the Prize (Queen), or the Crew (King), posing escalating questions to the table each time a card of that value appears, dynamically generating personal stakes and plot complications . Furthermore, the game embraces the genre's non-linear storytelling with a "Flashback" mechanic: after a check without a Twist, you can narrate how you prepared for this exact situation, allowing you to re-attempt the check using the opposite approach (Pro or Con) and treating any face cards drawn during the flashback as successes (though they still trigger Twists) . These elements combine to create a fast-paced, player-driven narrative experience true to its cinematic inspirations.
+You take on the role of a specialized criminal (from a pool of Driver, Hacker, Hitter, Grifter, Mastermind, or Thief), caught in the middle of a job that’s continuously spiraling out of control. We start *in media res*: the alarm is ringing, the guards are closing in, and you have to decide *right now* if you're going to stick to the plan or wing it.
 
-## What is *Pros & Cons*?
+::alert{type="note" title="Get the Game"}
+- [Download Pros & Cons on itch.io](https://strangeworlder.itch.io/pros-and-cons)
+- [Download Pros & Cons on Roolipelikirjasto](https://roolipelikirjasto.fi/book/147)
+::
 
-*Pros & Cons* is a rules-light, one-page tabletop role-playing game designed by Petri Leinonen. It is based on the *Lasers & Feelings* TTRPG system. In the game, players are a "group of criminals working to pull off a heist that was supposed to be impossible". The game begins *in media res*, with the crew already in the middle of the job and running into trouble.
+### Community Spotlight
 
-### How do you create a character?
+> *"The most intriguing Lasers & Feelings hack I’ve ever seen... it uses a deck of playing cards instead of dice, with additional rules for plot twists and flashbacks to emulate the feel of high stakes heist films."*
 
-To create your character, you make four choices:
-1.  **Choose your Role:** Driver, Hacker, Hitter, Grifter, Mastermind, or Thief.
-2.  **Choose your Energy:** Your character's personality, such as "No-nonsense," "High-energy," or "Posh".
-3.  **Choose your Card:** Pick a number from 2 to 9 and one of the four suits (Hearts, Diamonds, Spades, Clubs). This is your character's core statistic.
-4.  **Choose a Name**
+— [Sapphim](https://sapphim.tumblr.com/post/791555275348967424/so-ive-had-this-longstanding-agreement-with-our)
 
-### How does the "Pro vs. Con" mechanic work?
+## How to Play
 
-Your character's "Card" (your number and suit) is the key to all mechanics.
+Forget the character sheet math; this game uses a simple deck of cards to drive the action. Your thief is defined by just one thing: their **Card** (a number from 2-9 and a Suit). This single card tells you everything about how you solve problems.
 
-* **Your Number (Pro vs. Con):** This determines your style.
-    * A **high number** (like 7, 8, or 9) means you are better at being a **Pro**: acting practical, conservative, and efficient.
-    * A **low number** (like 2, 3, or 4) means you are better at running a **Con**: being creative, extravagant, and fun.
-* **Your Suit (Your Strength):** This defines your innate talent.
-    * **Hearts:** You're likeable.
-    * **Diamonds:** You're quick.
-    * **Spades:** You're rough.
-    * **Clubs:** You're savvy.
+**Your Number** represents the balance between your two modes of operation. A **Pro** (High Numbers) is the consummate professional: logical, efficient, and precise. A **Con** (Low Numbers) is the wild card: creative, flashy, and spontaneous.
 
-### How do you make a check?
+**Your Suit** is your edge, the thing you're naturally good at. **Hearts** are Charming and Likeable, **Diamonds** are Quick and Sharp, **Spades** are Tough and Imposing, and **Clubs** are Savvy and Street-smart.
 
-When your character attempts something "significant and risky," you make a check by drawing cards from a standard playing deck.
+### Making a Check
 
-* **Draw 1 card** for the attempt.
-* **Draw +1 card** (for a total of two) if the task fits your **Role** (e.g., a Hacker is hacking).
-* **Draw +1 card** (for a total of two, or three if it also fits your Role) if the action is aimed "directly at the mark or the prize".
+When the heat is on and you attempt something risky, you **draw cards** from the deck to build your pool. You always get **1 card** just for showing up. If your **Role** (like being a Hacker hacking a terminal) applies, you get a **second card**. If you're going straight for the throat by targeting the **Mark** or the **Prize** directly you get a **third card**.
 
-### How do you know if you succeed?
+Pick the **one card** that gives you the best shot at success (or the most interesting failure).
 
-Resolving your check is a two-step process:
+### Resolving the Action
 
-**Step 1: Check the Number (Success or Failure)**
-From the cards you drew, you choose *one* number card to use.
-* If you were being a **Pro** (logical, efficient), you **succeed** if the card's number is **equal to or lower** than your character's number.
-* If you were pulling a **Con** (flashy, spontaneous), you **succeed** if the card's number is **equal to or higher** than your character's number.
+Did you try to do this the smart way, or the loud way? Success depends on whether you acted as a **Pro** or ran a **Con**.
 
-**Step 2: Check the Suit (Quality of Success/Failure)**
-Next, you compare the suit of the card you chose to your character's suit to see *how well* you succeeded or failed.
-* **Same Suit:** It's a **critical success** (if you succeeded) or a **marginal failure** (if you failed). The GM gives you a positive extra a "positive extra thing".
-* **Same Color:** It's a **simple success** (you get what you wanted) or a **simple failure** (you just don't get it).
-* **Opposite Color:** It's a **marginal success** or **total failure**, and you also suffer a **complication**.
+| Approach | Success Condition |
+| :--- | :--- |
+| **Acting as a PRO** | The drawn card is **equal to or LOWER** than your number. |
+| **Running a CON** | The drawn card is **equal to or HIGHER** than your number. |
 
-### What are Twists? (Face Cards)
+Now, look at the **Suit** of that card you picked. How does it match up with yours?
 
-If you draw a **Face Card** (Jack, Queen, or King), it is **not counted as a success**. Instead, it triggers a "Twist" in the story.
-* **Jack (J):** The twist is about the **mark** (the target).
-* **Queen (Q):** The twist is about the **prize** (the score).
-* **King (K):** The twist is about **our crew**.
+| Card Suit | Result |
+| :--- | :--- |
+| **Matches Yours** | **Critical Success** (or Marginal Failure). You crushed it. Take a positive extra benefit. |
+| **Same Color** | **Standard Success** (or Standard Failure). You get what you wanted (or you don't). Simple as that. |
+| **Opposite Color** | **Marginal Success** (or Spectacular Failure). You did it, but it's messy. You suffer a **Complication**. |
 
-When a twist occurs, the GM asks the table a specific question from a list. The questions become more "personal" and intense the more times that card value (J, Q, or K) has been drawn, dynamically escalating the situation. The "most dramatic answer" given by the players becomes the new truth.
+## Mechanics & Twists
 
-### What about Jokers?
+### Face Cards (The Twist)
 
-A **Joker** is always a **critical success**.
+Face cards (Jack, Queen, King) are the engine of chaos in this game. They **do not count as successes**; instead, they trigger a narrative **Twist**. If you draw one, the plan changes immediately. A **Jack (J)** messes with the **Mark**, a **Queen (Q)** complicates the **Prize**, and a **King (K)** hits the **Crew** where it hurts.
 
-### What is a Flashback?
+::alert{type="warning" title="Escalating Stakes"}
+When a face card is drawn, the GM asks the table a question from the Twist list. If the same rank appears again, the question gets harder, more personal, and more dangerous. Your answers become the new reality of the heist.
+::
 
-After any check that did *not* result in a twist, you can choose to have a **Flashback**.
-* You narrate a scene from the past showing how you "actually prepared for this".
-* This allows you to **re-attempt the check**.
-* When you re-roll, you *must* use the **opposite approach** (e.g., if you failed being a Pro, you must now try it as a Con).
-* During a flashback, any face cards drawn are counted as **successes**, but they still trigger their twists.
+### Flashbacks
 
-### How does the GM set up the game?
+Did you fail? Or did you just *pretend* to fail to set up a trap? If a check resolves without a Twist, you can call for a **Flashback**. Narrate a scene from earlier where you prepared for this exact outcome. This lets you **re-draw** for the check, but there's a catch: you *must* use the **opposite approach** (switch from Pro to Con, or vice versa). In a Flashback, Face Cards count as **Successes**, your preparation accounts for the chaos, though they still trigger their darker questions.
 
-The GM (Game Master) has a few special setup rules:
-* **Stack the Deck:** The GM is advised to "stack the deck" before play. This involves taking one J, Q, and K out, shuffling them into the *bottom half* of the deck, and placing the "safer" half on top. This ensures the heist doesn't immediately "end immediately" with too many twists.
-* **Generate the Heist:** The GM uses tables to generate the **Mark** and the **Prize**.
-* **Start the Game:** The GM asks the players four questions to frame the opening scene:
-    1.  "When we start, where are we?"
-    2.  "What are we here to steal to help us get to our main prize?"
-    3.  "How are we disguised to protect our identities?"
-    4.  "What is the unexpected obstacle we just ran into?"
+### Jokers
+
+A **Joker** is the best card in the deck. It is always a **Critical Success**.
+
+## Creating Your Crew
+
+Joining the crew gets you into the action in seconds. first, pick a **Role** (Driver, Hacker, Hitter, Grifter, Mastermind, or Thief). Second, give them an **Energy** (like "Posh", "No-nonsense", or "High-energy"). Third, grab your **Card** (2-9 and a Suit). Finally, give them a cool **Name**. That's it. You're ready to steal.
+
+## For the GM: Setting the Stage
+
+You have three jobs to make this feel like a movie. First, **Stack the Deck**: shuffle one J, Q, and K into the *bottom half* of the deck so the game doesn't explode in the first five minutes. Second, **Generate the Job** using the tables for the Mark and the Prize.
+
+Finally, **Frame the Scene** by asking these four questions to put the players right in the middle of the action:
+*   "When we start, where are we?"
+*   "What are we here to steal to help us get to our main prize?"
+*   "How are we disguised?"
+*   "What unexpected obstacle just appeared?"

@@ -5,6 +5,7 @@ datePublished: 2023-07-28
 dateModified: 2023-08-01
 canonical: "/sulkavansointu"
 template: product
+cover: "/images/products/sulkavansointu/kansi.webp"
 aliases:
   - "/sulkavansointu"
 productTheme:

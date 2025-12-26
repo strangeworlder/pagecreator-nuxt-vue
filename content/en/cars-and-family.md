@@ -74,7 +74,7 @@ The crew's boss, **Von Petrol**, is out of commission, recovering in the hospita
 ::alert{type="note" title="Get the Game"}
 - [Download Cars & Family on itch.io](https://strangeworlder.itch.io/cars-and-family)
 - [Download from Roolipelikirjasto (Finnish "Autot & Perhe" & English)](https://roolipelikirjasto.fi/series/stored/7)
-- [Carros & Familia (Portuguese Translation by Vila Nova)](/downloads/carros-familia.pdf)
+- [Carros & Família (Portuguese Translation by Vila Nova)](/downloads/carros-and-familia.pdf){target="_blank"}
 ::
 
 ## How to Play
@@ -112,7 +112,7 @@ If *any* of your dice lands **exactly on your number**, you gain a moment of cla
 
 Once per session, you can "hit the Nitro" to up the stakes. This gives you **one extra, automatic hit** on any roll.
 
-::alert{type="warning" icon="lucide:flame" title="The Risk of NOS"}
+::alert{type="warning" title="The Risk of NOS"}
 After using NOS, you must roll a single d6. 
 - If it **matches your number**, you're cool. 
 - If it results in **any other number**, things **EXPLODE AROUND YOU** (literally or figuratively).

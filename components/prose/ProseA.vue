@@ -11,7 +11,7 @@ const EXTERNAL_RE = /^(https?:)?\/\//
 
 <template>
   <NuxtLink
-    v-if="href && !EXTERNAL_RE.test(href) && !href.startsWith('#')"
+    v-if="href && !EXTERNAL_RE.test(href) && !href.startsWith('#') && !target"
     :to="href"
     v-bind="$attrs"
   >

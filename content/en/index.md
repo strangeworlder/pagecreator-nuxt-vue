@@ -16,37 +16,37 @@ Gogam is a full-on indie powerhouse, churning out small, super-innovative games 
 
 ### Fully completed and free products
 
-- **Cars & Family** &mdash; this TTRPG puts you in the driver's seat as *Fast & Furious*-style international thieves using their incredible street racing skills for daring heists. Built on the elegantly simple Lasers & Feelings system, Cars & Family is an excellent lightweight game for explosive action fun. Available in both English and Finnish.
+- **Cars & Family** &mdash; this high-octane one-page RPG puts you in the driver's seat as *Fast & Furious*-style international thieves. With your leader Von Petrol out of commission, you must balance your incredible street racing skills (Cars) with the bonds of your crew (Family) to pull off daring heists. Built on the *Lasers & Feelings* system, it is a perfect lightweight game for explosive action. Available in both English and Finnish.
   - [Read more about Cars & Family](/en/cars-and-family)
   - [itch.io: Cars & Family (en) / Autot & Perhe (fi)](https://strangeworlder.itch.io/cars-and-family)
   - [roolipelikirjasto: Autot ja Perhe / Cars and Family](https://roolipelikirjasto.fi/series/stored/7)
-  - [Carros & Família](/Carros%20&%20Fam%C3%ADlia.pdf) &mdash; Portuguese translation of Cars & Family, translated and enhanced by Vila Nova.
-- **Pros & Cons** drops you into a high-stakes heist movie like *Ocean's Eleven*, playing criminals pulling off an impossible job. It builds on the elegant simplicity of Lasers & Feelings, but instead of just a number, Pros & Cons defines your character with a single playing card (2-9, plus a suit for your strength). It also includes rules for genre staples - Twists and flashbacks.
+  - [Carros & Família](/downloads/carros-and-familia.pdf) &mdash; Portuguese translation of Cars & Family, translated and enhanced by Vila Nova.
+- **Pros & Cons** drops you into a high-stakes heist movie like *Ocean's Eleven* or *Leverage*. A clever hack of *Lasers & Feelings*, it replaces dice with a standard deck of cards. Your character is defined by a single card (2-9) that balances being a **Pro** (professional) vs a **Con** (criminal improvisation). Face cards trigger narrative Twists, and Flashbacks let you rewrite your failures.
   - [Read more about Pros & Cons](/en/pros-and-cons)
   - [itch.io: Pros & Cons](https://strangeworlder.itch.io/pros-and-cons)
   - [roolipelikirjasto: Pros & Cons](https://roolipelikirjasto.fi/book/147)
   - [コンズ & プロズ](https://twitter.com/feltk/status/1376309603734937600) &mdash; Japanese translation of Pros & Cons, translated by [@feltk](https://twitter.com/feltk).
-- **Cyberpunk is Dead** &mdash; this FitD game flips the script on the cyberpunk genre: you're not rebellious heroes fighting the corps, you are the corps' disposable, underpaid hit squad, enforcing petty interests against often sympathetic targets. It masterfully subverts its Blades in the Dark inspiration by replacing playbooks with numbered, interchangeable "Operatives" and focuses the system on an unique 3d12 system where success often comes with overreaction and your life is a debt-inducing death spiral waiting to end. It's a bleakly fascinating critique of cyberpunk tropes through elegantly minimalist, pressure-cooker mechanics.
+- **Cyberpunk is Dead** &mdash; this *Forged in the Dark* game flips the script on the cyberpunk genre: you aren't rebellious heroes fighting the corps—you are their disposable, underpaid hit squad, enforcing petty interests against often sympathetic targets. It masterfully subverts its *Blades in the Dark* inspiration by replacing playbooks with numbered, interchangeable "Operatives" and utilizing a unique 3d12 system where success often comes with "Overreaction," and survival means a debt-inducing death spiral of mandatory cyberware. It's a bleakly fascinating critique of cyberpunk tropes through elegantly minimalist, pressure-cooker mechanics.
   - [Read more about Cyberpunk is Dead](/en/cyberpunk-is-dead)
   - [itch.io: Cyberpunk is Dead](https://strangeworlder.itch.io/cyberpunk-is-dead)
   - [roolipelikirjasto: Cyberpunk is Dead](https://roolipelikirjasto.fi/book/148)
-- **The Necessary Eagle vs. The Good Cad** is a 2-player PvP card game that brilliantly simulates the core conflict of "arrogant superhero vs. a mere mortal" from post-modern superhero stories such as *The Boys*.
+- **The Necessary Eagle vs. The Good Cad** &mdash; a competitive 2-player card game about the asymmetrical war between a sociopathic superhero and the vengeful mortal they wronged. Channeling the cynical energy of *The Boys*, one player wields godlike powers and manages PR fallout, while the other scavenges through the collateral damage to build the perfect weapon to kill them.
   - [Read more about The Necessary Eagle vs. The Good Cad](/en/the-necessary-eagle-vs-the-good-cad)
   - [itch.io: The Necessary Eagle vs. The Good Cad](https://strangeworlder.itch.io/the-necessary-eagle-vs-the-good-cad)
 - **Bike on Fire** &mdash; a two-player, card based competitive RPG of tragic hobby obsession. Available in English and Finnish.
   - [Bike on Fire (en) / Palava pyörä (fi)](https://strangeworlder.itch.io/bike-on-fire) 
-- **Vuosisata.** is a post-cataclysm RPG where history meets magic (1912-2012), uniquely powered entirely by a Tarot deck. Forget just rolling dice; succeed by creatively interpreting the meaning of cards played from your hand to narrate your character's success.
+- **Vuosisata.** is a post-cataclysm RPG where history meets magic (1912-2012), powered entirely by a Tarot deck. Succeed by creatively interpreting the meaning of cards played from your hand, but beware, matching cards trigger deadly Catastrophes.
   - [Read more about Vuosisata.](/en/vuosisata)
   - [GDocs: Vuosisata.](https://docs.google.com/document/d/1VYxmFq2ik5Wszqpo6jYv5GJXKoBRw7rkeALg7PkYfH0/edit?usp=sharing)
-- **We can't stop here...** is a *Mörk Borg* compatible supplement about a wagon filled with magical herbs that would make any occult herbmaster wet their pants with excitement.
+- **We can't stop here...** &mdash; a grimy, psychedelic *Mörk Borg* supplement about a road trip that never ends. You travel with a sentient, decaying wagon, consuming its dangerous herbs to keep it moving. Features a risk/reward addiction system and a unique "Trip Encounter Table" where horrors only become real if the hallucination is shared. Includes the introductory adventure *"...this is BAT country"*.
   - [Read more about We can't stop here...](/en/we-cant-stop-here)
   - [itch.io: We can't stop here...](https://strangeworlder.itch.io/we-cant-stop-here)
-- **Grapple: The RPG** is a game/shitpost about grappling and thinking about the core activity of your game.
+- **Grapple: The RPG** &mdash; a game/shitpost about grappling and thinking about the core activity of your game.
   - [itch.io: Grapple: The RPG](https://strangeworlder.itch.io/grapple-the-rpg)
 
 ### Projects in various stage of completion
 
-- **Night of the Thirteenth** &mdash; a tabletop RPG that flawlessly simulates a slasher movie, casting you as a most likely doomed main character whose only goal is to survive until sunrise. The game's brilliance lies in its unique "d13" (d10+d4) system, where even a success can give you consequences, causing you to make noise or lead the relentless killer right to you &mdash; pushing you one step closer to your third and final Strike. 
+- **Night of the Thirteenth** &mdash; a slasher-horror RPG where you play the cast of a movie that hasn't happened yet. Powered by a unique "d13" (d10+d4) system and a standard deck of cards for generating threats, it simulates the high lethality of 80s slashers. Every roll risks "Fallout" &mdash; consequences that range from making noise to leading the killer right to you, pushing you one step closer to your third and final Strike. 
   - [Read more about Night of the Thirteenth](/en/nott)
   - [itch.io: Night of the Thirteenth](https://strangeworlder.itch.io/night-of-the-thirteenth)
 - **Them Deeper Bones** &mdash; a post-post-apocalyptic retro adventure game / OSR style RPG where you explore a world generations after a magical cataclysm reshaped history. As part of a rare, officially sanctioned "Rediscovery Company", you venture beyond the borders of the known world to uncover lost treasures, forgotten lore, and the truth. Explicitly rejecting the colonialist Frontier Myth, Them Deeper Bones draws inspiration from Finnish folklore, presenting a wilderness full of ancient magic to be respected and ruins that whisper tales of your own ancestors.
@@ -81,7 +81,7 @@ Publishes primarily in Finnish. Products are related to the [Black Shield Canton
 - [Gogam Entertainment youtube channel](https://www.youtube.com/@gogameu) The English Speaking main channel
 
 ### Rajatiloja
-- [+H: Rajatiloja](/fi/rajatiloja) - a +H actual play, hosts also Finnish oneshots
+- **+H: Rajatiloja** &mdash; a +H actual play, hosts also Finnish language one-shots
   - [Roachsphere](https://www.youtube.com/@Roachsphere). The home of +H: Rajatiloja on Youtube, as well as individual one-shots
     - [+H: Rajatiloja playlist](https://www.youtube.com/playlist?list=PLxGtzhc7G6T-y5KxEfrzZSvIBeR9P9Ekz). The playlist that contains all the episodes.
   - [Spotify](https://open.spotify.com/show/28etjaN8Wshrcwiw2ge0Vi?si=bebb1d24c4544acc). Rajatiloja is also available on Spotify.
@@ -119,18 +119,18 @@ Myrrys is the publisher of Legendoja & lohikäärmeitä, the most popular Finnis
 
 #### Print Books
 
-- [Legendoja & lohikäärmeitä](https://myrrys.com/legendoja-lohikaarmeita/) — Finnish 5e-compatible fantasy RPG.
+- [Legendoja & lohikäärmeitä](https://myrrys.com/legendoja-lohikaarmeita/): Finnish 5e-compatible fantasy RPG.
   - **Pelaajan kirja**: Layout
   - **Pelinjohtajan kirja**: Game design, development, layout
   - **Suuri Seikkailu**: Design, layout
   - **Velhon torni**: Game design, layout
-- [The Quick](http://www.drivethrurpg.com/product/245906/The-Quick) — Role-playing game of death and ghosts and Nordic Noir. Role in project: Game Designer.
+- [The Quick](http://www.drivethrurpg.com/product/245906/The-Quick): Role-playing game of death and ghosts and Nordic Noir. Role in project: Game Designer.
 
 #### Downloadable PDFs
 
 - [Legendoja & lohikäärmeitä: Traakinlyöjä](https://myrrys.com/2023/01/30/ll-traakinlyoja/) — Finnish-language adventure for Legendoja & lohikäärmeitä. Role in project: Layout.
 - [Legendoja & lohikäärmeitä: Majakkakeikka](https://myrrys.com/2023/04/06/ll-majakkakeikka/) — Finnish-language adventure for Legendoja & lohikäärmeitä. Role in project: Layout, Maps, Design, Game design.
-- [Legendoja & lohikäärmeitä: Ametistiviidakko](https://myrrys.com/2023/04/06/ll-majakkakeikka/) — Finnish-language adventure for Legendoja & lohikäärmeitä. Role in project: Project manager, Layout, Maps, Game design.
+- [Legendoja & lohikäärmeitä: Ametistiviidakko](https://myrrys.com/blog/25-11-03-ametistiviidakko/) — Finnish-language adventure for Legendoja & lohikäärmeitä. Role in project: Project manager, Layout, Maps, Game design.
 
 ### Ironspine Press
 

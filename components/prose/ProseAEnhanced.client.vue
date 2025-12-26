@@ -19,6 +19,7 @@ const previewTimeout = ref<NodeJS.Timeout>()
 
 const EXTERNAL_RE = /^(https?:)?\/\//
 const isLocal = () => {
+  if (props.target) return false
   const href = props.href || ''
   return !!href && !EXTERNAL_RE.test(href) && !href.startsWith('#')
 }
@@ -138,7 +139,7 @@ onUnmounted(() => {
 </script>
 <template>
   <NuxtLink
-    v-if="href && !EXTERNAL_RE.test(href) && !href.startsWith('#')"
+    v-if="href && !EXTERNAL_RE.test(href) && !href.startsWith('#') && !target"
     ref="linkRef"
     :to="href"
     v-bind="$attrs"

@@ -1,6 +1,6 @@
 ---
 title: "Cyberpunk is Dead"
-description: "Introduction for new players to Cyberpunk is Dead — a bleak FitD hack where you enforce corporate will."
+description: "A minimalist Blades in the Dark hack by Petri Leinonen where you play as disposable corporate operatives enforcing the company's will."
 datePublished: 2025-10-26
 dateModified: 2025-12-25
 tags: ["game", "cyberpunk"]
@@ -11,7 +11,7 @@ theme: "modern"
 cover: "/images/cyberpunk-is-dead-cover.jpg"
 heroImage: "/images/cyberpunk-is-dead-cover.jpg"
 summary: |
-  Cyberpunk is Dead — a minimalist Blades-in-the-Dark
+  Cyberpunk is Dead: a minimalist Blades-in-the-Dark
   hack where you are the corporation's disposable operatives. Roll 3d12, drop
   dice based on STATE, and spiral into Stress, Harm, and debt-inducing
   Cyberware until burnout or repossession.
@@ -44,7 +44,7 @@ stats:
     source: "Rules text"
   - metric: "Version"
     value: "1.0" 
-    date: 2021-12-01
+    date: 2025-12-25
 quotes:
   - source: "Petri Leinonen"
     text: "You are the corporation's disposable operatives."
@@ -90,7 +90,7 @@ Mechanically, *Cyberpunk is Dead* takes the chassis of *Blades in the Dark* and 
 
 ::alert{type="important" title="See it in action"}
 - [One Shot Cyberpunk is Dead Actual Play](https://www.youtube.com/watch?v=5kiEqSCwEoM)
-- [An eight-episode campaign of Cyberpunk is Dead](https://www.youtube.com/playlist?list=PLrGQRhJOhSdoOgu0FYQyxchYqDdfyqJ6D) — the most popular actual play of the game.
+- [An eight-episode campaign of Cyberpunk is Dead](https://www.youtube.com/playlist?list=PLrGQRhJOhSdoOgu0FYQyxchYqDdfyqJ6D) (the most popular actual play of the game).
 ::
 
 ### The Core Mechanic
@@ -154,7 +154,7 @@ The game offers two ways to "lose" your character, both reinforcing the theme of
 
 The goal is not to save the world or topple the corporations. The goal is to see how long you can last.
 
-The person running the game (the "Corporation") is explicitly instructed to make mission targets—like people pirating life-saving drugs or operatives who defaulted on their cybernetic eye payments—"likeable" and to "portray the actions of the team in a bad light."
+The person running the game (the "Corporation") is explicitly instructed to make mission targets, like people pirating life-saving drugs or operatives who defaulted on their cybernetic eye payments, "likeable" and to "portray the actions of the team in a bad light."
 
 You are the bad guys. *Cyberpunk is Dead* is a powerful, satirical look at the genre, using its mechanics to force players to confront the true meaning of being corporate property.
 

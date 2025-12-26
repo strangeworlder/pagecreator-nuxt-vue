@@ -43,6 +43,10 @@
     "width": 988,
     "height": 1396
   },
+  "/images/vuosisata-cover.png": {
+    "width": 558,
+    "height": 558
+  },
   "/images/the-necessary-eagle-vs-the-good-cad-cover.png": {
     "width": 1110,
     "height": 536
@@ -63,13 +67,33 @@
     "width": 1024,
     "height": 1536
   },
+  "/gen_images/images/we-cant-stop-here-cover-1536.webp": {
+    "width": 1536,
+    "height": 2170
+  },
   "/gen_images/images/we-cant-stop-here-cover-150.webp": {
     "width": 150,
     "height": 150
   },
+  "/gen_images/images/vuosisata-cover-1536.webp": {
+    "width": 1536,
+    "height": 1536
+  },
+  "/gen_images/images/the-necessary-eagle-vs-the-good-cad-cover-1536.webp": {
+    "width": 1536,
+    "height": 742
+  },
   "/gen_images/images/the-necessary-eagle-vs-the-good-cad-cover-150.webp": {
     "width": 150,
     "height": 150
+  },
+  "/gen_images/images/pros-and-cons-cover-1536.webp": {
+    "width": 1536,
+    "height": 454
+  },
+  "/gen_images/images/nott-cover-1536.webp": {
+    "width": 1536,
+    "height": 2179
   },
   "/gen_images/images/nott-cover-150.webp": {
     "width": 150,
@@ -78,6 +102,10 @@
   "/gen_images/images/new-horizons-logo-150.webp": {
     "width": 150,
     "height": 150
+  },
+  "/gen_images/images/cyberpunk-is-dead-cover-1536.webp": {
+    "width": 1536,
+    "height": 590
   },
   "/gen_images/images/cars-and-family-cover-1536.webp": {
     "width": 1536,
@@ -150,6 +178,30 @@
   "/images/products/hirviokirja/TDB-logo.webp": {
     "width": 338,
     "height": 538
+  },
+  "/gen_images/images/products/hirviokirja/sulkava-1536.webp": {
+    "width": 1536,
+    "height": 1536
+  },
+  "/gen_images/images/products/hirviokirja/nokiporo-1536.webp": {
+    "width": 1536,
+    "height": 1536
+  },
+  "/gen_images/images/products/hirviokirja/kansi-1536.webp": {
+    "width": 1536,
+    "height": 2012
+  },
+  "/gen_images/images/products/sulkavansointu/sulkava-1536.webp": {
+    "width": 1536,
+    "height": 1536
+  },
+  "/gen_images/images/products/sulkavansointu/silmat-1536.webp": {
+    "width": 1536,
+    "height": 1024
+  },
+  "/gen_images/images/products/sulkavansointu/kansi-1536.webp": {
+    "width": 1536,
+    "height": 2012
   },
   "/images/spinskull.gif": {
     "width": 100,

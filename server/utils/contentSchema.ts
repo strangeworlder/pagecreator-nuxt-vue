@@ -18,9 +18,7 @@ export const frontMatterSchema = z.object({
   canonical: z.string().optional(),
   llmPriority: z.number().min(0).max(1).optional(),
   lastValidated: z.union([z.string(), z.date()]).optional(),
-  facts: z
-    .array(z.object({ label: z.string(), value: z.string() }))
-    .optional(),
+  facts: z.array(z.object({ label: z.string(), value: z.string() })).optional(),
   stats: z
     .array(
       z.object({

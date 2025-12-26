@@ -8,8 +8,6 @@ canonical: "/en/the-pig-is-sus"
 alternateLocales: ["fi"]
 template: "hero"
 theme: "classic"
-cover: "/images/the-pig-is-sus-cover.png"
-heroImage: "/images/the-pig-is-sus-cover.png"
 summary: |
   A prototype tactical RPG combat system that shifts focus from character stats 
   to player skill, timing, and strategic planning through its unique Action Dice economy.

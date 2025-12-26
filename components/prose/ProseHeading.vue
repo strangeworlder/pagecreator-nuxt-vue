@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps<{ level?: 1 | 2 | 3 | 4 | 5 | 6 }>()
+const props = defineProps<{ level?: 1 | 2 | 3 | 4 | 5 | 6 }>();
 </script>
 
 <template>

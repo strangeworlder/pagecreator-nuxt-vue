@@ -1,45 +1,50 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted } from "vue";
 
-interface LinkItem { href: string; text: string; rel?: string; target?: string }
-const props = defineProps<{ links?: LinkItem[] }>()
-const links = Array.isArray(props.links) ? props.links : []
+interface LinkItem {
+  href: string;
+  text: string;
+  rel?: string;
+  target?: string;
+}
+const props = defineProps<{ links?: LinkItem[] }>();
+const links = Array.isArray(props.links) ? props.links : [];
 
-const navRef = ref<HTMLElement>()
-const floatingNavRef = ref<HTMLElement>()
-const isFloating = ref(false)
+const navRef = ref<HTMLElement>();
+const floatingNavRef = ref<HTMLElement>();
+const isFloating = ref(false);
 
 const handleScroll = () => {
-  if (!navRef.value) return
-  const navRect = navRef.value.getBoundingClientRect()
-  const scrolledPastNav = navRect.bottom < 0
+  if (!navRef.value) return;
+  const navRect = navRef.value.getBoundingClientRect();
+  const scrolledPastNav = navRect.bottom < 0;
   if (scrolledPastNav && !isFloating.value) {
-    isFloating.value = true
+    isFloating.value = true;
   } else if (!scrolledPastNav && isFloating.value) {
-    isFloating.value = false
+    isFloating.value = false;
   }
-}
+};
 
 const scrollToHref = (href: string) => {
-  if (!href || !href.startsWith('#')) return
-  const raw = href.slice(1)
+  if (!href || !href.startsWith("#")) return;
+  const raw = href.slice(1);
   // Our headings render with id="header-<id>" and a named anchor for offset
-  const targetId = `header-${raw}`
-  const element = document.getElementById(targetId)
+  const targetId = `header-${raw}`;
+  const element = document.getElementById(targetId);
   if (element) {
-    const floatingNavHeight = floatingNavRef.value?.offsetHeight || 0
-    const y = element.getBoundingClientRect().top + window.pageYOffset - floatingNavHeight - 20
-    window.scrollTo({ top: y, behavior: 'smooth' })
+    const floatingNavHeight = floatingNavRef.value?.offsetHeight || 0;
+    const y = element.getBoundingClientRect().top + window.pageYOffset - floatingNavHeight - 20;
+    window.scrollTo({ top: y, behavior: "smooth" });
   }
-}
+};
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll, { passive: true })
-})
+  window.addEventListener("scroll", handleScroll, { passive: true });
+});
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <template>

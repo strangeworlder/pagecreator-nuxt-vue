@@ -1,8 +1,13 @@
 <script setup lang="ts">
 // @ts-nocheck
-interface LinkItem { href: string; text: string; rel?: string; target?: string }
-const props = defineProps<{ links?: LinkItem[] }>()
-const links = Array.isArray(props.links) ? props.links : []
+interface LinkItem {
+  href: string;
+  text: string;
+  rel?: string;
+  target?: string;
+}
+const props = defineProps<{ links?: LinkItem[] }>();
+const links = Array.isArray(props.links) ? props.links : [];
 </script>
 
 <template>

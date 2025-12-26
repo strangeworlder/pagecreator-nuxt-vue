@@ -1,24 +1,24 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed } from "vue";
 
 const props = defineProps<{
-  type?: 'note' | 'tip' | 'important' | 'warning' | 'caution'
-  title?: string
-}>()
+  type?: "note" | "tip" | "important" | "warning" | "caution";
+  title?: string;
+}>();
 
 const titles: Record<string, string> = {
-  note: 'Note',
-  tip: 'Tip',
-  important: 'Important',
-  warning: 'Warning',
-  caution: 'Caution'
-}
+  note: "Note",
+  tip: "Tip",
+  important: "Important",
+  warning: "Warning",
+  caution: "Caution",
+};
 
 const computedTitle = computed(() => {
-  if (props.title) return props.title
-  if (props.type && titles[props.type]) return titles[props.type]
-  return ''
-})
+  if (props.title) return props.title;
+  if (props.type && titles[props.type]) return titles[props.type];
+  return "";
+});
 </script>
 
 <template>

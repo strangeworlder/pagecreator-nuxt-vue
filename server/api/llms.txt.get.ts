@@ -8,9 +8,7 @@ export default defineEventHandler(async (event) => {
   const homePath = `/${defaultLocale}`;
   const home = await serverQueryContent(event).where({ _path: homePath }).findOne();
 
-  const allDocs = await serverQueryContent(event)
-    .where({ _partial: false })
-    .find();
+  const allDocs = await serverQueryContent(event).where({ _partial: false }).find();
 
   const defaultLocaleDocs = allDocs
     .filter((d: any) => d._path && d._path.startsWith(`/${defaultLocale}`))
@@ -31,9 +29,7 @@ export default defineEventHandler(async (event) => {
   lines.push("");
 
   // Blockquote summary
-  lines.push(
-    `> ${String(home?.description || "Roleplaying games by Petri Leinonen.")}`,
-  );
+  lines.push(`> ${String(home?.description || "Roleplaying games by Petri Leinonen.")}`);
   lines.push("");
 
   // Optional details paragraph
@@ -48,23 +44,23 @@ export default defineEventHandler(async (event) => {
     lines.push("");
     for (const d of defaultLocaleDocs) {
       lines.push(makeItemLine(d));
-      
+
       const doc = d as any;
-      
+
       if (doc.description) {
-         lines.push(`  - Description: ${doc.description}`);
+        lines.push(`  - Description: ${doc.description}`);
       }
 
       if (doc.facts && Array.isArray(doc.facts)) {
-         const factsStr = doc.facts.map((f: any) => `${f.label}: ${f.value}`).join(", ");
-         lines.push(`  - Facts: ${factsStr}`);
+        const factsStr = doc.facts.map((f: any) => `${f.label}: ${f.value}`).join(", ");
+        lines.push(`  - Facts: ${factsStr}`);
       }
 
       if (doc.stats && Array.isArray(doc.stats)) {
-         const statsStr = doc.stats.map((s: any) => `${s.metric}: ${s.value}`).join(", ");
-         lines.push(`  - Stats: ${statsStr}`);
+        const statsStr = doc.stats.map((s: any) => `${s.metric}: ${s.value}`).join(", ");
+        lines.push(`  - Stats: ${statsStr}`);
       }
-      
+
       lines.push("");
     }
     lines.push("");

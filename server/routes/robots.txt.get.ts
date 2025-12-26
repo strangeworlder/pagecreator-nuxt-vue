@@ -5,5 +5,3 @@ export default defineEventHandler((event) => {
   setHeader(event, "Cache-Control", "public, max-age=3600, stale-while-revalidate=86400");
   return lines.join("\n");
 });
-
-

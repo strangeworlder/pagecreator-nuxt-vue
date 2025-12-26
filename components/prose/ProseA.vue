@@ -4,9 +4,9 @@ withDefaults(defineProps<{ href?: string; rel?: string; target?: string }>(), {
   href: undefined,
   rel: undefined,
   target: undefined,
-})
+});
 
-const EXTERNAL_RE = /^(https?:)?\/\//
+const EXTERNAL_RE = /^(https?:)?\/\//;
 </script>
 
 <template>

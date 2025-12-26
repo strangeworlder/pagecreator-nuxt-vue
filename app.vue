@@ -8,7 +8,9 @@ if (process.client) {
   const setTheme = () => {
     const next = mql.matches ? "dark" : "light";
     if (html.dataset.theme !== next) html.dataset.theme = next;
-    try { (html as HTMLElement).style.colorScheme = next; } catch {}
+    try {
+      (html as HTMLElement).style.colorScheme = next;
+    } catch {}
   };
   setTheme();
   try {

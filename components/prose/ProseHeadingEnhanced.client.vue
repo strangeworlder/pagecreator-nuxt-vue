@@ -1,69 +1,72 @@
 <script setup lang="ts">
-import { ref, onUnmounted, computed } from 'vue'
+import { ref, onUnmounted, computed } from "vue";
 
-const props = defineProps<{ level?: 1 | 2 | 3 | 4 | 5 | 6 }>()
+const props = defineProps<{ level?: 1 | 2 | 3 | 4 | 5 | 6 }>();
 
-const copying = ref(false)
-const headingRef = ref<any>()
-const copiedTimeout = ref<NodeJS.Timeout | null>(null)
+const copying = ref(false);
+const headingRef = ref<any>();
+const copiedTimeout = ref<NodeJS.Timeout | null>(null);
 
-const tag = computed(() => `h${props.level || 2}`)
+const tag = computed(() => `h${props.level || 2}`);
 
 const getId = (): string | undefined => {
-  const raw = headingRef.value as any
-  const el: HTMLElement | null = raw instanceof HTMLElement ? raw : (raw?.$el as HTMLElement | null)
-  const id = el?.getAttribute('id') || (el?.id ?? undefined)
-  return id || undefined
-}
+  const raw = headingRef.value as any;
+  const el: HTMLElement | null =
+    raw instanceof HTMLElement ? raw : (raw?.$el as HTMLElement | null);
+  const id = el?.getAttribute("id") || (el?.id ?? undefined);
+  return id || undefined;
+};
 
 const buildUrl = (id?: string): string | undefined => {
-  if (!id) return undefined
-  if (typeof window === 'undefined') return undefined
-  const url = new URL(window.location.href)
+  if (!id) return undefined;
+  if (typeof window === "undefined") return undefined;
+  const url = new URL(window.location.href);
   // Remove 'header-' prefix to link to the <a name> instead of the heading
-  url.hash = id.startsWith('header-') ? id.slice(7) : id
-  return url.toString()
-}
+  url.hash = id.startsWith("header-") ? id.slice(7) : id;
+  return url.toString();
+};
 
 const copyLink = async () => {
-  const id = getId()
-  const fullUrl = buildUrl(id)
-  if (!fullUrl) return
+  const id = getId();
+  const fullUrl = buildUrl(id);
+  if (!fullUrl) return;
   try {
-    await navigator.clipboard.writeText(fullUrl)
-    copying.value = true
-    if (copiedTimeout.value) clearTimeout(copiedTimeout.value)
+    await navigator.clipboard.writeText(fullUrl);
+    copying.value = true;
+    if (copiedTimeout.value) clearTimeout(copiedTimeout.value);
     copiedTimeout.value = setTimeout(() => {
-      copying.value = false
-    }, 1200)
+      copying.value = false;
+    }, 1200);
   } catch (e) {
-    const textarea = document.createElement('textarea')
-    textarea.value = fullUrl
-    textarea.setAttribute('readonly', '')
-    textarea.style.position = 'absolute'
-    textarea.style.left = '-9999px'
-    document.body.appendChild(textarea)
-    textarea.select()
-    try { document.execCommand('copy') } catch {}
-    document.body.removeChild(textarea)
-    copying.value = true
-    if (copiedTimeout.value) clearTimeout(copiedTimeout.value)
+    const textarea = document.createElement("textarea");
+    textarea.value = fullUrl;
+    textarea.setAttribute("readonly", "");
+    textarea.style.position = "absolute";
+    textarea.style.left = "-9999px";
+    document.body.appendChild(textarea);
+    textarea.select();
+    try {
+      document.execCommand("copy");
+    } catch {}
+    document.body.removeChild(textarea);
+    copying.value = true;
+    if (copiedTimeout.value) clearTimeout(copiedTimeout.value);
     copiedTimeout.value = setTimeout(() => {
-      copying.value = false
-    }, 1200)
+      copying.value = false;
+    }, 1200);
   }
-}
+};
 
 const handleKeydown = (e: KeyboardEvent) => {
-  if ((e.key === 'Enter' || e.key === ' ') && !e.defaultPrevented) {
-    e.preventDefault()
-    copyLink()
+  if ((e.key === "Enter" || e.key === " ") && !e.defaultPrevented) {
+    e.preventDefault();
+    copyLink();
   }
-}
+};
 
 onUnmounted(() => {
-  if (copiedTimeout.value) clearTimeout(copiedTimeout.value)
-})
+  if (copiedTimeout.value) clearTimeout(copiedTimeout.value);
+});
 </script>
 
 <template>

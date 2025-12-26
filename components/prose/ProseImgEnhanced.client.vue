@@ -64,15 +64,14 @@ watch(
       };
     }
   },
-  { immediate: true }
+  { immediate: true },
 );
 
 const effectiveDimensions = computed(() => dimensions.value ?? clientDimensions.value);
 
 const imgStyle = computed(() => {
   const dim = effectiveDimensions.value;
-  const style: Record<string, string> = {
-  };
+  const style: Record<string, string> = {};
   if (dim) style.aspectRatio = `${dim.width} / ${dim.height}`;
   return style;
 });
@@ -81,7 +80,11 @@ const isLoaded = ref(false);
 const handleLoad = () => {
   isLoaded.value = true;
   if (isDebug()) {
-    console.log("[ProseImgEnhanced] img load", { src: props.src, isGif: isGif.value, dims: effectiveDimensions.value });
+    console.log("[ProseImgEnhanced] img load", {
+      src: props.src,
+      isGif: isGif.value,
+      dims: effectiveDimensions.value,
+    });
   }
 };
 
@@ -102,7 +105,12 @@ const fallbackSrc = computed(() => {
 // Debug logs (enable with ?debugHydration in URL, dev only)
 const isDebug = () => {
   try {
-    return process.dev && typeof window !== "undefined" && typeof URLSearchParams !== "undefined" && new URLSearchParams(window.location.search).has("debugHydration");
+    return (
+      process.dev &&
+      typeof window !== "undefined" &&
+      typeof URLSearchParams !== "undefined" &&
+      new URLSearchParams(window.location.search).has("debugHydration")
+    );
   } catch {
     return false;
   }
@@ -132,7 +140,6 @@ onUpdated(() => {
     });
   }
 });
-
 </script>
 
 <style scoped>

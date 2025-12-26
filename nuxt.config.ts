@@ -43,7 +43,9 @@ for (const file of contentFiles) {
     }
   } catch {}
 }
-const contentRoutes = Array.from(new Set(["/", `/${DEFAULT_LOCALE}`, ...contentFiles.map(fileToRoute), ...aliasRoutes]));
+const contentRoutes = Array.from(
+  new Set(["/", `/${DEFAULT_LOCALE}`, ...contentFiles.map(fileToRoute), ...aliasRoutes]),
+);
 export default {
   components: [{ path: "~/components", pathPrefix: false }],
   modules: ["@nuxt/content"],
@@ -74,7 +76,10 @@ export default {
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         { name: "theme-color", content: "#405e95" },
         { name: "referrer", content: "origin" },
-        { name: "google-site-verification", content: "gg3Wz2OOtdYQCHFwae6F6PToGHUWQbUWaieUS1SwiI0" },
+        {
+          name: "google-site-verification",
+          content: "gg3Wz2OOtdYQCHFwae6F6PToGHUWQbUWaieUS1SwiI0",
+        },
         { name: "msapplication-TileColor", content: "#304e85" },
       ],
       link: [
@@ -126,7 +131,8 @@ export default {
       buildAt: env.BUILD_AT || new Date().toISOString(),
       redirectContentWS: env.CONTENT_WS_REDIRECT ?? "1",
       defaultLocale: env.NUXT_PUBLIC_DEFAULT_LOCALE || "en",
-      disableFreshness: env.NUXT_PUBLIC_DISABLE_FRESHNESS || (env.NUXT_PUBLIC_STATIC_HOSTING ? "1" : "0"),
+      disableFreshness:
+        env.NUXT_PUBLIC_DISABLE_FRESHNESS || (env.NUXT_PUBLIC_STATIC_HOSTING ? "1" : "0"),
       staticHosting: env.NUXT_PUBLIC_STATIC_HOSTING || "",
     },
   },

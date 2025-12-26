@@ -14,5 +14,3 @@ export default defineEventHandler(async (event) => {
   setHeader(event, "Cache-Control", "public, max-age=600, stale-while-revalidate=86400");
   return xml;
 });
-
-

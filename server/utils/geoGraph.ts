@@ -37,7 +37,7 @@ export function generateGeoGraph(doc: FrontMatter, url: string): JsonLdNode[] {
 
   nodes.push(productNode);
 
-  // 2. Stats (as Dataset or Observation - represented here as specific PropertyValues on the product for simplicity, 
+  // 2. Stats (as Dataset or Observation - represented here as specific PropertyValues on the product for simplicity,
   // or distinct entities if they were more complex. sticking to simple addition to product for now)
   // Actually, let's treat Stats as a separate "Dataset" if they are significant, or just more properties.
   // For TTRPG stats (page count, word count), PropertyValue is best.
@@ -49,12 +49,9 @@ export function generateGeoGraph(doc: FrontMatter, url: string): JsonLdNode[] {
       dateObserved: stat.date,
       description: stat.source ? `Source: ${stat.source}` : undefined,
     }));
-    
+
     // Merge into additionalProperty
-    productNode.additionalProperty = [
-      ...(productNode.additionalProperty || []),
-      ...statProperties,
-    ];
+    productNode.additionalProperty = [...(productNode.additionalProperty || []), ...statProperties];
   }
 
   // 3. Quotes (Reviews/ endorsements)
@@ -79,4 +76,3 @@ export function generateGeoGraph(doc: FrontMatter, url: string): JsonLdNode[] {
 
   return nodes;
 }
-

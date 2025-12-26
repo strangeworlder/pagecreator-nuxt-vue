@@ -31,9 +31,7 @@ export default defineEventHandler(async (event) => {
   lines.push("");
 
   // Blockquote summary
-  lines.push(
-    `> ${String(home?.description || "Roleplaying games by Petri Leinonen.")}`,
-  );
+  lines.push(`> ${String(home?.description || "Roleplaying games by Petri Leinonen.")}`);
   lines.push("");
 
   // Optional details paragraph
@@ -67,5 +65,3 @@ export default defineEventHandler(async (event) => {
   setHeader(event, "Cache-Control", "public, max-age=3600, stale-while-revalidate=86400");
   return lines.join("\n");
 });
-
-

@@ -33,12 +33,7 @@ function localeFromPathLike(value?: string | null | undefined): string | undefin
 }
 
 function resolveDocumentLocale(doc: Record<string, any>, fallback: string): string {
-  const explicit =
-    doc.lang ||
-    doc.language ||
-    doc.locale ||
-    doc._locale ||
-    doc._lang;
+  const explicit = doc.lang || doc.language || doc.locale || doc._locale || doc._lang;
   if (isLikelyLocale(explicit)) {
     return String(explicit).trim();
   }
@@ -115,7 +110,11 @@ export function useCustomContentHead(docRef: Ref<Record<string, any> | null | un
     const finalImageType = imageType || fallbackImageType;
     const noindex: boolean | undefined = doc.noindex === true;
     // Allow explicit override via front matter: contentType: "article" | "website"
-    const type = doc.contentType ? String(doc.contentType) : (doc.datePublished ? "article" : "website");
+    const type = doc.contentType
+      ? String(doc.contentType)
+      : doc.datePublished
+        ? "article"
+        : "website";
 
     const meta: any[] = [];
     if (description) meta.push({ name: "description", content: description });
@@ -199,20 +198,20 @@ export function useCustomContentHead(docRef: Ref<Record<string, any> | null | un
     };
 
     // Use server-side logic if available, or lightweight client construction
-    // Since geoGraph is a server util, we can't import it directly in client composable easily 
-    // without nuxt-layer complexity or making it shared. 
-    // For now, we will construct the rich data structure here mirroring geoGraph logic 
+    // Since geoGraph is a server util, we can't import it directly in client composable easily
+    // without nuxt-layer complexity or making it shared.
+    // For now, we will construct the rich data structure here mirroring geoGraph logic
     // to ensure client-side hydration matches.
-    
+
     // 1. Facts & Stats -> additionalProperty
     const additionalProperty: any[] = [];
-    
+
     if (doc.facts && Array.isArray(doc.facts)) {
       doc.facts.forEach((f: any) => {
         additionalProperty.push({
           "@type": "PropertyValue",
           name: f.label,
-          value: f.value
+          value: f.value,
         });
       });
     }
@@ -224,7 +223,7 @@ export function useCustomContentHead(docRef: Ref<Record<string, any> | null | un
           name: s.metric,
           value: s.value,
           dateObserved: s.date,
-          description: s.source ? `Source: ${s.source}` : undefined
+          description: s.source ? `Source: ${s.source}` : undefined,
         });
       });
     }
@@ -240,14 +239,14 @@ export function useCustomContentHead(docRef: Ref<Record<string, any> | null | un
         reviewRating: {
           "@type": "Rating",
           ratingValue: "5",
-          bestRating: "5"
+          bestRating: "5",
         },
         author: {
           "@type": "Person",
-          name: q.source
+          name: q.source,
         },
         reviewBody: q.text,
-        datePublished: q.date
+        datePublished: q.date,
       }));
     }
 
@@ -277,5 +276,3 @@ export function useCustomContentHead(docRef: Ref<Record<string, any> | null | un
     });
   });
 }
-
-

@@ -9,9 +9,7 @@ export default defineEventHandler(async (event) => {
 
   const name = String(home?.title || "Gogam");
   const shortName = "Gogam";
-  const description = String(
-    home?.description || "Roleplaying games by Petri Leinonen."
-  );
+  const description = String(home?.description || "Roleplaying games by Petri Leinonen.");
 
   const themeColor = "#405e95";
   const backgroundColor = "#304e85";
@@ -46,5 +44,3 @@ export default defineEventHandler(async (event) => {
   setHeader(event, "Content-Type", "application/manifest+json; charset=utf-8");
   return manifest;
 });
-
-

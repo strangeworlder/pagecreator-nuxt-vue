@@ -4,6 +4,6 @@ export default defineNuxtPlugin((nuxtApp) => {
   const now = new Date().toISOString();
   useState<string>("ssrRenderedAt", () => now);
   if (process.dev) {
-    console.log('[ssr] rendered at', now);
+    console.log("[ssr] rendered at", now);
   }
 });

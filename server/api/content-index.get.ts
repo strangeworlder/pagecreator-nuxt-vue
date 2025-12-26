@@ -14,7 +14,7 @@ async function handler(event: any) {
   let q = serverQueryContent(event)
     .where({ _partial: false })
     .only(["_path", "title", "description", "datePublished", "dateModified", "tags", "_file"]);
-  
+
   // If a specific path is requested, filter to just that page
   if (typeof path === "string" && path) {
     q = q.where({ _path: path });
@@ -56,6 +56,10 @@ async function handler(event: any) {
   return { items };
 }
 
-export default (process.env.NODE_ENV !== "production")
+export default process.env.NODE_ENV !== "production"
   ? defineEventHandler(handler)
-  : cachedEventHandler(handler, { name: "content-index", maxAge: API_MAX_AGE, staleMaxAge: API_STALE });
+  : cachedEventHandler(handler, {
+      name: "content-index",
+      maxAge: API_MAX_AGE,
+      staleMaxAge: API_STALE,
+    });

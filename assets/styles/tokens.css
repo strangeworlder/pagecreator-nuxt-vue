@@ -40,8 +40,7 @@ html[data-page-theme="classic"] {
   --color-warning-bg: #fffbeb;
   --color-caution: #ef4444;
   --color-caution-bg: #fef2f2;
-  --font-sans:
-    "Times New Roman", Times, serif;
+  --font-sans: "Times New Roman", Times, serif;
   /* classic typography */
   --font-size: 16px;
   --h1-font-size: 48px;

@@ -10,18 +10,10 @@ async function main() {
   const outPath = resolve(assetsDir, "imageMeta.json");
 
   // Find images in public directory; map keys should be "/path/in/public"
-  const patterns = [
-    "**/*.jpg",
-    "**/*.jpeg",
-    "**/*.png",
-    "**/*.webp",
-    "**/*.gif",
-  ];
+  const patterns = ["**/*.jpg", "**/*.jpeg", "**/*.png", "**/*.webp", "**/*.gif"];
 
   const files = (
-    await Promise.all(
-      patterns.map((p) => glob(p, { cwd: publicDir, nodir: true, absolute: true }))
-    )
+    await Promise.all(patterns.map((p) => glob(p, { cwd: publicDir, nodir: true, absolute: true })))
   ).flat();
 
   const meta: Record<string, { width: number; height: number }> = {};
@@ -50,5 +42,3 @@ main().catch((err) => {
   console.error(err);
   process.exitCode = 1;
 });
-
-

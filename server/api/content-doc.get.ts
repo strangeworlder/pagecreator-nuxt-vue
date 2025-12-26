@@ -18,18 +18,11 @@ export default defineEventHandler(async (event) => {
   };
 
   const base = normalize(path);
-  const candidates = Array.from(
-    new Set([
-      base,
-      `${base}/`,
-    ]),
-  );
+  const candidates = Array.from(new Set([base, `${base}/`]));
 
   let doc = null as any;
   for (const p of candidates) {
-    const found = await serverQueryContent(event)
-      .where({ _path: p, _partial: false })
-      .findOne();
+    const found = await serverQueryContent(event).where({ _path: p, _partial: false }).findOne();
     if (found) {
       doc = found;
       break;

@@ -9,7 +9,11 @@ const PUBLIC_DIR = resolve(process.cwd(), "public");
 
 async function resolveCacheDir(): Promise<string> {
   // Prefer storing under the public directory so files persist and can be served statically if needed
-  const candidates = [join(PUBLIC_DIR, "gen_images"), join(process.cwd(), "gen_images"), "/tmp/gen_images"];
+  const candidates = [
+    join(PUBLIC_DIR, "gen_images"),
+    join(process.cwd(), "gen_images"),
+    "/tmp/gen_images",
+  ];
   for (const dir of candidates) {
     try {
       await fs.mkdir(dir, { recursive: true });
@@ -32,9 +36,7 @@ const FORMAT_CONTENT_TYPES: Record<string, string> = {
 };
 
 function sanitizeSegments(pathLike: string): string[] {
-  return pathLike
-    .split("/")
-    .filter((segment) => segment && segment !== "." && segment !== "..");
+  return pathLike.split("/").filter((segment) => segment && segment !== "." && segment !== "..");
 }
 
 function applyOutputFormat(instance: sharp.Sharp, format: (typeof OUTPUT_FORMATS)[number]) {
@@ -89,7 +91,9 @@ async function fetchFromSite(rawSrc: string, event: any, runtime: any): Promise<
   });
 }
 
-async function computeDominantBackgroundColor(input: Buffer): Promise<{ r: number; g: number; b: number }> {
+async function computeDominantBackgroundColor(
+  input: Buffer,
+): Promise<{ r: number; g: number; b: number }> {
   try {
     const stats = await sharp(input).stats();
     const { r, g, b } = stats.dominant;

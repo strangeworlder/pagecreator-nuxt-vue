@@ -71,7 +71,12 @@ const imgStyle = computed(() => (aspectRatio.value ? { aspectRatio: aspectRatio.
 // Debug logs (enable with ?debugHydration in URL, dev only)
 const isDebug = () => {
   try {
-    return process.dev && typeof window !== "undefined" && typeof URLSearchParams !== "undefined" && new URLSearchParams(window.location.search).has("debugHydration");
+    return (
+      process.dev &&
+      typeof window !== "undefined" &&
+      typeof URLSearchParams !== "undefined" &&
+      new URLSearchParams(window.location.search).has("debugHydration")
+    );
   } catch {
     return false;
   }

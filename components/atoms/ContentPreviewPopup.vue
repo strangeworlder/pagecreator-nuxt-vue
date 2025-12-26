@@ -1,63 +1,63 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
-import type { ContentPreview } from '~/composables/useContentLinkPreview'
+import { ref, computed } from "vue";
+import type { ContentPreview } from "~/composables/useContentLinkPreview";
 
 interface Props {
-  preview: ContentPreview | null
-  visible: boolean
-  position: { x: number; y: number }
+  preview: ContentPreview | null;
+  visible: boolean;
+  position: { x: number; y: number };
 }
 
-const props = defineProps<Props>()
+const props = defineProps<Props>();
 
 const emit = defineEmits<{
-  mouseenter: []
-  mouseleave: []
-  close: []
-}>()
+  mouseenter: [];
+  mouseleave: [];
+  close: [];
+}>();
 
-const popupRef = ref<HTMLElement>()
+const popupRef = ref<HTMLElement>();
 
 const getThumbnailUrl = (imageUrl: string | undefined): string => {
-  if (!imageUrl) return ''
+  if (!imageUrl) return "";
   // Use the image API to get 150px thumbnail
-  return `/api/image?src=${encodeURIComponent(imageUrl)}&size=150`
-}
+  return `/api/image?src=${encodeURIComponent(imageUrl)}&size=150`;
+};
 
 const adjustedPosition = computed(() => {
   if (!props.visible || !popupRef.value) {
-    return props.position
+    return props.position;
   }
 
-  const rect = popupRef.value.getBoundingClientRect()
-  const viewportWidth = window.innerWidth
-  const viewportHeight = window.innerHeight
-  
-  let x = props.position.x
-  let y = props.position.y
+  const rect = popupRef.value.getBoundingClientRect();
+  const viewportWidth = window.innerWidth;
+  const viewportHeight = window.innerHeight;
+
+  let x = props.position.x;
+  let y = props.position.y;
 
   // Adjust horizontal position if popup would go off screen
   if (x + rect.width > viewportWidth) {
-    x = viewportWidth - rect.width - 10
+    x = viewportWidth - rect.width - 10;
   }
   if (x < 10) {
-    x = 10
+    x = 10;
   }
 
   // Adjust vertical position if popup would go off screen
   if (y + rect.height > viewportHeight) {
-    y = props.position.y - rect.height - 10
+    y = props.position.y - rect.height - 10;
   }
   if (y < 10) {
-    y = 10
+    y = 10;
   }
 
-  return { x, y }
-})
+  return { x, y };
+});
 
 const handleMouseLeave = () => {
-  emit('close')
-}
+  emit("close");
+};
 </script>
 
 <template>

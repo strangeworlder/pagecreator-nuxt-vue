@@ -33,10 +33,10 @@ const defaultLocale = runtime.public.defaultLocale || "en";
 
 const resolveContentPath = (path: string) => {
   // Normalize path: ensure leading slash, collapse duplicates, drop trailing slash, map '/:locale/index' -> '/:locale'
-  const withSlash = path.startsWith('/') ? path : `/${path}`
-  let normalized = withSlash.replace(/\/{2,}/g, '/');
-  if (normalized !== '/' && normalized.endsWith('/')) normalized = normalized.slice(0, -1);
-  normalized = normalized.replace(/^\/(\w{2})\/index$/i, '/$1');
+  const withSlash = path.startsWith("/") ? path : `/${path}`;
+  let normalized = withSlash.replace(/\/{2,}/g, "/");
+  if (normalized !== "/" && normalized.endsWith("/")) normalized = normalized.slice(0, -1);
+  normalized = normalized.replace(/^\/(\w{2})\/index$/i, "/$1");
   return normalized === "/" ? `/${defaultLocale}` : normalized;
 };
 
@@ -45,16 +45,18 @@ const ssrDocKey = `ssr-initial-doc:${resolveContentPath(route.path)}`;
 const ssrInitialDoc = useState<Record<string, unknown> | null>(ssrDocKey, () => null);
 let initial = ssrInitialDoc.value;
 if (!initial) {
-  const tryPath = resolveContentPath(route.path)
+  const tryPath = resolveContentPath(route.path);
   // 1) Try exact _path (gracefully handle 404 from content API)
-  let fetched: any = null
+  let fetched: any = null;
   try {
     fetched = await queryContent(tryPath).where({ _path: tryPath }).findOne();
   } catch {}
   // 2) Try alias match (if supported by content index)
   if (!fetched) {
     try {
-      fetched = await queryContent().where({ aliases: { $contains: tryPath } }).findOne();
+      fetched = await queryContent()
+        .where({ aliases: { $contains: tryPath } })
+        .findOne();
     } catch {}
   }
   // 3) Fallback: prepend '/fi' for root-level paths when not found
@@ -64,9 +66,17 @@ if (!initial) {
   }
   ssrInitialDoc.value = fetched;
   initial = fetched;
-  if (process.dev) console.log('[initial-doc] fetched initial doc', { path: resolveContentPath(route.path), _path: (fetched as any)?._path });
+  if (process.dev)
+    console.log("[initial-doc] fetched initial doc", {
+      path: resolveContentPath(route.path),
+      _path: (fetched as any)?._path,
+    });
 } else {
-  if (process.dev) console.log('[initial-doc] using SSR-cached initial doc', { path: resolveContentPath(route.path), _path: (initial as any)?._path });
+  if (process.dev)
+    console.log("[initial-doc] using SSR-cached initial doc", {
+      path: resolveContentPath(route.path),
+      _path: (initial as any)?._path,
+    });
 }
 
 const getLocaleFromPath = (path: string) => {
@@ -79,11 +89,12 @@ const getLocaleFromPath = (path: string) => {
 
 // Prefer locale from the fetched document when the route lacks locale
 const initialLocale = (() => {
-  const docPath = typeof (initial as any)?._path === 'string' ? (initial as any)?._path as string : ''
-  const fromDoc = (docPath.split('/')[1] || '').trim()
-  if (/^[a-z]{2}$/i.test(fromDoc)) return fromDoc
-  return getLocaleFromPath(route.path)
-})()
+  const docPath =
+    typeof (initial as any)?._path === "string" ? ((initial as any)?._path as string) : "";
+  const fromDoc = (docPath.split("/")[1] || "").trim();
+  if (/^[a-z]{2}$/i.test(fromDoc)) return fromDoc;
+  return getLocaleFromPath(route.path);
+})();
 const ssrIdxKey = `ssr-locale-index:${initialLocale}`;
 const ssrLocaleIndex = useState<Record<string, unknown> | null>(ssrIdxKey, () => null);
 let initialLocaleIndex = ssrLocaleIndex.value;
@@ -93,9 +104,17 @@ if (!initialLocaleIndex) {
     .findOne();
   ssrLocaleIndex.value = fetchedIdx;
   initialLocaleIndex = fetchedIdx;
-  if (process.dev) console.log('[initial-index] fetched initial locale index', { locale: initialLocale, _path: (fetchedIdx as any)?._path });
+  if (process.dev)
+    console.log("[initial-index] fetched initial locale index", {
+      locale: initialLocale,
+      _path: (fetchedIdx as any)?._path,
+    });
 } else {
-  if (process.dev) console.log('[initial-index] using SSR-cached locale index', { locale: initialLocale, _path: (initialLocaleIndex as any)?._path });
+  if (process.dev)
+    console.log("[initial-index] using SSR-cached locale index", {
+      locale: initialLocale,
+      _path: (initialLocaleIndex as any)?._path,
+    });
 }
 
 const docState = useState<Record<string, unknown> | null>("content-doc", () => null);
@@ -103,12 +122,20 @@ const version = useState<number>("content-doc-version", () => 0);
 // Ensure page shows the correct document immediately on navigation
 const expectedPath = resolveContentPath(route.path);
 const currentDocPath = (docState.value as any)?._path;
-if (initial && (currentDocPath !== expectedPath)) {
-  if (process.dev) console.log('[initial-doc-sync] setting docState to initial for path', { expectedPath, currentDocPath, got: (initial as any)?._path });
+if (initial && currentDocPath !== expectedPath) {
+  if (process.dev)
+    console.log("[initial-doc-sync] setting docState to initial for path", {
+      expectedPath,
+      currentDocPath,
+      got: (initial as any)?._path,
+    });
   docState.value = initial;
   version.value = (version.value || 0) + 1;
 }
-const localeIndexDoc = useState<Record<string, unknown> | null>("locale-index-doc", () => initialLocaleIndex ?? null);
+const localeIndexDoc = useState<Record<string, unknown> | null>(
+  "locale-index-doc",
+  () => initialLocaleIndex ?? null,
+);
 const data = computed(() => {
   void version.value; // depend on version updates
   return docState.value ?? initial;
@@ -140,13 +167,15 @@ watch(
   async () => {
     const path = resolveContentPath(route.path);
     // Re-run the same lookup strategy on navigation
-    let next: any = null
+    let next: any = null;
     try {
       next = await queryContent(path).where({ _path: path }).findOne();
     } catch {}
     if (!next) {
       try {
-        next = await queryContent().where({ aliases: { $contains: path } }).findOne();
+        next = await queryContent()
+          .where({ aliases: { $contains: path } })
+          .findOne();
       } catch {}
     }
     if (!next && !/^\/\w{2}\b/.test(path)) {
@@ -159,14 +188,15 @@ watch(
       .findOne();
     const currentPath = (data.value as any)?._path;
     if (next && next._path !== currentPath) {
-      if (process.dev) console.log('[route-doc-swap] swapping doc', { from: currentPath, to: next._path, path });
+      if (process.dev)
+        console.log("[route-doc-swap] swapping doc", { from: currentPath, to: next._path, path });
       docState.value = next;
       version.value = (version.value || 0) + 1;
     }
     if (nextIndex) {
       localeIndexDoc.value = nextIndex;
     }
-  }
+  },
 );
 
 const enhancementsEnabled = useState<boolean>("content-enhance-ready", () => false);
@@ -191,18 +221,20 @@ if (process.client) {
     import("~/components/molecules/ProductNavigationEnhanced.client.vue"),
     import("~/components/prose/ProseImgEnhanced.client.vue"),
     import("~/components/prose/ProsePEnhanced.client.vue"),
-  ]).then(([heading, anchor, nav, pnav, imgEnh, pEnh]) => {
-    enhancedHeadingComp.value = heading.default;
-    enhancedAComp.value = anchor.default;
-    enhancedNavigationComp.value = nav.default;
-    enhancedProductNavigationComp.value = pnav.default;
-    enhancedImgComp.value = imgEnh.default;
-    enhancedPComp.value = pEnh.default;
-    enhancedComponentsLoaded.value = true;
-    if (process.dev) console.log('[enhancements] Enhanced components loaded and ready');
-  }).catch(err => {
-    if (process.dev) console.warn('[enhancements] Failed to load enhanced components', err);
-  });
+  ])
+    .then(([heading, anchor, nav, pnav, imgEnh, pEnh]) => {
+      enhancedHeadingComp.value = heading.default;
+      enhancedAComp.value = anchor.default;
+      enhancedNavigationComp.value = nav.default;
+      enhancedProductNavigationComp.value = pnav.default;
+      enhancedImgComp.value = imgEnh.default;
+      enhancedPComp.value = pEnh.default;
+      enhancedComponentsLoaded.value = true;
+      if (process.dev) console.log("[enhancements] Enhanced components loaded and ready");
+    })
+    .catch((err) => {
+      if (process.dev) console.warn("[enhancements] Failed to load enhanced components", err);
+    });
 }
 
 const makeHeading = (level: 1 | 2 | 3 | 4 | 5 | 6) =>
@@ -212,81 +244,91 @@ const makeHeading = (level: 1 | 2 | 3 | 4 | 5 | 6) =>
     props: { id: String },
     setup(props, { slots, attrs }) {
       return () => {
-        const Comp: any = (enhancementsEnabled.value && enhancedHeadingComp.value) ? enhancedHeadingComp.value : ProseHeading
+        const Comp: any =
+          enhancementsEnabled.value && enhancedHeadingComp.value
+            ? enhancedHeadingComp.value
+            : ProseHeading;
         // Pass slots as render function to preserve slot context
-        return h(Comp, { ...attrs, ...props, level }, slots)
-      }
+        return h(Comp, { ...attrs, ...props, level }, slots);
+      };
     },
-  })
+  });
 
 // Generic wrapper that preserves slot render context
-const wrap = (Target: any) => defineComponent({
-  name: `WrappedComponent`,
-  inheritAttrs: false,
-  setup(_, { slots, attrs }) {
-    // Return render function; h() with slots object will properly forward slots
-    return () => h(Target, attrs, slots)
-  }
-})
+const wrap = (Target: any) =>
+  defineComponent({
+    name: `WrappedComponent`,
+    inheritAttrs: false,
+    setup(_, { slots, attrs }) {
+      // Return render function; h() with slots object will properly forward slots
+      return () => h(Target, attrs, slots);
+    },
+  });
 
 // Anchor wrapper to choose between enhanced/basic while preserving slot context
 const AWrapper = defineComponent({
-  name: 'ProseAWrapper',
+  name: "ProseAWrapper",
   inheritAttrs: false,
   props: { href: String, rel: String, target: String },
   setup(props, { slots, attrs }) {
     return () => {
-      const Comp: any = (enhancementsEnabled.value && enhancedAComp.value) ? enhancedAComp.value : ProseA
+      const Comp: any =
+        enhancementsEnabled.value && enhancedAComp.value ? enhancedAComp.value : ProseA;
       // Pass slots directly to preserve render context
-      return h(Comp, { ...attrs, ...props }, slots)
-    }
-  }
-})
+      return h(Comp, { ...attrs, ...props }, slots);
+    };
+  },
+});
 
 // Image wrapper to switch between basic and enhanced img
 const ImgWrapper = defineComponent({
-  name: 'ProseImgWrapper',
+  name: "ProseImgWrapper",
   inheritAttrs: false,
   props: { src: String, alt: String, width: Number, height: Number },
   setup(props, { slots, attrs }) {
     const isDebug = () => {
       try {
-        return process.dev && (typeof window !== 'undefined') && typeof URLSearchParams !== 'undefined' && new URLSearchParams(window.location.search).has('debugHydration')
+        return (
+          process.dev &&
+          typeof window !== "undefined" &&
+          typeof URLSearchParams !== "undefined" &&
+          new URLSearchParams(window.location.search).has("debugHydration")
+        );
       } catch {
-        return false
+        return false;
       }
-    }
-    let lastKind: string | null = null
+    };
+    let lastKind: string | null = null;
     return () => {
       // Always use the basic image component to avoid remounts on enhancement
-      const useEnhanced = false
-      const Comp: any = ProseImg
+      const useEnhanced = false;
+      const Comp: any = ProseImg;
       if (isDebug()) {
-        const kind = 'basic'
+        const kind = "basic";
         if (kind !== lastKind) {
-          console.log('[ProseImgWrapper] rendering', { kind, src: (props as any)?.src, attrs })
-          lastKind = kind
+          console.log("[ProseImgWrapper] rendering", { kind, src: (props as any)?.src, attrs });
+          lastKind = kind;
         }
       }
-      return h(Comp, { ...attrs, ...props }, slots)
-    }
-  }
-})
+      return h(Comp, { ...attrs, ...props }, slots);
+    };
+  },
+});
 
 // Create components ONCE at module level, not inside computed
 // This prevents recreating components on every render
 // Use markRaw on static wrappers to prevent unnecessary re-renders when enhancementsEnabled changes
 const PWrapper = defineComponent({
-  name: 'ProsePWrapper',
+  name: "ProsePWrapper",
   inheritAttrs: false,
   setup(_, { slots, attrs }) {
     return () => {
       // Always use the basic paragraph to avoid parent-type swaps remounting children
-      const Comp: any = ProseP
-      return h(Comp, attrs, slots)
-    }
-  }
-})
+      const Comp: any = ProseP;
+      return h(Comp, attrs, slots);
+    };
+  },
+});
 
 const proseComponents = {
   h1: makeHeading(1),
@@ -311,14 +353,14 @@ const proseComponents = {
   th: markRaw(wrap(ProseTh)),
   td: markRaw(wrap(ProseTd)),
   "prose-alert": markRaw(wrap(ProseAlert)),
-  alert: markRaw(wrap(ProseAlert)), 
+  alert: markRaw(wrap(ProseAlert)),
 };
 
 if (process.dev) {
   for (const [k, v] of Object.entries(proseComponents)) {
     if (!v) {
       // eslint-disable-next-line no-console
-      console.warn('[proseComponents] Missing component for key:', k);
+      console.warn("[proseComponents] Missing component for key:", k);
     }
   }
 }
@@ -329,42 +371,51 @@ const pageTitle = computed(() => {
 });
 
 const pageDescription = computed(() => {
-  return (data.value as any)?.description || "This is the TSS starter. Content below is rendered from Markdown.";
+  return (
+    (data.value as any)?.description ||
+    "This is the TSS starter. Content below is rendered from Markdown."
+  );
 });
 // Page theme from front matter or template; default to 'classic' when not set
 const pageTheme = computed(() => {
-  const tpl = String(((renderDoc.value as any)?.template || "")).toLowerCase();
+  const tpl = String((renderDoc.value as any)?.template || "").toLowerCase();
   if (tpl === "product") return "product" as const;
   const raw = (renderDoc.value as any)?.theme || (renderDoc.value as any)?.pageTheme || "classic";
   const theme = String(raw).toLowerCase();
-  return ["classic","modern","product"].includes(theme) ? theme : "classic";
+  return ["classic", "modern", "product"].includes(theme) ? theme : "classic";
 });
 if (process.client) {
-  watch(pageTheme, (t) => {
-    const html = document.documentElement;
-    if (html.dataset.pageTheme !== t) html.dataset.pageTheme = t;
-  }, { immediate: true });
+  watch(
+    pageTheme,
+    (t) => {
+      const html = document.documentElement;
+      if (html.dataset.pageTheme !== t) html.dataset.pageTheme = t;
+    },
+    { immediate: true },
+  );
 }
 // Ensure SSR also sets page theme and product CSS variables on <html>
 useHead(() => {
   const d: any = renderDoc.value || {};
   const pt = d?.productTheme || {};
   const cssVarStyle = [
-    pt.bgFull ? `--product-bg-full: url(${pt.bgFull})` : '',
-    pt.bgTile ? `--product-bg-tile: url(${pt.bgTile})` : '',
-    pt.h1Logo ? `--product-h1-logo: url(${pt.h1Logo})` : '',
-    pt.sideLogo ? `--product-side-logo: url(${pt.sideLogo})` : '',
-  ].filter(Boolean).join('; ');
+    pt.bgFull ? `--product-bg-full: url(${pt.bgFull})` : "",
+    pt.bgTile ? `--product-bg-tile: url(${pt.bgTile})` : "",
+    pt.h1Logo ? `--product-h1-logo: url(${pt.h1Logo})` : "",
+    pt.sideLogo ? `--product-side-logo: url(${pt.sideLogo})` : "",
+  ]
+    .filter(Boolean)
+    .join("; ");
   return {
     htmlAttrs: {
-      'data-page-theme': pageTheme.value,
+      "data-page-theme": pageTheme.value,
       // inline CSS variables on the html element so SSR has visuals
       style: cssVarStyle || undefined,
-    }
-  }
+    },
+  };
 });
 // Template selection and hero image handling (decoupled from `cover`)
-const templateName = computed(() => String(((renderDoc.value as any)?.template || "")).toLowerCase());
+const templateName = computed(() => String((renderDoc.value as any)?.template || "").toLowerCase());
 const isPlainTemplate = computed(() => !templateName.value || templateName.value === "plain");
 const heroImage = computed(() => {
   const d = renderDoc.value as any;
@@ -392,14 +443,14 @@ if (process.client) {
       if (!pt) return;
       const html = document.documentElement as HTMLElement;
       const setVar = (k: string, v?: string) => {
-        if (typeof v === 'string' && v) html.style.setProperty(k, `url(${v})`);
+        if (typeof v === "string" && v) html.style.setProperty(k, `url(${v})`);
       };
-      setVar('--product-bg-full', (pt as any).bgFull);
-      setVar('--product-bg-tile', (pt as any).bgTile);
-      setVar('--product-h1-logo', (pt as any).h1Logo);
-      setVar('--product-side-logo', (pt as any).sideLogo);
+      setVar("--product-bg-full", (pt as any).bgFull);
+      setVar("--product-bg-tile", (pt as any).bgTile);
+      setVar("--product-h1-logo", (pt as any).h1Logo);
+      setVar("--product-side-logo", (pt as any).sideLogo);
     },
-    { immediate: true, deep: true }
+    { immediate: true, deep: true },
   );
 }
 </script>

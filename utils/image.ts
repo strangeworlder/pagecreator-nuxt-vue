@@ -7,7 +7,11 @@ export function normalizeImageWidths(widths?: number[]): number[] {
   const source = widths?.length ? widths : DEFAULT_IMAGE_WIDTHS;
   const sanitized = Array.from(new Set(source))
     .map((value) => Number(value))
-    .filter((value) => Number.isFinite(value) && IMAGE_API_SIZES.includes(value as (typeof IMAGE_API_SIZES)[number]))
+    .filter(
+      (value) =>
+        Number.isFinite(value) &&
+        IMAGE_API_SIZES.includes(value as (typeof IMAGE_API_SIZES)[number]),
+    )
     .sort((a, b) => a - b);
 
   return sanitized.length ? sanitized : [...DEFAULT_IMAGE_WIDTHS];
@@ -27,9 +31,12 @@ export function buildImageUrl(src: string | undefined, size: number, format?: Im
   return `/api/image?${params.toString()}`;
 }
 
-export function buildImageSrcset(src: string | undefined, widths: number[], format?: ImageFormat): string {
+export function buildImageSrcset(
+  src: string | undefined,
+  widths: number[],
+  format?: ImageFormat,
+): string {
   if (!src || !widths.length) return "";
 
   return widths.map((width) => `${buildImageUrl(src, width, format)} ${width}w`).join(", ");
 }
-

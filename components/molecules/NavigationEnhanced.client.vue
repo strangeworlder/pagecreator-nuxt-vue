@@ -1,43 +1,43 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted } from "vue";
 
-const navRef = ref<HTMLElement>()
-const floatingNavRef = ref<HTMLElement>()
-const isFloating = ref(false)
+const navRef = ref<HTMLElement>();
+const floatingNavRef = ref<HTMLElement>();
+const isFloating = ref(false);
 
 const handleScroll = () => {
-  if (!navRef.value) return
-  
-  const navRect = navRef.value.getBoundingClientRect()
-  const scrolledPastNav = navRect.bottom < 0
-  
+  if (!navRef.value) return;
+
+  const navRect = navRef.value.getBoundingClientRect();
+  const scrolledPastNav = navRect.bottom < 0;
+
   if (scrolledPastNav && !isFloating.value) {
-    isFloating.value = true
+    isFloating.value = true;
   } else if (!scrolledPastNav && isFloating.value) {
-    isFloating.value = false
+    isFloating.value = false;
   }
-}
+};
 
 const scrollToSection = (sectionId: string) => {
-  const element = document.getElementById(sectionId)
+  const element = document.getElementById(sectionId);
   if (element) {
-    const floatingNavHeight = floatingNavRef.value?.offsetHeight || 0
-    const offsetTop = element.offsetTop - floatingNavHeight - 20 // 20px extra padding
-    
+    const floatingNavHeight = floatingNavRef.value?.offsetHeight || 0;
+    const offsetTop = element.offsetTop - floatingNavHeight - 20; // 20px extra padding
+
     window.scrollTo({
       top: offsetTop,
-      behavior: 'smooth'
-    })
+      behavior: "smooth",
+    });
   }
-}
+};
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll, { passive: true })
-})
+  window.addEventListener("scroll", handleScroll, { passive: true });
+});
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <template>

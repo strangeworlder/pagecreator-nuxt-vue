@@ -11,7 +11,7 @@ interface Props {
 
 const props = withDefaults(defineProps<Props>(), {
   title: "Welcome",
-  description: "This is the TSS starter. Content below is rendered from Markdown."
+  description: "This is the TSS starter. Content below is rendered from Markdown.",
 });
 
 const pageTitle = computed(() => props.title);

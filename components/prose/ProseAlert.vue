@@ -39,6 +39,10 @@ const computedTitle = computed(() => {
   border-radius: 0 0.5rem 0.5rem 0;
 }
 
+.prose-alert :deep(li) {
+  margin-bottom: 1rem;
+}
+
 .prose-alert-content {
   font-size: 0.95em;
 }

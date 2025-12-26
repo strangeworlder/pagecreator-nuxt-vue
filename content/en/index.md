@@ -62,14 +62,14 @@ Gogam is a full-on indie powerhouse, churning out small, super-innovative games 
 - **A Particular Group of Corvids** &mdash; casts you as hardboiled bird detectives in the free-thinking city of Roost, pushing back against the encroaching authoritarianism of The Sus (fascist pigs) by solving crimes and throwing punches. Inspired by gritty action-mysteries like RDJ's *Sherlock Holmes* or *Peaky Blinders* (with birds!), its elegance shines through a simple d20 core mechanic.
   - [Read more about A Particular Group of Corvids](/en/a-particular-group-of-corvids)
   - [itch.io: A Particular Group of Corvids](https://strangeworlder.itch.io/a-particular-group-of-corvids)
-- **Operator, I Need an Exit** &mdash; 
+- **Operator, I Need an Exit** &mdash; Breathless hack of escaping a simulation before the Agents get you.
   - [itch.io: Operator, I Need an Exit](https://strangeworlder.itch.io/operator-i-need-an-exit)
-- **Wreck Crawl** &mdash;
+- **Wreck Crawl** &mdash; A megadungeon generator chasis for sci-fi games like Mothership
   - [itch.io: Wreck Crawl](https://strangeworlder.itch.io/wreck-crawl)
-- **Satyrs** &mdash; 
-  - [itch.io: Satyrs](https://strangeworlder.itch.io/satyrs) &mdash; Caltrop Core game of adventuring Satyrs with messy relationships.
-- **Fate of Atreus** &mdash;
-  - [google docs: Fate of Atreus](https://docs.google.com/document/d/11tqoXZCX3p7sl_kwvq--pNPFoup_oV5gRu1eXELQ9m4/edit?usp=sharing) &mdash; Fate Core hack for Giant Robots, much like Battletech
+- **Satyrs** &mdash; A Caltrop Core hack of fun-loving Satyrs with messy relationships.
+  - [itch.io: Satyrs](https://strangeworlder.itch.io/satyrs)
+- **Fate of Atreus** &mdash; A Fate Core hack for Giant Robots, much like Battletech.
+  - [google docs: Fate of Atreus](https://docs.google.com/document/d/11tqoXZCX3p7sl_kwvq--pNPFoup_oV5gRu1eXELQ9m4/edit?usp=sharing)
 
 ## Kustannusosakeyhtiö Gogam
 Publishes primarily in Finnish. Products are related to the [Black Shield Canton](/en/mustan-kilven-kantoni) campaign setting. 

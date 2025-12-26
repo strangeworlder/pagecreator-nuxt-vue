@@ -18,7 +18,7 @@ const isHome = computed(() => route.path === "/");
       class="footer-image"
       eager
     />
-    <NuxtLink v-else to="/" class="footer-link"> Return to the start </NuxtLink>
+    <NuxtLink v-else to="/" class="footer-link"> / Gogam </NuxtLink>
   </footer>
 </template>
 
@@ -29,14 +29,15 @@ footer {
   padding: 2rem;
 }
 .footer-link {
-  font-family: var(--font-header);
-  font-size: 1.2rem;
-  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--size-2);
+  color: var(--color-fg);
   text-decoration: none;
   border-bottom: 2px solid transparent;
   transition: border-color 0.2s;
 }
 .footer-link:hover {
-  border-color: var(--color-primary);
+  text-decoration: none;
+  border-color: var(--color-accent);
 }
 </style>

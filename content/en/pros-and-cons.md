@@ -51,6 +51,7 @@ You take on the role of a specialized criminal (from a pool of Driver, Hacker, H
 ::alert{type="note" title="Get the Game"}
 - [Download Pros & Cons on itch.io](https://strangeworlder.itch.io/pros-and-cons)
 - [Download Pros & Cons on Roolipelikirjasto](https://roolipelikirjasto.fi/book/147)
+- [コンズ & プロズ (Japanese Translation by @feltk)](https://twitter.com/feltk/status/1376309603734937600)
 ::
 
 ### Community Spotlight

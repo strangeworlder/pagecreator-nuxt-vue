@@ -1,9 +1,9 @@
 ---
 title: "Night of the Thirteenth"
-description: "Introduction for new players to Night of the Thirteenth — a slasher-style horror RPG by Petri Leinonen."
+description: "A slasher-style horror RPG where you play the cast of a movie that hasn't happened yet. Survival is unlikely."
 datePublished: 2025-10-25
-dateModified: 2025-10-25
-tags: ["game", "horror"]
+dateModified: 2025-12-25
+tags: ["game", "horror", "slasher", "TTRPG", "ashcan"]
 canonical: "/en/nott"
 alternateLocales: ["fi"]
 template: "hero"
@@ -11,155 +11,128 @@ theme: "classic"
 cover: "/images/nott-cover.png"
 heroImage: "/images/nott-cover.png"
 summary: |
-  A quick, player-facing intro to Night of the Thirteenth —
-  a slasher-inspired horror role-playing game of desperate survival.
-lastValidated: 2025-11-28
+  Night of the Thirteenth is a slasher-horror TTRPG where you play the cast of a movie doomed to end badly. 
+  Uses a unique d13 (d10+d4) system and a standard deck of cards to generate threats.
+  The goal is simple: survive the night. Most of you won't.
+lastValidated: 2025-12-25
 facts:
   - label: "System"
-    value: "d13 roll (d10+d4)"
-  - label: "Table size"
-    value: "1 Director + 4 Players"
+    value: "d13 (d10 + d4) & Cards"
+  - label: "Tone"
+    value: "80s Slasher Horror"
+  - label: "Players"
+    value: "4 Players + 1 Director"
 stats:
   - metric: "Word count"
-    value: "1500"
+    value: "2129"
     date: 2025-10-25
     source: "Rules text"
-  - metric: "Format"
-    value: "Digital"
+  - metric: "Page count"
+    value: "11"
     date: 2025-10-25
+    source: "Rules text"
+  - metric: "Status"
+    value: "Ashcan"
+    date: 2025-12-25
     source: "Rules text"
 quotes:
   - source: "Petri Leinonen"
     text: "Most of you won't make it."
     date: 2025-11-28
+faq:
+  - q: "What is Night of the Thirteenth?"
+    a: "A horror RPG where you play clear archetypes in a slasher movie setting. Expect high lethality."
+  - q: "What is the d13?"
+    a: "A combination of a d10 (0-9) and a d4 (1-4). The d4 serves as a 'Fallout Die' determining consequences."
+  - q: "How do I win?"
+    a: "Survive until the Endgame by defeating a Face Card of each suit, then survive the final Joker tests."
 entities:
   - type: "CreativeWork"
     name: "Night of the Thirteenth"
     sameAs:
       - "https://strangeworlder.itch.io/night-of-the-thirteenth"
+    author:
+      type: "Person"
+      name: "Petri Leinonen"
 ---
 
-## Introduction for New Players
 
-"Night of the Thirteenth" is a horror role-playing game designed by Petri Leinonen that casts one player as the Director and the others as the "cast of a horror movie that hasn't happened yet". The game's themes are drawn directly from classic slasher films, focusing entirely on survival rather than heroism. Players take on familiar archetypes like "The Jock," "The Babysitter," or "The Genre Savant" and are thrown into a high-lethality scenario where "most of you won't make it". The core experience is about managing the escalating dread of being hunted by an unstoppable killer in iconic settings like a cabin in the woods or a house party in the suburbs.
+## What is **Night of the Thirteenth**?
 
-The game's excellence is driven by its elegant and thematic mechanics, which use a standard deck of cards and a unique "d13" dice roll (a d10 + a d4). The Director uses a "Threat Deck" of cards to reveal upcoming challenges; the suit determines the nature of the test (e.g., Spades for Power, Hearts for Resolve), and the number sets the difficulty. The most innovative part is the "Fallout die" (the d4), which determines the consequences of every roll, success or fail. A low roll might be a 'clean' success, but a high roll can be 'costly' or 'dire,' meaning even when you succeed, you might lose an item, give away your location, or (if facing the Killer) even gain a Strike.
+**Night of the Thirteenth** is a slasher-horror TTRPG by Petri Leinonen using a unique d13 system (d10+d4) and a standard card deck to simulate a horror movie cast's likely doom.
 
-Survival is a desperate race against a ticking clock. The Killer is represented by face cards, and confrontations are incredibly dangerous; failure always earns you a Strike. Characters are eliminated in a "genre-fitting, gruesome fashion" after receiving their third Strike. To "win," the players must discover the killer's weakness by successfully defeating a face card of all four suits. This triggers the "Endgame," a bloody climax where the deck is stripped down to only face cards and Jokers, leading to a final, desperate test to see if anyone survives to see the dawn.
+You are there to play a character in a movie that hasn't happened yet. It assumes you know something about TTRPGs and does not walk you through everything.
 
-## Questions about Night of the Thirteenth
+::alert{type="note" title="Get the Game"}
+- [Download Night of the Thirteenth on itch.io](https://strangeworlder.itch.io/night-of-the-thirteenth)
+- Physical copies available at cons where Gogam prints are sold.
+::
 
-### What is *Night of the Thirteenth*?
+## How do you set up the game?
 
-*Night of the Thirteenth* is a horror role-playing game designed by Petri Leinonen. Players take on the roles of characters in a horror movie setting who are being hunted by an "unstoppable killer".
+Setting up the game is a quick process of preparing the atmosphere and the tools of your demise. Start by **selecting a Playset**, which determines the horror sub-genre and setting you will be inhabiting (e.g., *Cabin in the Woods* or *Prom Night*).
 
-### What is the goal of the game?
+The Director then constructs the **Threat Deck** by shuffling all 2s, 3s, 4s, and one Jack together, placing the four Aces face up on top to signal the start. The **Reserves** (5s-10s, remaining Face Cards, and Jokers) are set aside for later escalation. Finally, establish the **Trophy Pile** by placing a random 10 face up; this sets the initial difficulty for the Killer. Once the players **create their characters** by choosing a name, Archetype, and Aptitude, the night begins.
 
-The goal for the players is not to defeat the killer like heroes, but simply to survive until sunrise. The game is designed to be difficult; players are expected to win only about one-third of the time.
+## How does the d13 system work?
 
-### What roles do players have?
+The game uses a specialized dice system designed to produce both a numerical result and a narrative consequence in a single roll.
 
-The game requires 4 players and one "Director".
+*   **The Formula:** d13 = d10 (0-9) + d4 (1-4)
+*   **The Dice:** d10 is the main die, d4 is the Fallout Die
+*   **The Constraint:** Modifiers cannot push a die outside its natural range.
+*   **Fallout Logic:** High rolls are worse. A **4** on the **Fallout Die** (d4) is "Dire" and is the primary source of Strikes.
 
-* **The Director:** This person plays the killer, describes the world, and sets the challenges that the players face.
-* **The Players:** The 4 players each create a character who is "most likely doomed".
+## What is the Threat Deck?
 
-### What do you need to play?
+The **Threat Deck** is the engine of the game's horror. The top card is always visible, serving as the current **Threat Card** that dictates the next challenge the players will face.
 
-To play the game, you will need the following components:
-* A standard playing card deck with two distinct Jokers.
-* At least one pair of a d4 and a d10.
-* 13 tokens to be used as Genre Points.
-* Pen and paper for all participants.
+The suit of the card determines the nature of the challenge and corresponds to the varied strengths of horror movie archetypes.
 
-### How do you set up the game?
+| Suit | Challenge Type | Examples of Archetypes |
+| :--- | :--- | :--- |
+| **Spades (♠)** | Power (Physical) | Jock, Sheriff, The Protective |
+| **Hearts (♥)** | Resolve (Nerves) | Babysitter, The Final Them, Pure |
+| **Clubs (♣)** | Intellect (Knowhow) | Genre Savant, Techie, Reporter |
+| **Diamonds (♦)** | Finesse (Precise) | Rebel, Slacker, Cheerleader |
 
-The game setup follows four main steps:
-1.  Choose the playset you will use.
-2.  The Director builds the card decks.
-3.  The players create their characters.
-4.  Begin the game.
+The value of the card dictates Severity. **1–4** are merely atmospheric, while **5–7** represent dangerous tasks. **8–10** are difficult challenges. If a **Face Card** appears, you are no longer dealing with the environment; you are confronting the Killer.
 
-**Deck Setup:**
-The Director prepares three sets of cards:
-* **The Threat Deck:** This deck starts with all 2s, 3s, 4s, and one Jack, shuffled together. The four Aces are then placed face-up on top of this deck.
-* **The Reserves:** The rest of the cards are set aside in five piles: the Number Reserve (5s through 10s), separate piles for the remaining Jacks, Queens, and Kings, and the two Jokers.
-* **The Trophy Pile:** The Director takes a random 10 from the Number Reserve to start this face-up pile. The top card of this pile sets the Base Difficulty for any Test made against the Killer.
+## How do you resolve a Test?
 
-### How does the "d13" dice system work?
+When you attempt something risky, you make a Test by rolling your **d13**. If your total is equal to or greater than the difficulty on the Threat Card, you **Succeed**. If it is less, you **Fail**.
 
-The game uses a "d13" dice roll, which is created by rolling a d10 and a d4 and adding them together.
-* The **d10 (Main die)** is read from 0 to 9.
-* The **d4 (Fallout die)** is read from 1 to 4.
-This results in a total roll between 1 and 13.
+However, the **Fallout Die** (the d4 from your roll) determines the quality of that result. A low fallout represents a clean, professional job, while a high fallout indicates a messy, noisy, or even disastrous outcome.
 
-### How do you perform a Test?
+| d4 | Success Fallout | Failure Fallout |
+| :--- | :--- | :--- |
+| **1** | **Clean**: Perfect execution. | **Clean**: You fail, but that's all. |
+| **2** | **Messy**: You make noise/mess. | **Messy**: Failure is ugly. |
+| **3** | **Costly**: Lose item/hurt yourself. | **Costly**: Personal cost/hurt. |
+| **4** | **Dire**: Killer knows location. | **Dire**: **Gain one Strike.** |
 
-When a player tries something risky to overcome a challenge, they must make a Test.
+## How do you survive (or die)?
 
-**1. Determine the Challenge and Difficulty**
-The challenge is determined by the face-up Threat Card on top of the Threat Deck.
-* **Suit:** The card's suit sets the nature of the challenge:
-    * : Power (physical)
-    * : Resolve (nerves)
-    * : Intellect (knowhow)
-    * : Finesse (precise)
-* **Number Card Difficulty:** If the card is a number card, its number is the difficulty you must roll against.
-* **Face Card Difficulty (The Killer):** If the card is a Jack, Queen, or King, you are confronting the Killer. The difficulty is the value of the top card of the Trophy Pile plus a modifier:
-    * **Jack:** +1
-    * **Queen:** +2
-    * **King:** +3
+This is an **Ashcan TTRPG**, meaning it's a raw, playable prototype aimed at capturing a specific feel—specifically, the high lethality of 80s slashers. Death is tracked through a simple "Three Strikes" system.
 
-**2. Roll the Dice**
-The player rolls the d13 (d10+d4).
-* **Success:** If the roll is equal to or greater than the difficulty.
-* **Failure:** If the roll is less than the difficulty.
+::alert{type="warning" title="Three Strikes"}
+**You get a Strike when you:**
+1. Fail **any** Test against the Killer.
+2. Fail a Test with Dire (4) Fallout.
+3. Succeed in a Test against the Killer with Dire (4) Fallout.
 
-**3. Determine the Fallout**
-The number rolled on the d4 is the "Fallout," which determines the consequences. A higher roll is worse.
-* **Success Fallout:**
-    * **1 (Clean):** Perfect execution.
-    * **2 (Messy):** You succeed but make noise or a mess.
-    * **3 (Costly):** You succeed but lose an item or give away your general location.
-    * **4 (Dire):** You barely succeed, and the Killer knows exactly where you are.
-* **Failure Fallout:**
-    * **1 (Clean):** You fail, but with no extra hassle.
-    * **2 (Messy):** You fail, and it's not clean.
-    * **3 (Costly):** You fail and lose something or hurt yourself.
-    * **4 (Dire):** You fail and gain one Strike.
+**When you get your third Strike, your story is over.**
+::
 
-### How are Tests resolved?
+## What happens in the Endgame?
 
-What happens next depends on the card type and whether you succeeded or failed.
+If you manage to defeat the Killer in all four suits (Spades, Hearts, Clubs, Diamonds), the **Endgame** is triggered. All number cards are removed from the deck, leaving only the Face Cards, and the **Red Joker** and **Black Joker** are shuffled in.
 
-* **Number Card Success:** The Threat Card is moved to the top of the Trophy Pile. The Director adds the next card from the Number Reserve to the *bottom* of the Threat Deck.
-* **Number Card Failure:** The Threat Card is placed on the *bottom* of the Threat Deck. The Director also adds the next card from the Number Reserve to the bottom of the deck. If the failure had Dire (4) Fallout, you gain one Strike.
-* **Face Card Success (vs. Killer):** Another face card is added to the Threat Deck from the reserves (a Jack for 1-2 Fallout, a Queen for 3-4 Fallout). If this was the first time a card of that *suit* was defeated, it is removed from the game.
-* **Face Card Failure (vs. Killer):** The player gains one Strike, and a random King is added to the bottom of the Threat Deck.
-* **After *any* Killer confrontation (Face Card):** The entire Threat Deck and Trophy Pile are shuffled.
+The game shifts to a final series of desperate rolls. Drawing the **Black Joker** represents a final twist—a last attempt to turn the tables where success removes a Face Card. Drawing the **Red Joker** is the true finale: success means you survive to see the dawn, while failure means your character dies just moments before the credits roll.
 
-### How can players influence rolls?
+## Quick Facts
 
-Players can use two mechanics to influence their dice rolls:
-* **Aptitude:** When creating a character, you select an Aptitude (Power, Resolve, Intellect, or Finesse). If you make a Test where the Threat Card's suit matches your Aptitude, you can add or subtract one from the Fallout die (d4) result *after* the roll.
-* **Genre Points:** The Director has 13 Genre Points to award to players for "playing into the genre's tropes". A player can spend one Genre Point to reroll their entire d13 and add a +1 to the main die (d10). The second result must be accepted.
-
-### What are "Strikes" and how do you get them?
-
-Strikes are "close calls with death". If a character gets their third Strike, their story is over, and they are out of the game.
-You gain one Strike when you:
-* Fail any Test against the Killer (a face card).
-* Fail any Test with a Dire (4) Fallout.
-* Succeed in a Test against the Killer with a Dire (4) Fallout.
-A character can only gain one Strike from any single Test.
-
-### How do you win the game (or trigger the Endgame)?
-
-The "Endgame" is triggered when the players successfully defeat a face card from all four suits (hearts, spades, diamonds, clubs).
-
-When this happens, the Director removes all number cards from the Threat Deck and shuffles both Jokers into the remaining deck of face cards.
-
-* **The Black Joker (The Twist):** This card triggers a Test. The difficulty is set by the top card of the *shuffled* Trophy Pile. Success removes the highest face card from the deck; failure adds another King. The Black Joker is then removed from the game.
-* **The Red Joker (The End):** This card triggers the final Test. The difficulty is again set by the top card of the shuffled Trophy Pile.
-    * **Success:** Any surviving characters have won and see the dawn.
-    * **Failure:** The character making the Test is killed. The Red Joker is shuffled back into the deck, and the game continues for any remaining survivors.
+*   **Who is the Director?** The person playing the killer, describing the world, and managing the card decks.
+*   **What is a Strike?** A mechanic representing a close call with death; three strikes result in character death.
+*   **What are Genre Points?** Tokens the Director awards for playing into tropes. Spend one to reroll with +1.
+*   **What is the Trophy Pile?** A face-up pile where defeated cards go. Its top card sets the base difficulty for the Killer.

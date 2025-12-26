@@ -14,6 +14,13 @@ import ProseP from "~/components/prose/ProseP.vue";
 import ProsePre from "~/components/prose/ProsePre.vue";
 import ProseUl from "~/components/prose/ProseUl.vue";
 import ProseImg from "~/components/prose/ProseImg.vue";
+import ProseTable from "~/components/prose/ProseTable.vue";
+import ProseThead from "~/components/prose/ProseThead.vue";
+import ProseTbody from "~/components/prose/ProseTbody.vue";
+import ProseTr from "~/components/prose/ProseTr.vue";
+import ProseTh from "~/components/prose/ProseTh.vue";
+import ProseTd from "~/components/prose/ProseTd.vue";
+import ProseAlert from "~/components/prose/ProseAlert.vue";
 import PageHeader from "~/components/molecules/PageHeader.vue";
 import PageFooter from "~/components/molecules/PageFooter.vue";
 import Navigation from "~/components/molecules/Navigation.vue";
@@ -297,6 +304,14 @@ const proseComponents = {
   li: markRaw(wrap(ProseLi)),
   blockquote: markRaw(wrap(ProseBlockquote)),
   img: markRaw(ImgWrapper),
+  table: markRaw(wrap(ProseTable)),
+  thead: markRaw(wrap(ProseThead)),
+  tbody: markRaw(wrap(ProseTbody)),
+  tr: markRaw(wrap(ProseTr)),
+  th: markRaw(wrap(ProseTh)),
+  td: markRaw(wrap(ProseTd)),
+  "prose-alert": markRaw(wrap(ProseAlert)),
+  alert: markRaw(wrap(ProseAlert)), 
 };
 
 if (process.dev) {

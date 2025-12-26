@@ -1,9 +1,9 @@
 ---
-title: "A Particular Group of Corvids"
-description: "Introduction for new players to A Particular Group of Corvids — a mystery and action RPG where you play as skilled bird sleuths in the city of Roost."
+title: "A Particular Group of Corvids - Mystery Action TTRPG"
+description: "A tabletop mystery and action RPG where players take on the role of skilled corvid sleuths in the city of Roost. Think Sherlock Holmes meets Peaky Blinders, but with birds. Uses a unique d20 pool system."
 datePublished: 2025-01-27
-dateModified: 2025-01-27
-tags: ["game", "mystery", "action", "corvids", "investigation"]
+dateModified: 2025-12-25
+tags: ["game", "mystery", "action", "corvids", "investigation", "TTRPG", "Tabletop RPG", "Roleplaying Game"]
 canonical: "/en/a-particular-group-of-corvids"
 alternateLocales: ["fi"]
 template: "hero"
@@ -11,135 +11,174 @@ theme: "classic"
 cover: "/images/a-particular-group-of-corvids-cover.jpg"
 heroImage: "/images/a-particular-group-of-corvids-cover.jpg"
 summary: |
-  A mystery and action RPG where you play as skilled corvid sleuths protecting 
-  the artistic haven of Roost from the authoritarian regime known as The Sus.
-lastValidated: 2025-11-28
+  A Particular Group of Corvids is a tabletop mystery and action RPG set in the rain-slicked streets of Roost. 
+  Players take on the role of Corvid sleuths—Crows, Jackdaws, Magpies, Ravens, and Rooks—protecting their artistic haven 
+  from the authoritarian regime known as The Sus. The game uses a unique d20 pool system focused on narrative flexibility, 
+  where advantages add dice and disadvantages remove them.
+lastValidated: 2025-12-25
 facts:
   - label: "System"
     value: "d20 pool with narrative constraints"
   - label: "Tone"
     value: "Sherlock Holmes meets Peaky Blinders"
+  - label: "Players"
+    value: "3-5 (Recommended)"
 stats:
   - metric: "Word count"
-    value: "1500"
-    date: 2025-01-27
+    value: "2265"
+    date: 2025-12-25
+    source: "Rules text"
+  - metric: "Page count"
+    value: "4"
+    date: 2025-10-26
     source: "Rules text"
   - metric: "Status"
-    value: "Draft"
-    date: 2025-01-27
+    value: "Beta"
+    date: 2025-12-25
     source: "Rules text"
 quotes:
   - source: "Petri Leinonen"
     text: "Two-fisted bird sleuths."
     date: 2025-11-28
+  - source: "Rulebook"
+    text: "Do it right or not at all."
+    date: 2025-11-28
+faq:
+  - q: "What is A Particular Group of Corvids?"
+    a: "It is a mystery and action tabletop RPG where players act as corvid sleuths investigating crimes in the city of Roost."
+  - q: "What game system does it use?"
+    a: "It uses a custom d20 dice pool system where players roll multiple dice based on advantages and keep the highest result. 10+ is a success. Different degrees of success and failure are possible and modifiable by paying costs."
+  - q: "What are the Bird Types?"
+    a: "Players can choose from five Bird Types: Crow (Muscle), Jackdaw (Spy), Magpie (Thief), Raven (Leader), and Rook (Arcanist)."
 entities:
   - type: "CreativeWork"
     name: "A Particular Group of Corvids"
+    description: "A tabletop roleplaying game about bird detectives in a noir setting."
+    author:
+      type: "Person"
+      name: "Petri Leinonen"
+    genre: ["Tabletop RPG", "Mystery", "Action"]
     sameAs:
       - "https://strangeworlder.itch.io/a-particular-group-of-corvids"
+      - "https://roolipelikirjasto.fi/book/150"
 ---
 
-## Introduction for New Players
-Step into the rain-slicked streets of Roost as "A Particular Group of Corvids," a mystery and action RPG by Petri Leinonen where you play as skilled, two-fisted bird sleuths. Roost is a haven for artists and individualists, a stark contrast to the world outside increasingly dominated by the authoritarian porcine regime known only as The Sus. As corvids—a temporary calling for capable members of the community —your job is to act as the city's unofficial watchdogs, solving crimes and dealing with troublemakers swiftly and effectively, preventing The Sus from gaining a foothold by intervening themselves. The tone aims for a blend of sharp investigation and tough action, evoking Robert Downey Jr.'s Sherlock Holmes movies mixed with some Peaky Blinders.
 
-Even in its draft stage, the game showcases an elegantly simple core system built for narrative flexibility. When attempting something risky, you assemble a pool of d20s, adding dice if the action aligns with your expertise, your chosen Bird Type (like Crow or Magpie), your elemental focus (like Flame or Stone), if the situation is dramatic, or if you have an advantage. You roll the pool and take the single highest die; a 10 or more is a success, with higher results offering greater degrees of success. This core resolution is beautifully augmented by player agency: you can choose to accept a narrative "Cost"—like taking a hit, losing gear, or gaining "Feathers"—to bump a lower result up the success ladder. Additionally, you can spend "Conviction," representing your willingness to fight, to reroll a single die.
+## What is **A Particular Group of Corvids?**
 
-The game's unique potential crystallizes in its currency systems, particularly "Feathers." Gained often through using powerful bird abilities or taking Costs, Feathers represent the struggle against your character's base corvid instincts (like a Crow's need for attention or a Magpie's selfishness). Accumulate too many, and a failed d20 roll might see you lose control for a scene, acting purely on instinct. This risk is balanced against "Exhaustion," which functions like hit points, increasing when you face injustice, fail rolls, take Costs, or get hit, potentially taking you out of a fight. Together, these mechanics promise a dynamic experience blending tactical choices with compelling character arcs, focused on investigation, action, and the fight for freedom.
+Step into the rain-slicked streets of Roost in **"A Particular Group of Corvids,"** a mystery and action RPG by Petri Leinonen. The Roost is a commune of free thinkers, artists, and highly individualistic **Folk**—animals and birds living together in a scoundrel society.
 
-[download A Particular Group of Corvids on itch.io](https://strangeworlder.itch.io/a-particular-group-of-corvids)
+You play as **Corvids**, the city's trusted watchdogs. In a world increasingly dominated by the authoritarian porcine regime known as **The Sus**, your job is to keep their influence out. You do this by solving crimes and punching bad guys before The Sus have a "good reason" to intervene with their watery magic and civil masks. The tone is a blend of sharp investigation and bare-knuckle action—think Robert Downey Jr.'s *Sherlock Holmes* meets *Peaky Blinders*, but with birds.
 
-[download A Particular Group of Corvids from roolipelikirjasto](https://roolipelikirjasto.fi/book/150)
+::alert{type="note" title="Get the Game"}
+- [Download A Particular Group of Corvids on itch.io](https://strangeworlder.itch.io/a-particular-group-of-corvids)
+- [Download A Particular Group of Corvids from roolipelikirjasto](https://roolipelikirjasto.fi/book/150)
+::
 
-## What is *A particular group of corvids*?
+## How to Play
 
-*A particular group of corvids* is a mystery and action storytelling game. Players take on the roles of "two-fisted bird sleuths" in a setting described as "Robert Downey Jr.'s Sherlock with a bit of Peaky Blinders... but with birds".
+The game uses an elegantly simple system built for narrative flexibility. When you attempt something risky or dramatic, you don't just roll a stat; you assemble a **dice pool** of d20s. You start with one, then add another for each advantage you can leverage: is this something you're skilled at? Does it align with your **Bird Type** or **Element**? Is the moment extraordinarily dramatic, or do you have a clear tactical advantage? Conversely, hindrance or disadvantage removes a die.
 
-### What is the goal of the game?
+You roll the entire pool and keep only the single highest result.
 
-The game is set in a city called the Roost. Players are corvids whose job is to keep the "Authoritarian Porcines" (also known as The Sus) out. They accomplish this by solving crimes and "punching the bad guys" before The Sus have an excuse to come in and take over.
+*   **10 or higher** is a success.
 
-### How do you play? (Core Mechanic)
+| Roll | Result |
+| :--- | :--- |
+| **20** | **Critical Success** (Great outcome + bonus) |
+| **15-19** | **Great Success** (No complications) |
+| **10-14** | **Marginal Success** (Success with a complication) |
+| **5-9** | **Marginal Failure** (Failure with minor consequences) |
+| **2-4** | **Failure** (Failure with standard consequences) |
+| **1** | **Spectacular Failure** (Failure with major consequences) |
 
-When a player's character performs an action where the outcome could be an "interesting failure," they roll a pool of d20 dice.
+If you roll poorly, you aren't out of luck. You can choose to pay a **Cost**—like taking a hit or losing gear—to bump a failure up to a success. Alternatively, you can spend **Conviction**, a measure of your willpower, to reroll a die and fight for a better outcome.
 
-* **Determine Success:** The player picks the *largest number* from the dice they rolled.
-* **Threshold:** A roll of 10 or higher is a success.
+::alert{type="warning" icon="lucide:alert-triangle" title="Rolling with Zero Dice"}
+If things are truly dire and obstacles leave you with zero dice or fewer, you must roll **two d20s** and keep the **lowest** result.
+::
 
-### What do the dice results mean?
+## The Cost of Business
 
-The game uses a "success chain" to define the degrees of success or failure:
+Managing your resources is just as important as rolling high. You must balance your drive to do good against your own animal nature and physical limits.
 
-* **20:** Critical Success 
-* **15-19:** Great Success 
-* **10-14:** Marginal Success 
-* **5-9:** Marginal Failure 
-* **2-4:** Failure 
-* **1:** Spectacular Failure 
+*   **Conviction** represents your willingness to fight. You start with **1** and can hold up to **3**. You spend it to reroll dice, and you earn it back by connecting with your community—sharing a drink, or witnessing the hardships of the people you protect.
+*   **Feathers** measure the pull of your base instincts. Use your powers or take the easy way out too often, and you accumulate Feathers. To stay in control, you must roll a d20 *over* your current Feather count. Roll equal or lower, and you succumb to your bird nature (like a Magpie's greed) for the scene, after which your Feathers reset to half.
+*   **Exhaustion** is the toll the job takes on your body. You gain it when you witness injustice, take a beating, or push yourself too hard. If you take a hit in a fight, you roll against your current Exhaustion; roll lower than your total, and you're taken out of the scene. You can clear a single point by enjoying hospitality or striking a blow against The Sus, but only solving a mystery clears your Exhaustion completely.
 
-### How do you build your dice pool?
+## Action and Investigation
 
-A player builds their pool of d20s by adding one die for each of the following conditions that apply:
-* 1 die if this is something the character is good at.
-* 1 die if the action fits the character's bird type.
-* 1 die if the action fits the character's element.
-* 1 die if the action is personal or "extraordinarily dramatic".
-* 1 die if the character has a clear advantage or is being helped.
-* -1 die if the character has a disadvantage or is being hindered.
+Whether you are trading blows or hunting for clues, the game moves forward.
 
-**What if you roll 0 dice or fewer?**
-If the dice pool is 0 or less, the player rolls two d20s and must keep the *lowest* result.
+In **Combat**, enemies have "health clocks" that you tick down with successful attacks—one tick for a marginal success, up to four for a critical. But be careful; every hit you take adds to your Exhaustion, bringing you closer to collapse.
 
-### How can you change a roll's outcome?
+In **Investigation**, failure doesn't mean you find nothing. It means you find the clue, but it comes with a complication—you trip an alarm, offend a witness, or leave evidence behind. The story always progresses, even when things go wrong.
 
-There are two primary ways to alter a roll or its result:
+## Creating Your Corvid
 
-1. **Take a Cost:** A player can choose to "take a cost" to move their result one step up the success chain (e.g., from a Marginal Failure to a Marginal Success).
-    * A cost is a "significant price", such as taking a hit in a fight, losing a valuable piece of equipment, or insulting a friend.
-    * If no one can think of a good cost, the player can take 1-3 Feathers as a substitute.
-2. **Spend Conviction:** A player can spend one point of Conviction to reroll a *single die* in their pool.
+To join the flock, follow these steps:
 
-### What resources ("Currencies") do you track?
+1.  **Choose your Bird Type**: This determines your role and your **Base Instinct**—the urge you fight against.
+2.  **Pick an Element**: This defines your expertise and sets your starting stats.
+3.  **Select Powers**: You get all Level 1 powers for your Bird Type, plus one Level 2 power of your choice.
+4.  **Finalize**: Create a background and discuss with your table how you know each other.
 
-Players must manage three main resources:
+### Bird Types
 
-* **Conviction:** This represents the character's "willingness to fight".
-    * **Starting/Max:** You start with 1 Conviction, and your maximum is 3.
-    * **Regain:** You regain it by "connecting with the community," such as witnessing hardships or offering/enjoying hospitality.
-* **Feathers:** This tracks the character being drawn away from their controlled investigator self and back toward their base corvid instincts.
-    * **Gaining:** When you gain a Feather, you must roll a d20.
-    * **Check:** If you roll *over* your current total number of Feathers, you are fine.
-    * **Succumbing:** If you roll equal to or under your current total, you "succumb to the base instinct" of your Bird Type for the rest of the scene. Your Feathers then reset to half their value, rounded down.
-* **Exhaustion:** This tracks how tired the character is.
-    * **Gain 1 Exhaustion when you:**
-        * Witness injustice.
-        * Fail a roll.
-        * Accept a cost to upgrade a success.
-        * Get hit in a fight.
-    * **Clear Exhaustion:**
-        * Clear *one* point when you enjoy or offer hospitality or when you "strike a Sus down".
-        * Clear *all* Exhaustion when you solve a mystery.
+When you answered the calling, you took on the characteristics of one of the five breeds.
 
-### How does combat ("Kick Ass") work?
+| Bird Type | Role | Base Instinct (The Urge) | Key Powers |
+| :--- | :--- | :--- | :--- |
+| **Crow** | The Muscle | **The Bravo:** Be the center of attention. | Might, Endure, Terrorize |
+| **Jackdaw** | The Spy | **The Perfectionist:** Do it right or not at all. | Dazzle, Transform, Sight |
+| **Magpie** | The Thief | **The Selfish:** Look out for number one. | Swiftness, Veil, Sight |
+| **Raven** | The Leader | **The Tyrant:** Make others obey. | Dictate, Terrorize, Dazzle |
+| **Rook** | The Arcanist | **The Follower:** Please everyone. | Bird Magic, Veil, Endure |
 
-* **Enemies:** Enemies use "health clocks". When players succeed on an attack, they tick segments on this clock:
-    * **Marginal Success:** 1 tick
-    * **Great Success:** 2 ticks
-    * **Critical Success:** 4 ticks
-    * **Players:** Players use Exhaustion to track their health.
-    * When an enemy hits you, you gain Exhaustion based on their success (1 for marginal, 2 for great, 4 for critical).
-    * After taking Exhaustion from a hit, you must roll a d20. If your roll is *more* than your new Exhaustion total, you stay on your feet. If not, you go down.
+### Elements
 
-### How does investigation ("Solve Mysteries") work?
+While every Corvid is a capable investigator, your Element defines your specific expertise and starting stats.
 
-When inspecting a scene for clues, players roll dice as normal.
-* **Failure:** Even on a failure, the player "still reveals the most important thing" they need to know.
-* **Success:** Any level of success will provide "more context" to what is found.
+| Element | Role | Area of Expertise | Starting Stats |
+| :--- | :--- | :--- | :--- |
+| **Blood** | The Medic | Understanding bodies (alive/dead). | 2 Exh, 2 Conv, 0 Feather |
+| **Breath** | The Voice | Getting answers from people. | 0 Exh, 1 Conv, 1 Feather |
+| **Flame** | The Keen-Eyed | Finding physical clues. | 1 Exh, 2 Conv, 1 Feather |
+| **Soul** | The Empath | Profiling perpetrators. | 0 Exh, 2 Conv, 2 Feather |
+| **Stone** | The Font | Obscure facts and lore. | 1 Exh, 1 Conv, 0 Feather |
 
-### How do you create a character?
+Once you have your bird, discuss with your table how you know each other, and prepare to defend the Roost.
 
-Follow these steps to create your bird sleuth:
-1.  **Choose your Bird Type:** Select from Crow (The Muscle), Jackdaw (The Spy), Magpie (The Thief), Raven (The Leader), or Rook (The Arcanist).
-2.  **Choose your Element:** This is your area of expertise. Options include Blood (The Medic), Breath (The Voice), Flame (The Keen-Eyed), Soul (The Empath), or Stone (The Font of Knowledge).
-3.  **Determine Starting Stats:** Your chosen Element determines your starting Conviction, Exhaustion, and Feathers.
-4.  **Select Bird Powers:** You get all Level 1 powers and choose one Level 2 power from your Bird Type's list. Bird powers can only be used once per scene.
-5.  **Finalize:** Create a background for your corvid and discuss with the other players how your characters know each other.
+## Bird Powers Reference
+
+Each power can be used once per scene.
+
+**Dazzle**
+Those skilled in performance use *Shine* (1 Feather) to force all attention onto themselves. Masters can use *Glow* (2 Feathers) to subtly manipulate a target's opinion into something more favourable.
+
+**Dictate**
+Leaders command the room. A sharp *Bark* (1 Feather) issues a compelling one-word command, while *Suggestion* (2 Feathers) plants a nuanced and complex order in the target's mind.
+
+**Endure**
+True grit allows a bird to be *Tough as Nails* (1 Feather), rolling to stay standing when they should be knocked out. With *Bounce Back* (2 Feathers), they can recover from a knockdown instantly—a Critical Success even grants an immediate follow-up action.
+
+**Might**
+Raw power allows a *Mighty Strike* (1 Feather), adding an extra tick to any damage clock. The truly strong possess *Superavian Strength* (2 Feathers), letting them lift car-sized objects; using such an object as a weapon doubles damage output.
+
+**Sight**
+Investigators rely on *Superior Senses* (1 Feather) to tune a sense to supernatural heights. *Glimpse of the Beyond* (2 Feathers) allows them to tap into the essence of a person or place for deep insight, costing only 1 Feather if the information is irrelevant, but 2 if it's instantly useful.
+
+**Swiftness**
+Speed is life. *Flash* (1 Feather) lets you move instantly to a nearby spot and act again immediately (though you cannot chain another power). *Flurry* (2 Feathers) blurs reality, allowing you to perform two full actions in the time it takes to do one.
+
+**Terrorize**
+Fear is a weapon. *Startle* (1 Feather) shocks a target into stopping to reconsider their actions. *Terrible Presence* (2 Feathers) projects such dread that enemies must roll all actions with disadvantage.
+
+**Transform**
+Masters of disguise use *New Visage* (1 Feather) to assume the appearance of another. For the ultimate escape, *Flock* (2 Feathers) scatters your form into a literal flock of birds, covering a large area while becoming impossible to pin down.
+
+**Veil**
+Subtlety is key. *Faceless* (1 Feather) makes you unnoticeable—visible, but ignored. *Poof* (2 Feathers) takes it a step further, allowing you to vanish from plain sight entirely.
+
+**Bird Magic**
+Those in tune with the arcane can summon *Birdrich Energies* (1 Feather) for minor magical effects. Greater power demands risk: *Daemonic Servant* (2 Feathers) summons an unbound devilish helper, while *Overreach* (2 Feathers) attempts a major magical effect. However, if you roll equal to or under your Exhaustion or Feathers on a check die afterwards, you lose control of the magic.

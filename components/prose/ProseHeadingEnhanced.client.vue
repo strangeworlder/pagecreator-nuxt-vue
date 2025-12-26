@@ -105,6 +105,7 @@ onUnmounted(() => {
   color: var(--link-color, inherit);
   opacity: 0;
   margin-left: 0.375rem;
+  position: absolute;
 }
 *:hover > .copy-link {
   opacity: 0.75;

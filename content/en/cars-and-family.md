@@ -1,9 +1,9 @@
 ---
 title: "Cars & Family"
-description: "A Fast & Furious-inspired heist RPG built on Lasers & Feelings."
+description: "A Fast & Furious-inspired heist TTRPG built on Lasers & Feelings, where you balance high-speed stunts with the bonds of your crew."
 datePublished: 2025-10-26
 dateModified: 2025-10-26
-tags: ["game", "heist", "action"]
+tags: ["game", "heist", "action", "lasers & feelings", "TTRPG", "one-page rpg"]
 canonical: "/en/cars-and-family"
 alternateLocales: ["fi"]
 template: "hero"
@@ -11,98 +11,119 @@ theme: "modern"
 cover: "/images/cars-and-family-cover.png"
 heroImage: "/images/cars-and-family-cover.png"
 summary: |
-  A one-page TTRPG that's a "hack" (a modification) of the popular game Lasers & Feelings, built to feel exactly like a Fast & Furious movie. You play as a member of an elite crew of street-racing thieves.
+  Cars & Family is a high-octane one-page RPG hack of Lasers & Feelings by Petri Leinonen. Players take on the role of an elite crew of street-racing thieves
+  planning impossible heists while their leader, Von Petrol, recovers from an accident. The system uses a single number to balance 
+  driving skills (Cars) against teamwork (Family), capturing the spirit of the Fast & Furious franchise.
 lastValidated: 2025-11-28
 facts:
+  - label: "Author"
+    value: "Petri Leinonen"
   - label: "System"
     value: "Lasers & Feelings hack"
   - label: "Tone"
-    value: "Fast & Furious"
+    value: "Fast & Furious action"
+  - label: "Players"
+    value: "3-5 (Recommended)"
 stats:
   - metric: "Page count"
     value: "1"
     date: 2025-10-26
     source: "Rules text"
   - metric: "Word count"
-    value: "1000"
+    value: "909"
     date: 2025-10-26
+    source: "Rules text"
+  - metric: "Status"
+    value: "version 2"
+    date: 2025-12-25
     source: "Rules text"
 quotes:
   - source: "Petri Leinonen"
     text: "High-speed heists and chosen family."
     date: 2025-11-28
+faq:
+  - q: "What is Cars & Family?"
+    a: "It is a rules-light tabletop RPG based on Lasers & Feelings, emulating the Fast & Furious movies."
+  - q: "How does the dice system work?"
+    a: "Players choose a number between 2 and 5. Roll 1d6 (or more). Roll under your number for 'Cars' (stunts/driving), roll over for 'Family' (social/teamwork)."
+  - q: "What is the NOS mechanic?"
+    a: "Once per session, players can use NOS to add an automatic hit. They must then roll a die; if it doesn't match their number, a complication 'explodes' around them."
 entities:
   - type: "CreativeWork"
     name: "Cars & Family"
+    description: "A tabletop roleplaying game about street racing thieves."
+    author:
+      type: "Person"
+      name: "Petri Leinonen"
+    genre: ["Tabletop RPG", "Heist", "Action"]
+    isBasedOn:
+      type: "CreativeWork"
+      name: "Lasers & Feelings"
     sameAs:
       - "https://strangeworlder.itch.io/cars-and-family"
+      - "https://roolipelikirjasto.fi/series/stored/7"
 ---
+
 
 ## Introduction to the player of Cars & Family
 
-"Cars & Family" is a tabletop RPG that throws you directly into the world of high-speed heists and chosen family, heavily inspired by the *Fast & Furious* film franchise. You play as a member of an elite crew of international thieves known for pulling off impossible jobs using their unparalleled driving skills. The crew's boss, **Von Petrol**, is out of commission after a street-racing accident, leaving the rest of the "family" to complete the current dangerous heist. The game encourages balancing explosive car chases and action sequences with the quieter, introspective moments that define the crew's bond.
+**Cars & Family** throws you directly into the world of high-speed heists and chosen family. It is widely considered one of the most beloved and thematic adaptations of the *Lasers & Feelings* system. You play as a member of an elite crew of international thieves known for pulling off impossible jobs using their unparalleled driving skills. 
 
-The game's engine is a smart adaptation of John Harper's minimalist classic, Lasers & Feelings. Character creation is lightning fast: you pick a car style, a role within the crew (like Elite Street Racer or Tech Genius), and most importantly, a single number between 2 and 5. This number is the core of the system. When you attempt something risky, you roll one or more d6s (gaining extra dice if you're an expert or if the stakes are personal). To succeed at "Cars" actions — things involving driving skill, solo stunts, or physicality — you need to roll under your number. For "Family" actions — relying on teamwork, social maneuvering, or calm precision — you need to roll over your number. The number of successful dice determines your outcome, ranging from failure with a consequence (0 hits) to critical success with an added benefit (3+ hits).
+The crew's boss, **Von Petrol**, is out of commission, recovering in the hospital, leaving the rest of the "family" to complete the dangerous heist. The game encourages balancing explosive car chases with the introspective moments that define the crew's bond.
 
-"Cars & Family" builds upon its Lasers & Feelings foundation with several clever, thematic mechanics. If any die in your roll lands exactly on your number, you gain a moment of clarity, reflecting on past rides with your boss; you can ask the GM a question about the situation, and they'll answer as Von Petrol would. If your initial approach isn't working, you can choose to "Change Approach" (from Cars to Family or vice-versa), rerolling your dice pool, but now your number itself counts as a hit, offering tactical flexibility. Finally, channeling the source material's energy, you have a once-per-session "NOS" boost: push the button to gain an extra hit on any roll, but you must roll a d6 – if it matches your number, things get even crazier as something "EXPLODES AROUND YOU"!
+::alert{type="note" title="Get the Game"}
+- [Download Cars & Family on itch.io](https://strangeworlder.itch.io/cars-and-family)
+- [Download from Roolipelikirjasto (Finnish "Autot & Perhe" & English)](https://roolipelikirjasto.fi/series/stored/7)
+- [Carros & Familia (Portuguese Translation by Vila Nova)](/downloads/carros-familia.pdf)
+::
 
-No wonder Cars & Family is one of the most popular Lasers & Feelings hacks out there. It's a perfect use for the beloved system.
+## How to Play
 
-## Where can I get *Cars & Family*?
-  - [itch.io: Cars & Family (en) / Autot & Perhe (fi)](https://strangeworlder.itch.io/cars-and-family)
-  - [roolipelikirjasto: Autot ja Perhe / Cars and Family](https://roolipelikirjasto.fi/series/stored/7)
-  - [Carros & Familia](/downloads/carros-familia.pdf), a portugese translation by Vila Nova
+The game engine is a smart adaptation of John Harper's minimalist classic, **Lasers & Feelings**. 
 
-## What is *Cars & Family*?
+Character creation is lightning fast: you pick a **Car Style**, a **Role** (like Elite Street Racer or Tech Genius), and most importantly, a single number between **2 and 5**. This number is the core of the system.
 
-*Cars & Family* is a rules-light, one-page tabletop role-playing game designed by Petri Leinonen. It is one of the most beloved adaptations, or "hacks," of the *Lasers & Feelings* TTRPG system created by John Harper.
+When you attempt something risky, you roll **one or more d6s**. You gain extra dice if you're an expert or if the stakes are personal.
 
-The game's premise is that the players are a "crew of international thieves" who use "incredible street racing skills to pull off daring heists". The crew's boss, Von Petrol, is incapacitated in a hospital, and the players must complete the job they are in the middle of.
+*   **CARS (Roll Under):** For driving skill, solo stunts, or physicality.
+*   **FAMILY (Roll Over):** For teamwork, social maneuvering, or calm precision.
 
-It is also available in Finnish as "Autot ja Perhe" and a Portugese version called "Carros & Família" also exists.
+### Interpreting Results
 
-## How do you create a character?
+Count your total number of hits to determine the outcome.
 
-Players make five main choices to create their character:
-1.  **Car Style:** (e.g., Classic, High Tech, Supercar).
-2.  **Role:** (e.g., Elite Street Racer, Tech Genius, Former Spy).
-3.  **Your Number:** A number between 2 and 5.
-4.  **Name:** A "cool street racing name".
-5.  **Goal:** (e.g., Avenge Von, Retire after this one last heist).
+| Hits | Result |
+| :--- | :--- |
+| **3+** | **Critical Success!** You do it, plus the GM gives you an extra benefit. |
+| **2** | **Success.** You do what you set out to accomplish. |
+| **1** | **Mixed Success.** You do it, but there's a complication or cost. |
+| **0** | **Failure.** Something goes wrong. |
 
-## How does the core dice mechanic work?
-
-The entire game is built around "Your Number," which you choose during character creation. This number (from 2 to 5) divides all actions into two categories: **CARS** and **FAMILY**.
-
-* **CARS:** This represents "going solo, hotheaded stunts, physical things". You are better at CARS if you have a *higher* number.
-* **FAMILY:** This represents "cooperating, calm and precise work, social interactions". You are better at FAMILY if you have a *lower* number.
-
-When you do something "interesting and risky," you roll one or more six-sided dice (d6s).
-* You roll an extra die if you are an expert at the task.
-* You roll an extra die if the action is personal.
-
-To see if you "hit" (succeed), you compare each die to your number:
-* For **CARS** rolls, a hit is a die that rolls *under* your number.
-* For **FAMILY** rolls, a hit is a die that rolls *over* your number.
-
-### What do the results mean?
-
-You count your total number of hits to determine the outcome of your action.
-
-* **0 Hits:** "Something goes wrong". You fail and suffer a consequence.
-* **1 Hit:** You succeed, but you "suffer some consequence" or cost.
-* **2 Hits:** "You do what you set out to accomplish!".
-* **3+ Hits:** This is a "critical success!". The GM tells you what extra benefit you get.
-
-## What are the special rules?
-
-*Cars & Family* has two special mechanics that modify the basic rules.
+## Special Mechanics
 
 ### Von's Insight
-This mechanic is an adaptation of the "LASER FEELINGS" roll in the original game. If *any* of your dice lands *exactly on* your number, you gain an "insight to the situation" from your past experiences with Von. You can then ask the GM any one question about the situation, and they will answer "what Von would say to you". If you want to change your approach based on this (from cars to family or vice versa), you can reroll all your dice, and exact numbers are treated as successes on that roll instead of insight.
+
+If *any* of your dice lands **exactly on your number**, you gain a moment of clarity, reflecting on past rides with your boss. 
+
+*   **Ask a Question:** You can ask the GM a question about the situation, and they'll answer as Von Petrol would.
+*   **Change Approach:** If your initial approach isn't working, you can reroll your dice pool with a different stat (swapping Cars for Family or vice-versa). On this reroll, your number itself counts as a hit (they do *not* generate further insights).
 
 ### NOS
-Once per game session, you can "hit the Nitro" to "up the stakes". This gives you **one extra, automatic hit** on a roll.
 
-* **The Risk:** After using NOS, you must roll a single d6. If the die "comes up your number, all is cool".
-* **The Consequence:** If you roll *any other number*, "things will EXPLODE AROUND YOU!". This can be a literal or figurative explosion, depending on the situation.
+Once per session, you can "hit the Nitro" to up the stakes. This gives you **one extra, automatic hit** on any roll.
+
+::alert{type="warning" icon="lucide:flame" title="The Risk of NOS"}
+After using NOS, you must roll a single d6. 
+- If it **matches your number**, you're cool. 
+- If it results in **any other number**, things **EXPLODE AROUND YOU** (literally or figuratively).
+::
+
+## Character Creation Summary
+
+Players make five main choices to join the crew:
+
+1.  **Car Style:** (e.g., Classic, High Tech, Supercar).
+2.  **Role:** (e.g., Elite Street Racer, Tech Genius, Former Spy).
+3.  **Your Number:** A number between 2 and 5 (High = Better at Cars, Low = Better at Family).
+4.  **Name:** A cool street racing name.
+5.  **Goal:** (e.g., Avenge Von, Retire after this one last heist).

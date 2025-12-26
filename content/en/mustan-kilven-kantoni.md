@@ -75,6 +75,9 @@ The world draws heavily on Finland’s relationship with nature, history, and fo
 ### What are OSR and “retro-adventure game”?
 The term **OSR** (Old School Renaissance/Revival) refers to a role-playing tradition that emulates the style of 1970s and 1980s games, emphasizing player creativity, problem-solving, and environmental challenges. "Retro-adventure game" is the specific term used for *Them Deeper Bones*; it is based on OSR philosophy but highlights the setting’s unique approach to this style of play.
 
+### What are the supplements for Black Shield Canton?
+Black Shield Canton has a number of supplements, including *Hirviökirja*, *Sulkavan sointu*, and *Yöjoen raivo*.
+
 ## Sources
 *   Leinonen, Petri. (2022). *Them Deeper Bones - The Player's Book* (Beta 1.6.2).
 *   Leinonen, Petri. (2022). *Them Deeper Bones - The Guide Book* (Beta 1.6.2).
@@ -84,7 +87,7 @@ The term **OSR** (Old School Renaissance/Revival) refers to a role-playing tradi
 *   Ruotsalainen, Wille. (2024). *Yöjoen raivo*. Gogam.
 
 ## Links
-*   **Them Deeper Bones**: [https://themdeeperbones.com/](https://themdeeperbones.com/), Fantasiapelit
-*   **Hirviökirja**: [http://gogam.eu/hirviokirja](http://gogam.eu/hirviokirja), Puolenkuun pelit, Fantasiapelit, Laiska Pelikaani, Pelikrypta Ikamaa
-*   **Sulkavan sointu**: [http://gogam.eu/sulkavansointu/](http://gogam.eu/sulkavansointu/), Puolenkuun pelit, Fantasiapelit, Laiska pelikaani, Pelikrypta Ikamaa
-*   **Yöjoen raivo**: Puolenkuun pelit, Fantasiapelit, Laiska pelikaani, Pelikrypta Ikamaa
+*   **Them Deeper Bones**: [https://themdeeperbones.com/](https://themdeeperbones.com/), [Fantasiapelit](https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_221393)
+*   **Hirviökirja**: [http://gogam.eu/hirviokirja](http://gogam.eu/hirviokirja), [Puolenkuun pelit](https://www.puolenkuunpelit.com/kauppa/product_info.php?products_id=168296), [Fantasiapelit](https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_221394), [Laiska Pelikaani](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-hirviokirja-84744) / [PDF](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-hirviokirja-vesileimattu-pdf-81049)
+*   **Sulkavan sointu**: [http://gogam.eu/sulkavansointu/](http://gogam.eu/sulkavansointu/), [Puolenkuun pelit](https://www.puolenkuunpelit.com/kauppa/product_info.php?products_id=179450), [Fantasiapelit](https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_225693), [Laiska pelikaani](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-sulkavan-sointu-84879) / [PDF](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-sulkavan-sointu-vesileimattu-pdf-84945), [Pelikrypta Ikamaa](https://pelikrypta.fi/products/sulkavan-sointu)
+*   **Yöjoen raivo**: [Puolenkuun pelit](https://www.puolenkuunpelit.com/kauppa/product_info.php?products_id=189358), [Fantasiapelit](https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_230989), [Laiska pelikaani](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-yojoen-raivo-81803), [Pelikrypta Ikamaa](https://pelikrypta.fi/products/yojoen-raivo)

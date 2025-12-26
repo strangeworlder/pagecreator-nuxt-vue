@@ -44,6 +44,7 @@ entities:
     name: "Hirviökirja"
     sameAs:
       - "https://www.drivethrurpg.com/product/417980/Hirviokirja"
+      - "https://rpggeek.com/rpgitem/458397/hirviokirja"
 ---
 
 Hirviökirja tarjoaa laajan kattauksen vastustajia haastamaan alhaisten kokemustasojen hahmoja. Sen sivuilta löytyy kaikenlaista vipeltäjää sulkavista konteloihin; luomoja, kalmoja, mämmilimoja ja ilmeksiä unohtamatta. Kyseessä on siis hirviömäinen kokoelma, joka laajentaa Legendoja & lohikäärmeissä esiteltyä vastustajavalikoimaa pohjoisista maista ammentavilla fantastisilla olennoilla. L&L pohjaa Wizards of the Coastin julkaisemaan viidennen laitoksen sääntöaihioon (SRD), joten kaikki Hirviökirjan vastustajat ovat siten käytettävissä myös maailman suosituimmassa roolipelissä.
@@ -83,7 +84,7 @@ Kesällä 2022 Myrrysmiehet Oy julkaisi Legendoja & lohikäärmeitä -roolipelin
 
 Avoimen lisenssin hyödyntämisen lisäksi toinen moderni lisäys roolipelien toteutukseen Hirviökirjassa on Midjourneyn kuvageneraatio-algoritmiin, kansankielisesti “AI-taiteeseen,” pohjaava ja sitä hyödyntävä kuvitus. Tämä mahdollistaa yksittäiselle tekijälle myös näyttävän kuvituksen tuottamisen, erityisesti yhdistettynä perinteiseen kuvankäsittelyyn ja piirustukseen.
 
-Hirviökirja kertoo tarinaa pohjoisista [Mustan kilven kantonin](/fi/mustan-kilven-kantoni) rajamaista vastustajien kuvausten seassa, ja pyrkii maalaamaan kuvan suomalaisuudesta inspiroituneesta fantasiamaailmasta, joka ei nojaisi niin vahvasti amerikkalaiseen frontier-myyttiin, tai barbaaristen alkuasukasheimojen ja sivistyneiden sankareiden väliseen konfliktiin, johon niin monet perinteiset fantasiamaailmat herkästi sortuvat.
+Hirviökirja kertoo tarinaa pohjoisista Mustan kilven kantonin rajamaista vastustajien kuvausten seassa, ja pyrkii maalaamaan kuvan suomalaisuudesta inspiroituneesta fantasiamaailmasta, joka ei nojaisi niin vahvasti amerikkalaiseen frontier-myyttiin, tai barbaaristen alkuasukasheimojen ja sivistyneiden sankareiden väliseen konfliktiin, johon niin monet perinteiset fantasiamaailmat herkästi sortuvat.
 
 ## Tekijän kommentit
 

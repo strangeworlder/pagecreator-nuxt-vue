@@ -1,7 +1,8 @@
 ---
 title: "Gogam: Roleplaying games from Finland"
 description: "Roleplaying games by Petri Leinonen. Indie tabletop RPGs like Cars & Family, and Vuosisata."
-dateModified: 2025-10-25
+dateModified: 2025-12-25
+datePublished: 2025-12-25
 tags: ["starter"]
 canonical: "/"
 alternateLocales: ["fi"]

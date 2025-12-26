@@ -1,7 +1,7 @@
 ---
 title: "Night of the Thirteenth"
 description: "A slasher-style horror RPG where you play the cast of a movie that hasn't happened yet. Survival is unlikely."
-datePublished: 2025-10-25
+datePublished: 2025-12-25
 dateModified: 2025-12-25
 tags: ["game", "horror", "slasher", "TTRPG", "ashcan"]
 canonical: "/en/nott"

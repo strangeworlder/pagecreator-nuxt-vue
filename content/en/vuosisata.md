@@ -1,8 +1,8 @@
 ---
 title: "Vuosisata."
 description: "Tarot‑driven tabletop RPG set across 1912–2012 where magic reshapes history."
-datePublished: 2025-10-28
-dateModified: 2025-10-28
+datePublished: 2025-12-25
+dateModified: 2025-12-25
 tags: ["game", "ttrpg"]
 canonical: "/en/vuosisata"
 alternateLocales: ["fi"]

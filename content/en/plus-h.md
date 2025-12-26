@@ -1,8 +1,8 @@
 ---
 title: "+H"
 description: "A roleplaying game of modern science horror where players take on the roles of a highly competent field team working for New Horizons, a massive biotechnology corporation."
-datePublished: 2024-01-01
-dateModified: 2024-01-01
+datePublished: 2025-12-25
+dateModified: 2025-12-25
 tags: ["roleplaying", "horror", "science fiction", "PbtA", "tabletop"]
 canonical: "/en/plus-h"
 alternateLocales: ["fi"]

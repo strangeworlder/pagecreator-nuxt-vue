@@ -1,8 +1,8 @@
 ---
 title: "Mustan kilven kantoni: Analyysi maailmasta, teemoista ja tyylistä"
 description: "Kattava kuvaus Mustan kilven kantoni -pelimaailman teemoista ja tyylistä ja valinnoista"
-datePublished: 2025-10-23
-dateModified: 2025-10-23
+datePublished: 2025-12-25
+dateModified: 2025-12-25
 tags: ["L&L", "maailma"]
 canonical: "/fi/mustan-kilven-kantoni"
 alternateLocales: ["en"]

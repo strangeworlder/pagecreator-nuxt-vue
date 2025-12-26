@@ -1,8 +1,8 @@
 ---
 title: "A Particular Group of Corvids - Mystery Action TTRPG"
 description: "A tabletop mystery and action RPG where players take on the role of skilled corvid sleuths in the city of Roost. Think Sherlock Holmes meets Peaky Blinders, but with birds. Uses a unique d20 pool system."
-datePublished: 2025-01-27
-dateModified: 2025-12-25
+datePublished: 2025-12-26
+dateModified: 2025-12-26
 tags: ["game", "mystery", "action", "corvids", "investigation", "TTRPG", "Tabletop RPG", "Roleplaying Game"]
 canonical: "/en/a-particular-group-of-corvids"
 alternateLocales: ["fi"]

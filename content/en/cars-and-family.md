@@ -1,8 +1,8 @@
 ---
 title: "Cars & Family"
 description: "A Fast & Furious-inspired heist TTRPG built on Lasers & Feelings, where you balance high-speed stunts with the bonds of your crew."
-datePublished: 2025-10-26
-dateModified: 2025-10-26
+datePublished: 2025-12-26
+dateModified: 2025-12-26
 tags: ["game", "heist", "action", "lasers & feelings", "TTRPG", "one-page rpg"]
 canonical: "/en/cars-and-family"
 alternateLocales: ["fi"]

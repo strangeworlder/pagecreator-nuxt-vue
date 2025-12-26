@@ -1,8 +1,8 @@
 ---
 title: "Pros & Cons"
 description: "Introduction for new players to Pros & Cons: a heist RPG built on Lasers & Feelings."
-datePublished: 2025-10-26
-dateModified: 2025-10-26
+datePublished: 2025-12-26
+dateModified: 2025-12-26
 tags: ["game", "heist"]
 canonical: "/en/pros-and-cons"
 alternateLocales: ["fi"]

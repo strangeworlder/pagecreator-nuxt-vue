@@ -1,8 +1,8 @@
 ---
 title: "The Pig Is Sus. Eliminate the Pig."
 description: "Introduction for new players to The Pig Is Sus: a prototype tactical RPG combat system that rewards player skill over character stats."
-datePublished: 2025-01-27
-dateModified: 2025-01-27
+datePublished: 2025-12-25
+dateModified: 2025-12-25
 tags: ["game", "tactical", "combat", "prototype"]
 canonical: "/en/the-pig-is-sus"
 alternateLocales: ["fi"]

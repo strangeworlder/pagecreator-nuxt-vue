@@ -1,7 +1,7 @@
 ---
 title: "Cyberpunk is Dead"
 description: "A minimalist Blades in the Dark hack by Petri Leinonen where you play as disposable corporate operatives enforcing the company's will."
-datePublished: 2025-10-26
+datePublished: 2025-12-25
 dateModified: 2025-12-25
 tags: ["game", "cyberpunk"]
 canonical: "/en/cyberpunk-is-dead"

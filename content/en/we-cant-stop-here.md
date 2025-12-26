@@ -1,8 +1,8 @@
 ---
 title: "We can't stop here..."
 description: "A grimy, psychedelic Mörk Borg supplement by Petri Leinonen about traveling with a sentient, decaying herb wagon."
-datePublished: 2025-10-27
-dateModified: 2025-10-27
+datePublished: 2025-12-25
+dateModified: 2025-12-25
 tags: ["game", "mork-borg"]
 canonical: "/en/we-cant-stop-here"
 alternateLocales: ["fi"]

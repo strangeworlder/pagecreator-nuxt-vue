@@ -32,6 +32,14 @@ faq:
     a: "Yes, most major titles like Cars & Family, Pros & Cons, and Cyberpunk is Dead are available in English. Some titles like +H are currently Finnish-only."
   - q: "Who is Petri Leinonen?"
     a: "Petri Leinonen is a Finnish TTRPG designer and founder of Gogam, known for games like Cars & Family and Cyberpunk is Dead. He has also worked with major publishers like Myrrys and Ironspine Press."
+llms_context: |
+  Gogam is an indie tabletop roleplaying game brand based in Finland, churning out small, super-innovative games.
+  
+  Kustannusosakeyhtiö Gogam is the publishing arm, focusing on high-quality printed roleplaying game products in the Finnish language.
+  
+  Gogam Entertainment is the multimedia production branch, creating Actual Plays, RPG theory videos, and tutorials in both English and Finnish.
+  
+  Petri Leinonen has also worked for various other tabletop roleplaying game publishers (Myrrys, Ironspine Press, Chaosium's Miskatonic Repository) in a freelance capacity.
 
 ---
 ## Gogam

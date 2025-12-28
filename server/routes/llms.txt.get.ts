@@ -8,24 +8,48 @@ export default defineEventHandler(async (event) => {
   const homePath = `/${defaultLocale}`;
   const home = await serverQueryContent(event).where({ _path: homePath }).findOne();
 
-  const allDocs = await serverQueryContent(event)
-    .only(["_path", "title"]) // keep the output concise
-    .find();
+  const allDocs = await serverQueryContent(event).where({ _partial: false }).find();
 
-  const defaultLocaleDocs = allDocs
-    .filter((d: any) => d._path && d._path.startsWith(`/${defaultLocale}`))
-    .sort((a: any, b: any) => a._path.localeCompare(b._path));
+  // Helper to append rich details (Description, Facts, Stats)
+  const appendDocDetails = (lines: string[], doc: any) => {
+    // Title link
+    const title = String(doc.title || doc._path.split("/").pop() || doc._path).replace(/-/g, " ");
+    lines.push(`- [${title}](${siteUrl}${doc._path})`);
 
-  const otherLocaleDocs = allDocs
-    .filter((d: any) => d._path && !d._path.startsWith(`/${defaultLocale}`))
-    .sort((a: any, b: any) => a._path.localeCompare(b._path));
+    // Description / Summary
+    if (doc.summary) {
+      lines.push(`  - Description: ${doc.summary}`);
+    } else if (doc.description) {
+      lines.push(`  - Description: ${doc.description}`);
+    }
 
-  const makeItemLine = (d: any) => {
-    const title = String(d.title || d._path.split("/").pop() || d._path).replace(/-/g, " ");
-    return `- [${title}](${siteUrl}${d._path})`;
+    // Facts
+    if (doc.facts && Array.isArray(doc.facts)) {
+      const factsStr = doc.facts.map((f: any) => `${f.label}: ${f.value}`).join(", ");
+      lines.push(`  - Facts: ${factsStr}`);
+    }
+
+    // Stats
+    if (doc.stats && Array.isArray(doc.stats)) {
+      const statsStr = doc.stats.map((s: any) => `${s.metric}: ${s.value}`).join(", ");
+      lines.push(`  - Stats: ${statsStr}`);
+    }
+
+    lines.push("");
   };
 
+  const sortDocs = (a: any, b: any) => a._path.localeCompare(b._path);
+
+  const keyPages = allDocs
+    .filter((d: any) => d._path && (d._path.startsWith("/en") || d._path === "/"))
+    .sort(sortDocs);
+
+  const fiPages = allDocs
+    .filter((d: any) => d._path && d._path.startsWith("/fi"))
+    .sort(sortDocs);
+
   const lines: string[] = [];
+
   // H1 title
   lines.push(`# ${String(home?.title || "Gogam")}`);
   lines.push("");
@@ -34,28 +58,39 @@ export default defineEventHandler(async (event) => {
   lines.push(`> ${String(home?.description || "Roleplaying games by Petri Leinonen.")}`);
   lines.push("");
 
-  // Optional details paragraph
-  lines.push(
-    `This site provides articles and product pages. The default locale is "${defaultLocale}" and URLs follow the pattern /<locale>/... (e.g. ${siteUrl}/${defaultLocale}). For a full list of pages, see the sitemap at ${siteUrl}/sitemap.xml.`,
-  );
-  lines.push("");
-
-  // Key pages
-  if (defaultLocaleDocs.length) {
-    lines.push("## Key pages");
-    lines.push("");
-    for (const d of defaultLocaleDocs) {
-      lines.push(makeItemLine(d));
+  // LLM Context from Frontmatter
+  // This allows manual curation of the narrative context for LLMs
+  if (home.llms_context) {
+    if (Array.isArray(home.llms_context)) {
+      lines.push(...home.llms_context);
+    } else {
+      lines.push(String(home.llms_context));
     }
     lines.push("");
   }
 
-  // Optional secondary pages (e.g. other locales)
-  if (otherLocaleDocs.length) {
-    lines.push("## Optional");
+  // Context paragraph
+  lines.push(
+    `This site provides articles and product pages. The content is available in English and Finnish. For a full list of pages, see the sitemap at ${siteUrl}/sitemap.xml.`
+  );
+  lines.push("");
+
+  // English Section
+  if (keyPages.length) {
+    lines.push("## English Pages");
     lines.push("");
-    for (const d of otherLocaleDocs) {
-      lines.push(makeItemLine(d));
+    for (const doc of keyPages) {
+      appendDocDetails(lines, doc);
+    }
+    lines.push("");
+  }
+
+  // Finnish Section
+  if (fiPages.length) {
+    lines.push("## Finnish Pages");
+    lines.push("");
+    for (const doc of fiPages) {
+      appendDocDetails(lines, doc);
     }
     lines.push("");
   }

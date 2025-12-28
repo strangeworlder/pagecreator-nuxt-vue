@@ -2,7 +2,7 @@
 title: Hirviökirja
 description: Valikoima vaarallisia vastustajia aloitteleville hahmoille maailman suosituimpaan roolipeliin.
 datePublished: 2022-11-11
-dateModified: 2022-12-07
+dateModified: 2025-12-28
 canonical: "/hirviokirja"
 template: product
 cover: "/images/products/hirviokirja/kansi.webp"

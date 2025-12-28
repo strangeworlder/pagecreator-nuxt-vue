@@ -144,8 +144,8 @@ export function useCustomContentHead(docRef: Ref<Record<string, any> | null | un
     const alternatesRaw: unknown = doc.alternateLocales;
     const alternates = Array.isArray(alternatesRaw)
       ? alternatesRaw
-          .map((value) => (typeof value === "string" ? value.trim() : ""))
-          .filter((value): value is string => isLikelyLocale(value))
+        .map((value) => (typeof value === "string" ? value.trim() : ""))
+        .filter((value): value is string => isLikelyLocale(value))
       : [];
 
     const alternateLocaleSet = new Set(alternates.map(formatHreflang));
@@ -190,7 +190,7 @@ export function useCustomContentHead(docRef: Ref<Record<string, any> | null | un
 
     const ldBase: Record<string, any> = {
       "@context": "https://schema.org",
-      "@type": type === "article" ? "Article" : "WebPage",
+      "@type": type === "article" ? "Article" : (type === "website" ? "WebPage" : type),
       inLanguage: documentLocale,
       name: title,
       description,
@@ -258,9 +258,39 @@ export function useCustomContentHead(docRef: Ref<Record<string, any> | null | un
       }
     }
 
+    if (doc.summary) {
+      ldBase.abstract = doc.summary;
+    }
+
+    if (doc.citations && Array.isArray(doc.citations)) {
+      ldBase.citation = doc.citations.map((c: any) => c.url || c.title);
+    }
+
     const structured = Array.isArray(doc.structuredData)
       ? [ldBase, ...doc.structuredData]
       : [ldBase];
+
+    // 4. FAQ -> FAQPage
+    if (doc.faq && Array.isArray(doc.faq) && doc.faq.length > 0) {
+      const faqPage = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: doc.faq.map((item: any) => ({
+          "@type": "Question",
+          name: item.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.a,
+          },
+        })),
+      };
+      structured.push(faqPage);
+    }
+
+    // 5. Tags -> Keywords
+    if (doc.tags && Array.isArray(doc.tags)) {
+      meta.push({ name: "keywords", content: doc.tags.join(", ") });
+    }
 
     useHead({
       title,

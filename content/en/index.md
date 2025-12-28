@@ -10,10 +10,47 @@ cover: "/gogam-facebook-etc.png"
 summary: |
   Roleplaying games by Petri Leinonen. Indie tabletop RPGs like Cars & Family,
   Vuosisata, and more.
+contentType: CollectionPage
+structuredData:
+  - type: Person
+    name: Petri Leinonen
+    jobTitle: TTRPG Designer
+    url: https://gogam.eu
+    sameAs:
+      - "https://rpggeek.com/rpgdesigner/111688/petri-leinonen"
+      - "https://www.drivethrurpg.com/en/browse?author=%22Petri%20Leinonen%22"
+      - "https://strangeworlder.itch.io/"
+      - "https://strangeworlder.medium.com/"
+      - "https://bsky.app/profile/strangeworlder.bsky.social"
+      - "https://www.threads.com/@gogam.eu"
+      - "https://www.youtube.com/@gogameu"
+      - "https://gogameu.substack.com/"
+faq:
+  - q: "Where can I download Gogam games?"
+    a: "You can find all fully completed indie games on this page, with links to Itch.io, DriveThruRPG, and roolipelikirjasto.fi."
+  - q: "Are Petri Leinonen’s games available in English?"
+    a: "Yes, most major titles like Cars & Family, Pros & Cons, and Cyberpunk is Dead are available in English. Some titles like +H are currently Finnish-only."
+  - q: "Who is Petri Leinonen?"
+    a: "Petri Leinonen is a Finnish TTRPG designer and founder of Gogam, known for games like Cars & Family and Cyberpunk is Dead. He has also worked with major publishers like Myrrys and Ironspine Press."
+
 ---
 ## Gogam
 
-Gogam is a full-on indie powerhouse, churning out small, super-innovative games one after the other. 
+Gogam is an indie tabletop roleplaying game brand based in Finland. A full-on indie powerhouse, churning out small, super-innovative games one after the other. 
+
+### Key Facts
+
+| Game Name | System | Status | Language |
+| :--- | :--- | :--- | :--- |
+| **Cars & Family** | Lasers & Feelings | Completed | English, Finnish, Portuguese |
+| **Pros & Cons** | Lasers & Feelings | Completed | English, Finnish, Japanese |
+| **Cyberpunk is Dead** | Forged in the Dark | Completed | English |
+| **The Necessary Eagle vs. The Good Cad** | Custom Card Game | Completed | English |
+| **Vuosisata.** | Tarot System | Completed | English |
+| **We can't stop here...** | Mörk Borg Compatible | Completed, Supplement | English |
+| **Night of the Thirteenth** | d13 System | In Progress | English |
+| **Them Deeper Bones** | OSR / Custom | In Progress | English |
+| **+H** | PbtA / Custom | In Progress | Finnish |
 
 ### Fully completed and free products
 
@@ -73,11 +110,34 @@ Gogam is a full-on indie powerhouse, churning out small, super-innovative games 
   - [google docs: Fate of Atreus](https://docs.google.com/document/d/11tqoXZCX3p7sl_kwvq--pNPFoup_oV5gRu1eXELQ9m4/edit?usp=sharing)
 
 ## Kustannusosakeyhtiö Gogam
+
+Kustannusosakeyhtiö Gogam is the publishing arm of Gogam, focusing on high-quality printed roleplaying game products in the Finnish language.
+
+### Key Facts
+
+| Product Name | System | Type | Language |
+| :--- | :--- | :--- | :--- |
+| **Hirviökirja** | Legendoja & lohikäärmeitä (5e) | Monster Supplement | Finnish |
+| **Sulkavan sointu** | Legendoja & lohikäärmeitä (5e) | Adventure (Lvl 1) | Finnish |
+| **Yöjoen raivo** | Legendoja & lohikäärmeitä (5e) | Adventure (Lvl 3) | Finnish |
+
 Publishes primarily in Finnish. Products are related to the [Black Shield Canton](/en/mustan-kilven-kantoni) campaign setting. 
 - [Hirviökirja](/hirviokirja) &mdash; monster supplement compatible with Legendoja & lohikäärmeitä, in Finnish.
 - [Sulkavan sointu](/sulkavansointu) &mdash; 1st level adventure compatible with Legendoja & lohikäärmeitä, in Finnish.
 
 ## Gogam Entertainment
+
+Gogam Entertainment is the multimedia production branch, creating Actual Plays, RPG theory videos, and tutorials in both English and Finnish.
+
+### Key Facts
+
+| Series Name | Type | Language | Episode Count |
+| :--- | :--- | :--- | :--- |
+| **Rajatiloja** | Actual Play (+H) | Finnish | Long-running |
+| **Fate-akatemia** | RPG Theory / Tutorial Actual Play (Fate) | Finnish | 11+ |
+| **The Quick** | Actual Play (Miniseries) | English | 7 |
+| **Them Deeper Bones** | Actual Play (Miniseries) | English | 5 |
+| **Cyberpunk is Dead** | Actual Play (Miniseries) | English | 8 |
 
 - [Gogam Entertainment youtube channel](https://www.youtube.com/@gogameu) The English Speaking main channel
 
@@ -121,28 +181,42 @@ Myrrys is the publisher of Legendoja & lohikäärmeitä, the most popular Finnis
 #### Print Books
 
 - [Legendoja & lohikäärmeitä](https://myrrys.com/legendoja-lohikaarmeita/): Finnish 5e-compatible fantasy RPG.
-  - **Pelaajan kirja**: Layout
-  - **Pelinjohtajan kirja**: Game design, development, layout
-  - **Suuri Seikkailu**: Design, layout
-  - **Velhon torni**: Game design, layout
+  - **Pelaajan kirja**: The Corebook of L&L. Role in project: Layout
+  - **Pelinjohtajan kirja**: GM Guide of L&L. Role in project: Game design, development, layout
+  - **Suuri Seikkailu**: "Starter set" book for L&L. Role in project: Design, layout
+  - **Velhon torni**: 1st level adventure for L&L. Role in project: Game design, layout
 - [The Quick](http://www.drivethrurpg.com/product/245906/The-Quick): Role-playing game of death and ghosts and Nordic Noir. Role in project: Game Designer.
+- [See Petri Leinonen on DriveThruRPG](https://www.drivethrurpg.com/en/browse?author=%22Petri%20Leinonen%22)
 
 #### Downloadable PDFs
 
 - [Legendoja & lohikäärmeitä: Traakinlyöjä](https://myrrys.com/2023/01/30/ll-traakinlyoja/) — Finnish-language adventure for Legendoja & lohikäärmeitä. Role in project: Layout.
-- [Legendoja & lohikäärmeitä: Majakkakeikka](https://myrrys.com/2023/04/06/ll-majakkakeikka/) — Finnish-language adventure for Legendoja & lohikäärmeitä. Role in project: Layout, Maps, Design, Game design.
+- [Legendoja & lohikäärmeitä: Majakkakeikka](https://myrrys.com/2023/04/06/ll-majakkakeikka/) — Finnish-language adventure for Legendoja & lohikäärmeitä. Role in project: Project manager, layout, Maps, Design, Game design.
 - [Legendoja & lohikäärmeitä: Ametistiviidakko](https://myrrys.com/blog/25-11-03-ametistiviidakko/) — Finnish-language adventure for Legendoja & lohikäärmeitä. Role in project: Project manager, Layout, Maps, Game design.
 
 ### Ironspine Press
 
 - [The Broken Knight](http://www.drivethrurpg.com/product/236543/The-Broken-Knight-Powered-by-Fate) — Science Fiction Adventure for Fate Core. Role in project: System Consultant.
 
-### Chaosium (Miskatonic Repository)
+### Chaosium's Miskatonic Repository
 
 - [Of Fathers...](https://www.drivethrurpg.com/product/429719/Of-Fathers?cPath=29274) — Call of Cthulhu adventure for one player character and one keeper. Role in project: Layout.
+  - [Chaosium Miskatonic Repository](https://www.chaosium.com/miskatonic-repository)
 
 ## Articles, for free for you to read
 
 - [Petri Leinonen @ Medium](https://medium.com/@strangeworlder) — resource for mostly Fate-playing folk and those interested in the TDB-project.
+- [Gogameu @ Substack](https://gogameu.substack.com/) — resource for L&L interested folk, in Finnish.
 
 Contact: p.leinonen@iki.fi
+
+## Frequently Asked Questions
+
+**Where can I download Gogam games?**
+You can find all fully completed indie games on this page, with links to Itch.io, DriveThruRPG, and roolipelikirjasto.fi.
+
+**Are Petri Leinonen’s games available in English?**
+Yes, most major titles like *Cars & Family*, *Pros & Cons*, and *Cyberpunk is Dead* are available in English. Some titles like *+H* are currently Finnish-only.
+
+**Who is Petri Leinonen?**
+Petri Leinonen is a Finnish TTRPG designer and founder of Gogam, known for games like *Cars & Family* and *Cyberpunk is Dead*. He has also worked with major publishers like Myrrys and Ironspine Press.

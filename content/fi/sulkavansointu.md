@@ -2,7 +2,7 @@
 title: Sulkavan sointu
 description: Seikkailu 1. kokemustason hahmoille maailman suosituimpaan roolipeliin.
 datePublished: 2023-07-28
-dateModified: 2023-08-01
+dateModified: 2025-12-28
 canonical: "/sulkavansointu"
 template: product
 cover: "/images/products/sulkavansointu/kansi.webp"
@@ -43,6 +43,7 @@ entities:
     name: "Sulkavan sointu"
     sameAs:
       - "https://www.drivethrurpg.com/product/436237/Sulkavan-sointu"
+      - "https://rpggeek.com/rpgitem/459255/sulkavan-sointu"
 ---
 
 _**Tuore seikkailijajoukko pysähtyy Ristijärven rannassa olevaan tukkilaisleiriin yöksi tarkoituksenaan jatkaa matkaa rajan taakse korpimaille, mutta päätyykin nokat vastakkain aluetta riivaavien höyhenpeitteisten jokirosvojen kanssa..**_

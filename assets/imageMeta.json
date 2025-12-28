@@ -123,34 +123,6 @@
     "width": 150,
     "height": 150
   },
-  "/images/products/sulkavansointu/sulkava.webp": {
-    "width": 500,
-    "height": 500
-  },
-  "/images/products/sulkavansointu/silmat.webp": {
-    "width": 900,
-    "height": 600
-  },
-  "/images/products/sulkavansointu/logo.webp": {
-    "width": 2616,
-    "height": 1200
-  },
-  "/images/products/sulkavansointu/kansi.webp": {
-    "width": 458,
-    "height": 600
-  },
-  "/images/products/sulkavansointu/background.webp": {
-    "width": 842,
-    "height": 1920
-  },
-  "/images/products/sulkavansointu/background-full.webp": {
-    "width": 4800,
-    "height": 4500
-  },
-  "/images/products/sulkavansointu/TDB-logo.webp": {
-    "width": 338,
-    "height": 538
-  },
   "/images/products/hirviokirja/sulkava.webp": {
     "width": 500,
     "height": 500
@@ -179,17 +151,33 @@
     "width": 338,
     "height": 538
   },
-  "/gen_images/images/products/sulkavansointu/sulkava-1536.webp": {
-    "width": 1536,
-    "height": 1536
+  "/images/products/sulkavansointu/sulkava.webp": {
+    "width": 500,
+    "height": 500
   },
-  "/gen_images/images/products/sulkavansointu/silmat-1536.webp": {
-    "width": 1536,
-    "height": 1024
+  "/images/products/sulkavansointu/silmat.webp": {
+    "width": 900,
+    "height": 600
   },
-  "/gen_images/images/products/sulkavansointu/kansi-1536.webp": {
-    "width": 1536,
-    "height": 2012
+  "/images/products/sulkavansointu/logo.webp": {
+    "width": 2616,
+    "height": 1200
+  },
+  "/images/products/sulkavansointu/kansi.webp": {
+    "width": 458,
+    "height": 600
+  },
+  "/images/products/sulkavansointu/background.webp": {
+    "width": 842,
+    "height": 1920
+  },
+  "/images/products/sulkavansointu/background-full.webp": {
+    "width": 4800,
+    "height": 4500
+  },
+  "/images/products/sulkavansointu/TDB-logo.webp": {
+    "width": 338,
+    "height": 538
   },
   "/gen_images/images/products/hirviokirja/sulkava-1536.webp": {
     "width": 1536,
@@ -206,6 +194,18 @@
   "/gen_images/images/products/hirviokirja/kansi-150.webp": {
     "width": 150,
     "height": 150
+  },
+  "/gen_images/images/products/sulkavansointu/sulkava-1536.webp": {
+    "width": 1536,
+    "height": 1536
+  },
+  "/gen_images/images/products/sulkavansointu/silmat-1536.webp": {
+    "width": 1536,
+    "height": 1024
+  },
+  "/gen_images/images/products/sulkavansointu/kansi-1536.webp": {
+    "width": 1536,
+    "height": 2012
   },
   "/images/spinskull.gif": {
     "width": 100,

@@ -2,6 +2,7 @@
 import { createError, getQuery, setHeader, getRequestHeader } from "h3";
 import { promises as fs } from "node:fs";
 import { resolve, extname, basename, dirname, join } from "node:path";
+import https from "node:https";
 import { useRuntimeConfig } from "#imports";
 import sharp from "sharp";
 
@@ -83,6 +84,26 @@ async function fetchFromSite(rawSrc: string, event: any, runtime: any): Promise<
       return Buffer.from(await res.arrayBuffer());
     } catch (error: any) {
       attempts.push(`${base}: ${error?.message || "network error"}`);
+      // Fallback for self-signed or invalid certs on loopback
+      try {
+        const urlObj = new URL(rawSrc, base);
+        if (urlObj.protocol === "https:") {
+          return await new Promise<Buffer>((resolve, reject) => {
+            const req = https.get(urlObj.toString(), { rejectUnauthorized: false }, (res) => {
+              if (res.statusCode !== 200) {
+                reject(new Error(`Fallback Status ${res.statusCode}`));
+                return;
+              }
+              const data: any[] = [];
+              res.on("data", (chunk) => data.push(chunk));
+              res.on("end", () => resolve(Buffer.concat(data)));
+            });
+            req.on("error", (err) => reject(err));
+          });
+        }
+      } catch {
+        // Fallback failed
+      }
     }
   }
   throw createError({
@@ -184,7 +205,7 @@ export default defineEventHandler(async (event) => {
     setHeader(event, "cache-control", "public, max-age=300");
     setHeader(event, "content-length", String(buf.length));
     return buf;
-  } catch {}
+  } catch { }
 
   await fs.mkdir(dirname(outputPath), { recursive: true });
 

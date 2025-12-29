@@ -229,11 +229,14 @@ if (process.client) {
       enhancedProductNavigationComp.value = pnav.default;
       enhancedImgComp.value = imgEnh.default;
       enhancedPComp.value = pEnh.default;
-      enhancedComponentsLoaded.value = true;
       if (process.dev) console.log("[enhancements] Enhanced components loaded and ready");
     })
     .catch((err) => {
       if (process.dev) console.warn("[enhancements] Failed to load enhanced components", err);
+    })
+    .finally(() => {
+      // Always signal that we're done loading, success or fail
+      enhancedComponentsLoaded.value = true;
     });
 }
 

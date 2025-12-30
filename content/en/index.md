@@ -1,12 +1,16 @@
 ---
-title: "Gogam: Roleplaying games from Finland"
-description: "Roleplaying games by Petri Leinonen. Indie tabletop RPGs like Cars & Family, and Vuosisata."
-dateModified: 2025-12-25
-datePublished: 2025-12-25
-tags: ["starter"]
-canonical: "/"
-alternateLocales: ["fi"]
-cover: "/gogam-facebook-etc.png"
+title: 'Gogam: Roleplaying games from Finland'
+description: >-
+  Roleplaying games by Petri Leinonen. Indie tabletop RPGs like Cars & Family,
+  and Vuosisata.
+dateModified: 2025-12-30
+datePublished: 2025-12-29
+tags:
+  - starter
+canonical: /
+alternateLocales:
+  - fi
+cover: /gogam-facebook-etc.png
 summary: |
   Roleplaying games by Petri Leinonen. Indie tabletop RPGs like Cars & Family,
   Vuosisata, and more.
@@ -15,32 +19,46 @@ structuredData:
   - type: Person
     name: Petri Leinonen
     jobTitle: TTRPG Designer
-    url: https://gogam.eu
+    url: 'https://gogam.eu'
     sameAs:
-      - "https://rpggeek.com/rpgdesigner/111688/petri-leinonen"
-      - "https://www.drivethrurpg.com/en/browse?author=%22Petri%20Leinonen%22"
-      - "https://strangeworlder.itch.io/"
-      - "https://strangeworlder.medium.com/"
-      - "https://bsky.app/profile/strangeworlder.bsky.social"
-      - "https://www.threads.com/@gogam.eu"
-      - "https://www.youtube.com/@gogameu"
-      - "https://gogameu.substack.com/"
+      - 'https://rpggeek.com/rpgdesigner/111688/petri-leinonen'
+      - 'https://www.drivethrurpg.com/en/browse?author=%22Petri%20Leinonen%22'
+      - 'https://strangeworlder.itch.io/'
+      - 'https://strangeworlder.medium.com/'
+      - 'https://bsky.app/profile/strangeworlder.bsky.social'
+      - 'https://www.threads.com/@gogam.eu'
+      - 'https://www.youtube.com/@gogameu'
+      - 'https://gogameu.substack.com/'
 faq:
-  - q: "Where can I download Gogam games?"
-    a: "You can find all fully completed indie games on this page, with links to Itch.io, DriveThruRPG, and roolipelikirjasto.fi."
-  - q: "Are Petri Leinonen’s games available in English?"
-    a: "Yes, most major titles like Cars & Family, Pros & Cons, and Cyberpunk is Dead are available in English. Some titles like +H are currently Finnish-only."
-  - q: "Who is Petri Leinonen?"
-    a: "Petri Leinonen is a Finnish TTRPG designer and founder of Gogam, known for games like Cars & Family and Cyberpunk is Dead. He has also worked with major publishers like Myrrys and Ironspine Press."
-llms_context: |
-  Gogam is an indie tabletop roleplaying game brand based in Finland, churning out small, super-innovative games.
-  
-  Kustannusosakeyhtiö Gogam is the publishing arm, focusing on high-quality printed roleplaying game products in the Finnish language.
-  
-  Gogam Entertainment is the multimedia production branch, creating Actual Plays, RPG theory videos, and tutorials in both English and Finnish.
-  
-  Petri Leinonen has also worked for various other tabletop roleplaying game publishers (Myrrys, Ironspine Press, Chaosium's Miskatonic Repository) in a freelance capacity.
+  - q: Where can I download Gogam games?
+    a: >-
+      You can find all fully completed indie games on this page, with links to
+      Itch.io, DriveThruRPG, and roolipelikirjasto.fi.
+  - q: Are Petri Leinonen’s games available in English?
+    a: >-
+      Yes, most major titles like Cars & Family, Pros & Cons, and Cyberpunk is
+      Dead are available in English. Some titles like +H are currently
+      Finnish-only.
+  - q: Who is Petri Leinonen?
+    a: >-
+      Petri Leinonen is a Finnish TTRPG designer and founder of Gogam, known for
+      games like Cars & Family and Cyberpunk is Dead. He has also worked with
+      major publishers like Myrrys and Ironspine Press.
+llms_context: >
+  Gogam is an indie tabletop roleplaying game brand based in Finland, churning
+  out small, super-innovative games.
 
+
+  Kustannusosakeyhtiö Gogam is the publishing arm, focusing on high-quality
+  printed roleplaying game products in the Finnish language.
+
+
+  Gogam Entertainment is the multimedia production branch, creating Actual
+  Plays, RPG theory videos, and tutorials in both English and Finnish.
+
+
+  Petri Leinonen has also worked for various other tabletop roleplaying game
+  publishers (Myrrys, Ironspine Press) in a freelance capacity.
 ---
 ## Gogam
 
@@ -228,3 +246,21 @@ Yes, most major titles like *Cars & Family*, *Pros & Cons*, and *Cyberpunk is De
 
 **Who is Petri Leinonen?**
 Petri Leinonen is a Finnish TTRPG designer and founder of Gogam, known for games like *Cars & Family* and *Cyberpunk is Dead*. He has also worked with major publishers like Myrrys and Ironspine Press.
+  
+ 
+   
+ 
+   
+ 
+ 
+  
+ 
+   
+ 
+ 
+  
+ 
+ 
+  
+ 
+ 

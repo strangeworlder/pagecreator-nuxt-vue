@@ -89,7 +89,9 @@ entities:
   - type: CreativeWork
     name: Cyberpunk is Dead
     sameAs:
+      - 'https://rpggeek.com/rpgitem/421060/cyberpunk-is-dead'
       - 'https://strangeworlder.itch.io/cyberpunk-is-dead'
+      - 'https://roolipelikirjasto.fi/book/148'
 ---
 
 
@@ -211,4 +213,5 @@ The Success with Overreaction mechanic is a perfect implementation of the Fail F
 
 ## Outside mentions
 
-*   [TTRPG.in: Finland 🇫🇮](https://ttrpg.in/2021/10/10/61-finland-%F0%9F%87%AB%F0%9F%87%AE/)
+- [RPGGeek: Cyberpunk is Dead](https://rpggeek.com/rpgitem/421060/cyberpunk-is-dead)
+- [TTRPG.in: Finland 🇫🇮](https://ttrpg.in/2021/10/10/61-finland-%F0%9F%87%AB%F0%9F%87%AE/)

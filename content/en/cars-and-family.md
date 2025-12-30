@@ -93,6 +93,7 @@ entities:
       type: CreativeWork
       name: Lasers & Feelings
     sameAs:
+      - 'https://rpggeek.com/rpgitem/275602/cars-and-family'
       - 'https://strangeworlder.itch.io/cars-and-family'
       - 'https://roolipelikirjasto.fi/series/stored/7'
 ---
@@ -160,3 +161,7 @@ Players make five main choices to join the crew:
 3.  **Your Number:** A number between 2 and 5 (High = Better at Cars, Low = Better at Family).
 4.  **Name:** A cool street racing name.
 5.  **Goal:** (e.g., Avenge Von, Retire after this one last heist).
+
+## Outside mentions
+
+- [RPGGeek: Cars & Family](https://rpggeek.com/rpgitem/275602/cars-and-family)

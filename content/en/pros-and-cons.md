@@ -59,6 +59,7 @@ entities:
   - type: CreativeWork
     name: Pros & Cons
     sameAs:
+      - 'https://rpggeek.com/rpgitem/461385/pros-and-cons'
       - 'https://strangeworlder.itch.io/pros-and-cons'
       - 'https://roolipelikirjasto.fi/book/147'
     author:
@@ -147,3 +148,7 @@ Finally, **Frame the Scene** by asking these four questions to put the players r
 *   "What are we here to steal to help us get to our main prize?"
 *   "How are we disguised?"
 *   "What unexpected obstacle just appeared?"
+
+## Outside mentions
+
+- [RPGGeek: Pros & Cons](https://rpggeek.com/rpgitem/461385/pros-and-cons)

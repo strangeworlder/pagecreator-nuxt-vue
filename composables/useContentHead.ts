@@ -378,16 +378,56 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
       if (doc.gameInterfaceType) itemNode.gameInterfaceType = doc.gameInterfaceType;
       if (doc.numberOfPlayers) itemNode.numberOfPlayers = doc.numberOfPlayers;
       if (doc.sameAs) itemNode.sameAs = doc.sameAs;
+      if (doc.isbn) itemNode.isbn = doc.isbn;
+
+      // Illustrator
+      if (doc.illustrator) {
+        // If it's a string, assume it's a reference to the main Person ID if it matches
+        if (doc.illustrator === "Petri Leinonen" || doc.illustrator === "#petri") {
+          itemNode.illustrator = { "@id": personId };
+        } else if (typeof doc.illustrator === "object") {
+          itemNode.illustrator = doc.illustrator;
+        }
+      }
 
       // Offers
       if (doc.offers) {
-        itemNode.offers = {
-          "@type": "Offer",
-          url: doc.offers.url,
-          price: doc.offers.price || "0",
-          priceCurrency: doc.offers.priceCurrency || "USD",
-          availability: doc.offers.availability || "https://schema.org/InStock",
-        };
+        if (Array.isArray(doc.offers)) {
+          // If array, wrap in AggregateOffer if intended, or just list? 
+          // Common pattern is Offers property can be array of Offer.
+          itemNode.offers = doc.offers.map(o => ({
+            "@type": "Offer",
+            url: o.url,
+            price: o.price,
+            priceCurrency: o.priceCurrency || "EUR",
+            availability: o.availability || "https://schema.org/InStock",
+            name: o.name
+          }));
+        } else if (doc.offers['@type'] === 'AggregateOffer') {
+          // Pass through AggregateOffer structure
+          itemNode.offers = {
+            "@type": "AggregateOffer",
+            priceCurrency: doc.offers.priceCurrency || "EUR",
+            lowPrice: doc.offers.lowPrice,
+            offerCount: doc.offers.offerCount,
+            offers: doc.offers.offers?.map((o: any) => ({
+              "@type": "Offer",
+              name: o.name,
+              url: o.url,
+              price: o.price,
+              priceCurrency: o.priceCurrency || "EUR"
+            }))
+          };
+        } else {
+          // Single Offer
+          itemNode.offers = {
+            "@type": "Offer",
+            url: doc.offers.url,
+            price: doc.offers.price || "0",
+            priceCurrency: doc.offers.priceCurrency || "USD",
+            availability: doc.offers.availability || "https://schema.org/InStock",
+          };
+        }
       }
 
       // Reviews

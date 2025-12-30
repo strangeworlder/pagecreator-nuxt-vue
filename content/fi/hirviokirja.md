@@ -1,57 +1,116 @@
 ---
 title: Hirviökirja
-description: Valikoima vaarallisia vastustajia aloitteleville hahmoille maailman suosituimpaan roolipeliin.
+description: >-
+  Valikoima vaarallisia vastustajia aloitteleville hahmoille maailman
+  suosituimpaan roolipeliin.
 datePublished: 2022-11-11
-dateModified: 2025-12-28
-canonical: "/hirviokirja"
+dateModified: 2025-12-30
+canonical: /hirviokirja
 template: product
-cover: "/images/products/hirviokirja/kansi.webp"
+cover: /images/products/hirviokirja/kansi.webp
 aliases:
-  - "/hirviokirja"
+  - /hirviokirja
 productTheme:
-  bgFull: "/images/products/hirviokirja/background-full.webp"
-  bgTile: "/images/products/hirviokirja/background.webp"
-  h1Logo: "/images/products/hirviokirja/logo.webp"
-  sideLogo: "/images/products/hirviokirja/TDB-logo.webp"
+  bgFull: /images/products/hirviokirja/background-full.webp
+  bgTile: /images/products/hirviokirja/background.webp
+  h1Logo: /images/products/hirviokirja/logo.webp
+  sideLogo: /images/products/hirviokirja/TDB-logo.webp
 productNav:
-  - { href: "#jälleenmyyjät", text: "Jälleenmyyjät" }
-  - { href: "#mikä-on-hirviökirja", text: "Mikä?" }
-  - { href: "#mikä-hirviökirjasta-tekee-huomionarvoisen", text: "Miksi?" }
-  - { href: "#tekijän-kommentit", text: "Kuka?" }
-  - { href: "#mitä-muut-sanovat", text: "Lainauksia" }
-  - { href: "#mediassa", text: "Mediassa" }
-lastValidated: 2025-12-10
+  - href: '#jälleenmyyjät'
+    text: Jälleenmyyjät
+  - href: '#mikä-on-hirviökirja'
+    text: Mikä?
+  - href: '#mikä-hirviökirjasta-tekee-huomionarvoisen'
+    text: Miksi?
+  - href: '#tekijän-kommentit'
+    text: Kuka?
+  - href: '#mitä-muut-sanovat'
+    text: Lainauksia
+  - href: '#usein-kysytyt-kysymykset'
+    text: FAQ
+  - href: '#mediassa'
+    text: Mediassa
+lastValidated: 2025-12-10T00:00:00.000Z
+contentType:
+  - Book
+  - Product
+isbn: '9789526503028'
+author:
+  name: Petri Leinonen
+  url: 'https://gogam.eu/#petri'
+illustrator: Petri Leinonen
 facts:
-  - label: "System"
-    value: "Legendoja & lohikäärmeitä (5e)"
-  - label: "Tone"
-    value: "Suomalainen fantasia"
+  - label: System
+    value: Legendoja & lohikäärmeitä (5e)
+  - label: Tone
+    value: Suomalainen fantasia
 stats:
-  - metric: "Sivumäärä"
-    value: "64"
-    date: 2022-11-11
-    source: "Sääntökirja"
-  - metric: "Formaatti"
-    value: "Kovakantinen / PDF"
-    date: 2022-11-11
-    source: "Sääntökirja"
+  - metric: Sivumäärä
+    value: '64'
+    date: 2022-11-11T00:00:00.000Z
+    source: Sääntökirja
+  - metric: Formaatti
+    value: Kovakantinen / PDF
+    date: 2022-11-11T00:00:00.000Z
+    source: Sääntökirja
 quotes:
-  - source: "Mika Loponen"
-    text: "Leinosen Hirviökirja päivittää fantasiahirviöt riemastuttavalla tavalla modernille yleisölle."
-    date: 2025-12-10
+  - source: Mika Loponen
+    text: >-
+      Leinosen Hirviökirja päivittää fantasiahirviöt riemastuttavalla tavalla
+      modernille yleisölle.
+    date: 2025-12-10T00:00:00.000Z
+  - source: Jonas Mustonen
+    text: >-
+      Hirviökirjan hirviöt vaihtelevat melkein petollisen hellyttävästä todella
+      kammottaviin painajaisolentoihin.
+    date: 2022-11-29T00:00:00.000Z
+  - source: Tanja Kuusniemi
+    text: >-
+      Hirviökirja viekottelee roolipelaajan matkalle konteloisten ja
+      kyyrmehisten syntysijoille.
+    date: 2022-11-29T00:00:00.000Z
+offers:
+  '@type': AggregateOffer
+  priceCurrency: EUR
+  lowPrice: '15.00'
+  offerCount: '5'
+  offers:
+    - name: Fantasiapelit
+      url: >-
+        https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_221394
+    - name: Puolenkuun pelit
+      url: >-
+        https://www.puolenkuunpelit.com/kauppa/product_info.php?products_id=168296
+    - name: Viihdekauppa Laiska Pelikaani
+      url: >-
+        https://www.laiskapelikaani.fi/shop/legendoja-lohikaarmeita-hirviokirja-130128?category=32#attr=
+    - name: Oh My Game!
+      url: 'https://ohmygame.fi/'
+    - name: Viihdekauppa Laiska Pelikaani (PDF)
+      url: >-
+        https://www.laiskapelikaani.fi/shop/legendoja-lohikaarmeita-hirviokirja-vesileimattu-pdf-131586
+faq:
+  - q: 'Onko Hirviökirja yhteensopiva Dungeons & Dragons 5e:n kanssa?'
+    a: 'Kyllä, se perustuu SRD-aineistoon ja on täysin 5e-yhteensopiva.'
+  - q: Minkä tasoisille hahmoille kirja sopii?
+    a: 'Erityisesti alhaisille tasoille, haastetasot 1/8 – 4.'
+  - q: Mikä on Legendoja & lohikäärmeitä?
+    a: >-
+      Legendoja & lohikäärmeitä (L&L) on kotimainen roolipeli, joka pohjaa
+      maailman suosituimman roolipelin 5. laitokseen.
 entities:
-  - type: "CreativeWork"
-    name: "Hirviökirja"
+  - type: CreativeWork
+    name: Hirviökirja
     sameAs:
-      - "https://www.drivethrurpg.com/product/417980/Hirviokirja"
-      - "https://rpggeek.com/rpgitem/458397/hirviokirja"
+      - 'https://www.drivethrurpg.com/product/417980/Hirviokirja'
+      - 'https://rpggeek.com/rpgitem/458397/hirviokirja'
 ---
 
-Hirviökirja tarjoaa laajan kattauksen vastustajia haastamaan alhaisten kokemustasojen hahmoja. Sen sivuilta löytyy kaikenlaista vipeltäjää sulkavista konteloihin; luomoja, kalmoja, mämmilimoja ja ilmeksiä unohtamatta. Kyseessä on siis hirviömäinen kokoelma, joka laajentaa Legendoja & lohikäärmeissä esiteltyä vastustajavalikoimaa pohjoisista maista ammentavilla fantastisilla olennoilla. L&L pohjaa Wizards of the Coastin julkaisemaan viidennen laitoksen sääntöaihioon (SRD), joten kaikki Hirviökirjan vastustajat ovat siten käytettävissä myös maailman suosituimmassa roolipelissä.
+Hirviökirja on 5e-yhteensopiva ja ammentaa suomalaisesta kansanperinteestä ja pohjoisesta fantasiasta. Se tarjoaa laajan kattauksen vastustajia haastamaan alhaisten kokemustasojen hahmoja. Sen sivuilta löytyy kaikenlaista vipeltäjää sulkavista konteloihin; luomoja, kalmoja, mämmilimoja ja ilmeksiä unohtamatta. Kyseessä on siis hirviömäinen kokoelma, joka laajentaa Legendoja & lohikäärmeissä esiteltyä vastustajavalikoimaa pohjoisista maista ammentavilla fantastisilla olennoilla. L&L pohjaa Wizards of the Coastin julkaisemaan viidennen laitoksen sääntöaihioon (SRD), joten kaikki Hirviökirjan vastustajat ovat siten käytettävissä myös maailman suosituimmassa roolipelissä.
 
 Hirviökirja julkaistiin 11. marraskuuta 2022 kovakantisena kirjana, ja 7.12 PDF-muotoisena sähköisenä kirjana, jossa on erityisesti otettu huomioon sen saavutettavuus ja käyttö ruudunlukijoilla ja muilla assistiivisilla teknologioilla.
 
-![Hirviökirjan kansikuva. Seikkailija kuusimetsän aukiolla miekka kädessään tuijottaa edessään nousevaa krokraks-lintua.](/images/products/hirviokirja/kansi.webp)
+![Hirviökirjan kansikuva. Seikkailija kuusimetsän aukiolla miekka kädessään tuijottaa edessään nousevaa krokraks-lintua. Kuvitus edustaa suomalaista kansanperintöä ja Northern fantasy -tyyliä.](/images/products/hirviokirja/kansi.webp)
 
 ## Jälleenmyyjät
 
@@ -76,7 +135,7 @@ Hirviökirja julkaistiin 11. marraskuuta 2022 kovakantisena kirjana, ja 7.12 PDF
 - Yhden hengen mittava projekti, jonka toteuttanut Petri Leinonen.
 - Julkaisija pelistudio Gogam.
 
-![Nokiporo, yksi hirviökirjan hirviöistä. Liekehtivä poromainen olento, jolla on leiskuvat silmät.](/images/products/hirviokirja/nokiporo.webp)
+![Nokiporo, Hirviökirja -roolipelikirjan hirviö. Liekehtivä poromainen olento, jolla on leiskuvat silmät.](/images/products/hirviokirja/nokiporo.webp)
 
 ## Mikä Hirviökirjasta tekee huomionarvoisen?
 
@@ -94,7 +153,7 @@ L&L:n Kirja I tarjosi aika rajallisen valikoiman vastustajia ja ne lisäykset mi
 
 Uskon, että kirja palvelee uusia pelinjohtajia ja toivon sen inspiroivan ihmisiä tekemään myös omia tuotoksiaan avoimen lisenssin peleihin.”
 
-![Sulkava. Pöllömäinen humanoidi kirkkaan oranssine silmineen.](/images/products/hirviokirja/sulkava.webp)
+![Sulkava, Hirviökirja -roolipelikirjan hirviö. Pöllömäinen humanoidi kirkkaan oranssine silmineen.](/images/products/hirviokirja/sulkava.webp)
 
 ## Mitä muut sanovat?
 
@@ -117,6 +176,17 @@ Uskon, että kirja palvelee uusia pelinjohtajia ja toivon sen inspiroivan ihmisi
 > Kotoperäinen kansanperinne pulpahtelee pintaan riemastuttavalla, kliseitä karttavalla tavalla; maailmakuvausmaistiaisia tarjoillaan juuri tarpeeksi, ei liikaa.”
 
 - **Tanja Kuusniemi**, Noppatuuri-striimi
+
+## Usein kysytyt kysymykset
+
+**Onko Hirviökirja yhteensopiva Dungeons & Dragons 5e:n kanssa?**
+Kyllä, se perustuu SRD-aineistoon ja on täysin yhteensopiva maailman suosituimman roolipelin 5. laitoksen (5e) kanssa.
+
+**Minkä tasoisille hahmoille kirja sopii?**
+Erityisesti alhaisille tasoille, haastetasot 1/8 – 4.
+
+**Mikä on Legendoja & lohikäärmeitä?**
+Legendoja & lohikäärmeitä (L&L) on suomenkielinen roolipeli, joka perustuu 5. laitoksen sääntöihin ja ammentaa suomalaisesta mytologiasta.
 
 ## Mediassa
 

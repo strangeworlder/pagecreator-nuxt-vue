@@ -1,50 +1,66 @@
 ---
-title: "Vuosisata."
-description: "Tarot‑driven tabletop RPG set across 1912–2012 where magic reshapes history."
-datePublished: 2025-12-25
-dateModified: 2025-12-25
-tags: ["game", "ttrpg"]
-canonical: "/en/vuosisata"
-alternateLocales: ["fi"]
-template: "hero"
-theme: "classic"
-cover: "/images/vuosisata-cover.png"
-heroImage: "/images/vuosisata-cover.png"
+title: Vuosisata.
+description: Tarot‑driven tabletop RPG set across 1912–2012 where magic reshapes history.
+contentType:
+  - Game
+  - CreativeWork
+genre: Tabletop Role-playing Game
+gameInterfaceType: Tabletop
+author:
+  '@type': Person
+  name: Petri Leinonen
+  url: 'https://gogam.eu/'
+datePublished: 2025-12-28
+dateModified: 2025-12-30
+tags:
+  - game
+  - ttrpg
+canonical: /en/vuosisata
+alternateLocales:
+  - fi
+template: hero
+theme: classic
+cover: /images/vuosisata-cover.png
+heroImage: /images/vuosisata-cover.png
 summary: |
   Post‑cataclysm RPG where history meets magic (1912–2012), powered entirely by
   Tarot. Succeed by interpreting card meanings; risk Catastrophes on matches.
-lastValidated: 2025-11-28
+lastValidated: 2025-11-28T00:00:00.000Z
 facts:
-  - label: "System"
-    value: "Tarot-driven resolution"
-  - label: "Tone"
-    value: "Historical Magic"
+  - label: System
+    value: Tarot-driven resolution
+  - label: Tone
+    value: Historical Magic
 stats:
-  - metric: "Word count"
-    value: "10226"
-    date: 2015-12-28
-    source: "Rules text"
-  - metric: "Page count"
-    value: "10"
-    date: 2015-12-28
-    source: "Rules text"
-  - metric: "Version"
-    value: "0.5"
-    date: 2015-12-28
-    source: "Rules text"
-  - metric: "Status"
-    value: "Creative Commons"
-    date: 2015-12-26
-    source: "Rules text"
+  - metric: Word count
+    value: '10226'
+    date: 2015-12-28T00:00:00.000Z
+    source: Rules text
+  - metric: Page count
+    value: '10'
+    date: 2015-12-28T00:00:00.000Z
+    source: Rules text
+  - metric: Version
+    value: '0.5'
+    date: 2015-12-28T00:00:00.000Z
+    source: Rules text
+  - metric: Status
+    value: Creative Commons
+    date: 2015-12-26T00:00:00.000Z
+    source: Rules text
 quotes:
-  - source: "Petri Leinonen"
-    text: "History meets magic."
-    date: 2025-11-28
+  - source: Petri Leinonen
+    text: History meets magic.
+    date: 2025-11-28T00:00:00.000Z
 entities:
-  - type: "CreativeWork"
-    name: "Vuosisata."
+  - type: CreativeWork
+    name: Vuosisata.
     sameAs:
-      - "https://docs.google.com/document/d/1VYxmFq2ik5Wszqpo6jYv5GJXKoBRw7rkeALg7PkYfH0/edit?usp=sharing"
+      - >-
+        https://docs.google.com/document/d/1VYxmFq2ik5Wszqpo6jYv5GJXKoBRw7rkeALg7PkYfH0/edit?usp=sharing
+    author:
+      type: Person
+      name: Petri Leinonen
 ---
 
 ## What is **Vuosisata?**

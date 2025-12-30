@@ -1,13 +1,19 @@
 ---
-title: "Black Shield Canton: Analysis of the world, themes, and style"
-description: "A comprehensive overview of the Black Shield Canton game world's themes, style, and design choices"
-datePublished: 2025-12-23
-dateModified: 2025-12-25
-tags: ["L&L", "world"]
-canonical: "/en/mustan-kilven-kantoni"
-alternateLocales: ["fi"]
-summary: |
-  Black Shield Canton is an adventure world where Finnish folklore meets post-apocalyptic fantasy.
+title: 'Black Shield Canton: Analysis of the world, themes, and style'
+description: >-
+  A comprehensive overview of the Black Shield Canton game world's themes,
+  style, and design choices
+datePublished: 2025-12-28
+dateModified: 2025-12-30
+tags:
+  - L&L
+  - world
+canonical: /en/mustan-kilven-kantoni
+alternateLocales:
+  - fi
+summary: >
+  Black Shield Canton is an adventure world where Finnish folklore meets
+  post-apocalyptic fantasy.
 ---
 Petri Leinonen's **Black Shield Canton** (*Mustan kilven kantoni*) is an exceptionally deep fantasy setting that draws on Finnish folklore, history, and a profound relationship with nature. This is not a conventional high fantasy stage, but a world simultaneously melancholic and hopeful, recovering from a cataclysm that collapsed civilization. The ghosts of the past and the mysteries of nature are ever-present. This analysis examines the canton’s core themes, key influences, and style.
 

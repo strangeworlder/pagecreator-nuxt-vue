@@ -1,59 +1,89 @@
 ---
-title: "Night of the Thirteenth"
-description: "A slasher-style horror RPG where you play the cast of a movie that hasn't happened yet. Survival is unlikely."
-datePublished: 2025-12-25
-dateModified: 2025-12-25
-tags: ["game", "horror", "slasher", "TTRPG", "ashcan"]
-canonical: "/en/nott"
-alternateLocales: ["fi"]
-template: "hero"
-theme: "classic"
-cover: "/images/nott-cover.png"
-heroImage: "/images/nott-cover.png"
-summary: |
-  Night of the Thirteenth is a slasher-horror TTRPG where you play the cast of a movie doomed to end badly. 
-  Uses a unique d13 (d10+d4) system and a standard deck of cards to generate threats.
+title: Night of the Thirteenth
+description: >-
+  A slasher-style horror RPG where you play the cast of a movie that hasn't
+  happened yet. Survival is unlikely.
+contentType:
+  - Game
+  - CreativeWork
+genre: Tabletop Role-playing Game
+gameInterfaceType: Tabletop
+numberOfPlayers:
+  '@type': QuantitativeValue
+  value: '5'
+author:
+  '@type': Person
+  name: Petri Leinonen
+  url: 'https://strangeworlder.itch.io/'
+datePublished: 2025-12-28
+dateModified: 2025-12-30
+tags:
+  - game
+  - horror
+  - slasher
+  - TTRPG
+  - ashcan
+canonical: /en/nott
+alternateLocales:
+  - fi
+template: hero
+theme: classic
+cover: /images/nott-cover.png
+heroImage: /images/nott-cover.png
+summary: >
+  Night of the Thirteenth is a slasher-horror TTRPG where you play the cast of a
+  movie doomed to end badly. 
+
+  Uses a unique d13 (d10+d4) system and a standard deck of cards to generate
+  threats.
+
   The goal is simple: survive the night. Most of you won't.
-lastValidated: 2025-12-25
+lastValidated: 2025-12-25T00:00:00.000Z
 facts:
-  - label: "System"
-    value: "d13 (d10 + d4) & Cards"
-  - label: "Tone"
-    value: "80s Slasher Horror"
-  - label: "Players"
-    value: "4 Players + 1 Director"
+  - label: System
+    value: d13 (d10 + d4) & Cards
+  - label: Tone
+    value: 80s Slasher Horror
+  - label: Players
+    value: 4 Players + 1 Director
 stats:
-  - metric: "Word count"
-    value: "2129"
-    date: 2025-10-25
-    source: "Rules text"
-  - metric: "Page count"
-    value: "11"
-    date: 2025-10-25
-    source: "Rules text"
-  - metric: "Status"
-    value: "Ashcan"
-    date: 2025-12-25
-    source: "Rules text"
+  - metric: Word count
+    value: '2129'
+    date: 2025-10-25T00:00:00.000Z
+    source: Rules text
+  - metric: Page count
+    value: '11'
+    date: 2025-10-25T00:00:00.000Z
+    source: Rules text
+  - metric: Status
+    value: Ashcan
+    date: 2025-12-25T00:00:00.000Z
+    source: Rules text
 quotes:
-  - source: "Petri Leinonen"
-    text: "Most of you won't make it."
-    date: 2025-11-28
+  - source: Petri Leinonen
+    text: Most of you won't make it.
+    date: 2025-11-28T00:00:00.000Z
 faq:
-  - q: "What is Night of the Thirteenth?"
-    a: "A horror RPG where you play clear archetypes in a slasher movie setting. Expect high lethality."
-  - q: "What is the d13?"
-    a: "A combination of a d10 (0-9) and a d4 (1-4). The d4 serves as a 'Fallout Die' determining consequences."
-  - q: "How do I win?"
-    a: "Survive until the Endgame by defeating a Face Card of each suit, then survive the final Joker tests."
+  - q: What is Night of the Thirteenth?
+    a: >-
+      A horror RPG where you play clear archetypes in a slasher movie setting.
+      Expect high lethality.
+  - q: What is the d13?
+    a: >-
+      A combination of a d10 (0-9) and a d4 (1-4). The d4 serves as a 'Fallout
+      Die' determining consequences.
+  - q: How do I win?
+    a: >-
+      Survive until the Endgame by defeating a Face Card of each suit, then
+      survive the final Joker tests.
 entities:
-  - type: "CreativeWork"
-    name: "Night of the Thirteenth"
+  - type: CreativeWork
+    name: Night of the Thirteenth
     sameAs:
-      - "https://strangeworlder.itch.io/night-of-the-thirteenth"
+      - 'https://strangeworlder.itch.io/night-of-the-thirteenth'
     author:
-      type: "Person"
-      name: "Petri Leinonen"
+      type: Person
+      name: Petri Leinonen
 ---
 
 

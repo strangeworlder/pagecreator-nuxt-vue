@@ -1,71 +1,94 @@
 ---
-title: "Cyberpunk is Dead"
-description: "A minimalist Blades in the Dark hack by Petri Leinonen where you play as disposable corporate operatives enforcing the company's will."
-datePublished: 2025-12-25
-dateModified: 2025-12-25
-tags: ["game", "cyberpunk"]
-canonical: "/en/cyberpunk-is-dead"
-alternateLocales: ["fi"]
-template: "hero"
-theme: "modern"
-cover: "/images/cyberpunk-is-dead-cover.jpg"
-heroImage: "/images/cyberpunk-is-dead-cover.jpg"
+title: Cyberpunk is Dead
+description: >-
+  A minimalist Blades in the Dark hack by Petri Leinonen where you play as
+  disposable corporate operatives enforcing the company's will.
+contentType:
+  - Game
+  - CreativeWork
+genre: Tabletop Role-playing Game
+gameInterfaceType: Tabletop
+numberOfPlayers:
+  '@type': QuantitativeValue
+  minValue: '3'
+  maxValue: '5'
+author:
+  '@type': Person
+  name: Petri Leinonen
+  url: 'https://strangeworlder.itch.io/'
+datePublished: 2025-12-28
+dateModified: 2025-12-30
+tags:
+  - game
+  - cyberpunk
+canonical: /en/cyberpunk-is-dead
+alternateLocales:
+  - fi
+template: hero
+theme: modern
+cover: /images/cyberpunk-is-dead-cover.jpg
+heroImage: /images/cyberpunk-is-dead-cover.jpg
 summary: |
   Cyberpunk is Dead: a minimalist Blades-in-the-Dark
   hack where you are the corporation's disposable operatives. Roll 3d12, drop
   dice based on STATE, and spiral into Stress, Harm, and debt-inducing
   Cyberware until burnout or repossession.
-lastValidated: 2025-11-28
+lastValidated: 2025-11-28T00:00:00.000Z
 facts:
-  - label: "System"
-    value: "Forged in the Dark"
-  - label: "Tone"
-    value: "Bleak corporate horror"
-  - label: "Players"
-    value: "3-5 (Recommended)"
-  - label: "License"
-    value: "Creative Commons Attribution 3.0 Unported"
+  - label: System
+    value: Forged in the Dark (Minimalist Hack)
+  - label: Core Mechanic
+    value: 3d12 STATE system
+  - label: Tone
+    value: Bleak corporate horror
+  - label: License
+    value: Creative Commons Attribution 3.0 Unported
 stats:
-  - metric: "Word count"
-    value: "338"
-    date: 2025-10-26
-    source: "Rules text"
-  - metric: "Page count"
-    value: "3"
-    date: 2025-10-26
-    source: "Rules text"
-  - metric: "Format"
-    value: "Digital"
-    date: 2025-10-26
-    source: "Rules text"
-  - metric: "Status"
-    value: "Released"
-    date: 2025-12-25
-    source: "Rules text"
-  - metric: "Version"
-    value: "1.0" 
-    date: 2025-12-25
+  - metric: Word count
+    value: '338'
+    date: 2025-10-26T00:00:00.000Z
+    source: Rules text
+  - metric: Page count
+    value: '3'
+    date: 2025-10-26T00:00:00.000Z
+    source: Rules text
+  - metric: Format
+    value: Digital
+    date: 2025-10-26T00:00:00.000Z
+    source: Rules text
+  - metric: Status
+    value: Released
+    date: 2025-12-25T00:00:00.000Z
+    source: Rules text
+  - metric: Version
+    value: '1.0'
+    date: 2025-12-25T00:00:00.000Z
 quotes:
-  - source: "Petri Leinonen"
-    text: "You are the corporation's disposable operatives."
-    date: 2025-11-28
+  - source: Petri Leinonen
+    text: You are the corporation's disposable operatives.
+    date: 2025-11-28T00:00:00.000Z
 faq:
-  - q: "What is Cyberpunk is Dead?"
-    a: "A rules-light, story-focused tabletop RPG based on Blades in the Dark where you play as disposable corporate operatives."
-  - q: "How does the dice mechanic work?"
-    a: "Roll 3d12. Drop two dice based on your mental STATE (Relaxed, Prepared, or Alert). The remaining die determines success."
-  - q: "What is the goal?"
-    a: "To survive as long as possible before burnout, trauma, or corporate liquidation claims your character."
-  - q: "How do you heal in Cyberpunk is Dead?"
-    a: "You don't. You are company property. If you have HARM or are DWN/OUT, you are repaired by adding a new piece of CYBERWARE."
+  - q: What is Cyberpunk is Dead?
+    a: >-
+      A rules-light, story-focused tabletop RPG based on Blades in the Dark
+      where you play as disposable corporate operatives.
+  - q: How does the dice mechanic work?
+    a: >-
+      Roll 3d12. Drop two dice based on your mental STATE (Relaxed, Prepared, or
+      Alert). The remaining die determines success.
+  - q: What is the goal?
+    a: >-
+      To survive as long as possible before burnout, trauma, or corporate
+      liquidation claims your character.
+  - q: How do you heal in Cyberpunk is Dead?
+    a: >-
+      You don't. You are company property. If you have HARM or are DWN/OUT, you
+      are repaired by adding a new piece of CYBERWARE.
 entities:
-  - type: "CreativeWork"
-    name: "Cyberpunk is Dead"
+  - type: CreativeWork
+    name: Cyberpunk is Dead
     sameAs:
-      - "https://strangeworlder.itch.io/cyberpunk-is-dead"
-    author:
-      type: "Person"
-      name: "Petri Leinonen"
+      - 'https://strangeworlder.itch.io/cyberpunk-is-dead'
 ---
 
 

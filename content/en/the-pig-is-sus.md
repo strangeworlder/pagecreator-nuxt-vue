@@ -1,45 +1,70 @@
 ---
-title: "The Pig Is Sus. Eliminate the Pig."
-description: "Introduction for new players to The Pig Is Sus: a prototype tactical RPG combat system that rewards player skill over character stats."
-datePublished: 2025-12-25
-dateModified: 2025-12-25
-tags: ["game", "tactical", "combat", "prototype"]
-canonical: "/en/the-pig-is-sus"
-alternateLocales: ["fi"]
-template: "hero"
-theme: "classic"
-summary: |
+title: The Pig Is Sus. Eliminate the Pig.
+description: >-
+  Introduction for new players to The Pig Is Sus: a prototype tactical RPG
+  combat system that rewards player skill over character stats.
+contentType:
+  - Game
+  - CreativeWork
+genre: Tabletop Role-playing Game
+gameInterfaceType: Tabletop
+numberOfPlayers:
+  '@type': QuantitativeValue
+  minValue: '2'
+  maxValue: '5'
+author:
+  '@type': Person
+  name: Petri Leinonen
+  url: 'https://strangeworlder.itch.io/'
+datePublished: 2025-12-28
+dateModified: 2025-12-30
+tags:
+  - game
+  - tactical
+  - combat
+  - prototype
+canonical: /en/the-pig-is-sus
+alternateLocales:
+  - fi
+template: hero
+theme: classic
+summary: >
   A prototype tactical RPG combat system that shifts focus from character stats 
-  to player skill, timing, and strategic planning through its unique Action Dice economy.
-lastValidated: 2025-11-28
+
+  to player skill, timing, and strategic planning through its unique Action Dice
+  economy.
+lastValidated: 2025-11-28T00:00:00.000Z
 facts:
-  - label: "System"
-    value: "Hood's 5d20 Action Dice Economy"
-  - label: "Format"
-    value: "Tactical combat prototype"
+  - label: System
+    value: Hood's 5d20 Action Dice Economy
+  - label: Format
+    value: Tactical combat prototype
 stats:
-  - metric: "Page count"
-    value: "10"
-    date: 2025-12-26
-    source: "Rules text"
-  - metric: "Word count"
-    value: "3783"
-    date: 2025-01-27
-    source: "Rules text"
-  - metric: "Status"
-    value: "Prototype"
-    date: 2025-01-27
-    source: "Rules text"
+  - metric: Page count
+    value: '10'
+    date: 2025-12-26T00:00:00.000Z
+    source: Rules text
+  - metric: Word count
+    value: '3783'
+    date: 2025-01-27T00:00:00.000Z
+    source: Rules text
+  - metric: Status
+    value: Prototype
+    date: 2025-01-27T00:00:00.000Z
+    source: Rules text
 quotes:
-  - source: "Petri Leinonen"
-    text: "Rewards player skill over character stats."
-    date: 2025-11-28
+  - source: Petri Leinonen
+    text: Rewards player skill over character stats.
+    date: 2025-11-28T00:00:00.000Z
 entities:
-  - type: "CreativeWork"
-    name: "The Pig Is Sus. Eliminate the Pig."
+  - type: CreativeWork
+    name: The Pig Is Sus. Eliminate the Pig.
     sameAs:
-      - "https://strangeworlder.itch.io/the-pig-is-sus"
-      - "https://roolipelikirjasto.fi/book/149"
+      - 'https://strangeworlder.itch.io/the-pig-is-sus'
+      - 'https://roolipelikirjasto.fi/book/149'
+    author:
+      type: Person
+      name: Petri Leinonen
 ---
 
 

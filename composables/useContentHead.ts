@@ -109,12 +109,23 @@ export function useCustomContentHead(docRef: Ref<Record<string, any> | null | un
     const fallbackImageType = image && image.includes("/api/image") ? "image/png" : undefined;
     const finalImageType = imageType || fallbackImageType;
     const noindex: boolean | undefined = doc.noindex === true;
-    // Allow explicit override via front matter: contentType: "article" | "website"
-    const type = doc.contentType
-      ? String(doc.contentType)
-      : doc.datePublished
-        ? "article"
-        : "website";
+
+    // Normalize type to array for processing, but keep single string if that's what it is for OG tags
+    const docType = doc.contentType || (doc.datePublished ? "article" : "website");
+    const typeArray = Array.isArray(docType) ? docType : [docType];
+
+    // Determine the primary schema type (used for OG:type)
+    // If it's a Game, we still might want "website" or "article" specifically for FB/Twitter if "game" isn't supported well,
+    // but usually "website" is a safe fallback or "article".
+    // For TTRPGs, "website" or "article" is standard for OG.
+    const ogType = typeArray.includes("Game") ? "website" : (typeArray.includes("article") ? "article" : "website");
+
+    // Schema @type mapping
+    const schemaType = typeArray.map((t: string) => {
+      if (t === "article") return "Article";
+      if (t === "website") return "WebPage";
+      return t; // Pass through "Game", "CreativeWork", etc.
+    });
 
     const meta: any[] = [];
     if (description) meta.push({ name: "description", content: description });
@@ -122,7 +133,7 @@ export function useCustomContentHead(docRef: Ref<Record<string, any> | null | un
     // Open Graph
     if (title) meta.push({ property: "og:title", content: title });
     if (description) meta.push({ property: "og:description", content: description });
-    meta.push({ property: "og:type", content: type });
+    meta.push({ property: "og:type", content: ogType });
     meta.push({ property: "og:url", content: url });
     if (image) {
       meta.push({ property: "og:image", content: image });
@@ -190,18 +201,26 @@ export function useCustomContentHead(docRef: Ref<Record<string, any> | null | un
 
     const ldBase: Record<string, any> = {
       "@context": "https://schema.org",
-      "@type": type === "article" ? "Article" : (type === "website" ? "WebPage" : type),
+      "@type": schemaType.length === 1 ? schemaType[0] : schemaType,
       inLanguage: documentLocale,
       name: title,
       description,
       url,
     };
 
-    // Use server-side logic if available, or lightweight client construction
-    // Since geoGraph is a server util, we can't import it directly in client composable easily
-    // without nuxt-layer complexity or making it shared.
-    // For now, we will construct the rich data structure here mirroring geoGraph logic
-    // to ensure client-side hydration matches.
+    // AEO / Game Specific Fields
+    if (doc.genre) ldBase.genre = doc.genre;
+    if (doc.gameInterfaceType) ldBase.gameInterfaceType = doc.gameInterfaceType;
+    if (doc.numberOfPlayers) ldBase.numberOfPlayers = doc.numberOfPlayers;
+
+    // Author mapping
+    if (doc.author) {
+      if (typeof doc.author === 'string') {
+        ldBase.author = { "@type": "Person", name: doc.author };
+      } else {
+        ldBase.author = doc.author;
+      }
+    }
 
     // 1. Facts & Stats -> additionalProperty
     const additionalProperty: any[] = [];
@@ -271,20 +290,34 @@ export function useCustomContentHead(docRef: Ref<Record<string, any> | null | un
       : [ldBase];
 
     // 4. FAQ -> FAQPage
+    // If it's a Game, embed FAQ as mainEntity. Otherwise, keep as separate entity.
+    const isGame = schemaType.includes("Game");
+
     if (doc.faq && Array.isArray(doc.faq) && doc.faq.length > 0) {
-      const faqPage = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: doc.faq.map((item: any) => ({
-          "@type": "Question",
-          name: item.q,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: item.a,
-          },
-        })),
-      };
-      structured.push(faqPage);
+      const faqItems = doc.faq.map((item: any) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.a,
+        },
+      }));
+
+      if (isGame) {
+        // Embed inside the game object
+        ldBase.mainEntity = {
+          "@type": "FAQPage",
+          "mainEntity": faqItems
+        };
+      } else {
+        // Separate entity
+        const faqPage = {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqItems,
+        };
+        structured.push(faqPage);
+      }
     }
 
     // 5. Tags -> Keywords

@@ -1,66 +1,108 @@
 ---
-title: "A Particular Group of Corvids - Mystery Action TTRPG"
-description: "A tabletop mystery and action RPG where players take on the role of skilled corvid sleuths in the city of Roost. Think Sherlock Holmes meets Peaky Blinders, but with birds. Uses a unique d20 pool system."
-datePublished: 2025-12-26
-dateModified: 2025-12-26
-tags: ["game", "mystery", "action", "corvids", "investigation", "TTRPG", "Tabletop RPG", "Roleplaying Game"]
-canonical: "/en/a-particular-group-of-corvids"
-alternateLocales: ["fi"]
-template: "hero"
-theme: "classic"
-cover: "/images/a-particular-group-of-corvids-cover.jpg"
-heroImage: "/images/a-particular-group-of-corvids-cover.jpg"
-summary: |
-  A Particular Group of Corvids is a tabletop mystery and action RPG set in the rain-slicked streets of Roost. 
-  Players take on the role of Corvid sleuths (Crows, Jackdaws, Magpies, Ravens, and Rooks) protecting their artistic haven 
-  from the authoritarian regime known as The Sus. The game uses a unique d20 pool system focused on narrative flexibility, 
+title: A Particular Group of Corvids - Mystery Action TTRPG
+description: >-
+  A tabletop mystery and action RPG where players take on the role of skilled
+  corvid sleuths in the city of Roost. Think Sherlock Holmes meets Peaky
+  Blinders, but with birds. Uses a unique d20 pool system.
+contentType:
+  - Game
+  - CreativeWork
+genre: Tabletop Role-playing Game
+gameInterfaceType: Tabletop
+numberOfPlayers:
+  '@type': QuantitativeValue
+  minValue: '3'
+  maxValue: '5'
+author:
+  '@type': Person
+  name: Petri Leinonen
+  url: 'https://strangeworlder.itch.io/'
+datePublished: 2025-12-28
+dateModified: 2025-12-30
+tags:
+  - game
+  - mystery
+  - action
+  - corvids
+  - investigation
+  - TTRPG
+  - Tabletop RPG
+  - Roleplaying Game
+canonical: /en/a-particular-group-of-corvids
+alternateLocales:
+  - fi
+template: hero
+theme: classic
+cover: /images/a-particular-group-of-corvids-cover.jpg
+heroImage: /images/a-particular-group-of-corvids-cover.jpg
+summary: >
+  A Particular Group of Corvids is a tabletop mystery and action RPG set in the
+  rain-slicked streets of Roost. 
+
+  Players take on the role of Corvid sleuths (Crows, Jackdaws, Magpies, Ravens,
+  and Rooks) protecting their artistic haven 
+
+  from the authoritarian regime known as The Sus. The game uses a unique d20
+  pool system focused on narrative flexibility, 
+
   where advantages add dice and disadvantages remove them.
-lastValidated: 2025-12-25
+lastValidated: 2025-12-25T00:00:00.000Z
 facts:
-  - label: "System"
-    value: "d20 pool with narrative constraints"
-  - label: "Tone"
-    value: "Sherlock Holmes meets Peaky Blinders"
-  - label: "Players"
-    value: "3-5 (Recommended)"
+  - label: System
+    value: d20 pool with narrative constraints
+  - label: Tone
+    value: Sherlock Holmes meets Peaky Blinders
+  - label: Players
+    value: 3-5 (Recommended)
 stats:
-  - metric: "Word count"
-    value: "2265"
-    date: 2025-12-25
-    source: "Rules text"
-  - metric: "Page count"
-    value: "4"
-    date: 2025-10-26
-    source: "Rules text"
-  - metric: "Status"
-    value: "Beta"
-    date: 2025-12-25
-    source: "Rules text"
+  - metric: Word count
+    value: '2265'
+    date: 2025-12-25T00:00:00.000Z
+    source: Rules text
+  - metric: Page count
+    value: '4'
+    date: 2025-10-26T00:00:00.000Z
+    source: Rules text
+  - metric: Status
+    value: Beta
+    date: 2025-12-25T00:00:00.000Z
+    source: Rules text
 quotes:
-  - source: "Petri Leinonen"
-    text: "Two-fisted bird sleuths."
-    date: 2025-11-28
-  - source: "Rulebook"
-    text: "Do it right or not at all."
-    date: 2025-11-28
+  - source: Petri Leinonen
+    text: Two-fisted bird sleuths.
+    date: 2025-11-28T00:00:00.000Z
+  - source: Rulebook
+    text: Do it right or not at all.
+    date: 2025-11-28T00:00:00.000Z
 faq:
-  - q: "What is A Particular Group of Corvids?"
-    a: "It is a mystery and action tabletop RPG where players act as corvid sleuths investigating crimes in the city of Roost."
-  - q: "What game system does it use?"
-    a: "It uses a custom d20 dice pool system where players roll multiple dice based on advantages and keep the highest result. 10+ is a success. Different degrees of success and failure are possible and modifiable by paying costs."
-  - q: "What are the Bird Types?"
-    a: "Players can choose from five Bird Types: Crow (Muscle), Jackdaw (Spy), Magpie (Thief), Raven (Leader), and Rook (Arcanist)."
+  - q: What is A Particular Group of Corvids?
+    a: >-
+      It is a mystery and action tabletop RPG where players act as corvid
+      sleuths investigating crimes in the city of Roost.
+  - q: What game system does it use?
+    a: >-
+      It uses a custom d20 dice pool system where players roll multiple dice
+      based on advantages and keep the highest result. 10+ is a success.
+      Different degrees of success and failure are possible and modifiable by
+      paying costs.
+  - q: What are the Bird Types?
+    a: >-
+      Players can choose from five Bird Types: Crow (Muscle), Jackdaw (Spy),
+      Magpie (Thief), Raven (Leader), and Rook (Arcanist).
 entities:
-  - type: "CreativeWork"
-    name: "A Particular Group of Corvids"
-    description: "A tabletop roleplaying game about bird detectives in a noir setting."
-    author:
-      type: "Person"
-      name: "Petri Leinonen"
-    genre: ["Tabletop RPG", "Mystery", "Action"]
+  - type: CreativeWork
+    name: A Particular Group of Corvids
+    description: A tabletop roleplaying game about bird detectives in a noir setting.
+    genre:
+      - Tabletop RPG
+      - Mystery
+      - Action
     sameAs:
-      - "https://strangeworlder.itch.io/a-particular-group-of-corvids"
-      - "https://roolipelikirjasto.fi/book/150"
+      - 'https://strangeworlder.itch.io/a-particular-group-of-corvids'
+      - 'https://roolipelikirjasto.fi/book/150'
+    author:
+      type: Person
+      name: Petri Leinonen
 ---
 
 

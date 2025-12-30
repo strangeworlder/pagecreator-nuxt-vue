@@ -1,67 +1,96 @@
 ---
-title: "Cars & Family"
-description: "A Fast & Furious-inspired heist TTRPG built on Lasers & Feelings, where you balance high-speed stunts with the bonds of your crew."
-datePublished: 2025-12-26
-dateModified: 2025-12-26
-tags: ["game", "heist", "action", "lasers & feelings", "TTRPG", "one-page rpg"]
-canonical: "/en/cars-and-family"
-alternateLocales: ["fi"]
-template: "hero"
-theme: "modern"
-cover: "/images/cars-and-family-cover.png"
-heroImage: "/images/cars-and-family-cover.png"
-summary: |
-  Cars & Family is a high-octane one-page RPG hack of Lasers & Feelings by Petri Leinonen. Players take on the role of an elite crew of street-racing thieves
-  planning impossible heists while their leader, Von Petrol, recovers from an accident. The system uses a single number to balance 
-  driving skills (Cars) against teamwork (Family), capturing the spirit of the Fast & Furious franchise.
-lastValidated: 2025-11-28
+title: Cars & Family
+description: >-
+  A Fast & Furious-inspired heist TTRPG built on Lasers & Feelings, where you
+  balance high-speed stunts with the bonds of your crew.
+contentType:
+  - Game
+  - CreativeWork
+genre: Tabletop Role-playing Game
+gameInterfaceType: Tabletop
+numberOfPlayers:
+  '@type': QuantitativeValue
+  minValue: '3'
+  maxValue: '5'
+author:
+  '@type': Person
+  name: Petri Leinonen
+  url: 'https://strangeworlder.itch.io/'
+datePublished: 2025-12-28
+dateModified: 2025-12-30
+tags:
+  - game
+  - heist
+  - action
+  - lasers & feelings
+  - TTRPG
+  - one-page rpg
+canonical: /en/cars-and-family
+alternateLocales:
+  - fi
+template: hero
+theme: modern
+cover: /images/cars-and-family-cover.png
+heroImage: /images/cars-and-family-cover.png
+summary: >
+  Cars & Family is a high-octane one-page RPG hack of Lasers & Feelings by Petri
+  Leinonen. Players take on the role of an elite crew of street-racing thieves
+
+  planning impossible heists while their leader, Von Petrol, recovers from an
+  accident. The system uses a single number to balance 
+
+  driving skills (Cars) against teamwork (Family), capturing the spirit of the
+  Fast & Furious franchise.
+lastValidated: 2025-11-28T00:00:00.000Z
 facts:
-  - label: "Author"
-    value: "Petri Leinonen"
-  - label: "System"
-    value: "Lasers & Feelings hack"
-  - label: "Tone"
-    value: "Fast & Furious action"
-  - label: "Players"
-    value: "3-5 (Recommended)"
+  - label: Author
+    value: Petri Leinonen
+  - label: System
+    value: Lasers & Feelings hack
+  - label: Tone
+    value: Fast & Furious action
 stats:
-  - metric: "Page count"
-    value: "1"
-    date: 2025-10-26
-    source: "Rules text"
-  - metric: "Word count"
-    value: "909"
-    date: 2025-10-26
-    source: "Rules text"
-  - metric: "Status"
-    value: "version 2"
-    date: 2025-12-25
-    source: "Rules text"
+  - metric: Page count
+    value: '1'
+    date: 2025-10-26T00:00:00.000Z
+    source: Rules text
+  - metric: Word count
+    value: '909'
+    date: 2025-10-26T00:00:00.000Z
+    source: Rules text
+  - metric: Status
+    value: version 2
+    date: 2025-12-25T00:00:00.000Z
+    source: Rules text
 quotes:
-  - source: "Petri Leinonen"
-    text: "High-speed heists and chosen family."
-    date: 2025-11-28
+  - source: Petri Leinonen
+    text: High-speed heists and chosen family.
+    date: 2025-11-28T00:00:00.000Z
 faq:
-  - q: "What is Cars & Family?"
-    a: "It is a rules-light tabletop RPG based on Lasers & Feelings, emulating the Fast & Furious movies."
-  - q: "How does the dice system work?"
-    a: "Players choose a number between 2 and 5. Roll 1d6 (or more). Roll under your number for 'Cars' (stunts/driving), roll over for 'Family' (social/teamwork)."
-  - q: "What is the NOS mechanic?"
-    a: "Once per session, players can use NOS to add an automatic hit. They must then roll a die; if it doesn't match their number, a complication 'explodes' around them."
+  - q: What is Cars & Family?
+    a: >-
+      It is a rules-light tabletop RPG based on Lasers & Feelings, emulating the
+      Fast & Furious movies.
+  - q: How does the dice system work?
+    a: >-
+      Players choose a number between 2 and 5. Roll 1d6 (or more). Roll under
+      your number for 'Cars' (stunts/driving), roll over for 'Family'
+      (social/teamwork).
+  - q: What is the NOS mechanic?
+    a: >-
+      Once per session, players can use NOS to add an automatic hit. They must
+      then roll a die; if it doesn't match their number, a complication
+      'explodes' around them.
 entities:
-  - type: "CreativeWork"
-    name: "Cars & Family"
-    description: "A tabletop roleplaying game about street racing thieves."
-    author:
-      type: "Person"
-      name: "Petri Leinonen"
-    genre: ["Tabletop RPG", "Heist", "Action"]
+  - type: CreativeWork
+    name: Cars & Family
+    description: A tabletop roleplaying game about street racing thieves.
     isBasedOn:
-      type: "CreativeWork"
-      name: "Lasers & Feelings"
+      type: CreativeWork
+      name: Lasers & Feelings
     sameAs:
-      - "https://strangeworlder.itch.io/cars-and-family"
-      - "https://roolipelikirjasto.fi/series/stored/7"
+      - 'https://strangeworlder.itch.io/cars-and-family'
+      - 'https://roolipelikirjasto.fi/series/stored/7'
 ---
 
 

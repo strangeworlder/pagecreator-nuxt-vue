@@ -1,46 +1,67 @@
 ---
-title: "We can't stop here..."
-description: "A grimy, psychedelic Mörk Borg supplement by Petri Leinonen about traveling with a sentient, decaying herb wagon."
-datePublished: 2025-12-25
-dateModified: 2025-12-25
-tags: ["game", "mork-borg"]
-canonical: "/en/we-cant-stop-here"
-alternateLocales: ["fi"]
-template: "hero"
-theme: "classic"
-cover: "/images/we-cant-stop-here-cover.png"
-heroImage: "/images/we-cant-stop-here-cover.png"
-summary: |
-  We Can't Stop Here... is a Mörk Borg supplement about addiction, hallucinations, and a road trip that never ends. Travel with a sentient, decaying wagon, consume its dangerous herbs to move, and face horrors that are only real if you share the hallucination.
-lastValidated: 2025-11-28
+title: We can't stop here...
+description: >-
+  A grimy, psychedelic Mörk Borg supplement by Petri Leinonen about traveling
+  with a sentient, decaying herb wagon.
+contentType:
+  - Game
+  - CreativeWork
+genre: Tabletop Role-playing Game Supplement
+gameInterfaceType: Tabletop
+author:
+  '@type': Person
+  name: Petri Leinonen
+  url: 'https://strangeworlder.itch.io/'
+datePublished: 2025-12-28
+dateModified: 2025-12-30
+tags:
+  - game
+  - mork-borg
+canonical: /en/we-cant-stop-here
+alternateLocales:
+  - fi
+template: hero
+theme: classic
+cover: /images/we-cant-stop-here-cover.png
+heroImage: /images/we-cant-stop-here-cover.png
+summary: >
+  We Can't Stop Here... is a Mörk Borg supplement about addiction,
+  hallucinations, and a road trip that never ends. Travel with a sentient,
+  decaying wagon, consume its dangerous herbs to move, and face horrors that are
+  only real if you share the hallucination.
+lastValidated: 2025-11-28T00:00:00.000Z
 facts:
-  - label: "System"
-    value: "Mörk Borg"
-  - label: "Tone"
-    value: "Psychedelic Road Trip"
+  - label: System
+    value: Mörk Borg
+  - label: Tone
+    value: Psychedelic Road Trip
 stats:
-  - metric: "Word count"
-    value: "3722"
-    date: 2025-10-27
-    source: "Rules text"
-  - metric: "Page count"
-    value: "16"
-    date: 2025-10-27
-    source: "Rules text"
-  - metric: "Format"
-    value: "Digital"
-    date: 2025-10-27
-    source: "Rules text"
+  - metric: Word count
+    value: '3722'
+    date: 2025-10-27T00:00:00.000Z
+    source: Rules text
+  - metric: Page count
+    value: '16'
+    date: 2025-10-27T00:00:00.000Z
+    source: Rules text
+  - metric: Format
+    value: Digital
+    date: 2025-10-27T00:00:00.000Z
+    source: Rules text
 quotes:
-  - source: "Petri Leinonen"
-    text: "A grimy, psychedelic road trip through the dying world."
-    date: 2025-11-28
+  - source: Petri Leinonen
+    text: 'A grimy, psychedelic road trip through the dying world.'
+    date: 2025-11-28T00:00:00.000Z
 entities:
-  - type: "CreativeWork"
-    name: "We can't stop here..."
+  - type: CreativeWork
+    name: We can't stop here...
     sameAs:
-      - "https://strangeworlder.itch.io/we-cant-stop-here"
-      - "https://www.fantasiapelit.com/index.php?main=ai&mista=*&yhteen=eri&alue=&autoid=_221392&kat=single&etsittava=_221392"
+      - 'https://strangeworlder.itch.io/we-cant-stop-here'
+      - >-
+        https://www.fantasiapelit.com/index.php?main=ai&mista=*&yhteen=eri&alue=&autoid=_221392&kat=single&etsittava=_221392
+    author:
+      type: Person
+      name: Petri Leinonen
 ---
 
 ::alert{type="caution" title="Content Warning"}

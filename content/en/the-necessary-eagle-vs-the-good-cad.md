@@ -1,48 +1,69 @@
 ---
-title: "The Necessary Eagle vs. The Good Cad"
-description: "A two-player, competitive TTRPG about a sociopathic superhero and the vigilante they created, using a standard deck of cards for asymmetrical, narrative-driven play."
-datePublished: 2025-12-25
-dateModified: 2025-12-25
-tags: ["game", "ttrpg"]
-canonical: "/en/the-necessary-eagle-vs-the-good-cad"
-alternateLocales: ["fi"]
-template: "hero"
-theme: "modern"
-cover: "/images/the-necessary-eagle-vs-the-good-cad-cover.png"
-heroImage: "/images/the-necessary-eagle-vs-the-good-cad-cover.png"
+title: The Necessary Eagle vs. The Good Cad
+description: >-
+  A two-player, competitive TTRPG about a sociopathic superhero and the
+  vigilante they created, using a standard deck of cards for asymmetrical,
+  narrative-driven play.
+contentType:
+  - Game
+  - CreativeWork
+genre: Tabletop Role-playing Game
+gameInterfaceType: Tabletop
+numberOfPlayers:
+  '@type': QuantitativeValue
+  value: '2'
+author:
+  '@type': Person
+  name: Petri Leinonen
+  url: 'https://strangeworlder.itch.io/'
+datePublished: 2025-12-28
+dateModified: 2025-12-30
+tags:
+  - game
+  - ttrpg
+canonical: /en/the-necessary-eagle-vs-the-good-cad
+alternateLocales:
+  - fi
+template: hero
+theme: modern
+cover: /images/the-necessary-eagle-vs-the-good-cad-cover.png
+heroImage: /images/the-necessary-eagle-vs-the-good-cad-cover.png
 summary: |
   Two-player, competitive TTRPG where a sociopathic superhero faces the
   vigilante they created. Uses a standard deck of cards to model
   asymmetrical power, PR fallout, and a parasitic cat-and-mouse dynamic.
-lastValidated: 2025-11-28
+lastValidated: 2025-11-28T00:00:00.000Z
 facts:
-  - label: "System"
-    value: "Asymmetrical card-based"
-  - label: "Tone"
-    value: "Superhero deconstruction"
+  - label: System
+    value: Asymmetrical card-based
+  - label: Tone
+    value: Superhero deconstruction
 stats:
-  - metric: "Word count"
-    value: "791"
-    date: 2025-10-28
-    source: "Rules text"
-  - metric: "Page count"
-    value: "2"
-    date: 2025-10-28
-    source: "Rules text"
-  - metric: "Format"
-    value: "PDF"
-    date: 2025-10-28
-    source: "Rules text"
+  - metric: Word count
+    value: '791'
+    date: 2025-10-28T00:00:00.000Z
+    source: Rules text
+  - metric: Page count
+    value: '2'
+    date: 2025-10-28T00:00:00.000Z
+    source: Rules text
+  - metric: Format
+    value: PDF
+    date: 2025-10-28T00:00:00.000Z
+    source: Rules text
 quotes:
-  - source: "Petri Leinonen"
-    text: "The powerless fighting the super‑powerful."
-    date: 2025-11-28
+  - source: Petri Leinonen
+    text: The powerless fighting the super‑powerful.
+    date: 2025-11-28T00:00:00.000Z
 entities:
-  - type: "CreativeWork"
-    name: "The Necessary Eagle vs. The Good Cad"
+  - type: CreativeWork
+    name: The Necessary Eagle vs. The Good Cad
     sameAs:
-      - "https://strangeworlder.itch.io/the-necessary-eagle-vs-the-good-cad"
-      - "https://roolipelikirjasto.fi/book/156"
+      - 'https://strangeworlder.itch.io/the-necessary-eagle-vs-the-good-cad'
+      - 'https://roolipelikirjasto.fi/book/156'
+    author:
+      type: Person
+      name: Petri Leinonen
 ---
 
 

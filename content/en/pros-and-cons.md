@@ -1,44 +1,65 @@
 ---
-title: "Pros & Cons"
-description: "Introduction for new players to Pros & Cons: a heist RPG built on Lasers & Feelings."
-datePublished: 2025-12-26
-dateModified: 2025-12-26
-tags: ["game", "heist"]
-canonical: "/en/pros-and-cons"
-alternateLocales: ["fi"]
-template: "hero"
-theme: "modern"
-cover: "/images/pros-and-cons-cover.jpg"
-heroImage: "/images/pros-and-cons-cover.jpg"
+title: Pros & Cons
+description: >-
+  Introduction for new players to Pros & Cons: a heist RPG built on Lasers &
+  Feelings.
+contentType:
+  - Game
+  - CreativeWork
+genre: Tabletop Role-playing Game
+gameInterfaceType: Tabletop
+numberOfPlayers:
+  '@type': QuantitativeValue
+  minValue: '3'
+  maxValue: '5'
+author:
+  '@type': Person
+  name: Petri Leinonen
+  url: 'https://strangeworlder.itch.io/'
+datePublished: 2025-12-28
+dateModified: 2025-12-30
+tags:
+  - game
+  - heist
+canonical: /en/pros-and-cons
+alternateLocales:
+  - fi
+template: hero
+theme: modern
+cover: /images/pros-and-cons-cover.jpg
+heroImage: /images/pros-and-cons-cover.jpg
 summary: |
   A quick, player-facing intro to Pros & Cons: a cinematic heist TTRPG
   that replaces dice with playing cards. Balance Pro vs Con approaches,
   trigger Twists with face cards, and use Flashbacks to outsmart the mark.
-lastValidated: 2025-11-28
+lastValidated: 2025-11-28T00:00:00.000Z
 facts:
-  - label: "System"
-    value: "Lasers & Feelings with cards"
-  - label: "Tone"
-    value: "Cinematic Heist"
+  - label: System
+    value: Lasers & Feelings with cards
+  - label: Tone
+    value: Cinematic Heist
 stats:
-  - metric: "Page count"
-    value: "2"
-    date: 2025-10-26
-    source: "Rules text"
-  - metric: "Word count"
-    value: "1352"
-    date: 2025-10-26
-    source: "Rules text"
+  - metric: Page count
+    value: '2'
+    date: 2025-10-26T00:00:00.000Z
+    source: Rules text
+  - metric: Word count
+    value: '1352'
+    date: 2025-10-26T00:00:00.000Z
+    source: Rules text
 quotes:
-  - source: "Petri Leinonen"
-    text: "A heist RPG built on Lasers & Feelings."
-    date: 2025-11-28
+  - source: Petri Leinonen
+    text: A heist RPG built on Lasers & Feelings.
+    date: 2025-11-28T00:00:00.000Z
 entities:
-  - type: "CreativeWork"
-    name: "Pros & Cons"
+  - type: CreativeWork
+    name: Pros & Cons
     sameAs:
-      - "https://strangeworlder.itch.io/pros-and-cons"
-      - "https://roolipelikirjasto.fi/book/147"
+      - 'https://strangeworlder.itch.io/pros-and-cons'
+      - 'https://roolipelikirjasto.fi/book/147'
+    author:
+      type: Person
+      name: Petri Leinonen
 ---
 
 

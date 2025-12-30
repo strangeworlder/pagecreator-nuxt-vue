@@ -22,8 +22,6 @@ offers:
   price: '0'
   priceCurrency: USD
 canonical: /en/we-cant-stop-here
-alternateLocales:
-  - fi
 template: hero
 theme: classic
 cover: /images/we-cant-stop-here-cover.png

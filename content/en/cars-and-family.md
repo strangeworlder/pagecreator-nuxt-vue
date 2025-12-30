@@ -30,8 +30,6 @@ offers:
   price: '0'
   priceCurrency: USD
 canonical: /en/cars-and-family
-alternateLocales:
-  - fi
 template: hero
 theme: modern
 cover: /images/cars-and-family-cover.png
@@ -53,6 +51,8 @@ facts:
     value: Lasers & Feelings hack
   - label: Tone
     value: Fast & Furious action
+  - label: License
+    value: Creative Commons Non-Commercial Share-Alike 3.0 Unported
 stats:
   - metric: Page count
     value: '1'
@@ -88,7 +88,14 @@ faq:
 entities:
   - type: CreativeWork
     name: Cars & Family
+    author:
+      type: Person
+      name: Petri Leinonen
     description: A tabletop roleplaying game about street racing thieves.
+    license:
+      - type: CreativeWork
+        name: Creative Commons Non-Commercial Share-Alike 3.0 Unported
+        url: 'https://creativecommons.org/licenses/by-nc-sa/3.0/'
     isBasedOn:
       type: CreativeWork
       name: Lasers & Feelings

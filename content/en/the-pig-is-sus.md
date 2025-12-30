@@ -28,8 +28,6 @@ offers:
   price: '0'
   priceCurrency: USD
 canonical: /en/the-pig-is-sus
-alternateLocales:
-  - fi
 template: hero
 theme: classic
 summary: >

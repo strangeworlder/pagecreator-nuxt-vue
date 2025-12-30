@@ -26,8 +26,6 @@ offers:
   price: '0'
   priceCurrency: USD
 canonical: /en/pros-and-cons
-alternateLocales:
-  - fi
 template: hero
 theme: modern
 cover: /images/pros-and-cons-cover.jpg
@@ -42,6 +40,8 @@ facts:
     value: Lasers & Feelings with cards
   - label: Tone
     value: Cinematic Heist
+  - label: License
+    value: Creative Commons Attribution 4.0
 stats:
   - metric: Page count
     value: '2'
@@ -58,6 +58,13 @@ quotes:
 entities:
   - type: CreativeWork
     name: Pros & Cons
+    license:
+      type: CreativeWork
+      name: Creative Commons Attribution 4.0
+      url: 'https://creativecommons.org/licenses/by/4.0/'
+    isBasedOn:
+      type: CreativeWork
+      name: Lasers & Feelings
     sameAs:
       - 'https://rpggeek.com/rpgitem/461385/pros-and-cons'
       - 'https://strangeworlder.itch.io/pros-and-cons'

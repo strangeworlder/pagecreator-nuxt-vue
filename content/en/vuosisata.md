@@ -21,8 +21,6 @@ tags:
   - game
   - ttrpg
 canonical: /en/vuosisata
-alternateLocales:
-  - fi
 template: hero
 theme: classic
 cover: /images/vuosisata-cover.png

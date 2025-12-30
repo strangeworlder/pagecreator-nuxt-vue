@@ -23,8 +23,6 @@ offers:
   price: '0'
   priceCurrency: USD
 canonical: /en/cyberpunk-is-dead
-alternateLocales:
-  - fi
 template: hero
 theme: modern
 cover: /images/cyberpunk-is-dead-cover.jpg
@@ -88,6 +86,16 @@ faq:
 entities:
   - type: CreativeWork
     name: Cyberpunk is Dead
+    author:
+      type: Person
+      name: Petri Leinonen
+    isBasedOn:
+      type: CreativeWork
+      name: Blades in the Dark
+    license:
+      type: CreativeWork
+      name: Creative Commons Attribution 3.0 Unported
+      url: 'https://creativecommons.org/licenses/by/3.0/'
     sameAs:
       - 'https://rpggeek.com/rpgitem/421060/cyberpunk-is-dead'
       - 'https://strangeworlder.itch.io/cyberpunk-is-dead'

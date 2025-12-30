@@ -72,7 +72,7 @@ quotes:
 offers:
   '@type': AggregateOffer
   priceCurrency: EUR
-  lowPrice: '15.00'
+  lowPrice: '25.00'
   offerCount: '5'
   offers:
     - name: Fantasiapelit

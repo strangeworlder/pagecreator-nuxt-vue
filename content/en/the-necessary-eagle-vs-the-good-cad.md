@@ -26,8 +26,6 @@ offers:
   price: '0'
   priceCurrency: USD
 canonical: /en/the-necessary-eagle-vs-the-good-cad
-alternateLocales:
-  - fi
 template: hero
 theme: modern
 cover: /images/the-necessary-eagle-vs-the-good-cad-cover.png

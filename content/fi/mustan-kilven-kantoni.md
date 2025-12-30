@@ -1,15 +1,105 @@
 ---
-title: "Mustan kilven kantoni: Analyysi maailmasta, teemoista ja tyylistä"
-description: "Kattava kuvaus Mustan kilven kantoni -pelimaailman teemoista ja tyylistä ja valinnoista"
-datePublished: 2025-12-25
-dateModified: 2025-12-25
-tags: ["L&L", "maailma"]
-canonical: "/fi/mustan-kilven-kantoni"
-alternateLocales: ["en"]
-summary: |
-  Mustan kilven kantoni on seikkailumaailma.
+title: 'Mustan kilven kantoni: Analyysi maailmasta, teemoista ja tyylistä'
+description: >-
+  Kattava kuvaus Mustan kilven kantoni -pelimaailman teemoista ja tyylistä ja
+  valinnoista
+organization:
+  name: Gogam
+  url: 'https://gogam.eu'
+author: Petri Leinonen
+datePublished: 2025-12-28
+dateModified: 2025-12-30
+tags:
+  - L&L
+  - maailma
+contentType: CreativeWork
+about:
+  - '@type': Thing
+    name: Suomalainen kansanperinne
+    sameAs: 'https://fi.wikipedia.org/wiki/Suomalainen_mytologia'
+  - '@type': Thing
+    name: Akseli Gallen-Kallela
+    sameAs: 'https://fi.wikipedia.org/wiki/Akseli_Gallen-Kallela'
+mentions:
+  - '@type': Thing
+    name: Karhu (Metsän kuningas)
+  - '@type': Thing
+    name: Ilves (Salaisuuksien vartija)
+  - '@type': Thing
+    name: Orava (Kuoleman jumala)
+  - '@type': Thing
+    name: Aurelius (Auringonjumala)
+  - '@type': Thing
+    name: Aureliuksen kirkko
+  - '@type': Organization
+    name: Pyhä konfederaatio
+hasPart:
+  - '@type': Book
+    name: Them Deeper Bones
+    url: 'https://themdeeperbones.com/'
+  - '@type': Book
+    name: Hirviökirja
+    url: 'https://gogam.eu/hirviokirja'
+  - '@type': Book
+    name: Sulkavan sointu
+    url: 'https://gogam.eu/sulkavansointu'
+  - '@type': Book
+    name: Yöjoen raivo
+faq:
+  - q: Mikä on Mustan kilven kantoni?
+    a: >-
+      Mustan kilven kantoni on Petri Leinosen luoma suomalaiseen
+      kansanperinteeseen ja mytologiaan pohjautuva roolipelimaailma. Se
+      sijoittuu Pyhän konfederaation pohjoisimpaan osaan, maagisen rajan taakse,
+      jossa pelaajat tutkivat menneisyyden raunioita ja unohdettuja
+      salaisuuksia.
+  - q: Mihin Mustan kilven kantonin maailma perustuu?
+    a: >-
+      Maailma ammentaa vahvasti suomalaisesta luontosuhteesta, historiasta ja
+      kansanperinteestä, kuten Kalevalasta. Sen tunnelma on saanut inspiraatiota
+      muun muassa Akseli Gallen-Kallelan taiteesta, ja se painottaa melankoliaa,
+      mysteeriä ja historian uudelleenlöytämistä.
+  - q: Mitä on OSR ja "retroseikkailupeli"?
+    a: >-
+      Termi OSR (Old School Renaissance/Revival) viittaa roolipeliperinteeseen,
+      joka jäljittelee 1970- ja 1980-lukujen roolipelien tyyliä. Se korostaa
+      pelaajien luovuutta, ongelmanratkaisua ja ympäristön haasteita.
+      "Retroseikkailupeli" on Them Deeper Bones -pelin yhteydessä käytetty
+      tarkempi termi, joka pohjautuu OSR-filosofiaan, mutta korostaa maailman
+      uniikkia lähestymistä tähän pelityyliin.
+  - q: Mitä ovat Mustan kilven kantonin lisäosat?
+    a: >-
+      Mustan kilven kantonille on julkaistu useita lisäosia, kuten
+      *Hirviökirja*, *Sulkavan sointu* ja *Yöjoen raivo*.
+  - q: Miten Mustan kilven kantoni eroaa perinteisestä fantasiasta?
+    a: >-
+      Se hylkää avoimesti amerikkalaisen "rajaseutumyytin", jossa erämaa on
+      valloitettava vihollinen. Sen sijaan se keskittyy animistiseen luonnon
+      kunnioitukseen, jossa "villillä" on omat sääntönsä, joita on
+      kunnioitettava, ei kesytettävä.
+  - q: Sopiiko Mustan kilven kantoni soolopelaamiseen?
+    a: >-
+      Kyllä, maailman painotus tutkimusmatkailuun, proseduraaliseen generointiin
+      (*Them Deeper Bones* -pelin kautta) ja omaleimainen tunnelma tekevät siitä
+      hyvin sopivan soolopelaamiseen, erityisesti pelaajille, jotka pitävät
+      päiväkirjapeleistä tai samastumisesta yksinäiseen tutkimusmatkailijaan
+      suuressa, mystisessä erämaassa.
+canonical: /fi/mustan-kilven-kantoni
+alternateLocales:
+  - en
+summary: >
+  Mustan kilven kantoni on seikkailumaailma, jossa suomalainen kansanperinne
+  kohtaa maailmanlopun jälkeisen fantasian.
 ---
 Petri Leinosen luoma Mustan kilven kantonin seikkailumaailma on poikkeuksellisen syvällinen fantasiamaailma, joka ammentaa suomalaisesta kansanperinteestä, historiasta ja luontosuhteesta. Kyseessä ei ole perinteinen korkean fantasian näyttämö, vaan melankolinen ja samalla toiveikas maailma, joka on toipumassa aiemmasta, sivilisaation romahduttaneesta mullistuksesta. Menneisyyden haamut ja luonnon mysteerit ovat siinä alati läsnä. Tämä syväluotaava analyysi tarkastelee kantonin ydintä, teemoja, keskeisiä vaikutteita ja tyyliä pohjautuen kaikkiin toimitettuihin lähdeaineistoihin.
+
+::alert{type="note" title="Maailma yhdellä silmäyksellä"}
+*   **Genre**: Suomalainen mytologia / Post-apokalyptinen fantasia
+*   **Ydinristiriita**: Virallinen historia (Kirkko) vs. Unohdettu totuus (Erämaa)
+*   **Keskeiset jumaluudet**: Karhu (Kuningas), Ilves (Salaisuudet), Orava (Kuolema), Aurelius (Auringonjumala)
+ *   **Sävy**: Melankolinen, Toiveikas, Maanläheinen, Luonnon kunnioitus
+*   **Systeemi**: OSR / 5e-yhteensopiva
+::
 ## Maailma tuhon jälkeen: Perusasetelma
 Maailman lähtökohtana on maaginen mullistus, joka tuhosi tunnetun sivilisaation. Ihmiskunnan rippeet, yhdeksän kansakuntaa, tekivät sopimuksen auringonjumala Aureliuksen kanssa. Jumala loi kansakuntien ympärille suojaavan rajan, jonka sisäpuolelle tuho ei ulottunut. Tästä syntyi Pyhä konfederaatio ja sen yhdeksän kantonia.
 
@@ -20,7 +110,7 @@ Pelaajahahmot kuuluvat "Rediscovery Company" -retkikuntaan, joka on yksi harvois
 ## Mustan kilven kantoni: Pohjoinen erämaa
 Mustan kilven kantoni on konfederaation pohjoisin linnake. Se on karu, metsäinen ja järvien täplittämä maa, jonka vuodenajat ovat ankarat ja selkeät. Pääelinkeinoja ovat puutavarakauppa ja vaatimaton maanviljely. Elämä on maanläheistä ja käytännöllistä.Yhteiskunnassa yhdistyvät järjestys ja vanhat perinteet. Vaikka Aureliuksen kirkolla on vahva asema, pohjoisessa turvaudutaan yhä vanhoihin metsänjumaliin: Karhuun (metsän kuningas), Ilvekseen (salaisuuksien vartija) ja Oravaan (kuoleman jumala). Tämä virallisen, järjestäytyneen uskonnon ja animistisen, kunnioittavan luontosuhteen välinen kaksijakoisuus muodostaa yhden maailman keskeisistä jännitteistä.
 
-![A descriptive alt text](/images/test-troll.webp)
+![Hirviökirjan kansikuva, joka kuvaa pohjoista erämaamaisemaa suomalaiskansallisromanttisella tyylillä, keskeinen osa Mustan kilven kantonin maailmaa.](/images/products/hirviokirja/kansi.webp)
 
 ## Keskeiset teemat ja vaikutteet
 Maailman omaleimaisuus kumpuaa siitä, että se poikkeaa tietoisesti angloamerikkalaisen fantasian vakiintuneimmista käytänteistä ja rakentaa tilalle jotain aidosti suomalaista.
@@ -41,7 +131,9 @@ Pyhän konfederaation ja Aureliuksen kirkon luoma maailmankuva on yksinkertaiste
 ### 4. Laajentuva maailma ja ulkopuoliset tekijät
 Wille Ruotsalaisen seikkailu tuo analyysiin tärkeän näkökulman: Mustan kilven kantoni ei ole pysähtynyt, ainoastaan alkuperäisen tekijän määrittelemä kokonaisuus, vaan elävä ja laajentuva maailma. "Yöjoen raivo" on esimerkki siitä, kuinka toinen kirjoittaja voi ottaa olemassa olevat teemat ja työkalut ja rakentaa niiden päälle jotain uutta, joka on samalla uskollinen alkuperäiselle näkemykselle.
 
-..Kuva Yöjoen raivo -seikkailun kannesta..
+
+![Sulkavan soinnun kansikuva, jossa seikkailijat kohtaavat jokirosvoja tukkilaismaisemassa.](/images/products/sulkavansointu/kansi.webp)
+
 
 Seikkailu laajentaa maailmaa sekä maantieteellisesti että temaattisesti ja osoittaa, että maailma on suunniteltu alustaksi monenlaisille tarinoille.
 
@@ -77,11 +169,14 @@ Termi OSR (Old School Renaissance/Revival) viittaa roolipeliperinteeseen, joka j
  - Leinonen, Petri. (2023). Sulkavan sointu. Gogam.
  - Ruotsalainen, Wille. (2024). Yöjoen raivo. Gogam.
 
+### Miten Mustan kilven kantoni eroaa perinteisestä fantasiasta?
+Se hylkää avoimesti amerikkalaisen "rajaseutumyytin", jossa erämaa on valloitettava vihollinen. Sen sijaan se keskittyy animistiseen luonnon kunnioitukseen, jossa "villillä" on omat sääntönsä, joita on kunnioitettava, ei kesytettävä.
+
+### Sopiiko Mustan kilven kantoni soolopelaamiseen?
+Kyllä, maailman painotus tutkimusmatkailuun, proseduraaliseen generointiin (*Them Deeper Bones* -pelin kautta) ja omaleimainen tunnelma tekevät siitä hyvin sopivan soolopelaamiseen, erityisesti pelaajille, jotka pitävät päiväkirjapeleistä tai samastumisesta yksinäiseen tutkimusmatkailijaan suuressa, mystisessä erämaassa.
+
 ## Linkit
-Them Deeper Bones: https://themdeeperbones.com/, Fantasiapelit
-
-Hirviökirja: http://gogam.eu/hirviokirja, Puolenkuun pelit, Fantasiapelit, Laiska Pelikaani, Pelikrypta Ikamaa
-
-Sulkavan sointu: http://gogam.eu/sulkavansointu/, Puolenkuun pelit, Fantasiapelit, Laiska pelikaani, Pelikrypta Ikamaa
-
-Yöjoen raivo: Puolenkuun pelit, Fantasiapelit, Laiska pelikaani, Pelikrypta Ikamaa
+*   **Them Deeper Bones**: [https://themdeeperbones.com/](https://themdeeperbones.com/), [Fantasiapelit](https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_221393)
+*   **Hirviökirja**: [/hirviokirja](http://gogam.eu/hirviokirja), [Puolenkuun pelit](https://www.puolenkuunpelit.com/kauppa/product_info.php?products_id=168296), [Fantasiapelit](https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_221394), [Laiska Pelikaani](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-hirviokirja-84744) / [PDF](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-hirviokirja-vesileimattu-pdf-81049)
+*   **Sulkavan sointu**: [/sulkavansointu/](http://gogam.eu/sulkavansointu/), [Puolenkuun pelit](https://www.puolenkuunpelit.com/kauppa/product_info.php?products_id=179450), [Fantasiapelit](https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_225693), [Laiska pelikaani](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-sulkavan-sointu-84879) / [PDF](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-sulkavan-sointu-vesileimattu-pdf-84945), [Pelikrypta Ikamaa](https://pelikrypta.fi/products/sulkavan-sointu)
+*   **Yöjoen raivo**: [Puolenkuun pelit](https://www.puolenkuunpelit.com/kauppa/product_info.php?products_id=189358), [Fantasiapelit](https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_230989), [Laiska pelikaani](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-yojoen-raivo-81803), [Pelikrypta Ikamaa](https://pelikrypta.fi/products/yojoen-raivo)

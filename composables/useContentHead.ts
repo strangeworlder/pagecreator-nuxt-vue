@@ -380,6 +380,12 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
       if (doc.sameAs) itemNode.sameAs = doc.sameAs;
       if (doc.isbn) itemNode.isbn = doc.isbn;
 
+      // Generic CreativeWork properties
+      if (doc.about) itemNode.about = doc.about;
+      if (doc.mentions) itemNode.mentions = doc.mentions;
+      if (doc.hasPart) itemNode.hasPart = doc.hasPart;
+      if (doc.isBasedOn) itemNode.isBasedOn = doc.isBasedOn;
+
       // Illustrator
       if (doc.illustrator) {
         // If it's a string, assume it's a reference to the main Person ID if it matches
@@ -444,6 +450,32 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
       // Additional Properties (Stats/Facts belong to the GAME, not the page)
       const additionalProps = buildAdditionalProperties(doc.facts as [], doc.stats as []);
       if (additionalProps.length > 0) itemNode.additionalProperty = additionalProps;
+
+      // Merge data from 'entities' frontmatter if available
+      // This handles cases where rich data like isBasedOn, license, matches, etc. are defined in an 'entities' block
+      if (doc.entities && Array.isArray(doc.entities)) {
+        for (const entity of doc.entities) {
+          // Check if this entity represents the main item (by name match or generic type match if only one)
+          // We utilize loose matching to capture the intent.
+          const isMatch = entity.name === title ||
+            (doc.entities.length === 1 && ["Game", "CreativeWork", "Product"].includes(entity.type));
+
+          if (isMatch) {
+            if (entity.isBasedOn) itemNode.isBasedOn = entity.isBasedOn;
+            if (entity.license) itemNode.license = entity.license;
+            if (entity.sameAs) itemNode.sameAs = entity.sameAs;
+            // We generally preserve the generated 'author'/'publisher' to keep the ID references (#petri, #organization),
+            // unless they are missing.
+            if (!itemNode.author && entity.author) itemNode.author = entity.author;
+            // Allow overriding description if strictly needed, but top-level usually prevails
+          } else {
+            // If we have other distinct entities defined, we could push them to graph
+            // But currently the requirement focuses on the main CreativeWork.
+            // We can safely treat them as separate nodes if they have IDs, or ignore if they are just extra info without ID.
+            // For now, only merging into main entity is critical.
+          }
+        }
+      }
 
       // Abstract
       if (doc.summary) itemNode.abstract = doc.summary;

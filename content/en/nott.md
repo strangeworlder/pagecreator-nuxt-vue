@@ -28,8 +28,6 @@ offers:
   price: '0'
   priceCurrency: USD
 canonical: /en/nott
-alternateLocales:
-  - fi
 template: hero
 theme: classic
 cover: /images/nott-cover.png

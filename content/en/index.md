@@ -8,8 +8,6 @@ datePublished: 2025-12-29
 tags:
   - starter
 canonical: /
-alternateLocales:
-  - fi
 cover: /gogam-facebook-etc.png
 summary: |
   Roleplaying games by Petri Leinonen. Indie tabletop RPGs like Cars & Family,

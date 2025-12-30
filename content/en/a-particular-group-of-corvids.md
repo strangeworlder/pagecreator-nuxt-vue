@@ -33,8 +33,6 @@ offers:
   price: '0'
   priceCurrency: USD
 canonical: /en/a-particular-group-of-corvids
-alternateLocales:
-  - fi
 template: hero
 theme: classic
 cover: /images/a-particular-group-of-corvids-cover.jpg

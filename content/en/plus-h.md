@@ -21,9 +21,10 @@ author:
   '@type': Person
   '@id': 'https://gogam.eu/#petri'
   name: Petri Leinonen
-  url: 'https://gogam.eu/'
-  sameAs:
-    - 'https://strangeworlder.itch.io/'
+offers:
+  url: 'http://roachsphere.com'
+  price: '0'
+  priceCurrency: EUR
 datePublished: 2025-12-28
 dateModified: 2025-12-30
 tags:

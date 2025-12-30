@@ -160,8 +160,8 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
     const alternatesRaw: unknown = doc.alternateLocales;
     const alternates = Array.isArray(alternatesRaw)
       ? alternatesRaw
-          .map((value) => (typeof value === "string" ? value.trim() : ""))
-          .filter((value): value is string => isLikelyLocale(value))
+        .map((value) => (typeof value === "string" ? value.trim() : ""))
+        .filter((value): value is string => isLikelyLocale(value))
       : [];
 
     const alternateLocaleSet = new Set(alternates.map(formatHreflang));
@@ -212,80 +212,95 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
     const webSiteId = `${siteUrl}${siteUrl.endsWith("/") ? "" : "/"}#website`;
     const webPageId = `${url}#webpage`;
 
-    // 2. Build Nodes
+    // 2. Identify if this is the Identity Hub (Root Page)
+    // We treat '/' and '/fi' (if it exists as a main hub) as the Hubs where full definitions live.
+    // Ideally, only the true root '/' defines them, but '/fi' might need them localized?
+    // The user instruction says: "The root page (gogam.eu) must contain the full definitions... Subpages ... must reference the Master IDs"
+    // So strictly `path === '/'` or `doc._path === '/'`
+    const isRoot = doc._path === "/" || doc.canonical === "/";
 
+    // 3. Build Nodes
     const graph: Record<string, unknown>[] = [];
 
     // Node: Organization (Gogam)
+    // Root: Full definition
+    // Subpage: Reference only
     if (doc.organization) {
       const org = doc.organization;
-      const orgNode: Record<string, unknown> = {
-        "@type": "Organization",
-        "@id": orgId,
-        name: org.name,
-        url: org.url || siteUrl,
-      };
-      if (org.description) orgNode.description = org.description;
-      if (org.logo) orgNode.logo = org.logo;
-      if (org.sameAs) orgNode.sameAs = org.sameAs;
-
-      // Link Founder if exists
-      if (org.founder) {
-        orgNode.founder = { "@id": personId };
-      }
-
-      // Sub-Organizations
-      if (doc.subOrganizations && Array.isArray(doc.subOrganizations)) {
-        orgNode.subOrganization = doc.subOrganizations.map((sub: Record<string, unknown>) => ({
+      if (isRoot) {
+        const orgNode: Record<string, unknown> = {
           "@type": "Organization",
-          name: sub.name,
-          description: sub.description,
-          url: sub.url,
-        }));
-      }
+          "@id": orgId,
+          name: org.name,
+          url: org.url || siteUrl,
+          description: org.description,
+          logo: org.logo,
+          sameAs: org.sameAs,
+        };
 
-      graph.push(orgNode);
+        // Link Founder if exists
+        if (org.founder) {
+          orgNode.founder = { "@id": personId };
+        }
+
+        // Sub-Organizations (Only on Root)
+        if (doc.subOrganizations && Array.isArray(doc.subOrganizations)) {
+          orgNode.subOrganization = doc.subOrganizations.map((sub: Record<string, unknown>) => ({
+            "@type": "Organization",
+            name: sub.name,
+            description: sub.description,
+            url: sub.url,
+          }));
+        }
+        graph.push(orgNode);
+      } else {
+        // Subpage: Minimal Reference
+        graph.push({
+          "@type": "Organization",
+          "@id": orgId,
+          name: org.name, // Keep name for readability in graph
+          url: org.url || siteUrl,
+        });
+      }
     }
 
     // Node: Person (Founder/Author)
-    let personNode: Record<string, unknown> | undefined;
+    // Root: Full definition
+    // Subpage: Reference only
+    if (doc.organization?.founder || doc.author) {
+      let personName = "Petri Leinonen";
+      if (doc.organization?.founder?.name) personName = doc.organization.founder.name;
+      else if (typeof doc.author === "string") personName = doc.author;
+      else if (doc.author?.name) personName = doc.author.name;
 
-    if (doc.organization?.founder) {
-      const f = doc.organization.founder;
-      console.log("Debug Founder:", f);
-      personNode = {
-        "@type": "Person",
-        "@id": personId,
-        name: f.name,
-        jobTitle: f.jobTitle,
-        url: f.url,
-        sameAs: f.sameAs,
-        knowsAbout: f.knowsAbout,
-        description: f.description,
-      };
-      graph.push(personNode);
-    } else if (doc.author) {
-      // Fallback if not using the organization structure
-      // We want a clean node for subpages: @type, @id, name, url, sameAs
-      const authorName = typeof doc.author === "string" ? doc.author : doc.author.name;
-      personNode = {
-        "@type": "Person",
-        "@id": personId,
-        name: authorName,
-      };
-
-      if (typeof doc.author !== "string") {
-        if (doc.author.url) personNode.url = doc.author.url;
-        if (doc.author.sameAs) personNode.sameAs = doc.author.sameAs;
-        // Inject default sameAs if missing, as per user request for consistency?
-        // The user showed "sameAs": ["https://strangeworlder.itch.io/"]
-        // If the frontmatter doesn't have it, we might want to add it or leave it out.
-        // For now, let's explicitly copy only these fields to avoid "noise".
+      if (isRoot) {
+        // Full definition
+        const f = doc.organization?.founder || doc.author || {};
+        const personNode: Record<string, unknown> = {
+          "@type": "Person",
+          "@id": personId,
+          name: personName,
+          url: f.url || siteUrl, // Default to site if no personal URL
+          sameAs: f.sameAs,
+          knowsAbout: f.knowsAbout,
+          description: f.description,
+          jobTitle: f.jobTitle,
+        };
+        // Ensure we don't push undefined props
+        if (!personNode.url) delete personNode.url;
+        graph.push(personNode);
+      } else {
+        // Subpage: Minimal Reference
+        graph.push({
+          "@type": "Person",
+          "@id": personId,
+          name: personName,
+          url: siteUrl, // Point back to hub
+        });
       }
-      graph.push(personNode);
     }
 
-    // Node: WebSite
+    // Node: WebSite (Always defined as separate node, pointing to Publisher)
     const webSiteNode: Record<string, unknown> = {
       "@type": "WebSite",
       "@id": webSiteId,
@@ -296,53 +311,69 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
     graph.push(webSiteNode);
 
     // Node: Game / CreativeWork (The Product/Entity)
-    // We create a separate node for the "Game" (or structured content) itself, distinct from the page.
     const primaryType = schemaType.length === 1 ? schemaType[0] : schemaType;
-    let contentType = primaryType;
-    if (contentType === "WebSite") contentType = "WebPage"; // Default fallback
-
-    // Logic: If it's a specific CreativeWork (Game, Book, etc.), separate it.
-    // If it's just a generic page, we might keep it merged or simple.
-    // For now, let's assume if it has specific fields like 'genre' or 'offers', it's a Product/Work.
     const isCreativeWork = ["Game", "CreativeWork", "Book", "SoftwareApplication"].some((t) => {
       return Array.isArray(schemaType) ? schemaType.includes(t) : schemaType === t;
     });
 
-    // ID for the item itself (e.g., the Game)
-    const itemId = `${url}#game`; // Using #game as a convention for the primary entity
+    // ID for the item itself
+    const itemId = `${url}#game`;
 
     // Node: WebPage
     const pageNode: Record<string, unknown> = {
       "@type": "WebPage",
       "@id": webPageId,
       url: url,
-      name: `${title} - ${siteName}`, // Page title often includes site name
+      name: `${title} - ${siteName}`,
       description: description,
       inLanguage: documentLocale,
       isPartOf: { "@id": webSiteId },
+      primaryImageOfPage: image ? { "@id": image } : undefined, // Link image
+    };
+
+    // Helper to build AdditionalProperties (Facts/Stats)
+    const buildAdditionalProperties = (sourceFacts: unknown[], sourceStats: unknown[]) => {
+      const props: Record<string, unknown>[] = [];
+      if (Array.isArray(sourceFacts)) {
+        for (const f of sourceFacts) {
+          props.push({
+            "@type": "PropertyValue",
+            name: (f as Record<string, unknown>).label,
+            value: (f as Record<string, unknown>).value,
+          });
+        }
+      }
+      if (Array.isArray(sourceStats)) {
+        for (const s of sourceStats) {
+          props.push({
+            "@type": "PropertyValue",
+            name: (s as Record<string, unknown>).metric,
+            value: (s as Record<string, unknown>).value,
+            dateObserved: (s as Record<string, unknown>).date,
+            description: (s as Record<string, unknown>).source
+              ? `Source: ${(s as Record<string, unknown>).source}`
+              : undefined,
+          });
+        }
+      }
+      return props;
     };
 
     if (isCreativeWork) {
-      // Separate Entity Node
+      // --- CREATIVE WORK (GAME) NODE ---
       const itemNode: Record<string, unknown> = {
         "@type": schemaType,
         "@id": itemId,
         name: title,
-        description: description, // Item description
-        url: url, // The item's canonical URL is often the page URL
-        mainEntityOfPage: { "@id": webPageId }, // Inverse link
+        description: description,
+        url: url,
+        image: image,
+        mainEntityOfPage: { "@id": webPageId },
+        author: { "@id": personId },
+        publisher: { "@id": orgId },
       };
 
-      // Author/Publisher links on the Item
-      if (doc.organization) {
-        itemNode.publisher = { "@id": orgId };
-      }
-      // Link Founder/Author to Item
-      if (personNode) {
-        itemNode.author = { "@id": personId };
-      }
-
-      // Specific Fields to Item
+      // Game Specific Fields
       if (doc.genre) itemNode.genre = doc.genre;
       if (doc.gameInterfaceType) itemNode.gameInterfaceType = doc.gameInterfaceType;
       if (doc.numberOfPlayers) itemNode.numberOfPlayers = doc.numberOfPlayers;
@@ -359,76 +390,41 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
         };
       }
 
+      // Reviews
+      if (doc.quotes && Array.isArray(doc.quotes)) {
+        itemNode.review = doc.quotes.map((q: Record<string, unknown>) => ({
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          author: { "@type": "Person", name: (q as Record<string, unknown>).source },
+          reviewBody: (q as Record<string, unknown>).text,
+          datePublished: (q as Record<string, unknown>).date,
+        }));
+      }
+
+      // Additional Properties (Stats/Facts belong to the GAME, not the page)
+      const additionalProps = buildAdditionalProperties(doc.facts as [], doc.stats as []);
+      if (additionalProps.length > 0) itemNode.additionalProperty = additionalProps;
+
+      // Abstract
+      if (doc.summary) itemNode.abstract = doc.summary;
+
       graph.push(itemNode);
 
-      // Page points to Item
+      // Point Page to Game
       pageNode.mainEntity = { "@id": itemId };
-
-      // Move snippets (abstract/review) to Item or Page? Snippets usually belong to the creative work.
-      if (doc.summary) itemNode.abstract = doc.summary;
-      // ... (move other creative work props if needed)
     } else {
-      // Generic Page (About, Contact, etc.)
-      // Keep mainEntity logic simple or point to itself
-      // If it's just a WebPage, mainEntity is usually not needed or points to itself.
-      // But for consistency:
-      // pageNode.mainEntity = ...
-    }
+      // --- GENERIC PAGE ---
+      // For generic pages, facts/stats might belong to the page itself or the organization?
+      // Usually generic pages don't have game stats.
+      const additionalProps = buildAdditionalProperties(doc.facts as [], doc.stats as []);
+      if (additionalProps.length > 0) pageNode.additionalProperty = additionalProps;
 
-    // Link Page to Person/Org (Metadata about the PAGE authorship, not necessarily the content)
-    if (doc.organization) {
-      pageNode.publisher = { "@id": orgId };
-    }
-
-    // Add other fields to Page Node
-    const additionalProperty: Record<string, unknown>[] = [];
-    if (doc.facts && Array.isArray(doc.facts)) {
-      for (const f of doc.facts) {
-        additionalProperty.push({
-          "@type": "PropertyValue",
-          name: (f as Record<string, unknown>).label,
-          value: (f as Record<string, unknown>).value,
-        });
+      if (doc.organization) {
+        pageNode.publisher = { "@id": orgId };
       }
     }
-    if (doc.stats && Array.isArray(doc.stats)) {
-      for (const s of doc.stats) {
-        additionalProperty.push({
-          "@type": "PropertyValue",
-          name: (s as Record<string, unknown>).metric,
-          value: (s as Record<string, unknown>).value,
-          dateObserved: (s as Record<string, unknown>).date,
-          description: (s as Record<string, unknown>).source
-            ? `Source: ${(s as Record<string, unknown>).source}`
-            : undefined,
-        });
-      }
-    }
-    if (additionalProperty.length > 0) pageNode.additionalProperty = additionalProperty;
 
-    if (doc.quotes && Array.isArray(doc.quotes)) {
-      pageNode.review = doc.quotes.map((q: Record<string, unknown>) => ({
-        "@type": "Review",
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        author: { "@type": "Person", name: (q as Record<string, unknown>).source },
-        reviewBody: (q as Record<string, unknown>).text,
-        datePublished: (q as Record<string, unknown>).date,
-      }));
-    }
-
-    if (doc.summary) pageNode.abstract = doc.summary;
-
-    if (doc.citations && Array.isArray(doc.citations)) {
-      pageNode.citation = doc.citations.map((c: Record<string, unknown>) => c.url || c.title);
-    }
-
-    // AEO / Game Specific Fields
-    if (doc.genre) pageNode.genre = doc.genre;
-    if (doc.gameInterfaceType) pageNode.gameInterfaceType = doc.gameInterfaceType;
-    if (doc.numberOfPlayers) pageNode.numberOfPlayers = doc.numberOfPlayers;
-
-    // FAQ
-    const isGame = typeArray.includes("Game");
+    // FAQ (Shared)
     if (doc.faq && Array.isArray(doc.faq) && doc.faq.length > 0) {
       const faqItems = doc.faq.map((item: Record<string, unknown>) => ({
         "@type": "Question",
@@ -436,28 +432,23 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
         acceptedAnswer: { "@type": "Answer", text: item.a },
       }));
 
-      // Embed inside the page object
+      // If mainEntity is already taken (by Game), we attach FAQ as a part of the WebPage
       if (!pageNode.mainEntity) {
         pageNode.mainEntity = { "@type": "FAQPage", mainEntity: faqItems };
       } else {
-        // If mainEntity is already taken (e.g. by Person), push FAQPage as a separate node linked or just embed as 'hasPart'?
-        // Schema.org allows array for mainEntity, but let's be safe and use 'hasPart' for FAQ if mainEntity is used.
-        // OR just nest it.
-        // Let's create a separate FAQPage node for clarity in the graph?
-        // Actually, embedding is often cleaner for snippets.
-        // Since we set mainEntity to Person in the index case, we can use 'hasPart' for the FAQPage.
+        // Embed as hasPart of the WebPage
         pageNode.hasPart = { "@type": "FAQPage", mainEntity: faqItems };
       }
     }
 
+    // Keywords
     if (doc.tags && Array.isArray(doc.tags)) {
       meta.push({ name: "keywords", content: doc.tags.join(", ") });
     }
 
-    // Push page node last
     graph.push(pageNode);
 
-    // Add any manually specified structured data from frontmatter
+    // Add any manually specified structured data
     if (doc.structuredData && Array.isArray(doc.structuredData)) {
       graph.push(...doc.structuredData);
     }

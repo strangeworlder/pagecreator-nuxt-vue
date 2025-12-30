@@ -105,12 +105,14 @@ if (!initialLocaleIndex) {
     .where({ _path: `/${initialLocale}` })
     .only(['_path', 'cover'])
     .findOne();
-  ssrLocaleIndex.value = fetchedIdx;
-  initialLocaleIndex = fetchedIdx;
+  // Strictly filter to ensure no extra properties leak into hydration state
+  const strippedIdx = fetchedIdx ? { _path: (fetchedIdx as any)._path, cover: (fetchedIdx as any).cover } : null;
+  ssrLocaleIndex.value = strippedIdx;
+  initialLocaleIndex = strippedIdx;
   if (process.dev)
     console.log("[initial-index] fetched initial locale index", {
       locale: initialLocale,
-      _path: (fetchedIdx as Record<string, unknown>)?._path,
+      _path: (strippedIdx as Record<string, unknown>)?._path,
     });
 } else {
   if (process.dev)
@@ -198,7 +200,7 @@ watch(
       version.value = (version.value || 0) + 1;
     }
     if (nextIndex) {
-      localeIndexDoc.value = nextIndex;
+      localeIndexDoc.value = { _path: (nextIndex as any)._path, cover: (nextIndex as any).cover };
     }
   },
 );

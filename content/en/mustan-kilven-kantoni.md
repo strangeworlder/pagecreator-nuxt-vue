@@ -3,17 +3,10 @@ title: 'Black Shield Canton: Analysis of the world, themes, and style'
 description: >-
   A comprehensive overview of the Black Shield Canton game world's themes,
   style, and design choices
-author:
-  '@type': Person
-  '@id': 'https://gogam.eu/#petri'
-  name: Petri Leinonen
-  url: 'https://gogam.eu'
-  sameAs:
-    - 'https://strangeworlder.itch.io/'
 organization:
   name: Gogam
   url: 'https://gogam.eu'
-  logo: /gogam-logo.png
+author: Petri Leinonen
 datePublished: 2025-12-28
 dateModified: 2025-12-30
 tags:

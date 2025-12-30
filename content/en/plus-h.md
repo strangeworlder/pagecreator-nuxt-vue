@@ -16,15 +16,7 @@ numberOfPlayers:
 organization:
   name: Gogam
   url: 'https://gogam.eu'
-  logo: /gogam-logo.png
-author:
-  '@type': Person
-  '@id': 'https://gogam.eu/#petri'
-  name: Petri Leinonen
-offers:
-  url: 'http://roachsphere.com'
-  price: '0'
-  priceCurrency: EUR
+author: Petri Leinonen
 datePublished: 2025-12-28
 dateModified: 2025-12-30
 tags:

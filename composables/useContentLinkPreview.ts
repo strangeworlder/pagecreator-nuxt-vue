@@ -1,5 +1,5 @@
-import { ref, computed } from "vue";
-import { queryContent, useRoute, useState, useRuntimeConfig } from "#imports";
+import { computed, ref } from "vue";
+import { queryContent, useRoute, useRuntimeConfig, useState } from "#imports";
 
 export interface ContentPreview {
   title?: string;
@@ -67,10 +67,12 @@ export function useContentLinkPreview() {
     }
 
     try {
-      unique.forEach((p) => loading.value.add(p));
+      for (const p of unique) {
+        loading.value.add(p);
+      }
 
       // Single request across all candidates and their canonical/aliases
-      const orClauses: any[] = [];
+      const orClauses: Record<string, unknown>[] = [];
       for (const p of unique) {
         orClauses.push({ _path: p });
         orClauses.push({ canonical: p });
@@ -94,7 +96,7 @@ export function useContentLinkPreview() {
 
       if (Array.isArray(results) && results.length) {
         // Pick the best match based on candidate order
-        const pickScore = (doc: any): number => {
+        const pickScore = (doc: Record<string, unknown>): number => {
           for (let i = 0; i < unique.length; i++) {
             const p = unique[i];
             const aliases = Array.isArray(doc.aliases)
@@ -129,10 +131,14 @@ export function useContentLinkPreview() {
     } catch (error) {
       console.warn(`Failed to fetch content preview for candidates: ${unique.join(", ")}`, error);
     } finally {
-      unique.forEach((p) => loading.value.delete(p));
+      for (const p of unique) {
+        loading.value.delete(p);
+      }
     }
 
-    unique.forEach((p) => previewCache.value.set(p, null));
+    for (const p of unique) {
+      previewCache.value.set(p, null);
+    }
     return null;
   };
 

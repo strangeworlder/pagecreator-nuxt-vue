@@ -1,10 +1,10 @@
-// @ts-nocheck
-import { createError, getQuery, setHeader, getRequestHeader } from "h3";
 import { promises as fs } from "node:fs";
-import { resolve, extname, basename, dirname, join } from "node:path";
 import https from "node:https";
-import { useRuntimeConfig } from "#imports";
+import { basename, dirname, extname, join, resolve } from "node:path";
+// @ts-nocheck
+import { type H3Event, createError, getQuery, getRequestHeader, setHeader } from "h3";
 import sharp from "sharp";
+import { useRuntimeConfig } from "#imports";
 
 const PUBLIC_DIR = resolve(process.cwd(), "public");
 
@@ -51,7 +51,10 @@ function applyOutputFormat(instance: sharp.Sharp, format: (typeof OUTPUT_FORMATS
   }
 }
 
-function resolveBaseUrlCandidates(event: any, runtime: any): string[] {
+function resolveBaseUrlCandidates(
+  event: H3Event,
+  runtime: { public?: { siteUrl?: string } },
+): string[] {
   const candidates = new Set<string>();
   const siteUrl = runtime?.public?.siteUrl;
   if (siteUrl) {
@@ -60,14 +63,18 @@ function resolveBaseUrlCandidates(event: any, runtime: any): string[] {
   const xfProto = getRequestHeader(event, "x-forwarded-proto");
   const xfHost = getRequestHeader(event, "x-forwarded-host");
   const host = xfHost || getRequestHeader(event, "host");
-  const proto = (xfProto && xfProto.split(",")[0].trim()) || "https";
+  const proto = xfProto?.split(",")[0].trim() || "https";
   if (host) {
     candidates.add(`${proto}://${host}`);
   }
   return Array.from(candidates).filter(Boolean);
 }
 
-async function fetchFromSite(rawSrc: string, event: any, runtime: any): Promise<Buffer> {
+async function fetchFromSite(
+  rawSrc: string,
+  event: H3Event,
+  runtime: { public?: { siteUrl?: string } },
+): Promise<Buffer> {
   const bases = resolveBaseUrlCandidates(event, runtime);
   if (!bases.length) {
     throw createError({ statusCode: 500, statusMessage: "Cannot determine site URL for fetch" });
@@ -82,8 +89,9 @@ async function fetchFromSite(rawSrc: string, event: any, runtime: any): Promise<
         continue;
       }
       return Buffer.from(await res.arrayBuffer());
-    } catch (error: any) {
-      attempts.push(`${base}: ${error?.message || "network error"}`);
+    } catch (error: unknown) {
+      const msg = error instanceof Error ? error.message : "network error";
+      attempts.push(`${base}: ${msg}`);
       // Fallback for self-signed or invalid certs on loopback
       try {
         const urlObj = new URL(rawSrc, base);
@@ -94,7 +102,7 @@ async function fetchFromSite(rawSrc: string, event: any, runtime: any): Promise<
                 reject(new Error(`Fallback Status ${res.statusCode}`));
                 return;
               }
-              const data: any[] = [];
+              const data: Uint8Array[] = [];
               res.on("data", (chunk) => data.push(chunk));
               res.on("end", () => resolve(Buffer.concat(data)));
             });
@@ -145,8 +153,10 @@ export default defineEventHandler(async (event) => {
   const requestedFormat = q.format ? q.format.toLowerCase() : "";
   const normalizedRequestedFormat = requestedFormat === "jpg" ? "jpeg" : requestedFormat;
   const defaultFormat = size === 1200 ? "png" : "webp";
-  const format = OUTPUT_FORMATS.includes(normalizedRequestedFormat as any)
-    ? normalizedRequestedFormat
+  const format = OUTPUT_FORMATS.includes(
+    normalizedRequestedFormat as (typeof OUTPUT_FORMATS)[number],
+  )
+    ? (normalizedRequestedFormat as (typeof OUTPUT_FORMATS)[number])
     : defaultFormat;
   const contentType = FORMAT_CONTENT_TYPES[format];
   if (!contentType) {
@@ -186,8 +196,8 @@ export default defineEventHandler(async (event) => {
     }
     try {
       inputBuf = await fs.readFile(absPath);
-    } catch (error: any) {
-      if (error?.code !== "ENOENT") {
+    } catch (error: unknown) {
+      if ((error as NodeJS.ErrnoException)?.code !== "ENOENT") {
         throw error;
       }
       inputBuf = await fetchFromSite(rawSrc, event, runtime);
@@ -203,9 +213,9 @@ export default defineEventHandler(async (event) => {
     const buf = await fs.readFile(outputPath);
     setHeader(event, "content-type", contentType);
     setHeader(event, "cache-control", "public, max-age=300");
-    setHeader(event, "content-length", String(buf.length));
+    setHeader(event, "content-length", buf.length);
     return buf;
-  } catch { }
+  } catch {}
 
   await fs.mkdir(dirname(outputPath), { recursive: true });
 
@@ -229,6 +239,6 @@ export default defineEventHandler(async (event) => {
 
   setHeader(event, "content-type", contentType);
   setHeader(event, "cache-control", "public, max-age=300");
-  setHeader(event, "content-length", String(outBuf.length));
+  setHeader(event, "content-length", outBuf.length);
   return outBuf;
 });

@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch, onMounted, onUpdated } from "vue";
+import { computed, onMounted, onUpdated, ref, watch } from "vue";
 
 const props = defineProps<{
   src: string;

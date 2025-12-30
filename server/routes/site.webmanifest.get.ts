@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
     name,
     short_name: shortName,
     description,
-    lang: (home as any)?.language || defaultLocale,
+    lang: (home as Record<string, unknown>)?.language || defaultLocale,
     id: "/",
     start_url: "/",
     scope: "/",

@@ -1,6 +1,6 @@
+import fs from "node:fs";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { globSync } from "glob";
-import fs from "node:fs";
 import matter from "gray-matter";
 const env: Record<string, string | undefined> =
   (globalThis as unknown as { process?: { env?: Record<string, string | undefined> } }).process
@@ -28,7 +28,7 @@ const aliasRoutes = new Set<string>();
 for (const file of contentFiles) {
   try {
     const src = fs.readFileSync(file, "utf8");
-    const fm = matter(src).data as Record<string, any>;
+    const fm = matter(src).data as Record<string, unknown>;
     const aliases: unknown = fm.aliases;
     if (Array.isArray(aliases)) {
       for (const a of aliases) {
@@ -134,6 +134,7 @@ export default {
       disableFreshness:
         env.NUXT_PUBLIC_DISABLE_FRESHNESS || (env.NUXT_PUBLIC_STATIC_HOSTING ? "1" : "0"),
       staticHosting: env.NUXT_PUBLIC_STATIC_HOSTING || "",
+      siteName: env.NUXT_PUBLIC_SITE_NAME || "Gogam",
     },
   },
   // Using custom /api/i endpoint for transforms to avoid native deps

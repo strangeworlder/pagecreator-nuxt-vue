@@ -12,10 +12,17 @@ numberOfPlayers:
   '@type': QuantitativeValue
   minValue: '2'
   maxValue: '5'
+organization:
+  name: Gogam
+  url: 'https://gogam.eu'
+  logo: /gogam-logo.png
 author:
   '@type': Person
+  '@id': 'https://gogam.eu/#petri'
   name: Petri Leinonen
-  url: 'https://strangeworlder.itch.io/'
+  url: 'https://gogam.eu'
+  sameAs:
+    - 'https://strangeworlder.itch.io/'
 datePublished: 2025-12-28
 dateModified: 2025-12-30
 tags:
@@ -23,6 +30,10 @@ tags:
   - tactical
   - combat
   - prototype
+offers:
+  url: 'https://strangeworlder.itch.io/the-pig-is-sus'
+  price: '0'
+  priceCurrency: USD
 canonical: /en/the-pig-is-sus
 alternateLocales:
   - fi

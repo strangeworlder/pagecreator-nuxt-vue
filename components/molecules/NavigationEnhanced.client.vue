@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from "vue";
+import { onMounted, onUnmounted, ref } from "vue";
 
 const navRef = ref<HTMLElement>();
 const floatingNavRef = ref<HTMLElement>();

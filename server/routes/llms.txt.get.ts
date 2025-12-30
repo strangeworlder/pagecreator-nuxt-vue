@@ -11,9 +11,10 @@ export default defineEventHandler(async (event) => {
   const allDocs = await serverQueryContent(event).where({ _partial: false }).find();
 
   // Helper to append rich details (Description, Facts, Stats)
-  const appendDocDetails = (lines: string[], doc: any) => {
+  const appendDocDetails = (lines: string[], doc: Record<string, unknown>) => {
     // Title link
-    const title = String(doc.title || doc._path.split("/").pop() || doc._path).replace(/-/g, " ");
+    const path = typeof doc._path === "string" ? doc._path : "";
+    const title = String(doc.title || path.split("/").pop() || path).replace(/-/g, " ");
     lines.push(`- [${title}](${siteUrl}${doc._path})`);
 
     // Description / Summary
@@ -25,27 +26,35 @@ export default defineEventHandler(async (event) => {
 
     // Facts
     if (doc.facts && Array.isArray(doc.facts)) {
-      const factsStr = doc.facts.map((f: any) => `${f.label}: ${f.value}`).join(", ");
+      const factsStr = doc.facts
+        .map((f: Record<string, unknown>) => `${f.label}: ${f.value}`)
+        .join(", ");
       lines.push(`  - Facts: ${factsStr}`);
     }
 
     // Stats
     if (doc.stats && Array.isArray(doc.stats)) {
-      const statsStr = doc.stats.map((s: any) => `${s.metric}: ${s.value}`).join(", ");
+      const statsStr = doc.stats
+        .map((s: Record<string, unknown>) => `${s.metric}: ${s.value}`)
+        .join(", ");
       lines.push(`  - Stats: ${statsStr}`);
     }
 
     lines.push("");
   };
 
-  const sortDocs = (a: any, b: any) => a._path.localeCompare(b._path);
+  const sortDocs = (a: Record<string, unknown>, b: Record<string, unknown>) =>
+    String(a._path).localeCompare(String(b._path));
 
   const keyPages = allDocs
-    .filter((d: any) => d._path && (d._path.startsWith("/en") || d._path === "/"))
+    .filter(
+      (d: Record<string, unknown>) =>
+        d._path && (String(d._path).startsWith("/en") || String(d._path) === "/"),
+    )
     .sort(sortDocs);
 
   const fiPages = allDocs
-    .filter((d: any) => d._path && d._path.startsWith("/fi"))
+    .filter((d: Record<string, unknown>) => String(d._path || "").startsWith("/fi"))
     .sort(sortDocs);
 
   const lines: string[] = [];
@@ -71,7 +80,7 @@ export default defineEventHandler(async (event) => {
 
   // Context paragraph
   lines.push(
-    `This site provides articles and product pages. The content is available in English and Finnish. For a full list of pages, see the sitemap at ${siteUrl}/sitemap.xml.`
+    `This site provides articles and product pages. The content is available in English and Finnish. For a full list of pages, see the sitemap at ${siteUrl}/sitemap.xml.`,
   );
   lines.push("");
 

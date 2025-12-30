@@ -1,31 +1,31 @@
 <script setup lang="ts">
 // @ts-nocheck
-import { computed, watch, markRaw, shallowRef } from "vue";
-import { queryContent } from "#imports";
-import { useCustomContentHead } from "~/composables/useContentHead";
-import ProseA from "~/components/prose/ProseA.vue";
+import { type Component, computed, markRaw, shallowRef, watch } from "vue";
 import { defineComponent, h } from "vue";
+import HeaderImage from "~/components/atoms/HeaderImage.vue";
+import Navigation from "~/components/molecules/Navigation.vue";
+import PageFooter from "~/components/molecules/PageFooter.vue";
+import PageHeader from "~/components/molecules/PageHeader.vue";
+import ProductNavigation from "~/components/molecules/ProductNavigation.vue";
+import ProseA from "~/components/prose/ProseA.vue";
+import ProseAlert from "~/components/prose/ProseAlert.vue";
 import ProseBlockquote from "~/components/prose/ProseBlockquote.vue";
 import ProseCode from "~/components/prose/ProseCode.vue";
 import ProseHeading from "~/components/prose/ProseHeading.vue";
+import ProseImg from "~/components/prose/ProseImg.vue";
 import ProseLi from "~/components/prose/ProseLi.vue";
 import ProseOl from "~/components/prose/ProseOl.vue";
 import ProseP from "~/components/prose/ProseP.vue";
 import ProsePre from "~/components/prose/ProsePre.vue";
-import ProseUl from "~/components/prose/ProseUl.vue";
-import ProseImg from "~/components/prose/ProseImg.vue";
 import ProseTable from "~/components/prose/ProseTable.vue";
-import ProseThead from "~/components/prose/ProseThead.vue";
 import ProseTbody from "~/components/prose/ProseTbody.vue";
-import ProseTr from "~/components/prose/ProseTr.vue";
-import ProseTh from "~/components/prose/ProseTh.vue";
 import ProseTd from "~/components/prose/ProseTd.vue";
-import ProseAlert from "~/components/prose/ProseAlert.vue";
-import PageHeader from "~/components/molecules/PageHeader.vue";
-import PageFooter from "~/components/molecules/PageFooter.vue";
-import Navigation from "~/components/molecules/Navigation.vue";
-import ProductNavigation from "~/components/molecules/ProductNavigation.vue";
-import HeaderImage from "~/components/atoms/HeaderImage.vue";
+import ProseTh from "~/components/prose/ProseTh.vue";
+import ProseThead from "~/components/prose/ProseThead.vue";
+import ProseTr from "~/components/prose/ProseTr.vue";
+import ProseUl from "~/components/prose/ProseUl.vue";
+import { useCustomContentHead } from "~/composables/useContentHead";
+import { queryContent } from "#imports";
 
 const route = useRoute();
 const runtime = useRuntimeConfig();
@@ -47,7 +47,7 @@ let initial = ssrInitialDoc.value;
 if (!initial) {
   const tryPath = resolveContentPath(route.path);
   // 1) Try exact _path (gracefully handle 404 from content API)
-  let fetched: any = null;
+  let fetched: Record<string, unknown> | null = null;
   try {
     fetched = await queryContent(tryPath).where({ _path: tryPath }).findOne();
   } catch {}
@@ -69,13 +69,13 @@ if (!initial) {
   if (process.dev)
     console.log("[initial-doc] fetched initial doc", {
       path: resolveContentPath(route.path),
-      _path: (fetched as any)?._path,
+      _path: (fetched as Record<string, unknown>)?._path,
     });
 } else {
   if (process.dev)
     console.log("[initial-doc] using SSR-cached initial doc", {
       path: resolveContentPath(route.path),
-      _path: (initial as any)?._path,
+      _path: (initial as Record<string, unknown>)?._path,
     });
 }
 
@@ -90,7 +90,9 @@ const getLocaleFromPath = (path: string) => {
 // Prefer locale from the fetched document when the route lacks locale
 const initialLocale = (() => {
   const docPath =
-    typeof (initial as any)?._path === "string" ? ((initial as any)?._path as string) : "";
+    typeof (initial as Record<string, unknown>)?._path === "string"
+      ? ((initial as Record<string, unknown>)?._path as string)
+      : "";
   const fromDoc = (docPath.split("/")[1] || "").trim();
   if (/^[a-z]{2}$/i.test(fromDoc)) return fromDoc;
   return getLocaleFromPath(route.path);
@@ -107,13 +109,13 @@ if (!initialLocaleIndex) {
   if (process.dev)
     console.log("[initial-index] fetched initial locale index", {
       locale: initialLocale,
-      _path: (fetchedIdx as any)?._path,
+      _path: (fetchedIdx as Record<string, unknown>)?._path,
     });
 } else {
   if (process.dev)
     console.log("[initial-index] using SSR-cached locale index", {
       locale: initialLocale,
-      _path: (initialLocaleIndex as any)?._path,
+      _path: (initialLocaleIndex as Record<string, unknown>)?._path,
     });
 }
 
@@ -121,13 +123,13 @@ const docState = useState<Record<string, unknown> | null>("content-doc", () => n
 const version = useState<number>("content-doc-version", () => 0);
 // Ensure page shows the correct document immediately on navigation
 const expectedPath = resolveContentPath(route.path);
-const currentDocPath = (docState.value as any)?._path;
+const currentDocPath = (docState.value as Record<string, unknown>)?._path;
 if (initial && currentDocPath !== expectedPath) {
   if (process.dev)
     console.log("[initial-doc-sync] setting docState to initial for path", {
       expectedPath,
       currentDocPath,
-      got: (initial as any)?._path,
+      got: (initial as Record<string, unknown>)?._path,
     });
   docState.value = initial;
   version.value = (version.value || 0) + 1;
@@ -142,13 +144,13 @@ const data = computed(() => {
 });
 // Sync locale index state to current locale immediately to avoid stale fallback
 const expectedIndexPath = `/${initialLocale}`;
-const currentIndexPath = (localeIndexDoc.value as any)?._path;
+const currentIndexPath = (localeIndexDoc.value as Record<string, unknown>)?._path;
 if (initialLocaleIndex && currentIndexPath !== expectedIndexPath) {
   localeIndexDoc.value = initialLocaleIndex;
 }
 const dataForHead = computed(() => {
-  const d = (data.value as any) || null;
-  const idx = (localeIndexDoc.value as any) || null;
+  const d = (data.value as Record<string, unknown>) || null;
+  const idx = (localeIndexDoc.value as Record<string, unknown>) || null;
   const merged = d && !d.cover && idx?.cover ? { ...d, cover: idx.cover } : d;
   // Force canonical to '/' when rendering the homepage at root URL
   if (route.path === "/" && merged) {
@@ -160,14 +162,14 @@ const dataForHead = computed(() => {
 useCustomContentHead(dataForHead);
 
 // Use a render doc that includes cover fallback so hero can rely on it consistently
-const renderDoc = computed(() => dataForHead.value as any);
+const renderDoc = computed(() => dataForHead.value as Record<string, unknown>);
 
 watch(
   () => route.fullPath,
   async () => {
     const path = resolveContentPath(route.path);
     // Re-run the same lookup strategy on navigation
-    let next: any = null;
+    let next: Record<string, unknown> | null = null;
     try {
       next = await queryContent(path).where({ _path: path }).findOne();
     } catch {}
@@ -186,7 +188,7 @@ watch(
     const nextIndex = await queryContent(`/${nextLocale}`)
       .where({ _path: `/${nextLocale}` })
       .findOne();
-    const currentPath = (data.value as any)?._path;
+    const currentPath = (data.value as Record<string, unknown>)?._path;
     if (next && next._path !== currentPath) {
       if (process.dev)
         console.log("[route-doc-swap] swapping doc", { from: currentPath, to: next._path, path });
@@ -202,12 +204,12 @@ watch(
 const enhancementsEnabled = useState<boolean>("content-enhance-ready", () => false);
 
 // Store the dynamically loaded enhanced components
-const enhancedHeadingComp = shallowRef<any>(null);
-const enhancedAComp = shallowRef<any>(null);
-const enhancedNavigationComp = shallowRef<any>(null);
-const enhancedProductNavigationComp = shallowRef<any>(null);
-const enhancedImgComp = shallowRef<any>(null);
-const enhancedPComp = shallowRef<any>(null);
+const enhancedHeadingComp = shallowRef<Component | null>(null);
+const enhancedAComp = shallowRef<Component | null>(null);
+const enhancedNavigationComp = shallowRef<Component | null>(null);
+const enhancedProductNavigationComp = shallowRef<Component | null>(null);
+const enhancedImgComp = shallowRef<Component | null>(null);
+const enhancedPComp = shallowRef<Component | null>(null);
 
 // Track when enhanced components are loaded
 const enhancedComponentsLoaded = useState<boolean>("enhanced-components-loaded", () => false);
@@ -247,7 +249,7 @@ const makeHeading = (level: 1 | 2 | 3 | 4 | 5 | 6) =>
     props: { id: String },
     setup(props, { slots, attrs }) {
       return () => {
-        const Comp: any =
+        const Comp: Component =
           enhancementsEnabled.value && enhancedHeadingComp.value
             ? enhancedHeadingComp.value
             : ProseHeading;
@@ -258,9 +260,9 @@ const makeHeading = (level: 1 | 2 | 3 | 4 | 5 | 6) =>
   });
 
 // Generic wrapper that preserves slot render context
-const wrap = (Target: any) =>
+const wrap = (Target: Component) =>
   defineComponent({
-    name: `WrappedComponent`,
+    name: "WrappedComponent",
     inheritAttrs: false,
     setup(_, { slots, attrs }) {
       // Return render function; h() with slots object will properly forward slots
@@ -275,7 +277,7 @@ const AWrapper = defineComponent({
   props: { href: String, rel: String, target: String },
   setup(props, { slots, attrs }) {
     return () => {
-      const Comp: any =
+      const Comp: Component =
         enhancementsEnabled.value && enhancedAComp.value ? enhancedAComp.value : ProseA;
       // Pass slots directly to preserve render context
       return h(Comp, { ...attrs, ...props }, slots);
@@ -305,11 +307,15 @@ const ImgWrapper = defineComponent({
     return () => {
       // Always use the basic image component to avoid remounts on enhancement
       const useEnhanced = false;
-      const Comp: any = ProseImg;
+      const Comp: Component = ProseImg;
       if (isDebug()) {
         const kind = "basic";
         if (kind !== lastKind) {
-          console.log("[ProseImgWrapper] rendering", { kind, src: (props as any)?.src, attrs });
+          console.log("[ProseImgWrapper] rendering", {
+            kind,
+            src: (props as Record<string, unknown>)?.src,
+            attrs,
+          });
           lastKind = kind;
         }
       }
@@ -327,7 +333,7 @@ const PWrapper = defineComponent({
   setup(_, { slots, attrs }) {
     return () => {
       // Always use the basic paragraph to avoid parent-type swaps remounting children
-      const Comp: any = ProseP;
+      const Comp: Component = ProseP;
       return h(Comp, attrs, slots);
     };
   },
@@ -370,20 +376,23 @@ if (process.dev) {
 
 // Get title and description from front-matter
 const pageTitle = computed(() => {
-  return (data.value as any)?.title || "Welcome";
+  return (data.value as Record<string, unknown>)?.title || "Welcome";
 });
 
 const pageDescription = computed(() => {
   return (
-    (data.value as any)?.description ||
+    (data.value as Record<string, unknown>)?.description ||
     "This is the TSS starter. Content below is rendered from Markdown."
   );
 });
 // Page theme from front matter or template; default to 'classic' when not set
 const pageTheme = computed(() => {
-  const tpl = String((renderDoc.value as any)?.template || "").toLowerCase();
+  const tpl = String((renderDoc.value as Record<string, unknown>)?.template || "").toLowerCase();
   if (tpl === "product") return "product" as const;
-  const raw = (renderDoc.value as any)?.theme || (renderDoc.value as any)?.pageTheme || "classic";
+  const raw =
+    (renderDoc.value as Record<string, unknown>)?.theme ||
+    (renderDoc.value as Record<string, unknown>)?.pageTheme ||
+    "classic";
   const theme = String(raw).toLowerCase();
   return ["classic", "modern", "product"].includes(theme) ? theme : "classic";
 });
@@ -399,8 +408,8 @@ if (process.client) {
 }
 // Ensure SSR also sets page theme and product CSS variables on <html>
 useHead(() => {
-  const d: any = renderDoc.value || {};
-  const pt = d?.productTheme || {};
+  const d: Record<string, unknown> = renderDoc.value || {};
+  const pt = (d?.productTheme as Record<string, string>) || {};
   const cssVarStyle = [
     pt.bgFull ? `--product-bg-full: url(${pt.bgFull})` : "",
     pt.bgTile ? `--product-bg-tile: url(${pt.bgTile})` : "",
@@ -418,40 +427,42 @@ useHead(() => {
   };
 });
 // Template selection and hero image handling (decoupled from `cover`)
-const templateName = computed(() => String((renderDoc.value as any)?.template || "").toLowerCase());
+const templateName = computed(() =>
+  String((renderDoc.value as Record<string, unknown>)?.template || "").toLowerCase(),
+);
 const isPlainTemplate = computed(() => !templateName.value || templateName.value === "plain");
 const heroImage = computed(() => {
-  const d = renderDoc.value as any;
+  const d = renderDoc.value as Record<string, unknown>;
   return d?.heroImage || d?.hero || d?.image || d?.cover || undefined;
 });
 const useHeroLayout = computed(() => !isPlainTemplate.value && !!heroImage.value);
 
 // Check if we're on the index page
 const isIndexPage = computed(() => {
-  const path = (data.value as any)?._path;
+  const path = (data.value as Record<string, unknown>)?._path;
   return path === `/${defaultLocale}` || path === "/";
 });
 
 // Product template specifics
 const isProductTemplate = computed(() => templateName.value === "product");
 const productNav = computed(() => {
-  const links = (renderDoc.value as any)?.productNav;
+  const links = (renderDoc.value as Record<string, unknown>)?.productNav;
   return Array.isArray(links) ? links : [];
 });
 // Apply product CSS variables from front matter to <html> for theming
 if (process.client) {
   watch(
-    () => (renderDoc.value as any)?.productTheme,
+    () => (renderDoc.value as Record<string, unknown>)?.productTheme,
     (pt) => {
       if (!pt) return;
       const html = document.documentElement as HTMLElement;
       const setVar = (k: string, v?: string) => {
         if (typeof v === "string" && v) html.style.setProperty(k, `url(${v})`);
       };
-      setVar("--product-bg-full", (pt as any).bgFull);
-      setVar("--product-bg-tile", (pt as any).bgTile);
-      setVar("--product-h1-logo", (pt as any).h1Logo);
-      setVar("--product-side-logo", (pt as any).sideLogo);
+      setVar("--product-bg-full", (pt as Record<string, string>).bgFull);
+      setVar("--product-bg-tile", (pt as Record<string, string>).bgTile);
+      setVar("--product-h1-logo", (pt as Record<string, string>).h1Logo);
+      setVar("--product-side-logo", (pt as Record<string, string>).sideLogo);
     },
     { immediate: true, deep: true },
   );

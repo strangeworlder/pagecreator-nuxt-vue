@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from "vue";
-import { useContentLinkPreview } from "~/composables/useContentLinkPreview";
+import { type ComponentPublicInstance, onMounted, onUnmounted, ref } from "vue";
 import ContentPreviewPopup from "~/components/atoms/ContentPreviewPopup.vue";
+import { useContentLinkPreview } from "~/composables/useContentLinkPreview";
 
 const props = withDefaults(defineProps<{ href?: string; rel?: string; target?: string }>(), {
   href: undefined,
@@ -14,7 +14,7 @@ const { getPreviewForLink } = useContentLinkPreview();
 const showPreview = ref(false);
 const previewData = ref(null);
 const previewPosition = ref({ x: 0, y: 0 });
-const linkRef = ref<any>();
+const linkRef = ref<HTMLElement | ComponentPublicInstance | null>(null);
 const previewTimeout = ref<NodeJS.Timeout>();
 
 const EXTERNAL_RE = /^(https?:)?\/\//;
@@ -33,7 +33,7 @@ const handleMouseEnter = async () => {
 
   previewTimeout.value = setTimeout(async () => {
     try {
-      const preview = await getPreviewForLink(props.href!);
+      const preview = await getPreviewForLink(props.href);
       if (preview && showPreview.value === false) {
         previewData.value = preview;
         updatePreviewPosition();
@@ -75,9 +75,8 @@ const handlePopupClose = () => {
 
 const updatePreviewPosition = () => {
   if (!linkRef.value) return;
-  const raw = linkRef.value as any;
-  const el: HTMLElement | null =
-    raw instanceof HTMLElement ? raw : (raw?.$el as HTMLElement | null);
+  const raw = linkRef.value;
+  const el: HTMLElement | null = raw instanceof HTMLElement ? raw : (raw.$el as HTMLElement | null);
   if (!el) return;
   const rect = el.getBoundingClientRect();
   previewPosition.value = {
@@ -101,7 +100,7 @@ const handleFocus = async () => {
 
   previewTimeout.value = setTimeout(async () => {
     try {
-      const preview = await getPreviewForLink(props.href!);
+      const preview = await getPreviewForLink(props.href);
       if (preview && showPreview.value === false) {
         previewData.value = preview;
         updatePreviewPosition();

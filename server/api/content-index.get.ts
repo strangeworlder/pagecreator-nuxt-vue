@@ -7,7 +7,9 @@ import { serverQueryContent } from "#content/server";
 const API_MAX_AGE = Number(process.env.NUXT_API_MAX_AGE || 60);
 const API_STALE = Number(process.env.NUXT_API_STALE || 600);
 
-async function handler(event: any) {
+import type { H3Event } from "h3";
+
+async function handler(event: H3Event) {
   const { locale, path } = getQuery(event);
   const base = typeof locale === "string" && locale ? `/${locale}` : undefined;
 

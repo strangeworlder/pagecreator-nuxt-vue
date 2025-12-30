@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, onMounted, onUpdated } from "vue";
+import { computed, onMounted, onUpdated, ref } from "vue";
 import { buildImageSrcset, buildImageUrl, normalizeImageWidths } from "~/utils/image";
 
 const props = defineProps<{

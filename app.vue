@@ -17,7 +17,7 @@ if (process.client) {
     mql.addEventListener("change", setTheme);
   } catch {
     // @ts-ignore legacy Safari
-    mql.addListener && mql.addListener(setTheme);
+    mql.addListener?.(setTheme);
   }
 }
 </script>

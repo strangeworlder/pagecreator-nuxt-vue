@@ -8,15 +8,26 @@ contentType:
   - CreativeWork
 genre: Tabletop Role-playing Game Supplement
 gameInterfaceType: Tabletop
+organization:
+  name: Gogam
+  url: 'https://gogam.eu'
+  logo: /gogam-logo.png
 author:
   '@type': Person
+  '@id': 'https://gogam.eu/#petri'
   name: Petri Leinonen
-  url: 'https://strangeworlder.itch.io/'
+  url: 'https://gogam.eu'
+  sameAs:
+    - 'https://strangeworlder.itch.io/'
 datePublished: 2025-12-28
 dateModified: 2025-12-30
 tags:
   - game
   - mork-borg
+offers:
+  url: 'https://strangeworlder.itch.io/we-cant-stop-here'
+  price: '0'
+  priceCurrency: USD
 canonical: /en/we-cant-stop-here
 alternateLocales:
   - fi

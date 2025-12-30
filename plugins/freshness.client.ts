@@ -62,8 +62,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       return collapsed;
     };
     // Prefer the currently rendered document's path (includes locale) to avoid wrong-locale lookups
-    const currentDoc = useState<Record<string, unknown> | null>("content-doc", () => null)
-      .value as any;
+    const currentDoc = useState<Record<string, unknown> | null>("content-doc", () => null).value;
     const docPath = typeof currentDoc?._path === "string" ? (currentDoc._path as string) : null;
     const candidatePath = normalize(
       docPath ||
@@ -119,8 +118,7 @@ export default defineNuxtPlugin((nuxtApp) => {
             ).doc || (await queryContent(normalize(candidatePath)).findOne());
         if (fresh) {
           // Log exactly where we swap in the fresh document
-          const prev = useState<Record<string, unknown> | null>("content-doc", () => null)
-            .value as any;
+          const prev = useState<Record<string, unknown> | null>("content-doc", () => null).value;
           if (process.dev)
             console.log("[freshness] Replacing SSR content with fresh content", {
               path: route.path,
@@ -129,7 +127,10 @@ export default defineNuxtPlugin((nuxtApp) => {
               built,
               shown,
               previous: prev ? { _path: prev?._path, dateModified: prev?.dateModified } : null,
-              next: { _path: (fresh as any)?._path, dateModified: (fresh as any)?.dateModified },
+              next: {
+                _path: (fresh as Record<string, unknown>)?._path,
+                dateModified: (fresh as Record<string, unknown>)?.dateModified,
+              },
             });
           const docState = useState<Record<string, unknown> | null>("content-doc", () => null);
           docState.value = fresh;

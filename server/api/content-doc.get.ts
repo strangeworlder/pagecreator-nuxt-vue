@@ -20,7 +20,7 @@ export default defineEventHandler(async (event) => {
   const base = normalize(path);
   const candidates = Array.from(new Set([base, `${base}/`]));
 
-  let doc = null as any;
+  let doc: Record<string, unknown> | null = null;
   for (const p of candidates) {
     const found = await serverQueryContent(event).where({ _path: p, _partial: false }).findOne();
     if (found) {

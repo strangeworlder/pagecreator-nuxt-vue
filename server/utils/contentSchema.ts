@@ -11,7 +11,15 @@ export const frontMatterSchema = z.object({
   datePublished: z.union([z.string(), z.date()]).optional(),
   dateModified: z.union([z.string(), z.date()]).optional(),
   summary: z.string().optional(),
-  entities: z.array(z.object({ name: z.string(), type: z.string().optional() })).optional(),
+  entities: z
+    .array(
+      z.object({
+        name: z.string(),
+        type: z.string().optional(),
+        sameAs: z.array(z.string()).optional(),
+      }),
+    )
+    .optional(),
   faq: z.array(z.object({ q: z.string(), a: z.string() })).optional(),
   citations: z.array(z.object({ title: z.string(), url: z.string().url() })).optional(),
   noindex: z.boolean().optional(),
@@ -19,6 +27,14 @@ export const frontMatterSchema = z.object({
   llmPriority: z.number().min(0).max(1).optional(),
   lastValidated: z.union([z.string(), z.date()]).optional(),
   facts: z.array(z.object({ label: z.string(), value: z.string() })).optional(),
+  offers: z
+    .object({
+      price: z.string().optional(),
+      priceCurrency: z.string().optional(),
+      url: z.string().url(),
+      availability: z.string().optional(),
+    })
+    .optional(),
   stats: z
     .array(
       z.object({
@@ -47,6 +63,37 @@ export const frontMatterSchema = z.object({
   productNav: z.any().optional(),
   aliases: z.array(z.string()).optional(),
   alternateLocales: z.array(z.string()).optional(),
+  organization: z
+    .object({
+      name: z.string(),
+      url: z.string().url().optional(),
+      logo: z.string().optional(),
+      sameAs: z.array(z.string()).optional(),
+      "@id": z.string().optional(),
+      founder: z
+        .object({
+          name: z.string(),
+          jobTitle: z.union([z.string(), z.array(z.string())]).optional(),
+          url: z.string().optional(),
+          sameAs: z.array(z.string()).optional(),
+          knowsAbout: z.array(z.string()).optional(),
+          description: z.string().optional(),
+          "@id": z.string().optional(),
+        })
+        .optional(),
+      description: z.string().optional(),
+    })
+    .optional(),
+  subOrganizations: z
+    .array(
+      z.object({
+        name: z.string(),
+        description: z.string().optional(),
+        url: z.string().url().optional(),
+      }),
+    )
+    .optional(),
+  structuredData: z.array(z.any()).optional(),
 });
 
 export type FrontMatter = z.infer<typeof frontMatterSchema>;

@@ -1,8 +1,8 @@
 ---
 title: Pros & Cons
 description: >-
-  Introduction for new players to Pros & Cons: a heist RPG built on Lasers &
-  Feelings.
+  Introduction for new players to Pros & Cons: a heist RPG where players are
+  ex-convicts trying to pull off one last job.
 contentType:
   - Game
   - CreativeWork
@@ -12,15 +12,26 @@ numberOfPlayers:
   '@type': QuantitativeValue
   minValue: '3'
   maxValue: '5'
+organization:
+  name: Gogam
+  url: 'https://gogam.eu'
+  logo: /gogam-logo.png
 author:
   '@type': Person
+  '@id': 'https://gogam.eu/#petri'
   name: Petri Leinonen
-  url: 'https://strangeworlder.itch.io/'
+  url: 'https://gogam.eu'
+  sameAs:
+    - 'https://strangeworlder.itch.io/'
 datePublished: 2025-12-28
 dateModified: 2025-12-30
 tags:
   - game
   - heist
+offers:
+  url: 'https://strangeworlder.itch.io/pros-and-cons'
+  price: '0'
+  priceCurrency: USD
 canonical: /en/pros-and-cons
 alternateLocales:
   - fi

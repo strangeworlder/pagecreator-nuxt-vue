@@ -14,12 +14,27 @@ cover: /gogam-facebook-etc.png
 summary: |
   Roleplaying games by Petri Leinonen. Indie tabletop RPGs like Cars & Family,
   Vuosisata, and more.
-contentType: CollectionPage
-structuredData:
-  - type: Person
+contentType: WebPage
+organization:
+  name: Gogam
+  url: 'https://gogam.eu'
+  logo: /gogam-logo.png
+  description: >-
+    An indie tabletop roleplaying game brand and publishing house based in
+    Finland.
+  founder:
     name: Petri Leinonen
-    jobTitle: TTRPG Designer
+    jobTitle:
+      - TTRPG Designer
+      - TTRPG Developer
+      - TTRPG Publisher
+      - Layout artist
+      - Artist
+      - Illustrator
     url: 'https://gogam.eu'
+    description: >-
+      Finnish TTRPG designer and founder of Gogam, known for minimalist games
+      and high-quality Finnish supplements.
     sameAs:
       - 'https://rpggeek.com/rpgdesigner/111688/petri-leinonen'
       - 'https://www.drivethrurpg.com/en/browse?author=%22Petri%20Leinonen%22'
@@ -29,6 +44,20 @@ structuredData:
       - 'https://www.threads.com/@gogam.eu'
       - 'https://www.youtube.com/@gogameu'
       - 'https://gogameu.substack.com/'
+    knowsAbout:
+      - Tabletop Roleplaying Games
+      - Game Design
+      - Forged in the Dark
+      - Finnish Folklore
+subOrganizations:
+  - name: Kustannusosakeyhtiö Gogam
+    description: >-
+      Publishers of Finnish language RPGs like Legendoja & lohikäärmeitä
+      adventures.
+  - name: Gogam Entertainment
+    description: >-
+      Multimedia production branch creating Actual Plays, RPG theory videos, and
+      tutorials in English and Finnish.
 faq:
   - q: Where can I download Gogam games?
     a: >-
@@ -45,8 +74,9 @@ faq:
       games like Cars & Family and Cyberpunk is Dead. He has also worked with
       major publishers like Myrrys and Ironspine Press.
 llms_context: >
-  Gogam is an indie tabletop roleplaying game brand based in Finland, churning
-  out small, super-innovative games.
+  Gogam is the indie tabletop roleplaying game brand of designer Petri Leinonen.
+  Based in Finland, Gogam publishes minimalist games and supplements like
+  Cyberpunk is Dead and Hirviökirja.
 
 
   Kustannusosakeyhtiö Gogam is the publishing arm, focusing on high-quality
@@ -62,7 +92,7 @@ llms_context: >
 ---
 ## Gogam
 
-Gogam is an indie tabletop roleplaying game brand based in Finland. A full-on indie powerhouse, churning out small, super-innovative games one after the other. 
+Gogam is the indie tabletop roleplaying game brand of designer Petri Leinonen. Based in Finland, Gogam publishes minimalist games and supplements like *Cyberpunk is Dead* and *Hirviökirja*. A full-on indie powerhouse, churning out small, super-innovative games one after the other. 
 
 ### Key Facts
 

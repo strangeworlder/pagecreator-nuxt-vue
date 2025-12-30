@@ -1,5 +1,5 @@
 import { promises as fs } from "node:fs";
-import { join, resolve, relative, sep } from "node:path";
+import { join, relative, resolve, sep } from "node:path";
 import { glob } from "glob";
 import sharp from "sharp";
 
@@ -22,7 +22,7 @@ async function main() {
     try {
       const relFromPublic = relative(publicDir, absPath);
       // Always use forward slashes for URL paths
-      const urlPath = "/" + relFromPublic.split(sep).join("/");
+      const urlPath = `/${relFromPublic.split(sep).join("/")}`;
       const { width, height } = await sharp(absPath).metadata();
       if (!width || !height) continue;
       meta[urlPath] = { width, height } as { width: number; height: number };
@@ -32,7 +32,7 @@ async function main() {
   }
 
   await fs.mkdir(assetsDir, { recursive: true });
-  await fs.writeFile(outPath, JSON.stringify(meta, null, 2) + "\n", "utf8");
+  await fs.writeFile(outPath, `${JSON.stringify(meta, null, 2)}\n`, "utf8");
   // eslint-disable-next-line no-console
   console.log(`Wrote ${Object.keys(meta).length} entries to ${outPath}`);
 }

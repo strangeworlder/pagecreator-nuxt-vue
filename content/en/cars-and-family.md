@@ -12,10 +12,17 @@ numberOfPlayers:
   '@type': QuantitativeValue
   minValue: '3'
   maxValue: '5'
+organization:
+  name: Gogam
+  url: 'https://gogam.eu'
+  logo: /gogam-logo.png
 author:
   '@type': Person
+  '@id': 'https://gogam.eu/#petri'
   name: Petri Leinonen
-  url: 'https://strangeworlder.itch.io/'
+  url: 'https://gogam.eu'
+  sameAs:
+    - 'https://strangeworlder.itch.io/'
 datePublished: 2025-12-28
 dateModified: 2025-12-30
 tags:
@@ -25,6 +32,10 @@ tags:
   - lasers & feelings
   - TTRPG
   - one-page rpg
+offers:
+  url: 'https://strangeworlder.itch.io/cars-and-family'
+  price: '0'
+  priceCurrency: USD
 canonical: /en/cars-and-family
 alternateLocales:
   - fi

@@ -1,6 +1,6 @@
 import type { FrontMatter } from "./contentSchema";
 
-type JsonLdNode = Record<string, any>;
+type JsonLdNode = Record<string, unknown>;
 
 export function generateGeoGraph(doc: FrontMatter, url: string): JsonLdNode[] {
   const nodes: JsonLdNode[] = [];
@@ -51,7 +51,8 @@ export function generateGeoGraph(doc: FrontMatter, url: string): JsonLdNode[] {
     }));
 
     // Merge into additionalProperty
-    productNode.additionalProperty = [...(productNode.additionalProperty || []), ...statProperties];
+    const existing = (productNode.additionalProperty as Record<string, unknown>[]) || [];
+    productNode.additionalProperty = [...existing, ...statProperties];
   }
 
   // 3. Quotes (Reviews/ endorsements)

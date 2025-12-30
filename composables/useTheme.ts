@@ -28,10 +28,10 @@ export function useTheme() {
     } catch {
       // Safari < 14 fallback
       // @ts-ignore
-      mql.addListener && mql.addListener(updateFromSystem);
+      mql.addListener?.(updateFromSystem);
       onBeforeUnmount(() => {
         // @ts-ignore
-        mql.removeListener && mql.removeListener(updateFromSystem);
+        mql.removeListener?.(updateFromSystem);
       });
     }
   }

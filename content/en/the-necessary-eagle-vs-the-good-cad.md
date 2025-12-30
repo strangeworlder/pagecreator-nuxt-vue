@@ -12,15 +12,26 @@ gameInterfaceType: Tabletop
 numberOfPlayers:
   '@type': QuantitativeValue
   value: '2'
+organization:
+  name: Gogam
+  url: 'https://gogam.eu'
+  logo: /gogam-logo.png
 author:
   '@type': Person
+  '@id': 'https://gogam.eu/#petri'
   name: Petri Leinonen
-  url: 'https://strangeworlder.itch.io/'
+  url: 'https://gogam.eu'
+  sameAs:
+    - 'https://strangeworlder.itch.io/'
 datePublished: 2025-12-28
 dateModified: 2025-12-30
 tags:
   - game
   - ttrpg
+offers:
+  url: 'https://strangeworlder.itch.io/the-necessary-eagle-vs-the-good-cad'
+  price: '0'
+  priceCurrency: USD
 canonical: /en/the-necessary-eagle-vs-the-good-cad
 alternateLocales:
   - fi

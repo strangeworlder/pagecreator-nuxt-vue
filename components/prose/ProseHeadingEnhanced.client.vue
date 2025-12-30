@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { ref, onUnmounted, computed } from "vue";
+import { type ComponentPublicInstance, computed, onUnmounted, ref } from "vue";
 
 const props = defineProps<{ level?: 1 | 2 | 3 | 4 | 5 | 6 }>();
 
 const copying = ref(false);
-const headingRef = ref<any>();
+const headingRef = ref<HTMLElement | ComponentPublicInstance | null>(null);
 const copiedTimeout = ref<NodeJS.Timeout | null>(null);
 
 const tag = computed(() => `h${props.level || 2}`);
 
 const getId = (): string | undefined => {
-  const raw = headingRef.value as any;
-  const el: HTMLElement | null =
-    raw instanceof HTMLElement ? raw : (raw?.$el as HTMLElement | null);
+  const raw = headingRef.value;
+  if (!raw) return undefined;
+  const el: HTMLElement | null = raw instanceof HTMLElement ? raw : (raw.$el as HTMLElement | null);
   const id = el?.getAttribute("id") || (el?.id ?? undefined);
   return id || undefined;
 };

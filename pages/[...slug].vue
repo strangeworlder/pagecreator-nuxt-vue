@@ -103,6 +103,7 @@ let initialLocaleIndex = ssrLocaleIndex.value;
 if (!initialLocaleIndex) {
   const fetchedIdx = await queryContent(`/${initialLocale}`)
     .where({ _path: `/${initialLocale}` })
+    .only(['_path', 'cover'])
     .findOne();
   ssrLocaleIndex.value = fetchedIdx;
   initialLocaleIndex = fetchedIdx;
@@ -187,6 +188,7 @@ watch(
     const nextLocale = getLocaleFromPath(route.path);
     const nextIndex = await queryContent(`/${nextLocale}`)
       .where({ _path: `/${nextLocale}` })
+      .only(['_path', 'cover'])
       .findOne();
     const currentPath = (data.value as Record<string, unknown>)?._path;
     if (next && next._path !== currentPath) {

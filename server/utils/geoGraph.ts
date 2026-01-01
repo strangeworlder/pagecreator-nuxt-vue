@@ -42,13 +42,21 @@ export function generateGeoGraph(doc: FrontMatter, url: string): JsonLdNode[] {
   // Actually, let's treat Stats as a separate "Dataset" if they are significant, or just more properties.
   // For TTRPG stats (page count, word count), PropertyValue is best.
   if (doc.stats && doc.stats.length > 0) {
-    const statProperties = doc.stats.map((stat) => ({
-      "@type": "PropertyValue",
-      name: stat.metric,
-      value: stat.value,
-      dateObserved: stat.date,
-      description: stat.source ? `Source: ${stat.source}` : undefined,
-    }));
+    const statProperties = doc.stats.map((stat) => {
+      let desc = stat.source ? `Source: ${stat.source}` : "";
+      if (stat.date) {
+        desc = desc ? `${desc} (Observed: ${stat.date})` : `Observed: ${stat.date}`;
+      }
+
+      const node: Record<string, unknown> = {
+        "@type": "PropertyValue",
+        name: stat.metric,
+        value: stat.value,
+      };
+      if (desc) node.description = desc;
+
+      return node;
+    });
 
     // Merge into additionalProperty
     const existing = (productNode.additionalProperty as Record<string, unknown>[]) || [];

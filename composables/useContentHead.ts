@@ -345,15 +345,19 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
       }
       if (Array.isArray(sourceStats)) {
         for (const s of sourceStats) {
-          props.push({
+          const stat = s as Record<string, unknown>;
+          let desc = stat.source ? `Source: ${stat.source}` : "";
+          if (stat.date) {
+            desc = desc ? `${desc} (Observed: ${stat.date})` : `Observed: ${stat.date}`;
+          }
+
+          const node: Record<string, unknown> = {
             "@type": "PropertyValue",
-            name: (s as Record<string, unknown>).metric,
-            value: (s as Record<string, unknown>).value,
-            dateObserved: (s as Record<string, unknown>).date,
-            description: (s as Record<string, unknown>).source
-              ? `Source: ${(s as Record<string, unknown>).source}`
-              : undefined,
-          });
+            name: stat.metric,
+            value: stat.value,
+          };
+          if (desc) node.description = desc;
+          props.push(node);
         }
       }
       return props;
@@ -375,7 +379,6 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
 
       // Game Specific Fields
       if (doc.genre) itemNode.genre = doc.genre;
-      if (doc.gameInterfaceType) itemNode.gameInterfaceType = doc.gameInterfaceType;
       if (doc.numberOfPlayers) itemNode.numberOfPlayers = doc.numberOfPlayers;
       if (doc.sameAs) itemNode.sameAs = doc.sameAs;
       if (doc.isbn) itemNode.isbn = doc.isbn;

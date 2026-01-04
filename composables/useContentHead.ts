@@ -111,7 +111,13 @@ const PETRI_IDENTITY = {
   name: "Petri Leinonen",
   sameAs: [
     "https://rpggeek.com/rpgdesigner/111688/petri-leinonen",
+    "https://www.drivethrurpg.com/en/browse?author=%22Petri%20Leinonen%22",
+    "https://strangeworlder.itch.io/",
+    "https://strangeworlder.medium.com/",
     "https://bsky.app/profile/strangeworlder.bsky.social",
+    "https://www.threads.com/@gogam.eu",
+    "https://www.youtube.com/@gogameu",
+    "https://gogameu.substack.com/",
   ],
 };
 
@@ -303,9 +309,13 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
         const subOrgs = doc.subOrganizations as SubOrganization[];
         if (subOrgs && Array.isArray(subOrgs)) {
           orgNode.subOrganization = subOrgs.map((sub: SubOrganization) => {
-            // Generate a simple ID derived from name
-            const subId = `${baseUrl}/#${sub.name
-              .toLowerCase()
+            // Generate a simple ID derived from name, handling umlauts
+            const safeName = sub.name.toLowerCase()
+              .replace(/ä/g, 'a')
+              .replace(/ö/g, 'o')
+              .replace(/å/g, 'a');
+
+            const subId = `${baseUrl}/#${safeName
               .replace(/[^a-z0-9]+/g, "-")
               .replace(/^-|-$/g, "")}`;
             return {
@@ -445,7 +455,12 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
     let mainEntityId = undefined;
 
     if (isCreativeWork) {
-      const itemId = `${url}#game`;
+      // Pedantic Rule 1: Law of Absolute Identification
+      // Must follow https://gogam.eu/#game-[slug] pattern
+      // match logic with products loop
+      const slug = sourcePath.split("/").filter((p) => !!p).pop();
+      const itemId = `${baseUrl}/#game-${slug}`;
+
       mainEntityId = itemId;
 
       const itemNode: Record<string, unknown> = {

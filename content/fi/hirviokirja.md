@@ -36,6 +36,14 @@ contentType:
   - Book
 inLanguage:
   - fi
+isBasedOn:
+  type: Game
+  name: Legendoja & lohikäärmeitä
+  id: 'https://myrrys.com/legendoja-lohikaarmeita/'
+  url: 'https://myrrys.com/legendoja-lohikaarmeita/'
+  author:
+    name: Myrrys
+    url: 'https://myrrys.com'
 isbn: '9789526503028'
 author:
   name: Petri Leinonen

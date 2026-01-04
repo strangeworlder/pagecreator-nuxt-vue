@@ -8,6 +8,14 @@ contentType:
   - Game
   - CreativeWork
 genre: Tabletop Role-playing Game
+isBasedOn:
+  type: Game
+  name: Apocalypse World
+  id: 'https://rpggeek.com/rpgitem/80504/apocalypse-world'
+  url: 'http://apocalypse-world.com/'
+  author:
+    name: D. Vincent Baker & Meguey Baker
+    url: 'http://lumpley.com/'
 gameInterfaceType: Tabletop
 numberOfPlayers:
   '@type': QuantitativeValue
@@ -18,7 +26,7 @@ organization:
   url: 'https://gogam.eu'
 author: Petri Leinonen
 datePublished: 2025-12-28
-dateModified: 2025-12-30
+dateModified: 2026-01-04
 tags:
   - roleplaying
   - horror

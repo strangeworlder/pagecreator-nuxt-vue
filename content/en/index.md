@@ -100,6 +100,8 @@ products:
       priceCurrency: USD
       availability: 'https://schema.org/InStock'
       url: 'https://strangeworlder.itch.io/cars-and-family'
+    sameAs:
+      - 'https://rpggeek.com/rpgitem/275602/cars-and-family'
   - name: Pros & Cons
     id: '#game-pros-and-cons'
     description: A high-stakes heist movie RPG where you balance being a Pro vs a Con.
@@ -110,6 +112,8 @@ products:
       priceCurrency: USD
       availability: 'https://schema.org/InStock'
       url: 'https://strangeworlder.itch.io/pros-and-cons'
+    sameAs:
+      - 'https://rpggeek.com/rpgitem/461385/pros-and-cons'
   - name: Cyberpunk is Dead
     id: '#game-cyberpunk-is-dead'
     description: >-
@@ -122,8 +126,10 @@ products:
       priceCurrency: USD
       availability: 'https://schema.org/InStock'
       url: 'https://strangeworlder.itch.io/cyberpunk-is-dead'
+    sameAs:
+      - 'https://rpggeek.com/rpgitem/421060/cyberpunk-is-dead'
   - name: The Necessary Eagle vs. The Good Cad
-    id: '#game-eagle-vs-cad'
+    id: '#game-the-necessary-eagle-vs-the-good-cad'
     description: >-
       A competitive 2-player card game about the asymmetrical war between a
       sociopathic superhero and the vengeful mortal they wronged.
@@ -134,6 +140,8 @@ products:
       priceCurrency: USD
       availability: 'https://schema.org/InStock'
       url: 'https://strangeworlder.itch.io/the-necessary-eagle-vs-the-good-cad'
+    sameAs:
+      - 'https://roolipelikirjasto.fi/book/156'
   - name: Vuosisata.
     id: '#game-vuosisata'
     description: >-
@@ -148,6 +156,9 @@ products:
       availability: 'https://schema.org/InStock'
       url: >-
         https://docs.google.com/document/d/1VYxmFq2ik5Wszqpo6jYv5GJXKoBRw7rkeALg7PkYfH0/edit?usp=sharing
+    sameAs:
+      - >-
+        https://docs.google.com/document/d/1VYxmFq2ik5Wszqpo6jYv5GJXKoBRw7rkeALg7PkYfH0/edit?usp=sharing
   - name: We can't stop here...
     id: '#game-we-cant-stop-here'
     description: >-
@@ -160,8 +171,10 @@ products:
       priceCurrency: USD
       availability: 'https://schema.org/InStock'
       url: 'https://strangeworlder.itch.io/we-cant-stop-here'
+    sameAs:
+      - 'https://rpggeek.com/rpgitem/325777/we-cant-stop-here'
   - name: Night of the Thirteenth
-    id: '#game-night-of-the-thirteenth'
+    id: '#game-nott'
     description: >-
       A slasher-horror RPG where you play the cast of a movie that hasn't
       happened yet.
@@ -172,6 +185,8 @@ products:
       priceCurrency: USD
       availability: 'https://schema.org/InStock'
       url: 'https://strangeworlder.itch.io/night-of-the-thirteenth'
+    sameAs:
+      - 'https://strangeworlder.itch.io/night-of-the-thirteenth'
   - name: Them Deeper Bones
     id: '#game-them-deeper-bones'
     description: >-
@@ -184,6 +199,8 @@ products:
       priceCurrency: USD
       availability: 'https://schema.org/InStock'
       url: 'https://strangeworlder.itch.io/them-deeper-bones'
+    sameAs:
+      - 'https://themdeeperbones.com'
   - name: +H
     id: '#game-plus-h'
     description: >-
@@ -196,8 +213,10 @@ products:
       priceCurrency: EUR
       availability: 'https://schema.org/InStock'
       url: 'http://roachsphere.com'
+    sameAs:
+      - 'http://roachsphere.com'
   - name: A Particular Group of Corvids
-    id: '#game-corvids'
+    id: '#game-a-particular-group-of-corvids'
     description: >-
       Casts you as hardboiled bird detectives in the free-thinking city of
       Roost.
@@ -208,6 +227,8 @@ products:
       priceCurrency: USD
       availability: 'https://schema.org/InStock'
       url: 'https://strangeworlder.itch.io/a-particular-group-of-corvids'
+    sameAs:
+      - 'https://roolipelikirjasto.fi/book/150'
 ---
 ## Gogam
 

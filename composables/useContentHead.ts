@@ -76,7 +76,9 @@ interface Offer {
   price?: string;
   priceCurrency?: string;
   availability?: string;
+  availability?: string;
   name?: string;
+  inLanguage?: string;
 }
 
 interface Product {
@@ -99,6 +101,16 @@ interface FAQItem {
   q: string;
   a: string;
 }
+
+interface Citation {
+  type?: string;
+  name: string;
+  author?: string | { name: string };
+  datePublished?: string;
+  isbn?: string;
+  url?: string;
+}
+
 interface CreativeWorkBase {
   name: string;
   id?: string;
@@ -218,8 +230,8 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
     const alternatesRaw: unknown = doc.alternateLocales;
     const alternates = Array.isArray(alternatesRaw)
       ? alternatesRaw
-          .map((value) => (typeof value === "string" ? value.trim() : ""))
-          .filter((value): value is string => isLikelyLocale(value))
+        .map((value) => (typeof value === "string" ? value.trim() : ""))
+        .filter((value): value is string => isLikelyLocale(value))
       : [];
 
     const alternateLocaleSet = new Set(alternates.map(formatHreflang));
@@ -514,9 +526,9 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
           url: based.url,
           author: based.author
             ? {
-                "@type": "Person",
-                name: based.author.name || based.author, // Simple name for external authors
-              }
+              "@type": "Person",
+              name: based.author.name || based.author, // Simple name for external authors
+            }
             : undefined,
         };
       }
@@ -536,6 +548,33 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
         }));
       }
 
+      // Citation Graph
+      if (doc.citations && Array.isArray(doc.citations)) {
+        itemNode.citation = doc.citations.map((c: string | Citation) => {
+          if (typeof c === "string") {
+            return {
+              "@type": "CreativeWork",
+              name: c,
+            };
+          }
+          return {
+            "@type": c.type || "CreativeWork",
+            name: c.name,
+            author: c.author
+              ? {
+                "@type": "Person",
+                name: typeof c.author === "string" ? c.author : c.author.name,
+              }
+              : undefined,
+            datePublished: c.datePublished,
+            isbn: c.isbn,
+            url: c.url,
+            // Schema.org/citation allows linking to the work itself
+            sameAs: c.url ? [c.url] : undefined,
+          };
+        });
+      }
+
       // Offers - LIVES HERE
       if (doc.offers) {
         const offersRaw = (Array.isArray(doc.offers) ? doc.offers : [doc.offers]) as Offer[];
@@ -552,6 +591,7 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
               : o.bookFormat
                 ? { "@type": "Book", bookFormat: o.bookFormat }
                 : undefined,
+          inLanguage: o.inLanguage,
         }));
       }
 

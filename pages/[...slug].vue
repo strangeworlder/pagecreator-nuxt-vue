@@ -40,9 +40,52 @@ const resolveContentPath = (path: string) => {
   return normalized === "/" ? `/${defaultLocale}` : normalized;
 };
 
+// Fields that are only used for Schema/SEO and not needed for client-side rendering
+const SCHEMA_ONLY_FIELDS = [
+  "offers",
+  "reviews",
+  "aggregateRating",
+  "organization",
+  "subOrganization",
+  "subOrganizations",
+  "isBasedOn",
+  "sameAs",
+  "subjectOf",
+  "faq",
+  "stats",
+  "gameItem",
+  "numberOfPlayers",
+  "genre",
+  "gameInterfaceType",
+  "disambiguatingDescription",
+  "alternateName",
+  "inLanguage",
+  "license",
+  "author",
+  "marketingText",
+  "products", // specifically for index.md
+  "llms_context",
+  "mentions",
+  "quotes"
+];
+
+const stripSchemaData = (doc: Record<string, unknown> | null) => {
+  if (!doc) return null;
+  const clone = { ...doc };
+  for (const key of SCHEMA_ONLY_FIELDS) {
+    if (key in clone) delete clone[key];
+  }
+  return clone;
+};
+
 // SSR-first initial doc with hydration cache to avoid client refetch overriding SSR
 const ssrDocKey = `ssr-initial-doc:${resolveContentPath(route.path)}`;
 const ssrInitialDoc = useState<Record<string, unknown> | null>(ssrDocKey, () => null);
+
+// Temporary server-only ref to hold the FULL document for Head generation
+// This will NOT be hydrated to the client via useState, keeping __NUXT_DATA__ small.
+let serverRawDoc: Record<string, unknown> | null = null;
+
 let initial = ssrInitialDoc.value;
 if (!initial) {
   const tryPath = resolveContentPath(route.path);
@@ -64,12 +107,22 @@ if (!initial) {
     const fiPath = `/fi${tryPath}`;
     fetched = await queryContent(fiPath).where({ _path: fiPath }).findOne();
   }
-  ssrInitialDoc.value = fetched;
-  initial = fetched;
+
+  // Preserve full doc on server for Head generation
+  if (process.server) {
+    serverRawDoc = fetched;
+  }
+
+  // Optimize payload: strip schema-only fields for hydration
+  const stripped = stripSchemaData(fetched);
+
+  ssrInitialDoc.value = stripped;
+  initial = stripped;
   if (process.dev)
     console.log("[initial-doc] fetched initial doc", {
       path: resolveContentPath(route.path),
       _path: (fetched as Record<string, unknown>)?._path,
+      stripped: true,
     });
 } else {
   if (process.dev)
@@ -154,7 +207,11 @@ if (initialLocaleIndex && currentIndexPath !== expectedIndexPath) {
   localeIndexDoc.value = initialLocaleIndex;
 }
 const dataForHead = computed(() => {
-  const d = (data.value as Record<string, unknown>) || null;
+  // Use serverRawDoc (full content) if available on server, otherwise use hydrated data
+  const d = (process.server && serverRawDoc) 
+    ? serverRawDoc 
+    : (data.value as Record<string, unknown>) || null;
+
   const idx = (localeIndexDoc.value as Record<string, unknown>) || null;
   const merged = d && !d.cover && idx?.cover ? { ...d, cover: idx.cover } : d;
   // Force canonical to '/' when rendering the homepage at root URL

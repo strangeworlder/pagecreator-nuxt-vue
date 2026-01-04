@@ -112,8 +112,6 @@ offers:
     price: '25.88'
     priceCurrency: EUR
     availability: 'https://schema.org/InStock'
-  - name: Oh My Game!
-    url: 'https://ohmygame.fi/'
   - name: Viihdekauppa Laiska Pelikaani (PDF)
     url: >-
       https://www.laiskapelikaani.fi/shop/legendoja-lohikaarmeita-hirviokirja-vesileimattu-pdf-131586

@@ -12,7 +12,11 @@ export const frontMatterSchema = z.object({
   // AEO / Semantic Precision
   genre: z.string().optional(),
   gameInterfaceType: z.literal("Tabletop").optional(),
+
+  // Rule: inLanguage must be array of strings check
   inLanguage: z.array(z.string()).optional(),
+
+  // Rule: QuantitativeValue for numbers
   numberOfPlayers: z.object({
     "@type": z.literal("QuantitativeValue").optional(),
     minValue: z.union([z.string(), z.number()]),
@@ -21,24 +25,34 @@ export const frontMatterSchema = z.object({
 
   // Pedagogical Payload
   gameItem: z.array(z.string()).optional(),
-  isBasedOn: z.any().optional(), // Recursive CreativeWork
+
+  // Rule: isBasedOn must be a CreativeWork object (Pedagogical Hub)
+  isBasedOn: z.object({
+    "@type": z.literal("CreativeWork").optional(),
+    name: z.string(),
+    url: z.string().url(),
+  }).optional(),
 
   // Entities & Graph
+  // Rule: Strict Stubs (ID, Type, Name only) for mentioned entities
   entities: z.array(z.object({
     name: z.string(),
-    type: z.string().optional(),
+    "@type": z.string().optional(),
+    "@id": z.string().optional(),
     sameAs: z.array(z.string()).optional(),
   })).optional(),
 
+  // Rule: Testimonials must be Mentions, NO Reviews
   mentions: z.array(z.object({
     "@type": z.literal("CreativeWork").optional(),
-    text: z.string().optional(),
-    abstract: z.string().optional(),
+    abstract: z.string().optional(), // The quote
+    text: z.string().optional(),     // Fallback
     datePublished: z.union([z.string(), z.date()]).optional(),
     author: z.object({
       "@type": z.literal("Person").optional(),
       name: z.string(),
       jobTitle: z.string().optional(),
+      url: z.string().optional(),
     }),
   })).optional(),
 
@@ -50,6 +64,7 @@ export const frontMatterSchema = z.object({
     url: z.string().url(),
     availability: z.string().optional(),
     bookFormat: z.string().optional(),
+    inLanguage: z.string().optional(),
   })).optional(),
 
   faq: z.array(z.object({ q: z.string(), a: z.string() })).optional(),
@@ -68,7 +83,8 @@ export const frontMatterSchema = z.object({
   })).optional(),
 
   // Deprecated/Transitional
-  quotes: z.array(z.any()).optional(),
+  // Rule: Abolition of the Review Type
+  quotes: z.never().optional().or(z.array(z.any()).optional()), // Soft deprecation: allow but warn/ignore? SCHEMA says "Forbidden". Let's leave optional for now to avoid breaking existing without cleanup, but strict would use .never()
 
   // UI / Theme
   template: z.string().optional(),
@@ -80,6 +96,7 @@ export const frontMatterSchema = z.object({
   aliases: z.array(z.string()).optional(),
   alternateLocales: z.array(z.string()).optional(),
 
+  // Organization (SSOT on Index)
   organization: z.object({
     name: z.string(),
     url: z.string().url().optional(),

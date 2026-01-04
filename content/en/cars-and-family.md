@@ -53,12 +53,20 @@ offers:
     price: '0.00'
     priceCurrency: USD
     availability: 'https://schema.org/InStock'
+    inLanguage: en
   - name: Portuguese Translation (PDF)
     url: 'https://gogam.eu/downloads/carros-and-familia.pdf'
     price: '0.00'
     priceCurrency: USD
     availability: 'https://schema.org/InStock'
     bookFormat: 'https://schema.org/EBook'
+    inLanguage: pt
+  - name: Finnish Translation (Digital)
+    url: 'https://roolipelikirjasto.fi/series/stored/7'
+    price: '0.00'
+    priceCurrency: EUR
+    availability: 'https://schema.org/InStock'
+    inLanguage: fi
 canonical: /en/cars-and-family
 template: hero
 theme: modern

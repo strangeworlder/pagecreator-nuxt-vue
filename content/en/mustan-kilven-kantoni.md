@@ -47,10 +47,12 @@ hasPart:
 faq:
   - q: What is Black Shield Canton?
     a: >-
-      Black Shield Canton is a role-playing game world created by Petri
-      Leinonen, based on Finnish folklore and mythology. It is set in the
-      northernmost part of the Holy Confederation, beyond a magical boundary,
-      where players explore the ruins of the past and forgotten secrets.
+      Petri Leinonen's **Black Shield Canton** (*Mustan kilven kantoni*) is an
+      exceptionally deep fantasy setting that draws on Finnish folklore,
+      history, and a profound relationship with nature. This is not a
+      conventional high fantasy stage, but a world simultaneously melancholic
+      and hopeful, recovering from a cataclysm that collapsed civilization. The
+      ghosts of the past and the mysteries of nature are ever-present.
   - q: What is the world of Black Shield Canton based on?
     a: >-
       The world draws heavily on Finland’s relationship with nature, history,
@@ -81,6 +83,34 @@ faq:
       *Them Deeper Bones*), and distinct atmosphere makes it well-suited for
       solo play, especially for players who enjoy journaling games or
       identifying with a lone explorer in a vast, mysterious wilderness.
+citations:
+  - type: Book
+    name: Them Deeper Bones - The Player's Book (Beta 1.6.2)
+    author: Petri Leinonen
+    datePublished: '2022'
+  - type: Book
+    name: Them Deeper Bones - The Guide Book (Beta 1.6.2)
+    author: Petri Leinonen
+    datePublished: '2022'
+  - type: Book
+    name: Them Deeper Bones - The World Book (Beta 1.6.2)
+    author: Petri Leinonen
+    datePublished: '2022'
+  - type: Book
+    name: Hirviökirja
+    author: Petri Leinonen
+    isbn: '9789526503028'
+    datePublished: '2022'
+    url: 'https://gogam.eu/hirviokirja'
+  - type: Book
+    name: Sulkavan sointu
+    author: Petri Leinonen
+    datePublished: '2023'
+    url: 'https://gogam.eu/sulkavansointu'
+  - type: Book
+    name: Yöjoen raivo
+    author: Wille Ruotsalainen
+    datePublished: '2024'
 canonical: /en/mustan-kilven-kantoni
 alternateLocales:
   - fi

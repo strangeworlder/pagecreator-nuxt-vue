@@ -4,24 +4,40 @@ description: >-
   A minimalist Blades in the Dark hack by Petri Leinonen where you play as
   disposable corporate operatives enforcing the company's will.
 contentType:
+  - Product
   - Game
-  - CreativeWork
+inLanguage:
+  - en
 genre: Tabletop Role-playing Game
+isBasedOn:
+  type: CreativeWork
+  name: Blades in the Dark
+  id: 'https://rpggeek.com/rpgitem/171549/blades-dark'
+  url: 'https://bladesinthedark.com/'
+  author:
+    type: Person
+    name: John Harper
+    sameAs: 'https://twitter.com/john_harper'
 gameInterfaceType: Tabletop
 numberOfPlayers:
   maxValue: '5'
 organization:
   name: Gogam
+  url: 'https://gogam.eu'
 author: Petri Leinonen
 datePublished: 2025-12-28
-dateModified: 2025-12-30
+dateModified: 2026-01-04
 tags:
   - game
   - cyberpunk
 offers:
-  url: 'https://strangeworlder.itch.io/cyberpunk-is-dead'
-  price: '0'
-  priceCurrency: USD
+  - name: itch.io
+    url: 'https://strangeworlder.itch.io/cyberpunk-is-dead'
+    price: '0'
+    priceCurrency: USD
+  - name: Roolipelikirjasto (Physical)
+    url: 'https://roolipelikirjasto.fi/book/148'
+    availability: 'https://schema.org/InStock'
 canonical: /en/cyberpunk-is-dead
 template: hero
 theme: modern
@@ -83,23 +99,10 @@ faq:
     a: >-
       You don't. You are company property. If you have HARM or are DWN/OUT, you
       are repaired by adding a new piece of CYBERWARE.
-entities:
-  - type: CreativeWork
-    name: Cyberpunk is Dead
-    author:
-      type: Person
-      name: Petri Leinonen
-    isBasedOn:
-      type: CreativeWork
-      name: Blades in the Dark
-    license:
-      type: CreativeWork
-      name: Creative Commons Attribution 3.0 Unported
-      url: 'https://creativecommons.org/licenses/by/3.0/'
-    sameAs:
-      - 'https://rpggeek.com/rpgitem/421060/cyberpunk-is-dead'
-      - 'https://strangeworlder.itch.io/cyberpunk-is-dead'
-      - 'https://roolipelikirjasto.fi/book/148'
+sameAs:
+  - 'https://rpggeek.com/rpgitem/421060/cyberpunk-is-dead'
+  - 'https://strangeworlder.itch.io/cyberpunk-is-dead'
+  - 'https://roolipelikirjasto.fi/book/148'
 ---
 
 

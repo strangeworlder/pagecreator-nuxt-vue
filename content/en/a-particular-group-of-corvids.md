@@ -5,8 +5,10 @@ description: >-
   corvid sleuths in the city of Roost. Think Sherlock Holmes meets Peaky
   Blinders, but with birds. Uses a unique d20 pool system.
 contentType:
+  - Product
   - Game
-  - CreativeWork
+inLanguage:
+  - en
 genre: Tabletop Role-playing Game
 gameInterfaceType: Tabletop
 numberOfPlayers:
@@ -18,7 +20,7 @@ organization:
   url: 'https://gogam.eu'
 author: Petri Leinonen
 datePublished: 2025-12-28
-dateModified: 2025-12-30
+dateModified: 2026-01-04
 tags:
   - game
   - mystery
@@ -29,9 +31,13 @@ tags:
   - Tabletop RPG
   - Roleplaying Game
 offers:
-  url: 'https://strangeworlder.itch.io/a-particular-group-of-corvids'
-  price: '0'
-  priceCurrency: USD
+  - name: itch.io
+    url: 'https://strangeworlder.itch.io/a-particular-group-of-corvids'
+    price: '0'
+    priceCurrency: USD
+  - name: Roolipelikirjasto (PDF)
+    url: 'https://roolipelikirjasto.fi/book/150'
+    availability: 'https://schema.org/InStock'
 canonical: /en/a-particular-group-of-corvids
 template: hero
 theme: classic
@@ -91,20 +97,9 @@ faq:
     a: >-
       Players can choose from five Bird Types: Crow (Muscle), Jackdaw (Spy),
       Magpie (Thief), Raven (Leader), and Rook (Arcanist).
-entities:
-  - type: CreativeWork
-    name: A Particular Group of Corvids
-    description: A tabletop roleplaying game about bird detectives in a noir setting.
-    genre:
-      - Tabletop RPG
-      - Mystery
-      - Action
-    sameAs:
-      - 'https://strangeworlder.itch.io/a-particular-group-of-corvids'
-      - 'https://roolipelikirjasto.fi/book/150'
-    author:
-      type: Person
-      name: Petri Leinonen
+sameAs:
+  - 'https://strangeworlder.itch.io/a-particular-group-of-corvids'
+  - 'https://roolipelikirjasto.fi/book/150'
 ---
 
 

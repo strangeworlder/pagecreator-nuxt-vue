@@ -2,7 +2,7 @@
 title: Sulkavan sointu
 description: Seikkailu 1. kokemustason hahmoille maailman suosituimpaan roolipeliin.
 datePublished: 2023-07-28
-dateModified: 2025-12-30
+dateModified: 2026-01-04
 canonical: /sulkavansointu
 template: product
 cover: /images/products/sulkavansointu/kansi.webp
@@ -28,8 +28,10 @@ productNav:
     text: FAQ
 lastValidated: 2025-12-10T00:00:00.000Z
 contentType:
-  - Book
   - Product
+  - Book
+inLanguage:
+  - fi
 isbn: '9789526503042'
 author:
   name: Petri Leinonen
@@ -61,25 +63,35 @@ quotes:
       omanlaistaan meininkiä.
     date: 2023-07-28T00:00:00.000Z
 offers:
-  '@type': AggregateOffer
-  priceCurrency: EUR
-  lowPrice: '10.00'
-  offerCount: '5'
-  offers:
-    - name: Fantasiapelit
-      url: >-
-        https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_225693
-    - name: Puolenkuun Pelit
-      url: >-
-        https://www.puolenkuunpelit.com/kauppa/product_info.php?cPath=32_258&products_id=179450
-    - name: Laiska pelikaani
-      url: >-
-        https://www.laiskapelikaani.fi/shop/legendoja-lohikaarmeita-sulkavan-sointu-131088#attr=
-    - name: Laiska pelikaani (PDF)
-      url: >-
-        https://www.laiskapelikaani.fi/shop/legendoja-lohikaarmeita-sulkavan-sointu-vesileimattu-pdf-131585#attr=
-    - name: DriveThruRPG (PDF)
-      url: 'https://www.drivethrurpg.com/product/436237/Sulkavan-sointu'
+  - name: Fantasiapelit
+    url: >-
+      https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_225693
+    price: '10.70'
+    priceCurrency: EUR
+    availability: 'https://schema.org/InStock'
+  - name: Puolenkuun Pelit
+    url: >-
+      https://www.puolenkuunpelit.com/kauppa/product_info.php?cPath=32_258&products_id=179450
+    price: '10.00'
+    priceCurrency: EUR
+    availability: 'https://schema.org/InStock'
+  - name: Laiska pelikaani
+    url: >-
+      https://www.laiskapelikaani.fi/shop/legendoja-lohikaarmeita-sulkavan-sointu-131088#attr=
+    price: '9.44'
+    priceCurrency: EUR
+    availability: 'https://schema.org/InStock'
+  - name: Laiska pelikaani (PDF)
+    url: >-
+      https://www.laiskapelikaani.fi/shop/legendoja-lohikaarmeita-sulkavan-sointu-vesileimattu-pdf-131585#attr=
+    price: '5.96'
+    priceCurrency: EUR
+    availability: 'https://schema.org/InStock'
+  - name: DriveThruRPG (PDF)
+    url: 'https://www.drivethrurpg.com/product/436237/Sulkavan-sointu'
+    price: '10.00'
+    priceCurrency: EUR
+    availability: 'https://schema.org/InStock'
 faq:
   - q: 'Onko Sulkavan sointu yhteensopiva D&D 5e:n kanssa?'
     a: 'Kyllä, se on täysin 5e-yhteensopiva seikkailu 1. tason hahmoille.'
@@ -91,12 +103,11 @@ faq:
     a: >-
       Se edustaa 'tukkilaisromantiikkaa' ja suomalaista fantasiaa, poiketen
       perinteisestä angloamerikkalaisesta fantasiasta.
-entities:
-  - type: CreativeWork
-    name: Sulkavan sointu
-    sameAs:
-      - 'https://www.drivethrurpg.com/product/436237/Sulkavan-sointu'
-      - 'https://rpggeek.com/rpgitem/459255/sulkavan-sointu'
+sameAs:
+  - 'https://www.drivethrurpg.com/product/436237/Sulkavan-sointu'
+  - 'https://rpggeek.com/rpgitem/459255/sulkavan-sointu'
+  - >-
+    https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_225693
 ---
 
 _**Tuore seikkailijajoukko pysähtyy Ristijärven rannassa olevaan tukkilaisleiriin yöksi tarkoituksenaan jatkaa matkaa rajan taakse korpimaille, mutta päätyykin nokat vastakkain aluetta riivaavien höyhenpeitteisten jokirosvojen kanssa..**_

@@ -4,23 +4,41 @@ description: >-
   A grimy, psychedelic Mörk Borg supplement by Petri Leinonen about traveling
   with a sentient, decaying herb wagon.
 contentType:
+  - Product
   - Game
-  - CreativeWork
+inLanguage:
+  - en
 genre: Tabletop Role-playing Game Supplement
+isBasedOn:
+  type: CreativeWork
+  name: Mörk Borg
+  id: 'https://rpggeek.com/rpgitem/295986/mork-borg'
+  url: 'https://morkborg.com/'
+  author:
+    type: Person
+    name: Pelle Nilsson
+    sameAs: 'https://stockholmkartell.com/'
 gameInterfaceType: Tabletop
 organization:
   name: Gogam
   url: 'https://gogam.eu'
 author: Petri Leinonen
 datePublished: 2025-12-28
-dateModified: 2025-12-30
+dateModified: 2026-01-04
 tags:
   - game
   - mork-borg
 offers:
-  url: 'https://strangeworlder.itch.io/we-cant-stop-here'
-  price: '0'
-  priceCurrency: USD
+  - name: itch.io
+    url: 'https://strangeworlder.itch.io/we-cant-stop-here'
+    price: '0'
+    priceCurrency: USD
+  - name: Fantasiapelit (Physical)
+    url: >-
+      https://www.fantasiapelit.com/index.php?main=ai&mista=*&yhteen=eri&alue=&autoid=_221392&kat=single&etsittava=_221392
+    price: '9.00'
+    priceCurrency: EUR
+    availability: 'https://schema.org/InStock'
 canonical: /en/we-cant-stop-here
 template: hero
 theme: classic
@@ -54,16 +72,11 @@ quotes:
   - source: Petri Leinonen
     text: 'A grimy, psychedelic road trip through the dying world.'
     date: 2025-11-28T00:00:00.000Z
-entities:
-  - type: CreativeWork
-    name: We can't stop here...
-    sameAs:
-      - 'https://strangeworlder.itch.io/we-cant-stop-here'
-      - >-
-        https://www.fantasiapelit.com/index.php?main=ai&mista=*&yhteen=eri&alue=&autoid=_221392&kat=single&etsittava=_221392
-    author:
-      type: Person
-      name: Petri Leinonen
+sameAs:
+  - 'https://strangeworlder.itch.io/we-cant-stop-here'
+  - 'https://rpggeek.com/rpgitem/325777/we-cant-stop-here'
+  - >-
+    https://www.fantasiapelit.com/index.php?main=ai&mista=*&yhteen=eri&alue=&autoid=_221392&kat=single&etsittava=_221392
 ---
 
 ::alert{type="caution" title="Content Warning"}

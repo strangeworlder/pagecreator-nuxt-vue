@@ -4,8 +4,10 @@ description: >-
   A slasher-style horror RPG where you play the cast of a movie that hasn't
   happened yet. Survival is unlikely.
 contentType:
+  - Product
   - Game
-  - CreativeWork
+inLanguage:
+  - en
 genre: Tabletop Role-playing Game
 gameInterfaceType: Tabletop
 numberOfPlayers:
@@ -16,7 +18,7 @@ organization:
   url: 'https://gogam.eu'
 author: Petri Leinonen
 datePublished: 2025-12-28
-dateModified: 2025-12-30
+dateModified: 2026-01-04
 tags:
   - game
   - horror
@@ -24,9 +26,10 @@ tags:
   - TTRPG
   - ashcan
 offers:
-  url: 'https://strangeworlder.itch.io/night-of-the-thirteenth'
-  price: '0'
-  priceCurrency: USD
+  - name: itch.io
+    url: 'https://strangeworlder.itch.io/night-of-the-thirteenth'
+    price: '0'
+    priceCurrency: USD
 canonical: /en/nott
 template: hero
 theme: classic
@@ -78,14 +81,8 @@ faq:
     a: >-
       Survive until the Endgame by defeating a Face Card of each suit, then
       survive the final Joker tests.
-entities:
-  - type: CreativeWork
-    name: Night of the Thirteenth
-    sameAs:
-      - 'https://strangeworlder.itch.io/night-of-the-thirteenth'
-    author:
-      type: Person
-      name: Petri Leinonen
+sameAs:
+  - 'https://strangeworlder.itch.io/night-of-the-thirteenth'
 ---
 
 

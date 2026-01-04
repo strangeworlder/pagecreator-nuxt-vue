@@ -4,20 +4,45 @@ description: >-
   A Fast & Furious-inspired heist TTRPG built on Lasers & Feelings, where you
   balance high-speed stunts with the bonds of your crew.
 contentType:
+  - Product
   - Game
-  - CreativeWork
-genre: Tabletop Role-playing Game
+genre:
+  - Tabletop Roleplaying Game
+  - Heist
+  - Action
 gameInterfaceType: Tabletop
+disambiguatingDescription: >
+  A Fast & Furious-inspired heist TTRPG built on Lasers & Feelings, where you
+  balance high-speed stunts with the bonds of your crew. Not to be confused with
+  other similarly Fast & Furious-inspired titles like The Rapid & The Righteous
+  by Grant Howitt.
+alternateName: Autot & Perhe
+inLanguage:
+  - en
+  - fi
+  - pt
+gameItem:
+  - Rules
+  - Character Creation
+  - NOS Mechanic
+isBasedOn:
+  name: Lasers & Feelings
+  id: 'https://rpggeek.com/rpgitem/144077/lasers-feelings'
+  author:
+    name: John Harper
+    sameAs: 'https://twitter.com/john_harper'
+  url: 'http://www.onesevendesign.com/laserfeelings/'
+license: 'https://creativecommons.org/licenses/by-nc-sa/3.0/'
 numberOfPlayers:
   '@type': QuantitativeValue
-  minValue: '3'
-  maxValue: '5'
+  minValue: 3
+  maxValue: 5
 organization:
   name: Gogam
   url: 'https://gogam.eu'
 author: Petri Leinonen
 datePublished: 2025-12-28
-dateModified: 2025-12-30
+dateModified: 2026-01-04
 tags:
   - game
   - heist
@@ -26,9 +51,16 @@ tags:
   - TTRPG
   - one-page rpg
 offers:
-  url: 'https://strangeworlder.itch.io/cars-and-family'
-  price: '0'
-  priceCurrency: USD
+  - name: Free Digital Download (Itch.io)
+    url: 'https://strangeworlder.itch.io/cars-and-family'
+    price: '0.00'
+    priceCurrency: USD
+    availability: 'https://schema.org/InStock'
+  - name: Portuguese Translation (PDF)
+    url: 'https://gogam.eu/downloads/carros-and-familia.pdf'
+    price: '0.00'
+    priceCurrency: USD
+    availability: 'https://schema.org/InStock'
 canonical: /en/cars-and-family
 template: hero
 theme: modern
@@ -37,22 +69,8 @@ heroImage: /images/cars-and-family-cover.png
 summary: >
   Cars & Family is a high-octane one-page RPG hack of Lasers & Feelings by Petri
   Leinonen. Players take on the role of an elite crew of street-racing thieves
-
-  planning impossible heists while their leader, Von Petrol, recovers from an
-  accident. The system uses a single number to balance 
-
-  driving skills (Cars) against teamwork (Family), capturing the spirit of the
-  Fast & Furious franchise.
+  planning impossible heists.
 lastValidated: 2025-11-28T00:00:00.000Z
-facts:
-  - label: Author
-    value: Petri Leinonen
-  - label: System
-    value: Lasers & Feelings hack
-  - label: Tone
-    value: Fast & Furious action
-  - label: License
-    value: Creative Commons Non-Commercial Share-Alike 3.0 Unported
 stats:
   - metric: Page count
     value: '1'
@@ -75,34 +93,18 @@ faq:
     a: >-
       It is a rules-light tabletop RPG based on Lasers & Feelings, emulating the
       Fast & Furious movies.
-  - q: How does the dice system work?
+  - q: How does the dice system work in Cars & Family?
     a: >-
-      Players choose a number between 2 and 5. Roll 1d6 (or more). Roll under
-      your number for 'Cars' (stunts/driving), roll over for 'Family'
-      (social/teamwork).
-  - q: What is the NOS mechanic?
+      Players choose a number between 2 and 5. Roll d6s: roll under for 'Cars'
+      (stunts) and roll over for 'Family' (teamwork).
+  - q: What happens when you use NOS?
     a: >-
-      Once per session, players can use NOS to add an automatic hit. They must
-      then roll a die; if it doesn't match their number, a complication
-      'explodes' around them.
-entities:
-  - type: CreativeWork
-    name: Cars & Family
-    author:
-      type: Person
-      name: Petri Leinonen
-    description: A tabletop roleplaying game about street racing thieves.
-    license:
-      - type: CreativeWork
-        name: Creative Commons Non-Commercial Share-Alike 3.0 Unported
-        url: 'https://creativecommons.org/licenses/by-nc-sa/3.0/'
-    isBasedOn:
-      type: CreativeWork
-      name: Lasers & Feelings
-    sameAs:
-      - 'https://rpggeek.com/rpgitem/275602/cars-and-family'
-      - 'https://strangeworlder.itch.io/cars-and-family'
-      - 'https://roolipelikirjasto.fi/series/stored/7'
+      Using NOS adds an automatic success, but requires a risk roll. If you
+      don't match your number, a complication explodes around the crew.
+sameAs:
+  - 'https://rpggeek.com/rpgitem/275602/cars-and-family'
+  - 'https://strangeworlder.itch.io/cars-and-family'
+  - 'https://roolipelikirjasto.fi/series/stored/7'
 ---
 
 
@@ -172,3 +174,4 @@ Players make five main choices to join the crew:
 ## Outside mentions
 
 - [RPGGeek: Cars & Family](https://rpggeek.com/rpgitem/275602/cars-and-family)
+- [io9: 10 Tabletop Games for Fast & Furious Franchise Fans](https://gizmodo.com/fast-x-tabletop-rpg-ttrpg-cars-fast-and-furious-games-1850454943/11)

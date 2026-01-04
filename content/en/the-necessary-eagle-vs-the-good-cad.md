@@ -5,8 +5,10 @@ description: >-
   vigilante they created, using a standard deck of cards for asymmetrical,
   narrative-driven play.
 contentType:
+  - Product
   - Game
-  - CreativeWork
+inLanguage:
+  - en
 genre: Tabletop Role-playing Game
 gameInterfaceType: Tabletop
 numberOfPlayers:
@@ -17,14 +19,18 @@ organization:
   url: 'https://gogam.eu'
 author: Petri Leinonen
 datePublished: 2025-12-28
-dateModified: 2025-12-30
+dateModified: 2026-01-04
 tags:
   - game
   - ttrpg
 offers:
-  url: 'https://strangeworlder.itch.io/the-necessary-eagle-vs-the-good-cad'
-  price: '0'
-  priceCurrency: USD
+  - name: itch.io
+    url: 'https://strangeworlder.itch.io/the-necessary-eagle-vs-the-good-cad'
+    price: '0'
+    priceCurrency: USD
+  - name: Roolipelikirjasto (PDF)
+    url: 'https://roolipelikirjasto.fi/book/156'
+    availability: 'https://schema.org/InStock'
 canonical: /en/the-necessary-eagle-vs-the-good-cad
 template: hero
 theme: modern
@@ -57,15 +63,9 @@ quotes:
   - source: Petri Leinonen
     text: The powerless fighting the super‑powerful.
     date: 2025-11-28T00:00:00.000Z
-entities:
-  - type: CreativeWork
-    name: The Necessary Eagle vs. The Good Cad
-    sameAs:
-      - 'https://strangeworlder.itch.io/the-necessary-eagle-vs-the-good-cad'
-      - 'https://roolipelikirjasto.fi/book/156'
-    author:
-      type: Person
-      name: Petri Leinonen
+sameAs:
+  - 'https://strangeworlder.itch.io/the-necessary-eagle-vs-the-good-cad'
+  - 'https://roolipelikirjasto.fi/book/156'
 ---
 
 

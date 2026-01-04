@@ -4,7 +4,7 @@ description: >-
   Valikoima vaarallisia vastustajia aloitteleville hahmoille maailman
   suosituimpaan roolipeliin.
 datePublished: 2022-11-11
-dateModified: 2025-12-30
+dateModified: 2026-01-04
 canonical: /hirviokirja
 template: product
 cover: /images/products/hirviokirja/kansi.webp
@@ -32,8 +32,10 @@ productNav:
     text: Mediassa
 lastValidated: 2025-12-10T00:00:00.000Z
 contentType:
-  - Book
   - Product
+  - Book
+inLanguage:
+  - fi
 isbn: '9789526503028'
 author:
   name: Petri Leinonen
@@ -70,25 +72,36 @@ quotes:
       kyyrmehisten syntysijoille.
     date: 2022-11-29T00:00:00.000Z
 offers:
-  '@type': AggregateOffer
-  priceCurrency: EUR
-  lowPrice: '25.00'
-  offerCount: '5'
-  offers:
-    - name: Fantasiapelit
-      url: >-
-        https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_221394
-    - name: Puolenkuun pelit
-      url: >-
-        https://www.puolenkuunpelit.com/kauppa/product_info.php?products_id=168296
-    - name: Viihdekauppa Laiska Pelikaani
-      url: >-
-        https://www.laiskapelikaani.fi/shop/legendoja-lohikaarmeita-hirviokirja-130128?category=32#attr=
-    - name: Oh My Game!
-      url: 'https://ohmygame.fi/'
-    - name: Viihdekauppa Laiska Pelikaani (PDF)
-      url: >-
-        https://www.laiskapelikaani.fi/shop/legendoja-lohikaarmeita-hirviokirja-vesileimattu-pdf-131586
+  - name: Fantasiapelit
+    url: >-
+      https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_221394
+    price: '27.00'
+    priceCurrency: EUR
+    availability: 'https://schema.org/InStock'
+  - name: Puolenkuun pelit
+    url: 'https://www.puolenkuunpelit.com/kauppa/product_info.php?products_id=168296'
+    price: '25.00'
+    priceCurrency: EUR
+    availability: 'https://schema.org/InStock'
+  - name: Viihdekauppa Laiska Pelikaani
+    url: >-
+      https://www.laiskapelikaani.fi/shop/legendoja-lohikaarmeita-hirviokirja-130128?category=32#attr=
+    price: '25.88'
+    priceCurrency: EUR
+    availability: 'https://schema.org/InStock'
+  - name: Oh My Game!
+    url: 'https://ohmygame.fi/'
+  - name: Viihdekauppa Laiska Pelikaani (PDF)
+    url: >-
+      https://www.laiskapelikaani.fi/shop/legendoja-lohikaarmeita-hirviokirja-vesileimattu-pdf-131586
+    price: '14.98'
+    priceCurrency: EUR
+    availability: 'https://schema.org/InStock'
+  - name: DriveThruRPG (PDF)
+    url: 'https://www.drivethrurpg.com/product/417980/Hirviokirja'
+    price: '17.58'
+    priceCurrency: USD
+    availability: 'https://schema.org/InStock'
 faq:
   - q: 'Onko Hirviökirja yhteensopiva Dungeons & Dragons 5e:n kanssa?'
     a: 'Kyllä, se perustuu SRD-aineistoon ja on täysin 5e-yhteensopiva.'
@@ -98,12 +111,11 @@ faq:
     a: >-
       Legendoja & lohikäärmeitä (L&L) on kotimainen roolipeli, joka pohjaa
       maailman suosituimman roolipelin 5. laitokseen.
-entities:
-  - type: CreativeWork
-    name: Hirviökirja
-    sameAs:
-      - 'https://www.drivethrurpg.com/product/417980/Hirviokirja'
-      - 'https://rpggeek.com/rpgitem/458397/hirviokirja'
+sameAs:
+  - 'https://www.drivethrurpg.com/product/417980/Hirviokirja'
+  - 'https://rpggeek.com/rpgitem/458397/hirviokirja'
+  - >-
+    https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_221394
 ---
 
 Hirviökirja on 5e-yhteensopiva ja ammentaa suomalaisesta kansanperinteestä ja pohjoisesta fantasiasta. Se tarjoaa laajan kattauksen vastustajia haastamaan alhaisten kokemustasojen hahmoja. Sen sivuilta löytyy kaikenlaista vipeltäjää sulkavista konteloihin; luomoja, kalmoja, mämmilimoja ja ilmeksiä unohtamatta. Kyseessä on siis hirviömäinen kokoelma, joka laajentaa Legendoja & lohikäärmeissä esiteltyä vastustajavalikoimaa pohjoisista maista ammentavilla fantastisilla olennoilla. L&L pohjaa Wizards of the Coastin julkaisemaan viidennen laitoksen sääntöaihioon (SRD), joten kaikki Hirviökirjan vastustajat ovat siten käytettävissä myös maailman suosituimmassa roolipelissä.

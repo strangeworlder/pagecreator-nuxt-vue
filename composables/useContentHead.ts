@@ -70,11 +70,70 @@ function dedupe<T>(items: T[]): T[] {
   return result;
 }
 
+// Local interfaces for frontmatter data
+interface Offer {
+  url: string;
+  price?: string;
+  priceCurrency?: string;
+  availability?: string;
+  name?: string;
+}
+
+interface Product {
+  name: string;
+  id: string;
+  description: string;
+  category: string;
+  url: string;
+  image?: string;
+  offers?: Offer | Offer[];
+}
+
+interface SubOrganization {
+  name: string;
+  description: string;
+  url?: string;
+}
+
+interface FAQItem {
+  q: string;
+  a: string;
+}
+interface CreativeWorkBase {
+  name: string;
+  id?: string;
+  author?: { name: string; type?: string; sameAs?: string | string[] };
+}
+
+// Global Identifiers
+const PETRI_IDENTITY = {
+  "@id": "https://gogam.eu/#petri", // Base URL will be prepended or logic used to keep this consistent
+  name: "Petri Leinonen",
+  sameAs: [
+    "https://rpggeek.com/rpgdesigner/111688/petri-leinonen",
+    "https://bsky.app/profile/strangeworlder.bsky.social",
+  ],
+};
+
+const GOGAM_IDENTITY = {
+  "@id": "https://gogam.eu/#organization",
+  name: "Gogam",
+  sameAs: ["https://www.youtube.com/@gogameu"],
+};
+
+
 export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null | undefined>) {
   const runtime = useRuntimeConfig();
   const defaultLocale = runtime.public.defaultLocale || "en";
   const siteUrl: string = runtime.public.siteUrl || "";
   const siteName: string = runtime.public.siteName || "Gogam";
+
+  // Helper to ensure absolute URLs
+  const toAbsolute = (path: string | undefined): string | undefined => {
+    if (!path) return undefined;
+    if (path.startsWith("http")) return path;
+    return `${siteUrl}${ensureLeadingSlash(path)}`;
+  };
 
   watchEffect(() => {
     const doc = docRef?.value;
@@ -111,14 +170,10 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
     const finalImageType = imageType || fallbackImageType;
     const noindex: boolean | undefined = doc.noindex === true;
 
-    // Normalize type to array for processing, but keep single string if that's what it is for OG tags
+    // Normalize type to array for processing
     const docType = doc.contentType || (doc.datePublished ? "article" : "website");
     const typeArray = Array.isArray(docType) ? docType : [docType];
 
-    // Determine the primary schema type (used for OG:type)
-    // If it's a Game, we still might want "website" or "article" specifically for FB/Twitter if "game" isn't supported well,
-    // but usually "website" is a safe fallback or "article".
-    // For TTRPGs, "website" or "article" is standard for OG.
     const ogType = typeArray.includes("Game")
       ? "website"
       : typeArray.includes("article")
@@ -129,12 +184,13 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
     const schemaType = typeArray.map((t: string) => {
       if (t === "article") return "Article";
       if (t === "website") return "WebPage";
-      return t; // Pass through "Game", "CreativeWork", etc.
+      return t;
     });
 
     const meta: { name?: string; property?: string; content: string }[] = [];
     if (description) meta.push({ name: "description", content: description });
     if (noindex) meta.push({ name: "robots", content: "noindex, nofollow" });
+
     // Open Graph
     if (title) meta.push({ property: "og:title", content: title });
     if (description) meta.push({ property: "og:description", content: description });
@@ -204,167 +260,194 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
       addHrefLang("x-default", defaultHrefPath);
     }
 
-    // --- AEO Optimized Graph Construction ---
+    // --- AEO Optimized Graph Construction (Pedantic Mode) ---
 
-    // 1. Define IDs
-    const orgId = `${siteUrl}${siteUrl.endsWith("/") ? "" : "/"}#organization`;
-    const personId = `${siteUrl}${siteUrl.endsWith("/") ? "" : "/"}#petri`;
-    const webSiteId = `${siteUrl}${siteUrl.endsWith("/") ? "" : "/"}#website`;
+    // 1. Define Persistent Entity IDs
+    // Remove trailing slash from siteUrl for consistency if needed, but ensure ID format is consistent
+    const baseUrl = siteUrl.endsWith("/") ? siteUrl.slice(0, -1) : siteUrl;
+
+    // Core Entities
+    const orgId = `${baseUrl}/#organization`;
+    const personId = `${baseUrl}/#petri`;
+    const webSiteId = `${baseUrl}/#website`;
+
+    // Page-Specific IDs
     const webPageId = `${url}#webpage`;
+    const faqId = `${url}#faq`;
+    const breadcrumbId = `${url}#breadcrumb`;
 
-    // 2. Identify if this is the Identity Hub (Root Page)
-    // We treat '/' and '/fi' (if it exists as a main hub) as the Hubs where full definitions live.
-    // Ideally, only the true root '/' defines them, but '/fi' might need them localized?
-    // The user instruction says: "The root page (gogam.eu) must contain the full definitions... Subpages ... must reference the Master IDs"
-    // So strictly `path === '/'` or `doc._path === '/'`
     const isRoot = doc._path === "/" || doc.canonical === "/";
 
-    // 3. Build Nodes
     const graph: Record<string, unknown>[] = [];
 
-    // Node: Organization (Gogam)
-    // Root: Full definition
-    // Subpage: Reference only
+    // 2. Organization Node
     if (doc.organization) {
       const org = doc.organization;
       if (isRoot) {
+        // Full Definition
         const orgNode: Record<string, unknown> = {
           "@type": "Organization",
           "@id": orgId,
           name: org.name,
-          url: org.url || siteUrl,
+          url: toAbsolute(org.url) || siteUrl,
+          logo: toAbsolute(org.logo),
+          image: image, // Use the page's social image for the organization on the homepage
           description: org.description,
-          logo: org.logo,
           sameAs: org.sameAs,
         };
 
-        // Link Founder if exists
         if (org.founder) {
           orgNode.founder = { "@id": personId };
         }
 
-        // Sub-Organizations (Only on Root)
-        if (doc.subOrganizations && Array.isArray(doc.subOrganizations)) {
-          orgNode.subOrganization = doc.subOrganizations.map((sub: Record<string, unknown>) => ({
-            "@type": "Organization",
-            name: sub.name,
-            description: sub.description,
-            url: sub.url,
-          }));
+        const subOrgs = doc.subOrganizations as SubOrganization[];
+        if (subOrgs && Array.isArray(subOrgs)) {
+          orgNode.subOrganization = subOrgs.map((sub: SubOrganization) => {
+            // Generate a simple ID derived from name
+            const subId = `${baseUrl}/#${sub.name
+              .toLowerCase()
+              .replace(/[^a-z0-9]+/g, "-")
+              .replace(/^-|-$/g, "")}`;
+            return {
+              "@type": "Organization",
+              "@id": subId,
+              name: sub.name,
+              description: sub.description,
+              parentOrganization: { "@id": orgId },
+            };
+          });
         }
         graph.push(orgNode);
       } else {
-        // Subpage: Minimal Reference
+        // Reference Only - consistency check with global identity (name only, but same ID)
         graph.push({
           "@type": "Organization",
           "@id": orgId,
-          name: org.name, // Keep name for readability in graph
-          url: org.url || siteUrl,
+          name: GOGAM_IDENTITY.name,
+          url: toAbsolute(org.url) || siteUrl,
         });
       }
     }
 
-    // Node: Person (Founder/Author)
-    // Root: Full definition
-    // Subpage: Reference only
+    // 3. Person Node
     if (doc.organization?.founder || doc.author) {
-      let personName = "Petri Leinonen";
-      if (doc.organization?.founder?.name) personName = doc.organization.founder.name;
-      else if (typeof doc.author === "string") personName = doc.author;
-      else if (doc.author?.name) personName = doc.author.name;
+      const f = doc.organization?.founder || doc.author || {};
+      const personName =
+        f.name ||
+        (typeof doc.author === "string" ? doc.author : PETRI_IDENTITY.name);
 
       if (isRoot) {
-        // Full definition
-        const f = doc.organization?.founder || doc.author || {};
         const personNode: Record<string, unknown> = {
           "@type": "Person",
           "@id": personId,
           name: personName,
-          url: f.url || siteUrl, // Default to site if no personal URL
-          sameAs: f.sameAs,
-          knowsAbout: f.knowsAbout,
-          description: f.description,
+          url: toAbsolute(f.url) || siteUrl,
           jobTitle: f.jobTitle,
+          description: f.description,
+          sameAs: PETRI_IDENTITY.sameAs, // Use canonical sameAs
         };
-        // Ensure we don't push undefined props
-        if (!personNode.url) delete personNode.url;
+
+        if (f.knowsAbout && Array.isArray(f.knowsAbout)) {
+          personNode.knowsAbout = f.knowsAbout.map((topic: string) => ({
+            "@type": "Thing",
+            name: topic,
+          }));
+        }
         graph.push(personNode);
       } else {
-        // Subpage: Minimal Reference
+        // Reference but with name
         graph.push({
           "@type": "Person",
           "@id": personId,
           name: personName,
-          url: siteUrl, // Point back to hub
+          url: siteUrl,
         });
       }
     }
 
-    // Node: WebSite (Always defined as separate node, pointing to Publisher)
-    const webSiteNode: Record<string, unknown> = {
+    // 4. WebSite Node
+    graph.push({
       "@type": "WebSite",
       "@id": webSiteId,
       url: siteUrl,
       name: "Gogam",
       publisher: { "@id": orgId },
-    };
-    graph.push(webSiteNode);
+    });
 
-    // Node: Game / CreativeWork (The Product/Entity)
-    const primaryType = schemaType.length === 1 ? schemaType[0] : schemaType;
+    // 4.5 BreadcrumbList Node
+    if (!isRoot) {
+      graph.push({
+        "@type": "BreadcrumbList",
+        "@id": breadcrumbId,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Gogam",
+            "item": siteUrl, // or baseUrl if siteUrl ends with /
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": title,
+            "item": url,
+          },
+        ],
+      });
+    }
+
+    // 5. Products (from frontmatter list)
+    // We collect product IDs to link them to the WebPage
+    const productIds: { "@id": string }[] = [];
+
+    const products = doc.products as Product[];
+
+    if (products && Array.isArray(products)) {
+      for (const prod of products) {
+        // Ensure ID is absolute if provided as fragment
+        const pId = prod.id.startsWith("#") ? `${baseUrl}/${prod.id}` : prod.id;
+
+        const productNode: Record<string, unknown> = {
+          "@type": "IndividualProduct", // Specific type requested
+          "@id": pId,
+          name: prod.name,
+          description: prod.description,
+          category: prod.category,
+          author: { "@id": personId },
+          brand: { "@id": orgId },
+          url: prod.url, // External link
+        };
+
+        if (prod.image) {
+          productNode.image = toAbsolute(prod.image);
+        }
+
+        if (prod.offers) {
+          productNode.offers = {
+            "@type": "Offer",
+            url: prod.offers.url,
+            availability: prod.offers.availability || "https://schema.org/InStock",
+            price: prod.offers.price,
+            priceCurrency: prod.offers.priceCurrency || "USD",
+          };
+        }
+
+        graph.push(productNode);
+        productIds.push({ "@id": pId });
+      }
+    }
+
+    // 6. Game/CreativeWork (if this page IS a game page)
     const isCreativeWork = ["Game", "CreativeWork", "Book", "SoftwareApplication"].some((t) => {
       return Array.isArray(schemaType) ? schemaType.includes(t) : schemaType === t;
     });
 
-    // ID for the item itself
-    const itemId = `${url}#game`;
-
-    // Node: WebPage
-    const pageNode: Record<string, unknown> = {
-      "@type": "WebPage",
-      "@id": webPageId,
-      url: url,
-      name: `${title} - ${siteName}`,
-      description: description,
-      inLanguage: documentLocale,
-      isPartOf: { "@id": webSiteId },
-      primaryImageOfPage: image ? { "@id": image } : undefined, // Link image
-    };
-
-    // Helper to build AdditionalProperties (Facts/Stats)
-    const buildAdditionalProperties = (sourceFacts: unknown[], sourceStats: unknown[]) => {
-      const props: Record<string, unknown>[] = [];
-      if (Array.isArray(sourceFacts)) {
-        for (const f of sourceFacts) {
-          props.push({
-            "@type": "PropertyValue",
-            name: (f as Record<string, unknown>).label,
-            value: (f as Record<string, unknown>).value,
-          });
-        }
-      }
-      if (Array.isArray(sourceStats)) {
-        for (const s of sourceStats) {
-          const stat = s as Record<string, unknown>;
-          let desc = stat.source ? `Source: ${stat.source}` : "";
-          if (stat.date) {
-            desc = desc ? `${desc} (Observed: ${stat.date})` : `Observed: ${stat.date}`;
-          }
-
-          const node: Record<string, unknown> = {
-            "@type": "PropertyValue",
-            name: stat.metric,
-            value: stat.value,
-          };
-          if (desc) node.description = desc;
-          props.push(node);
-        }
-      }
-      return props;
-    };
+    let mainEntityId = undefined;
 
     if (isCreativeWork) {
-      // --- CREATIVE WORK (GAME) NODE ---
+      const itemId = `${url}#game`;
+      mainEntityId = itemId;
+
       const itemNode: Record<string, unknown> = {
         "@type": schemaType,
         "@id": itemId,
@@ -372,162 +455,134 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
         description: description,
         url: url,
         image: image,
-        mainEntityOfPage: { "@id": webPageId },
-        author: { "@id": personId },
-        publisher: { "@id": orgId },
+        author: {
+          "@type": "Person",
+          "@id": personId,
+          name: PETRI_IDENTITY.name,
+          sameAs: PETRI_IDENTITY.sameAs
+        },
+        publisher: {
+          "@type": "Organization",
+          "@id": orgId,
+          name: GOGAM_IDENTITY.name,
+          sameAs: GOGAM_IDENTITY.sameAs
+        },
+        offers: [], // To be populated
       };
 
-      // Game Specific Fields
+      // Populate standard fields
       if (doc.genre) itemNode.genre = doc.genre;
       if (doc.numberOfPlayers) itemNode.numberOfPlayers = doc.numberOfPlayers;
+      if (doc.gameItem) itemNode.gameItem = doc.gameItem;
+      if (doc.alternateName) itemNode.alternateName = doc.alternateName;
+      if (doc.inLanguage) itemNode.inLanguage = doc.inLanguage;
+      if (doc.license) itemNode.license = doc.license;
       if (doc.sameAs) itemNode.sameAs = doc.sameAs;
-      if (doc.isbn) itemNode.isbn = doc.isbn;
 
-      // Generic CreativeWork properties
-      if (doc.about) itemNode.about = doc.about;
-      if (doc.mentions) itemNode.mentions = doc.mentions;
-      if (doc.hasPart) itemNode.hasPart = doc.hasPart;
-      if (doc.isBasedOn) itemNode.isBasedOn = doc.isBasedOn;
-
-      // Illustrator
-      if (doc.illustrator) {
-        // If it's a string, assume it's a reference to the main Person ID if it matches
-        if (doc.illustrator === "Petri Leinonen" || doc.illustrator === "#petri") {
-          itemNode.illustrator = { "@id": personId };
-        } else if (typeof doc.illustrator === "object") {
-          itemNode.illustrator = doc.illustrator;
-        }
+      if (image) {
+        itemNode.image = {
+          "@type": "ImageObject",
+          "@id": `${image}#primaryimage`,
+          url: image,
+        };
+      } else {
+        itemNode.image = { "@id": `${url}#primaryimage` };
       }
 
-      // Offers
+      if (doc.url) itemNode.url = doc.url;
+      else itemNode.url = url;
+
+      if (doc.isBasedOn) {
+        const based = doc.isBasedOn as CreativeWorkBase;
+        itemNode.isBasedOn = {
+          "@type": "CreativeWork",
+          "@id": based.id || undefined,
+          name: based.name,
+          author: based.author
+            ? {
+              "@type": "Person",
+              name: based.author.name || based.author,
+              sameAs: based.author.sameAs,
+            }
+            : undefined,
+        };
+      }
+
+      // Offers logic (simplified for single offer usually)
       if (doc.offers) {
-        if (Array.isArray(doc.offers)) {
-          // If array, wrap in AggregateOffer if intended, or just list? 
-          // Common pattern is Offers property can be array of Offer.
-          itemNode.offers = doc.offers.map(o => ({
-            "@type": "Offer",
-            url: o.url,
-            price: o.price,
-            priceCurrency: o.priceCurrency || "EUR",
-            availability: o.availability || "https://schema.org/InStock",
-            name: o.name
-          }));
-        } else if (doc.offers['@type'] === 'AggregateOffer') {
-          // Pass through AggregateOffer structure
-          itemNode.offers = {
-            "@type": "AggregateOffer",
-            priceCurrency: doc.offers.priceCurrency || "EUR",
-            lowPrice: doc.offers.lowPrice,
-            offerCount: doc.offers.offerCount,
-            offers: doc.offers.offers?.map((o: any) => ({
-              "@type": "Offer",
-              name: o.name,
-              url: o.url,
-              price: o.price,
-              priceCurrency: o.priceCurrency || "EUR"
-            }))
-          };
-        } else {
-          // Single Offer
-          itemNode.offers = {
-            "@type": "Offer",
-            url: doc.offers.url,
-            price: doc.offers.price || "0",
-            priceCurrency: doc.offers.priceCurrency || "USD",
-            availability: doc.offers.availability || "https://schema.org/InStock",
-          };
-        }
-      }
-
-      // Reviews
-      if (doc.quotes && Array.isArray(doc.quotes)) {
-        itemNode.review = doc.quotes.map((q: Record<string, unknown>) => ({
-          "@type": "Review",
-          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-          author: { "@type": "Person", name: (q as Record<string, unknown>).source },
-          reviewBody: (q as Record<string, unknown>).text,
-          datePublished: (q as Record<string, unknown>).date,
+        const offersRaw = (Array.isArray(doc.offers) ? doc.offers : [doc.offers]) as Offer[];
+        itemNode.offers = offersRaw.map((o) => ({
+          "@type": "Offer",
+          name: o.name,
+          url: o.url,
+          price: o.price || "0",
+          priceCurrency: o.priceCurrency || "USD",
+          availability: o.availability || "https://schema.org/InStock",
         }));
       }
 
-      // Additional Properties (Stats/Facts belong to the GAME, not the page)
-      const additionalProps = buildAdditionalProperties(doc.facts as [], doc.stats as []);
-      if (additionalProps.length > 0) itemNode.additionalProperty = additionalProps;
-
-      // Merge data from 'entities' frontmatter if available
-      // This handles cases where rich data like isBasedOn, license, matches, etc. are defined in an 'entities' block
-      if (doc.entities && Array.isArray(doc.entities)) {
-        for (const entity of doc.entities) {
-          // Check if this entity represents the main item (by name match or generic type match if only one)
-          // We utilize loose matching to capture the intent.
-          const isMatch = entity.name === title ||
-            (doc.entities.length === 1 && ["Game", "CreativeWork", "Product"].includes(entity.type));
-
-          if (isMatch) {
-            if (entity.isBasedOn) itemNode.isBasedOn = entity.isBasedOn;
-            if (entity.license) itemNode.license = entity.license;
-            if (entity.sameAs) itemNode.sameAs = entity.sameAs;
-            // We generally preserve the generated 'author'/'publisher' to keep the ID references (#petri, #organization),
-            // unless they are missing.
-            if (!itemNode.author && entity.author) itemNode.author = entity.author;
-            // Allow overriding description if strictly needed, but top-level usually prevails
-          } else {
-            // If we have other distinct entities defined, we could push them to graph
-            // But currently the requirement focuses on the main CreativeWork.
-            // We can safely treat them as separate nodes if they have IDs, or ignore if they are just extra info without ID.
-            // For now, only merging into main entity is critical.
-          }
-        }
-      }
-
-      // Abstract
-      if (doc.summary) itemNode.abstract = doc.summary;
+      // Explicit link to mainEntityOfPage
+      itemNode.mainEntityOfPage = { "@id": webPageId };
 
       graph.push(itemNode);
+      productIds.push({ "@id": itemId }); // Treat current page game as a product too?
+      // Actually usually mainEntity is just the game.
+    }
 
-      // Point Page to Game
-      pageNode.mainEntity = { "@id": itemId };
+    // 7. FAQ Logic
+    let hasFaq = false;
+    const faq = doc.faq as FAQItem[];
+    if (faq && Array.isArray(faq) && faq.length > 0) {
+      hasFaq = true;
+      const faqNode = {
+        "@type": "FAQPage",
+        "@id": faqId,
+        mainEntity: faq.map((item: FAQItem) => ({
+          "@type": "Question",
+          name: item.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.a,
+          },
+        })),
+      };
+      graph.push(faqNode);
+    }
+
+    // 8. WebPage Node
+    const webPageNode: Record<string, unknown> = {
+      "@type": "WebPage",
+      "@id": webPageId,
+      url: url,
+      name: `${title} - ${siteName}`,
+      description: description,
+      isPartOf: { "@id": webSiteId },
+      // about: { "@id": personId }, // Removed per new user example request for pure graph
+    };
+
+    if (documentLocale) webPageNode.inLanguage = documentLocale;
+    if (!isRoot) webPageNode.breadcrumb = { "@id": breadcrumbId };
+
+    // Calculate mainEntity
+    // If it's a hub (index), mainEntity is the list of products + FAQ
+    // If it's a game page, mainEntity is the game itself
+
+    if (isCreativeWork) {
+      webPageNode.mainEntity = { "@id": `${url}#game` };
     } else {
-      // --- GENERIC PAGE ---
-      // For generic pages, facts/stats might belong to the page itself or the organization?
-      // Usually generic pages don't have game stats.
-      const additionalProps = buildAdditionalProperties(doc.facts as [], doc.stats as []);
-      if (additionalProps.length > 0) pageNode.additionalProperty = additionalProps;
+      // Hub page logic
+      const entities = [];
+      if (hasFaq) entities.push({ "@id": faqId });
+      entities.push(...productIds);
 
-      if (doc.organization) {
-        pageNode.publisher = { "@id": orgId };
+      if (entities.length > 0) {
+        webPageNode.mainEntity = entities;
       }
     }
 
-    // FAQ (Shared)
-    if (doc.faq && Array.isArray(doc.faq) && doc.faq.length > 0) {
-      const faqItems = doc.faq.map((item: Record<string, unknown>) => ({
-        "@type": "Question",
-        name: item.q,
-        acceptedAnswer: { "@type": "Answer", text: item.a },
-      }));
+    graph.push(webPageNode);
 
-      // If mainEntity is already taken (by Game), we attach FAQ as a part of the WebPage
-      if (!pageNode.mainEntity) {
-        pageNode.mainEntity = { "@type": "FAQPage", mainEntity: faqItems };
-      } else {
-        // Embed as hasPart of the WebPage
-        pageNode.hasPart = { "@type": "FAQPage", mainEntity: faqItems };
-      }
-    }
-
-    // Keywords
-    if (doc.tags && Array.isArray(doc.tags)) {
-      meta.push({ name: "keywords", content: doc.tags.join(", ") });
-    }
-
-    graph.push(pageNode);
-
-    // Add any manually specified structured data
-    if (doc.structuredData && Array.isArray(doc.structuredData)) {
-      graph.push(...doc.structuredData);
-    }
-
+    // 9. Final JSON-LD
     const finalJsonLd = {
       "@context": "https://schema.org",
       "@graph": graph,

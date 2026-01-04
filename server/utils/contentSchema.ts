@@ -42,6 +42,14 @@ export const frontMatterSchema = z.object({
     sameAs: z.array(z.string()).optional(),
   })).optional(),
 
+  // Rule: Subject Matter (Distinct from Mentions)
+  about: z.array(z.object({
+    "@type": z.string().optional(),
+    name: z.string(),
+    sameAs: z.union([z.string(), z.array(z.string())]).optional(),
+    "@id": z.string().optional(),
+  })).optional(),
+
   // Rule: Testimonials must be Mentions, NO Reviews
   mentions: z.array(z.object({
     "@type": z.literal("CreativeWork").optional(),

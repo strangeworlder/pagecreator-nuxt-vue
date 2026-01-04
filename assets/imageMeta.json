@@ -123,34 +123,6 @@
     "width": 150,
     "height": 150
   },
-  "/images/products/hirviokirja/sulkava.webp": {
-    "width": 500,
-    "height": 500
-  },
-  "/images/products/hirviokirja/nokiporo.webp": {
-    "width": 600,
-    "height": 600
-  },
-  "/images/products/hirviokirja/logo.webp": {
-    "width": 2616,
-    "height": 520
-  },
-  "/images/products/hirviokirja/kansi.webp": {
-    "width": 458,
-    "height": 600
-  },
-  "/images/products/hirviokirja/background.webp": {
-    "width": 842,
-    "height": 1920
-  },
-  "/images/products/hirviokirja/background-full.webp": {
-    "width": 4800,
-    "height": 4500
-  },
-  "/images/products/hirviokirja/TDB-logo.webp": {
-    "width": 338,
-    "height": 538
-  },
   "/images/products/sulkavansointu/sulkava.webp": {
     "width": 500,
     "height": 500
@@ -176,6 +148,34 @@
     "height": 4500
   },
   "/images/products/sulkavansointu/TDB-logo.webp": {
+    "width": 338,
+    "height": 538
+  },
+  "/images/products/hirviokirja/sulkava.webp": {
+    "width": 500,
+    "height": 500
+  },
+  "/images/products/hirviokirja/nokiporo.webp": {
+    "width": 600,
+    "height": 600
+  },
+  "/images/products/hirviokirja/logo.webp": {
+    "width": 2616,
+    "height": 520
+  },
+  "/images/products/hirviokirja/kansi.webp": {
+    "width": 458,
+    "height": 600
+  },
+  "/images/products/hirviokirja/background.webp": {
+    "width": 842,
+    "height": 1920
+  },
+  "/images/products/hirviokirja/background-full.webp": {
+    "width": 4800,
+    "height": 4500
+  },
+  "/images/products/hirviokirja/TDB-logo.webp": {
     "width": 338,
     "height": 538
   },

@@ -17,6 +17,9 @@ organization:
   name: Gogam
   url: 'https://gogam.eu'
   logo: /gogam-logo.png
+  sameAs:
+    - 'https://instagram.com/gogam.eu'
+    - 'https://gogameu.substack.com/'
   description: >-
     An indie tabletop roleplaying game brand and publishing house based in
     Finland.
@@ -40,8 +43,6 @@ organization:
       - 'https://strangeworlder.medium.com/'
       - 'https://bsky.app/profile/strangeworlder.bsky.social'
       - 'https://www.threads.com/@gogam.eu'
-      - 'https://www.youtube.com/@gogameu'
-      - 'https://gogameu.substack.com/'
     knowsAbout:
       - Tabletop Roleplaying Games
       - Game Design
@@ -56,6 +57,8 @@ subOrganizations:
     description: >-
       Multimedia production branch creating Actual Plays, RPG theory videos, and
       tutorials in English and Finnish.
+    sameAs:
+      - 'https://www.youtube.com/@gogameu'
 faq:
   - q: Where can I download Gogam games?
     a: >-

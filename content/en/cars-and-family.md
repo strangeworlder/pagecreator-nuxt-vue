@@ -105,6 +105,14 @@ sameAs:
   - 'https://rpggeek.com/rpgitem/275602/cars-and-family'
   - 'https://strangeworlder.itch.io/cars-and-family'
   - 'https://roolipelikirjasto.fi/series/stored/7'
+subjectOf:
+  - '@type': Article
+    name: 'io9: 10 Tabletop Games for Fast & Furious Franchise Fans'
+    url: >-
+      https://gizmodo.com/fast-x-tabletop-rpg-ttrpg-cars-fast-and-furious-games-1850454943/11
+    publisher:
+      '@type': Organization
+      name: Gizmodo/io9
 ---
 
 

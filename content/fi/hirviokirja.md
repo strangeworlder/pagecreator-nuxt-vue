@@ -127,6 +127,21 @@ sameAs:
   - 'https://rpggeek.com/rpgitem/458397/hirviokirja'
   - >-
     https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_221394
+subjectOf:
+  - '@type': Article
+    name: 'Roolipelitiedotus "Haastattelussa: Petri Leinonen" - 17.3.2023'
+    url: 'https://roolipelitiedotus.fi/julkaisut/haastattelussa-petri-leinonen/'
+  - '@type': Article
+    name: 'Nörttitytöt "Arvostelu: Legendoja & Lohikäärmeitä" - 6.3.2023'
+    url: 'https://geekgirls.fi/wp/blog/2023/03/06/arvostelu-legendoja-lohikaarmeita/'
+  - '@type': Article
+    name: 'Roolipeliloki: “Uusia suomijulkaisuja” - 29.11.2022'
+    url: 'https://roolipeliloki.com/2022/11/29/uusia-suomijulkaisuja/'
+  - '@type': Article
+    name: >-
+      Ropesatama: “Hirviökirja (Legendoja & lohikäärmeitä) - Ensivaikutelmia”  -
+      29.11.2022
+    url: 'https://www.youtube.com/watch?v=4LXz1FnZ05g'
 ---
 
 Hirviökirja on 5e-yhteensopiva ja ammentaa suomalaisesta kansanperinteestä ja pohjoisesta fantasiasta. Se tarjoaa laajan kattauksen vastustajia haastamaan alhaisten kokemustasojen hahmoja. Sen sivuilta löytyy kaikenlaista vipeltäjää sulkavista konteloihin; luomoja, kalmoja, mämmilimoja ja ilmeksiä unohtamatta. Kyseessä on siis hirviömäinen kokoelma, joka laajentaa Legendoja & lohikäärmeissä esiteltyä vastustajavalikoimaa pohjoisista maista ammentavilla fantastisilla olennoilla. L&L pohjaa Wizards of the Coastin julkaisemaan viidennen laitoksen sääntöaihioon (SRD), joten kaikki Hirviökirjan vastustajat ovat siten käytettävissä myös maailman suosituimmassa roolipelissä.

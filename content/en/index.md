@@ -103,8 +103,14 @@ products:
     sameAs:
       - 'https://rpggeek.com/rpgitem/275602/cars-and-family'
       - 'https://strangeworlder.itch.io/cars-and-family'
-      - >-
-        https://gizmodo.com/cars-family-is-a-truly-delightful-rpg-about-street-1833446001
+    subjectOf:
+      - '@type': Article
+        name: 'io9: 10 Tabletop Games for Fast & Furious Franchise Fans'
+        url: >-
+          https://gizmodo.com/cars-family-is-a-truly-delightful-rpg-about-street-1833446001
+        publisher:
+          '@type': Organization
+          name: Gizmodo/io9
   - name: Pros & Cons
     id: '#game-pros-and-cons'
     description: A high-stakes heist movie RPG where you balance being a Pro vs a Con.
@@ -185,7 +191,7 @@ products:
       A slasher-horror RPG where you play the cast of a movie that hasn't
       happened yet.
     category: Tabletop Roleplaying Game
-    url: 'https://gogam.eu/en/night-of-the-thirteenth'
+    url: 'https://gogam.eu/en/nott'
     offers:
       price: '0.00'
       priceCurrency: USD

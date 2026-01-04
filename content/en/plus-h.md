@@ -58,10 +58,20 @@ stats:
     value: In development
     date: 2024-01-01T00:00:00.000Z
     source: Rules text
-quotes:
-  - source: Petri Leinonen
+offers:
+  - name: Website
+    url: 'http://roachsphere.com'
+    price: '0.00'
+    priceCurrency: EUR
+    availability: 'https://schema.org/InStock'
+mentions:
+  - '@type': CreativeWork
     text: Encountering the shadow biosphere is a misstep away from body horror.
-    date: 2025-11-28T00:00:00.000Z
+    author:
+      '@type': Person
+      name: Petri Leinonen
+      jobTitle: Game Designer
+    datePublished: 2025-11-28T00:00:00.000Z
 entities:
   - type: CreativeWork
     name: +H

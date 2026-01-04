@@ -13,7 +13,8 @@ genre: Tabletop Role-playing Game
 gameInterfaceType: Tabletop
 numberOfPlayers:
   '@type': QuantitativeValue
-  value: '5'
+  minValue: 5
+  maxValue: 5
 organization:
   name: Gogam
   url: 'https://gogam.eu'
@@ -65,10 +66,14 @@ stats:
     value: Ashcan
     date: 2025-12-25T00:00:00.000Z
     source: Rules text
-quotes:
-  - source: Petri Leinonen
+mentions:
+  - '@type': CreativeWork
     text: Most of you won't make it.
-    date: 2025-11-28T00:00:00.000Z
+    author:
+      '@type': Person
+      name: Petri Leinonen
+      jobTitle: Game Designer
+    datePublished: 2025-11-28T00:00:00.000Z
 faq:
   - q: What is Night of the Thirteenth?
     a: >-

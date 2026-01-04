@@ -35,9 +35,11 @@ offers:
     url: 'https://strangeworlder.itch.io/a-particular-group-of-corvids'
     price: '0.00'
     priceCurrency: USD
+    bookFormat: 'https://schema.org/EBook'
   - name: Roolipelikirjasto (PDF)
     url: 'https://roolipelikirjasto.fi/book/150'
     availability: 'https://schema.org/InStock'
+    bookFormat: 'https://schema.org/EBook'
 canonical: /en/a-particular-group-of-corvids
 template: hero
 theme: classic
@@ -75,13 +77,6 @@ stats:
     value: Beta
     date: 2025-12-25T00:00:00.000Z
     source: Rules text
-quotes:
-  - source: Petri Leinonen
-    text: Two-fisted bird sleuths.
-    date: 2025-11-28T00:00:00.000Z
-  - source: Rulebook
-    text: Do it right or not at all.
-    date: 2025-11-28T00:00:00.000Z
 faq:
   - q: What is A Particular Group of Corvids?
     a: >-

@@ -103,10 +103,12 @@ let initialLocaleIndex = ssrLocaleIndex.value;
 if (!initialLocaleIndex) {
   const fetchedIdx = await queryContent(`/${initialLocale}`)
     .where({ _path: `/${initialLocale}` })
-    .only(['_path', 'cover'])
+    .only(["_path", "cover"])
     .findOne();
   // Strictly filter to ensure no extra properties leak into hydration state
-  const strippedIdx = fetchedIdx ? { _path: (fetchedIdx as any)._path, cover: (fetchedIdx as any).cover } : null;
+  const strippedIdx = fetchedIdx
+    ? { _path: (fetchedIdx as any)._path, cover: (fetchedIdx as any).cover }
+    : null;
   ssrLocaleIndex.value = strippedIdx;
   initialLocaleIndex = strippedIdx;
   if (process.dev)
@@ -190,7 +192,7 @@ watch(
     const nextLocale = getLocaleFromPath(route.path);
     const nextIndex = await queryContent(`/${nextLocale}`)
       .where({ _path: `/${nextLocale}` })
-      .only(['_path', 'cover'])
+      .only(["_path", "cover"])
       .findOne();
     const currentPath = (data.value as Record<string, unknown>)?._path;
     if (next && next._path !== currentPath) {

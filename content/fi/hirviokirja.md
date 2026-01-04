@@ -66,22 +66,34 @@ stats:
     value: Kovakantinen / PDF
     date: 2022-11-11T00:00:00.000Z
     source: Sääntökirja
-quotes:
-  - source: Mika Loponen
+mentions:
+  - '@type': CreativeWork
     text: >-
       Leinosen Hirviökirja päivittää fantasiahirviöt riemastuttavalla tavalla
       modernille yleisölle.
-    date: 2025-12-10T00:00:00.000Z
-  - source: Jonas Mustonen
+    author:
+      '@type': Person
+      name: Mika Loponen
+      jobTitle: 'FT, hirviötutkimus'
+    datePublished: 2025-12-10T00:00:00.000Z
+  - '@type': CreativeWork
     text: >-
       Hirviökirjan hirviöt vaihtelevat melkein petollisen hellyttävästä todella
       kammottaviin painajaisolentoihin.
-    date: 2022-11-29T00:00:00.000Z
-  - source: Tanja Kuusniemi
+    author:
+      '@type': Person
+      name: Jonas Mustonen
+      jobTitle: Pääsuunnittelija
+    datePublished: 2022-11-29T00:00:00.000Z
+  - '@type': CreativeWork
     text: >-
       Hirviökirja viekottelee roolipelaajan matkalle konteloisten ja
       kyyrmehisten syntysijoille.
-    date: 2022-11-29T00:00:00.000Z
+    author:
+      '@type': Person
+      name: Tanja Kuusniemi
+      jobTitle: Noppatuuri-striimi
+    datePublished: 2022-11-29T00:00:00.000Z
 offers:
   - name: Fantasiapelit
     url: >-

@@ -1,11 +1,14 @@
+---
+dateModified: 2026-01-04
+---
 # AI Agent Guide: TSS (Generative‑Engine‑Optimized Vue Starter)
 
 This document provides high-level context, architectural decisions, and coding conventions for AI agents working on this codebase.
 
 ## Project Overview
-**TSS** is a production-ready **Nuxt 3 SSR** starter designed for **Generative Engine Optimization (GEO)**.
-- **Core Goal**: Maximally understandable content for LLMs (crawlers) while providing a fast, static-like user experience.
-- **Data Source**: Markdown files in `content/` with rich front-matter (entities, summary, FAQ).
+**TSS** is a production-ready **Nuxt 3 SSR** starter designed for **Answer Engine Optimization (AEO)**.
+- **Core Goal**: Structured, source-of-truth content allowing LLMs (Answer Engines) to extract factual answers with high confidence.
+- **Data Source**: Markdown files in `content/` with strict front-matter adherence to `SCHEMA.md`.
 - **Rendering**: SSR by default with aggressive caching (ISR/SWR) for edge performance.
 
 ## Tech Stack
@@ -45,16 +48,13 @@ Components are strictly categorized to manage complexity.
 
 ### 3. Content-Driven Architecture (`content/`)
 The file system mirrors the URL structure.
-- **Front-matter**: The "database" for SEO/GEO.
-  - Required: `title`, `description`, `datePublished`.
-  - **GEO Specific**:
+- **Front-matter**: The "Fact Layer" for AEO (Answer Engine Optimization).
+  - **AEO Critical**:
     - `summary`: A multi-line abstract optimized for LLM consumption.
-    - `entities`: Structured data links. **Note**: Always use `type: "CreativeWork"` for the main subject unless a specific reason exists to deviate, to ensure broad GEO compatibility.
-      - Schema: `[{ type: "CreativeWork", name: "...", description: "...", sameAs: ["..."] }]`
-    - `faq`: A list of Question/Answer pairs. Note the keys are `q` and `a`.
-      - Schema: `[{ q: "Question?", a: "Answer." }]`
-    - `facts`: Key-Value pairs for quick extraction.
-      - Schema: `[{ label: "System", value: "d20" }]`
+    - `entities`: Structured data links. **Note**: Always use `type: "CreativeWork"` for the main subject unless a specific reason exists to deviate, to ensure broad AEO compatibility.
+  - **Strict Schema Rules**: Refer to `SCHEMA.md` for the definitive rules on Source-Truth Hierarchy (Master/Stub nodes) and allowed fields.
+    - **Do NOT** duplicate biographical data on subpages. Use Stub References.
+    - **Do NOT** put offers on the homepage. Use Stub References.
 - **Localization**: Subdirectories `en/`, `fi/`, etc. `nuxt.config.ts` handles route generation.
 
 ### 4. Caching & Freshness (`nuxt.config.ts` & `server/`)

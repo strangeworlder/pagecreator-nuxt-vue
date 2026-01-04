@@ -13,7 +13,8 @@ genre: Tabletop Role-playing Game
 gameInterfaceType: Tabletop
 numberOfPlayers:
   '@type': QuantitativeValue
-  value: '2'
+  minValue: 2
+  maxValue: 2
 organization:
   name: Gogam
   url: 'https://gogam.eu'
@@ -28,9 +29,11 @@ offers:
     url: 'https://strangeworlder.itch.io/the-necessary-eagle-vs-the-good-cad'
     price: '0.00'
     priceCurrency: USD
+    bookFormat: 'https://schema.org/EBook'
   - name: Roolipelikirjasto (PDF)
     url: 'https://roolipelikirjasto.fi/book/156'
     availability: 'https://schema.org/InStock'
+    bookFormat: 'https://schema.org/EBook'
 canonical: /en/the-necessary-eagle-vs-the-good-cad
 template: hero
 theme: modern
@@ -59,10 +62,6 @@ stats:
     value: PDF
     date: 2025-10-28T00:00:00.000Z
     source: Rules text
-quotes:
-  - source: Petri Leinonen
-    text: The powerless fighting the super‑powerful.
-    date: 2025-11-28T00:00:00.000Z
 sameAs:
   - 'https://strangeworlder.itch.io/the-necessary-eagle-vs-the-good-cad'
   - 'https://roolipelikirjasto.fi/book/156'

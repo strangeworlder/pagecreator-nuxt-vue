@@ -20,7 +20,9 @@ isBasedOn:
     sameAs: 'https://twitter.com/john_harper'
 gameInterfaceType: Tabletop
 numberOfPlayers:
-  maxValue: '5'
+  '@type': QuantitativeValue
+  minValue: 3
+  maxValue: 5
 organization:
   name: Gogam
   url: 'https://gogam.eu'
@@ -35,9 +37,13 @@ offers:
     url: 'https://strangeworlder.itch.io/cyberpunk-is-dead'
     price: '0.00'
     priceCurrency: USD
-  - name: Roolipelikirjasto (Physical)
+    bookFormat: 'https://schema.org/EBook'
+  - name: Roolipelikirjasto (PDF)
     url: 'https://roolipelikirjasto.fi/book/148'
     availability: 'https://schema.org/InStock'
+    price: '0.00'
+    priceCurrency: EUR
+    bookFormat: 'https://schema.org/EBook'
 canonical: /en/cyberpunk-is-dead
 template: hero
 theme: modern
@@ -78,10 +84,6 @@ stats:
   - metric: Version
     value: '1.0'
     date: 2025-12-25T00:00:00.000Z
-quotes:
-  - source: Petri Leinonen
-    text: You are the corporation's disposable operatives.
-    date: 2025-11-28T00:00:00.000Z
 faq:
   - q: What is Cyberpunk is Dead?
     a: >-

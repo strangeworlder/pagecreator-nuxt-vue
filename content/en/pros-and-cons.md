@@ -15,16 +15,16 @@ numberOfPlayers:
 organization:
   name: Gogam
   url: 'https://gogam.eu'
-author: Petri Leinonen
 datePublished: 2025-12-28
 dateModified: 2026-01-04
 tags:
   - game
   - heist
 offers:
-  url: 'https://strangeworlder.itch.io/pros-and-cons'
-  price: '0.00'
-  priceCurrency: USD
+  - url: 'https://strangeworlder.itch.io/pros-and-cons'
+    price: '0.00'
+    priceCurrency: USD
+    bookFormat: 'https://schema.org/EBook'
 canonical: /en/pros-and-cons
 template: hero
 theme: modern
@@ -51,27 +51,25 @@ stats:
     value: '1352'
     date: 2025-10-26T00:00:00.000Z
     source: Rules text
-quotes:
-  - source: Petri Leinonen
-    text: A heist RPG built on Lasers & Feelings.
-    date: 2025-11-28T00:00:00.000Z
-entities:
-  - type: CreativeWork
-    name: Pros & Cons
-    license:
-      type: CreativeWork
-      name: Creative Commons Attribution 4.0
-      url: 'https://creativecommons.org/licenses/by/4.0/'
+isBasedOn:
+  type: CreativeWork
+  name: Lasers & Feelings
+  id: 'https://rpggeek.com/rpgitem/144077/lasers-feelings'
+  url: 'http://www.onesevendesign.com/laserfeelings/'
+  author:
+    name: John Harper
+    sameAs: 'https://twitter.com/john_harper'
     isBasedOn:
       type: CreativeWork
       name: Lasers & Feelings
-    sameAs:
-      - 'https://rpggeek.com/rpgitem/461385/pros-and-cons'
-      - 'https://strangeworlder.itch.io/pros-and-cons'
-      - 'https://roolipelikirjasto.fi/book/147'
-    author:
-      type: Person
-      name: Petri Leinonen
+sameAs:
+  - 'https://rpggeek.com/rpgitem/461385/pros-and-cons'
+  - 'https://strangeworlder.itch.io/pros-and-cons'
+  - 'https://roolipelikirjasto.fi/book/147'
+author:
+  '@type': Person
+  name: Petri Leinonen
+  '@id': 'https://gogam.eu/#petri'
 ---
 
 

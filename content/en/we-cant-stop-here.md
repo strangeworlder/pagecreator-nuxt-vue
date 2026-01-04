@@ -33,12 +33,14 @@ offers:
     url: 'https://strangeworlder.itch.io/we-cant-stop-here'
     price: '0.00'
     priceCurrency: USD
+    bookFormat: 'https://schema.org/EBook'
   - name: Fantasiapelit (Physical)
     url: >-
       https://www.fantasiapelit.com/index.php?main=ai&mista=*&yhteen=eri&alue=&autoid=_221392&kat=single&etsittava=_221392
     price: '9.00'
     priceCurrency: EUR
     availability: 'https://schema.org/InStock'
+    bookFormat: 'https://schema.org/Hardcover'
 canonical: /en/we-cant-stop-here
 template: hero
 theme: classic
@@ -68,10 +70,14 @@ stats:
     value: Digital
     date: 2025-10-27T00:00:00.000Z
     source: Rules text
-quotes:
-  - source: Petri Leinonen
+mentions:
+  - '@type': CreativeWork
     text: 'A grimy, psychedelic road trip through the dying world.'
-    date: 2025-11-28T00:00:00.000Z
+    author:
+      '@type': Person
+      name: Petri Leinonen
+      jobTitle: Game Designer
+    datePublished: 2025-11-28T00:00:00.000Z
 sameAs:
   - 'https://strangeworlder.itch.io/we-cant-stop-here'
   - 'https://rpggeek.com/rpgitem/325777/we-cant-stop-here'

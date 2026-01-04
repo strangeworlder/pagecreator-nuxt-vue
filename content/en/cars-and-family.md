@@ -6,10 +6,7 @@ description: >-
 contentType:
   - Product
   - Game
-genre:
-  - Tabletop Roleplaying Game
-  - Heist
-  - Action
+genre: Tabletop Role-playing Game
 gameInterfaceType: Tabletop
 disambiguatingDescription: >
   A Fast & Furious-inspired heist TTRPG built on Lasers & Feelings, where you
@@ -61,6 +58,7 @@ offers:
     price: '0.00'
     priceCurrency: USD
     availability: 'https://schema.org/InStock'
+    bookFormat: 'https://schema.org/EBook'
 canonical: /en/cars-and-family
 template: hero
 theme: modern
@@ -84,10 +82,6 @@ stats:
     value: version 2
     date: 2025-12-25T00:00:00.000Z
     source: Rules text
-quotes:
-  - source: Petri Leinonen
-    text: High-speed heists and chosen family.
-    date: 2025-11-28T00:00:00.000Z
 faq:
   - q: What is Cars & Family?
     a: >-

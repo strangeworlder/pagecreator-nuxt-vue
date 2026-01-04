@@ -11,10 +11,12 @@ organization:
   url: 'https://gogam.eu'
 author: Petri Leinonen
 offers:
-  url: >-
-    https://docs.google.com/document/d/1VYxmFq2ik5Wszqpo6jYv5GJXKoBRw7rkeALg7PkYfH0/edit?usp=sharing
-  price: '0.00'
-  priceCurrency: USD
+  - name: Google Docs
+    url: >-
+      https://docs.google.com/document/d/1VYxmFq2ik5Wszqpo6jYv5GJXKoBRw7rkeALg7PkYfH0/edit?usp=sharing
+    price: '0.00'
+    priceCurrency: USD
+    bookFormat: 'https://schema.org/EBook'
 datePublished: 2025-12-28
 dateModified: 2026-01-04
 tags:
@@ -51,10 +53,14 @@ stats:
     value: Creative Commons
     date: 2015-12-26T00:00:00.000Z
     source: Rules text
-quotes:
-  - source: Petri Leinonen
+mentions:
+  - '@type': CreativeWork
     text: History meets magic.
-    date: 2025-11-28T00:00:00.000Z
+    author:
+      '@type': Person
+      name: Petri Leinonen
+      jobTitle: Game Designer
+    datePublished: 2025-11-28T00:00:00.000Z
 entities:
   - type: CreativeWork
     name: Vuosisata.

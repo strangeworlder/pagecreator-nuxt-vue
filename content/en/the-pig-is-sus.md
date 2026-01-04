@@ -24,9 +24,11 @@ tags:
   - combat
   - prototype
 offers:
-  url: 'https://strangeworlder.itch.io/the-pig-is-sus'
-  price: '0.00'
-  priceCurrency: USD
+  - name: itch.io
+    url: 'https://strangeworlder.itch.io/the-pig-is-sus'
+    price: '0.00'
+    priceCurrency: USD
+    bookFormat: 'https://schema.org/EBook'
 canonical: /en/the-pig-is-sus
 template: hero
 theme: classic
@@ -54,10 +56,14 @@ stats:
     value: Prototype
     date: 2025-01-27T00:00:00.000Z
     source: Rules text
-quotes:
-  - source: Petri Leinonen
+mentions:
+  - '@type': CreativeWork
     text: Rewards player skill over character stats.
-    date: 2025-11-28T00:00:00.000Z
+    author:
+      '@type': Person
+      name: Petri Leinonen
+      jobTitle: Game Designer
+    datePublished: 2025-11-28T00:00:00.000Z
 entities:
   - type: CreativeWork
     name: The Pig Is Sus. Eliminate the Pig.

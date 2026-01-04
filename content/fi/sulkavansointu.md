@@ -62,17 +62,25 @@ stats:
     value: '1'
     date: 2023-07-28T00:00:00.000Z
     source: Sääntökirja
-quotes:
-  - source: Mikko Meriläinen
+mentions:
+  - '@type': CreativeWork
     text: >-
       Sulkavan sointu on ennen kaikkea virkistävää vaihtelua
       angloamerikkalaiseen roolipelikuvastoon.
-    date: 2025-12-10T00:00:00.000Z
-  - source: Jonas Mustonen
+    author:
+      '@type': Person
+      name: Mikko Meriläinen
+      jobTitle: Pelitutkija
+    datePublished: 2025-12-10T00:00:00.000Z
+  - '@type': CreativeWork
     text: >-
       Seikkailu vie suoraan rajaseudulle seikkailuun jossa on menoa ja ihan
       omanlaistaan meininkiä.
-    date: 2023-07-28T00:00:00.000Z
+    author:
+      '@type': Person
+      name: Jonas Mustonen
+      jobTitle: Pääsuunnittelija
+    datePublished: 2023-07-28T00:00:00.000Z
 offers:
   - name: Fantasiapelit
     url: >-
@@ -80,29 +88,34 @@ offers:
     price: '10.70'
     priceCurrency: EUR
     availability: 'https://schema.org/InStock'
+    bookFormat: 'https://schema.org/Hardcover'
   - name: Puolenkuun Pelit
     url: >-
       https://www.puolenkuunpelit.com/kauppa/product_info.php?cPath=32_258&products_id=179450
     price: '10.00'
     priceCurrency: EUR
     availability: 'https://schema.org/InStock'
+    bookFormat: 'https://schema.org/Hardcover'
   - name: Laiska pelikaani
     url: >-
       https://www.laiskapelikaani.fi/shop/legendoja-lohikaarmeita-sulkavan-sointu-131088#attr=
     price: '9.44'
     priceCurrency: EUR
     availability: 'https://schema.org/InStock'
+    bookFormat: 'https://schema.org/Hardcover'
   - name: Laiska pelikaani (PDF)
     url: >-
       https://www.laiskapelikaani.fi/shop/legendoja-lohikaarmeita-sulkavan-sointu-vesileimattu-pdf-131585#attr=
     price: '5.96'
     priceCurrency: EUR
     availability: 'https://schema.org/InStock'
+    bookFormat: 'https://schema.org/EBook'
   - name: DriveThruRPG (PDF)
     url: 'https://www.drivethrurpg.com/product/436237/Sulkavan-sointu'
     price: '10.00'
     priceCurrency: EUR
     availability: 'https://schema.org/InStock'
+    bookFormat: 'https://schema.org/EBook'
 faq:
   - q: 'Onko Sulkavan sointu yhteensopiva D&D 5e:n kanssa?'
     a: 'Kyllä, se on täysin 5e-yhteensopiva seikkailu 1. tason hahmoille.'

@@ -8,7 +8,7 @@ organization:
   url: 'https://gogam.eu'
 author: Petri Leinonen
 datePublished: 2025-12-28
-dateModified: 2025-12-30
+dateModified: 2026-01-04
 tags:
   - L&L
   - world
@@ -20,7 +20,6 @@ about:
   - '@type': Thing
     name: Akseli Gallen-Kallela
     sameAs: 'https://en.wikipedia.org/wiki/Akseli_Gallen-Kallela'
-mentions:
   - '@type': Thing
     name: The Bear (Forest God)
   - '@type': Thing

@@ -31,7 +31,7 @@ tags:
 offers:
   - name: itch.io
     url: 'https://strangeworlder.itch.io/we-cant-stop-here'
-    price: '0'
+    price: '0.00'
     priceCurrency: USD
   - name: Fantasiapelit (Physical)
     url: >-

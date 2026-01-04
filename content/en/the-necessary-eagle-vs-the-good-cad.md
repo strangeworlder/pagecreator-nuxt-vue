@@ -26,7 +26,7 @@ tags:
 offers:
   - name: itch.io
     url: 'https://strangeworlder.itch.io/the-necessary-eagle-vs-the-good-cad'
-    price: '0'
+    price: '0.00'
     priceCurrency: USD
   - name: Roolipelikirjasto (PDF)
     url: 'https://roolipelikirjasto.fi/book/156'

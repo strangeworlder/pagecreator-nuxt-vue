@@ -17,13 +17,13 @@ organization:
   url: 'https://gogam.eu'
 author: Petri Leinonen
 datePublished: 2025-12-28
-dateModified: 2025-12-30
+dateModified: 2026-01-04
 tags:
   - game
   - heist
 offers:
   url: 'https://strangeworlder.itch.io/pros-and-cons'
-  price: '0'
+  price: '0.00'
   priceCurrency: USD
 canonical: /en/pros-and-cons
 template: hero

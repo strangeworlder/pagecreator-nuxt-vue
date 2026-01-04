@@ -1,5 +1,6 @@
 ---
 title: Night of the Thirteenth
+slugOverride: night-of-the-thirteenth
 description: >-
   A slasher-style horror RPG where you play the cast of a movie that hasn't
   happened yet. Survival is unlikely.
@@ -28,7 +29,7 @@ tags:
 offers:
   - name: itch.io
     url: 'https://strangeworlder.itch.io/night-of-the-thirteenth'
-    price: '0'
+    price: '0.00'
     priceCurrency: USD
 canonical: /en/nott
 template: hero

@@ -13,10 +13,10 @@ author: Petri Leinonen
 offers:
   url: >-
     https://docs.google.com/document/d/1VYxmFq2ik5Wszqpo6jYv5GJXKoBRw7rkeALg7PkYfH0/edit?usp=sharing
-  price: '0'
+  price: '0.00'
   priceCurrency: USD
 datePublished: 2025-12-28
-dateModified: 2025-12-30
+dateModified: 2026-01-04
 tags:
   - game
   - ttrpg

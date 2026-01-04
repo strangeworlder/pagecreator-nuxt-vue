@@ -48,6 +48,9 @@ isbn: '9789526503028'
 author:
   name: Petri Leinonen
   url: 'https://gogam.eu/#petri'
+organization:
+  name: Kustannusosakeyhtiö Gogam
+  url: 'https://gogam.eu'
 illustrator: Petri Leinonen
 facts:
   - label: System

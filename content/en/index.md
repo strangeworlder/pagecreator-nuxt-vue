@@ -94,64 +94,69 @@ products:
       High-octane one-page RPG about international thieves based on Lasers &
       Feelings.
     category: Tabletop Roleplaying Game
-    url: 'https://strangeworlder.itch.io/cars-and-family'
+    url: 'https://gogam.eu/en/cars-and-family'
     offers:
-      price: '0'
+      price: '0.00'
       priceCurrency: USD
       availability: 'https://schema.org/InStock'
       url: 'https://strangeworlder.itch.io/cars-and-family'
     sameAs:
       - 'https://rpggeek.com/rpgitem/275602/cars-and-family'
+      - 'https://strangeworlder.itch.io/cars-and-family'
+      - >-
+        https://gizmodo.com/cars-family-is-a-truly-delightful-rpg-about-street-1833446001
   - name: Pros & Cons
     id: '#game-pros-and-cons'
     description: A high-stakes heist movie RPG where you balance being a Pro vs a Con.
     category: Tabletop Roleplaying Game
-    url: 'https://strangeworlder.itch.io/pros-and-cons'
+    url: 'https://gogam.eu/en/pros-and-cons'
     offers:
-      price: '0'
+      price: '0.00'
       priceCurrency: USD
       availability: 'https://schema.org/InStock'
       url: 'https://strangeworlder.itch.io/pros-and-cons'
     sameAs:
       - 'https://rpggeek.com/rpgitem/461385/pros-and-cons'
+      - 'https://strangeworlder.itch.io/pros-and-cons'
   - name: Cyberpunk is Dead
     id: '#game-cyberpunk-is-dead'
     description: >-
       A Forged in the Dark game where you play as disposable corporate hit
       squads.
     category: Tabletop Roleplaying Game
-    url: 'https://strangeworlder.itch.io/cyberpunk-is-dead'
+    url: 'https://gogam.eu/en/cyberpunk-is-dead'
     offers:
-      price: '0'
+      price: '0.00'
       priceCurrency: USD
       availability: 'https://schema.org/InStock'
       url: 'https://strangeworlder.itch.io/cyberpunk-is-dead'
     sameAs:
       - 'https://rpggeek.com/rpgitem/421060/cyberpunk-is-dead'
+      - 'https://strangeworlder.itch.io/cyberpunk-is-dead'
   - name: The Necessary Eagle vs. The Good Cad
     id: '#game-the-necessary-eagle-vs-the-good-cad'
     description: >-
       A competitive 2-player card game about the asymmetrical war between a
       sociopathic superhero and the vengeful mortal they wronged.
     category: Card Game
-    url: 'https://strangeworlder.itch.io/the-necessary-eagle-vs-the-good-cad'
+    url: 'https://gogam.eu/en/the-necessary-eagle-vs-the-good-cad'
     offers:
-      price: '0'
+      price: '0.00'
       priceCurrency: USD
       availability: 'https://schema.org/InStock'
       url: 'https://strangeworlder.itch.io/the-necessary-eagle-vs-the-good-cad'
     sameAs:
       - 'https://roolipelikirjasto.fi/book/156'
+      - 'https://strangeworlder.itch.io/the-necessary-eagle-vs-the-good-cad'
   - name: Vuosisata.
     id: '#game-vuosisata'
     description: >-
       A post-cataclysm RPG where history meets magic (1912-2012), powered
       entirely by a Tarot deck.
     category: Tabletop Roleplaying Game
-    url: >-
-      https://docs.google.com/document/d/1VYxmFq2ik5Wszqpo6jYv5GJXKoBRw7rkeALg7PkYfH0/edit?usp=sharing
+    url: 'https://gogam.eu/en/vuosisata'
     offers:
-      price: '0'
+      price: '0.00'
       priceCurrency: USD
       availability: 'https://schema.org/InStock'
       url: >-
@@ -165,7 +170,7 @@ products:
       A grimy, psychedelic Mörk Borg supplement about a road trip that never
       ends.
     category: Tabletop Roleplaying Game Supplement
-    url: 'https://strangeworlder.itch.io/we-cant-stop-here'
+    url: 'https://gogam.eu/en/we-cant-stop-here'
     offers:
       price: '5.00'
       priceCurrency: USD
@@ -173,15 +178,16 @@ products:
       url: 'https://strangeworlder.itch.io/we-cant-stop-here'
     sameAs:
       - 'https://rpggeek.com/rpgitem/325777/we-cant-stop-here'
+      - 'https://strangeworlder.itch.io/we-cant-stop-here'
   - name: Night of the Thirteenth
-    id: '#game-nott'
+    id: '#game-night-of-the-thirteenth'
     description: >-
       A slasher-horror RPG where you play the cast of a movie that hasn't
       happened yet.
     category: Tabletop Roleplaying Game
-    url: 'https://strangeworlder.itch.io/night-of-the-thirteenth'
+    url: 'https://gogam.eu/en/night-of-the-thirteenth'
     offers:
-      price: '0'
+      price: '0.00'
       priceCurrency: USD
       availability: 'https://schema.org/InStock'
       url: 'https://strangeworlder.itch.io/night-of-the-thirteenth'
@@ -193,23 +199,24 @@ products:
       A post-post-apocalyptic retro adventure game / OSR style RPG about
       exploring a world reshaped by magical cataclysm.
     category: Tabletop Roleplaying Game
-    url: 'https://strangeworlder.itch.io/them-deeper-bones'
+    url: 'https://gogam.eu/en/them-deeper-bones'
     offers:
-      price: '0'
+      price: '0.00'
       priceCurrency: USD
       availability: 'https://schema.org/InStock'
       url: 'https://strangeworlder.itch.io/them-deeper-bones'
     sameAs:
       - 'https://themdeeperbones.com'
+      - 'https://strangeworlder.itch.io/them-deeper-bones'
   - name: +H
     id: '#game-plus-h'
     description: >-
       A Finnish language modern-day science horror roleplaying game about a
       private biotech giant's field team.
     category: Tabletop Roleplaying Game
-    url: 'http://roachsphere.com'
+    url: 'https://gogam.eu/en/plus-h'
     offers:
-      price: '0'
+      price: '0.00'
       priceCurrency: EUR
       availability: 'https://schema.org/InStock'
       url: 'http://roachsphere.com'
@@ -221,14 +228,15 @@ products:
       Casts you as hardboiled bird detectives in the free-thinking city of
       Roost.
     category: Tabletop Roleplaying Game
-    url: 'https://strangeworlder.itch.io/a-particular-group-of-corvids'
+    url: 'https://gogam.eu/en/a-particular-group-of-corvids'
     offers:
-      price: '0'
+      price: '0.00'
       priceCurrency: USD
       availability: 'https://schema.org/InStock'
       url: 'https://strangeworlder.itch.io/a-particular-group-of-corvids'
     sameAs:
       - 'https://roolipelikirjasto.fi/book/150'
+      - 'https://strangeworlder.itch.io/a-particular-group-of-corvids'
 ---
 ## Gogam
 

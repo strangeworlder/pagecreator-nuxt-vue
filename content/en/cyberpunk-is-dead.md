@@ -33,7 +33,7 @@ tags:
 offers:
   - name: itch.io
     url: 'https://strangeworlder.itch.io/cyberpunk-is-dead'
-    price: '0'
+    price: '0.00'
     priceCurrency: USD
   - name: Roolipelikirjasto (Physical)
     url: 'https://roolipelikirjasto.fi/book/148'

@@ -323,6 +323,7 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
               "@id": subId,
               name: sub.name,
               description: sub.description,
+              url: sub.url ? toAbsolute(sub.url) : undefined,
               parentOrganization: { "@id": orgId },
             };
           });
@@ -425,21 +426,29 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
           category: prod.category,
           author: { "@id": personId },
           brand: { "@id": orgId },
-          url: prod.url, // External link
+          url: toAbsolute(prod.url) || prod.url, // Ensure absolute local URL or external
+          sameAs: prod.sameAs,
         };
 
         if (prod.image) {
-          productNode.image = toAbsolute(prod.image);
+          productNode.image = {
+            "@type": "ImageObject",
+            "@id": `${toAbsolute(prod.image)}#primaryimage`,
+            url: toAbsolute(prod.image),
+            width: "1200",
+            height: "630",
+          };
         }
 
         if (prod.offers) {
-          productNode.offers = {
+          const offersRaw = (Array.isArray(prod.offers) ? prod.offers : [prod.offers]) as Offer[];
+          productNode.offers = offersRaw.map(o => ({
             "@type": "Offer",
-            url: prod.offers.url,
-            availability: prod.offers.availability || "https://schema.org/InStock",
-            price: prod.offers.price,
-            priceCurrency: prod.offers.priceCurrency || "USD",
-          };
+            url: o.url,
+            availability: o.availability || "https://schema.org/InStock",
+            price: o.price,
+            priceCurrency: o.priceCurrency || "USD",
+          }));
         }
 
         graph.push(productNode);
@@ -458,30 +467,51 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
       // Pedantic Rule 1: Law of Absolute Identification
       // Must follow https://gogam.eu/#game-[slug] pattern
       // match logic with products loop
-      const slug = sourcePath.split("/").filter((p) => !!p).pop();
+      // Allow override via slugOverride (e.g. nott -> night-of-the-thirteenth)
+      const slug = doc.slugOverride || sourcePath.split("/").filter((p) => !!p).pop();
       const itemId = `${baseUrl}/#game-${slug}`;
 
       mainEntityId = itemId;
+
+      // Publisher Logic: Check for SubOrganization override
+      let publisherNode = {
+        "@type": "Organization",
+        "@id": orgId,
+        name: GOGAM_IDENTITY.name,
+        sameAs: GOGAM_IDENTITY.sameAs
+      };
+
+      if (doc.organization && doc.organization.name) {
+        const orgName = doc.organization.name;
+        if (orgName.includes("Kustannusosakeyhtiö") || orgName.includes("Entertainment")) {
+          const safeName = orgName.toLowerCase()
+            .replace(/ä/g, 'a')
+            .replace(/ö/g, 'o')
+            .replace(/å/g, 'a');
+          const subId = `${baseUrl}/#${safeName.replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
+
+          publisherNode = {
+            "@type": "Organization",
+            "@id": subId,
+            name: orgName,
+            parentOrganization: { "@id": orgId }
+          };
+        }
+      }
 
       const itemNode: Record<string, unknown> = {
         "@type": schemaType,
         "@id": itemId,
         name: title,
         description: description,
-        url: url,
-        image: image,
+        url: url, // Local URL
         author: {
           "@type": "Person",
           "@id": personId,
           name: PETRI_IDENTITY.name,
           sameAs: PETRI_IDENTITY.sameAs
         },
-        publisher: {
-          "@type": "Organization",
-          "@id": orgId,
-          name: GOGAM_IDENTITY.name,
-          sameAs: GOGAM_IDENTITY.sameAs
-        },
+        publisher: publisherNode,
         offers: [], // To be populated
       };
 
@@ -499,13 +529,15 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
           "@type": "ImageObject",
           "@id": `${image}#primaryimage`,
           url: image,
+          width: "1200",
+          height: "630",
         };
       } else {
         itemNode.image = { "@id": `${url}#primaryimage` };
+        // Ideally we'd have a fallback image if none provided
       }
 
-      if (doc.url) itemNode.url = doc.url;
-      else itemNode.url = url;
+      if (doc.url) itemNode.url = doc.url; // Use override if present (though V3 says use local)
 
       if (doc.isBasedOn) {
         const based = doc.isBasedOn as CreativeWorkBase;
@@ -530,7 +562,7 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
           "@type": "Offer",
           name: o.name,
           url: o.url,
-          price: o.price || "0",
+          price: o.price || "0.00", // V3 Enforce 0.00
           priceCurrency: o.priceCurrency || "USD",
           availability: o.availability || "https://schema.org/InStock",
         }));
@@ -540,8 +572,7 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
       itemNode.mainEntityOfPage = { "@id": webPageId };
 
       graph.push(itemNode);
-      productIds.push({ "@id": itemId }); // Treat current page game as a product too?
-      // Actually usually mainEntity is just the game.
+      productIds.push({ "@id": itemId });
     }
 
     // 7. FAQ Logic

@@ -10,9 +10,9 @@ contentType:
 partOfSeries:
   - 'https://gogam.eu/fi/rajatiloja'
 description: >-
-  Jakso 2. Tutkimusryhmä aloittaa varsinaisen työn perehtymällä internetistä
-  löytyneeseen "creepypasta"-tarinaan ja jalkautumalla sen vihjeiden perusteella
-  sateiseen Pariisiin etsimään fyysisiä todisteita.
+  Tutkimusryhmä aloittaa varsinaisen työn perehtymällä internetistä löytyneeseen
+  "creepypasta"-tarinaan ja jalkautumalla sen vihjeiden perusteella sateiseen
+  Pariisiin etsimään fyysisiä todisteita.
 cover: /images/new-horizons-logo.png
 mentions:
   - name: Amandine "Didi" Langnes

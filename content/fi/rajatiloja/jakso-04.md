@@ -10,10 +10,9 @@ contentType:
 partOfSeries:
   - 'https://gogam.eu/fi/rajatiloja'
 description: >-
-  Jakso 4. Sten ja Didi toipuvat sateisesta etsintäreissusta ja tekevät uusia
-  havaintoja sosiaalisen median kautta. Didi hoitaa liikesuhteita illallisella,
-  kun taas Sten tekee asunnolla merkittävän oivalluksen creepypasta-tarinan
-  reitistä.
+  Sten ja Didi toipuvat sateisesta etsintäreissusta ja tekevät uusia havaintoja
+  sosiaalisen median kautta. Didi hoitaa liikesuhteita illallisella, kun taas
+  Sten tekee asunnolla merkittävän oivalluksen creepypasta-tarinan reitistä.
 cover: /images/new-horizons-logo.png
 mentions:
   - name: Amandine "Didi" Langnes

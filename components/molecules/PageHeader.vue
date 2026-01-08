@@ -41,5 +41,9 @@ const pageTitle = computed(() => props.title);
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 </style>

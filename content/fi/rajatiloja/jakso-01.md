@@ -1,5 +1,5 @@
 ---
-title: 'Jakso 1: Matka Pariisiin (Ensikohtaaminen)'
+title: 'Jakso 1: Matka Pariisiin'
 datePublished: 2024-02-05
 duration: PT57M41S
 template: episode

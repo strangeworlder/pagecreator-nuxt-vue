@@ -10,9 +10,9 @@ contentType:
 partOfSeries:
   - 'https://gogam.eu/fi/rajatiloja'
 description: >-
-  Jakso 3. Thom Lindell tutkii creepypasta-tarinan taustoja ja kohtaa yllättäen
-  tarinassa mainitun henkilön siskon taidegalleriassa. Uusi johtolanka löytyy
-  yllättävästä paikasta.
+  Thom Lindell tutkii creepypasta-tarinan taustoja ja kohtaa yllättäen tarinassa
+  mainitun henkilön siskon taidegalleriassa. Uusi johtolanka löytyy yllättävästä
+  paikasta.
 cover: /images/new-horizons-logo.png
 mentions:
   - name: Amandine "Didi" Langnes

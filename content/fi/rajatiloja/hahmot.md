@@ -13,8 +13,6 @@ cover: /images/new-horizons-logo.png
 dateModified: 2026-01-08
 ---
 
-# Hahmot
-
 Tällä sivulla on lueteltu **Rajatiloja**-kampanjan keskeiset henkilöt.
 
 ## Pelaajahahmot

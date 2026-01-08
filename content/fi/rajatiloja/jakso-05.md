@@ -10,9 +10,9 @@ contentType:
 partOfSeries:
   - 'https://gogam.eu/fi/rajatiloja'
 description: >-
-  Jakso 5. Ryhmä kokoontuu aamupalaveriin pohtimaan yön aikana tehtyjä
-  löydöksiä. Thom on analysoinut muistikorttia, ja Didi ja Sten jakavat uutta
-  tietoa. Ryhmä suunnittelee seuraavia askelmerkkejä.
+  Ryhmä kokoontuu aamupalaveriin pohtimaan yön aikana tehtyjä löydöksiä. Thom on
+  analysoinut muistikorttia, ja Didi ja Sten jakavat uutta tietoa. Ryhmä
+  suunnittelee seuraavia askelmerkkejä.
 cover: /images/new-horizons-logo.png
 mentions:
   - name: Amandine "Didi" Langnes

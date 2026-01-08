@@ -499,20 +499,30 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
       const itemId = `${baseUrl}/#game-${slug}`;
 
       // Publisher Logic: Check for SubOrganization override (Stub Reference)
+      let targetPublisherName = doc.organization?.name;
+
+      if (!targetPublisherName) {
+        // Auto-detect Gogam Entertainment for Actual Plays
+        if (sourcePath.includes("/rajatiloja/") || doc.template === "episode") {
+          targetPublisherName = "Gogam Entertainment";
+        } else {
+          targetPublisherName = GOGAM_IDENTITY.name;
+        }
+      }
+
       let publisherStub = { "@id": ORG_MASTER_ID }; // Default to Org Master
 
-      if (doc.organization && doc.organization.name) {
-        const orgName = doc.organization.name;
-        // Simple heuristic to see if it refers to a sub-org
-        if (orgName.includes("Kustannusosakeyhtiö") || orgName.includes("Entertainment")) {
-          const safeName = orgName
-            .toLowerCase()
-            .replace(/ä/g, "a")
-            .replace(/ö/g, "o")
-            .replace(/å/g, "a");
-          const subId = `${baseUrl}/#${safeName.replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
-          publisherStub = { "@id": subId };
-        }
+      if (
+        targetPublisherName.includes("Kustannusosakeyhtiö") ||
+        targetPublisherName.includes("Entertainment")
+      ) {
+        const safeName = targetPublisherName
+          .toLowerCase()
+          .replace(/ä/g, "a")
+          .replace(/ö/g, "o")
+          .replace(/å/g, "a");
+        const subId = `${baseUrl}/#${safeName.replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
+        publisherStub = { "@id": subId };
       }
 
       const itemNode: Record<string, unknown> = {
@@ -522,7 +532,7 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
         description: description,
         url: url, // Local absolute URL
         author: { "@id": PERSON_MASTER_ID, name: PETRI_IDENTITY.name }, // Stub
-        publisher: { ...publisherStub, name: doc.organization?.name || GOGAM_IDENTITY.name }, // Stub with name
+        publisher: { ...publisherStub, name: targetPublisherName }, // Stub with name
         // Offers go HERE (Master Node)
         offers: [],
       };
@@ -660,7 +670,6 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
               : o.bookFormat
                 ? { "@type": "Book", bookFormat: o.bookFormat }
                 : undefined,
-          inLanguage: o.inLanguage,
         }));
       }
 

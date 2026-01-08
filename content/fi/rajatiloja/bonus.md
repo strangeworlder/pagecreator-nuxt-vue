@@ -33,8 +33,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Bonusjaksot
-
 Tässä osiossa ovat **Rajatiloja**-kampanjan oheismateriaalit ja bonusjaksot.
 
 ## Bonus 01: Pelaajien esittely

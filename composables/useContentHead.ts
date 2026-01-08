@@ -516,7 +516,7 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
       }
 
       const itemNode: Record<string, unknown> = {
-        "@type": schemaType,
+        "@type": schemaType.length === 1 ? schemaType[0] : schemaType,
         "@id": itemId,
         name: title,
         description: description,

@@ -24,7 +24,7 @@ mentions:
   - name: '"Cathy" (Kathereen Cellstone)'
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#kathereen'
   - name: Xavier "Xav" Dutari
-    type: Person
+    id: 'https://gogam.eu/fi/rajatiloja/hahmot#xav'
   - name: '"Evan" (Kuvassa)'
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#evan'
 contentUrl: 'https://www.youtube.com/watch?v=rOdyOB5BJ3o'

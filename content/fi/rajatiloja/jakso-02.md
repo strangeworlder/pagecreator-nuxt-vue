@@ -26,6 +26,7 @@ mentions:
   - name: Xavier "Xav" Dutari
     type: Person
 contentUrl: 'https://www.youtube.com/watch?v=Qwrmu6tr_N0'
+transcript: /downloads/rajatiloja-transcript/jakso-02.txt
 dateModified: 2026-01-08
 ---
 

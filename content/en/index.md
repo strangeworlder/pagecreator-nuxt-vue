@@ -46,10 +46,29 @@ organization:
       - 'https://bsky.app/profile/strangeworlder.bsky.social'
       - 'https://www.threads.com/@gogam.eu'
     knowsAbout:
-      - Tabletop Roleplaying Games
-      - Game Design
-      - Forged in the Dark
-      - Finnish Folklore
+      - 'https://www.wikidata.org/wiki/Q1643932'
+      - 'https://www.wikidata.org/wiki/Q858057'
+      - 'https://www.wikidata.org/wiki/Q91825444'
+      - 'https://www.wikidata.org/wiki/Q108357966'
+  games:
+    - name: Cars & Family
+      '@id': 'https://gogam.eu/#game-cars-and-family'
+    - name: Pros & Cons
+      '@id': 'https://gogam.eu/#game-pros-and-cons'
+    - name: Cyberpunk is Dead
+      '@id': 'https://gogam.eu/#game-cyberpunk-is-dead'
+    - name: The Necessary Eagle vs. The Good Cad
+      '@id': 'https://gogam.eu/#game-the-necessary-eagle-vs-the-good-cad'
+    - name: Vuosisata.
+      '@id': 'https://gogam.eu/#game-vuosisata'
+    - name: We can't stop here...
+      '@id': 'https://gogam.eu/#game-we-cant-stop-here'
+    - name: Night of the Thirteenth
+      '@id': 'https://gogam.eu/#game-nott'
+    - name: Them Deeper Bones
+      '@id': 'https://themdeeperbones.com/#game'
+    - name: +H
+      '@id': 'https://gogam.eu/#game-plus-h'
 subOrganizations:
   - name: Kustannusosakeyhtiö Gogam
     description: >-

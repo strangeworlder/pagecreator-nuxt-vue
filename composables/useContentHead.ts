@@ -540,7 +540,7 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
         if (doc.duration) itemNode.duration = doc.duration;
         if (doc.datePublished) itemNode.uploadDate = doc.datePublished;
         if (doc.contentUrl) itemNode.contentUrl = toAbsolute(doc.contentUrl);
-        if (doc.transcript) itemNode.transcript = toAbsolute(doc.transcript);
+        // Transcript moved to subjectOf to avoid schema type mismatch (URL vs Text)
         if (image) itemNode.thumbnailUrl = image;
       }
 
@@ -699,6 +699,14 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
         itemNode.sameAs = cleanSameAs;
       } else {
         if (doc.sameAs) itemNode.sameAs = doc.sameAs;
+      }
+
+      if (doc.transcript) {
+        subjectOf.push({
+          "@type": "ItemPage",
+          name: "Transcript",
+          url: toAbsolute(doc.transcript),
+        });
       }
 
       if (subjectOf.length > 0) itemNode.subjectOf = subjectOf;

@@ -128,6 +128,13 @@ export const frontMatterSchema = z.object({
     description: z.string().optional(),
     url: z.string().url().optional(),
   })).optional(),
+
+  // New AEO Game Stubs
+  games: z.array(z.object({
+    name: z.string(),
+    "@id": z.string(),
+  })).optional(),
+
   structuredData: z.array(z.any()).optional(),
 });
 

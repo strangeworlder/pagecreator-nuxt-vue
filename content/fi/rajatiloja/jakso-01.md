@@ -1,7 +1,7 @@
 ---
 title: 'Jakso 1: Matka Pariisiin (Ensikohtaaminen)'
 datePublished: 2024-02-05
-duration: PT57M
+duration: PT57M41S
 template: episode
 inLanguage:
   - fi

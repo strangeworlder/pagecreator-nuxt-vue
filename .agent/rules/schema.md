@@ -1,11 +1,11 @@
 ---
 trigger: model_decision
 description: rules for editing the json-ld frontmatter schema
-dateModified: 2026-01-04
+dateModified: 2026-01-08
 ---
 
 ---
-dateModified: 2026-01-04
+dateModified: 2026-01-08
 ---
 # The Gogam Standard: Technical Directive for Sovereign Graph Architecture
 
@@ -162,3 +162,36 @@ While "The Rule of Stubs" applies to general entity references, for **Author** (
 
 *   **Requirement**: You MUST include the `sameAs` array for the `author` and `organization` entities.
 *   **Execution**: Do not rely solely on the `@id`. Duplicate the canonical `sameAs` links (e.g., RPGGeek, Itch.io, Instagram) to ensure immediate resolution.
+
+---
+
+## 9. External Content & Actual Plays
+
+When indexing substantial third-party content (like "Actual Play" series) that serves as a pedagogical resource for our games, we treat them as **Pedagogical Hubs**.
+
+*   **Type**: Must be `CreativeWorkSeries`.
+    *   **Note**: The Series itself is *not* a `VideoObject`. The individual episodes are.
+*   **Structure**: The Series page should act as a collection.
+    *   **Episodes**: Referenced via links or `hasPart` (if applicable), utilizing the **Episode Logic** (Section 10).
+*   **The Pedagogical Link**: The `about` property is critical. It must point to the **Master Node** of the game being played (e.g., `https://gogam.eu/en/plus-h#game`).
+    *   **Reasoning**: This signals to the Answer Engine that "This series teaches you how to play This Game".
+*   **Author vs. Publisher**:
+    *   `author`: The Content Creator (e.g., Roachsphere).
+    *   `publisher`: Gogam (as the hosting/curating entity).
+*   **Cast References**: Use the `mentions` array to credit the GM and relevant cast members/groups (e.g., Fate-akatemia).
+
+---
+
+## 10. Episode Logic
+
+Individual episodes are Atomic Units of the series. They are not just "Articles" but `VideoObjects` embedded in a page.
+
+*   **Template**: Must use `template: episode` to trigger the video layout.
+*   **ContentType**: Must be `VideoObject`.
+*   **Required Properties**:
+    *   `contentUrl`: The direct link to the video file or stream (e.g., YouTube URL).
+    *   `partOfSeries`: A reference to the parent Series ID (e.g., `https://gogam.eu/fi/rajatiloja`).
+    *   `duration`: ISO 8601 duration string (e.g. `PT57M`).
+*   **Mentions**:
+    *   Use the `mentions` array to list Character references (`/#didi`, `/#sten`) relevant to that specific episode.
+    *   Use `type: Person` or `type: Thing` for one-off entities not in the global graph.

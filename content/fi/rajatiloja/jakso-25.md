@@ -2,7 +2,7 @@
 title: 'Jakso 25: Kuolema'
 datePublished: 2025-01-20
 duration: PT1H19M
-template: article
+template: episode
 inLanguage:
   - fi
 contentType:
@@ -31,7 +31,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Jakso 25: Kuolema
 
 **Sijainti:** Lontoo (New Horizonsin toimitilat) ja "Hiljaisen miehen tila"
 
@@ -51,3 +50,4 @@ Suunnitelma muuttuu, kun Thom (ja hänen kauttaan tunkeutuva Hiljainen mies) ilm
 
 ### Loppuratkaisu
 Sten palaa toimistoon biomassa käsissään ja halaa Thomia, joka on muuttumassa Hiljaiseksi mieheksi. Seuraa raju kemiallinen reaktio, joka syövyttää molempien vaatteet ja ihon. Molemmat lyyhistyvät tajuttomina maahan. Huoneesta yrittää paeta pieni, nyrkin kokoinen olento – surkastunut Hiljainen mies. Didi kävelee rauhallisesti sen luo ja murskaa sen korkokengällään. Jakso päättyy Didin hälyttäessä apua (Protocol Delta). Sten ja Thom ovat elossa, mutta peruuttamattomasti muuttuneita.
+

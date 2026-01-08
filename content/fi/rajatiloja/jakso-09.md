@@ -2,7 +2,7 @@
 title: 'Jakso 9: Näyte'
 datePublished: 2024-06-10
 duration: PT26M
-template: article
+template: episode
 inLanguage:
   - fi
 contentType:
@@ -29,7 +29,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Jakso 9: Näyte
 
 **Sijainti:** Pariisi (Rue de la Solidarité -kellari ja 6. arrondissementin Airbnb-asunto)
 
@@ -48,3 +47,4 @@ Tilanteen rauhoituttua Sten päättää hyödyntää tilaisuuden tieteellisesti.
 
 ### Vetäytyminen
 Ryhmä poistuu kellarista voimakkaan ammoniakin hajun saattelemana. Ulkona porttikongin lohikäärmegargoili näyttää katsovan heitä "arvioiden ja tuomiten". Ryhmä palaa Airbnb-asunnolle, jossa he alkavat suunnitella näytteen tutkimista.
+

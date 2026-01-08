@@ -2,7 +2,7 @@
 title: 'Jakso 18: Turvalasi'
 datePublished: 2024-10-14
 duration: PT1H25M
-template: article
+template: episode
 inLanguage:
   - fi
 contentType:
@@ -29,7 +29,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Jakso 18: Turvalasi
 
 **Sijainti:** Lontoo (New Horizonsin toimitilat)
 
@@ -46,3 +45,4 @@ Thom ja Didi yrittävät kalibroida Skye Watsonin lähettämää vanhaa Decker-m
 
 ### Loppuhuipennus
 Samalla kun Sten poistuu toimistostaan hakemaan kahvia, kuuluu valtava pamaus. Jokin massiivinen on iskeytynyt laboratorion turvalasia vasten niin voimakkaasti, että lasi on mennyt säröille ("hämähäkinseitille"). Hahmo, joka näytti hetkeä aiemmin Thomilta, laahustaa pois paikalta ilmalukkoa kohti.
+

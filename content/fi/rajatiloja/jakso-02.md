@@ -2,7 +2,7 @@
 title: 'Jakso 2: Jalkautuminen'
 datePublished: 2024-02-19
 duration: PT56M
-template: article
+template: episode
 inLanguage:
   - fi
 contentType:
@@ -31,7 +31,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Jakso 2: Jalkautuminen
 
 **Sijainti:** Pariisi (6. ja 19. arrondissement)
 

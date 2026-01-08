@@ -2,7 +2,7 @@
 title: 'Jakso 3: Galleria'
 datePublished: 2024-03-04
 duration: PT52M
-template: article
+template: episode
 inLanguage:
   - fi
 contentType:
@@ -33,7 +33,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Jakso 3: Galleria
 
 **Sijainti:** Pariisi (6. arrondissement), Galleria 603
 
@@ -84,3 +83,4 @@ Tämä jakso sisältää merkittäviä ensiesiintymisiä ja vihjeitä, jotka kan
 ### Lennokkaat heitot & Meta
 *   "Green across the board": Thom kuvailee PowerPoint-esityksensä dataa täydelliseksi, vaikka todellisuudessa se on täynnä aukkoja.
 *   "Gonahtanut ultraharrastaja": Thomin ulkonäköä aamulla kuvailtiin tällä termillä, mikä vakiintui osaksi hahmon kuvausta.
+

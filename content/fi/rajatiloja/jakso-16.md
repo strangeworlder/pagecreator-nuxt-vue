@@ -2,7 +2,7 @@
 title: 'Jakso 16: Yövieras'
 datePublished: 2024-09-16
 duration: PT56M
-template: article
+template: episode
 inLanguage:
   - fi
 contentType:
@@ -31,7 +31,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Jakso 16: Yövieras
 
 **Sijainti:** Lontoo (Thomin asuntolaiva, ravintola, New Horizonsin toimitilat)
 
@@ -52,3 +51,4 @@ Didi saapuu toimistolle ensimmäisenä ja löytää Thomin ja Nahian nukkumasta 
 Ryhmä vetäytyy neuvotteluhuoneeseen jättäen Nahian ulkopuolelle. Didi esittelee kiistattomat todisteet Pariisin muuttuneesta todellisuudesta: valokuvissa portit ja kadut ovat erilaisia kuin heidän muistikuvissaan ja kartoissa. Thom myöntää mitanneensa Nahiaa Decker-mittarilla ilman lupaa ja paljastaa omat huolensa todellisuuden luonteesta.
 
 Jakso päättyy lähettiin, joka tuo ovelle paketin. Nahia on vähällä vastaanottaa sen, mutta Didi syöksyy väliin hoitaakseen tilanteen ja ohjatakseen Nahian sivummalle "kuulusteltavaksi" siitä, kuinka paljon tämä todella tietää Thomin työstä.
+

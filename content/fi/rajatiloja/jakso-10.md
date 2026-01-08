@@ -2,7 +2,7 @@
 title: 'Jakso 10: Uusi toimisto'
 datePublished: 2024-06-24
 duration: PT51M
-template: article
+template: episode
 inLanguage:
   - fi
 contentType:
@@ -31,7 +31,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Jakso 10: Uusi toimisto
 
 **Sijainti:** Lontoo (New Horizonsin toimitilat)
 
@@ -48,3 +47,4 @@ Sten valmistelee laboratoriota ja "punaisen pallon" (biomassanäyte) tutkimista.
 
 ### Didin tutkimukset
 Muun ryhmän keskittyessä käytännön asioihin, Didi tuntee itsensä ulkopuoliseksi ja syventyy tutkimaan kokemiaan hallusinaatioita. Hän vertaa kokemuksiaan creepypastan teksteihin ja valokuviin. Didi päättelee, että hänen hallussaan olevat valokuvat "toiselta puolelta" ovat fyysisiä esineitä, mikä todistaa, ettei kyseessä ollut pelkkä neurologinen häiriö. Hän alkaa tuntea vetoa palata takaisin tuohon tilaan [44:00].
+

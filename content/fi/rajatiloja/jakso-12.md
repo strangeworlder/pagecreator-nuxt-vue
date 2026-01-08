@@ -2,7 +2,7 @@
 title: 'Jakso 12: Risteyksiä'
 datePublished: 2024-07-22
 duration: PT54M
-template: article
+template: episode
 inLanguage:
   - fi
 contentType:
@@ -31,7 +31,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Jakso 12: Risteyksiä
 
 **Sijainti:** Lontoo (New Horizonsin toimitilat) ja "Hiljaisen miehen tila" (hallusinaatio/siirtymä)
 
@@ -50,3 +49,4 @@ Thom valvoo Didin koetta ja huomaa, että mittalaitteisto alkaa suoltaa dataa ma
 Sten yrittää udella Watsonilta tämän menneisyydestä kenttäagenttina, mutta Watson menee lukkoon ja poistuu paikalta vähin äänin. Hetkeä myöhemmin Watson lähettää Stenille kuvan, joka on otettu laboratorion lasiseinän läpi. Kuvassa näkyy eristetyn biomassan lisäksi musta geometrinen kuvio (anomalia), joka leijuu eristyksen ulkopuolella. Tämä viittaa siihen, että suojatoimet ovat pettäneet.
 
 Jakso päättyy ryhmän kokoontumiseen, jossa he vertailevat kokemuksiaan. Sten alkaa tunnistaa Didin kuvaileman tilan (vesipisarat, betoni) toistuvista unistaan, ja ryhmä tajuaa olevansa syvemmällä ilmiössä kuin he luulivat [53:00].
+

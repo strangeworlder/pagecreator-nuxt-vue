@@ -2,7 +2,7 @@
 title: 'Jakso 19: Inkursio'
 datePublished: 2024-10-28
 duration: PT33M
-template: article
+template: episode
 inLanguage:
   - fi
 contentType:
@@ -30,7 +30,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Jakso 19: Inkursio
 
 **Sijainti:** Lontoo (New Horizonsin toimitilat) ja liminaalitila
 
@@ -47,3 +46,4 @@ Didi ja Thom yrittävät paeta tilanteesta. Thom kuvaa itseään puhelimella yri
 
 ### Uusi suunta
 Umpikujaan ajautunut ryhmä joutuu tekemään epätoivoisia ratkaisuja. Thom päättää luottaa intuitioonsa ja johdattaa ryhmää kohti "pohjoista" – tai sitä, minkä hän tuntee olevan hänen vanha toimistonsa. Laboratoriosta purkautuva massa ja olento alkavat valua käytävään heidän perässään.
+

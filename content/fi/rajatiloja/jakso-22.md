@@ -2,7 +2,7 @@
 title: 'Jakso 22: Pako'
 datePublished: 2024-12-09
 duration: PT49M
-template: article
+template: episode
 inLanguage:
   - fi
 contentType:
@@ -33,7 +33,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Jakso 22: Pako
 
 **Sijainti:** Yhdysvallat (Metsätie) / Hiljaisen miehen tila
 
@@ -50,3 +49,4 @@ Paon aikana Kathereen, joka näkee "Tilan" ja sen kaiut, paljastaa Thomille ja D
 
 ### Paluu pimeyteen
 Didi onnistuu johtamaan itsensä, Thomin ja Kathereenin takaisin käytävään ja pois metsätieltä, jättäen Stenin taakseen. Jaksossa Sten kohtaa "Hiljaisen miehen" ja Lisen hahmon, joka halaa häntä. Sten kokee jälleen vaimonsa kuoleman ja jää "loukkuun menneisyyteen" olennon syleilyssä, samalla kun muu ryhmä syöksyy pimeään käytävään.
+

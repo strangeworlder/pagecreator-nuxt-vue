@@ -2,7 +2,7 @@
 title: 'Jakso 24: Paluu Pariisiin'
 datePublished: 2025-01-06
 duration: PT1H12M
-template: article
+template: episode
 inLanguage:
   - fi
 contentType:
@@ -31,7 +31,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Jakso 24: Paluu Pariisiin
 
 **Sijainti:** Pariisi (Katu/Metroasema) / Lontoo (Toimisto) / Hiljaisen miehen tila
 
@@ -51,3 +50,4 @@ Didi tajuaa virheensä ja näkee puhelimen (ja lainaajansa kuoleman) kautta yhte
 
 ### Thomin uhraus
 Thom saapuu "Tilan" kautta Pariisiin, mutta on pukeutunut 80-luvun retro-vaatteisiin (jotka "Tila" on hänelle antanut). Hän näkee Hiljaisen miehen aiheuttaman tuhon. Käyttäen uutta ymmärrystään ("Kolonisoitu näkökulma") olennon luonteesta, Thom päättää olla pakenematta. Hän houkuttelee olennon peräänsä ja johdattaa sen takaisin Tilaan, uhraten itsensä ("kuluttaa itsensä") pelastaakseen Pariisin.
+

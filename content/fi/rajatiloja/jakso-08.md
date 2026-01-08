@@ -2,7 +2,7 @@
 title: 'Jakso 8: Hiljaisen miehen tilassa'
 datePublished: 2024-05-13
 duration: PT45M
-template: article
+template: episode
 inLanguage:
   - fi
 contentType:
@@ -33,7 +33,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Jakso 8: Hiljaisen miehen tilassa
 
 **Sijainti:** Tuntematon (Liminaalitila / "Hiljaisen miehen tila")
 
@@ -60,3 +59,4 @@ Thom yrittää pysyä rauhallisena ja analysoida tilannetta tukeutumalla Stenin 
 
 *   **Päätelmä:** Thom toteaa, että havaittu ilmiö ei noudata biologisia lainalaisuuksia, mikä viittaa siihen, että kyseessä on joko hallusinaatio tai jokin täysin vieras voima.
 *   **Kosketus:** Thom kääntyy ja kohtaa hahmon, joka tarttuu häntä kasvoista kylmällä, ammoniakille haisevalla kädellä. Thom yrittää katsoa hahmoa puhelimensa kameran kautta, mutta näkeekin ruudulta vain omat kasvonsa (tai hahmon pitelemässä puhelimessa näkyy Thomin kasvot).
+

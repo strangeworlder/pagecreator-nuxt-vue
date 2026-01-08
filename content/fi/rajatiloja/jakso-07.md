@@ -2,7 +2,7 @@
 title: 'Jakso 7: Valomainos'
 datePublished: 2024-04-29
 duration: PT46M
-template: article
+template: episode
 inLanguage:
   - fi
 contentType:
@@ -29,7 +29,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Jakso 7: Valomainos
 
 **Sijainti:** Pariisi (19. arrondissement), Valkoinen S -baarin ympäristö ja Rue de la Solidarité
 
@@ -49,3 +48,4 @@ Kujan päästä löytyy metalliovi, joka johtaa pimeään kellarikäytävään.
 
 *   **Anomalia:** Thom kohtaa käytävässä leijuvan "mustan pörröisen pisteen", joka uhmaa fysiikan lakeja ja liikkuu seinän läpi. Kokemus aiheuttaa Thomille voimakkaan fyysisen reaktion (pahoinvointia, metallin makua).
 *   **Löytö:** Ryhmä etenee laajaan, pimeään kellaritilaan. Jakso päättyy hyytävään hetkeen, kun Sten näkee taskulamppunsa valokeilassa vaimonsa Lisen, joka kysyy häneltä: "Sten?"
+

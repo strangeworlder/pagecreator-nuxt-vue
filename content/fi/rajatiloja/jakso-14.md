@@ -2,7 +2,7 @@
 title: 'Jakso 14: Tasoittuminen'
 datePublished: 2024-08-19
 duration: PT51M
-template: article
+template: episode
 inLanguage:
   - fi
 contentType:
@@ -31,7 +31,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Jakso 14: Tasoittuminen
 
 **Sijainti:** Lontoo (Uimahalli, Thomin asuntolaiva, fuusioravintola)
 
@@ -53,3 +52,4 @@ Samaan aikaan Sten ja Didi viettävät iltaa brasilialais-japanilaisessa fuusior
 Jakson lopussa Sten saa viestin saapuvasta paketista (seurantakoodi New Horizonsilta). Kun hän avaa puhelimensa lukituksen tarkistaakseen viestin, Didi näkee vilaukselta Stenin taustakuvan.
 
 **Havainto:** Puhelimen lukitusnäytöllä on kuva ruotsalaisesta naisesta, jonka kanssa Didi jutteli sateessa Pariisin puistossa (jaksossa 2). Tämä on järkyttävä ristiriita, sillä naisen piti olla vain satunnainen ohikulkija, mutta hän on Stenin puhelimessa (oletettavasti vaimon paikalla) [51:00].
+

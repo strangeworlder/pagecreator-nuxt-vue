@@ -2,7 +2,7 @@
 title: 'Jakso 17: Kysymyksiä'
 datePublished: 2024-09-30
 duration: PT46M
-template: article
+template: episode
 inLanguage:
   - fi
 contentType:
@@ -32,7 +32,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Jakso 17: Kysymyksiä
 
 **Sijainti:** Lontoo (New Horizonsin toimitilat)
 
@@ -54,3 +53,4 @@ Didi saa uutisalertin liittyen vaikuttaja Kathereen Cellstoneen. Uutisten mukaan
 
 ### Video ja häiriö
 Jakson lopussa Didi katsoo turvakameran tallennetta edelliseltä yöltä, jossa Thom ja Nahia nukkuvat toimiston aulassa. Didi kuulee videolta – jossa ei pitäisi olla ääntä – selkeän "drip, drip" -äänen (veden tippuminen, joka liittyy liminaalitilaan). Videoon tulee häiriö, ja hahmot katoavat hetkeksi ruudulta. Didi panikoi ja ryntää ulos, törmäten hissistä tulevaan Thomiin, joka näyttää hetken ajan laahustavalta ja vieraalta.
+

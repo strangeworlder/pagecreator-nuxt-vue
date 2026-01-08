@@ -2,7 +2,7 @@
 title: 'Jakso 5: Suunnitelmat'
 datePublished: 2024-04-01
 duration: PT49M
-template: article
+template: episode
 inLanguage:
   - fi
 contentType:
@@ -33,7 +33,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Jakso 5: Suunnitelmat
 
 **Sijainti:** Pariisi (6. arrondissementin Airbnb-asunto, ravintola)
 
@@ -52,3 +51,4 @@ Ryhmä päättää seuraavaksi siirroksi jalkautumisen karaoke-baariin illalla, 
 
 ### Didin lounas ja some-löytö
 Didi lähtee lounaalle serkkujensa kanssa, kuten perhevelvoitteet vaativat. Ennen serkkujen saapumista hän jatkaa Evanin somen tutkimista ja tallentaa puhelimeensa kuvia tästä – ehkä hieman enemmän kuin pelkkä ammatillinen kiinnostus vaatisi [46:00]. Serkku Eloise yllättää hänet selaamassa "kuuman kaverin" kuvia, mistä syntyy kiusoitteleva tilanne [44:30]. Tutkimus tuottaa tulosta: Didi löytää Evanin Instagram-tilin (xever2222), joka on hiljentynyt vuosi sitten. Tililtä löytyy kuitenkin yksi kuva, johon on tägätty tunnettu some-vaikuttaja, jolla on miljoonia seuraajia [48:00].
+

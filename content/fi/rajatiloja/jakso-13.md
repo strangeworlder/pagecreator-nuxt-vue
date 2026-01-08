@@ -2,7 +2,7 @@
 title: 'Jakso 13: Jälkijäristyksiä'
 datePublished: 2024-08-05
 duration: PT45M
-template: article
+template: episode
 inLanguage:
   - fi
 contentType:
@@ -29,7 +29,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Jakso 13: Jälkijäristyksiä
 
 **Sijainti:** Lontoo (New Horizonsin toimitilat, fuusioravintola, rakennustyömaa)
 
@@ -49,3 +48,4 @@ Sten ja Didi päättävät lähteä syömään toipuakseen päivästä. He pää
 
 ### Thomin kriisi
 Thom ei pysty palaamaan kotiin tai normaaliin elämään. Hän harhailee suljetulle rakennustyömaalle etsien jotain konkreettista elementtiä (kuten maata tai vettä) ympärilleen. Hän saa puhelun tyttöystävältään Nahialta. Thom valehtelee olevansa kotona/töissä ja kokee, ettei tunnista omia tunteitaan aidoiksi – hän pohtii, ovatko nekin vain "dataa" tai opittuja malleja. Hän lopettaa puhelun ja jatkaa harhailuaan, etsien uimahallia tai muuta paikkaa, jossa voisi tuntea olevansa olemassa [43:00].
+

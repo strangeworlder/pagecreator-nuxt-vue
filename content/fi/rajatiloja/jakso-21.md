@@ -2,7 +2,7 @@
 title: 'Jakso 21: Metsätie'
 datePublished: 2024-11-25
 duration: PT1H2M
-template: article
+template: episode
 inLanguage:
   - fi
 contentType:
@@ -31,7 +31,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Jakso 21: Metsätie
 
 **Sijainti:** Metsätie (Yhdysvallat / Liminaalitila)
 
@@ -49,3 +48,4 @@ Thom kiinnittää huomionsa poliisiauton takapenkillä istuvaan Kathereen Cellst
 
 ### Eskalaatio
 Jakson lopussa todellisuuden perspektiivi alkaa vääristyä: poliisiautot näyttävät liukuvan kauemmas ryhmästä ("Dolly zoom" -efekti), vaikka etäisyys on sama. Portaalista astuu ulos "Hiljainen mies", mutta se on muuttunut. Olento on nyt massiivinen, betonia ja puunrunkoa muistuttava jättiläinen, joka on paljon suurempi kuin aiemmin. Kaukaisuudessa poliisit avaavat tulen.
+

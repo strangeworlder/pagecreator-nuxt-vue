@@ -2,7 +2,7 @@
 title: 'Jakso 15: Kohti totuutta'
 datePublished: 2024-09-02
 duration: PT1H8M
-template: article
+template: episode
 inLanguage:
   - fi
 contentType:
@@ -31,7 +31,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Jakso 15: Kohti totuutta
 
 **Sijainti:** Lontoo (Fuusioravintola, Thomin asuntolaiva)
 
@@ -48,3 +47,4 @@ Didi palaa pöytään uuden löydön kanssa. Hän vertaa kahta valokuvaa Pariisi
 
 ### Varoitus
 Jakson lopussa Sten huomaa, että heidän seuraamaansa creepypasta-ketjuun on tullut uusi viesti vuoden tauon jälkeen. Viestissä varoitetaan palaamasta Pariisiin ja todetaan ilmiön olevan "memeettinen" – pelkkä siitä kertominen levittää sitä [01:07:35].
+

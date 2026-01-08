@@ -2,7 +2,7 @@
 title: 'Jakso 6: Karaoke'
 datePublished: 2024-04-15
 duration: PT1H1M
-template: article
+template: episode
 inLanguage:
   - fi
 contentType:
@@ -33,7 +33,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Jakso 6: Karaoke
 
 **Sijainti:** Pariisi, Valkoinen S -karaokebaari (19. arrondissement)
 
@@ -53,3 +52,4 @@ Ryhmä saapuu illemmalla karaokebaariin. Thom on valmistellut tarkan suunnitelma
 Ilta saa käänteen, kun Sten törmää vahingossa aggressiiviseen asiakkaaseen ja kaataa tämän juoman. Tilanne eskaloituu nopeasti fyysiseksi: asiakas tönäisee Stenin lattialle [46:20]. Didi yrittää rauhoittaa tilannetta, mutta epäonnistuu, ja koko ryhmä heitetään ulos baarista [51:00].
 
 Ulosheiton yhteydessä Didi onnistuu kuitenkin puhuttamaan baarimikkoa, joka muistaa Evanin. Baarimikko paljastaa, että Evan oli ollut baarissa vuosi sitten "laulamassa surujaan pois" ja pyytänyt päästä ulos takaoven kautta, koska oli "ollut täällä 10 vuotta aiemmin" ja halusi toistaa reitin [53:00]. Tämä vahvistaa creepypasta-tarinan yksityiskohtia ja antaa ryhmälle uuden suunnan: baarin sisäpihalle johtava takaovi.
+

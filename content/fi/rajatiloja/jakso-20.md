@@ -2,7 +2,7 @@
 title: 'Jakso 20: Pakoreitti'
 datePublished: 2024-11-11
 duration: PT39M
-template: article
+template: episode
 inLanguage:
   - fi
 contentType:
@@ -29,7 +29,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Jakso 20: Pakoreitti
 
 **Sijainti:** Lontoo (New Horizonsin toimitilat) → Maantie (Yhdysvallat)
 
@@ -46,3 +45,4 @@ Ryhmä herää pimeältä maantieltä keskellä metsää. Ilma on viileää ja p
 
 ### Pidätys
 Stenin käsi vuotaa verta, ja Thomin antama ensiapu on riittämätöntä. Paikalle saapuu poliisiauto. Didi ottaa tilanteen haltuun esittämällä hädässä olevaa turstia. Sten kokee verenhukan aiheuttaman hallusinaation, jossa "Lise" varoittaa häntä Hiljaisesta miehestä. Jakso päättyy siihen, kun Sten näkee poliisiauton takapenkillä raudoissa olevan naisen – kadonneen vaikuttaja Kathereen Cellstonen.
+

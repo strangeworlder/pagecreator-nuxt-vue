@@ -2,7 +2,7 @@
 title: 'Jakso 23: Partikkeleita'
 datePublished: 2024-12-23
 duration: PT1H7M
-template: article
+template: episode
 inLanguage:
   - fi
 contentType:
@@ -29,7 +29,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Jakso 23: Partikkeleita
 
 **Sijainti:** Lontoo (Toimisto) / Hiljaisen miehen tila (Metsä / Pariisin kellarin kaiku)
 
@@ -43,3 +42,4 @@ Thom vaeltaa tilassa ja huomaa fyysisten vaivojensa (niskakipu) kadonneen. Hän 
 
 ### Didin umpikuja
 Didi on yksin toisessa osassa tilaa. Hän kommunikoi lyhyesti Kathereenin kanssa "tasojen läpi" ja neuvoo tätä seuraamaan partikkeleita. Didi itse seuraa partikkeleita, mutta päätyy ansaan: tila muuttuu punaiseksi, lihaisaksi rihmastoksi, joka muistuttaa Pariisin kellaria (jakso 9). Didi joutuu tekemään valinnan tiimin ja oman selviytymisensä välillä. Hän onnistuu pakenemaan "Pariisiin", mutta hinta on kova: hänen puhelimensa ja kaikki sen data tuhoutuvat käyttökelvottomaksi ("brikkaantuu").
+

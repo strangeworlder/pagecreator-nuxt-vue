@@ -2,7 +2,7 @@
 title: 'Jakso 4: 19. Arrondissementti'
 datePublished: 2024-03-18
 duration: PT52M
-template: article
+template: episode
 inLanguage:
   - fi
 contentType:
@@ -34,7 +34,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Jakso 4: 19. Arrondissementti
 
 **Sijainti:** Pariisi (19. arrondissementin kahvila ja 6. arrondissementin Airbnb-asunto)
 
@@ -79,3 +78,4 @@ Jakso päättyy Stenin nukahtamiseen. Juuri ennen uneen vaipumistaan hän kuulee
 ### Lennokkaat heitot & Meta
 *   **"Totaalinen epäonnistuminen... tiedonhankinnassa":** Didin pelaaja heitti Toimi-heitossa ykkösen ja kakkosen. Pelinjohtaja tulkitsi tämän niin, että ilta oli liiankin hauska ja kostea, eikä Didi saanut mitään hyödyllistä tietoa irti, vaikka "Relations Management" onnistuikin sosiaalisella tasolla.
 *   **"Paita ja peppu":** Pelinjohtaja kuvaili Steniä ja Didiä tällä termillä heidän vietettyään koko päivän tiiviisti yhdessä.
+

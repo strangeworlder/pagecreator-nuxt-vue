@@ -2,7 +2,7 @@
 title: 'Jakso 11: Suuri päivä'
 datePublished: 2024-07-08
 duration: PT57M
-template: article
+template: episode
 inLanguage:
   - fi
 contentType:
@@ -31,7 +31,6 @@ dateModified: 2026-01-08
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-# Jakso 11: Suuri päivä
 
 **Sijainti:** Lontoo (BioNexus/New Horizonsin toimitilat ja lähiympäristö)
 
@@ -51,3 +50,4 @@ Tilanteen rauhoituttua ryhmä siirtyy toimistolle. Kesken analyysin Thom saa yll
 
 ### Didin koe
 Didi kokee tulleensa syrjäytetyksi pelkäksi "mediakasvoksi" ja haluaa todistaa tieteellisen pätevyytensä. Hän kytkee itsensä Mattíanan avustuksella aivoskanneriin tutkiakseen omia reaktioitaan. Kokeen aikana skannerin äänet alkavat muuttua laahaaviksi askeliksi, ja Didi vajogoituu uudelleen kokemukseensa [56:00].
+

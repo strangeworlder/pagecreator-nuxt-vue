@@ -2,6 +2,7 @@
 // @ts-nocheck
 import { type Component, computed, markRaw, shallowRef, watch } from "vue";
 import { defineComponent, h } from "vue";
+import BaseVideo from "~/components/atoms/BaseVideo.vue";
 import HeaderImage from "~/components/atoms/HeaderImage.vue";
 import Navigation from "~/components/molecules/Navigation.vue";
 import PageFooter from "~/components/molecules/PageFooter.vue";
@@ -498,7 +499,16 @@ const heroImage = computed(() => {
   const d = renderDoc.value as Record<string, unknown>;
   return d?.heroImage || d?.hero || d?.image || d?.cover || undefined;
 });
-const useHeroLayout = computed(() => !isPlainTemplate.value && !!heroImage.value);
+
+// Episode template video logic
+const isEpisodeTemplate = computed(() => templateName.value === "episode");
+const videoUrl = computed(() => {
+  if (!isEpisodeTemplate.value) return undefined;
+  const d = renderDoc.value as Record<string, unknown>;
+  return (d?.contentUrl as string) || undefined;
+});
+
+const useHeroLayout = computed(() => !isPlainTemplate.value && (!!heroImage.value || !!videoUrl.value));
 
 // Check if we're on the index page
 const isIndexPage = computed(() => {
@@ -562,8 +572,11 @@ if (process.client) {
       <main class="content-column prose">
         <ContentRenderer v-if="data" :key="version" :value="data" :components="proseComponents" />
       </main>
-      <aside v-if="useHeroLayout" class="image-column">
-        <HeaderImage :image="heroImage" :alt="pageTitle" />
+      <aside v-if="useHeroLayout" class="image-column" :class="{ 'video-column': !!videoUrl }">
+        <div v-if="videoUrl" class="video-wrapper">
+          <BaseVideo :src="videoUrl" :title="pageTitle" />
+        </div>
+        <HeaderImage v-else :image="heroImage" :alt="pageTitle" />
       </aside>
     </div>
 
@@ -597,6 +610,18 @@ if (process.client) {
   top: 0;
   height: 100vh;
   overflow: hidden;
+}
+
+.video-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg);
+}
+
+.video-wrapper {
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Mobile styles */

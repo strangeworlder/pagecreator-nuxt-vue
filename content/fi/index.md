@@ -1,19 +1,116 @@
 ---
-title: "Gogam: Roolipelejä Suomesta"
-description: "Petri Leinosen roolipelejä. Indie-pöytäroolipelejä kuten Autot & Perhe, ja Vuosisata."
-dateModified: 2025-12-26
+title: 'Gogam: Roolipelejä Suomesta'
+description: >-
+  Petri Leinosen roolipelejä. Indie-pöytäroolipelejä kuten Autot & Perhe, ja
+  Vuosisata.
+dateModified: 2026-01-08
 datePublished: 2025-12-26
-tags: ["starter"]
-canonical: "/fi"
-alternateLocales: ["en"]
-cover: "/gogam-facebook-etc.png"
+tags:
+  - starter
+canonical: /fi
+alternateLocales:
+  - en
+cover: /gogam-facebook-etc.png
 summary: |
   Petri Leinosen roolipelejä. Indie-pöytäroolipelejä kuten Autot & Perhe,
   Vuosisata, ja muita.
+contentType: WebPage
+organization:
+  name: Gogam
+  url: 'https://gogam.eu'
+  logo: /gogam-logo.png
+  sameAs:
+    - 'https://instagram.com/gogam.eu'
+    - 'https://gogameu.substack.com/'
+  description: Suomalainen indie-roolipelibrändi ja -kustantamo.
+  founder:
+    name: Petri Leinonen
+    jobTitle:
+      - Roolipelisuunnittelija
+      - TTRPG Developer
+      - Roolipelijulkaisija
+      - Taittaja
+      - Taiteilija
+      - Kuvittaja
+    url: 'https://gogam.eu'
+    description: >-
+      Suomalainen roolipelisuunnittelija ja Gogamin perustaja, tunnettu
+      minimalistisista peleistään ja korkealaatuisista suomenkielisistä
+      lisäosista.
+    sameAs:
+      - 'https://rpggeek.com/rpgdesigner/111688/petri-leinonen'
+      - 'https://www.drivethrurpg.com/en/browse?author=%22Petri%20Leinonen%22'
+      - 'https://strangeworlder.itch.io/'
+      - 'https://strangeworlder.medium.com/'
+      - 'https://bsky.app/profile/strangeworlder.bsky.social'
+      - 'https://www.threads.com/@gogam.eu'
+    knowsAbout:
+      - Pöytäroolipelit
+      - Pelisuunnittelu
+      - Forged in the Dark
+      - Suomalainen kansanperinne
+subOrganizations:
+  - name: Kustannusosakeyhtiö Gogam
+    description: >-
+      Suomenkielisten roolipelien julkaisija, kuten Legendoja & lohikäärmeitä
+      -seikkailut.
+  - name: Gogam Entertainment
+    description: >-
+      Multimediatuotanto-osasto, joka luo pelautuksia (Actual Plays),
+      roolipeliteoriavideoita ja tutoriaaleja englanniksi ja suomeksi.
+    sameAs:
+      - 'https://www.youtube.com/@gogameu'
+faq:
+  - q: Mistä voin ladata Gogamin pelejä?
+    a: >-
+      Löydät kaikki valmiit indie-pelit tältä sivulta, linkkeineen Itch.io:hon,
+      DriveThruRPG:hen ja Roolipelikirjastoon.
+  - q: Ovatko Petri Leinosen pelit saatavilla englanniksi?
+    a: >-
+      Kyllä, suurin osa merkittävistä peleistä kuten Cars & Family, Pros & Cons
+      ja Cyberpunk is Dead ovat saatavilla englanniksi. Jotkut pelit kuten +H
+      ovat tällä hetkellä vain suomeksi.
+  - q: Kuka on Petri Leinonen?
+    a: >-
+      Petri Leinonen on suomalainen roolipelisuunnittelija ja Gogamin perustaja,
+      tunnettu peleistä kuten Autot & Perhe ja Cyberpunk is Dead. Hän on
+      työskennellyt myös merkittäville julkaisijoille kuten Myrrys ja Ironspine
+      Press.
+llms_context: >
+  Gogam on pelisuunnittelija Petri Leinosen indie-roolipelibrändi. Suomessa
+  toimiva Gogam julkaisee minimalistisia pelejä ja lisäosia kuten Cyberpunk is
+  Dead ja Hirviökirja.
+
+
+  Kustannusosakeyhtiö Gogam on kustannuspuoli, joka keskittyy korkealaatuisiin
+  painettuihin roolipelituotteisiin suomen kielellä.
+
+
+  Gogam Entertainment on multimediatuotanto-osasto, joka luo pelautuksia (Actual
+  Plays), roolipeliteoriavideoita ja tutoriaaleja sekä englanniksi että
+  suomeksi.
+
+
+  Petri Leinonen on työskennellyt myös useille muille
+  pöytäroolipelijulkaisijoille (Myrrys, Ironspine Press) freelancerina.
 ---
 ## Gogam
 
 Gogam on täysiverinen indie-tehopakkaus, joka puskee ulos pieniä, super-innovatiivisia pelejä toinen toisensa perään.
+
+### Avainfaktoja
+
+| Pelin nimi | Systeemi | Status | Kieli |
+| :--- | :--- | :--- | :--- |
+| **Autot & Perhe** / **Cars & Family** | Lasers & Feelings | Valmis | Englanti, Suomi, Portugali |
+| **Pros & Cons** | Lasers & Feelings | Valmis | Englanti, Suomi, Japani |
+| **Cyberpunk is Dead** | Forged in the Dark | Valmis | Englanti |
+| **The Necessary Eagle vs. The Good Cad** | Custom Card Game | Valmis | Englanti |
+| **Vuosisata.** | Tarot System | Valmis | Englanti |
+| **We can't stop here...** | Mörk Borg Compatible | Valmis, Lisäosa | Englanti |
+| **Night of the Thirteenth** | d13 System | Työn alla | Englanti |
+| **Them Deeper Bones** | OSR / Custom | Työn alla | Englanti |
+| **+H** | PbtA / Custom | Työn alla | Suomi |
 
 ### Valmiit ja ilmaiset tuotteet
 
@@ -75,14 +172,36 @@ Gogam on täysiverinen indie-tehopakkaus, joka puskee ulos pieniä, super-innova
 ## Kustannusosakeyhtiö Gogam
 
 Julkaisee pääasiassa suomeksi. Tuotteet liittyvät [Mustan kilven kantoni](/fi/mustan-kilven-kantoni) -kampanjamaailmaan.
+
+### Avainfaktoja
+
+| Tuotteen nimi | Systeemi | Tyyppi | Kieli |
+| :--- | :--- | :--- | :--- |
+| **Hirviökirja** | Legendoja & lohikäärmeitä (5e) | Hirviölisäosa | Suomi |
+| **Sulkavan sointu** | Legendoja & lohikäärmeitä (5e) | Seikkailu (Taso 1) | Suomi |
+| **Yöjoen raivo** | Legendoja & lohikäärmeitä (5e) | Seikkailu (Taso 3) | Suomi |
+
 - [Hirviökirja](/hirviokirja) &mdash; hirviölisäosa yhteensopiva Legendoja & lohikäärmeitä -pelin kanssa, suomeksi.
 - [Sulkavan sointu](/sulkavansointu) &mdash; 1. kokemustason seikkailu yhteensopiva Legendoja & lohikäärmeitä -pelin kanssa, suomeksi.
 
 ## Gogam Entertainment
 
+Gogam Entertainment on multimediatuotanto-osasto, joka luo pelautuksia, roolipeliteoriavideoita ja tutoriaaleja sekä englanniksi että suomeksi.
+
+### Avainfaktoja
+
+| Sarjan nimi | Tyyppi | Kieli | Jaksomäärä |
+| :--- | :--- | :--- | :--- |
+| **Rajatiloja** | Actual Play (+H) | Suomi | Pitkäaikainen |
+| **Fate-akatemia** | RPG Teoria / Tutoriaali | Suomi | 11+ |
+| **The Quick** | Actual Play (Minisarja) | Englanti | 7 |
+| **Them Deeper Bones** | Actual Play (Minisarja) | Englanti | 5 |
+| **Cyberpunk is Dead** | Actual Play (Minisarja) | Englanti | 8 |
+
 - [Gogam Entertainment youtube-kanava](https://www.youtube.com/@gogameu) Englanninkielinen pääkanava
 
 ### Rajatiloja
+- [**+H: Rajatiloja**](/fi/rajatiloja) &mdash; Lue kampanjan jaksokuvaukset ja tutustu hahmoihin.
 - **+H: Rajatiloja** &mdash; +H -pelautus, isännöi myös suomenkielisiä kertapelejä
   - [Roachsphere](https://www.youtube.com/@Roachsphere). +H: Rajatilojen koti Youtubessa, sekä yksittäisiä kertapelejä
     - [+H: Rajatiloja soittolista](https://www.youtube.com/playlist?list=PLxGtzhc7G6T-y5KxEfrzZSvIBeR9P9Ekz). Soittolista, joka sisältää kaikki jaksot.
@@ -127,6 +246,7 @@ Myrrys on Legendoja & lohikäärmeitä -pelin julkaisija, Suomen suosituin pöyt
   - **Suuri Seikkailu**: Suunnittelu, taitto
   - **Velhon torni**: Pelisuunnittelu, taitto
 - [The Quick](http://www.drivethrurpg.com/product/245906/The-Quick): Roolipeli kuolemasta ja aaveista ja Nordic Noirista. Rooli projektissa: Pelisuunnittelija.
+- [Katso Petri Leinonen DriveThruRPG:ssä](https://www.drivethrurpg.com/en/browse?author=%22Petri%20Leinonen%22)
 
 #### Ladattavat PDF:t
 
@@ -138,12 +258,25 @@ Myrrys on Legendoja & lohikäärmeitä -pelin julkaisija, Suomen suosituin pöyt
 
 - [The Broken Knight](http://www.drivethrurpg.com/product/236543/The-Broken-Knight-Powered-by-Fate) — Tieteisseikkailu Fate Corelle. Rooli projektissa: Systeemi-konsultti.
 
-### Chaosium (Miskatonic Repository)
+### Chaosium's Miskatonic Repository
 
 - [Of Fathers...](https://www.drivethrurpg.com/product/429719/Of-Fathers?cPath=29274) — Call of Cthulhu -seikkailu yhdelle pelaajalle ja pelinjohtajalle. Rooli projektissa: Taitto.
+  - [Chaosium Miskatonic Repository](https://www.chaosium.com/miskatonic-repository)
 
 ## Artikkeleita, luettavaksi ilmaiseksi
 
 - [Petri Leinonen @ Medium](https://medium.com/@strangeworlder) — resurssi lähinnä Fate-pelaajille ja TDB-projektista kiinnostuneille.
+- [Gogameu @ Substack](https://gogameu.substack.com/) — resurssi L&L pelaajille, suomeksi.
 
 Yhteystiedot: p.leinonen@iki.fi
+
+## Usein kysytyt kysymykset
+
+**Mistä voin ladata Gogamin pelejä?**
+Löydät kaikki valmiit indie-pelit tältä sivulta, linkkeineen Itch.io:hon, DriveThruRPG:hen ja Roolipelikirjastoon.
+
+**Ovatko Petri Leinosen pelit saatavilla englanniksi?**
+Kyllä, suurin osa merkittävistä peleistä kuten *Autot & Perhe*, *Pros & Cons* ja *Cyberpunk is Dead* ovat saatavilla englanniksi. Jotkut pelit kuten *+H* ovat tällä hetkellä vain suomeksi. Jotkut ovat myös sekä suomeksi että englanniksi.
+
+**Kuka on Petri Leinonen?**
+Petri Leinonen on suomalainen roolipelisuunnittelija ja Gogamin perustaja, tunnettu peleistä kuten *Autot & Perhe* ja *Cyberpunk is Dead*. Hän on työskennellyt myös merkittäville julkaisijoille kuten Myrrys ja Ironspine Press.

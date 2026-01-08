@@ -115,29 +115,29 @@ Gogam on täysiverinen indie-tehopakkaus, joka puskee ulos pieniä, super-innova
 ### Valmiit ja ilmaiset tuotteet
 
 - **Autot & Perhe**/**Cars & Family** &mdash; tämä vauhdikas yksisivuinen roolipeli laittaa sinut kuskin paikalle *Fast & Furious* -tyylisenä kansainvälisenä varkaana. Johtajanne Von Petrolin ollessa poissa pelistä, teidän täytyy tasapainotella uskomattomien katukisataitojenne (Autot) ja tiiminne välisten siteiden (Perhe) välillä onnistuaksenne uskaliaissa keikoissa. *Lasers & Feelings* -systeemiin perustuva peli on täydellinen, kevyt peli räjähtävään toimintaan. Saatavilla sekä englanniksi että suomeksi.
-  - [Lue lisää Autot & Perheestä](/en/cars-and-family)
+  - [Lue lisää Autot & Perheestä](/en/cars-and-family){hreflang="en"}
   - [itch.io: Cars & Family (en) / Autot & Perhe (fi)](https://strangeworlder.itch.io/cars-and-family)
   - [roolipelikirjasto: Autot ja Perhe / Cars and Family](https://roolipelikirjasto.fi/series/stored/7)
-  - [Carros & Família](/downloads/carros-and-familia.pdf) &mdash; Portugalinkielinen käännös Autot & Perheestä, kääntänyt ja parannellut Vila Nova.
+  - [Carros & Família](/downloads/carros-and-familia.pdf){hreflang="pt"} &mdash; Portugalinkielinen käännös Autot & Perheestä, kääntänyt ja parannellut Vila Nova.
 - **Pros & Cons** heittää sinut korkeiden panosten ryöstöelokuvaan kuten *Ocean's Eleven* tai *Leverage*. Nokkela *Lasers & Feelings* -hakkerointi korvaa nopat tavallisella korttipakalla. Hahmosi määrittelee yksi kortti (2-9), joka tasapainottaa ammattilaisuutta (**Pro**, professional) ja rikollista improvisaatiota (**Con**, criminal). Kuvakortit laukaisevat narratiivisia käänteitä (Twists), ja Takaumat (Flashbacks) antavat sinun kirjoittaa epäonnistumisesi uusiksi.
-  - [Lue lisää Pros & Consista](/en/pros-and-cons)
+  - [Lue lisää Pros & Consista](/en/pros-and-cons){hreflang="en"}
   - [itch.io: Pros & Cons](https://strangeworlder.itch.io/pros-and-cons)
   - [roolipelikirjasto: Pros & Cons](https://roolipelikirjasto.fi/book/147)
-  - [コンズ & プロズ](https://twitter.com/feltk/status/1376309603734937600) &mdash; Japaninkielinen käännös Pros & Consista, kääntänyt [@feltk](https://twitter.com/feltk).
+  - [コンズ & プロズ](https://twitter.com/feltk/status/1376309603734937600){hreflang="ja"} &mdash; Japaninkielinen käännös Pros & Consista, kääntänyt [@feltk](https://twitter.com/feltk).
 - **Cyberpunk is Dead** &mdash; tämä *Forged in the Dark* -peli kääntää cyberpunk-genren päälaelleen: ette ole kapinallisia sankareita taistelemassa korporaatioita vastaan — olette niiden kertakäyttöisiä, alipalkattuja palkkamurhaajia, jotka valvovat pikkumaisia etuja usein sympaattisia kohteita vastaan. Peli kääntää esikuvansa *Blades in the Darkin* asetelman päälaelleen korvaamalla hahmokirjat numeroiduilla, vaihdettavilla "Operatiiveilla" ja hyödyntää uniikkia 3d12-systeemiä, jossa menestys tuo usein mukanaan "Ylireagointia", ja selviytyminen tarkoittaa velkaannuttavaa kuolemanspiraalia pakollisten kyberimplanttien myötä. Se on lohduttoman kiehtova kritiikki cyberpunk-troopeista elegantin minimalististen, paineistettujen mekaniikoiden kautta.
-  - [Lue lisää Cyberpunk is Deadista](/en/cyberpunk-is-dead)
+  - [Lue lisää Cyberpunk is Deadista](/en/cyberpunk-is-dead){hreflang="en"}
   - [itch.io: Cyberpunk is Dead](https://strangeworlder.itch.io/cyberpunk-is-dead)
   - [roolipelikirjasto: Cyberpunk is Dead](https://roolipelikirjasto.fi/book/148)
 - **The Necessary Eagle vs. The Good Cad** &mdash; kilpailullinen kahden pelaajan korttipeli epäsymmetrisestä sodasta sosiopaattisen supersankarin ja kostonhimoisen kuolevaisen välillä. Kanavoiden *The Boys* -sarjan kyynistä energiaa, toinen pelaaja käyttää jumalallisia voimia ja hallitsee PR-katastrofeja, kun taas toinen tonkii sivullisten uhrien seasta rakentaakseen täydellisen aseen tappaakseen hänet.
-  - [Lue lisää The Necessary Eagle vs. The Good Cadista](/en/the-necessary-eagle-vs-the-good-cad)
+  - [Lue lisää The Necessary Eagle vs. The Good Cadista](/en/the-necessary-eagle-vs-the-good-cad){hreflang="en"}
   - [itch.io: The Necessary Eagle vs. The Good Cad](https://strangeworlder.itch.io/the-necessary-eagle-vs-the-good-cad)
 - **Bike on Fire** &mdash; kahden pelaajan korttipohjainen kilpailullinen roolipeli traagisesta harrastusobsessiosta. Saatavilla englanniksi ja suomeksi.
   - [Bike on Fire (en) / Palava pyörä (fi)](https://strangeworlder.itch.io/bike-on-fire) 
 - **Vuosisata.** on post-kataklysminen roolipeli, jossa historia kohtaa taikuuden (1912-2012), toiminnoiltaan täysin Tarot-pakan varassa. Onnistut tulkitsemalla luovasti kädestäsi pelaamiesi korttien merkityksiä, mutta varo, sillä parit laukaisevat tappavia Katastrofeja.
-  - [Lue lisää Vuosisata.-pelistä](/en/vuosisata)
+  - [Lue lisää Vuosisata.-pelistä](/en/vuosisata){hreflang="en"}
   - [GDocs: Vuosisata.](https://docs.google.com/document/d/1VYxmFq2ik5Wszqpo6jYv5GJXKoBRw7rkeALg7PkYfH0/edit?usp=sharing)
 - **We can't stop here...** &mdash; likainen, psykedeelinen *Mörk Borg* -lisäosa road tripistä, joka ei lopu koskaan. Matkustat tietoisen, lahoavan vankkurin kanssa, kuluttaen sen vaarallisia yrttejä pitääksesi sen liikkeessä. Sisältää riski/palkkio-addiktiosysteemin ja uniikin "Trip Encounter Table" -taulukon, jossa kauhut muuttuvat todellisiksi vain jos hallusinaatio on jaettu. Sisältää esittelyseikkailun *"...this is BAT country"*.
-  - [Lue lisää We can't stop here... -pelistä](/en/we-cant-stop-here)
+  - [Lue lisää We can't stop here... -pelistä](/en/we-cant-stop-here){hreflang="en"}
   - [itch.io: We can't stop here...](https://strangeworlder.itch.io/we-cant-stop-here)
 - **Grapple: The RPG** &mdash; peli/shitpost painimisesta ja pelisi ydinaktiviteetin pohtimisesta.
   - [itch.io: Grapple: The RPG](https://strangeworlder.itch.io/grapple-the-rpg)
@@ -145,20 +145,20 @@ Gogam on täysiverinen indie-tehopakkaus, joka puskee ulos pieniä, super-innova
 ### Projektit eri vaiheissa
 
 - **Night of the Thirteenth** &mdash; slasher-kauhu-roolipeli, jossa näyttelette elokuvan hahmoja, jota ei ole vielä tehty. Voimanlähteenä uniikki "d13" (d10+d4) -systeemi ja tavallinen korttipakka uhkien luomiseen, se simuloi 80-luvun slasher-elokuvien korkeaa kuolleisuutta. Jokainen heitto riskeeraa "Seurauksen" &mdash; seurauksia, jotka vaihtelevat äänen tekemisestä tappajan johdattamiseen suoraan luoksesi, työntäen sinut askeleen lähemmäs kolmatta ja viimeistä Strikeasi.
-  - [Lue lisää Night of the Thirteenthista](/en/nott)
+  - [Lue lisää Night of the Thirteenthista](/en/nott){hreflang="en"}
   - [itch.io: Night of the Thirteenth](https://strangeworlder.itch.io/night-of-the-thirteenth)
 - **Them Deeper Bones** &mdash; post-post-apokalyptinen retro-seikkailupeli / OSR-tyylinen roolipeli, jossa tutkit maailmaa sukupolvia maagisen kataklysmin jälkeen, joka muokkasi historian uusiksi. Osana harvinaista, virallisesti hyväksyttyä "Uudelleenlöytämiskomppaniaa" (Rediscovery Company), uskaltaudut tunnetun maailman rajojen ulkopuolelle paljastamaan kadonneita aarteita, unohdettua perimätietoa ja totuuden. Kieltäen eksplisiittisesti kolonialistisen Rajaseutumyytin, Them Deeper Bones ammentaa suomalaisesta kansanperinteestä, esittäen erämaan täynnä muinaista taikuutta, jota tulee kunnioittaa, ja raunioita, jotka kuiskaavat tarinoita omista esi-isistäsi.
-  - [themdeeperbones.com](https://themdeeperbones.com)
+  - [themdeeperbones.com](https://themdeeperbones.com){hreflang="en"}
   - [Lue lisää Mustan kilven kantonista](/fi/mustan-kilven-kantoni)
   - [itch.io: Them Deeper Bones](https://strangeworlder.itch.io/them-deeper-bones)
 - **+H** &mdash; suomenkielinen nykypäivän scifi-kauhu-roolipeli, jossa pelaajat esittävät yksityisen bioteknologiajätti New Horizonsin kenttätiimin erittäin päteviä asiantuntijoita. Peli keskittyy tiimin ensikosketukseen "varjobiosfäärin" kanssa &mdash; vastikään aktivoituneeseen, ei-hiilipohjaiseen "toiseen elämään" maapallolla. Sen erinomainen, tehtäväpohjainen systeemi on rakennettu *Powered by the Apocalypse* (*PbtA*) -mekaniikkojen päälle mutta on raskaasti modifioitu, ammentaen innovaatioita tarinapeleistä, pohjoismaisesta immersioperinteestä, ja halusta modernisoida *Call of Cthulhun* tutkivaa kauhua.
-  - [Lue lisää +H:sta](/en/plus-h)
+  - [Lue lisää +H:sta](/en/plus-h){hreflang="en"}
   - [Roachsphere, +H:n kotisivu](http://roachsphere.com)
 - **The pig is sus. Eliminate the pig.** &mdash; prototyyppi taistelujärjestelmästä, joka on suunniteltu siirtämään painopiste hahmolomakkeesta pelaajan taitoon, taktiseen suunnitteluun ja tarkkaan ajoitukseen.
-  - [Lue lisää The pig is sus. Eliminate the pig. -pelistä](/en/the-pig-is-sus)
+  - [Lue lisää The pig is sus. Eliminate the pig. -pelistä](/en/the-pig-is-sus){hreflang="en"}
   - [itch.io: The pig is sus. Eliminate the pig.](https://strangeworlder.itch.io/the-pig-is-sus)
 - **A Particular Group of Corvids** &mdash; asettaa teidät koveksiruutujen lintuetsivien rooliin vapaa-ajattelun kaupungissa Roostissa, taistelemaan The Susin (fasistisikojen) leviävää autoritarismia vastaan ratkaisemalla rikoksia ja jakamalla iskuja. Inspiroituneena karkeista toimintamysteereistä kuten RDJ:n *Sherlock Holmes* tai *Peaky Blinders* (linnuilla!), sen eleganssi loistaa yksinkertaisen d20-ydinmekaniikan läpi.
-  - [Lue lisää A Particular Group of Corvidsista](/en/a-particular-group-of-corvids)
+  - [Lue lisää A Particular Group of Corvidsista](/en/a-particular-group-of-corvids){hreflang="en"}
   - [itch.io: A Particular Group of Corvids](https://strangeworlder.itch.io/a-particular-group-of-corvids)
 - **Operator, I Need an Exit** &mdash; Breathless-hakkerointi simulaatiosta pakenemisesta ennen kuin Agentit saavat sinut.
   - [itch.io: Operator, I Need an Exit](https://strangeworlder.itch.io/operator-i-need-an-exit)
@@ -201,8 +201,7 @@ Gogam Entertainment on multimediatuotanto-osasto, joka luo pelautuksia, roolipel
 - [Gogam Entertainment youtube-kanava](https://www.youtube.com/@gogameu) Englanninkielinen pääkanava
 
 ### Rajatiloja
-- [**+H: Rajatiloja**](/fi/rajatiloja) &mdash; Lue kampanjan jaksokuvaukset ja tutustu hahmoihin.
-- **+H: Rajatiloja** &mdash; +H -pelautus, isännöi myös suomenkielisiä kertapelejä
+- [**+H: Rajatiloja**](/fi/rajatiloja) &mdash; +H -pelautus, isännöi myös suomenkielisiä kertapelejä, lue kampanjan jaksokuvaukset ja tutustu hahmoihin.
   - [Roachsphere](https://www.youtube.com/@Roachsphere). +H: Rajatilojen koti Youtubessa, sekä yksittäisiä kertapelejä
     - [+H: Rajatiloja soittolista](https://www.youtube.com/playlist?list=PLxGtzhc7G6T-y5KxEfrzZSvIBeR9P9Ekz). Soittolista, joka sisältää kaikki jaksot.
   - [Spotify](https://open.spotify.com/show/28etjaN8Wshrcwiw2ge0Vi?si=bebb1d24c4544acc). Rajatiloja on saatavilla myös Spotifyssa.

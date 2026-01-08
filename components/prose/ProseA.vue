@@ -1,9 +1,10 @@
 <script setup lang="ts">
 // @ts-nocheck
-withDefaults(defineProps<{ href?: string; rel?: string; target?: string }>(), {
+withDefaults(defineProps<{ href?: string; rel?: string; target?: string; hreflang?: string }>(), {
   href: undefined,
   rel: undefined,
   target: undefined,
+  hreflang: undefined
 });
 
 const EXTERNAL_RE = /^(https?:)?\/\//;
@@ -13,6 +14,7 @@ const EXTERNAL_RE = /^(https?:)?\/\//;
   <NuxtLink
     v-if="href && !EXTERNAL_RE.test(href) && !href.startsWith('#') && !target"
     :to="href"
+    :hreflang="hreflang"
     v-bind="$attrs"
   >
     <slot />
@@ -23,6 +25,7 @@ const EXTERNAL_RE = /^(https?:)?\/\//;
     :href="href"
     :rel="rel ?? (EXTERNAL_RE.test(href || '') ? 'noopener noreferrer' : undefined)"
     :target="target ?? (EXTERNAL_RE.test(href || '') ? '_blank' : undefined)"
+    :hreflang="hreflang"
     v-bind="$attrs"
   >
     <slot />
@@ -32,5 +35,13 @@ const EXTERNAL_RE = /^(https?:)?\/\//;
 <style scoped>
   a[href^="http"]::after {
     content: " ↗";
+  }
+  /* Indicate language for explicitly marked links */
+  a[hreflang]::after {
+    content: " (" attr(hreflang) ")";
+    font-size: 0.6em;
+    vertical-align: super;
+    margin-left: 2px;
+    opacity: 0.8;
   }
 </style>

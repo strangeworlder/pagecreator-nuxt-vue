@@ -109,6 +109,10 @@ if (!initial) {
     fetched = await queryContent(fiPath).where({ _path: fiPath }).findOne();
   }
 
+  if (!fetched) {
+    throw createError({ statusCode: 404, statusMessage: "Page Not Found", fatal: true });
+  }
+
   // Preserve full doc on server for Head generation
   if (process.server) {
     serverRawDoc = fetched;
@@ -246,6 +250,10 @@ watch(
     if (!next && !/^\/\w{2}\b/.test(path)) {
       const fiPath = `/fi${path}`;
       next = await queryContent(fiPath).where({ _path: fiPath }).findOne();
+    }
+
+    if (!next) {
+      throw createError({ statusCode: 404, statusMessage: "Page Not Found", fatal: true });
     }
     const nextLocale = getLocaleFromPath(route.path);
     const nextIndex = await queryContent(`/${nextLocale}`)

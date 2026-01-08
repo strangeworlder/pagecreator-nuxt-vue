@@ -3,7 +3,7 @@ title: 'Gogam: Roleplaying games from Finland'
 description: >-
   Roleplaying games by Petri Leinonen. Indie tabletop RPGs like Cars & Family,
   and Vuosisata.
-dateModified: 2026-01-07
+dateModified: 2026-01-08
 datePublished: 2025-12-29
 tags:
   - starter
@@ -115,12 +115,12 @@ Gogam is the indie tabletop roleplaying game brand of designer Petri Leinonen. B
   - [Read more about Cars & Family](/en/cars-and-family)
   - [itch.io: Cars & Family (en) / Autot & Perhe (fi)](https://strangeworlder.itch.io/cars-and-family)
   - [roolipelikirjasto: Autot ja Perhe / Cars and Family](https://roolipelikirjasto.fi/series/stored/7)
-  - [Carros & Família](/downloads/carros-and-familia.pdf) &mdash; Portuguese translation of Cars & Family, translated and enhanced by Vila Nova.
+  - [Carros & Família](/downloads/carros-and-familia.pdf){hreflang="pt"} &mdash; Portuguese translation of Cars & Family, translated and enhanced by Vila Nova.
 - **Pros & Cons** drops you into a high-stakes heist movie like *Ocean's Eleven* or *Leverage*. A clever hack of *Lasers & Feelings*, it replaces dice with a standard deck of cards. Your character is defined by a single card (2-9) that balances being a **Pro** (professional) vs a **Con** (criminal improvisation). Face cards trigger narrative Twists, and Flashbacks let you rewrite your failures.
   - [Read more about Pros & Cons](/en/pros-and-cons)
   - [itch.io: Pros & Cons](https://strangeworlder.itch.io/pros-and-cons)
   - [roolipelikirjasto: Pros & Cons](https://roolipelikirjasto.fi/book/147)
-  - [コンズ & プロズ](https://twitter.com/feltk/status/1376309603734937600) &mdash; Japanese translation of Pros & Cons, translated by [@feltk](https://twitter.com/feltk).
+  - [コンズ & プロズ](https://twitter.com/feltk/status/1376309603734937600){hreflang="ja"} &mdash; Japanese translation of Pros & Cons, translated by [@feltk](https://twitter.com/feltk).
 - **Cyberpunk is Dead** &mdash; this *Forged in the Dark* game flips the script on the cyberpunk genre: you aren't rebellious heroes fighting the corps—you are their disposable, underpaid hit squad, enforcing petty interests against often sympathetic targets. It masterfully subverts its *Blades in the Dark* inspiration by replacing playbooks with numbered, interchangeable "Operatives" and utilizing a unique 3d12 system where success often comes with "Overreaction," and survival means a debt-inducing death spiral of mandatory cyberware. It's a bleakly fascinating critique of cyberpunk tropes through elegantly minimalist, pressure-cooker mechanics.
   - [Read more about Cyberpunk is Dead](/en/cyberpunk-is-dead)
   - [itch.io: Cyberpunk is Dead](https://strangeworlder.itch.io/cyberpunk-is-dead)
@@ -179,8 +179,8 @@ Kustannusosakeyhtiö Gogam is the publishing arm of Gogam, focusing on high-qual
 | **Yöjoen raivo** | Legendoja & lohikäärmeitä (5e) | Adventure (Lvl 3) | Finnish |
 
 Publishes primarily in Finnish. Products are related to the [Black Shield Canton](/en/mustan-kilven-kantoni) campaign setting. 
-- [Hirviökirja](/hirviokirja) &mdash; monster supplement compatible with Legendoja & lohikäärmeitä, in Finnish.
-- [Sulkavan sointu](/sulkavansointu) &mdash; 1st level adventure compatible with Legendoja & lohikäärmeitä, in Finnish.
+- [Hirviökirja](/hirviokirja){hreflang="fi"} &mdash; monster supplement compatible with Legendoja & lohikäärmeitä, in Finnish.
+- [Sulkavan sointu](/sulkavansointu){hreflang="fi"} &mdash; 1st level adventure compatible with Legendoja & lohikäärmeitä, in Finnish.
 
 ## Gogam Entertainment
 
@@ -199,7 +199,7 @@ Gogam Entertainment is the multimedia production branch, creating Actual Plays, 
 - [Gogam Entertainment youtube channel](https://www.youtube.com/@gogameu) The English Speaking main channel
 
 ### Rajatiloja
-- **+H: Rajatiloja** &mdash; a +H actual play, hosts also Finnish language one-shots
+- [**+H: Rajatiloja**](/fi/rajatiloja){hreflang="fi"} &mdash; a +H actual play, hosts also Finnish language one-shots
   - [Roachsphere](https://www.youtube.com/@Roachsphere). The home of +H: Rajatiloja on Youtube, as well as individual one-shots
     - [+H: Rajatiloja playlist](https://www.youtube.com/playlist?list=PLxGtzhc7G6T-y5KxEfrzZSvIBeR9P9Ekz). The playlist that contains all the episodes.
   - [Spotify](https://open.spotify.com/show/28etjaN8Wshrcwiw2ge0Vi?si=bebb1d24c4544acc). Rajatiloja is also available on Spotify.

@@ -23,7 +23,7 @@ mentions:
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#thom'
   - name: Skye Watson
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#skye'
-contentUrl: ''
+contentUrl: 'https://www.youtube.com/watch?v=Dp97AlxBVfQ'
 dateModified: 2026-01-08
 ---
 

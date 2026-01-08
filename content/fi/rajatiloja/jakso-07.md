@@ -23,7 +23,7 @@ mentions:
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#thom'
   - name: '"Lise" (Stenin Vaimo)'
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#lise'
-contentUrl: ''
+contentUrl: 'https://www.youtube.com/watch?v=nnO0st8m_SM'
 dateModified: 2026-01-08
 ---
 

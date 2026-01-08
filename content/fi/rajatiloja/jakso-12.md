@@ -25,7 +25,7 @@ mentions:
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#skye'
   - name: '"Didin Äiti" (Entiteetti)'
     type: Person
-contentUrl: ''
+contentUrl: 'https://www.youtube.com/watch?v=a3YqdidMD6o'
 dateModified: 2026-01-08
 ---
 

@@ -25,7 +25,7 @@ mentions:
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#lise'
   - name: Xavier "Xav" Dutari
     type: Person
-contentUrl: ''
+contentUrl: 'https://www.youtube.com/watch?v=Qwrmu6tr_N0'
 dateModified: 2026-01-08
 ---
 

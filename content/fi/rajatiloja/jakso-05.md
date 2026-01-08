@@ -27,7 +27,7 @@ mentions:
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#evan'
   - name: Nahia Dutari
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#nahia'
-contentUrl: ''
+contentUrl: 'https://www.youtube.com/watch?v=aQ6XsbSDIyI'
 dateModified: 2026-01-08
 ---
 

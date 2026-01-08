@@ -25,7 +25,7 @@ mentions:
     type: Thing
   - name: '"Lise Eklund"'
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#lise'
-contentUrl: ''
+contentUrl: 'https://www.youtube.com/watch?v=CYeJ2yzgfew'
 dateModified: 2026-01-08
 ---
 

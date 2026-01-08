@@ -25,7 +25,7 @@ mentions:
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#skye'
   - name: Mattíana Blævarsdóttir
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#mattiana'
-contentUrl: ''
+contentUrl: 'https://www.youtube.com/watch?v=6y_I2ASwfaM'
 dateModified: 2026-01-08
 ---
 

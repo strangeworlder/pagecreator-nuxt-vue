@@ -28,7 +28,7 @@ mentions:
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#kurt'
   - name: '"Evan" (Kuvassa)'
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#evan'
-contentUrl: ''
+contentUrl: 'https://www.youtube.com/watch?v=sz7W4TEmK48'
 dateModified: 2026-01-08
 ---
 

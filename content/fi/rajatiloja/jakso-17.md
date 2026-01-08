@@ -26,7 +26,7 @@ mentions:
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#skye'
   - name: Kathereen Cellstone
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#kathereen'
-contentUrl: ''
+contentUrl: 'https://www.youtube.com/watch?v=lnoMn9eHJyQ'
 dateModified: 2026-01-08
 ---
 

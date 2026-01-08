@@ -25,7 +25,7 @@ mentions:
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#nahia'
   - name: '"Lise Eklund"'
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#lise'
-contentUrl: ''
+contentUrl: 'https://www.youtube.com/watch?v=2pC14KHU2Ag'
 dateModified: 2026-01-08
 ---
 

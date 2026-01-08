@@ -25,7 +25,7 @@ mentions:
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#nahia'
   - name: '"Ruotsalainen Nainen" (Lise)'
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#lise'
-contentUrl: ''
+contentUrl: 'https://www.youtube.com/watch?v=tpVncZqg32g'
 dateModified: 2026-01-08
 ---
 

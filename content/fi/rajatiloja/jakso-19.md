@@ -24,7 +24,7 @@ mentions:
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#thom'
   - name: '"Hiljainen mies"'
     type: Thing
-contentUrl: ''
+contentUrl: 'https://www.youtube.com/watch?v=P5RlBP7gkGk'
 dateModified: 2026-01-08
 ---
 

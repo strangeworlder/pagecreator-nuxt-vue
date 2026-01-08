@@ -27,7 +27,7 @@ mentions:
     type: Person
   - name: '"Hiljainen mies"'
     type: Thing
-contentUrl: ''
+contentUrl: 'https://www.youtube.com/watch?v=QXpKrx1c48Y'
 dateModified: 2026-01-08
 ---
 

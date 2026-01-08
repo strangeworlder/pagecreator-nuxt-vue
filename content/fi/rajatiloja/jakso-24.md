@@ -25,7 +25,7 @@ mentions:
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#kathereen'
   - name: '"Hiljainen mies"'
     type: Thing
-contentUrl: ''
+contentUrl: 'https://www.youtube.com/watch?v=ncFyT13QpKk'
 dateModified: 2026-01-08
 ---
 

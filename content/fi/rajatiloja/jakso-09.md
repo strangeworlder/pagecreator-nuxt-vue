@@ -23,7 +23,7 @@ mentions:
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#thom'
   - name: Lohikäärmegargoili
     type: Thing
-contentUrl: ''
+contentUrl: 'https://www.youtube.com/watch?v=NTHfsMGHduY'
 dateModified: 2026-01-08
 ---
 

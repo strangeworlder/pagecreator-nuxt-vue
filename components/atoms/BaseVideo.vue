@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BaseImage from "./BaseImage.vue";
+// BaseImage is auto-imported by Nuxt
 
 interface Props {
   src: string;

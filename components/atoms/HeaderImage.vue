@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import BaseImage from "~/components/atoms/BaseImage.vue";
+// BaseImage is auto-imported by Nuxt
 
 interface Props {
   image?: string;

@@ -16,7 +16,6 @@ const isHome = computed(() => route.path === "/");
       :width="100"
       :height="100"
       class="footer-image"
-      eager
     />
     <NuxtLink v-else to="/" class="footer-link"> / Gogam </NuxtLink>
   </footer>

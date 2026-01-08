@@ -13,7 +13,7 @@ description: >-
   Rajatiloja-sarjan ensimmäinen jakso. Pelaajahahmot matkustavat eri puolilta
   Euroopasta Pariisiin, tapaavat toisensa ensimmäistä kertaa kasvokkain ja
   asettuvat taloksi tukikohtana toimivaan Airbnb-asuntoon.
-cover: /images/new-horizons-logo.png
+cover: /images/rajatiloja/raja-1.webp
 mentions:
   - name: Amandine "Didi" Langnes
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#didi'
@@ -98,3 +98,10 @@ Tämä jakso sisältää useita vihjeitä, jotka realisoituvat sarjan myöhemmis
 *   **Lentokenttä:** Pelinjohtaja kuvaili Ranskan lentokenttiä epäeuklidiseksi sokkeloksi.
 *   **Yhtiö:** New Horizons on biotekniikka-alan jätti, jota kuvailtiin hieman Googlea epäilyttävämmäksi.
 *   **Teknologia:** Keskustelussa mainitaan Teams-palaverit ja SingStar-karaoke.
+
+### Lennokkaita lainauksia
+
+*   *"On vain business ja ykkösluokka, ja kaikki muu siitä alas on... no, tiedättekö."* — Didi (selittäessään matkustusstandardejaan)
+*   *"Normaalisti kavahtaisin kosketusta, mutta Didi on kuin aurinko, jonka kohdatessa heijastaa vähän takaisin."* — Thom (Didin halauksesta)
+*   *"Nähdään sitten kun nähdään, jos nähdään."* — Thom (hyvästellessään asuntolaivansa)
+*   *"Puhuuko kukaan ranskaa?"* — Didi (vihaisen naapurin ilmestyessä ovelle)

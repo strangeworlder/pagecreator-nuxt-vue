@@ -1,9 +1,8 @@
-+H: Rajatiloja – Osa 2: Jalkautuminen
++H: Rajatiloja | Ensikohtaaminen, näytös I, jakso I: Matka Pariisiin
 
-Pelaajat: Henna (Didi), Ville (Sten)
-Pelinjohtaja: Petri
+Pelinjohtaja (Petri): Petri
 
-Alkusoitto ja aamu Pariisissa
+Hahmot: Didi (Eevi), Sten (Mikko), Thom (Rami)
 
 Petri (Pelinjohtaja) [00:00:16]
 "Kolmas ja viimeinen päivä kun kirjoitan tänne. 22.11.2023. Olen sammuttanut puhelimeni siinä pelossa, että siellä on uusia, häiritsevämpiä viestejä. En aio kertoa teille, missä tällä hetkellä vietän aikaani. Hän löytäisi minut varmasti, jos teen jonkin virheen antamalla jonkin typerän vihjeen. Kun olen saanut tämän asian hoidettua, suljen puhelimeni ja suuntaan pois verkosta. Ymmärrän nyt todella hyvin, miksi Xav vetäytyi tästä kaikesta. Jos luet tätä, älä yritä seurata askeliani. Älä aina vaan lähde Pariisiin."
@@ -41,8 +40,6 @@ Kahvilanpitäjä on vähän sua nuorempi nainen, joka puhuu hyvin murtavaa engla
 Sten [00:08:40]
 Sten toki tilatessaan parhaansa mukaan käyttää ranskaa, jota ei osaa. Sen verran hän osaa sanoa kuin "café" ja "croissant", mutta kaikki muu menee ohi. Semmoista turistisählinkiä, mutta yritys on tärkeä.
 
-Vastaajaviesti ja työtehtävä
-
 Petri (Pelinjohtaja) [00:09:14]
 Olet saanut ruokaa eteesi, ja sulla on voicemail siinä. Oletan, että otat sen esiin.
 
@@ -78,8 +75,6 @@ Ehkä joku kollega on puolivitsillä lähettänyt sen, että "hei, suahan kiinno
 
 Didi [00:21:14]
 Didi on ehkä tästä porukasta se, jolla on vähiten ollut kontaktia sen kanssa. Hän on kuullut epämääräisiä huhuja salaisesta projektista ja "bleeding edge" -biologiasta, mutta vasta tähän projektiin liityttyä on alkanut yhdistää asioita.
-
-Etsinnät puistossa
 
 Petri (Pelinjohtaja) [00:29:28]
 Pitäisikö teidän sitten jalkautua ja katsoa, josko alueelta löytyisi jotain jatkovihjeitä?

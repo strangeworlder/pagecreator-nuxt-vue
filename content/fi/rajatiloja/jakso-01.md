@@ -27,7 +27,7 @@ mentions:
     type: Person
   - name: '"Evan" (Kuvassa)'
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#evan'
-contentUrl: 'https://www.youtube.com/watch?v=kYbgX8i5GPE'
+contentUrl: 'https://www.youtube.com/watch?v=rOdyOB5BJ3o'
 transcript: /downloads/rajatiloja-transcript/jakso-01.txt
 dateModified: 2026-01-08
 ---

@@ -1,64 +1,110 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import BaseImage from "./BaseImage.vue";
 
 interface Props {
   src: string;
   title?: string;
+  poster?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  title: "Video player",
-});
-
-const embedUrl = computed(() => {
-  // Simple check for YouTube URLs to convert to embed format if needed
-  // This expects the caller to pass a valid embed URL or a standard watch URL
-  const url = props.src;
-  try {
-    const urlObj = new URL(url);
-    if (urlObj.hostname.includes("youtube.com") || urlObj.hostname.includes("youtu.be")) {
-      const v = urlObj.searchParams.get("v");
-      if (v) {
-        return `https://www.youtube.com/embed/${v}`;
-      }
-    }
-  } catch (e) {
-    // console.warn("Invalid URL passed to BaseVideo", url);
-  }
-  return url;
+  title: "Watch video",
+  poster: "",
 });
 </script>
 
 <template>
-  <div class="video-container">
-    <iframe
-      class="video-iframe"
-      :src="embedUrl"
-      :title="title"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
-  </div>
+  <a :href="src" target="_blank" rel="noopener noreferrer" class="video-card" :aria-label="`Watch ${title}`">
+    <div class="video-poster">
+      <BaseImage
+        v-if="poster"
+        :src="poster"
+        :alt="title"
+        class="poster-image"
+        :width="800"
+        :height="450"
+      />
+      <div class="play-overlay">
+        <div class="play-button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="play-icon">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </a>
 </template>
 
 <style scoped>
-.video-container {
-  position: relative;
+.video-card {
+  display: block;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
+  text-decoration: none;
   overflow: hidden;
+  position: relative;
   background-color: var(--color-bg, #000);
 }
 
-.video-iframe {
+.video-poster {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.poster-image {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: none;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover .poster-image {
+  transform: scale(1.05);
+}
+
+.play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.video-card:hover .play-overlay {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.play-button {
+  width: 64px;
+  height: 64px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.video-card:hover .play-button {
+  transform: scale(1.1);
+  background-color: #fff;
+}
+
+.play-icon {
+  width: 32px;
+  height: 32px;
+  color: #000;
+  margin-left: 4px; /* Optical centering for play triangle */
 }
 </style>

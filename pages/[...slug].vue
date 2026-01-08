@@ -582,7 +582,7 @@ if (process.client) {
       </main>
       <aside v-if="useHeroLayout" class="image-column" :class="{ 'video-column': !!videoUrl }">
         <div v-if="videoUrl" class="video-wrapper">
-          <BaseVideo :src="videoUrl" :title="pageTitle" />
+          <BaseVideo :src="videoUrl" :title="pageTitle" :poster="heroImage" />
         </div>
         <HeaderImage v-else :image="heroImage" :alt="pageTitle" />
       </aside>

@@ -1,7 +1,7 @@
 ---
 title: JSON-LD & AEO Ecosystem Guide
 description: Internal guide for AEO structure and Knowledge Graph philosophy.
-dateModified: 2026-01-04
+dateModified: 2026-01-08
 ---
 # JSON-LD & AEO Ecosystem Guide
 

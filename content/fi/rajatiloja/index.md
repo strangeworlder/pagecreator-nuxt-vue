@@ -7,7 +7,6 @@ description: >-
   podcastina.
 contentType:
   - CreativeWorkSeries
-  - VideoObject
 inLanguage:
   - fi
 about:

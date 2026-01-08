@@ -6,9 +6,13 @@ template: episode
 inLanguage:
   - fi
 contentType:
-  - VideoObject
+  - TVEpisode
 partOfSeries:
-  - 'https://gogam.eu/fi/rajatiloja'
+  '@type': CreativeWorkSeries
+  name: Rajatiloja
+  url: 'https://gogam.eu/fi/rajatiloja'
+episodeNumber: 15
+isBasedOn: 'https://www.youtube.com/watch?v=2pC14KHU2Ag'
 description: >-
   Jakso 15. Didi kohtaa mahdottoman ristiriidan Stenin edesmenneen vaimon ja
   Pariisin tapahtumien välillä. Thom tutkii tyttöystäväänsä Decker-mittarilla.

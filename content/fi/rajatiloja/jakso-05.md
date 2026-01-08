@@ -6,9 +6,13 @@ template: episode
 inLanguage:
   - fi
 contentType:
-  - VideoObject
+  - TVEpisode
 partOfSeries:
-  - 'https://gogam.eu/fi/rajatiloja'
+  '@type': CreativeWorkSeries
+  name: Rajatiloja
+  url: 'https://gogam.eu/fi/rajatiloja'
+episodeNumber: 5
+isBasedOn: 'https://www.youtube.com/watch?v=aQ6XsbSDIyI'
 description: >-
   Ryhmä kokoontuu aamupalaveriin pohtimaan yön aikana tehtyjä löydöksiä. Thom on
   analysoinut muistikorttia, ja Didi ja Sten jakavat uutta tietoa. Ryhmä

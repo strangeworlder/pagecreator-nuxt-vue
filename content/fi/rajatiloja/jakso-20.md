@@ -6,9 +6,13 @@ template: episode
 inLanguage:
   - fi
 contentType:
-  - VideoObject
+  - TVEpisode
 partOfSeries:
-  - 'https://gogam.eu/fi/rajatiloja'
+  '@type': CreativeWorkSeries
+  name: Rajatiloja
+  url: 'https://gogam.eu/fi/rajatiloja'
+episodeNumber: 20
+isBasedOn: 'https://www.youtube.com/watch?v=jC5sLVp3ihQ'
 description: >-
   Jakso 20. Ryhmä pakenee Lontoosta metafyysisen repeämän kautta ja putoaa
   pimeälle metsätielle Yhdysvalloissa. Sten kohtaa menneisyytensä, ja ryhmä

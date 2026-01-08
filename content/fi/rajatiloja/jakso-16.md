@@ -6,9 +6,13 @@ template: episode
 inLanguage:
   - fi
 contentType:
-  - VideoObject
+  - TVEpisode
 partOfSeries:
-  - 'https://gogam.eu/fi/rajatiloja'
+  '@type': CreativeWorkSeries
+  name: Rajatiloja
+  url: 'https://gogam.eu/fi/rajatiloja'
+episodeNumber: 16
+isBasedOn: 'https://www.youtube.com/watch?v=j6dS_hwhb1g'
 description: >-
   Jakso 16. Thom tuo tyttöystävänsä Nahian New Horizonsin toimistolle rikkoen
   turvallisuusprotokollia. Ryhmä vertailee valokuvatodisteita ja tajuaa fyysisen

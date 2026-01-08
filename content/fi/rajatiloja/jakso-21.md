@@ -6,9 +6,13 @@ template: episode
 inLanguage:
   - fi
 contentType:
-  - VideoObject
+  - TVEpisode
 partOfSeries:
-  - 'https://gogam.eu/fi/rajatiloja'
+  '@type': CreativeWorkSeries
+  name: Rajatiloja
+  url: 'https://gogam.eu/fi/rajatiloja'
+episodeNumber: 21
+isBasedOn: 'https://www.youtube.com/watch?v=VoadmxpQEaM'
 description: >-
   Jakso 21. Ryhmä kohtaa amerikkalaisen virkavallan ja tajuaa olevansa loukussa
   tieosuudella, joka ei johda minnekään. Thom huomaa outoja yhtäläisyyksiä

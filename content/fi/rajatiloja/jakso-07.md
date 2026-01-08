@@ -6,9 +6,13 @@ template: episode
 inLanguage:
   - fi
 contentType:
-  - VideoObject
+  - TVEpisode
 partOfSeries:
-  - 'https://gogam.eu/fi/rajatiloja'
+  '@type': CreativeWorkSeries
+  name: Rajatiloja
+  url: 'https://gogam.eu/fi/rajatiloja'
+episodeNumber: 7
+isBasedOn: 'https://www.youtube.com/watch?v=nnO0st8m_SM'
 description: >-
   Jakso 7. Ryhmä seuraa "mahdotonta reittiä" purppuraisten neonvalojen perässä.
   He löytävät hylätyn talon kellarin ja kohtaavat ensimmäistä kertaa

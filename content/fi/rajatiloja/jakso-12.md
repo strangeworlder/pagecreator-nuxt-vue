@@ -6,9 +6,13 @@ template: episode
 inLanguage:
   - fi
 contentType:
-  - VideoObject
+  - TVEpisode
 partOfSeries:
-  - 'https://gogam.eu/fi/rajatiloja'
+  '@type': CreativeWorkSeries
+  name: Rajatiloja
+  url: 'https://gogam.eu/fi/rajatiloja'
+episodeNumber: 12
+isBasedOn: 'https://www.youtube.com/watch?v=a3YqdidMD6o'
 description: >-
   Jakso 12. Ryhmä jatkaa tutkimuksiaan Lontoon laboratoriossa pääkonttorin
   vierailijan läsnäollessa. Didi ja Thom kohtaavat neurologisessa kokeessa

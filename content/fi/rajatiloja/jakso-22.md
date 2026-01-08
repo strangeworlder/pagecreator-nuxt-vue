@@ -6,9 +6,13 @@ template: episode
 inLanguage:
   - fi
 contentType:
-  - VideoObject
+  - TVEpisode
 partOfSeries:
-  - 'https://gogam.eu/fi/rajatiloja'
+  '@type': CreativeWorkSeries
+  name: Rajatiloja
+  url: 'https://gogam.eu/fi/rajatiloja'
+episodeNumber: 22
+isBasedOn: 'https://www.youtube.com/watch?v=sEaiDe9keGw'
 description: >-
   Jakso 22. "Hiljainen mies" hyökkää metsätiellä. Didi pelastaa Kathereen
   Cellstonen, mutta Sten joutuu tekemään raskaan uhrauksen ja jää loukkuun omaan

@@ -6,9 +6,13 @@ template: episode
 inLanguage:
   - fi
 contentType:
-  - VideoObject
+  - TVEpisode
 partOfSeries:
-  - 'https://gogam.eu/fi/rajatiloja'
+  '@type': CreativeWorkSeries
+  name: Rajatiloja
+  url: 'https://gogam.eu/fi/rajatiloja'
+episodeNumber: 17
+isBasedOn: 'https://www.youtube.com/watch?v=lnoMn9eHJyQ'
 description: >-
   Jakso 17. Salaisuudet alkavat rakoilla. Sten paljastaa henkilökohtaisen
   motivaationsa kuoleman voittamisesta, ja Thom kertoo vierailleensa

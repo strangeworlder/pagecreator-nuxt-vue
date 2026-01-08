@@ -6,9 +6,13 @@ template: episode
 inLanguage:
   - fi
 contentType:
-  - VideoObject
+  - TVEpisode
 partOfSeries:
-  - 'https://gogam.eu/fi/rajatiloja'
+  '@type': CreativeWorkSeries
+  name: Rajatiloja
+  url: 'https://gogam.eu/fi/rajatiloja'
+episodeNumber: 6
+isBasedOn: 'https://www.youtube.com/watch?v=65SBjghu21I'
 description: >-
   Jakso 6. Ryhmä soluttautuu "Valkoinen S" -karaokebaariin etsimään kadonnutta
   Evania. Ilta sisältää lauluesityksiä, mutta päättyy konfliktiin, joka johtaa

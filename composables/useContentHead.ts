@@ -474,7 +474,6 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
       }
     }
 
-    // 7. GAME / CREATIVEWORK MASTER NODE (SUBPAGE)
     const isCreativeWork = [
       "Game",
       "CreativeWork",
@@ -482,6 +481,7 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
       "TTRPG",
       "SoftwareApplication",
       "VideoObject",
+      "TVEpisode",
       "CreativeWorkSeries",
     ].some((t) => {
       // Check both string and array formats
@@ -545,13 +545,51 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
       if (doc.inLanguage) itemNode.inLanguage = doc.inLanguage;
       if (doc.license) itemNode.license = doc.license;
 
-      // VideoObject Specifics
-      if ((Array.isArray(schemaType) ? schemaType : [schemaType]).includes("VideoObject")) {
+      // VideoObject / TVEpisode Specifics
+      const isVideoOrEpisode = (Array.isArray(schemaType) ? schemaType : [schemaType]).some(
+        (t) =>
+          ["VideoObject", "TVEpisode"].includes(t as string)
+      );
+
+      if (isVideoOrEpisode) {
         if (doc.duration) itemNode.duration = doc.duration;
         if (doc.datePublished) itemNode.uploadDate = doc.datePublished;
         if (doc.contentUrl) itemNode.contentUrl = toAbsolute(doc.contentUrl);
         // Transcript moved to subjectOf to avoid schema type mismatch (URL vs Text)
+        // BUT for TVEpisode, we can also have it as 'transcript' if it's a URL in some contexts, but schema.org says text.
+        // Let's keep subjectOf for full safety, but user requested direct property if possible or refined link.
+        // User request: "Add transcript property... pointing to the .txt URL". Schema.org says transcript is Text.
+        // Google recommends using 'transcript' property but as text? No, google often parses URL if provided.
+        // Let's try adding it directly as requested.
+        if (doc.transcript) itemNode.transcript = toAbsolute(doc.transcript);
+
         if (image) itemNode.thumbnailUrl = image;
+
+        if (doc.episodeNumber) itemNode.episodeNumber = doc.episodeNumber;
+
+        if (doc.partOfSeries) {
+          // Pass through structured object if it exists
+          itemNode.partOfSeries = doc.partOfSeries;
+        }
+
+        // WatchAction
+        if (doc.contentUrl && typeof doc.contentUrl === 'string' && doc.contentUrl.includes('youtube.com')) {
+          itemNode.potentialAction = {
+            "@type": "WatchAction",
+            target: {
+              "@type": "EntryPoint",
+              urlTemplate: doc.contentUrl,
+              actionPlatform: [
+                "http://schema.org/DesktopWebPlatform",
+                "http://schema.org/MobileWebPlatform"
+              ]
+            },
+            expectsAcceptanceOf: {
+              "@type": "Offer",
+              category: "free"
+            }
+          };
+        }
       }
 
       // Image Reference
@@ -572,20 +610,24 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
       // isBasedOn usually refers to EXTERNAL entities or other games.
       // If external, full Stub (Name + ID/URL).
       if (doc.isBasedOn) {
-        const based = doc.isBasedOn as CreativeWorkBase;
-        // If it has an ID, use it as @id.
-        itemNode.isBasedOn = {
-          "@type": "CreativeWork",
-          "@id": based.id || undefined,
-          name: based.name,
-          url: based.url,
-          author: based.author
-            ? {
-              "@type": "Person",
-              name: based.author.name || based.author, // Simple name for external authors
-            }
-            : undefined,
-        };
+        if (typeof doc.isBasedOn === 'string') {
+          itemNode.isBasedOn = doc.isBasedOn;
+        } else {
+          const based = doc.isBasedOn as CreativeWorkBase;
+          // If it has an ID, use it as @id.
+          itemNode.isBasedOn = {
+            "@type": "CreativeWork",
+            "@id": based.id || undefined,
+            name: based.name,
+            url: based.url,
+            author: based.author
+              ? {
+                "@type": "Person",
+                name: based.author.name || based.author, // Simple name for external authors
+              }
+              : undefined,
+          };
+        }
       }
 
       // Mentions (Testimonials or Characters)
@@ -608,7 +650,7 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
         } else {
           // It's likely a list of Characters or Entities
           const entities = rawMentions.map((m: any) => ({
-            "@type": m.type || "Person",
+            "@type": m.type || "Person", // Default to Person if not specified
             name: m.name,
             sameAs: m.id || m.sameAs,
             "@id": m.id, // Optional: if provided, use it
@@ -617,7 +659,7 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
           // Pedantic Rule: Use 'character' for VideoObject/Series
           if (
             (Array.isArray(schemaType) ? schemaType : [schemaType]).some((t) =>
-              ["VideoObject", "CreativeWorkSeries", "Movie", "TVSeries", "RadioSeries"].includes(t as string)
+              ["VideoObject", "TVEpisode", "CreativeWorkSeries", "Movie", "TVSeries", "RadioSeries"].includes(t as string)
             )
           ) {
             itemNode.character = entities;
@@ -770,6 +812,10 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
           .split("/")
           .filter((p) => !!p)
           .pop();
+      // Only if it's NOT a series main page itself?
+      // If it is a CreativeWorkSeries, the mainEntity is ITSELF.
+      // The logic 'mainEntity = { @id: ... }' is redundant if @id matches.
+      // But 'webPageNode' is the WebPage. It's mainEntity IS the CreativeWork.
       webPageNode.mainEntity = { "@id": `${baseUrl}/#game-${slug}` };
     } else {
       // Hub Page Main Entity
@@ -791,6 +837,24 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
       "@context": "https://schema.org",
       "@graph": graph,
     };
+
+    // Social Meta Tags Logic
+    const isVideoContent = (Array.isArray(schemaType) ? schemaType : [schemaType]).some(t =>
+      ["VideoObject", "TVEpisode"].includes(t as string)
+    );
+
+    if (isVideoContent && doc.contentUrl && typeof doc.contentUrl === 'string' && doc.contentUrl.includes('youtube.com')) {
+      const videoId = doc.contentUrl.split('v=')[1]?.split('&')[0];
+      if (videoId) {
+        const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+        meta.push({ property: "og:video", content: embedUrl });
+        meta.push({ property: "og:video:type", content: "text/html" });
+        meta.push({ name: "twitter:card", content: "player" });
+        meta.push({ name: "twitter:player", content: embedUrl });
+        meta.push({ name: "twitter:player:width", content: "1280" });
+        meta.push({ name: "twitter:player:height", content: "720" });
+      }
+    }
 
     useHead({
       title,

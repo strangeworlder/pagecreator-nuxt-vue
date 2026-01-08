@@ -6,9 +6,13 @@ template: episode
 inLanguage:
   - fi
 contentType:
-  - VideoObject
+  - TVEpisode
 partOfSeries:
-  - 'https://gogam.eu/fi/rajatiloja'
+  '@type': CreativeWorkSeries
+  name: Rajatiloja
+  url: 'https://gogam.eu/fi/rajatiloja'
+episodeNumber: 11
+isBasedOn: 'https://www.youtube.com/watch?v=6y_I2ASwfaM'
 description: >-
   Jakso 11. Toinen näytös jatkuu. Didi kokee selittämättömän siirtymän keskellä
   Lontoota. New Horizonsin pääkonttorin tarkastaja saapuu todistamaan suurta

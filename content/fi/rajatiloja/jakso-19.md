@@ -6,9 +6,13 @@ template: episode
 inLanguage:
   - fi
 contentType:
-  - VideoObject
+  - TVEpisode
 partOfSeries:
-  - 'https://gogam.eu/fi/rajatiloja'
+  '@type': CreativeWorkSeries
+  name: Rajatiloja
+  url: 'https://gogam.eu/fi/rajatiloja'
+episodeNumber: 19
+isBasedOn: 'https://www.youtube.com/watch?v=P5RlBP7gkGk'
 description: >-
   Jakso 19. Kolmas näytös alkaa. "Hiljainen mies" murtautuu sisään
   todellisuuteen. New Horizonsin toimisto muuttuu hengenvaaralliseksi

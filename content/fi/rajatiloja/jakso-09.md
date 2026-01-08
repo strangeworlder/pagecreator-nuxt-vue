@@ -6,9 +6,13 @@ template: episode
 inLanguage:
   - fi
 contentType:
-  - VideoObject
+  - TVEpisode
 partOfSeries:
-  - 'https://gogam.eu/fi/rajatiloja'
+  '@type': CreativeWorkSeries
+  name: Rajatiloja
+  url: 'https://gogam.eu/fi/rajatiloja'
+episodeNumber: 9
+isBasedOn: 'https://www.youtube.com/watch?v=NTHfsMGHduY'
 description: >-
   Jakso 9. Ryhmä palaa äkillisesti takaisin todellisuuteen yliluonnollisesta
   tilasta, kerää fyysisiä todisteita (biomassanäyte) ja vetäytyy nuolemaan

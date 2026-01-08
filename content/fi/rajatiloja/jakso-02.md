@@ -6,9 +6,13 @@ template: episode
 inLanguage:
   - fi
 contentType:
-  - VideoObject
+  - TVEpisode
 partOfSeries:
-  - 'https://gogam.eu/fi/rajatiloja'
+  '@type': CreativeWorkSeries
+  name: Rajatiloja
+  url: 'https://gogam.eu/fi/rajatiloja'
+episodeNumber: 2
+isBasedOn: 'https://www.youtube.com/watch?v=Qwrmu6tr_N0'
 description: >-
   Tutkimusryhmä aloittaa varsinaisen työn perehtymällä internetistä löytyneeseen
   "creepypasta"-tarinaan ja jalkautumalla sen vihjeiden perusteella sateiseen
@@ -72,7 +76,9 @@ Ryhmä päättää siirtyä läheiseen kahvilaan kuivattelemaan ja tutkimaan lö
 
 Jakson alussa kuullaan ote tutkimuksen kohteena olevan blogikirjoituksen viimeisestä merkinnästä:
 
-> "Kolmas ja viimeinen päivä kun kirjoitan tänne, 22.1.2023. Olen sammuttanut puhelimeni siinä pelossa, että siellä on uusia, häiritsevämpiä viestejä. [...] Ymmärrän nyt todella hyvin, miksi Xav vetäytyi tästä kaikesta. Jos luet tätä: älä yritä seurata askeliani. Älä ainakaan lähde Pariisiin."
+::blockquote{cite="/downloads/rajatiloja-transcript/jakso-02.txt"}
+"Kolmas ja viimeinen päivä kun kirjoitan tänne, 22.1.2023. Olen sammuttanut puhelimeni siinä pelossa, että siellä on uusia, häiritsevämpiä viestejä. [...] Ymmärrän nyt todella hyvin, miksi Xav vetäytyi tästä kaikesta. Jos luet tätä: älä yritä seurata askeliani. Älä ainakaan lähde Pariisiin."
+::
 
 ## Pohjustukset ja viittaukset (Easter Eggs)
 

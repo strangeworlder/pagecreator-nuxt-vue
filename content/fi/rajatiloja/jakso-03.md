@@ -6,9 +6,13 @@ template: episode
 inLanguage:
   - fi
 contentType:
-  - VideoObject
+  - TVEpisode
 partOfSeries:
-  - 'https://gogam.eu/fi/rajatiloja'
+  '@type': CreativeWorkSeries
+  name: Rajatiloja
+  url: 'https://gogam.eu/fi/rajatiloja'
+episodeNumber: 3
+isBasedOn: 'https://www.youtube.com/watch?v=Q-yNfLTvp7M'
 description: >-
   Thom Lindell tutkii creepypasta-tarinan taustoja ja kohtaa yllättäen tarinassa
   mainitun henkilön siskon taidegalleriassa. Uusi johtolanka löytyy yllättävästä

@@ -6,9 +6,13 @@ template: episode
 inLanguage:
   - fi
 contentType:
-  - VideoObject
+  - TVEpisode
 partOfSeries:
-  - 'https://gogam.eu/fi/rajatiloja'
+  '@type': CreativeWorkSeries
+  name: Rajatiloja
+  url: 'https://gogam.eu/fi/rajatiloja'
+episodeNumber: 4
+isBasedOn: 'https://www.youtube.com/watch?v=sz7W4TEmK48'
 description: >-
   Sten ja Didi toipuvat sateisesta etsintäreissusta ja tekevät uusia havaintoja
   sosiaalisen median kautta. Didi hoitaa liikesuhteita illallisella, kun taas

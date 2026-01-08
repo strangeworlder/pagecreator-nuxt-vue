@@ -6,9 +6,13 @@ template: episode
 inLanguage:
   - fi
 contentType:
-  - VideoObject
+  - TVEpisode
 partOfSeries:
-  - 'https://gogam.eu/fi/rajatiloja'
+  '@type': CreativeWorkSeries
+  name: Rajatiloja
+  url: 'https://gogam.eu/fi/rajatiloja'
+episodeNumber: 23
+isBasedOn: 'https://www.youtube.com/watch?v=X-EGKZ7qKBw'
 description: >-
   Jakso 23. Ryhmä on hajaantunut eri puolille liminaalitilaa. Sten pakenee
   vääristyneestä muistostaan Lontoon toimistolle. Thom ja Kathereen seuraavat

@@ -6,9 +6,13 @@ template: episode
 inLanguage:
   - fi
 contentType:
-  - VideoObject
+  - TVEpisode
 partOfSeries:
-  - 'https://gogam.eu/fi/rajatiloja'
+  '@type': CreativeWorkSeries
+  name: Rajatiloja
+  url: 'https://gogam.eu/fi/rajatiloja'
+episodeNumber: 25
+isBasedOn: 'https://www.youtube.com/watch?v=CYeJ2yzgfew'
 description: >-
   Jakso 25. Kauden päätösjakso. Thom menettää itsensä pidätelläkseen Hiljaista
   miestä. Sten ja Didi tekevät epätoivoisen suunnitelman tuhotakseen olennon

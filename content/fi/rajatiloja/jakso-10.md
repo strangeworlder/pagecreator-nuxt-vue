@@ -6,9 +6,13 @@ template: episode
 inLanguage:
   - fi
 contentType:
-  - VideoObject
+  - TVEpisode
 partOfSeries:
-  - 'https://gogam.eu/fi/rajatiloja'
+  '@type': CreativeWorkSeries
+  name: Rajatiloja
+  url: 'https://gogam.eu/fi/rajatiloja'
+episodeNumber: 10
+isBasedOn: 'https://www.youtube.com/watch?v=apMW2GnghGE'
 description: >-
   Jakso 10. Toinen näytös alkaa. Ryhmä perustaa uuden tukikohdan Lontooseen
   tutkiakseen Pariisista tuotua näytettä. Thom kokee radikaalin

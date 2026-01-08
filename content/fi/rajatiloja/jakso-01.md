@@ -6,9 +6,13 @@ template: episode
 inLanguage:
   - fi
 contentType:
-  - VideoObject
+  - TVEpisode
 partOfSeries:
-  - 'https://gogam.eu/fi/rajatiloja'
+  '@type': CreativeWorkSeries
+  name: Rajatiloja
+  url: 'https://gogam.eu/fi/rajatiloja'
+episodeNumber: 1
+isBasedOn: 'https://www.youtube.com/watch?v=rOdyOB5BJ3o'
 description: >-
   Rajatiloja-sarjan ensimmäinen jakso. Pelaajahahmot matkustavat eri puolilta
   Euroopasta Pariisiin, tapaavat toisensa ensimmäistä kertaa kasvokkain ja
@@ -71,7 +75,9 @@ Varsinaisen työn on määrä alkaa seuraavana aamuna.
 
 Jakso alkaa narratiivilla, joka toimii mysteerin ytimenä:
 
-> "En oikeasti miettinyt näitä juttuja pitkään aikaan. Mutta ystäväni kuolema kymmenen vuoden takaa palasi mieleeni. Xav oli minulle uskomattoman rakas ennen kuin hän erakoitui ja... no, kuoli. Päädyin tekemään yllättävän ja pitkän matkan Pariisiin hänen hautajaisiinsa."
+::blockquote{cite="/downloads/rajatiloja-transcript/jakso-01.txt"}
+"En oikeasti miettinyt näitä juttuja pitkään aikaan. Mutta ystäväni kuolema kymmenen vuoden takaa palasi mieleeni. Xav oli minulle uskomattoman rakas ennen kuin hän erakoitui ja... no, kuoli. Päädyin tekemään yllättävän ja pitkän matkan Pariisiin hänen hautajaisiinsa."
+::
 
 ## Pohjustukset ja viittaukset (Easter Eggs)
 

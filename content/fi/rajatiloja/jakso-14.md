@@ -6,9 +6,13 @@ template: episode
 inLanguage:
   - fi
 contentType:
-  - VideoObject
+  - TVEpisode
 partOfSeries:
-  - 'https://gogam.eu/fi/rajatiloja'
+  '@type': CreativeWorkSeries
+  name: Rajatiloja
+  url: 'https://gogam.eu/fi/rajatiloja'
+episodeNumber: 14
+isBasedOn: 'https://www.youtube.com/watch?v=tpVncZqg32g'
 description: >-
   Jakso 14. Thom etsii maadoittumista vedestä ja kohtaa tyttöystävänsä Nahian.
   Sten ja Didi syventävät ystävyyttään illallisella, mutta ilta päättyy

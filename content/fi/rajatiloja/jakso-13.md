@@ -6,9 +6,13 @@ template: episode
 inLanguage:
   - fi
 contentType:
-  - VideoObject
+  - TVEpisode
 partOfSeries:
-  - 'https://gogam.eu/fi/rajatiloja'
+  '@type': CreativeWorkSeries
+  name: Rajatiloja
+  url: 'https://gogam.eu/fi/rajatiloja'
+episodeNumber: 13
+isBasedOn: 'https://www.youtube.com/watch?v=xcDcJmNs3Rg'
 description: >-
   Jakso 13. Ryhmä on hajaantunut henkisesti traumaattisten tapahtumien jälkeen.
   Didi yrittää maadoittua ilman teknologiaa, Sten kyseenalaistaa todellisuuden

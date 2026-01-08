@@ -6,9 +6,13 @@ template: episode
 inLanguage:
   - fi
 contentType:
-  - VideoObject
+  - TVEpisode
 partOfSeries:
-  - 'https://gogam.eu/fi/rajatiloja'
+  '@type': CreativeWorkSeries
+  name: Rajatiloja
+  url: 'https://gogam.eu/fi/rajatiloja'
+episodeNumber: 18
+isBasedOn: 'https://www.youtube.com/watch?v=Dp97AlxBVfQ'
 description: >-
   Jakso 18. Uhka eskaloituu. Toimistoon ilmestyy tyhjästä ylimääräinen huone.
   Sten ymmärtää tutkimustensa paradoksaalisen luonteen. Jakso päättyy

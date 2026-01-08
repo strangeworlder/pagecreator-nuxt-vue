@@ -475,12 +475,18 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
     }
 
     // 7. GAME / CREATIVEWORK MASTER NODE (SUBPAGE)
-    const isCreativeWork = ["Game", "CreativeWork", "Book", "TTRPG", "SoftwareApplication"].some(
-      (t) => {
-        // Check both string and array formats
-        return Array.isArray(typeArray) ? typeArray.includes(t) : typeArray === t;
-      },
-    );
+    const isCreativeWork = [
+      "Game",
+      "CreativeWork",
+      "Book",
+      "TTRPG",
+      "SoftwareApplication",
+      "VideoObject",
+      "CreativeWorkSeries",
+    ].some((t) => {
+      // Check both string and array formats
+      return Array.isArray(typeArray) ? typeArray.includes(t) : typeArray === t;
+    });
 
     if (isCreativeWork) {
       // Determine Master ID for this specific Game
@@ -529,6 +535,15 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
       if (doc.inLanguage) itemNode.inLanguage = doc.inLanguage;
       if (doc.license) itemNode.license = doc.license;
 
+      // VideoObject Specifics
+      if ((Array.isArray(schemaType) ? schemaType : [schemaType]).includes("VideoObject")) {
+        if (doc.duration) itemNode.duration = doc.duration;
+        if (doc.datePublished) itemNode.uploadDate = doc.datePublished;
+        if (doc.contentUrl) itemNode.contentUrl = doc.contentUrl;
+        if (doc.transcript) itemNode.transcript = doc.transcript;
+        if (image) itemNode.thumbnailUrl = image;
+      }
+
       // Image Reference
       if (image) {
         itemNode.image = {
@@ -563,19 +578,43 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
         };
       }
 
-      // Mentions (Testimonials) - LIVES HERE
+      // Mentions (Testimonials or Characters)
       const rawMentions = doc.mentions || doc.quotes;
       if (rawMentions && Array.isArray(rawMentions)) {
-        itemNode.mentions = rawMentions.map((m: any) => ({
-          "@type": "CreativeWork",
-          text: m.text || m.quote,
-          author: {
-            "@type": "Person",
-            name: m.source || m.author?.name || m.author,
-            jobTitle: m.jobTitle || m.title,
-          },
-          datePublished: m.date,
-        }));
+        // Simple heuristic: if it has 'quote' or 'text', it's a testimonial
+        const isTestimonial = rawMentions.some((m: any) => m.quote || m.text);
+
+        if (isTestimonial) {
+          itemNode.mentions = rawMentions.map((m: any) => ({
+            "@type": "CreativeWork",
+            text: m.text || m.quote,
+            author: {
+              "@type": "Person",
+              name: m.source || m.author?.name || m.author,
+              jobTitle: m.jobTitle || m.title,
+            },
+            datePublished: m.date,
+          }));
+        } else {
+          // It's likely a list of Characters or Entities
+          const entities = rawMentions.map((m: any) => ({
+            "@type": m.type || "Person",
+            name: m.name,
+            sameAs: m.id || m.sameAs,
+            "@id": m.id, // Optional: if provided, use it
+          }));
+
+          // Pedantic Rule: Use 'character' for VideoObject/Series
+          if (
+            (Array.isArray(schemaType) ? schemaType : [schemaType]).some((t) =>
+              ["VideoObject", "CreativeWorkSeries", "Movie", "TVSeries", "RadioSeries"].includes(t as string)
+            )
+          ) {
+            itemNode.character = entities;
+          } else {
+            itemNode.mentions = entities;
+          }
+        }
       }
 
       // Citation Graph

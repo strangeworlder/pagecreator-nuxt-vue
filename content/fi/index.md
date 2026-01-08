@@ -104,7 +104,7 @@ Gogam on täysiverinen indie-tehopakkaus, joka puskee ulos pieniä, super-innova
 | Pelin nimi | Systeemi | Status | Kieli |
 | :--- | :--- | :--- | :--- |
 | **Autot & Perhe** / **Cars & Family** | Lasers & Feelings | Valmis | Englanti, Suomi, Portugali |
-| **Pros & Cons** | Lasers & Feelings | Valmis | Englanti, Suomi, Japani |
+| **Pros & Cons** | Lasers & Feelings | Valmis | Englanti, Japani |
 | **Cyberpunk is Dead** | Forged in the Dark | Valmis | Englanti |
 | **The Necessary Eagle vs. The Good Cad** | Custom Card Game | Valmis | Englanti |
 | **Vuosisata.** | Tarot System | Valmis | Englanti |

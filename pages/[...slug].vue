@@ -457,6 +457,31 @@ const pageDescription = computed(() => {
     "This is the TSS starter. Content below is rendered from Markdown."
   );
 });
+
+const pageAlternateLocales = computed(() => {
+  const d = renderDoc.value as Record<string, unknown>;
+  const raw = d?.alternateLocales;
+  if (!raw) return [];
+  const list = Array.isArray(raw) ? raw : [raw];
+
+  return list.map((item: any) => {
+    const code = typeof item === "string" ? item : item.code;
+    let path = typeof item === "object" ? item.path : undefined;
+
+    if (!path && code) {
+      const currentPath = route.path;
+      const pathWithoutLocale = currentPath.replace(/^\/[a-z]{2}(\/|$)/, "/") || "/";
+      if (code === defaultLocale) {
+        path = pathWithoutLocale;
+      } else {
+        const suffix = pathWithoutLocale === "/" ? "" : pathWithoutLocale;
+        path = `/${code}${suffix}`;
+      }
+    }
+
+    return { code, path };
+  }).filter((i: any) => i && i.code && i.path);
+});
 // Page theme from front matter or template; default to 'classic' when not set
 const pageTheme = computed(() => {
   const tpl = String((renderDoc.value as Record<string, unknown>)?.template || "").toLowerCase();
@@ -552,7 +577,7 @@ if (process.client) {
 
 <template>
   <div>
-    <PageHeader v-if="!isProductTemplate" :title="pageTitle" :description="pageDescription" />
+    <PageHeader v-if="!isProductTemplate" :title="pageTitle" :description="pageDescription" :alternate-locales="pageAlternateLocales" />
     <component 
       :is="(enhancementsEnabled && enhancedNavigationComp) ? enhancedNavigationComp : Navigation" 
       v-if="isIndexPage" 
@@ -568,7 +593,7 @@ if (process.client) {
       </aside>
       <main class="product-main prose">
         <div class="product-content">
-          <PageHeader :title="pageTitle" :description="pageDescription" />
+          <PageHeader :title="pageTitle" :description="pageDescription" :alternate-locales="pageAlternateLocales" />
           <ContentRenderer v-if="data" :key="version" :value="data" :components="proseComponents" />
           <PageFooter />
         </div>

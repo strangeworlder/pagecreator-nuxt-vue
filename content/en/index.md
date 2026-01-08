@@ -102,7 +102,7 @@ Gogam is the indie tabletop roleplaying game brand of designer Petri Leinonen. B
 | Game Name | System | Status | Language |
 | :--- | :--- | :--- | :--- |
 | **Cars & Family** | Lasers & Feelings | Completed | English, Finnish, Portuguese |
-| **Pros & Cons** | Lasers & Feelings | Completed | English, Finnish, Japanese |
+| **Pros & Cons** | Lasers & Feelings | Completed | English, Japanese |
 | **Cyberpunk is Dead** | Forged in the Dark | Completed | English |
 | **The Necessary Eagle vs. The Good Cad** | Custom Card Game | Completed | English |
 | **Vuosisata.** | Tarot System | Completed | English |

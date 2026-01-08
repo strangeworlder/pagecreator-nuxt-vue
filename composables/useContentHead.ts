@@ -228,13 +228,27 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
     link.push({ rel: "canonical", href: url });
 
     const alternatesRaw: unknown = doc.alternateLocales;
-    const alternates = Array.isArray(alternatesRaw)
-      ? alternatesRaw
-        .map((value) => (typeof value === "string" ? value.trim() : ""))
-        .filter((value): value is string => isLikelyLocale(value))
-      : [];
+    const alternates: { code: string; path?: string }[] = [];
 
-    const alternateLocaleSet = new Set(alternates.map(formatHreflang));
+    if (Array.isArray(alternatesRaw)) {
+      for (const val of alternatesRaw) {
+        if (typeof val === "string" && isLikelyLocale(val)) {
+          alternates.push({ code: val.trim() });
+        } else if (
+          typeof val === "object" &&
+          val &&
+          "code" in val &&
+          typeof (val as any).code === "string"
+        ) {
+          const code = ((val as any).code as string).trim();
+          if (isLikelyLocale(code)) {
+            alternates.push({ code, path: (val as any).path });
+          }
+        }
+      }
+    }
+
+    const alternateLocaleSet = new Set(alternates.map((a) => formatHreflang(a.code)));
     const hasDefaultLocaleVariant =
       formattedDocumentLocale === formatHreflang(defaultLocale) ||
       alternateLocaleSet.has(formatHreflang(defaultLocale));
@@ -258,19 +272,35 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
 
     addHrefLang(formattedDocumentLocale, path);
 
-    for (const alt of dedupe(alternates.map(formatHreflang))) {
-      if (!alt || alt === formattedDocumentLocale) continue;
-      const segment = localeToPathSegment(alt);
-      const altPath = replaceFirstPathSegment(basePathForAlternates, segment);
-      addHrefLang(alt, altPath);
+    const processedCodes = new Set<string>();
+    for (const alt of alternates) {
+      const code = formatHreflang(alt.code);
+      if (!code || code === formattedDocumentLocale || processedCodes.has(code)) continue;
+      processedCodes.add(code);
+
+      let altPath = alt.path;
+      if (!altPath) {
+        const segment = localeToPathSegment(code);
+        altPath = replaceFirstPathSegment(basePathForAlternates, segment);
+      }
+      addHrefLang(code, altPath);
     }
 
     if (hasDefaultLocaleVariant) {
-      const defaultSegment = localeToPathSegment(formatHreflang(defaultLocale));
-      const defaultHrefPath =
-        formatHreflang(defaultLocale) === formattedDocumentLocale
-          ? path
-          : replaceFirstPathSegment(basePathForAlternates, defaultSegment);
+      const defaultCode = formatHreflang(defaultLocale);
+      let defaultHrefPath: string;
+      const explicitDefault = alternates.find(
+        (a) => formatHreflang(a.code) === defaultCode
+      );
+
+      if (defaultCode === formattedDocumentLocale) {
+        defaultHrefPath = path;
+      } else if (explicitDefault?.path) {
+        defaultHrefPath = explicitDefault.path;
+      } else {
+        const defaultSegment = localeToPathSegment(defaultCode);
+        defaultHrefPath = replaceFirstPathSegment(basePathForAlternates, defaultSegment);
+      }
       addHrefLang("x-default", defaultHrefPath);
     }
 

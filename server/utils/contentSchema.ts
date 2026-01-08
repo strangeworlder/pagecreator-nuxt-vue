@@ -102,7 +102,7 @@ export const frontMatterSchema = z.object({
   productTheme: z.any().optional(),
   productNav: z.any().optional(),
   aliases: z.array(z.string()).optional(),
-  alternateLocales: z.array(z.string()).optional(),
+  alternateLocales: z.array(z.union([z.string(), z.object({ code: z.string(), path: z.string() })])).optional(),
 
   // Organization (SSOT on Index)
   organization: z.object({

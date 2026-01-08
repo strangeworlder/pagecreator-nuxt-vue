@@ -8,6 +8,8 @@ const props = defineProps({
 
 // Clear error and go home
 const handleError = () => clearError({ redirect: "/" });
+
+const isDev = import.meta.dev;
 </script>
 
 <template>
@@ -27,7 +29,7 @@ const handleError = () => clearError({ redirect: "/" });
           </template>
         </p>
         
-        <div v-if="process.dev && error?.stack" class="error-debug">
+        <div v-if="isDev && error?.stack" class="error-debug">
           <pre>{{ error.stack }}</pre>
         </div>
 

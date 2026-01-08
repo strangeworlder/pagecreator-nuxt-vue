@@ -9,7 +9,8 @@ tags:
   - starter
 canonical: /fi
 alternateLocales:
-  - en
+  - code: en
+    path: /
 cover: /gogam-facebook-etc.png
 summary: |
   Petri Leinosen roolipelejä. Indie-pöytäroolipelejä kuten Autot & Perhe,

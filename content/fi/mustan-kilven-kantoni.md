@@ -20,7 +20,7 @@ author:
     - 'https://bsky.app/profile/strangeworlder.bsky.social'
     - 'https://www.threads.com/@gogam.eu'
 datePublished: 2025-12-28
-dateModified: 2026-01-04
+dateModified: 2026-01-08
 tags:
   - L&L
   - maailma
@@ -97,7 +97,8 @@ faq:
       suuressa, mystisessä erämaassa.
 canonical: /fi/mustan-kilven-kantoni
 alternateLocales:
-  - en
+  - code: en
+    path: /en/mustan-kilven-kantoni
 summary: >
   Mustan kilven kantoni on seikkailumaailma, jossa suomalainen kansanperinne
   kohtaa maailmanlopun jälkeisen fantasian.

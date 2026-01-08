@@ -42,7 +42,7 @@ sameAs:
 
 # Rajatiloja
 
-**Rajatiloja** on suomenkielinen *actual play* -sarja, jossa pelataan Petri Leinosen suunnittelemaa modernia scifi-kauhupeliä, **+H**. Sarjaa julkaistaan Roachsphere-YouTube-kanavalla sekä podcastina.
+**Rajatiloja** on suomenkielinen *roolipelataan*-sarja (*actual play* -sarja), jossa pelataan Petri Leinosen suunnittelemaa modernia scifi-kauhupeliä, **+H**. Sarjaa julkaistaan Roachsphere-YouTube-kanavalla sekä podcastina.
 
 Sarja seuraa New Horizons -bioteknologiayhtiön alihankkijan, BioNexuksen, kenttätiimiä. Heidän tehtävänään on tutkia "varjobiosfäärin" ilmiöitä – tuntematonta, ei-hiilipohjaista elämää, joka on alkanut aktivoitua vaarallisella tavalla. Ensimmäisellä kaudella ryhmä päätyy Pariisiin tutkimaan internetistä löytynyttä "creepypasta"-tekstiä, joka osoittautuu johtolangaksi johonkin paljon suurempaan.
 

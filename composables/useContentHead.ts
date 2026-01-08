@@ -539,8 +539,8 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
       if ((Array.isArray(schemaType) ? schemaType : [schemaType]).includes("VideoObject")) {
         if (doc.duration) itemNode.duration = doc.duration;
         if (doc.datePublished) itemNode.uploadDate = doc.datePublished;
-        if (doc.contentUrl) itemNode.contentUrl = doc.contentUrl;
-        if (doc.transcript) itemNode.transcript = doc.transcript;
+        if (doc.contentUrl) itemNode.contentUrl = toAbsolute(doc.contentUrl);
+        if (doc.transcript) itemNode.transcript = toAbsolute(doc.transcript);
         if (image) itemNode.thumbnailUrl = image;
       }
 

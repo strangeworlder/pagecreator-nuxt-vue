@@ -27,74 +27,74 @@ mentions:
     type: Person
   - name: '"Evan" (Kuvassa)'
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#evan'
-contentUrl: 'https://www.youtube.com/watch?v=rOdyOB5BJ3o'
+contentUrl: 'https://www.youtube.com/watch?v=kYbgX8i5GPE'
+transcript: /downloads/rajatiloja-transcript/jakso-01.txt
 dateModified: 2026-01-08
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
-**Sijainti:** Pariisi, Ranska (6. arrondissement)
+Jakso pohjustaa mysteerin, esittelee keskeiset tutkijat ja kuljettaa ryhmän Pariisin sydämeen.
 
-## Juonitiivistelmä
+## Jakson yleiskatsaus ja juonitiivistelmä
 
-### Alkuasetelma ja lähtö
-Jakso alkaa pelinjohtajan lukemalla "creepypastalla", joka kertoo kertojan ystävän kuolemasta Pariisissa kymmenen vuotta sitten. Tämä tarina toimii kimmokkeena tutkimusmatkalle.
+### 1. Alkuasetelma ja lähtö
 
-Hahmot esitellään heidän valmistautuessaan matkaan:
-*   **Didi** on kotonaan Oslossa modernissa villassa. Hänen äitinsä on paikalla ja kritisoi tyttären matkustamista turistiluokassa sekä vaatii tätä soittamaan serkuilleen Pariisissa.
-*   **Sten** pakkaa tavaroitaan elegantissa mutta minimalistisessa kodissaan. Hyllyllä on hääkuva, ja Stenillä on sormus, mutta vaimoa ei näy mailla halmeilla. Pakkaaminen on erittäin järjestelmällistä.
-*   **Thom** valmistautuu asuntolaivassaan. Tunnelma on hämärä ja tekninen. Thom leikkaa ranteestaan irti kasan festarirannekkeita ja hänellä on tuoreita rokotusjälkiä.
+Jakso käynnistyy pelinjohtaja Petrin lukemalla creepypastalla, joka kertoo kymmenen vuotta sitten Pariisissa tapahtuneesta ystävän kuolemasta. Tarina toimii katalyyttinä tutkijaryhmän kokoontumiselle. Hahmot esitellään heidän valmistautuessaan matkaan:
 
-### Saapuminen Pariisiin
-Thom saapuu ensimmäisenä Pariisiin ja valmistelee vuokratun Airbnb-asunnon. Asunto sijaitsee 6. arrondissementissa, Rue de Rennesin ja Rue du Dragonin välimaastossa. Rakennuksen porttikongia vartioi metallinen lohikäärme-gargoili. Asunto on vanhassa kivitalossa neljännessä kerroksessa.
+*   **Didi:** Pakkaa kalliita vaatteita modernissa villassaan Oslossa. Hänen äitinsä kritisoi turistiluokassa matkustamista ja vaatii yhteydenottoa Pariisin serkkuihin.
+*   **Sten:** Valmistautuu minimalistisessa kodissaan. Huoneessa on hääkuva ja Stenillä sormus, mutta hän asuu yksin. Pakkaaminen on pedanttisen järjestelmällistä.
+*   **Thom:** Valmistelee tavaroitaan hämärässä asuntolaivassa. Hän leikkaa ranteestaan festarirannekkeita ja hänellä on tuoreita rokotusjälkiä, mikä viittaa haluun hallita identiteettiään.
 
-Sten ja Didi tapaavat toisensa lentokenttähotellin aulassa (Stenin lento oli myöhässä). Heidän ensikohtaamisensa on lämmin, ja he jakavat taksin asunnolle.
+### 2. Saapuminen Pariisiin
 
-### Ensikohtaaminen ja jäänmurtaminen
-Asunnolla Thom ottaa vieraat vastaan hieman kömpelösti mutta kohteliaasti. Didi halaa Thomia, mikä saa tämän jähmettymään hetkeksi, mutta tilanne laukeaa nopeasti. Thom on varustanut asunnon "essentiaaleilla" tavaroilla, kuten erillisillä puhelimilla, printatuilla kartoilla ja... karaoke-laitteistolla.
+Thom saapuu ensimmäisenä ja valmistelee ryhmän Airbnb-asunnon 6. arrondissementissa, Rue de Rennesin ja Rue du Dragonin kulmassa. Rakennuksen porttikongia vartioi metallinen lohikäärme-gargoili. Sten ja Didi tapaavat lentokentällä Stenin lennon ollessa myöhässä ja jakavat taksimatkan asunnolle.
 
-Ilta kuluu yllättävän rennoissa merkeissä. Ryhmä laulaa karaokea:
-*   Thom: Laulaa Taylor Swiftiä (yllättävän hyvällä, joskin muunnellulla äänellä).
-*   Didi: Laulaa Whitney Houstonin "I Wanna Dance With Somebody".
-*   Sten: Laulaa Frank Sinatran "My Way" (nuotin vierestä, mutta tunteella).
+### 3. Jäänmurtaminen ja ryhmäytyminen
 
-Meteli houkuttelee paikalle vihaisen alakerran naapurin. Thom yrittää hoitaa tilanteen tuijottamalla, mutta Didi pelastaa tilanteen hurmaamalla vanhemman ranskalaismiehen ja lupaamalla laulaa tälle chansoneita. Jakso päättyy tunnelmaan, jossa työtoverit tuntuvat hitsautuneen ryhmäksi – varsinaiset työt alkavat seuraavana aamuna kello 07:00.
+Ensitapaaminen on lämmin mutta Thomin osalta hieman varautunut. Ryhmä viettää illan jäänmurtamisen merkeissä:
 
-## Jakson Creepypasta
+*   Thom on varustanut asunnon tutkimusvälineillä (erilliset puhelimet, kartat) ja karaoke-laitteistolla.
+*   Ilta huipentuu yhteislauluun, joka houkuttelee paikalle vihaisen naapurin. Didi kuitenkin pelastaa tilanteen hurmaamalla ranskalaismiehen.
 
-Jakso alkaa otteella pelin maailman Creepypasta-tarinasta, joka toimii katalyyttinä ryhmän matkalle.
+Varsinaisen työn on määrä alkaa seuraavana aamuna.
 
-> "En oikeasti miettinyt näitä juttuja pitkään aikaan. Mutta ystäväni kuolema kymmenen vuoden takaa palasi mieleeni. Hän oli minulle uskomattoman rakas ennen kuin hän erakoitui ja... no, kuoli. [...] Päädyin tekemään yllättävän ja pitkän matkan Pariisiin hänen hautajaisiinsa. Seuraa minulle piti Bostonista asti samaan suuntaan kulkenut Cathy, jonkin sortin värikästukkainen influensseri, joka höpötteli selkeästi lentopelkoonsa niitä näitä."
+## Keskeiset hahmot (Tutkijaryhmä)
 
-## Pohjustukset ja viittaukset
+| Hahmo | Tausta | Pelaaja | Keskeiset piirteet |
+| :--- | :--- | :--- | :--- |
+| **Didi** | Tiedeviestijä / Biotekniikka | Eevi | Elegantti, varakas, sosiaalisesti taitava. |
+| **Sten** | Biolääketiede / "Unelmavävy" | Mikko | Järjestelmällinen, skandinaavinen minimalisti, kantaa sormusta. |
+| **Thom** | Tekninen asiantuntija / Urban Exploration | Rami | Vainoharhainen (foliohattu-asteikko 0.5/2), valmistautunut, salaperäinen. |
 
-Tämä jakso sisältää useita hienovaraisia viittauksia, jotka paljastuvat merkityksellisiksi vasta myöhemmissä jaksoissa:
-*   **"Cathy" (Vaikuttaja):** Creepypastassa mainittu "värikästukkainen influensseri Cathy" on mitä todennäköisimmin Kathereen Cellstone, joka nousee merkittävään rooliin sarjan myöhemmissä vaiheissa (mainitaan jaksossa 6, tavataan fyysisesti jaksossa 20).
-*   **Kuollut ystävä:** Tarinan "ystävä", jonka hautajaisiin kertoja matkusti 10 vuotta sitten, on Xavier "Xav" Dutari. Hänen siskonsa Nahia kohdataan jaksossa 3, ja Xavin kohtalo on keskeinen osa mysteeriä.
-*   **Didin serkut:** Didin äidin painostus olla yhteydessä Pariisin serkkuihin realisoituu myöhemmin, kun Didi tapaa serkkunsa Eloisen lounaalla (Jaksot 2 & 5).
-*   **Thomin varustautuminen:** Thomin pakkomielteinen valmistautuminen (rokotukset, festarirannekkeiden leikkaaminen) vihjaa hänen haluunsa hallita identiteettiään ja suojautua, mikä huipentuu myöhemmin hänen identiteettikriisiinsä ja "Life Hack" -muutokseensa (Jakso 10).
-*   **Stenin sormus:** Stenillä on sormus ja hääkuva esillä, mutta hän asuu yksin. Tämä pohjustaa myöhempää paljastusta hänen vaimonsa Lisen kuolemasta ja tämän digitaalisesta/yliluonnollisesta läsnäolosta.
+## Jakson Creepypasta-tarina
 
-## Trivia, Meta & Popkulttuuri
+Jakso alkaa narratiivilla, joka toimii mysteerin ytimenä:
 
-### Elokuvat ja TV
-*   **Prometheus & Watchmen:** Thom Lindellin ulkonäköä kuvailtiin sekoitukseksi Michael Fassbenderin androidia (elokuvasta Prometheus) ja Jackie Earle Haleyn esittämää Rorschachia (elokuvasta Watchmen).
-*   **Zack Snyder:** Watchmen mainittiin nimenomaan "Zack Snyderin pätkänä".
+> "En oikeasti miettinyt näitä juttuja pitkään aikaan. Mutta ystäväni kuolema kymmenen vuoden takaa palasi mieleeni. Xav oli minulle uskomattoman rakas ennen kuin hän erakoitui ja... no, kuoli. Päädyin tekemään yllättävän ja pitkän matkan Pariisiin hänen hautajaisiinsa."
 
-### Musiikki (Karaoke-lista)
-*   **Taylor Swift:** Thomin yllättävä valinta, jonka hän laulaa "yllättävän hyvällä äänellä".
-*   **Whitney Houston – "I Wanna Dance With Somebody":** Didin bravuuri, joka vedetään "täysillä".
-*   **Frank Sinatra – "My Way":** Stenin valinta. Laulu ei mene nuottiin, mutta se vedetään tunteella.
-*   **Queen – "We Will Rock You":** Kappale, johon Didi yrittää saada ryhmän mukaan yhteislauluun juuri ennen ovikellon soimista.
+## Pohjustukset ja viittaukset (Easter Eggs)
 
-### Pelit ja Teknologia
-*   **Kimble vs. SingStar:** Kun Thom paljastaa hankkineensa viihdettä, Didi (pelaaja Eevi) veikkaa Kimbleä. Thom (pelaaja Rami) paljastaa kuitenkin tilanneensa SingStar-karaokelaitteet.
-*   **Teams:** Hahmot viittaavat useaan otteeseen "Teams-palavereihin", joissa ovat nähneet toisensa aiemmin vain videon välityksellä.
-*   **Google:** New Horizons -yhtiötä kuvailtiin "muutama askel alaspäin Googlesta epäilyttävyysasteikolla".
+Tämä jakso sisältää useita vihjeitä, jotka realisoituvat sarjan myöhemmissä vaiheissa:
 
-### Lennokkaat heitot & Meta
-*   **Epäeuklidinen lentokenttä:** Pelinjohtaja kuvaili Ranskan lentokenttiä "epäeuklidiseksi sokkeloksi, jossa ei varmasti ikinä löydä sinne minne haluaa".
-*   **Foliohattuskaala:** Thom määritteli vainoharhaisuutensa tason: "Puolen millin foliohattu, mut ei kahden".
-*   **Matkustusluokat:** Didin standardit tulivat selväksi: "Premium on vain business ja ykkösluokka, ja kaikki muu siitä on niinku... tää".
-*   **Unelmavävy:** Stenin pelaaja (Mikko) kuvaili hahmoaan toistuvasti termillä "unelmavävy".
-*   **Festarirannekkeet:** Thomin ranteessa olleet festarirannekkeet, jotka hän leikkasi irti, symboloivat luopumista menneestä elämänvaiheesta.
+*   **Cathy (Influensseri):** Creepypastassa mainittu Cathy on todennäköisesti Kathereen Cellstone (tärkeä rooli jaksosta 6 alkaen).
+*   **Xavier "Xav" Dutari:** Creepypastan kuollut ystävä, jonka kohtalo on keskeinen osa mysteeriä.
+*   **Didin serkut:** Äidin mainitsema serkku Eloise kohdataan jaksossa 2.
+*   **Thomin identiteetti:** Rokotukset ja rannekkeiden leikkaaminen pohjustavat hänen "Life Hack" -muutostaan jaksossa 10.
+*   **Stenin vaimo:** Sormus ja hääkuva viittaavat Lisen kuolemaan ja tämän mahdolliseen digitaaliseen läsnäoloon.
+
+## Trivia & Popkulttuuri
+
+### Karaoke-lista (Musiikki)
+
+*   **Thom:** Taylor Swift – "Karma" (Laulaa yllättävän hyvin).
+*   **Didi:** Whitney Houston – "I Wanna Dance With Somebody" (Vetää täysillä).
+*   **Sten:** Frank Sinatra – "My Way" (Nuotin vierestä, mutta tunteella).
+*   **Yhteislaulu:** Queen – "We Will Rock You".
+
+### Viittaukset (Meta)
+
+*   **Ulkonäkö:** Thom Lindell kuvailtiin sekoitukseksi Michael Fassbenderin androidia (Prometheus) ja Jackie Earle Haleyn Rorschachia (Watchmen).
+*   **Lentokenttä:** Pelinjohtaja kuvaili Ranskan lentokenttiä epäeuklidiseksi sokkeloksi.
+*   **Yhtiö:** New Horizons on biotekniikka-alan jätti, jota kuvailtiin hieman Googlea epäilyttävämmäksi.
+*   **Teknologia:** Keskustelussa mainitaan Teams-palaverit ja SingStar-karaoke.

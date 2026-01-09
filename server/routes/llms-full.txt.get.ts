@@ -8,9 +8,6 @@ export default defineEventHandler(async (event) => {
     // Fetch all documents
     const allDocs = await serverQueryContent(event).where({ _partial: false }).find();
 
-    // Filter for English docs only - REMOVED to include all languages
-    // const englishDocs = allDocs; 
-
     // Sort to prioritize Identity -> World -> Systems -> Other
     const sortedDocs = allDocs.sort((a: any, b: any) => {
         const getPriority = (doc: any) => {
@@ -38,9 +35,6 @@ export default defineEventHandler(async (event) => {
     let fullText = "";
 
     for (const doc of sortedDocs) {
-        // Skip if it's a redirect? 
-        // if (!doc.body) continue;
-
         fullText += `\n---\n`;
         fullText += `Title: ${doc.title}\n`;
         if (doc.datePublished) fullText += `Date Published: ${doc.datePublished}\n`;
@@ -49,20 +43,24 @@ export default defineEventHandler(async (event) => {
         fullText += `\n`;
 
         try {
-            // Use Nitro Server Assets storage to read raw files
-            // This works in production/serverless where fs access is restricted
             const storage = useStorage('assets:content');
 
-            // doc._file is relative path e.g. "en/index.md" or "fi/index.md"
-            // We need to ensure we are using the correct key format
-            // remove leading slash if present (though _file usually doesn't have it)
-            const fileKey = doc._file.replace(/^\//, '');
+            // Try standard key (relative path)
+            let fileKey = doc._file.replace(/^\//, '');
 
-            // getItem returns string | null (or Promise<string | null>)
+            // Try fetching
             let content = await storage.getItem(fileKey) as string;
 
+            // If failed, try replacing / with : (Nitro storage convention)
             if (!content) {
-                throw new Error(`File not found in storage: ${fileKey}`);
+                const colonKey = fileKey.replace(/\//g, ':');
+                content = await storage.getItem(colonKey) as string;
+            }
+
+            if (!content) {
+                // DEBUG: List available keys to help diagnose
+                const keys = await storage.getKeys();
+                throw new Error(`File not found in storage. Tried "${fileKey}" and other variants. Available keys (max 10): ${keys.slice(0, 10).join(', ')}`);
             }
 
             // Strip Frontmatter

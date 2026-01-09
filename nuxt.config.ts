@@ -116,6 +116,10 @@ export default {
         dir: "content",
       },
     ],
+    // Force output to 'dist' to match Netlify "Publish directory" setting
+    output: {
+      publicDir: "dist",
+    },
   },
   routeRules: {
     // Root should serve canonical homepage at '/' and use ISR like other pages

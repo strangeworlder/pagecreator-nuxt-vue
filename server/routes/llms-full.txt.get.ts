@@ -9,7 +9,7 @@ export default defineEventHandler(async (event) => {
     const allDocs = await serverQueryContent(event).where({ _partial: false }).find();
 
     // Filter for English docs only
-    const englishDocs = allDocs.filter((d: any) => String(d._path).startsWith("/en") || String(d._path) === "/");
+    const englishDocs = allDocs; // Include all docs (variable name kept for compatibility)
 
     const toAbsolute = (path: string) => {
         if (path.startsWith("http")) return path;
@@ -74,9 +74,9 @@ export default defineEventHandler(async (event) => {
             fullText += content;
             fullText += `\n\n`;
 
-        } catch (e) {
+        } catch (e: any) {
             console.error(`Error reading file ${doc._file}:`, e);
-            fullText += `[Error reading content file: ${doc._file}]\n\n`;
+            fullText += `[Error reading content file: ${doc._file} - CWD: ${process.cwd()} - Error: ${e.message}]\n\n`;
             // Fallback: Use description if body is missing
             if (doc.description) {
                 fullText += `> ${doc.description}\n\n`;

@@ -43,6 +43,22 @@ export default defineEventHandler(async (event) => {
       if (org.description) {
         lines.push(`  - ${org.description}`);
       }
+
+      // Find content belonging to this organization
+      // Find content belonging to this organization
+      const orgDocs = allDocs.filter((doc: any) => {
+        // Check for direct organization match
+        return doc.organization?.name === org.name ||
+          doc.publisher?.name === org.name ||
+          // Check if it's in a sub-field or alternate listing
+          (Array.isArray(doc.organization) && doc.organization.some((o: any) => o.name === org.name));
+      });
+
+      if (orgDocs.length > 0) {
+        for (const doc of orgDocs) {
+          lines.push(`  - [${doc.title}](${toAbsolute(doc._path)})`);
+        }
+      }
     }
     lines.push("");
   }

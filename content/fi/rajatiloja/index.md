@@ -21,6 +21,11 @@ author:
 publisher:
   name: Gogam
   url: 'https://gogam.eu'
+organization:
+  name: Gogam Entertainment
+  url: 'https://gogam.eu'
+  sameAs:
+    - 'https://www.youtube.com/@gogameu'
 datePublished: 2024-02-05
 dateModified: 2026-01-09
 canonical: /fi/rajatiloja

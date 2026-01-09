@@ -43,25 +43,16 @@ export default defineEventHandler(async (event) => {
         fullText += `\n`;
 
         try {
-            const storage = useStorage('assets:content');
+            // Using standard fs because this route is PRERENDERED.
+            // It runs at build time, where source files exist on disk.
+            const fs = await import('node:fs/promises');
+            const path = await import('node:path');
 
-            // Try standard key (relative path)
-            let fileKey = doc._file.replace(/^\//, '');
+            // Resolve path relative to project root (CWD during build)
+            const contentDir = path.resolve(process.cwd(), 'content');
+            const filePath = path.resolve(contentDir, doc._file);
 
-            // Try fetching
-            let content = await storage.getItem(fileKey) as string;
-
-            // If failed, try replacing / with : (Nitro storage convention)
-            if (!content) {
-                const colonKey = fileKey.replace(/\//g, ':');
-                content = await storage.getItem(colonKey) as string;
-            }
-
-            if (!content) {
-                // DEBUG: List available keys to help diagnose
-                const keys = await storage.getKeys();
-                throw new Error(`File not found in storage. Tried "${fileKey}" and other variants. Available keys (max 10): ${keys.slice(0, 10).join(', ')}`);
-            }
+            let content = await fs.readFile(filePath, 'utf-8');
 
             // Strip Frontmatter
             content = content.replace(/^---[\s\S]*?---/, '').trim();
@@ -79,7 +70,7 @@ export default defineEventHandler(async (event) => {
 
         } catch (e: any) {
             console.error(`Error reading file ${doc._file}:`, e);
-            fullText += `[Error reading content file: ${doc._file} - Error: ${e.message}]\n\n`;
+            fullText += `[Error reading content file: ${doc._file} - CWD: ${process.cwd()} - Error: ${e.message}]\n\n`;
             // Fallback: Use description if body is missing
             if (doc.description) {
                 fullText += `> ${doc.description}\n\n`;

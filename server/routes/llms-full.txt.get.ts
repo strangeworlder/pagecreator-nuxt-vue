@@ -30,26 +30,41 @@ export default defineEventHandler(async (event) => {
 
     let fullText = "";
 
-    // CONFIG: Try to locate content dir
+    // CONFIG: LOCATE CONTENT DIRECTORY
+    // During PRERENDER (Build), this typically works from project root.
     const cwd = process.cwd();
-    let contentDir = path.resolve(cwd, 'content');
 
-    // Check if content dir exists, if not, try to find it
+    // Potentially search multiple depths if CWD is somehow nested
+    const potentialPaths = [
+        path.resolve(cwd, 'content'),
+        path.resolve(cwd, '../content'),
+        path.resolve(cwd, '../../content'),
+        path.resolve(cwd, 'src/content')
+    ];
+
+    let contentDir = "";
     let dirExists = false;
-    try {
-        await fs.access(contentDir);
-        dirExists = true;
-    } catch {
-        // Try one level up?
-        // contentDir = path.resolve(cwd, '../content');
+
+    for (const p of potentialPaths) {
+        try {
+            await fs.access(p);
+            // Verify it's a directory
+            const stat = await fs.stat(p);
+            if (stat.isDirectory()) {
+                contentDir = p;
+                dirExists = true;
+                break;
+            }
+        } catch { }
     }
 
-    // DEBUG: Collect FS info if things go wrong
+    // DEBUG: Collect environment info to proving Prerender context
+    // If successful, this text ends up in the static file, but valid content overwrites/appends.
     let fsDebugLog = "";
     if (!dirExists) {
         try {
             const files = await fs.readdir(cwd);
-            fsDebugLog += `[DEBUG] Content dir not found at ${contentDir}. CWD: ${cwd}. Files: ${files.join(', ')}\n`;
+            fsDebugLog += `[DEBUG - PRERENDER FAIL?] Content dir not found. CWD: ${cwd}.\nChecked paths: ${potentialPaths.join(', ')}\nFiles in CWD: ${files.join(', ')}\n`;
         } catch (e: any) {
             fsDebugLog += `[DEBUG] ReadDir failed: ${e.message}\n`;
         }
@@ -86,11 +101,10 @@ export default defineEventHandler(async (event) => {
         } catch (e: any) {
             console.error(`Error reading file ${doc._file}:`, e);
             fullText += `[Error reading content file: ${doc._file}]\n`;
-            fullText += `> Read Error: ${e.message}\n`;
+            fullText += `> Info: CWD=${cwd} ContentDir=${contentDir || 'NOT_FOUND'}\n`;
             if (fsDebugLog) {
-                fullText += `> FS Debug: ${fsDebugLog}\n`;
+                fullText += `> ${fsDebugLog}\n`;
             }
-
             // Fallback: Use description
             if (doc.description) {
                 fullText += `> ${doc.description}\n\n`;

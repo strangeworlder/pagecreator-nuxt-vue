@@ -110,10 +110,18 @@ export default {
       // Avoid trying to prerender Nuxt Content API query endpoints discovered by the crawler
       ignore: ["/api/_content/**"],
     },
+    serverAssets: [
+      {
+        baseName: "content",
+        dir: "content",
+      },
+    ],
   },
   routeRules: {
     // Root should serve canonical homepage at '/' and use ISR like other pages
     "/": { isr: ISR_TTL },
+    "/llms.txt": { prerender: true },
+    "/llms-full.txt": { prerender: true },
     "/en/**": { isr: ISR_TTL },
     "/fi/**": { isr: ISR_TTL },
     "/sv/**": { isr: ISR_TTL },

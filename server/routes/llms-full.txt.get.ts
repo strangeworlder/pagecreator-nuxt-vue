@@ -1,7 +1,5 @@
 
 import { serverQueryContent } from "#content/server";
-import { promises as fs } from 'node:fs';
-import path from 'node:path';
 
 export default defineEventHandler(async (event) => {
     const runtime = useRuntimeConfig(event);
@@ -10,13 +8,19 @@ export default defineEventHandler(async (event) => {
     // Fetch all documents
     const allDocs = await serverQueryContent(event).where({ _partial: false }).find();
 
+    // Sort to prioritize Identity -> World -> Systems -> Other
     const sortedDocs = allDocs.sort((a: any, b: any) => {
         const getPriority = (doc: any) => {
+            // 1. Identity (Home)
             if (doc._path === "/en" || doc._path === "/") return 1;
+            // 2. World Model (Lore)
             if (doc._path?.includes("mustan-kilven-kantoni") || doc.tags?.includes("world")) return 2;
+            // 3. Systems (Games)
             if (doc.contentType?.includes("Game") || doc.contentType?.includes("Product")) return 3;
+            // 4. Inventory/Others
             return 4;
         };
+
         const pA = getPriority(a);
         const pB = getPriority(b);
         if (pA !== pB) return pA - pB;
@@ -30,46 +34,6 @@ export default defineEventHandler(async (event) => {
 
     let fullText = "";
 
-    // CONFIG: LOCATE CONTENT DIRECTORY
-    // During PRERENDER (Build), this typically works from project root.
-    const cwd = process.cwd();
-
-    // Potentially search multiple depths if CWD is somehow nested
-    const potentialPaths = [
-        path.resolve(cwd, 'content'),
-        path.resolve(cwd, '../content'),
-        path.resolve(cwd, '../../content'),
-        path.resolve(cwd, 'src/content')
-    ];
-
-    let contentDir = "";
-    let dirExists = false;
-
-    for (const p of potentialPaths) {
-        try {
-            await fs.access(p);
-            // Verify it's a directory
-            const stat = await fs.stat(p);
-            if (stat.isDirectory()) {
-                contentDir = p;
-                dirExists = true;
-                break;
-            }
-        } catch { }
-    }
-
-    // DEBUG: Collect environment info to proving Prerender context
-    // If successful, this text ends up in the static file, but valid content overwrites/appends.
-    let fsDebugLog = "";
-    if (!dirExists) {
-        try {
-            const files = await fs.readdir(cwd);
-            fsDebugLog += `[DEBUG - PRERENDER FAIL?] Content dir not found. CWD: ${cwd}.\nChecked paths: ${potentialPaths.join(', ')}\nFiles in CWD: ${files.join(', ')}\n`;
-        } catch (e: any) {
-            fsDebugLog += `[DEBUG] ReadDir failed: ${e.message}\n`;
-        }
-    }
-
     for (const doc of sortedDocs) {
         fullText += `\n---\n`;
         fullText += `Title: ${doc.title}\n`;
@@ -79,18 +43,39 @@ export default defineEventHandler(async (event) => {
         fullText += `\n`;
 
         try {
-            if (!dirExists) {
-                throw new Error("Content directory not found.");
+            // Use Nitro Server Assets storage to read raw files
+            // This works in BOTH Prerender (Build) and Runtime (Lambda)
+            // PROVIDED "serverAssets" is configured in nuxt.config.ts
+            const storage = useStorage('assets:content');
+
+            // Standard Nitro Asset Keys usually replace / with :
+            // e.g. "en/index.md" -> "en:index.md"
+            // We strip leading slash just in case
+            let fileKey = doc._file.replace(/^\//, '');
+
+            // Try fetching with slash (sometimes works in dev)
+            let content = await storage.getItem(fileKey) as string;
+
+            // Retry with colon separator (Standard Nitro)
+            if (!content) {
+                const colonKey = fileKey.replace(/\//g, ':');
+                content = await storage.getItem(colonKey) as string;
             }
 
-            const filePath = path.resolve(contentDir, doc._file);
-            let content = await fs.readFile(filePath, 'utf-8');
+            if (!content) {
+                // Debug info for logs
+                const keys = await storage.getKeys();
+                // If keys are empty, serverAssets config failed.
+                throw new Error(`File not found in storage. Tried "${fileKey}". Keys available: ${keys.length}`);
+            }
 
             // Strip Frontmatter
             content = content.replace(/^---[\s\S]*?---/, '').trim();
-            // Strip MDC components
-            content = content.replace(/^::\w+.*$/gm, '> ');
-            content = content.replace(/^::$/gm, '');
+
+            // Strip MDC components (::alert{...})
+            content = content.replace(/^::\w+.*$/gm, '> '); // Start of block
+            content = content.replace(/^::$/gm, ''); // End of block
+
             // Ensure Absolute Links
             content = content.replace(/\]\(\/(?!^)/g, `](${siteUrl}/`);
 
@@ -100,12 +85,8 @@ export default defineEventHandler(async (event) => {
 
         } catch (e: any) {
             console.error(`Error reading file ${doc._file}:`, e);
-            fullText += `[Error reading content file: ${doc._file}]\n`;
-            fullText += `> Info: CWD=${cwd} ContentDir=${contentDir || 'NOT_FOUND'}\n`;
-            if (fsDebugLog) {
-                fullText += `> ${fsDebugLog}\n`;
-            }
-            // Fallback: Use description
+            fullText += `[Error reading content file: ${doc._file} - Error: ${e.message}]\n\n`;
+            // Fallback: Use description if body is missing
             if (doc.description) {
                 fullText += `> ${doc.description}\n\n`;
             }

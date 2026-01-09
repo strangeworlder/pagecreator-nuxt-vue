@@ -1,5 +1,7 @@
 
 import { serverQueryContent } from "#content/server";
+import { promises as fs } from 'node:fs';
+import path from 'node:path';
 
 export default defineEventHandler(async (event) => {
     const runtime = useRuntimeConfig(event);
@@ -42,51 +44,54 @@ export default defineEventHandler(async (event) => {
         fullText += `URL: ${toAbsolute(doc._path)}\n`;
         fullText += `\n`;
 
+        let content = null;
+        let errors = [];
+
+        // STRATEGY 1: Nitro Server Assets (Bundle Access)
+        // Primary method for both Prerender & Runtime
         try {
-            // Use Nitro Server Assets storage to read raw files
-            // This works in BOTH Prerender (Build) and Runtime (Lambda)
-            // PROVIDED "serverAssets" is configured in nuxt.config.ts
             const storage = useStorage('assets:content');
-
-            // Standard Nitro Asset Keys usually replace / with :
-            // e.g. "en/index.md" -> "en:index.md"
-            // We strip leading slash just in case
             let fileKey = doc._file.replace(/^\//, '');
+            content = await storage.getItem(fileKey) as string;
 
-            // Try fetching with slash (sometimes works in dev)
-            let content = await storage.getItem(fileKey) as string;
-
-            // Retry with colon separator (Standard Nitro)
             if (!content) {
+                // Try colon separator
                 const colonKey = fileKey.replace(/\//g, ':');
                 content = await storage.getItem(colonKey) as string;
             }
+        } catch (e: any) {
+            errors.push(`Storage: ${e.message}`);
+        }
 
-            if (!content) {
-                // Debug info for logs
-                const keys = await storage.getKeys();
-                // If keys are empty, serverAssets config failed.
-                throw new Error(`File not found in storage. Tried "${fileKey}". Keys available: ${keys.length}`);
+        // STRATEGY 2: Node FS Fallback (Build/Prerender Only)
+        // If storage fails, we might be in the build environment where FS is available
+        if (!content) {
+            try {
+                const cwd = process.cwd();
+                // Try standard path inside content folder
+                const filePath = path.resolve(cwd, 'content', doc._file);
+                content = await fs.readFile(filePath, 'utf-8');
+            } catch (e: any) {
+                errors.push(`FS: ${e.message}`);
             }
+        }
 
-            // Strip Frontmatter
+        if (content) {
+            // Success! Process content
             content = content.replace(/^---[\s\S]*?---/, '').trim();
-
-            // Strip MDC components (::alert{...})
-            content = content.replace(/^::\w+.*$/gm, '> '); // Start of block
-            content = content.replace(/^::$/gm, ''); // End of block
-
-            // Ensure Absolute Links
+            content = content.replace(/^::\w+.*$/gm, '> ');
+            content = content.replace(/^::$/gm, '');
             content = content.replace(/\]\(\/(?!^)/g, `](${siteUrl}/`);
 
             fullText += `## ${doc.title}\n\n`;
             fullText += content;
             fullText += `\n\n`;
+        } else {
+            // Failure: Log errors and use description
+            console.error(`Error reading ${doc._file}:`, errors);
+            fullText += `[Error reading content file: ${doc._file}]\n`;
+            fullText += `> Debug Info: ${errors.join(', ')}\n\n`;
 
-        } catch (e: any) {
-            console.error(`Error reading file ${doc._file}:`, e);
-            fullText += `[Error reading content file: ${doc._file} - Error: ${e.message}]\n\n`;
-            // Fallback: Use description if body is missing
             if (doc.description) {
                 fullText += `> ${doc.description}\n\n`;
             }

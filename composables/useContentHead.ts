@@ -139,6 +139,13 @@ const GOGAM_IDENTITY = {
   sameAs: ["https://www.youtube.com/@gogameu"],
 };
 
+function removeTrailingSlash(path: string): string {
+  if (path === "/") return path;
+  return path.endsWith("/") ? path.slice(0, -1) : path;
+}
+
+// ... existing helpers ...
+
 export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null | undefined>) {
   const runtime = useRuntimeConfig();
   const defaultLocale = runtime.public.defaultLocale || "en";
@@ -156,7 +163,9 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
     const doc = docRef?.value;
     if (!doc) return;
 
-    const path: string = ensureLeadingSlash(doc.canonical || doc._path || "/");
+    // Strict trailing slash removal for consistent canonical URLs
+    const rawPath = ensureLeadingSlash(doc.canonical || doc._path || "/");
+    const path: string = removeTrailingSlash(rawPath);
     const sourcePath: string = ensureLeadingSlash(doc._path || path);
     const url = `${siteUrl}${path}`;
 

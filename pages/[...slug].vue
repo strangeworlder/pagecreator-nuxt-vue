@@ -32,6 +32,7 @@ const route = useRoute();
 const runtime = useRuntimeConfig();
 const defaultLocale = runtime.public.defaultLocale || "en";
 
+
 const resolveContentPath = (path: string) => {
   // Normalize path: ensure leading slash, collapse duplicates, drop trailing slash, map '/:locale/index' -> '/:locale'
   const withSlash = path.startsWith("/") ? path : `/${path}`;
@@ -272,6 +273,34 @@ watch(
     }
   },
 );
+
+// Canonical URL enforcement
+watchEffect(() => {
+  const doc = data.value as Record<string, unknown> | null;
+  const currentPath = route.path;
+
+  // 1. Determine the "ideal" canonical path
+  let targetPath = (doc?.canonical as string) || currentPath;
+
+  // 2. Normalize: Remove trailing slashes (except for root "/")
+  //    e.g. "/foo/" -> "/foo", "/" -> "/"
+  targetPath = targetPath.replace(/\/+$/, "") || "/";
+
+  // 3. Check if we need to redirect
+  //    Compare strict equality. If current is "/foo/", target is "/foo" -> Redirect.
+  if (currentPath !== targetPath) {
+    // Prevent redirect loop if the only difference is the slash but we are already at the target semantically?
+    // No, we want distinct URLs. "/foo/" != "/foo".
+
+    // Special case: valid root "/" should not redirect to itself (handled by equality check)
+    // Special case: "/foo/" vs "/foo"
+    
+    if (process.dev)
+      console.log("[canonical-redirect] Redirecting", { from: currentPath, to: targetPath });
+    
+    navigateTo(targetPath, { redirectCode: 301, replace: true });
+  }
+});
 
 const enhancementsEnabled = useState<boolean>("content-enhance-ready", () => false);
 

@@ -29,9 +29,47 @@ function astToText(node: any): string {
     return '';
 }
 
+// Helper to generate ASCII tree from file paths
+function generateAsciiTree(paths: string[]): string {
+    const root: Record<string, any> = {};
+    for (const p of paths) {
+        const parts = p.split('/').filter(Boolean);
+        let current = root;
+        for (const part of parts) {
+            current[part] = current[part] || {};
+            current = current[part];
+        }
+    }
+
+    let output = '';
+    function traverse(node: Record<string, any>, prefix: string, isLast: boolean) {
+        const keys = Object.keys(node).sort();
+        for (let i = 0; i < keys.length; i++) {
+            const key = keys[i];
+            const display = key.replace(/\.md$/, ''); // Clean up extensions for readability
+            const lastItem = i === keys.length - 1;
+            const marker = lastItem ? '└── ' : '├── ';
+            output += `${prefix}${marker}${display}\n`;
+
+            const children = node[key];
+            if (Object.keys(children).length > 0) {
+                traverse(children, prefix + (lastItem ? '    ' : '│   '), true); // simplify children indentation
+            }
+        }
+    }
+    traverse(root, '', true);
+    return output;
+}
+
+
 export default defineEventHandler(async (event) => {
     const runtime = useRuntimeConfig(event);
     const siteUrl: string = runtime.public.siteUrl;
+    const defaultLocale = runtime.public.defaultLocale || "en";
+
+    // Re-fetch Home for the "North Star" description
+    const homePath = `/${defaultLocale}`;
+    const home = await serverQueryContent(event).where({ _path: homePath }).findOne();
 
     const allDocs = await serverQueryContent(event).where({ _partial: false }).find();
 
@@ -60,6 +98,34 @@ export default defineEventHandler(async (event) => {
     };
 
     let fullText = "";
+
+    // 1. The Header and Project "North Star"
+    fullText += `# Gogam: Roleplaying Games from Finland (Full Context)\n`;
+    fullText += `> [Version: ${new Date().toISOString().split('T')[0]}]\n`;
+    if (home && home.description) {
+        fullText += `> ${home.description}\n`;
+    }
+    fullText += `\n`;
+
+    // 2. The Project Map (Navigation)
+    fullText += `## Project Map\n\n`;
+
+    // Table of Contents
+    fullText += `### Table of Contents\n`;
+    sortedDocs.forEach(doc => {
+        fullText += `- [${doc.title}](${toAbsolute(doc._path)})\n`;
+    });
+    fullText += `\n`;
+
+    // Directory Structure (Tree)
+    fullText += `### Directory Structure\n`;
+    fullText += "```\n";
+    // Get relative file paths for the tree
+    const filePaths = sortedDocs.map(d => d._file);
+    fullText += generateAsciiTree(filePaths);
+    fullText += "```\n\n";
+
+    fullText += `## Content\n`;
 
     for (const doc of sortedDocs) {
         fullText += `\n---\n`;

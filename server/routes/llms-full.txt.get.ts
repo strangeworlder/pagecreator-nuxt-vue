@@ -29,47 +29,104 @@ export default defineEventHandler(async (event) => {
 
     let fullText = "";
 
+    // === EXCESSIVE DEBUGGING ===
+    const debugInfo: string[] = [];
+
+    // 1. Environment Variables & Context
+    try {
+        debugInfo.push(`ENV: NODE_ENV=${process.env.NODE_ENV}`);
+        debugInfo.push(`ENV: NITRO_PRESET=${process.env.NITRO_PRESET}`);
+        debugInfo.push(`CWD: ${process.cwd()}`);
+        // @ts-ignore
+        debugInfo.push(`__filename: ${typeof __filename !== 'undefined' ? __filename : 'undefined'}`);
+    } catch (e: any) { debugInfo.push(`Env Error: ${e.message}`); }
+
+    // 2. Storage Inspection (ROOT SCOPE)
+    const storage = useStorage();
+    try {
+        const rootKeys = await storage.getKeys();
+        debugInfo.push(`Storage (Root): Found ${rootKeys.length} keys.`);
+        if (rootKeys.length > 0) {
+            debugInfo.push(`Storage Sample: ${rootKeys.slice(0, 20).join(', ')}`);
+        } else {
+            debugInfo.push(`Storage: EMPTY (This explains why assets:content failed)`);
+            // Check mount points directly if possible (internal API, risky but informative)
+            // @ts-ignore
+            if (storage.getMounts) {
+                // @ts-ignore
+                const mounts = storage.getMounts();
+                debugInfo.push(`Storage Mounts: ${mounts.map(m => m.base).join(', ')}`);
+            }
+        }
+    } catch (e: any) {
+        debugInfo.push(`Storage Error: ${e.message}`);
+    }
+
+    // 3. Recursive FS Inspection (Up and Down)
+    async function scanDir(dir: string, depth: number = 0) {
+        if (depth > 1) return []; // Don't go too deep
+        try {
+            const files = await fs.readdir(dir, { withFileTypes: true });
+            const result: string[] = [];
+            for (const f of files) {
+                if (f.isDirectory()) {
+                    result.push(`${dir}/${f.name}/`);
+                    if (depth < 1 && !['node_modules', '.git', '.output'].includes(f.name)) {
+                        const sub = await scanDir(path.resolve(dir, f.name), depth + 1);
+                        result.push(...sub);
+                    }
+                } else {
+                    result.push(`${dir}/${f.name}`);
+                }
+            }
+            return result;
+        } catch (e) {
+            return [`ERR reading ${dir}`];
+        }
+    }
+
+    try {
+        const cwdScan = await scanDir(process.cwd());
+        debugInfo.push(`FS Scan (CWD): ${cwdScan.length} items. Sample: ${cwdScan.slice(0, 15).join(', ')}`);
+
+        // Try ONE level up
+        const parent = path.resolve(process.cwd(), '..');
+        const parentScan = await scanDir(parent);
+        debugInfo.push(`FS Scan (Parent ${parent}): ${parentScan.length} items. Sample: ${parentScan.slice(0, 15).join(', ')}`);
+    } catch (e: any) {
+        debugInfo.push(`FS Scan Error: ${e.message}`);
+    }
+    // ============================
+
+    // Embed Debug info at the TOP of the file for visibility
+    fullText += `=== DEBUG REPORT ===\n`;
+    fullText += debugInfo.join('\n');
+    fullText += `\n====================\n\n`;
+
     for (const doc of sortedDocs) {
         fullText += `\n---\n`;
         fullText += `Title: ${doc.title}\n`;
-        if (doc.datePublished) fullText += `Date Published: ${doc.datePublished}\n`;
-        if (doc.author) fullText += `Author: ${typeof doc.author === 'string' ? doc.author : doc.author.name}\n`;
-        fullText += `URL: ${toAbsolute(doc._path)}\n`;
-        fullText += `\n`;
+        fullText += `URL: ${toAbsolute(doc._path)}\n\n`;
 
+        // Use the debug info to decide strategy? No, just try and fail/succeed logged.
         let content = null;
-        let errors = [];
-        let storageKeys: string[] = [];
 
-        // STRATEGY 1: Nitro Server Assets
+        // Try Storage
         try {
-            const storage = useStorage('assets:content');
             let fileKey = doc._file.replace(/^\//, '');
-            content = await storage.getItem(fileKey) as string;
+            // Try prefixing based on what we see in debug logic? 
+            // Just standard logic for now, the REPORT is what matters.
+            content = await storage.getItem(`assets:content:${fileKey}`) as string;
+            if (!content) content = await storage.getItem(fileKey) as string;
+            if (!content) content = await storage.getItem(`content:${fileKey}`) as string;
+        } catch { }
 
-            if (!content) {
-                const colonKey = fileKey.replace(/\//g, ':');
-                content = await storage.getItem(colonKey) as string;
-            }
-
-            if (!content) {
-                // Collect keys only on failure to avoid perf hit on success
-                storageKeys = await storage.getKeys();
-                errors.push(`Storage: Item null. Available keys (${storageKeys.length}): ${storageKeys.slice(0, 5).join(', ')}`);
-            }
-        } catch (e: any) {
-            errors.push(`Storage Error: ${e.message}`);
-        }
-
-        // STRATEGY 2: Node FS Fallback
+        // Try FS
         if (!content) {
             try {
-                const cwd = process.cwd();
-                const filePath = path.resolve(cwd, 'content', doc._file);
+                const filePath = path.resolve(process.cwd(), 'content', doc._file);
                 content = await fs.readFile(filePath, 'utf-8');
-            } catch (e: any) {
-                errors.push(`FS Error: ${e.message} (CWD: ${process.cwd()})`);
-            }
+            } catch { }
         }
 
         if (content) {
@@ -77,18 +134,9 @@ export default defineEventHandler(async (event) => {
             content = content.replace(/^::\w+.*$/gm, '> ');
             content = content.replace(/^::$/gm, '');
             content = content.replace(/\]\(\/(?!^)/g, `](${siteUrl}/`);
-
-            fullText += `## ${doc.title}\n\n`;
-            fullText += content;
-            fullText += `\n\n`;
+            fullText += `## ${doc.title}\n\n${content}\n\n`;
         } else {
-            console.error(`Error reading ${doc._file}:`, errors);
-            fullText += `[Error reading content file: ${doc._file}]\n`;
-            // Be very explicit in the output
-            fullText += `> Debug Info: ${errors.join(' | ')}\n\n`;
-            if (doc.description) {
-                fullText += `> ${doc.description}\n\n`;
-            }
+            fullText += `[Content Missing] ${doc.description || ''}\n\n`;
         }
     }
 

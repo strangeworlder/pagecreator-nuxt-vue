@@ -19,7 +19,7 @@ function astToText(node: any): string {
             text += astToText(child);
 
             // Add spacing for block elements to preserve readability
-            if (['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'li', 'blockquote'].includes(child.tag)) {
+            if (['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'li', 'blockquote', 'pre', 'hr'].includes(child.tag)) {
                 text += '\n\n';
             }
         }
@@ -37,10 +37,16 @@ export default defineEventHandler(async (event) => {
 
     const sortedDocs = allDocs.sort((a: any, b: any) => {
         const getPriority = (doc: any) => {
+            // 1. Identity
             if (doc._path === "/en" || doc._path === "/") return 1;
-            if (doc._path?.includes("mustan-kilven-kantoni") || doc.tags?.includes("world")) return 2;
-            if (doc.contentType?.includes("Game") || doc.contentType?.includes("Product")) return 3;
-            return 4;
+            // 2. World Model
+            if (doc._path?.includes("mustan-kilven-kantoni") || doc.tags?.includes("world") || doc.tags?.includes("lore")) return 2;
+            // 3. Systems
+            if (doc.tags?.includes("system") || doc.tags?.includes("rules")) return 3;
+            // 4. Inventory
+            if (doc.contentType?.includes("Game") || doc.contentType?.includes("Product")) return 4;
+            // 5. Other
+            return 5;
         };
         const pA = getPriority(a);
         const pB = getPriority(b);

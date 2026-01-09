@@ -43,16 +43,28 @@ export default defineEventHandler(async (event) => {
         fullText += `\n`;
 
         try {
-            // Using standard fs because this route is PRERENDERED.
-            // It runs at build time, where source files exist on disk.
-            const fs = await import('node:fs/promises');
-            const path = await import('node:path');
+            // Use Nitro Server Assets storage to read raw files
+            // This works in BOTH Prerender (Build) and Runtime (Lambda)
+            const storage = useStorage('assets:content');
 
-            // Resolve path relative to project root (CWD during build)
-            const contentDir = path.resolve(process.cwd(), 'content');
-            const filePath = path.resolve(contentDir, doc._file);
+            // doc._file is relative path e.g. "en/index.md"
+            // Keys in nitro assets usually replace / with :
+            // We try both standardized formats
 
-            let content = await fs.readFile(filePath, 'utf-8');
+            let fileKey = doc._file.replace(/^\//, ''); // Remove leading slash
+            let content = await storage.getItem(fileKey) as string;
+
+            // Retry with colon separator if slash fails
+            if (!content) {
+                const colonKey = fileKey.replace(/\//g, ':');
+                content = await storage.getItem(colonKey) as string;
+            }
+
+            if (!content) {
+                // Debug info for logs
+                const keys = await storage.getKeys();
+                throw new Error(`File not found in storage. Tried "${fileKey}". Available keys: ${keys.slice(0, 10).join(', ')}...`);
+            }
 
             // Strip Frontmatter
             content = content.replace(/^---[\s\S]*?---/, '').trim();
@@ -70,7 +82,7 @@ export default defineEventHandler(async (event) => {
 
         } catch (e: any) {
             console.error(`Error reading file ${doc._file}:`, e);
-            fullText += `[Error reading content file: ${doc._file} - CWD: ${process.cwd()} - Error: ${e.message}]\n\n`;
+            fullText += `[Error reading content file: ${doc._file} - Error: ${e.message}]\n\n`;
             // Fallback: Use description if body is missing
             if (doc.description) {
                 fullText += `> ${doc.description}\n\n`;

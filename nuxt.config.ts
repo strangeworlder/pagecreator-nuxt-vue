@@ -41,7 +41,7 @@ for (const file of contentFiles) {
       const route = aliases.startsWith("/") ? aliases : `/${aliases}`;
       aliasRoutes.add(route);
     }
-  } catch {}
+  } catch { }
 }
 const contentRoutes = Array.from(
   new Set(["/", `/${DEFAULT_LOCALE}`, ...contentFiles.map(fileToRoute), ...aliasRoutes]),
@@ -110,6 +110,12 @@ export default {
       // Avoid trying to prerender Nuxt Content API query endpoints discovered by the crawler
       ignore: ["/api/_content/**"],
     },
+    serverAssets: [
+      {
+        baseName: "content",
+        dir: "content",
+      },
+    ],
   },
   routeRules: {
     // Root should serve canonical homepage at '/' and use ISR like other pages

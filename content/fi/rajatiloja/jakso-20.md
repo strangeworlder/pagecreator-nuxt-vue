@@ -28,7 +28,7 @@ mentions:
   - name: Kathereen Cellstone
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#kathereen'
 contentUrl: 'https://www.youtube.com/watch?v=jC5sLVp3ihQ'
-dateModified: 2026-01-08
+dateModified: 2026-01-09
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)

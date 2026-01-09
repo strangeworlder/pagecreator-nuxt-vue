@@ -32,7 +32,7 @@ mentions:
   - name: '"Lise Eklund" (Haamu/Kaiku)'
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#lise'
 contentUrl: 'https://www.youtube.com/watch?v=sEaiDe9keGw'
-dateModified: 2026-01-08
+dateModified: 2026-01-09
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)

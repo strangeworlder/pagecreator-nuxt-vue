@@ -28,7 +28,7 @@ mentions:
   - name: Thom Lindell
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#thom'
 contentUrl: ''
-dateModified: 2026-01-08
+dateModified: 2026-01-09
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)

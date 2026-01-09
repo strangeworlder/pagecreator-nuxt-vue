@@ -33,12 +33,52 @@ mentions:
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#evan'
 contentUrl: 'https://www.youtube.com/watch?v=rOdyOB5BJ3o'
 transcript: /downloads/rajatiloja-transcript/jakso-01.txt
-dateModified: 2026-01-08
+dateModified: 2026-01-09
+faq:
+  - q: Mikä käynnistää Rajatiloja-sarjan tapahtumat?
+    a: >-
+      Sarja alkaa kymmenen vuotta sitten Pariisissa tapahtuneesta "Xav"-nimisen
+      ystävän mystisestä kuolemasta ja verkon creepypasta-tarinasta, joka
+      houkuttelee tutkijat paikalle.
+  - q: Mihin tutkijaryhmä majoittuu Pariisissa?
+    a: >-
+      Ryhmä asettuu Airbnb-asuntoon Pariisin 6. arrondissementtiin, Rue de
+      Rennesin ja Rue du Dragonin kulmaan. Rakennusta vartioi pahaenteinen
+      lohikäärme-gargoili.
+  - q: Mitä tutkijat aikovat tutkia Pariisissa?
+    a: >-
+      Ryhmä tutkii ns. "varjobiosfääriä" — spekulatiivista tiedettä ilmiöistä,
+      joita ei ole vielä virallisesti todistettu tai hyväksytty.
+  - q: Keitä ovat sarjan päähenkilöt ja mikä on heidän taustansa?
+    a: >-
+      Didi (biotekniikan tiedeviestijä Oslosta), Sten (järjestelmällinen
+      biolääketieteen asiantuntija) ja Thom (vainoharhainen tekninen
+      asiantuntija ja urbaani löytöretkeilijä).
+  - q: Miten tutkijat rahoittavat matkansa?
+    a: >-
+      Toimintaa rahoittaa New Horizons -niminen biotekniikkayhtiö, jota
+      kuvaillaan hieman Googlea epäilyttävämmäksi toimijaksi.
+  - q: Miten ryhmä hitsautuu yhteen ensimmäisenä iltana?
+    a: >-
+      Ryhmä viettää illan jäänmurtamisen merkeissä syömällä hyvin, juomalla
+      viiniä ja laulamalla karaokea (kuten Taylor Swiftiä ja Whitney Houstonia).
+  - q: Onko sarja puhdasta kauhua vai jotain muuta?
+    a: >-
+      Jakso yhdistää arkista realismia (matkustaminen, taloushallinto,
+      Teams-palaverit) pahaenteiseen tunnelmaan ja creepypasta-elementteihin.
+  - q: Miten ryhmä selviää vihaisesta naapurista?
+    a: >-
+      Didi käyttää "charm offensive" -taktiikkaa ja ranskantaitoaan hurmatakseen
+      alakerran miehen laulamalla hänelle ranskalaisen chansonin.
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
 
 Jakso pohjustaa mysteerin, esittelee keskeiset tutkijat ja kuljettaa ryhmän Pariisin sydämeen.
+
+## Kenelle tämä jakso sopii?
+
+Tämä jakso on täydellinen aloituspiste sinulle, jos kiinnostuksen kohteitasi ovat **moderni kauhumysteeri**, syvällinen **hahmovetoinen tarinankerronta** tai **urbaani löytöretkeily**. Jakso toimii "pilottina", joka vastaa sarjan peruskysymyksiin: kuka, missä ja miksi. Se sopii katsojille, jotka arvostavat hitaasti rakentuvaa jännitystä ja realistisia hahmodynamiikkoja perinteisen "jump scare" -kauhun sijaan.
 
 ## Jakson yleiskatsaus ja juonitiivistelmä
 
@@ -111,3 +151,29 @@ Tämä jakso sisältää useita vihjeitä, jotka realisoituvat sarjan myöhemmis
 *   *"Normaalisti kavahtaisin kosketusta, mutta Didi on kuin aurinko, jonka kohdatessa heijastaa vähän takaisin."* — Thom (Didin halauksesta)
 *   *"Nähdään sitten kun nähdään, jos nähdään."* — Thom (hyvästellessään asuntolaivansa)
 *   *"Puhuuko kukaan ranskaa?"* — Didi (vihaisen naapurin ilmestyessä ovelle)
+
+## Usein kysyttyjä kysymyksiä
+
+### Mikä käynnistää Rajatiloja-sarjan tapahtumat?
+Sarja alkaa kymmenen vuotta sitten Pariisissa tapahtuneesta "Xav"-nimisen ystävän mystisestä kuolemasta ja verkon creepypasta-tarinasta, joka houkuttelee tutkijat paikalle.
+
+### Mihin tutkijaryhmä majoittuu Pariisissa?
+Ryhmä asettuu Airbnb-asuntoon Pariisin 6. arrondissementtiin, Rue de Rennesin ja Rue du Dragonin kulmaan. Rakennusta vartioi pahaenteinen lohikäärme-gargoili.
+
+### Mitä tutkijat aikovat tutkia Pariisissa?
+Ryhmä tutkii ns. "varjobiosfääriä" — spekulatiivista tiedettä ilmiöistä, joita ei ole vielä virallisesti todistettu tai hyväksytty.
+
+### Keitä ovat sarjan päähenkilöt ja mikä on heidän taustansa?
+Didi (biotekniikan tiedeviestijä Oslosta), Sten (järjestelmällinen biolääketieteen asiantuntija) ja Thom (vainoharhainen tekninen asiantuntija ja urbaani löytöretkeilijä).
+
+### Miten tutkijat rahoittavat matkansa?
+Toimintaa rahoittaa New Horizons -niminen biotekniikkayhtiö, jota kuvaillaan hieman Googlea epäilyttävämmäksi toimijaksi.
+
+### Miten ryhmä hitsautuu yhteen ensimmäisenä iltana?
+Ryhmä viettää illan jäänmurtamisen merkeissä syömällä hyvin, juomalla viiniä ja laulamalla karaokea (kuten Taylor Swiftiä ja Whitney Houstonia).
+
+### Onko sarja puhdasta kauhua vai jotain muuta?
+Jakso yhdistää arkista realismia (matkustaminen, taloushallinto, Teams-palaverit) pahaenteiseen tunnelmaan ja creepypasta-elementteihin.
+
+### Miten ryhmä selviää vihaisesta naapurista?
+Didi käyttää "charm offensive" -taktiikkaa ja ranskantaitoaan hurmatakseen alakerran miehen laulamalla hänelle ranskalaisen chansonin.

@@ -22,7 +22,7 @@ publisher:
   name: Gogam
   url: 'https://gogam.eu'
 datePublished: 2024-02-05
-dateModified: 2026-01-08
+dateModified: 2026-01-09
 canonical: /fi/rajatiloja
 template: article
 cover: /images/new-horizons-logo.png

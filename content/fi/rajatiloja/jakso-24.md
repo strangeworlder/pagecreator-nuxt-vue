@@ -30,7 +30,7 @@ mentions:
   - name: '"Hiljainen mies"'
     type: Thing
 contentUrl: 'https://www.youtube.com/watch?v=ncFyT13QpKk'
-dateModified: 2026-01-08
+dateModified: 2026-01-09
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)

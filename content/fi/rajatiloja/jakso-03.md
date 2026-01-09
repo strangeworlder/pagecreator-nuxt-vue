@@ -32,7 +32,7 @@ mentions:
   - name: '"Evan" (Maininta)'
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#evan'
 contentUrl: 'https://www.youtube.com/watch?v=Q-yNfLTvp7M'
-dateModified: 2026-01-08
+dateModified: 2026-01-09
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)

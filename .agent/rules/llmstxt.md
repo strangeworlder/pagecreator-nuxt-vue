@@ -1,7 +1,7 @@
 ---
 trigger: model_decision
 description: Describes what llms.txt and llms-full.txt should contain
-dateModified: 2026-01-04
+dateModified: 2026-01-09
 ---
 
 As the Gogam.eu Testing and Schema Expert, I have synthesized the following technical specification for your Shadow Homepage implementation. This document serves as the absolute rulebook for generating /llms.txt and /llms-full.txt.
@@ -42,6 +42,8 @@ B. Entity Hierarchy
 Use H2 headers to categorize the domain nodes:
 
 ## Primary Links: Link to the Homepage and the llms-full.txt.
+
+## Organizations: List of subsidiary organizations (e.g., Gogam Entertainment, Kustannusosakeyhtiö Gogam) with their descriptions.
 
 ## Products (Games): Bulleted list with 2-sentence descriptions and absolute links.
 

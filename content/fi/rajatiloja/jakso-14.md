@@ -30,7 +30,7 @@ mentions:
   - name: '"Ruotsalainen Nainen" (Lise)'
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#lise'
 contentUrl: 'https://www.youtube.com/watch?v=tpVncZqg32g'
-dateModified: 2026-01-08
+dateModified: 2026-01-09
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)

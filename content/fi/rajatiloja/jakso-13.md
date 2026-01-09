@@ -28,7 +28,7 @@ mentions:
   - name: Nahia Dutari
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#nahia'
 contentUrl: 'https://www.youtube.com/watch?v=xcDcJmNs3Rg'
-dateModified: 2026-01-08
+dateModified: 2026-01-09
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)

@@ -30,7 +30,7 @@ mentions:
   - name: Mattíana Blævarsdóttir
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#mattiana'
 contentUrl: 'https://www.youtube.com/watch?v=6y_I2ASwfaM'
-dateModified: 2026-01-08
+dateModified: 2026-01-09
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)

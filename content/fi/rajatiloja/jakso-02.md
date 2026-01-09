@@ -31,7 +31,33 @@ mentions:
     type: Person
 contentUrl: 'https://www.youtube.com/watch?v=Qwrmu6tr_N0'
 transcript: /downloads/rajatiloja-transcript/jakso-02.txt
-dateModified: 2026-01-08
+dateModified: 2026-01-09
+faq:
+  - q: Miksi tutkijaryhmä on Pariisissa?
+    a: >-
+      Ryhmä seuraa internetistä löytyneen creepypasta-tarinan vihjeitä, jotka
+      vastaavat New Horizons -yhtiön salaista dataa "varjobiosfääristä". He
+      etsivät fyysisiä todisteita tarinan todenperäisyydestä.
+  - q: Mitä ryhmä löytää puistosta (Parc des Buttes-Chaumont)?
+    a: >-
+      Sten löytää Decker-mittarin avulla puun juureen kätketyn rasian, joka
+      sisältää multaisen kuulokekotelon. Kotelossa on jäämiä varjobiosfäärisestä
+      aineesta.
+  - q: Kuka on Didin tapaama "ruotsalainen nainen"?
+    a: >-
+      Didi tapaa puistossa ystävällisen naisen, joka myöhemmin paljastuu Stenin
+      edesmenneeksi vaimoksi, Liseksi (tai tämän kaksoisolennoksi). Tämä on
+      sarjan keskeinen mysteeri.
+  - q: Mikä on Decker-mittari?
+    a: >-
+      Se on kannettava, tekninen mittalaite, jota käytetään ympäristön
+      poikkeamien ja varjobiosfäärin partikkeleiden havaitsemiseen. Se ei ole
+      "haamujahti-lelu" vaan tieteellinen instrumentti.
+  - q: Miten Didi suhtautuu Pariisiin?
+    a: >-
+      Didi pitää Pariisia ja erityisesti sen metroa likaisena ja
+      rahvaanomaisena. Hän suosii kalliita elintapoja ja pitää etäisyyttä
+      "tavalliseen" elämään.
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)
@@ -39,6 +65,10 @@ dateModified: 2026-01-08
 **Sijainti:** Pariisi (6. ja 19. arrondissement)
 
 Tutkimusryhmä jalkautuu Pariisin sateisille kaduille seuraamaan "creepypasta"-tarinan jättämiä vihjeitä.
+
+## Kenelle tämä jakso sopii?
+
+Jakso 2 on herkkua katsojille, jotka nauttivat **arkisesta kauhusta** (*mundane horror*) ja **tutkimuksellisesta dekkarityöstä**. Jos pidät tarinoista, joissa yliluonnollinen tunkeutuu sateiseen arkipäivään – kahviloihin, puistoihin ja metroihin – tämä jakso on sinulle. Se esittelee konkreettisesti sarjan tutkimusvälineistöä (kuten Decker-mittarin) ja alustaa sarjan pitkäkaarisimman mysteerin (Stenin vaimo).
 
 ## Jakson yleiskatsaus ja juonitiivistelmä
 
@@ -105,3 +135,20 @@ Tämä jakso sisältää kriittisiä pohjustuksia kampanjan keskeisimmille kää
 *   *"Onko ystävälläsi kaikki hyvin? Oletteko hukanneet jotain?"* — Ruotsalainen nainen (Didille puistossa)
 *   *"Se on barely vihreää, mutta enemmän kuin koko päivänä missään muualla."* — Sten (löydön hetkellä)
 *   *"Jos luet tätä, älä yritä seurata askeliani. Älä ainakaan lähde Pariisiin."* — Creepypasta-kirjoittaja (Varoitus, jonka ryhmä jättää täysin huomiotta)
+
+## Usein kysyttyjä kysymyksiä
+
+### Miksi tutkijaryhmä on Pariisissa?
+Ryhmä seuraa internetistä löytyneen creepypasta-tarinan vihjeitä, jotka vastaavat New Horizons -yhtiön salaista dataa "varjobiosfääristä". He etsivät fyysisiä todisteita tarinan todenperäisyydestä.
+
+### Mitä ryhmä löytää puistosta (Parc des Buttes-Chaumont)?
+Sten löytää Decker-mittarin avulla puun juureen kätketyn rasian, joka sisältää multaisen kuulokekotelon. Kotelossa on jäämiä varjobiosfäärisestä aineesta.
+
+### Kuka on Didin tapaama "ruotsalainen nainen"?
+Didi tapaa puistossa ystävällisen naisen, joka myöhemmin paljastuu Stenin edesmenneeksi vaimoksi, Liseksi (tai tämän kaksoisolennoksi). Tämä on sarjan keskeinen mysteeri.
+
+### Mikä on Decker-mittari?
+Se on kannettava, tekninen mittalaite, jota käytetään ympäristön poikkeamien ja varjobiosfäärin partikkeleiden havaitsemiseen. Se ei ole "haamujahti-lelu" vaan tieteellinen instrumentti.
+
+### Miten Didi suhtautuu Pariisiin?
+Didi pitää Pariisia ja erityisesti sen metroa likaisena ja rahvaanomaisena. Hän suosii kalliita elintapoja ja pitää etäisyyttä "tavalliseen" elämään.

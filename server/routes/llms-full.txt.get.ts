@@ -52,7 +52,12 @@ export default defineEventHandler(async (event) => {
         try {
             const fs = await import('node:fs/promises');
             const path = await import('node:path');
-            const filePath = path.resolve(process.cwd(), 'content', doc._file);
+
+            // Try to resolve content directory relative to cwd
+            // In Docker (Nitro), cwd is usually /app. content should be /app/content.
+            const contentDir = path.resolve(process.cwd(), 'content');
+            const filePath = path.resolve(contentDir, doc._file);
+
             let content = await fs.readFile(filePath, 'utf-8');
 
             // Strip Frontmatter
@@ -70,7 +75,12 @@ export default defineEventHandler(async (event) => {
             fullText += `\n\n`;
 
         } catch (e) {
+            console.error(`Error reading file ${doc._file}:`, e);
             fullText += `[Error reading content file: ${doc._file}]\n\n`;
+            // Fallback: Use description if body is missing
+            if (doc.description) {
+                fullText += `> ${doc.description}\n\n`;
+            }
         }
     }
 

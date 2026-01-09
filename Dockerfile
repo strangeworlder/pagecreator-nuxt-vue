@@ -27,6 +27,7 @@ ENV NITRO_PORT=3000
 ENV HOST=0.0.0.0
 RUN apk add --no-cache imagemagick libwebp-tools
 COPY --from=build-ssr /app/.output ./.output
+COPY --from=build-ssr /app/content ./content
 EXPOSE 3000
 CMD ["node", ".output/server/index.mjs"]
 

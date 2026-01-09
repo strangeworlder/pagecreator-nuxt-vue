@@ -35,7 +35,19 @@ export default defineEventHandler(async (event) => {
   lines.push(`- [Full Context (llms-full.txt)](${toAbsolute("/llms-full.txt")})`);
   lines.push("");
 
-  // B. Products (Games)
+  // B. Organizations
+  if (home.subOrganizations && Array.isArray(home.subOrganizations) && home.subOrganizations.length > 0) {
+    lines.push(`## Organizations`);
+    for (const org of home.subOrganizations) {
+      lines.push(`- **${org.name}**`);
+      if (org.description) {
+        lines.push(`  - ${org.description}`);
+      }
+    }
+    lines.push("");
+  }
+
+  // C. Products (Games)
   const games = allDocs.filter((doc: any) => {
     const isGame = doc.contentType?.includes("Game") || doc.contentType?.includes("Product");
     // Filter out languages other than English for simplicity if needed, or include them? 

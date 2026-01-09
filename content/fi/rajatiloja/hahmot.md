@@ -10,7 +10,7 @@ partOfSeries:
   - 'https://gogam.eu/fi/rajatiloja'
 description: 'Rajatiloja-kampanjan keskeiset hahmot, pelaajahahmot ja tärkeät sivuhahmot.'
 cover: /images/new-horizons-logo.png
-dateModified: 2026-01-08
+dateModified: 2026-01-09
 ---
 
 Tällä sivulla on lueteltu **Rajatiloja**-kampanjan keskeiset henkilöt.

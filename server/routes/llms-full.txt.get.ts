@@ -8,33 +8,32 @@ export default defineEventHandler(async (event) => {
     // Fetch all documents
     const allDocs = await serverQueryContent(event).where({ _partial: false }).find();
 
-    // Filter for English docs only
-    const englishDocs = allDocs; // Include all docs (variable name kept for compatibility)
+    // Filter for English docs only - REMOVED to include all languages
+    // const englishDocs = allDocs; 
 
-    const toAbsolute = (path: string) => {
-        if (path.startsWith("http")) return path;
-        return `${siteUrl}${path}`;
-    };
+    // Sort to prioritize Identity -> World -> Systems -> Other
+    const sortedDocs = allDocs.sort((a: any, b: any) => {
+        const getPriority = (doc: any) => {
+            // 1. Identity (Home)
+            if (doc._path === "/en" || doc._path === "/") return 1;
+            // 2. World Model (Lore)
+            if (doc._path?.includes("mustan-kilven-kantoni") || doc.tags?.includes("world")) return 2;
+            // 3. Systems (Games)
+            if (doc.contentType?.includes("Game") || doc.contentType?.includes("Product")) return 3;
+            // 4. Inventory/Others
+            return 4;
+        };
 
-    // Helper to prioritize content types
-    const getPriority = (doc: any) => {
-        // 1. Identity (Home)
-        if (doc._path === "/en" || doc._path === "/") return 1;
-        // 2. World Model (Lore)
-        if (doc._path?.includes("mustan-kilven-kantoni") || doc.tags?.includes("world")) return 2;
-        // 3. Systems (Games)
-        if (doc.contentType?.includes("Game") || doc.contentType?.includes("Product")) return 3;
-        // 4. Inventory/Others
-        return 4;
-    };
-
-    // Sort docs
-    const sortedDocs = englishDocs.sort((a: any, b: any) => {
         const pA = getPriority(a);
         const pB = getPriority(b);
         if (pA !== pB) return pA - pB;
         return (a.title || "").localeCompare(b.title || "");
     });
+
+    const toAbsolute = (path: string) => {
+        if (path.startsWith("http")) return path;
+        return `${siteUrl}${path}`;
+    };
 
     let fullText = "";
 
@@ -50,15 +49,21 @@ export default defineEventHandler(async (event) => {
         fullText += `\n`;
 
         try {
-            const fs = await import('node:fs/promises');
-            const path = await import('node:path');
+            // Use Nitro Server Assets storage to read raw files
+            // This works in production/serverless where fs access is restricted
+            const storage = useStorage('assets:content');
 
-            // Try to resolve content directory relative to cwd
-            // In Docker (Nitro), cwd is usually /app. content should be /app/content.
-            const contentDir = path.resolve(process.cwd(), 'content');
-            const filePath = path.resolve(contentDir, doc._file);
+            // doc._file is relative path e.g. "en/index.md" or "fi/index.md"
+            // We need to ensure we are using the correct key format
+            // remove leading slash if present (though _file usually doesn't have it)
+            const fileKey = doc._file.replace(/^\//, '');
 
-            let content = await fs.readFile(filePath, 'utf-8');
+            // getItem returns string | null (or Promise<string | null>)
+            let content = await storage.getItem(fileKey) as string;
+
+            if (!content) {
+                throw new Error(`File not found in storage: ${fileKey}`);
+            }
 
             // Strip Frontmatter
             content = content.replace(/^---[\s\S]*?---/, '').trim();
@@ -76,7 +81,7 @@ export default defineEventHandler(async (event) => {
 
         } catch (e: any) {
             console.error(`Error reading file ${doc._file}:`, e);
-            fullText += `[Error reading content file: ${doc._file} - CWD: ${process.cwd()} - Error: ${e.message}]\n\n`;
+            fullText += `[Error reading content file: ${doc._file} - Error: ${e.message}]\n\n`;
             // Fallback: Use description if body is missing
             if (doc.description) {
                 fullText += `> ${doc.description}\n\n`;

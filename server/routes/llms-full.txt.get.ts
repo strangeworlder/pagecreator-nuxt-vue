@@ -3,6 +3,32 @@ import { serverQueryContent } from "#content/server";
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
+// Helper to extract text from Nuxt Content AST
+function astToText(node: any): string {
+    if (!node) return '';
+
+    // Text node
+    if (node.type === 'text') {
+        return node.value || '';
+    }
+
+    // Children
+    if (node.children && Array.isArray(node.children)) {
+        let text = '';
+        for (const child of node.children) {
+            text += astToText(child);
+
+            // Add spacing for block elements to preserve readability
+            if (['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'li', 'blockquote'].includes(child.tag)) {
+                text += '\n\n';
+            }
+        }
+        return text;
+    }
+
+    return '';
+}
+
 export default defineEventHandler(async (event) => {
     const runtime = useRuntimeConfig(event);
     const siteUrl: string = runtime.public.siteUrl;
@@ -29,114 +55,65 @@ export default defineEventHandler(async (event) => {
 
     let fullText = "";
 
-    // === EXCESSIVE DEBUGGING ===
-    const debugInfo: string[] = [];
-
-    // 1. Environment Variables & Context
-    try {
-        debugInfo.push(`ENV: NODE_ENV=${process.env.NODE_ENV}`);
-        debugInfo.push(`ENV: NITRO_PRESET=${process.env.NITRO_PRESET}`);
-        debugInfo.push(`CWD: ${process.cwd()}`);
-        // @ts-ignore
-        debugInfo.push(`__filename: ${typeof __filename !== 'undefined' ? __filename : 'undefined'}`);
-    } catch (e: any) { debugInfo.push(`Env Error: ${e.message}`); }
-
-    // 2. Storage Inspection (ROOT SCOPE)
-    const storage = useStorage();
-    try {
-        const rootKeys = await storage.getKeys();
-        debugInfo.push(`Storage (Root): Found ${rootKeys.length} keys.`);
-        if (rootKeys.length > 0) {
-            debugInfo.push(`Storage Sample: ${rootKeys.slice(0, 20).join(', ')}`);
-        } else {
-            debugInfo.push(`Storage: EMPTY (This explains why assets:content failed)`);
-            // Check mount points directly if possible (internal API, risky but informative)
-            // @ts-ignore
-            if (storage.getMounts) {
-                // @ts-ignore
-                const mounts = storage.getMounts();
-                debugInfo.push(`Storage Mounts: ${mounts.map(m => m.base).join(', ')}`);
-            }
-        }
-    } catch (e: any) {
-        debugInfo.push(`Storage Error: ${e.message}`);
-    }
-
-    // 3. Recursive FS Inspection (Up and Down)
-    async function scanDir(dir: string, depth: number = 0) {
-        if (depth > 1) return []; // Don't go too deep
-        try {
-            const files = await fs.readdir(dir, { withFileTypes: true });
-            const result: string[] = [];
-            for (const f of files) {
-                if (f.isDirectory()) {
-                    result.push(`${dir}/${f.name}/`);
-                    if (depth < 1 && !['node_modules', '.git', '.output'].includes(f.name)) {
-                        const sub = await scanDir(path.resolve(dir, f.name), depth + 1);
-                        result.push(...sub);
-                    }
-                } else {
-                    result.push(`${dir}/${f.name}`);
-                }
-            }
-            return result;
-        } catch (e) {
-            return [`ERR reading ${dir}`];
-        }
-    }
-
-    try {
-        const cwdScan = await scanDir(process.cwd());
-        debugInfo.push(`FS Scan (CWD): ${cwdScan.length} items. Sample: ${cwdScan.slice(0, 15).join(', ')}`);
-
-        // Try ONE level up
-        const parent = path.resolve(process.cwd(), '..');
-        const parentScan = await scanDir(parent);
-        debugInfo.push(`FS Scan (Parent ${parent}): ${parentScan.length} items. Sample: ${parentScan.slice(0, 15).join(', ')}`);
-    } catch (e: any) {
-        debugInfo.push(`FS Scan Error: ${e.message}`);
-    }
-    // ============================
-
-    // Embed Debug info at the TOP of the file for visibility
-    fullText += `=== DEBUG REPORT ===\n`;
-    fullText += debugInfo.join('\n');
-    fullText += `\n====================\n\n`;
-
     for (const doc of sortedDocs) {
         fullText += `\n---\n`;
         fullText += `Title: ${doc.title}\n`;
-        fullText += `URL: ${toAbsolute(doc._path)}\n\n`;
+        if (doc.datePublished) fullText += `Date Published: ${doc.datePublished}\n`;
+        if (doc.author) fullText += `Author: ${typeof doc.author === 'string' ? doc.author : doc.author.name}\n`;
+        fullText += `URL: ${toAbsolute(doc._path)}\n`;
+        fullText += `\n`;
 
-        // Use the debug info to decide strategy? No, just try and fail/succeed logged.
-        let content = null;
+        let content = "";
+        let strategyUsed = "";
 
-        // Try Storage
+        // STRATEGY 1: Raw File via Storage (Server Assets)
         try {
-            let fileKey = doc._file.replace(/^\//, '');
-            // Try prefixing based on what we see in debug logic? 
-            // Just standard logic for now, the REPORT is what matters.
-            content = await storage.getItem(`assets:content:${fileKey}`) as string;
-            if (!content) content = await storage.getItem(fileKey) as string;
-            if (!content) content = await storage.getItem(`content:${fileKey}`) as string;
+            const storage = useStorage('assets:content');
+            const fileKey = doc._file.replace(/^\//, '');
+            content = await storage.getItem(fileKey) as string;
+            if (!content) {
+                const colonKey = fileKey.replace(/\//g, ':');
+                content = await storage.getItem(colonKey) as string;
+            }
+            if (content) strategyUsed = "Storage (Raw)";
         } catch { }
 
-        // Try FS
+        // STRATEGY 2: Raw File via FS (Build Time)
         if (!content) {
             try {
                 const filePath = path.resolve(process.cwd(), 'content', doc._file);
                 content = await fs.readFile(filePath, 'utf-8');
+                if (content) strategyUsed = "FS (Raw)";
+            } catch { }
+        }
+
+        // STRATEGY 3: AST Reconstruction (Runtime/Cache Fallback)
+        // If raw access failed, we rely on the parsed AST which provided 'doc' in the first place.
+        if (!content && doc.body) {
+            try {
+                content = astToText(doc.body);
+                if (content) strategyUsed = "AST (Parsed)";
             } catch { }
         }
 
         if (content) {
-            content = content.replace(/^---[\s\S]*?---/, '').trim();
-            content = content.replace(/^::\w+.*$/gm, '> ');
-            content = content.replace(/^::$/gm, '');
+            // Processing
+            if (strategyUsed.includes("Raw")) {
+                content = content.replace(/^---[\s\S]*?---/, '').trim(); // Strip frontmatter
+                content = content.replace(/^::\w+.*$/gm, '> ');
+                content = content.replace(/^::$/gm, '');
+            }
             content = content.replace(/\]\(\/(?!^)/g, `](${siteUrl}/`);
-            fullText += `## ${doc.title}\n\n${content}\n\n`;
+
+            fullText += `## ${doc.title}\n\n`;
+            fullText += content.trim();
+            fullText += `\n\n`;
         } else {
-            fullText += `[Content Missing] ${doc.description || ''}\n\n`;
+            // Absolute failure
+            console.error(`Failed to retrieve content for ${doc.title}`);
+            if (doc.description) {
+                fullText += `> ${doc.description}\n\n`;
+            }
         }
     }
 

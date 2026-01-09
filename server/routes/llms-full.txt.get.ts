@@ -1,5 +1,7 @@
 
 import { serverQueryContent } from "#content/server";
+import { promises as fs } from 'node:fs';
+import path from 'node:path';
 
 export default defineEventHandler(async (event) => {
     const runtime = useRuntimeConfig(event);
@@ -8,19 +10,13 @@ export default defineEventHandler(async (event) => {
     // Fetch all documents
     const allDocs = await serverQueryContent(event).where({ _partial: false }).find();
 
-    // Sort to prioritize Identity -> World -> Systems -> Other
     const sortedDocs = allDocs.sort((a: any, b: any) => {
         const getPriority = (doc: any) => {
-            // 1. Identity (Home)
             if (doc._path === "/en" || doc._path === "/") return 1;
-            // 2. World Model (Lore)
             if (doc._path?.includes("mustan-kilven-kantoni") || doc.tags?.includes("world")) return 2;
-            // 3. Systems (Games)
             if (doc.contentType?.includes("Game") || doc.contentType?.includes("Product")) return 3;
-            // 4. Inventory/Others
             return 4;
         };
-
         const pA = getPriority(a);
         const pB = getPriority(b);
         if (pA !== pB) return pA - pB;
@@ -34,6 +30,31 @@ export default defineEventHandler(async (event) => {
 
     let fullText = "";
 
+    // CONFIG: Try to locate content dir
+    const cwd = process.cwd();
+    let contentDir = path.resolve(cwd, 'content');
+
+    // Check if content dir exists, if not, try to find it
+    let dirExists = false;
+    try {
+        await fs.access(contentDir);
+        dirExists = true;
+    } catch {
+        // Try one level up?
+        // contentDir = path.resolve(cwd, '../content');
+    }
+
+    // DEBUG: Collect FS info if things go wrong
+    let fsDebugLog = "";
+    if (!dirExists) {
+        try {
+            const files = await fs.readdir(cwd);
+            fsDebugLog += `[DEBUG] Content dir not found at ${contentDir}. CWD: ${cwd}. Files: ${files.join(', ')}\n`;
+        } catch (e: any) {
+            fsDebugLog += `[DEBUG] ReadDir failed: ${e.message}\n`;
+        }
+    }
+
     for (const doc of sortedDocs) {
         fullText += `\n---\n`;
         fullText += `Title: ${doc.title}\n`;
@@ -43,36 +64,18 @@ export default defineEventHandler(async (event) => {
         fullText += `\n`;
 
         try {
-            // Use Nitro Server Assets storage to read raw files
-            // This works in BOTH Prerender (Build) and Runtime (Lambda)
-            const storage = useStorage('assets:content');
-
-            // doc._file is relative path e.g. "en/index.md"
-            // Keys in nitro assets usually replace / with :
-            // We try both standardized formats
-
-            let fileKey = doc._file.replace(/^\//, ''); // Remove leading slash
-            let content = await storage.getItem(fileKey) as string;
-
-            // Retry with colon separator if slash fails
-            if (!content) {
-                const colonKey = fileKey.replace(/\//g, ':');
-                content = await storage.getItem(colonKey) as string;
+            if (!dirExists) {
+                throw new Error("Content directory not found.");
             }
 
-            if (!content) {
-                // Debug info for logs
-                const keys = await storage.getKeys();
-                throw new Error(`File not found in storage. Tried "${fileKey}". Available keys: ${keys.slice(0, 10).join(', ')}...`);
-            }
+            const filePath = path.resolve(contentDir, doc._file);
+            let content = await fs.readFile(filePath, 'utf-8');
 
             // Strip Frontmatter
             content = content.replace(/^---[\s\S]*?---/, '').trim();
-
-            // Strip MDC components (::alert{...})
-            content = content.replace(/^::\w+.*$/gm, '> '); // Start of block
-            content = content.replace(/^::$/gm, ''); // End of block
-
+            // Strip MDC components
+            content = content.replace(/^::\w+.*$/gm, '> ');
+            content = content.replace(/^::$/gm, '');
             // Ensure Absolute Links
             content = content.replace(/\]\(\/(?!^)/g, `](${siteUrl}/`);
 
@@ -82,8 +85,13 @@ export default defineEventHandler(async (event) => {
 
         } catch (e: any) {
             console.error(`Error reading file ${doc._file}:`, e);
-            fullText += `[Error reading content file: ${doc._file} - Error: ${e.message}]\n\n`;
-            // Fallback: Use description if body is missing
+            fullText += `[Error reading content file: ${doc._file}]\n`;
+            fullText += `> Read Error: ${e.message}\n`;
+            if (fsDebugLog) {
+                fullText += `> FS Debug: ${fsDebugLog}\n`;
+            }
+
+            // Fallback: Use description
             if (doc.description) {
                 fullText += `> ${doc.description}\n\n`;
             }

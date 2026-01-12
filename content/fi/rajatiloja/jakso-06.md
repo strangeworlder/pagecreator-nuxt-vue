@@ -1,8 +1,11 @@
 ---
-title: 'Jakso 6: Karaoke'
+title: 'Jakso 6: Karaoke | +H: Rajatiloja'
 datePublished: 2024-04-15
 duration: PT1H1M
 template: episode
+organization:
+  name: Gogam Entertainment
+  '@id': 'https://gogam.eu/#gogam-entertainment'
 inLanguage:
   - fi
 contentType:
@@ -32,7 +35,7 @@ mentions:
   - name: '"Evan"'
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#evan'
 contentUrl: 'https://www.youtube.com/watch?v=65SBjghu21I'
-dateModified: 2026-01-09
+dateModified: 2026-01-12
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)

@@ -1,5 +1,5 @@
 ---
-title: The Necessary Eagle vs. The Good Cad
+title: 'The Necessary Eagle vs. The Good Cad: Competitive Card Game'
 description: >-
   A two-player, competitive TTRPG about a sociopathic superhero and the
   vigilante they created, using a standard deck of cards for asymmetrical,
@@ -32,7 +32,7 @@ author:
     - 'https://bsky.app/profile/strangeworlder.bsky.social'
     - 'https://www.threads.com/@gogam.eu'
 datePublished: 2025-12-28
-dateModified: 2026-01-04
+dateModified: 2026-01-12
 tags:
   - game
   - ttrpg

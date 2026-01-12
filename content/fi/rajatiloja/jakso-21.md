@@ -1,8 +1,11 @@
 ---
-title: 'Jakso 21: Metsätie'
+title: 'Jakso 21: Metsätie | +H: Rajatiloja'
 datePublished: 2024-11-25
 duration: PT1H2M
 template: episode
+organization:
+  name: Gogam Entertainment
+  '@id': 'https://gogam.eu/#gogam-entertainment'
 inLanguage:
   - fi
 contentType:
@@ -30,7 +33,7 @@ mentions:
   - name: '"Hiljainen mies" (Jättiläismuoto)'
     type: Thing
 contentUrl: 'https://www.youtube.com/watch?v=VoadmxpQEaM'
-dateModified: 2026-01-09
+dateModified: 2026-01-12
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)

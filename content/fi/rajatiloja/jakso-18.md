@@ -1,8 +1,11 @@
 ---
-title: 'Jakso 18: Turvalasi'
+title: 'Jakso 18: Turvalasi | +H: Rajatiloja'
 datePublished: 2024-10-14
 duration: PT1H25M
 template: episode
+organization:
+  name: Gogam Entertainment
+  '@id': 'https://gogam.eu/#gogam-entertainment'
 inLanguage:
   - fi
 contentType:
@@ -28,7 +31,7 @@ mentions:
   - name: Skye Watson
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#skye'
 contentUrl: 'https://www.youtube.com/watch?v=Dp97AlxBVfQ'
-dateModified: 2026-01-09
+dateModified: 2026-01-12
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)

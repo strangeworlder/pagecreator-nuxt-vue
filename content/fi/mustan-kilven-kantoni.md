@@ -1,5 +1,5 @@
 ---
-title: 'Mustan kilven kantoni: Analyysi maailmasta, teemoista ja tyylistä'
+title: 'Mustan kilven kantoni: Them Deeper Bones -maailma'
 description: >-
   Kattava kuvaus Mustan kilven kantoni -pelimaailman teemoista ja tyylistä ja
   valinnoista
@@ -20,7 +20,7 @@ author:
     - 'https://bsky.app/profile/strangeworlder.bsky.social'
     - 'https://www.threads.com/@gogam.eu'
 datePublished: 2025-12-28
-dateModified: 2026-01-08
+dateModified: 2026-01-12
 tags:
   - L&L
   - maailma

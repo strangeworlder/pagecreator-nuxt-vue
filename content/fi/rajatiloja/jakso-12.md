@@ -1,8 +1,11 @@
 ---
-title: 'Jakso 12: Risteyksiä'
+title: 'Jakso 12: Risteyksiä | +H: Rajatiloja'
 datePublished: 2024-07-22
 duration: PT54M
 template: episode
+organization:
+  name: Gogam Entertainment
+  '@id': 'https://gogam.eu/#gogam-entertainment'
 inLanguage:
   - fi
 contentType:
@@ -30,7 +33,7 @@ mentions:
   - name: '"Didin Äiti" (Entiteetti)'
     type: Person
 contentUrl: 'https://www.youtube.com/watch?v=a3YqdidMD6o'
-dateModified: 2026-01-09
+dateModified: 2026-01-12
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)

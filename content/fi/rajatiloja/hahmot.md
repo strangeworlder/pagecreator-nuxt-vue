@@ -1,5 +1,5 @@
 ---
-title: Hahmot
+title: 'Hahmot | +H: Rajatiloja'
 datePublished: 2024-02-05
 template: article
 inLanguage:
@@ -7,10 +7,12 @@ inLanguage:
 contentType:
   - CreativeWork
 partOfSeries:
-  - 'https://gogam.eu/fi/rajatiloja'
+  '@type': CreativeWorkSeries
+  name: Rajatiloja
+  url: 'https://gogam.eu/fi/rajatiloja'
 description: 'Rajatiloja-kampanjan keskeiset hahmot, pelaajahahmot ja tärkeät sivuhahmot.'
 cover: /images/new-horizons-logo.png
-dateModified: 2026-01-09
+dateModified: 2026-01-12
 ---
 
 Tällä sivulla on lueteltu **Rajatiloja**-kampanjan keskeiset henkilöt.

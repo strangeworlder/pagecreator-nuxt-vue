@@ -1,8 +1,11 @@
 ---
-title: 'Jakso 1: Matka Pariisiin'
+title: 'Jakso 1: Matka Pariisiin | +H: Rajatiloja'
 datePublished: 2024-02-05
 duration: PT57M41S
 template: episode
+organization:
+  name: Gogam Entertainment
+  '@id': 'https://gogam.eu/#gogam-entertainment'
 inLanguage:
   - fi
 contentType:
@@ -33,7 +36,7 @@ mentions:
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#evan'
 contentUrl: 'https://www.youtube.com/watch?v=rOdyOB5BJ3o'
 transcript: /downloads/rajatiloja-transcript/jakso-01.txt
-dateModified: 2026-01-09
+dateModified: 2026-01-12
 faq:
   - q: Mikä käynnistää Rajatiloja-sarjan tapahtumat?
     a: >-
@@ -116,7 +119,9 @@ Varsinaisen työn on määrä alkaa seuraavana aamuna.
 Jakso alkaa narratiivilla, joka toimii mysteerin ytimenä:
 
 ::blockquote{cite="/downloads/rajatiloja-transcript/jakso-01.txt"}
-"En oikeasti miettinyt näitä juttuja pitkään aikaan. Mutta ystäväni kuolema kymmenen vuoden takaa palasi mieleeni. Xav oli minulle uskomattoman rakas ennen kuin hän erakoitui ja... no, kuoli. Päädyin tekemään yllättävän ja pitkän matkan Pariisiin hänen hautajaisiinsa."
+"En oikeasti miettinyt näitä juttuja pitkään aikaan. Mutta ystäväni kuolema toi tapahtumat kymmenen vuoden takaa palasi mieleeni. Xav oli minulle uskomattoman rakas ennen kuin hän erakoitui ja... no, kuoli. Hänen ansiostaan minulla oli hauskimmat bilevuoteni, ja ajatus hänen poismenostaan yksinäisenä sai minua pois tolaltani. 
+
+Ja päädyin tekemään yllättävän ja pitkän matkan Pariisiin hänen hautajaisiinsa. Kai ajattelin, että olisi hyvä, että edes joku olisi siellä. Lennot olivat loputtoman pitkiä, kuten olettaa saattaa. Seuraa minulla piti Bostonista asti samaan suuntaan kulkenut Cathy, jonkin sortin värikästukkainen influensseri, joka höpötteli selkeästi lentopelkoonsa niitä näitä. Ja minä näin jälkikäteen typerästi autoin häntä höpöttelemällä sitten taas takaisin.
 ::
 
 ## Pohjustukset ja viittaukset (Easter Eggs)
@@ -124,7 +129,7 @@ Jakso alkaa narratiivilla, joka toimii mysteerin ytimenä:
 Tämä jakso sisältää useita vihjeitä, jotka realisoituvat sarjan myöhemmissä vaiheissa:
 
 *   **Cathy (Influensseri):** Creepypastassa mainittu Cathy on todennäköisesti Kathereen Cellstone (tärkeä rooli jaksosta 6 alkaen).
-*   **Xavier "Xav" Dutari:** Creepypastan kuollut ystävä, jonka kohtalo on keskeinen osa mysteeriä.
+*   **Xavier "Xav" Dutari:** Creepypastan kuollut ystävä Xav, jonka kohtalo on keskeinen osa mysteeriä.
 *   **Didin serkut:** Äidin mainitsema serkku Eloise kohdataan jaksossa 2.
 *   **Thomin identiteetti:** Rokotukset ja rannekkeiden leikkaaminen pohjustavat hänen "Life Hack" -muutostaan jaksossa 10.
 *   **Stenin vaimo:** Sormus ja hääkuva viittaavat Lisen kuolemaan ja tämän mahdolliseen digitaaliseen läsnäoloon.

@@ -1,5 +1,5 @@
 ---
-title: Pros & Cons
+title: 'Pros & Cons: Heist Movie RPG'
 description: >-
   Introduction for new players to Pros & Cons: a heist RPG where players are
   ex-convicts trying to pull off one last job.
@@ -19,7 +19,7 @@ organization:
     - 'https://instagram.com/gogam.eu'
     - 'https://gogameu.substack.com/'
 datePublished: 2025-12-28
-dateModified: 2026-01-04
+dateModified: 2026-01-12
 tags:
   - game
   - heist

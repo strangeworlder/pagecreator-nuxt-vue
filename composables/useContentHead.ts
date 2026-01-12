@@ -440,23 +440,53 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
 
     // 5. BREADCRUMBLIST NODE
     if (!isIdentityHub) {
+      const itemListElement = [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Gogam",
+          item: siteUrl,
+        },
+      ];
+
+      let currentPosition = 2;
+
+      // START BREADCRUMB INJECTION
+      // Check for Series Membership (partOfSeries)
+      if (doc.partOfSeries) {
+        const seriesRaw = Array.isArray(doc.partOfSeries)
+          ? doc.partOfSeries[0]
+          : doc.partOfSeries;
+
+        // Only proceed if we have an object with name and url
+        if (
+          seriesRaw &&
+          typeof seriesRaw === 'object' &&
+          'name' in seriesRaw &&
+          'url' in seriesRaw
+        ) {
+          itemListElement.push({
+            "@type": "ListItem",
+            position: currentPosition,
+            name: seriesRaw.name,
+            item: toAbsolute(seriesRaw.url),
+          });
+          currentPosition++;
+        }
+      }
+      // END BREADCRUMB INJECTION
+
+      itemListElement.push({
+        "@type": "ListItem",
+        position: currentPosition,
+        name: title,
+        item: toAbsolute(url),
+      });
+
       graph.push({
         "@type": "BreadcrumbList",
         "@id": breadcrumbId,
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Gogam",
-            item: siteUrl,
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: title,
-            item: toAbsolute(url),
-          },
-        ],
+        itemListElement: itemListElement,
       });
     }
 
@@ -618,25 +648,37 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
       // "Every entity ... has exactly one Master Node."
       // isBasedOn usually refers to EXTERNAL entities or other games.
       // If external, full Stub (Name + ID/URL).
+      // Lineage (isBasedOn)
       if (doc.isBasedOn) {
         if (typeof doc.isBasedOn === 'string') {
           itemNode.isBasedOn = doc.isBasedOn;
         } else {
-          const based = doc.isBasedOn as CreativeWorkBase;
-          // If it has an ID, use it as @id.
+          const based = doc.isBasedOn as any;
           itemNode.isBasedOn = {
-            "@type": "CreativeWork",
-            "@id": based.id || undefined,
+            "@type": based["@type"] || based.type || "CreativeWork",
+            "@id": based["@id"] || based.id,
             name: based.name,
             url: based.url,
             author: based.author
               ? {
                 "@type": "Person",
-                name: based.author.name || based.author, // Simple name for external authors
+                name: based.author.name || based.author,
               }
               : undefined,
           };
         }
+      }
+
+      // Subject Matter (About)
+      if (doc.about) {
+        const aboutRaw = Array.isArray(doc.about) ? doc.about : [doc.about];
+        itemNode.about = aboutRaw.map((a: any) => ({
+          "@type": a["@type"] || a.type || "Thing",
+          "@id": a["@id"] || a.id,
+          name: a.name,
+          sameAs: a.sameAs,
+          url: a.url,
+        }));
       }
 
       // Mentions (Testimonials or Characters)
@@ -865,8 +907,16 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
       }
     }
 
+    // Title Logic: Suffix with Site Name or Organization Name if not already present
+    // Check if the document has a specific organization defined
+    const orgName = (doc.organization as Record<string, unknown>)?.name as string | undefined;
+    const suffix = orgName || siteName;
+
+    const baseTitle = title || siteName;
+    const finalTitle = baseTitle.includes(suffix) ? baseTitle : `${baseTitle} | ${suffix}`;
+
     useHead({
-      title,
+      title: finalTitle,
       htmlAttrs: { lang: documentLocale },
       meta,
       link,

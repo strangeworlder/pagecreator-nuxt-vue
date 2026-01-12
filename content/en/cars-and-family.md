@@ -1,5 +1,5 @@
 ---
-title: Cars & Family
+title: 'Cars & Family: Fast & Furious Style RPG'
 description: >-
   A Fast & Furious-inspired heist TTRPG built on Lasers & Feelings, where you
   balance high-speed stunts with the bonds of your crew.
@@ -51,7 +51,7 @@ author:
     - 'https://bsky.app/profile/strangeworlder.bsky.social'
     - 'https://www.threads.com/@gogam.eu'
 datePublished: 2025-12-28
-dateModified: 2026-01-04
+dateModified: 2026-01-12
 tags:
   - game
   - heist

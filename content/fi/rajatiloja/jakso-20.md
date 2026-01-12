@@ -1,8 +1,11 @@
 ---
-title: 'Jakso 20: Pakoreitti'
+title: 'Jakso 20: Pakoreitti | +H: Rajatiloja'
 datePublished: 2024-11-11
 duration: PT39M
 template: episode
+organization:
+  name: Gogam Entertainment
+  '@id': 'https://gogam.eu/#gogam-entertainment'
 inLanguage:
   - fi
 contentType:
@@ -28,7 +31,7 @@ mentions:
   - name: Kathereen Cellstone
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#kathereen'
 contentUrl: 'https://www.youtube.com/watch?v=jC5sLVp3ihQ'
-dateModified: 2026-01-09
+dateModified: 2026-01-12
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)

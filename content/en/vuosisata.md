@@ -1,5 +1,5 @@
 ---
-title: Vuosisata.
+title: 'Vuosisata: Tarot-based History RPG'
 description: Tarot‑driven tabletop RPG set across 1912–2012 where magic reshapes history.
 contentType:
   - Game
@@ -30,7 +30,7 @@ offers:
     priceCurrency: USD
     bookFormat: 'https://schema.org/EBook'
 datePublished: 2025-12-28
-dateModified: 2026-01-04
+dateModified: 2026-01-12
 tags:
   - game
   - ttrpg

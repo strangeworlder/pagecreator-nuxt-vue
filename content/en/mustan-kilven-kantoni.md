@@ -1,5 +1,5 @@
 ---
-title: 'Black Shield Canton: Analysis of the world, themes, and style'
+title: 'The Black Shield Canton: Them Deeper Bones Setting'
 description: >-
   A comprehensive overview of the Black Shield Canton game world's themes,
   style, and design choices
@@ -20,7 +20,7 @@ author:
     - 'https://bsky.app/profile/strangeworlder.bsky.social'
     - 'https://www.threads.com/@gogam.eu'
 datePublished: 2025-12-28
-dateModified: 2026-01-04
+dateModified: 2026-01-12
 tags:
   - L&L
   - world

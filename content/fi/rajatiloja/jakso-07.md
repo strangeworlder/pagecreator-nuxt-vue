@@ -1,8 +1,11 @@
 ---
-title: 'Jakso 7: Valomainos'
+title: 'Jakso 7: Valomainos | +H: Rajatiloja'
 datePublished: 2024-04-29
 duration: PT46M
 template: episode
+organization:
+  name: Gogam Entertainment
+  '@id': 'https://gogam.eu/#gogam-entertainment'
 inLanguage:
   - fi
 contentType:
@@ -28,7 +31,7 @@ mentions:
   - name: '"Lise" (Stenin Vaimo)'
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#lise'
 contentUrl: 'https://www.youtube.com/watch?v=nnO0st8m_SM'
-dateModified: 2026-01-09
+dateModified: 2026-01-12
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)

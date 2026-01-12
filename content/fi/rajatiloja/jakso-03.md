@@ -1,8 +1,11 @@
 ---
-title: 'Jakso 3: Galleria'
+title: 'Jakso 3: Galleria | +H: Rajatiloja'
 datePublished: 2024-03-04
 duration: PT52M
 template: episode
+organization:
+  name: Gogam Entertainment
+  '@id': 'https://gogam.eu/#gogam-entertainment'
 inLanguage:
   - fi
 contentType:
@@ -32,7 +35,7 @@ mentions:
   - name: '"Evan" (Maininta)'
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#evan'
 contentUrl: 'https://www.youtube.com/watch?v=Q-yNfLTvp7M'
-dateModified: 2026-01-09
+dateModified: 2026-01-12
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)

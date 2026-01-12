@@ -1,10 +1,10 @@
 ---
-title: Hirviökirja
+title: 'Hirviökirja: 64 sivua hirviöitä (L&L ja 5e -yhteensopiva)'
 description: >-
   Valikoima vaarallisia vastustajia aloitteleville hahmoille maailman
   suosituimpaan roolipeliin.
 datePublished: 2022-11-11
-dateModified: 2026-01-04
+dateModified: 2026-01-12
 canonical: /hirviokirja
 template: product
 cover: /images/products/hirviokirja/kansi.webp
@@ -57,7 +57,6 @@ author:
     - 'https://www.threads.com/@gogam.eu'
 organization:
   name: Kustannusosakeyhtiö Gogam
-  url: 'https://gogam.eu'
   sameAs:
     - 'https://instagram.com/gogam.eu'
     - 'https://gogameu.substack.com/'

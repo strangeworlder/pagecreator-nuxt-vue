@@ -1,8 +1,11 @@
 ---
-title: 'Jakso 4: 19. Arrondissementti'
+title: 'Jakso 4: 19. Arrondissementti | +H: Rajatiloja'
 datePublished: 2024-03-18
 duration: PT52M
 template: episode
+organization:
+  name: Gogam Entertainment
+  '@id': 'https://gogam.eu/#gogam-entertainment'
 inLanguage:
   - fi
 contentType:
@@ -32,7 +35,7 @@ mentions:
   - name: '"Evan" (Kuvassa)'
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#evan'
 contentUrl: 'https://www.youtube.com/watch?v=sz7W4TEmK48'
-dateModified: 2026-01-09
+dateModified: 2026-01-12
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)

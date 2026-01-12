@@ -1,5 +1,5 @@
 ---
-title: We can't stop here...
+title: 'We can''t stop here...: Psychedelic Mörk Borg Trip'
 description: >-
   A grimy, psychedelic Mörk Borg supplement by Petri Leinonen about traveling
   with a sentient, decaying herb wagon.
@@ -36,7 +36,7 @@ author:
     - 'https://bsky.app/profile/strangeworlder.bsky.social'
     - 'https://www.threads.com/@gogam.eu'
 datePublished: 2025-12-28
-dateModified: 2026-01-04
+dateModified: 2026-01-12
 tags:
   - game
   - mork-borg

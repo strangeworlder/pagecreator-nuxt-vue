@@ -1,8 +1,11 @@
 ---
-title: 'Jakso 19: Inkursio'
+title: 'Jakso 19: Inkursio | +H: Rajatiloja'
 datePublished: 2024-10-28
 duration: PT33M
 template: episode
+organization:
+  name: Gogam Entertainment
+  '@id': 'https://gogam.eu/#gogam-entertainment'
 inLanguage:
   - fi
 contentType:
@@ -29,7 +32,7 @@ mentions:
   - name: '"Hiljainen mies"'
     type: Thing
 contentUrl: 'https://www.youtube.com/watch?v=P5RlBP7gkGk'
-dateModified: 2026-01-09
+dateModified: 2026-01-12
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)

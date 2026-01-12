@@ -1,8 +1,11 @@
 ---
-title: 'Jakso 11: Suuri päivä'
+title: 'Jakso 11: Suuri päivä | +H: Rajatiloja'
 datePublished: 2024-07-08
 duration: PT57M
 template: episode
+organization:
+  name: Gogam Entertainment
+  '@id': 'https://gogam.eu/#gogam-entertainment'
 inLanguage:
   - fi
 contentType:
@@ -30,7 +33,7 @@ mentions:
   - name: Mattíana Blævarsdóttir
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#mattiana'
 contentUrl: 'https://www.youtube.com/watch?v=6y_I2ASwfaM'
-dateModified: 2026-01-09
+dateModified: 2026-01-12
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)

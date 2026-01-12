@@ -1,8 +1,11 @@
 ---
-title: 'Jakso 17: Kysymyksiä'
+title: 'Jakso 17: Kysymyksiä | +H: Rajatiloja'
 datePublished: 2024-09-30
 duration: PT46M
 template: episode
+organization:
+  name: Gogam Entertainment
+  '@id': 'https://gogam.eu/#gogam-entertainment'
 inLanguage:
   - fi
 contentType:
@@ -31,7 +34,7 @@ mentions:
   - name: Kathereen Cellstone
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#kathereen'
 contentUrl: 'https://www.youtube.com/watch?v=lnoMn9eHJyQ'
-dateModified: 2026-01-09
+dateModified: 2026-01-12
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)

@@ -1,8 +1,11 @@
 ---
-title: 'Jakso 24: Paluu Pariisiin'
+title: 'Jakso 24: Paluu Pariisiin | +H: Rajatiloja'
 datePublished: 2025-01-06
 duration: PT1H12M
 template: episode
+organization:
+  name: Gogam Entertainment
+  '@id': 'https://gogam.eu/#gogam-entertainment'
 inLanguage:
   - fi
 contentType:
@@ -30,7 +33,7 @@ mentions:
   - name: '"Hiljainen mies"'
     type: Thing
 contentUrl: 'https://www.youtube.com/watch?v=ncFyT13QpKk'
-dateModified: 2026-01-09
+dateModified: 2026-01-12
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)

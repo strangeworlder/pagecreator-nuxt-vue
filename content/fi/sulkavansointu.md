@@ -1,8 +1,10 @@
 ---
-title: Sulkavan sointu
+title: >-
+  Sulkavan sointu: Fantasiaseikkailu tukinuiton maisemissa (L&L & 5e
+  -yhteensopiva)
 description: Seikkailu 1. kokemustason hahmoille maailman suosituimpaan roolipeliin.
 datePublished: 2023-07-28
-dateModified: 2026-01-04
+dateModified: 2026-01-12
 canonical: /sulkavansointu
 template: product
 cover: /images/products/sulkavansointu/kansi.webp

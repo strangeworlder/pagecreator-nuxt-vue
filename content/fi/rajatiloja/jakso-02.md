@@ -1,8 +1,11 @@
 ---
-title: 'Jakso 2: Jalkautuminen'
+title: 'Jakso 2: Jalkautuminen | +H: Rajatiloja'
 datePublished: 2024-02-19
 duration: PT56M
 template: episode
+organization:
+  name: Gogam Entertainment
+  '@id': 'https://gogam.eu/#gogam-entertainment'
 inLanguage:
   - fi
 contentType:
@@ -31,7 +34,7 @@ mentions:
     type: Person
 contentUrl: 'https://www.youtube.com/watch?v=Qwrmu6tr_N0'
 transcript: /downloads/rajatiloja-transcript/jakso-02.txt
-dateModified: 2026-01-09
+dateModified: 2026-01-12
 faq:
   - q: Miksi tutkijaryhmä on Pariisissa?
     a: >-

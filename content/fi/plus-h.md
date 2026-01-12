@@ -1,5 +1,5 @@
 ---
-title: +H
+title: '+H: Modernin scifi-kauhun roolipeli'
 description: >-
   Modernin tieteiskauhun roolipeli, jossa pelaajat omaksuvat huippupätevän
   kenttätiimin roolit työskennellen New Horizonsille, massiiviselle
@@ -38,7 +38,7 @@ author:
     - 'https://bsky.app/profile/strangeworlder.bsky.social'
     - 'https://www.threads.com/@gogam.eu'
 datePublished: 2025-12-28
-dateModified: 2026-01-08
+dateModified: 2026-01-12
 tags:
   - roleplaying
   - horror
@@ -85,6 +85,53 @@ mentions:
       name: Petri Leinonen
       jobTitle: Pelisuunnittelija
     datePublished: 2025-11-28T00:00:00.000Z
+  - '@type': CreativeWork
+    name: Weird Life
+    author:
+      '@type': Person
+      name: David Toomey
+  - '@type': Game
+    name: Call of Cthulhu Roleplaying Game
+    author:
+      '@type': Person
+      name: Sandy Petersen
+  - '@type': Game
+    name: Dungeon World
+    author:
+      - '@type': Person
+        name: Sage LaTorra
+      - '@type': Person
+        name: Adam Koebel
+  - '@type': Game
+    name: Night Witches
+    author:
+      '@type': Person
+      name: Jason Morningstar
+  - '@type': Game
+    name: Tremulus
+    author:
+      '@type': Person
+      name: Sean Preston
+  - '@type': Game
+    name: Dread
+    author:
+      '@type': Person
+      name: Epidiah Ravachol
+  - '@type': Game
+    name: Fate Core
+    author:
+      '@type': Person
+      name: Leonard Balsera
+  - '@type': Game
+    name: 'Blacksad: The Roleplaying Game'
+    author:
+      '@type': Person
+      name: Manuel J. Sueiro
+  - '@type': Game
+    name: Orpheus
+    publisher:
+      '@type': Organization
+      name: White Wolf Game Studio
 entities:
   - type: CreativeWork
     name: +H
@@ -97,9 +144,13 @@ entities:
 
 ## Johdanto uusille pelaajille
 
-+H on Petri Leinosen suunnittelema modernin tieteiskauhun roolipeli. Pelaajat omaksuvat huippupätevän kenttätiimin roolit työskennellen New Horizonsille, massiiviselle bioteknologiakorporaatiolle. Peli on tehtäväpohjainen ja keskittyy tiimin "Ensikohtaamiseen" varjobiosfäärin kanssa – hypoteettisen "Elämä 2.0:n" kanssa, joka ei ole hiilipohjaista mutta on aina ollut olemassa rinnallamme, ja joka on vasta nyt aktivoitumassa vaarallisella tavalla. Pelin keskeiset teemat tutkivat todellisen tuntemattoman kohtaamisen kauhua, sitä miten ryhmä muodostuu (tai hajoaa) äärimmäisen paineen alla, ja kauhua jota taitavat ammattilaiset kokevat joutuessaan tilanteisiin, joihin he eivät voineet valmistautua.
++H on Petri Leinosen suunnittelema modernin tieteiskauhun roolipeli. Pelaajat ottavat huippupätevän kenttätiimin roolit työskennellen New Horizonsille, massiiviselle bioteknologiakorporaatiolle. Peli on rakenteeltaan tehtäväpohjainen, ja vuorottelee tehtäväjaksojen ja suvantovaiheiden välillä. Se keskittyy hahmojen, yhtiön ja maailman "ensikohtaamiseen" varjobiosfäärin, hypoteettisen "elämä 2.0:n" kanssa - rinnakkaisen ei-hiilipohjaisen elämän. Se on aina ollut rinnallamme, mutta outokaisimpaktin jälkimainingeissa aktivoitunut tavalla, joka on vaarallista ja mullistavaa. 
 
-Pelin mekaniikat on johdettu Powered by the Apocalypse (PbtA) -moottoreista, mutta ne ovat kehittyneet merkittävästi omaksi, ainutlaatuiseksi tehtäväkeskeiseksi rakenteekseen. Se ei ole tyypillinen PbtA-hack; pikemminkin se käyttää PbtA-tekniikoita tarinapelimäisten mekaanisten innovaatioiden rinnalla ja ammentaa vahvasti pohjoismaisesta immersioperinteestä. Tämä sekoitus luo erottuvan pelityylin, joka keskittyy pelaajahahmojen syvälliseen tuntemiseen heidän tekojensa kautta. Pelaaminen on keskusteluvetoista, sääntöjen ja noppien (2d6) puuttuessa peliin vain silloin, kun narratiivi laukaisee tietyt "siirrot". Erottuva piirre on, että pelaajat saavat uusia sääntökortteja pelin edetessä, mikä avaa vähitellen uusia toimintoja ja tapoja vaikuttaa avautuvaan tarinaan.
+Pelin keskeiset teemat tutkivat todellisen tuntemattoman kohtaamisen kauhua, sitä miten ryhmä muodostuu (tai hajoaa) äärimmäisen paineen alla, ja kauhua jota taitavat ammattilaiset kokevat joutuessaan tilanteisiin, joihin he eivät voineet valmistautua.
+
+Pelin mekaniikat on johdettu Powered by the Apocalypse (PbtA) -moottoreista, mutta ne ovat kehittyneet merkittävästi omanlaisikseen. Noppamekaniikat pohjaavat noppakouraan, jossa haetaan osumia (korkeita tuloksia yksittäisistä nopista) ja osumien määrä määrittää, mihin kohtaan perinteistä PbtA-asteikkoa tulos osuu: täydellinen, sääntöjen sanelema kompromissi, vai pelinjohtajan päättämä reaktio. Pelin tyyli - keskustelu ensin - nojaa vahvasti Bakerien malliin, mutta tyylillisesti sessiot ottavat vaikutteita pohjoismaisesta vapaamuotoisen tarinapelaamisen perinteestä enemmän kuin puhtaan mekanistinen Apocalypse World -hack. 
+
+Siirrot ("Moves") on tuttu sääntömalli muista Apocalypse World -pohjaisista peleistä, mutta +H:n erityisepiirteenä siirtorepertuaari aukeaa pelin edetessä. Peli alkaa yhdellä siirrolla ("*toimi*") ja pelin edetessä pelaajat saavat lisäsiirtoja, jotka sopivat genreen, ja lopulta myös siirtoja, jotka tekevät heidän hahmoistaan uniikkeja protagonisteja science fiction -kauhutarinassa.
 
 +H syntyi laajasta joukosta vaikutteita, alkaen tekijän kiinnostuksesta varjobiosfäärikonseptiin David Toomeyn kirjasta "Weird Life". Vaikka sen mekaaninen perusta on Apocalypse World, yksi pelin ensimmäisistä tavoitteista oli tuoda tuoretta näkökulmaa klassiseen kauhuropeliin Call of Cthulhuun. Se ammentaa myös erityisiä ideoita muista PbtA-peleistä, kuten Dungeon Worldin ryhmä-vs-uhka -fokuksesta, Night Witchesin tilannesidonnaisista siirroista ja Tremulusin lähestymistavasta PbtA-kauhuun. PbtA-perheen ulkopuolelta peli mainitsee myös Dreadin, Fate Coren, Blacksadin ja Orpheus-roolipelin (sen episodimaisella tarinarakenteella) suurina inspiraationlähteinä.
 
@@ -114,10 +165,9 @@ Pelaajille progressiiviset mekaniikat simuloivat kokemusta huippupätevästä am
 #### Mitä ovat progressiiviset mekaniikat?
 Pelaajat eivät aloita kaikkien sääntöjen kanssa. Sen sijaan he saavat uusia sääntökortteja tietyissä virstanpylväissä "Ensikohtaamisen" aikana, mikä heijastaa mekaanisesti tilanteen eskaloituvaa vaaraa.
 
-1.  **Saapuminen:** Alussa pelaajilla on vain yksi laaja siirto: *toimi*. Tämä siirto on anteeksiantava ja kuvaa heidän yleistä ammatillista pätevyyttään rutiininomaiselta vaikuttavalla tehtävällä.
-2.  **Tehtävän suorittaminen:** Tehtävän edetessä pelaajat saavat uusia siirtoja, jotka korvaavat *toimi*-siirron: *etene tilanteessa*, *sitoudu väkivaltaan* ja *tutki faktoja*. He saavat myös *Lähestymistavat*, mekaniikan joka määrittelee hahmon "suosimat" ja "haastavat" tyylit, mikä muuttaa onnistumiseen tarvittavaa noppatulosta.
-3.  **Tilanne pahenee:** Neljän siirron jälkeen yksinkertainen *toimi*-siirto poistuu pelistä. Pelaajat saavat nyt siirtoja tiimityöhön, kuten *auta* ja *estä*, sekä ensimmäisen ainutlaatuisen Erikoistumissiirtonsa.
-4.  **Murtumispiste:** Kuuden siirron jälkeen pelaajat avaavat *Piirteet* ja *tahto toimia* -siirronsa. Tämä sallii heidän lisätä noppia heittoon osoittamalla miten piirre auttaa, tai saada resurssin ottamalla vähemmän noppia ja osoittamalla miten piirre haittaa heitä.
+1.  **Saapuminen:** Alussa pelaajilla on vain yksi laaja siirto: *Toimi*. Tämä siirto on anteeksiantava ja kannustaa vapaaseen ja proaktiiviseen pelaamiseen ennen tilanteen eskaloitumista.
+2.  **Tehtävän suorittaminen:** Tilanteen vakavoituessa *Toimi*-siirto korvataan kolmella täsmällisemmällä siirrolla: *etene tilanteessa*, *sitoudu väkivaltaan* ja *tutki faktoja*. Myös *lähestymistavat* (suosimat ja hankalat tyylit) sekä *auta* ja *estä* -siirrot tulevat peliin.
+3.  **Finaali:** Pelin huipentuessa siirrot saavat synkempiä sävyjä ja selviytymisestä tulee epätodennäköistä. Jos peli pelataan yksittäisenä istuntona, käyttöön otetaan myös pakenemiseen tarkoitettu *hae suojaa* -siirto.
 
 #### Miten vahinko toimii +H:ssa?
 Kun hahmo vahingoittuu, hän saa *Säröjä* osumapisteiden menettämisen sijaan.

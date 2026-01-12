@@ -30,7 +30,8 @@ export const frontMatterSchema = z.object({
   isBasedOn: z.object({
     "@type": z.literal("CreativeWork").optional(),
     name: z.string(),
-    url: z.string().url(),
+    url: z.string().url().optional(),
+    "@id": z.string().optional(),
   }).optional(),
 
   // Entities & Graph

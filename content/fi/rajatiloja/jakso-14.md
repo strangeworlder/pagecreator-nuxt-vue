@@ -1,8 +1,11 @@
 ---
-title: 'Jakso 14: Tasoittuminen'
+title: 'Jakso 14: Tasoittuminen | +H: Rajatiloja'
 datePublished: 2024-08-19
 duration: PT51M
 template: episode
+organization:
+  name: Gogam Entertainment
+  '@id': 'https://gogam.eu/#gogam-entertainment'
 inLanguage:
   - fi
 contentType:
@@ -30,7 +33,7 @@ mentions:
   - name: '"Ruotsalainen Nainen" (Lise)'
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#lise'
 contentUrl: 'https://www.youtube.com/watch?v=tpVncZqg32g'
-dateModified: 2026-01-09
+dateModified: 2026-01-12
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)

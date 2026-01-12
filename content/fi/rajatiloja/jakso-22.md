@@ -1,8 +1,11 @@
 ---
-title: 'Jakso 22: Pako'
+title: 'Jakso 22: Pako | +H: Rajatiloja'
 datePublished: 2024-12-09
 duration: PT49M
 template: episode
+organization:
+  name: Gogam Entertainment
+  '@id': 'https://gogam.eu/#gogam-entertainment'
 inLanguage:
   - fi
 contentType:
@@ -32,7 +35,7 @@ mentions:
   - name: '"Lise Eklund" (Haamu/Kaiku)'
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#lise'
 contentUrl: 'https://www.youtube.com/watch?v=sEaiDe9keGw'
-dateModified: 2026-01-09
+dateModified: 2026-01-12
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)

@@ -1,5 +1,5 @@
 ---
-title: A Particular Group of Corvids - Mystery Action TTRPG
+title: 'A Particular Group of Corvids: Bird Detective RPG'
 description: >-
   A tabletop mystery and action RPG where players take on the role of skilled
   corvid sleuths in the city of Roost. Think Sherlock Holmes meets Peaky
@@ -32,7 +32,7 @@ author:
     - 'https://bsky.app/profile/strangeworlder.bsky.social'
     - 'https://www.threads.com/@gogam.eu'
 datePublished: 2025-12-28
-dateModified: 2026-01-04
+dateModified: 2026-01-12
 tags:
   - game
   - mystery

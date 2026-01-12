@@ -1,5 +1,5 @@
 ---
-title: Bonusjaksot
+title: 'Bonusjaksot | +H: Rajatiloja'
 datePublished: 2024-02-05
 template: article
 inLanguage:
@@ -28,7 +28,7 @@ mentions:
   - name: Thom Lindell
     id: 'https://gogam.eu/fi/rajatiloja/hahmot#thom'
 contentUrl: ''
-dateModified: 2026-01-09
+dateModified: 2026-01-12
 ---
 
 [< Takaisin sarjan etusivulle](/fi/rajatiloja)

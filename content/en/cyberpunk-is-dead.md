@@ -1,5 +1,5 @@
 ---
-title: Cyberpunk is Dead
+title: 'Cyberpunk is Dead: Minimalist Sci-Fi RPG'
 description: >-
   A minimalist Blades in the Dark hack by Petri Leinonen where you play as
   disposable corporate operatives enforcing the company's will.
@@ -40,7 +40,7 @@ author:
     - 'https://bsky.app/profile/strangeworlder.bsky.social'
     - 'https://www.threads.com/@gogam.eu'
 datePublished: 2025-12-28
-dateModified: 2026-01-04
+dateModified: 2026-01-12
 tags:
   - game
   - cyberpunk

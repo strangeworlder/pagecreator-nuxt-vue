@@ -1,5 +1,5 @@
 ---
-title: 'Mustan kilven kantoni: Them Deeper Bones -maailma'
+title: 'Mustan kilven kantoni: Analyysi maailmasta, teemoista ja tyylistä'
 description: >-
   Kattava kuvaus Mustan kilven kantoni -pelimaailman teemoista ja tyylistä ja
   valinnoista

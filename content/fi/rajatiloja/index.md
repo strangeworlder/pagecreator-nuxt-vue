@@ -118,7 +118,7 @@ Sarjan pelinjohtajana toimii itse pelin suunnittelija, **Petri Leinonen**. Pelaa
 
 Pitkän linjan pelinjohtaja ja pelisuunnittelija - Petri on Rajatiloja-sarjan pelinjohtaja ja tuottaja. 
 
-[https://gogam.eu/](https://gogam.eu/)
+[https://gogam.eu/](/)
 
 ### Eevi Korhonen
 

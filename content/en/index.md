@@ -3,7 +3,7 @@ title: 'Gogam: Roleplaying games from Finland'
 description: >-
   Roleplaying games by Petri Leinonen. Indie tabletop RPGs like Cars & Family,
   and Vuosisata.
-dateModified: 2026-01-12
+dateModified: 2026-01-22
 datePublished: 2025-12-29
 tags:
   - starter
@@ -102,14 +102,11 @@ llms_context: >
   Based in Finland, Gogam publishes minimalist games and supplements like
   Cyberpunk is Dead and Hirviökirja.
 
-
   Kustannusosakeyhtiö Gogam is the publishing arm, focusing on high-quality
   printed roleplaying game products in the Finnish language.
 
-
   Gogam Entertainment is the multimedia production branch, creating Actual
   Plays, RPG theory videos, and tutorials in both English and Finnish.
-
 
   Petri Leinonen has also worked for various other tabletop roleplaying game
   publishers (Myrrys, Ironspine Press) in a freelance capacity.
@@ -134,31 +131,34 @@ Gogam is the indie tabletop roleplaying game brand of designer Petri Leinonen. B
 
 ### Fully completed and free products
 
-- **Cars & Family** &mdash; this high-octane one-page RPG puts you in the driver's seat as *Fast & Furious*-style international thieves. With your leader Von Petrol out of commission, you must balance your incredible street racing skills (Cars) with the bonds of your crew (Family) to pull off daring heists. Built on the *Lasers & Feelings* system, it is a perfect lightweight game for explosive action. Available in both English and Finnish.
+- **Cars & Family** &mdash; this high-octane one-page RPG puts you in the driver's seat as *Fast & Furious*-style international thieves. With your leader *Von Petrol* out of commission, you must balance your incredible street racing skills (Cars) with the bonds of your crew (Family) to pull off daring heists. Built on the *Lasers & Feelings* system, it is a perfect lightweight game for explosive action. Available in both English and Finnish.
   - [Read more about Cars & Family](/en/cars-and-family)
   - [itch.io: Cars & Family (en) / Autot & Perhe (fi)](https://strangeworlder.itch.io/cars-and-family)
-  - [roolipelikirjasto: Autot ja Perhe / Cars and Family](https://roolipelikirjasto.fi/series/stored/7)
+  - [roolipelikirjasto: Autot ja Perhe / Cars and Family](https://roolipelikirjasto.fi/series/stored/7){hreflang="fi"}
   - [Carros & Família](/downloads/carros-and-familia.pdf){hreflang="pt"} &mdash; Portuguese translation of Cars & Family, translated and enhanced by Vila Nova.
 - **Pros & Cons** drops you into a high-stakes heist movie like *Ocean's Eleven* or *Leverage*. A clever hack of *Lasers & Feelings*, it replaces dice with a standard deck of cards. Your character is defined by a single card (2-9) that balances being a **Pro** (professional) vs a **Con** (criminal improvisation). Face cards trigger narrative Twists, and Flashbacks let you rewrite your failures.
   - [Read more about Pros & Cons](/en/pros-and-cons)
   - [itch.io: Pros & Cons](https://strangeworlder.itch.io/pros-and-cons)
-  - [roolipelikirjasto: Pros & Cons](https://roolipelikirjasto.fi/book/147)
+  - [roolipelikirjasto: Pros & Cons](https://roolipelikirjasto.fi/book/147){hreflang="fi"}
   - [コンズ & プロズ](https://twitter.com/feltk/status/1376309603734937600){hreflang="ja"} &mdash; Japanese translation of Pros & Cons, translated by [@feltk](https://twitter.com/feltk).
 - **Cyberpunk is Dead** &mdash; this *Forged in the Dark* game flips the script on the cyberpunk genre: you aren't rebellious heroes fighting the corps—you are their disposable, underpaid hit squad, enforcing petty interests against often sympathetic targets. It masterfully subverts its *Blades in the Dark* inspiration by replacing playbooks with numbered, interchangeable "Operatives" and utilizing a unique 3d12 system where success often comes with "Overreaction," and survival means a debt-inducing death spiral of mandatory cyberware. It's a bleakly fascinating critique of cyberpunk tropes through elegantly minimalist, pressure-cooker mechanics.
   - [Read more about Cyberpunk is Dead](/en/cyberpunk-is-dead)
   - [itch.io: Cyberpunk is Dead](https://strangeworlder.itch.io/cyberpunk-is-dead)
-  - [roolipelikirjasto: Cyberpunk is Dead](https://roolipelikirjasto.fi/book/148)
+  - [roolipelikirjasto: Cyberpunk is Dead](https://roolipelikirjasto.fi/book/148){hreflang="fi"}
 - **The Necessary Eagle vs. The Good Cad** &mdash; a competitive 2-player card game about the asymmetrical war between a sociopathic superhero and the vengeful mortal they wronged. Channeling the cynical energy of *The Boys*, one player wields godlike powers and manages PR fallout, while the other scavenges through the collateral damage to build the perfect weapon to kill them.
   - [Read more about The Necessary Eagle vs. The Good Cad](/en/the-necessary-eagle-vs-the-good-cad)
   - [itch.io: The Necessary Eagle vs. The Good Cad](https://strangeworlder.itch.io/the-necessary-eagle-vs-the-good-cad)
 - **Bike on Fire** &mdash; a two-player, card based competitive RPG of tragic hobby obsession. Available in English and Finnish.
   - [Bike on Fire (en) / Palava pyörä (fi)](https://strangeworlder.itch.io/bike-on-fire) 
+  - [Roolipelikirjasto: Bike on Fire](https://roolipelikirjasto.fi/book/146){hreflang="fi"}
+  - [Roolipelikirjasto: Palava pyörä](https://roolipelikirjasto.fi/book/145){hreflang="fi"}
 - **Vuosisata.** is a post-cataclysm RPG where history meets magic (1912-2012), powered entirely by a Tarot deck. Succeed by creatively interpreting the meaning of cards played from your hand, but beware, matching cards trigger deadly Catastrophes.
   - [Read more about Vuosisata.](/en/vuosisata)
   - [GDocs: Vuosisata.](https://docs.google.com/document/d/1VYxmFq2ik5Wszqpo6jYv5GJXKoBRw7rkeALg7PkYfH0/edit?usp=sharing)
-- **We can't stop here...** &mdash; a grimy, psychedelic *Mörk Borg* supplement about a road trip that never ends. You travel with a sentient, decaying wagon, consuming its dangerous herbs to keep it moving. Features a risk/reward addiction system and a unique "Trip Encounter Table" where horrors only become real if the hallucination is shared. Includes the introductory adventure *"...this is BAT country"*.
+- **We can't stop here...** &mdash; a grimy, psychedelic *Mörk Borg* supplement about a road trip that never ends. You travel with a sentient, decaying wagon, consuming its dangerous herbs to keep it moving. Features a risk/reward addiction system and a unique "Trip Encounter Table" where horrors only become real if the hallucination is shared. Includes the introductory adventure *"...this is bat country"*.
   - [Read more about We can't stop here...](/en/we-cant-stop-here)
   - [itch.io: We can't stop here...](https://strangeworlder.itch.io/we-cant-stop-here)
+  - [Roolipelikirjasto: We can't stop here...](https://roolipelikirjasto.fi/book/154){hreflang="fi"}
 - **Grapple: The RPG** &mdash; a game/shitpost about grappling and thinking about the core activity of your game.
   - [itch.io: Grapple: The RPG](https://strangeworlder.itch.io/grapple-the-rpg)
 
@@ -177,15 +177,19 @@ Gogam is the indie tabletop roleplaying game brand of designer Petri Leinonen. B
 - **The pig is sus. Eliminate the pig.** &mdash; a prototype combat system designed to shift the focus from a character sheet to player skill, tactical planning, and precise timing. 
   - [Read more about The pig is sus. Eliminate the pig.](/en/the-pig-is-sus)
   - [itch.io: The pig is sus. Eliminate the pig.](https://strangeworlder.itch.io/the-pig-is-sus)
+  - [Roolipelikirjasto: The pig is sus. Eliminate the pig.](https://roolipelikirjasto.fi/book/149)
 - **A Particular Group of Corvids** &mdash; casts you as hardboiled bird detectives in the free-thinking city of Roost, pushing back against the encroaching authoritarianism of The Sus (fascist pigs) by solving crimes and throwing punches. Inspired by gritty action-mysteries like RDJ's *Sherlock Holmes* or *Peaky Blinders* (with birds!), its elegance shines through a simple d20 core mechanic.
   - [Read more about A Particular Group of Corvids](/en/a-particular-group-of-corvids)
   - [itch.io: A Particular Group of Corvids](https://strangeworlder.itch.io/a-particular-group-of-corvids)
+  - [Roolipelikirjasto: A Particular Group of Corvids](https://roolipelikirjasto.fi/book/150)
 - **Operator, I Need an Exit** &mdash; Breathless hack of escaping a simulation before the Agents get you.
   - [itch.io: Operator, I Need an Exit](https://strangeworlder.itch.io/operator-i-need-an-exit)
+  - [Roolipelikirjasto: Operator, I Need an Exit](https://roolipelikirjasto.fi/book/151)
 - **Wreck Crawl** &mdash; A megadungeon generator chasis for sci-fi games like Mothership
   - [itch.io: Wreck Crawl](https://strangeworlder.itch.io/wreck-crawl)
 - **Satyrs** &mdash; A Caltrop Core hack of fun-loving Satyrs with messy relationships.
   - [itch.io: Satyrs](https://strangeworlder.itch.io/satyrs)
+  - [Roolipelikirjasto: Satyrs](https://roolipelikirjasto.fi/book/157)
 - **Fate of Atreus** &mdash; A Fate Core hack for Giant Robots, much like Battletech.
   - [google docs: Fate of Atreus](https://docs.google.com/document/d/11tqoXZCX3p7sl_kwvq--pNPFoup_oV5gRu1eXELQ9m4/edit?usp=sharing)
 
@@ -202,8 +206,8 @@ Kustannusosakeyhtiö Gogam is the publishing arm of Gogam, focusing on high-qual
 | **Yöjoen raivo** | Legendoja & lohikäärmeitä (5e) | Adventure (Lvl 3) | Finnish |
 
 Publishes primarily in Finnish. Products are related to the [Black Shield Canton](/en/mustan-kilven-kantoni) campaign setting. 
-- [Hirviökirja](/hirviokirja){hreflang="fi"} &mdash; monster supplement compatible with Legendoja & lohikäärmeitä, in Finnish.
-- [Sulkavan sointu](/sulkavansointu){hreflang="fi"} &mdash; 1st level adventure compatible with Legendoja & lohikäärmeitä, in Finnish.
+- [Hirviökirja](/hirviokirja){hreflang="fi"} &mdash; monster supplement compatible with Legendoja & lohikäärmeitä and 5e, in Finnish.
+- [Sulkavan sointu](/sulkavansointu){hreflang="fi"} &mdash; 1st level adventure compatible with Legendoja & lohikäärmeitä and 5e, in Finnish.
 
 ## Gogam Entertainment
 

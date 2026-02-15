@@ -20,7 +20,7 @@ author:
     - 'https://bsky.app/profile/strangeworlder.bsky.social'
     - 'https://www.threads.com/@gogam.eu'
 datePublished: 2025-12-28
-dateModified: 2026-01-12
+dateModified: 2026-02-15
 tags:
   - L&L
   - world
@@ -222,7 +222,7 @@ Yes, the setting's emphasis on exploration, procedural generation (via *Them Dee
 *   Ruotsalainen, Wille. (2024). *Yöjoen raivo*. Gogam.
 
 ## Links
-*   **Them Deeper Bones**: [https://themdeeperbones.com/](https://themdeeperbones.com/), [Fantasiapelit](https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_221393)
-*   **Hirviökirja**: [/hirviokirja](http://gogam.eu/hirviokirja), [Puolenkuun pelit](https://www.puolenkuunpelit.com/kauppa/product_info.php?products_id=168296), [Fantasiapelit](https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_221394), [Laiska Pelikaani](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-hirviokirja-84744) / [PDF](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-hirviokirja-vesileimattu-pdf-81049)
-*   **Sulkavan sointu**: [/sulkavansointu/](http://gogam.eu/sulkavansointu/), [Puolenkuun pelit](https://www.puolenkuunpelit.com/kauppa/product_info.php?products_id=179450), [Fantasiapelit](https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_225693), [Laiska pelikaani](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-sulkavan-sointu-84879) / [PDF](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-sulkavan-sointu-vesileimattu-pdf-84945), [Pelikrypta Ikamaa](https://pelikrypta.fi/products/sulkavan-sointu)
-*   **Yöjoen raivo**: [Puolenkuun pelit](https://www.puolenkuunpelit.com/kauppa/product_info.php?products_id=189358), [Fantasiapelit](https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_230989), [Laiska pelikaani](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-yojoen-raivo-81803), [Pelikrypta Ikamaa](https://pelikrypta.fi/products/yojoen-raivo)
+*   **Them Deeper Bones**: [https://themdeeperbones.com/](https://themdeeperbones.com/), [Fantasiapelit](https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_221393){hreflang="fi"}
+*   **Hirviökirja**: [/hirviokirja](http://gogam.eu/hirviokirja){hreflang="fi"}, [Puolenkuun pelit](https://www.puolenkuunpelit.com/kauppa/product_info.php?products_id=168296){hreflang="fi"}, [Fantasiapelit](https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_221394){hreflang="fi"}, [Laiska Pelikaani](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-hirviokirja-84744){hreflang="fi"} / [PDF](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-hirviokirja-vesileimattu-pdf-81049){hreflang="fi"}
+*   **Sulkavan sointu**: [/sulkavansointu/](http://gogam.eu/sulkavansointu/){hreflang="fi"}, [Puolenkuun pelit](https://www.puolenkuunpelit.com/kauppa/product_info.php?products_id=179450){hreflang="fi"}, [Fantasiapelit](https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_225693){hreflang="fi"}, [Laiska pelikaani](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-sulkavan-sointu-84879){hreflang="fi"} / [PDF](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-sulkavan-sointu-vesileimattu-pdf-84945){hreflang="fi"}, [Pelikrypta Ikamaa](https://pelikrypta.fi/products/sulkavan-sointu){hreflang="fi"}
+*   **Yöjoen raivo**: [Puolenkuun pelit](https://www.puolenkuunpelit.com/kauppa/product_info.php?products_id=189358){hreflang="fi"}, [Fantasiapelit](https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_230989){hreflang="fi"}, [Laiska pelikaani](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-yojoen-raivo-81803){hreflang="fi"}, [Pelikrypta Ikamaa](https://pelikrypta.fi/products/yojoen-raivo){hreflang="fi"}

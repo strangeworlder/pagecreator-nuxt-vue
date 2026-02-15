@@ -4,7 +4,7 @@ description: >-
   Valikoima vaarallisia vastustajia aloitteleville hahmoille maailman
   suosituimpaan roolipeliin.
 datePublished: 2022-11-11
-dateModified: 2026-01-12
+dateModified: 2026-02-15
 canonical: /hirviokirja
 template: product
 cover: /images/products/hirviokirja/kansi.webp
@@ -165,7 +165,7 @@ subjectOf:
 
 Hirviökirja on 5e-yhteensopiva ja ammentaa suomalaisesta kansanperinteestä ja pohjoisesta fantasiasta. Se tarjoaa laajan kattauksen vastustajia haastamaan alhaisten kokemustasojen hahmoja. Sen sivuilta löytyy kaikenlaista vipeltäjää sulkavista konteloihin; luomoja, kalmoja, mämmilimoja ja ilmeksiä unohtamatta. Kyseessä on siis hirviömäinen kokoelma, joka laajentaa Legendoja & lohikäärmeissä esiteltyä vastustajavalikoimaa pohjoisista maista ammentavilla fantastisilla olennoilla. L&L pohjaa Wizards of the Coastin julkaisemaan viidennen laitoksen sääntöaihioon (SRD), joten kaikki Hirviökirjan vastustajat ovat siten käytettävissä myös maailman suosituimmassa roolipelissä.
 
-Hirviökirja julkaistiin 11. marraskuuta 2022 kovakantisena kirjana, ja 7.12 PDF-muotoisena sähköisenä kirjana, jossa on erityisesti otettu huomioon sen saavutettavuus ja käyttö ruudunlukijoilla ja muilla assistiivisilla teknologioilla.
+Hirviökirja julkaistiin 11. marraskuuta 2022 kovakantisena kirjana, ja 7. joulukuuta 2022 PDF-muotoisena sähköisenä kirjana, jossa on erityisesti otettu huomioon sen saavutettavuus ja käyttö ruudunlukijoilla ja muilla assistiivisilla teknologioilla.
 
 ![Hirviökirjan kansikuva. Seikkailija kuusimetsän aukiolla miekka kädessään tuijottaa edessään nousevaa krokraks-lintua. Kuvitus edustaa suomalaista kansanperintöä ja Northern fantasy -tyyliä.](/images/products/hirviokirja/kansi.webp)
 
@@ -243,7 +243,7 @@ Kyllä, se perustuu SRD-aineistoon ja on täysin yhteensopiva maailman suosituim
 Erityisesti alhaisille tasoille, haastetasot 1/8 – 4.
 
 **Mikä on Legendoja & lohikäärmeitä?**
-Legendoja & lohikäärmeitä (L&L) on suomenkielinen roolipeli, joka perustuu 5. laitoksen sääntöihin ja ammentaa suomalaisesta mytologiasta.
+Legendoja & lohikäärmeitä (L&L) on suomenkielinen roolipeli, joka perustuu 5. laitoksen sääntöihin ja ammentaa suomalaisesta mytologiasta. Se on esikuvansa, maailman suosituimman roolipelin lailla, saavuttanut suuren myyntimenestyksen Suomen markkinoilla.
 
 ## Mediassa
 

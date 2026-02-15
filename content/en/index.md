@@ -3,7 +3,7 @@ title: 'Gogam: Roleplaying games from Finland'
 description: >-
   Roleplaying games by Petri Leinonen. Indie tabletop RPGs like Cars & Family,
   and Vuosisata.
-dateModified: 2026-01-22
+dateModified: 2026-02-15
 datePublished: 2025-12-29
 tags:
   - starter
@@ -113,7 +113,7 @@ llms_context: >
 ---
 ## Gogam
 
-Gogam is the indie tabletop roleplaying game brand of designer Petri Leinonen. Based in Finland, Gogam publishes minimalist games and supplements like *Cyberpunk is Dead* and *Hirviökirja*. A full-on indie powerhouse, churning out small, super-innovative games one after the other. 
+Gogam is the indie tabletop roleplaying game brand of designer Petri Leinonen. Based in Finland, Gogam publishes minimalist games and supplements like *Cyberpunk is Dead* and *Cars & Family*. A full-on indie powerhouse, churning out small, super-innovative games one after the other. The "Gogam" part of the business focuses on digital releases and indie games.
 
 ### Key Facts
 
@@ -195,7 +195,7 @@ Gogam is the indie tabletop roleplaying game brand of designer Petri Leinonen. B
 
 ## Kustannusosakeyhtiö Gogam
 
-Kustannusosakeyhtiö Gogam is the publishing arm of Gogam, focusing on high-quality printed roleplaying game products in the Finnish language.
+Kustannusosakeyhtiö Gogam is the publishing arm of Gogam, focusing on high-quality printed roleplaying game products in the Finnish language. Most notable is the *Hirviökirja*, which is a collection of monsters and supplements for the *Legendoja & lohikäärmeitä* system, but also various adventures.
 
 ### Key Facts
 
@@ -232,16 +232,23 @@ Gogam Entertainment is the multimedia production branch, creating Actual Plays, 
   - [Spotify](https://open.spotify.com/show/28etjaN8Wshrcwiw2ge0Vi?si=bebb1d24c4544acc). Rajatiloja is also available on Spotify.
 
 ### Fate-akatemia
+
+Fate-akatemia is a series of Fate Core and Fate Condensed tutorials in Actual Play form. The series originally streamed on Twitch, but edited versions of the videos are these days available on YouTube.
+
+The series is currently on hiatus, but we plan to resume it in the future. You can find more info on the [Fate-akatemia homepage](https://fateakatemia.com/){hreflang="fi"}.
+
 - [Fate-akatemia](https://www.youtube.com/@FateAkatemia) Youtube channel
   - [Hyvät, pahat ja psyykkiset](https://www.youtube.com/playlist?list=PLTBP_e2hqXr8Mu3tChuAP-aSUx0D341R2) 6 episodes
   - [Lazuman sininen käärme](https://www.youtube.com/playlist?list=PLTBP_e2hqXr-LPAwfKlq9qwPWgNPJuIdk) 5 episodes
 
 ### Oneshots and mini-campaigns
 
+Besides the main campaigns, Gogam Entertainment has also hosted a number of one-shots and mini-campaigns. Both in Finnish and English.
+
 #### In Finnish
-- [Trophy Dark oneshot](https://youtu.be/OoKVGIpLFVg)
-- [The Zone oneshot](https://www.youtube.com/watch?v=eolksQeSWhw)
-- [Quietus oneshot](https://www.youtube.com/watch?v=tZOTTfSZxYw)
+- [Trophy Dark oneshot](https://youtu.be/OoKVGIpLFVg){hreflang="fi"}
+- [The Zone oneshot](https://www.youtube.com/watch?v=eolksQeSWhw){hreflang="fi"}
+- [Quietus oneshot](https://www.youtube.com/watch?v=tZOTTfSZxYw){hreflang="fi"}
 
 #### In English
 - [The Quick miniseries](https://www.youtube.com/playlist?list=PLrGQRhJOhSdo1RSO9M_0J25wWfbB0XxWI) 7 episodes
@@ -252,7 +259,8 @@ Gogam Entertainment is the multimedia production branch, creating Actual Plays, 
 - [Cyberpunk is Dead oneshot](https://www.youtube.com/watch?v=5kiEqSCwEoM)
 
 ### Collabs and other videos
-- [Luolamestari podcast](https://www.luolamestari.com/) - Petri Leinonen and Miska Fredman host a weekly TTRPG podcast.
+- [Luolamestari podcast](https://www.luolamestari.com/){hreflang="fi"} - Petri Leinonen and Miska Fredman host a weekly TTRPG podcast since May of 2025.
+  - [Luolamestari youtube channel](https://www.youtube.com/@Luolamestari){hreflang="fi"}
 
 ## From other publishers
 

@@ -2,15 +2,13 @@
 title: Eevenkoto Gogamin valikoimaan
 description: >-
   Eevenkoto on L&L-roolipeliä varten luotu kampanjamaailma, jonka
-  tuotantovastuun siirtyminen Gogamille on merkittävä mahdollisuus sujuvoittaa
-  tuotanto- ja julkaisuprosessia ja varmistaa maailman vision koherenssi ja
-  tekninen viimeistely projektin vaatimalla tasolla.
-datePublished: 2026-02-20
+  tuotantovastuun siirtyy tässä vaiheessa Gogamille.
+datePublished: 2026-02-23
 template: article
 author: Petri Leinonen
 alternateLocales:
   - code: en
-    path: /en/news/eevenkoto
+    path: /en/2026/02/23/eevenkoto
 dateModified: 2026-02-23
 ---
 

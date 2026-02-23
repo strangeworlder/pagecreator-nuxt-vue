@@ -185,7 +185,7 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
       }
       const encodedSrc = encodeURIComponent(ensureLeadingSlash(imagePath));
       return {
-        url: `${siteUrl}/api/image?src=${encodedSrc}&size=1200&format=png`,
+        url: `${siteUrl}/api/image?src=${encodedSrc}&size=1200&format=png&canvas=true`,
         type: "image/png",
       };
     };
@@ -664,9 +664,9 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
             url: based.url,
             author: based.author
               ? {
-                  "@type": "Person",
-                  name: based.author.name || based.author,
-                }
+                "@type": "Person",
+                name: based.author.name || based.author,
+              }
               : undefined,
           };
         }
@@ -744,9 +744,9 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
             name: c.name,
             author: c.author
               ? {
-                  "@type": "Person",
-                  name: typeof c.author === "string" ? c.author : c.author.name,
-                }
+                "@type": "Person",
+                name: typeof c.author === "string" ? c.author : c.author.name,
+              }
               : undefined,
             datePublished: c.datePublished,
             isbn: c.isbn,

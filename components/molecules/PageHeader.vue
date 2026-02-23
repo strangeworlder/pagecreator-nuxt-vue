@@ -18,7 +18,7 @@ interface Props {
 
 const props = withDefaults(defineProps<Props>(), {
   title: "Welcome",
-  description: "This is the TSS starter. Content below is rendered from Markdown.",
+  description: undefined,
   alternateLocales: () => [],
 });
 
@@ -31,7 +31,7 @@ const pageTitle = computed(() => props.title);
       <BaseHeader>{{ pageTitle }}</BaseHeader>
       <BaseLanguageSwitcher :locales="alternateLocales" />
     </div>
-    <BaseParagraph>{{ description }}</BaseParagraph>
+    <BaseParagraph v-if="description">{{ description }}</BaseParagraph>
   </header>
 </template>
 

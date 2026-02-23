@@ -21,7 +21,9 @@ const { data: articles } = await useAsyncData(
     const newsPath = `/${locale.value}/${locale.value === "fi" ? "uutiset" : "news"}`;
     const query = queryContent(newsPath).sort({ datePublished: -1 });
 
-    let results = await query.find();
+    let results = await query.where({ _path: { $ne: newsPath } }).find();
+    
+    results = results.filter((a: any) => a.datePublished);
 
     // Filter by year if provided
     if (props.year) {

@@ -20,8 +20,8 @@ const popupRef = ref<HTMLElement>();
 
 const getThumbnailUrl = (imageUrl: string | undefined): string => {
   if (!imageUrl) return "";
-  // Use the image API to get 150px thumbnail
-  return `/api/image?src=${encodeURIComponent(imageUrl)}&size=150`;
+  // Use the image API to get 150px thumbnail with canvas background
+  return `/api/image?src=${encodeURIComponent(imageUrl)}&size=150&canvas=true`;
 };
 
 const adjustedPosition = computed(() => {

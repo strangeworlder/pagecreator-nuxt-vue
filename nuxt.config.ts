@@ -92,13 +92,6 @@ export default {
         { name: "msapplication-TileColor", content: "#304e85" },
       ],
       link: [
-        // Google Fonts preconnect and stylesheet
-        { rel: "preconnect", href: "https://fonts.googleapis.com" },
-        { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
-        {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@900&display=swap"
-        },
         { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
         { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
         { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
@@ -108,14 +101,14 @@ export default {
           rel: "alternate",
           type: "application/rss+xml",
           title: "Gogam News (English)",
-          href: "/en/rss.xml",
+          href: "https://gogam.eu/en/rss.xml",
           hreflang: "en",
         },
         {
           rel: "alternate",
           type: "application/rss+xml",
           title: "Gogam Uutiset (Suomi)",
-          href: "/fi/rss.xml",
+          href: "https://gogam.eu/fi/rss.xml",
           hreflang: "fi",
         },
       ],

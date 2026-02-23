@@ -67,109 +67,17 @@
     "width": 1772,
     "height": 642
   },
-  "/gen_images/gogam-facebook-etc-1536.webp": {
-    "width": 1536,
-    "height": 1536
-  },
   "/images/test-troll.webp": {
     "width": 1024,
     "height": 1536
   },
-  "/gen_images/images/we-cant-stop-here-cover-1536.webp": {
-    "width": 1536,
-    "height": 2170
-  },
-  "/gen_images/images/we-cant-stop-here-cover-150.webp": {
-    "width": 150,
-    "height": 150
-  },
-  "/gen_images/images/vuosisata-cover-1536.webp": {
-    "width": 1536,
-    "height": 1536
-  },
-  "/gen_images/images/the-necessary-eagle-vs-the-good-cad-cover-1536.webp": {
-    "width": 1536,
-    "height": 742
-  },
-  "/gen_images/images/the-necessary-eagle-vs-the-good-cad-cover-150.webp": {
-    "width": 150,
-    "height": 150
-  },
-  "/gen_images/images/pros-and-cons-cover-1536.webp": {
-    "width": 1536,
-    "height": 454
-  },
-  "/gen_images/images/nott-cover-1536.webp": {
-    "width": 1536,
-    "height": 2179
-  },
-  "/gen_images/images/nott-cover-150.webp": {
-    "width": 150,
-    "height": 150
-  },
-  "/gen_images/images/new-horizons-logo-1536.webp": {
-    "width": 1536,
-    "height": 1773
-  },
-  "/gen_images/images/new-horizons-logo-150.webp": {
-    "width": 150,
-    "height": 150
-  },
-  "/gen_images/images/cyberpunk-is-dead-cover-1536.webp": {
-    "width": 1536,
-    "height": 590
-  },
-  "/gen_images/images/cyberpunk-is-dead-cover-150.webp": {
-    "width": 150,
-    "height": 150
-  },
-  "/gen_images/images/cars-and-family-cover-1536.webp": {
-    "width": 1536,
-    "height": 556
-  },
-  "/gen_images/images/cars-and-family-cover-150.webp": {
-    "width": 150,
-    "height": 150
-  },
-  "/gen_images/images/a-particular-group-of-corvids-cover-1536.webp": {
-    "width": 1536,
-    "height": 1152
-  },
-  "/gen_images/images/a-particular-group-of-corvids-cover-150.webp": {
-    "width": 150,
-    "height": 150
+  "/gen_images/gogam-facebook-etc-1200.webp": {
+    "width": 1200,
+    "height": 1200
   },
   "/images/rajatiloja/raja-1.webp": {
     "width": 1280,
     "height": 720
-  },
-  "/images/products/hirviokirja/sulkava.webp": {
-    "width": 500,
-    "height": 500
-  },
-  "/images/products/hirviokirja/nokiporo.webp": {
-    "width": 600,
-    "height": 600
-  },
-  "/images/products/hirviokirja/logo.webp": {
-    "width": 2616,
-    "height": 520
-  },
-  "/images/products/hirviokirja/kansi.webp": {
-    "width": 458,
-    "height": 600
-  },
-  "/images/products/hirviokirja/background.webp": {
-    "width": 842,
-    "height": 1920
-  },
-  "/images/products/hirviokirja/background-full.webp": {
-    "width": 4800,
-    "height": 4500
-  },
-  "/images/products/hirviokirja/TDB-logo.webp": {
-    "width": 338,
-    "height": 538
   },
   "/images/products/sulkavansointu/sulkava.webp": {
     "width": 500,
@@ -199,33 +107,45 @@
     "width": 338,
     "height": 538
   },
-  "/gen_images/images/products/sulkavansointu/sulkava-1536.webp": {
-    "width": 1536,
-    "height": 1536
+  "/images/products/hirviokirja/sulkava.webp": {
+    "width": 500,
+    "height": 500
   },
-  "/gen_images/images/products/sulkavansointu/silmat-1536.webp": {
-    "width": 1536,
-    "height": 1024
+  "/images/products/hirviokirja/nokiporo.webp": {
+    "width": 600,
+    "height": 600
   },
-  "/gen_images/images/products/sulkavansointu/kansi-1536.webp": {
-    "width": 1536,
-    "height": 2012
+  "/images/products/hirviokirja/logo.webp": {
+    "width": 2616,
+    "height": 520
   },
-  "/gen_images/images/products/hirviokirja/sulkava-1536.webp": {
-    "width": 1536,
-    "height": 1536
+  "/images/products/hirviokirja/kansi.webp": {
+    "width": 458,
+    "height": 600
   },
-  "/gen_images/images/products/hirviokirja/nokiporo-1536.webp": {
-    "width": 1536,
-    "height": 1536
+  "/images/products/hirviokirja/background.webp": {
+    "width": 842,
+    "height": 1920
   },
-  "/gen_images/images/products/hirviokirja/kansi-1536.webp": {
-    "width": 1536,
-    "height": 2012
+  "/images/products/hirviokirja/background-full.webp": {
+    "width": 4800,
+    "height": 4500
   },
-  "/gen_images/images/products/hirviokirja/kansi-150.webp": {
-    "width": 150,
-    "height": 150
+  "/images/products/hirviokirja/TDB-logo.webp": {
+    "width": 338,
+    "height": 538
+  },
+  "/gen_images/images/products/hirviokirja/sulkava-1200.webp": {
+    "width": 1200,
+    "height": 1200
+  },
+  "/gen_images/images/products/hirviokirja/nokiporo-1200.webp": {
+    "width": 1200,
+    "height": 1200
+  },
+  "/gen_images/images/products/hirviokirja/kansi-1200.webp": {
+    "width": 1200,
+    "height": 1572
   },
   "/images/spinskull.gif": {
     "width": 100,

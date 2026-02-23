@@ -3,12 +3,12 @@ title: Eevenkoto to move to Gogam
 description: >-
   Kustannusosakeyhtiö Gogam has acquired the production of Eevenkoto campaign
   world.
-datePublished: 2026-02-20
+datePublished: 2026-02-23
 template: article
 author: Petri Leinonen
 alternateLocales:
   - code: fi
-    path: /fi/uutiset/eevenkoto
+    path: /fi/2026/02/23/eevenkoto
 dateModified: 2026-02-23
 ---
 

@@ -75,25 +75,27 @@ const resolveNewsRouting = (currentPath: string) => {
   return { type: "standard", queryPath: norm };
 };
 
+const nuxtApp = useNuxtApp();
+
 const fetchContentWithRouting = async (routePath: string) => {
   const routing = resolveNewsRouting(routePath);
   const tryPath = routing.queryPath;
 
   let fetched: Record<string, unknown> | null = null;
   try {
-    fetched = await queryContent(tryPath).where({ _path: tryPath }).findOne();
+    fetched = await nuxtApp.runWithContext(() => queryContent(tryPath).where({ _path: tryPath }).findOne());
   } catch {}
 
   if (!fetched) {
     try {
-      fetched = await queryContent()
+      fetched = await nuxtApp.runWithContext(() => queryContent()
         .where({ aliases: { $contains: tryPath } })
-        .findOne();
+        .findOne());
     } catch {}
   }
   if (!fetched && !/^\/\w{2}\b/.test(tryPath)) {
     const fiPath = `/fi${tryPath}`;
-    fetched = await queryContent(fiPath).where({ _path: fiPath }).findOne();
+    fetched = await nuxtApp.runWithContext(() => queryContent(fiPath).where({ _path: fiPath }).findOne());
   }
 
   // Handle Archive Virtual Page
@@ -413,13 +415,23 @@ if (process.client) {
     });
 }
 
+const makeHWrapper = (level: 1 | 2 | 3 | 4 | 5 | 6) => 
+  markRaw(
+    defineComponent({
+      name: `ProseH${level}Wrapper`,
+      setup(props, { attrs, slots }) {
+        return () => h(HWrapper, { ...props, ...attrs, level }, slots);
+      },
+    })
+  );
+
 const proseComponents = {
-  h1: markRaw((props: any, ctx: any) => h(HWrapper, { ...props, ...ctx.attrs, level: 1 }, ctx.slots)),
-  h2: markRaw((props: any, ctx: any) => h(HWrapper, { ...props, ...ctx.attrs, level: 2 }, ctx.slots)),
-  h3: markRaw((props: any, ctx: any) => h(HWrapper, { ...props, ...ctx.attrs, level: 3 }, ctx.slots)),
-  h4: markRaw((props: any, ctx: any) => h(HWrapper, { ...props, ...ctx.attrs, level: 4 }, ctx.slots)),
-  h5: markRaw((props: any, ctx: any) => h(HWrapper, { ...props, ...ctx.attrs, level: 5 }, ctx.slots)),
-  h6: markRaw((props: any, ctx: any) => h(HWrapper, { ...props, ...ctx.attrs, level: 6 }, ctx.slots)),
+  h1: makeHWrapper(1),
+  h2: makeHWrapper(2),
+  h3: makeHWrapper(3),
+  h4: makeHWrapper(4),
+  h5: makeHWrapper(5),
+  h6: makeHWrapper(6),
   p: markRaw(PWrapper),
   a: markRaw(AWrapper),
   code: markRaw(ProseCode),
@@ -462,10 +474,7 @@ const pageTitle = computed(() => {
 });
 
 const pageDescription = computed(() => {
-  return (
-    (data.value as Record<string, unknown>)?.description ||
-    "This is the TSS starter. Content below is rendered from Markdown."
-  );
+  return (data.value as Record<string, unknown>)?.description as string | undefined;
 });
 
 const pageAlternateLocales = computed(() => {
@@ -554,7 +563,7 @@ const videoUrl = computed(() => {
 });
 
 const useHeroLayout = computed(
-  () => !isPlainTemplate.value && (!!heroImage.value || !!videoUrl.value),
+  () => !isPlainTemplate.value && !isNewsListTemplate.value && !isArticleTemplate.value && (!!heroImage.value || !!videoUrl.value),
 );
 
 // Check if we're on the index page

@@ -9,13 +9,10 @@
 
 <style scoped>
 blockquote {
-  padding-left: 1rem;
-  margin: 1.5rem 0;
+  padding-left: var(--space-md);
+  margin: var(--space-lg) 0;
 }
 blockquote :deep(p) {
   font-size: var(--size-4);
 }
 </style>
-
-
-

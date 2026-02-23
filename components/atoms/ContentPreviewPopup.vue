@@ -20,8 +20,8 @@ const popupRef = ref<HTMLElement>();
 
 const getThumbnailUrl = (imageUrl: string | undefined): string => {
   if (!imageUrl) return "";
-  // Use the image API to get 150px thumbnail
-  return `/api/image?src=${encodeURIComponent(imageUrl)}&size=150`;
+  // Use the image API to get 150px thumbnail with canvas background
+  return `/api/image?src=${encodeURIComponent(imageUrl)}&size=150&canvas=true`;
 };
 
 const adjustedPosition = computed(() => {
@@ -143,8 +143,8 @@ const handleMouseLeave = () => {
 
 .preview-layout {
   display: flex;
-  gap: 0.75rem;
-  padding: 0.75rem;
+  gap: var(--space-md);
+  padding: var(--space-md);
 }
 
 .preview-image {
@@ -167,7 +167,7 @@ const handleMouseLeave = () => {
   min-width: 0; /* Allow text to wrap */
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--space-sm);
 }
 
 .preview-title {
@@ -197,18 +197,18 @@ const handleMouseLeave = () => {
 .preview-meta {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--space-sm);
   margin-top: auto;
 }
 
 .preview-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.25rem;
+  gap: var(--space-xs);
 }
 
 .preview-tag {
-  padding: 0.25rem 0.5rem;
+  padding: var(--space-xs) var(--space-sm);
   font-size: var(--size-1);
   background: color-mix(in oklab, var(--color-border), transparent 60%);
   color: var(--color-muted);
@@ -222,11 +222,11 @@ const handleMouseLeave = () => {
 
 /* Transition animations */
 .preview-enter-active {
-  transition: all 0.2s ease-out;
+  transition: all var(--transition-fast);
 }
 
 .preview-leave-active {
-  transition: all 0.15s ease-in;
+  transition: all var(--transition-fast);
 }
 
 .preview-enter-from {
@@ -239,8 +239,3 @@ const handleMouseLeave = () => {
   transform: scale(0.95) translateY(4px);
 }
 </style>
-
-
-
-
-

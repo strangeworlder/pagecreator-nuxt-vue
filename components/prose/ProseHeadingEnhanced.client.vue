@@ -97,7 +97,7 @@ onUnmounted(() => {
 <style scoped>
 .prose-heading {
   align-items: center;
-  gap: 0.375rem;
+  gap: var(--space-xs);
 }
 .copy-link {
   border: none;
@@ -107,11 +107,11 @@ onUnmounted(() => {
   padding: 0 0.125rem;
   color: var(--link-color, inherit);
   opacity: 0;
-  margin-left: 0.375rem;
+  margin-left: var(--space-xs);
   position: absolute;
 }
 *:hover > .copy-link {
-  opacity: 0.75;
+  opacity: var(--opacity-hover);
 }
 .copy-link:hover, .copy-link:focus {
   opacity: 1;

@@ -207,7 +207,9 @@ export default defineEventHandler(async (event) => {
   }
 
   const cacheDir = await resolveCacheDir();
-  const outputPath = join(cacheDir, relDir, `${baseName}-${size}.${formatExtension}`);
+  const isCanvas = (q.canvas === "true" || q.canvas === "");
+  const canvasSuffix = isCanvas ? "-canvas" : "";
+  const outputPath = join(cacheDir, relDir, `${baseName}-${size}${canvasSuffix}.${formatExtension}`);
 
   try {
     const buf = await fs.readFile(outputPath);
@@ -215,12 +217,12 @@ export default defineEventHandler(async (event) => {
     setHeader(event, "cache-control", "public, max-age=300");
     setHeader(event, "content-length", buf.length);
     return buf;
-  } catch {}
+  } catch { }
 
   await fs.mkdir(dirname(outputPath), { recursive: true });
 
   let outBuf: Buffer;
-  const shouldUseCanvas = inputExt !== ".gif" && (size === 1200 || size === 150);
+  const shouldUseCanvas = inputExt !== ".gif" && isCanvas && (size === 1200 || size === 150);
   if (shouldUseCanvas) {
     const target = size === 1200 ? { w: 1200, h: 630 } : { w: 150, h: 150 };
     const bg = await computeDominantBackgroundColor(inputBuf);

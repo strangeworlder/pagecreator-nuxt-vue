@@ -45,7 +45,7 @@ input {
   background: var(--color-bg);
   color: var(--color-fg);
   border-radius: var(--radius-md);
-  padding: 0.5rem 0.75rem;
+  padding: var(--space-sm) var(--space-md);
   font-size: var(--size-2);
   box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
@@ -55,5 +55,3 @@ input:focus {
   border-color: var(--color-accent);
 }
 </style>
-
-

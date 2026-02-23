@@ -32,7 +32,7 @@ organization:
   sameAs:
     - 'https://www.youtube.com/@gogameu'
 datePublished: 2024-02-05
-dateModified: 2026-01-12
+dateModified: 2026-02-23
 canonical: /fi/rajatiloja
 template: article
 cover: /images/new-horizons-logo.png
@@ -44,7 +44,7 @@ mentions:
   - '@type': Person
     name: Petri Leinonen
     jobTitle: Pelinjohtaja
-    '@id': 'https://gogam.eu/#petri'
+    '@id': 'https://gogam.eu/en/petri-leinonen#petri'
   - '@type': Organization
     name: Fate-akatemia
     url: 'https://www.youtube.com/@FateAkatemia'

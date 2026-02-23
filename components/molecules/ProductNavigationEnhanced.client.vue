@@ -76,13 +76,12 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-
 ul {
   padding: 0;
-  margin: 20px;
+  margin: var(--space-lg);
   list-style: none;
 }
-li { margin: 0.35rem 0; }
+li { margin: var(--space-xs) 0; }
 
 .floating-nav {
   position: fixed;
@@ -94,8 +93,8 @@ li { margin: 0.35rem 0; }
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   transform: translateY(-100%);
-  transition: transform 0.3s ease-in-out;
-  padding: 0.75rem 1rem;
+  transition: transform var(--transition-normal);
+  padding: var(--space-sm) var(--space-md);
 }
 
 .floating-nav--visible { transform: translateY(0); }
@@ -104,7 +103,7 @@ li { margin: 0.35rem 0; }
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: var(--space-xl);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -117,11 +116,11 @@ li { margin: 0.35rem 0; }
 .floating-nav a {
   text-decoration: none;
   color: #333;
-  font-weight: 500;
-  font-size: 0.9rem;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.375rem;
-  transition: all 0.2s ease;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--size-2);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
   white-space: nowrap;
 }
 
@@ -137,13 +136,11 @@ li { margin: 0.35rem 0; }
 /* Responsive */
 @media (max-width: 768px) {
   .floating-nav { display: none; }
-  .floating-nav ul { gap: 1rem; flex-wrap: wrap; justify-content: center; }
-  .floating-nav a { font-size: 0.8rem; padding: 0.4rem 0.6rem; }
+  .floating-nav ul { gap: var(--space-md); flex-wrap: wrap; justify-content: center; }
+  .floating-nav a { font-size: var(--size-1); padding: var(--space-xs) var(--space-sm); }
 }
 @media (max-width: 480px) {
-  .floating-nav ul { gap: 0.5rem; }
-  .floating-nav a { font-size: 0.75rem; padding: 0.3rem 0.5rem; }
+  .floating-nav ul { gap: var(--space-sm); }
+  .floating-nav a { font-size: var(--size-1); padding: var(--space-xs) var(--space-sm); }
 }
 </style>
-
-

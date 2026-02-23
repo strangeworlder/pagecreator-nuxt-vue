@@ -44,7 +44,16 @@ for (const file of contentFiles) {
   } catch { }
 }
 const contentRoutes = Array.from(
-  new Set(["/", `/${DEFAULT_LOCALE}`, "/llms.txt", "/llms-full.txt", ...contentFiles.map(fileToRoute), ...aliasRoutes]),
+  new Set([
+    "/",
+    `/${DEFAULT_LOCALE}`,
+    "/llms.txt",
+    "/llms-full.txt",
+    "/en/rss.xml",
+    "/fi/rss.xml",
+    ...contentFiles.map(fileToRoute),
+    ...aliasRoutes,
+  ]),
 );
 export default {
   components: [{ path: "~/components", pathPrefix: false }],
@@ -88,6 +97,20 @@ export default {
         { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
         { rel: "manifest", href: "/site.webmanifest" },
         { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#405e95" },
+        {
+          rel: "alternate",
+          type: "application/rss+xml",
+          title: "Gogam News (English)",
+          href: "https://gogam.eu/en/rss.xml",
+          hreflang: "en",
+        },
+        {
+          rel: "alternate",
+          type: "application/rss+xml",
+          title: "Gogam Uutiset (Suomi)",
+          href: "https://gogam.eu/fi/rss.xml",
+          hreflang: "fi",
+        },
       ],
     },
   },
@@ -122,6 +145,8 @@ export default {
     "/": { isr: ISR_TTL },
     "/llms.txt": { prerender: true },
     "/llms-full.txt": { prerender: true },
+    "/en/rss.xml": { prerender: true },
+    "/fi/rss.xml": { prerender: true },
     "/en/**": { isr: ISR_TTL },
     "/fi/**": { isr: ISR_TTL },
     "/sv/**": { isr: ISR_TTL },

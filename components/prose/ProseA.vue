@@ -4,7 +4,7 @@ withDefaults(defineProps<{ href?: string; rel?: string; target?: string; hreflan
   href: undefined,
   rel: undefined,
   target: undefined,
-  hreflang: undefined
+  hreflang: undefined,
 });
 
 const EXTERNAL_RE = /^(https?:)?\/\//;
@@ -35,13 +35,5 @@ const EXTERNAL_RE = /^(https?:)?\/\//;
 <style scoped>
   a[href^="http"]::after {
     content: " ↗";
-  }
-  /* Indicate language for explicitly marked links */
-  a[hreflang]::after {
-    content: " (" attr(hreflang) ")";
-    font-size: 0.6em;
-    vertical-align: super;
-    margin-left: 2px;
-    opacity: 0.8;
   }
 </style>

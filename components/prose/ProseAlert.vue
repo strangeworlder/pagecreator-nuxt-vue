@@ -22,35 +22,31 @@ const computedTitle = computed(() => {
 </script>
 
 <template>
-  <div class="prose-alert" :class="type">
+  <BasePanel variant="alert" class="prose-alert" :class="type">
     <div class="prose-alert-content">
       <p v-if="computedTitle" class="alert-title">{{ computedTitle }}</p>
       <slot />
     </div>
-  </div>
+  </BasePanel>
 </template>
 
 <style scoped>
 .prose-alert {
-  padding: 1rem;
-  border-left: 4px solid;
-  margin: 1.5rem 0;
-  background-color: var(--color-bg-mute, #f9fafb);
-  border-radius: 0 0.5rem 0.5rem 0;
+  margin: var(--space-lg) 0;
 }
 
 .prose-alert :deep(li) {
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-md);
 }
 
 .prose-alert-content {
-  font-size: 0.95em;
+  font-size: var(--size-3);
 }
 
 .alert-title {
-  margin-right: 0.5rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-right: var(--space-sm);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-sm);
   text-transform: capitalize;
 }
 

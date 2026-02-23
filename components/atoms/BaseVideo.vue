@@ -60,7 +60,7 @@ const props = withDefaults(defineProps<Props>(), {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-normal);
 }
 
 .video-card:hover .poster-image {
@@ -77,7 +77,7 @@ const props = withDefaults(defineProps<Props>(), {
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
+  transition: background-color var(--transition-normal);
 }
 
 .video-card:hover .play-overlay {
@@ -93,7 +93,7 @@ const props = withDefaults(defineProps<Props>(), {
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
 }
 
 .video-card:hover .play-button {
@@ -105,6 +105,6 @@ const props = withDefaults(defineProps<Props>(), {
   width: 32px;
   height: 32px;
   color: #000;
-  margin-left: 4px; /* Optical centering for play triangle */
+  margin-left: var(--space-xs); /* Optical centering for play triangle */
 }
 </style>

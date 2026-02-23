@@ -25,10 +25,8 @@ const links = Array.isArray(props.links) ? props.links : [];
 <style scoped>
 ul {
   padding: 0;
-  margin: 20px;
+  margin: var(--space-lg);
   list-style: none;
 }
-li { margin: 0.35rem 0; }
+li { margin: var(--space-xs) 0; }
 </style>
-
-

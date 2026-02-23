@@ -1,527 +1,4239 @@
 1
-00:00:12,000 --> 00:00:16,000
-Hei.
+00:00:00,000 --> 00:00:08,900
+3.10.2023
 
 2
-00:00:16,000 --> 00:00:26,000
-Kolmas kymmenettä. 2023.
+00:00:08,900 --> 00:00:13,420
+Hei.
 
 3
-00:00:26,000 --> 00:01:00,000
-En oikeasti miettinyt näitä juttuja pitkään aikaan, mutta ystäväni kuolema tuotti ne vuoden takaa mieleeni. Xav oli minulle uskomattoman rakas. Ennen kuin hän erakoitui ja... no, kuoli. Hänen ansiostaan minulla oli hauskimmat bilevuoteni, ja ajatus hänen poismenostaan yksinäisenä sai minut pois tolaltani.
+00:00:15,020 --> 00:00:18,300
+Kolmas kymmenettä.
 
 4
-00:01:00,000 --> 00:01:40,000
-Päädyin tekemään yllättävän ja pitkän matkan Pariisiin hänen hautajaisiinsa. Ajattelin, että olisi hyvä, että edes joku olisi siellä. Lennot olivat loputtoman pitkiä, kuten olettaa saattaa. Seuraa minulla piti Bostonista asti samansuuntaisesti kulkenut Cathy, jonkin sortin värikästukkainen influensseri, joka höpötteli selkeästi lentopelkonsa vuoksi niitä näitä. Ja minä näin jälkikäteen typerästi autoin häntä höpöttelemällä sitten taas takaisin.
+00:00:20,480 --> 00:00:21,540
+2023.
 
 5
-00:01:40,000 --> 00:02:04,000
-Ja tämä on se, miten alkaa yksi monista verkosta löytyvistä niin sanotuista creepypastoista. Se on creepypasta, jonka perässä joukkotutkijoita on suuntaamassa Pariisiin tapaamaan toisiaan ensimmäistä kertaa ja seuraamaan tämän kyseisen tekstin perässä.
+00:00:21,540 --> 00:00:21,940
+2023.
 
 6
-00:02:04,000 --> 00:02:10,000
-Ehkä löytääkseen jotain?
+00:00:21,940 --> 00:00:28,540
+En oikeasti miettinyt näitä juttuja
+pitkään aikaan, mutta ystäväni kuolema on
 
 7
-00:02:10,000 --> 00:02:25,000
-Didi. Missä näemme sinut, kun olet joko pakannut tai pakkaamassa lähdössä lentokentälle? Tai kenties muualla, en tiedä missä päin maailmaa vaikutat tällä hetkellä.
+00:00:28,540 --> 00:00:35,140
+tapahtunut kymmenen vuoden takaa mieleeni.
 
 8
-00:02:25,000 --> 00:02:58,000
-Didi vaikuttaa kyllä ihan Oslossa. Didin tässä kohtaa voi nähdä pakkaamassa sellaista hyvin siistiä, mutta selkeästi kyllä paljon käyttöä nähnyttä matkalaukkua. Sellaisessa modernissa, tyylikkäässä talossa, jossa on esimerkiksi makuuhuoneessaan pakkaamassa aivan... Lattiasta kattoon on valtavat ikkunat, joista on mahtava näkymä luontoon ja merelle ja Oslon ylle.
+00:00:36,940 --> 00:00:42,540
+Xav oli minulle uskomattoman rakas,
+ennen kuin hän erakoitui ja... no, kuoli.
 
 9
-00:02:58,000 --> 00:03:32,000
-Toisesta huoneesta kuuluu jonkun vanhemman naisen ääniä. Didi huikkaa, että "kyllä äiti, minulla on sekin mukana, ei hätää." Didi pakkaa tässä hyvän määrän erittäin kalliin näköisiä vaatteita matkalaukkuunsa.
+00:00:43,540 --> 00:00:47,280
+Hänen ansiostaan minulla oli hauskimmat
+bilevuoteni, ja ajatus hänen poismenostaan
 
 10
-00:03:32,000 --> 00:03:43,000
-Äitisi tulee huoneeseen pukeutuneena...
+00:00:47,280 --> 00:00:51,020
+yksinäisenä sai minut pois tolaltani.
 
 11
-00:03:43,000 --> 00:04:21,000
-Lähinnä ehkä beigenväriseen villapaitaan ja farkkuihin. Se on hänelle tyypillinen, tällainen mitäänsanomattoman tyylikäs arkipukeutuminen. Koruja on paljon, tukkaa on sitäkin enemmän.
+00:00:51,940 --> 00:00:58,220
+Ja päädyin tekemään yllättävän ja pitkän
+matkan Pariisiin hänen hautajaisiinsa.
 
 12
-00:04:21,000 --> 00:04:35,000
-"Pariisiin? Niin kun pääset perille, soita serkuillesi. He eivät anna sitä ikinä anteeksi, jos menet Ranskaan etkä ole heihin yhteydessä – kuten viime kerralla."
+00:00:59,320 --> 00:01:04,820
+Ajattelin, että olisi hyvä,
+että edes joku olisi siellä.
 
 13
-00:04:35,000 --> 00:04:45,000
-Didi niinku naurahtaa vaan ja pyöräyttää silmiään. "Mutta kun tämä on työmatka, minulla on säädetty aikaa."
+00:01:06,520 --> 00:01:10,720
+Lennot olivat loputtoman pitkiä,
+kuten olettaa saattaa seuraa.
 
 14
-00:04:45,000 --> 00:05:22,000
-"Sillä ei ole mitään väliä heille, mistä syystä sinne tulee. Mutta jos jätät yhteyden ottamatta, minä en lakkaa kuulemasta siitä. Siinä meni vähintään kuusi kuukautta ennen kuin he lopettivat valittamisen. Silloinkin se oli työmatka – niin ainakin väitit. Ne kuvat, mitä sinä laitoit Instagramiin ja muualle, ne olivat... se mikään työmatka ollut."
+00:01:10,760 --> 00:01:16,270
+Minulla piti Bostonista asti samaan
+suuntaan kulkenut Cathy, jonkin sortin
 
 15
-00:05:22,000 --> 00:05:45,000
-Didi huokaa vähän silleen "I give up" -hengessä. Sitten sulkee matkalaukun ja on lähdössä kärräämään sitä ulos huoneesta. Sitten nopeasti halaa äitiä siinä ja antaa ranskalaiset poskisuudelmat. "Hei hei, äiti. Sinä tiedät, että näin täytyy sanoa. Sinulle ei mikään riitä."
+00:01:16,270 --> 00:01:21,780
+tukkainen influensseri, joka höpötteli
+selkeästi lentopelkoonsa niitä näitä.
 
 16
-00:05:45,000 --> 00:05:55,000
-"Hyvä tytär, hyvä tytär." Ja laittaa poskisuudelmat takaisin. "Hyvää matkaa, nauti lennosta!"
+00:01:21,940 --> 00:01:28,380
+Ja minä näin jälkikäteen typerästi autoin
+häntä höpöttelemällä sitten taas takaisin.
 
 17
-00:05:55,000 --> 00:06:05,000
-"No, jos se olisi business-luokassa niin kyllä, mutta firmalla nyt ei kuulemma tällä hetkellä ole vielä varaa sellaisiin."
+00:01:28,380 --> 00:01:34,350
+Ja tämä on se, miten alkaa yksi monissa
+verkosta löytyvistä niin sanotuista
 
 18
-00:06:05,000 --> 00:06:19,000
-"Sinun pitäisi puhua heille. Tai minun pitäisi puhua heille. Ehkä. Ei se ole oikeasti iso vaiva, se on vain pari siltä... menee yhteisen hyvän vuoksi."
+00:01:34,350 --> 00:01:40,320
+creepypastoista.
 
 19
-00:06:19,000 --> 00:06:35,000
-Ja tästä lähtee pienoinen rant siitä, kuinka Pariisi on kaiken kulttuurin keskus ja niin edelleen. Sten, minkälaisista lähtökohdista sinä olet lähdössä kohti Pariisia?
+00:01:41,320 --> 00:01:46,350
+Ja se on creepypasta, jonka
 
 20
-00:06:35,000 --> 00:07:15,000
-Stenin koti on sellainen todella elegantti, skandinaavisen minimalistinen kerrostalokämppä. Elegantti, mutta ei mikään superrahakas. Sellaista vähän parempaa Ikeaa ja ehkä jotkut kalliit Bang & Olufsenin stereot. Mutta seassa myös sitä Ikeaa.
+00:01:46,350 --> 00:01:51,380
+perässä joukkotutkijoita
+on suuntaamassa Pariisiin.
 
 21
-00:07:15,000 --> 00:07:55,000
-Siistillä kaapin päällä on erinäinen kasa sukulaiskuvia. Keskeisellä paikalla on naisen valokuva, ehkä noin kolmikymppinen. Sen vieressä on myös hääkuva tästä naisesta ja Stenistä. Sten pakkailee siinä tällaisia keski-ikäisen miehen vaatteita: perustakkeja, slakseja. Siistiä, mutta hyvin non-deskriptiä. Ei mitään erityisen räiskyvää, mutta perustyylikästä.
+00:01:51,940 --> 00:01:56,450
+Tapaamaan toisiaan ensimmäistä kertaa ja
 
 22
-00:07:55,000 --> 00:08:24,000
-Onko matkalaukku kokeneen otteella pakattu?
+00:01:56,450 --> 00:02:00,960
+seuraamaan tämän kyseisen tekstin perässä.
 
 23
-00:08:24,000 --> 00:08:55,000
-Kyllä, sitä on selvästi pakattu moneen kertaan. Pakkaaminen on myös hyvin järjestelmällistä. On erilaisia Clas Ohlsonin matkapulloja kosmetiikoille ja muille. Kaikki on siististi omalla paikallaan.
+00:02:03,600 --> 00:02:05,380
+Ehkä löytääkseen jotain.
 
 24
-00:08:55,000 --> 00:09:11,000
-Naishenkilöä ei kuitenkaan näy kotona, kun olet lähdössä. Stenillä on kuitenkin sormus nimettömässä.
+00:02:10,180 --> 00:02:11,420
+Didi.
 
 25
-00:09:11,000 --> 00:09:27,000
-Pistät oven lukkoon ja lähdet kohti lentokenttää. Thom, kysyn alkuun...
+00:02:14,000 --> 00:02:17,690
+Missä näemme sinut, kun olet
 
 26
-00:09:27,000 --> 00:09:40,000
-Todennäköisesti sinulle on jäänyt tehtäväksi varata teidän Airbnb. Joten mikä on sinun pääkriteerisi sille?
+00:02:17,690 --> 00:02:21,380
+joko pakannut tai pakkaamassa
+lähdössä lentokentää?
 
 27
-00:09:40,000 --> 00:10:01,000
-Sisäpihalle, korkeintaan kolmas kerros, melko lähellä palopoistumisteitä ja sellainen, mistä saa pelastussuunnitelman englanniksi PDF-muodossa.
+00:02:21,940 --> 00:02:28,840
+Tai kenties jonnekin muualle, en tiedä
+missä päin maailmaa, vaikuta tällä
 
 28
-00:10:01,000 --> 00:10:10,000
-Kaikki muut on toissijaista. Yksi huone per heppu ja keittiö päälle. Ihan kiva.
+00:02:30,640 --> 00:02:33,300
+Didi vaikuttaa kyllä ihan Oslossa.
 
 29
-00:10:10,000 --> 00:10:40,000
-Joo, sä oot saanut suurin piirtein sellaisen. Se on neljännessä kerroksessa, mutta muuten kaikki on oikein hyvin onnistunut. Alueella on jokin konsertti tai jotain, joten on ollut vaikea saada täysin kriteeristön täyttävää asuntoa. Oletko pyytänyt toimittamaan sinne työkaluja etukäteen vai roudasitko ne itse mukana?
+00:02:34,360 --> 00:02:40,830
+Didi tässä kohtaa, sä voit tämän nähdä,
+pakkaamassa sellaista hyvin siistiä, mutta
 
 30
-00:10:40,000 --> 00:11:05,000
-Vanhaliittoisena henkilönä ne ovat mulla enimmäkseen mukana. Mulla on jotain varmaan sellaista tilaustavaraa, mitä on mennyt paikan päälle vähän etukäteen, mutta oikeat tavarat tulee mun messissä. Tai oikeastaan, jos tarkkoja ollaan, ne rakennetaan paikan päällä hyllytuotteista.
+00:02:40,830 --> 00:02:47,300
+selkeästi kyllä paljon
+käyttöä nähnyt matkalaukkua.
 
 31
-00:11:05,000 --> 00:11:31,000
-Ja tällä hetkellä mä olen juuri laittamassa tällaista kookasta putkikassia kiinni, jossa on sektioitu muovipusseilla erilaisia varustekokonaisuuksia, vaatteita, kenkiä ja niin edelleen. Vähän säämukaista pukeutumista myös. Vedän vetoketjun kiinni. Ulkopuolelta kuuluu ohimenevän veneen ääntä ja koko mun asunto keinahtelee jonkin verran. Tämä asunto on laiva. Tummanruskeiden kaihtimien takaa näkyy valoheittimien jälkiä.
+00:02:47,300 --> 00:02:51,600
+Semmoisessa modernissa
 
 32
-00:11:31,000 --> 00:12:00,000
-Huono valaistus siinä mielessä, että kaikki tuntuu olevan pimeää, paitsi niissä paikoissa missä on jalka- ja pöytälamppu, missä on todella kirkasta. Mä itse pidän tästä. Vasemmassa ranteessa on huomattava määrä tämmöisiä festarirannekkeita, mitkä tässä vaiheessa leikkaan metallisaksilla poikki ja tiputan ne roskakoriin sen enempää miettimättä. Siinä on ollut vähän tällaista lähikuukausien menneisyyttä.
+00:02:51,600 --> 00:02:55,900
+villankokoisessa talossa.
 
 33
-00:12:00,000 --> 00:12:35,000
-Hiukset on vähän hapsuilla niskaan. Minulla näkyy tuore sarja rokotusjälkiä kädessä. Olen vastikään ottanut boosterit, kun ei koskaan voi tietää. Nämä ilmeisesti firma maksaa meille, olenko ymmärtänyt oikein?
+00:02:55,900 --> 00:02:59,860
+Jos on tämmöiset, esimerkiksi
+makuuhuoneessa ja pakkaan, niin on
 
 34
-00:12:35,000 --> 00:12:50,000
-Joo, firma tässä tapauksessa tarkoittaa siis teidän omaa firmaa, jota Sten käytännössä pyörittää, mutta oletan, että teillä on kuitenkin jonkinlainen healthcare-järjestely.
+00:02:59,860 --> 00:03:03,820
+semmoiset valtavat ikkunat, joista on
+mahtava näkymä vuonoille ja merelle Oslon
 
 35
-00:12:50,000 --> 00:13:10,000
-Joo, kysyin myös, olemmeko me lähtökohtaisesti yhtiö vai jonkinlainen yhtiörahoituksella toimiva järjestö? Se on... muistanko Suomessa sellaista vastaavaa... ikään kuin tällainen public beneficial company...
+00:03:03,820 --> 00:03:07,780
+yllä.
 
 36
-00:13:10,000 --> 00:13:23,000
-Yleishyödyllinen yhdistys, mutta mehän voidaan päättää, haluammeko olla yhteisö vai yhtiömuotoinen toimija. Tällaisia asioita tulee keski-ikäisenä roolipelaajana pohdittua.
+00:03:08,720 --> 00:03:12,760
+Ja toisesta huoneesta kuuluu jonkun
+vanhemman naisen ääni, jolle Didi
 
 37
-00:13:23,000 --> 00:13:42,000
-Näkisin, että yhtiömuotoinen toiminta olisi varmaan jotain, mitä New Horizons varmasti tukisi, koska voisi saada mahdollisesti osakkeita tai parempaa kontrollia tästä entiteetistä verrattuna yleishyödylliseen yhdistykseen, jonka perussääntöihin on voitu merkitä tiettyjä diipadaapa-juttuja siitä, ettei sitä koskaan voi käyttää huonoihin tarkoituksiin.
+00:03:12,760 --> 00:03:16,800
+kyllä, kyllä äiti.
 
 38
-00:13:42,000 --> 00:14:02,000
-Pääkalloja diipadaapa-jutuille. Mutta mites, muuttuuko se diipadaapa aina tuonne rokotteeseen asti vai miten se menee käytännössä? Onko tämä itsemaksettu omasta pussista vai yhteisön toimesta?
+00:03:17,100 --> 00:03:17,280
+Minut.
 
 39
-00:14:02,000 --> 00:14:15,000
-Meillä varmaan on rahoitusta melko kattavasti, eikö ole? Kyllä meillä on varmaan ihan asiallinen health plan. Kyllä Didillekin ne business-luokan lennot olisivat järjestyneet, jos niitä olisi pyytänyt.
+00:03:17,300 --> 00:03:19,200
+Minulla on sekin mukana, ei hätää.
 
 40
-00:14:15,000 --> 00:14:40,000
-Mä mietin, että siitä voisi saada pientä konfliktin alkua. Jotkut muut jäsenet, joilla on enemmän kontrollia, ehkä haluaisivat nähdä rahoja käytettävän maltillisesti tässä alkuvaiheessa. Varsinkin tällaisia lyhyitä lentoja. Mutta transatlanttisella lennolla business on ehkä enemmän perusteltu juttu.
+00:03:20,620 --> 00:03:24,960
+Ja Didi pakkaa tässä hyvän määrän
+erittäin kalliin näköisiä vaatteita
 
 41
-00:14:40,000 --> 00:15:25,000
-Niin kuin Didin näkökulmasta ei ole mitään toista asiaa kuin premium. On vain business ja ykkösluokka, ja kaikki muu siitä alas on... no, tiedättekö.
+00:03:24,960 --> 00:03:29,300
+matkalaukkuunsa.
 
 42
-00:15:25,000 --> 00:15:35,000
-Tämä on hyvä. Mä oon mahdollisesti varannut lennot. Onko meillä muita henkiä tiimissä?
+00:03:29,300 --> 00:03:34,967
+Äitisi tulee
 
 43
-00:15:35,000 --> 00:15:50,000
-Sanoisin, että teillä on määrittelemättömästi pari muuta henkilöä. Luodaan tarpeen mukaan.
+00:03:34,967 --> 00:03:40,633
+huoneeseen pukeutuneena
 
 44
-00:15:50,000 --> 00:16:10,000
-Oletan näin, koska en tiedä miten mielenkiintoista taloushallintoa on pelata pelissä. Meillä on varmaan kirjanpitäjä ja jonkinlainen yleissihteeri hoitamassa varauksia.
+00:03:40,633 --> 00:03:46,300
+lähinnä ehkä beigeen.
 
 45
-00:16:10,000 --> 00:16:38,000
-Tai ainakin hallintohenkilö. Enemmän veikkaan, että olette henkilöstöltä sellaista luokkaa, että olet kyllä sinä, joka on lennot ihan oikeasti varannut. Ja Thom on se, joka on tehnyt Airbnb-varauksen. Ei ole sellaista nakkikonetta ainakaan vielä hankittu.
+00:03:46,300 --> 00:03:54,700
+Beigeen pilkullipaita ja parkkoihin,
+joka on hänelle aika tyypillinen tällainen
 
 46
-00:16:38,000 --> 00:17:01,000
-Joo, tosissaan siinä viimeistelen vielä pakkaamiset. Lappaan mukaan ne työpöydän tavarat, sammuttelen lamput ja otan pistorasioista irti... Yksittäisen kirjan nappaan mukaan, se on täysin hiirenkorville luettu "sixth-hand" teos. Onko se faktaa vai fiktiota?
+00:03:54,700 --> 00:04:03,100
+mitään sanomattoman
+tyylikäs arkipukeutuminen.
 
 47
-00:17:01,000 --> 00:17:05,000
-Paha kysymys.
+00:04:03,100 --> 00:04:09,620
+Koruja on paljon, tukkaa on
 
 48
-00:17:05,000 --> 00:17:14,000
-Didi tietää parhaiten Thomin, joten tuota... totta kai fiktiota.
+00:04:09,620 --> 00:04:16,140
+sitäkin enemmän ja hieman
+väsyneen näköisesti.
 
 49
-00:17:14,000 --> 00:17:25,000
-Tässä mulla on se, mitä luen lennolla. Ei ole pitkä matka, mutta kumminkin. Olen oikeasti kiinnostunut tästä nimenomaisesta aiheesta.
+00:04:16,300 --> 00:04:22,210
+Kun menet Pariisiin, niin
 
 50
-00:17:25,000 --> 00:17:35,000
-Mä näkisin Thomin kyllä sellaisena non-fiction -ihmisenä.
+00:04:22,210 --> 00:04:28,120
+kun pääset perille, soita serkuillesi.
 
 51
-00:17:35,000 --> 00:17:40,000
-Okei, sitten se on näin. Hyvä tietää, kiitos tästä.
+00:04:28,880 --> 00:04:31,900
+He eivät anna sitä ikinä anteeksi, jos
+menet Ranskaan, etkä ole heihin
 
 52
-00:17:40,000 --> 00:17:48,000
-Olisin heittänyt siihen ehkä vielä sellaisen, että jotain siltä väliltä. Ehkä spekulatiivista tiedettä.
+00:04:31,900 --> 00:04:34,920
+kuten viime kerralla.
 
 53
-00:17:48,000 --> 00:18:02,000
-Tehän teette spekulatiivista tiedettä. Tutkitte varjobiosfääriä eli jotain, jota ei ole todistettu olevaksi tai ainakaan täysin yleisesti hyväksytty omaksi ilmiökseen.
+00:04:37,500 --> 00:04:41,800
+Didi, sillain naurahtaa aivan
+aikaan, pyöräyttää silmiään.
 
 54
-00:18:02,000 --> 00:18:05,000
-Me käydään tosi tiedettä.
+00:04:42,700 --> 00:04:45,920
+Mutta kun tämä työmatkaa,
+minulla ei saattu miettiä aikoja.
 
 55
-00:18:05,000 --> 00:18:40,000
-Eipä... mikä nyt on faktaa. Mutta hommaan mukaan tämän nimenomaisen teoksen tässä vaiheessa. Laitan sen maihinnousurotsin oikeaan taskuun, niin se mahtuu just niin, että se vähän vielä taipuu. Ei ole niin väliä. Itse mä en tykkää tällaisesta käytetystä yhtään, mutta nyt se menee. Viimeiset valot pois, ovelta avaimet messiin ja katson ympärille. Totean vielä ääneen: "Nähdään sitten kun nähdään, jos nähdään", tyhjälle asunnolle ja poistun asuntolaivastani.
+00:04:46,300 --> 00:04:52,860
+Sillä ei ole mitään väliä
+heille, mistä syystä tulet.
 
 56
-00:18:40,000 --> 00:19:10,000
-Meillä on jonkinlaisia rajoja siinä, mitä me suostutaan kuvailemaan – kauheuksia, joihin me suostutaan menemään. Ja joitain asioita me sivuutamme vain viittaamalla niihin. Sanon universaalin kauhukokemuksen: Ranskan lentokenttä.
+00:04:52,960 --> 00:04:57,890
+Mutta jos jätät yhteydenottamatta,
 
 57
-00:19:10,000 --> 00:19:30,000
-Te kaikki joudutte kulkemaan Pariisin lentokentän läpi. Se on epäeuklidinen sokkelo, jossa ei varmasti ikinä löydä sinne, minne haluaa. Pääsette sieltä ulos enemmän tai vähemmän arpeutuneina, mutta hengissä.
+00:04:57,890 --> 00:05:02,820
+minä en lakkaa kuulemasta siitä.
 
 58
-00:19:30,000 --> 00:20:43,000
-Te tulette eri lennoilla, eri suunnista ja eri päivinä. Ensimmäinen, joka saapuu paikalle, on Thom, koska Airbnb on sinun nimissäsi. Joten sulla on päivä aikaa valmistautua ennen muiden saapumista. Pistä omat työkalut kasaan, pulttaa tutkimusvälineistöä kiinni. Saavut illalla. On myöhäinen syysilta. Pimeää, märkää, kylmää. Ei niin kylmää kuin lähtiessä, mutta silti niin, että joutuu pistämään päälleen jotain. Airbnb on... nyt pitää tarkistaa termi... Pariisi on jaettu alueisiin.
+00:05:03,920 --> 00:05:08,200
+Siinä meni vähintään kuusi kuukautta
+ennen kuin he lopettivat valittamista.
 
 59
-00:20:43,000 --> 00:20:50,000
-Mikä se Pariisin alueen nimi olikaan?
+00:05:08,660 --> 00:05:09,980
+Silloinkin se oli työmatka.
 
 60
-00:20:50,000 --> 00:20:55,000
-Oliko se arrondissementti?
+00:05:09,980 --> 00:05:11,460
+Niin ainakin väitit.
 
 61
-00:20:55,000 --> 00:21:20,000
-Joo, arrondissement juuri. Kuudes arrondissement. Olen törkeä ja käytän arrondissementista tällaista suomennosta: kuudennen asuinalueen aika hyvällä paikalla. Rue de Rennesin ja Rue du Dragonin välissä isossa korttelissa, jossa on massiivinen sisäpiha. Sinne pääsee pienestä porttikongista, jota koristaa lohikäärme. Näin yöllä sinne tullessa se on melkein pahenteinen, se metallinen...
+00:05:11,720 --> 00:05:15,980
+Ne kuvat, mitä sinä
+laitoit Instagramiin ja...
 
 62
-00:21:20,000 --> 00:21:50,000
-...gargoili siinä portin yläpuolella.
+00:05:16,300 --> 00:05:17,260
+Muualle ne olivat.
 
 63
-00:22:00,000 --> 00:22:10,000
-Nappasin siitä muutaman kuvan eri kulmista. Tuosta saa hyvän 3D-mallin.
+00:05:18,160 --> 00:05:19,440
+Ei se mikään työmatka ollut.
 
 64
-00:22:10,000 --> 00:23:31,000
-Kyllä. Menet sisäpihalle, etsit oikean rapun, näppäilet numerokoodin. Kiipeät neljänteen kerrokseen. Tämä on vanhaa Pariisia, mikä tarkoittaa, että kaikki talot ovat vaaleanruskeaa kiveä. Kaikki sisätilat ja käytävät ovat tosi kapeita ja vähän klaustrofobisia. Täällä on hissi, mutta siihen mahtuu yksi ihminen kerrallaan – tai vaihtoehtoisesti yhden ihmisen ostokset. Kaksi ihmistä ei pääse yhtä aikaa. Kierrät portaita, puupaneloinnit narisevat. Tulet neljänteen kerrokseen, ja siinä on vihertäväksi maalattu ovi, jossa on numerolukko. Syötät koodin ja ovi aukeaa.
+00:05:22,960 --> 00:05:26,520
+Didi huokaa vähän
 
 65
-00:23:31,000 --> 00:24:10,000
-Katson vasemmalle ja oikealle, että mitä kautta pitäisi pyrkiä pois, jos tulee tulipalo. Kyllä se kovin vaikeaa tulee olemaan. Huokaisen, pistän oven kiinni perässäni, nojaan takaraivolla oveen ja tiputan kassin pimeän huoneen eteen. Hengittelen syvään ja kuuntelen, miltä rakennus kuulostaa, miltä liikenne kuulostaa... aistin kaikilla aisteilla.
+00:05:26,520 --> 00:05:30,080
+sellainen give up hengessä.
 
 66
-00:24:10,000 --> 00:25:04,000
-Liikenne kuulostaa siltä, mitä ehdit jo kokea taksimatkalla. Kaoottista, paljon tööttäyksiä, vaikka on jo pimeää. Suurkaupungin kontrolloitu kaaos. Talo itsessään tuntuu vakaalta. Se on vanha kivitalo. Kun tunnustelet sitä, kuulet että jossain tuulee, mutta se ei tule sisälle asti. Tämä on oma hiljainen soppi.
+00:05:30,600 --> 00:05:34,230
+Ja sitten sulkee matkalaukun ja
 
 67
-00:25:04,000 --> 00:25:40,000
-Hetki menee, rotsi naulakkoon ja laitan lämpimän veden valumaan. Teetän itselleni pienen kylvyn tässä vaiheessa. Laitan radion päälle ja patterit lämpimämmälle. Käyn huoneet läpi, onko siellä kaikki mitä pitäisi.
+00:05:34,230 --> 00:05:37,860
+on lähtemässä käräämään
+sitä ulos huoneesta.
 
 68
-00:25:40,000 --> 00:26:19,000
-Ei ole mitään, mikä poikkeaisi luvatusta. Lämpötila on vähän alhaisempi kuin mihin olet tottunut, joten joudut vääntämään pattereita ylöspäin. Vesi lorisee mukavasti ja höyry nousee. Sinulla on vuorokausi aikaa asettua aloillesi.
+00:05:37,860 --> 00:05:43,860
+Ja sitten nopeasti halaa äitiään siinä
+ja antaa ranskalaiset poskisuudelmat.
 
 69
-00:26:19,000 --> 00:26:34,000
-Sten, oletko sä järjestänyt lentoliput? Tuleeko Didi ensin perille?
+00:05:44,600 --> 00:05:44,860
+Ja sitten sellainen...
 
 70
-00:26:34,000 --> 00:26:50,000
-Varmaan Didi voisi olla ensin. Olen koittanut saada ne niin, että tultaisiin samoihin aikoihin, ei aivan tipoittain.
+00:05:44,860 --> 00:05:46,340
+Hyvä on.
 
 71
-00:26:50,000 --> 00:27:00,000
-Oletteko sopineet tapaamista? Teillä on vain tunti tai kaksi eroa saapumisessa.
+00:05:46,460 --> 00:05:48,940
+Sinä tiedät, että minä en
+voi sanoa sinulle eilen.
 
 72
-00:27:00,000 --> 00:27:15,000
-Jos meillä on sopivat lennot, me voidaan tavata lentokentällä ja ottaa yhteinen taksi.
+00:05:49,940 --> 00:05:51,500
+Hyvä tytär, hyvä tytär.
 
 73
-00:27:15,000 --> 00:27:49,000
-Didi, joudut odottamaan pari tuntia lentokentällä, mikä kasvaa kahteen ja puoleen tuntiin, kun Stenin lento on myöhässä. Miltä se tuntuu istuskella siellä jollain muovituolilla?
+00:05:51,780 --> 00:05:53,320
+Ja antaa poskisuudelmat takaisin.
 
 74
-00:27:49,000 --> 00:28:15,000
-Didi ei aio odottaa lentokentän yleisissä tiloissa, vaan lähimmän lentokenttähotellin aulassa tai jollain lounge-pisteellä. Olen puhunut itselleni jonkun konferenssihuoneen, jossa saa olla rauhassa ja ladata kännykkää.
+00:05:53,640 --> 00:05:54,280
+Hyvää matkaa.
 
 75
-00:28:15,000 --> 00:28:45,000
-Joo, ja saat jotain purtavaakin. Olet huomattavasti paremmassa ympäristössä. Tapaatte lentokentän ulkopuolella. Miltä Didi näyttää, kun odottelee Steniä?
+00:05:54,400 --> 00:05:55,160
+Nauti lennosta.
 
 76
-00:28:45,000 --> 00:29:45,000
-Didi on siinä 30–40 vuoden välillä. Ranskalaisgeenit näkyvät siinä, ettei ikä välttämättä näy samalla tavalla kuin numerot osoittavat. Iho on onnistunut näyttämään lattekahvin kummalta, vaikkei hän kauhean tumma olekaan – ei kuitenkaan kalpea. Ruskeat hiukset on fönattu kevyille laineille olkapäille. Pukeutumisessa on ranskalaisnaisen hillitty charmi: effortlessly elegant. Didi näyttää levänneeltä, ja kun hän näkee Stenin, hän puhkeaa valloittavaan hymyyn ja vilkuttaa kaukaa. "Sten!"
+00:05:56,860 --> 00:05:59,860
+No, jos se olisi
+bisnesluokassa, niin kyllä.
 
 77
-00:29:45,000 --> 00:30:03,000
-Ja minkälainen mies Didiä tulee vastaan?
+00:06:00,040 --> 00:06:03,820
+Mutta firmalla nyt ei kuulemaan, että
+tällä hetkellä on vielä varaa sellaiseen.
 
 78
-00:30:03,000 --> 00:31:15,000
-Sten on olemukseltaan sellainen "unelmavävy". Jossain 35–40 vuoden paikkeilla, salskea, urheilullinen ja ystävällinen. Sinisilmäinen, pukeutunut tylsän siisteihin vaatteisiin: khakislaksit ja hyvin istuva kauluspaita. Ei kuitenkaan krakaa tai pikkutakkia. Tervehtii hyvantuulisesti kättä heiluttaen ja rientää laukkua perässään vetäen.
+00:06:05,800 --> 00:06:08,020
+Sinun pitäisi puhua heillä.
 
 79
-00:31:15,000 --> 00:31:37,000
-Kun päästään etäisyydelle, täytyy vaihtaa ne ranskalaiset ilmaposkisuudelmat. "Olipas ilahduttavaa nähdä vihdoinkin kasvotusten! Näitä Teams-palavereita on nähty jo tarpeeksi."
+00:06:08,020 --> 00:06:11,180
+Tai minun pitäisi puhua heillä.
 
 80
-00:31:37,000 --> 00:31:50,000
-"Olen aivan samaa mieltä. Ja olet paljon pidempi kuin ajattelin."
+00:06:11,860 --> 00:06:14,020
+Ei se ole oikeasti...
 
 81
-00:31:50,000 --> 00:32:05,000
-"Pohjoismaiset geenit... Mutta tämä lentokenttä – aina se on karmeaa. Mitä nopeammin pääsemme pois tästä hirvityksestä, sen parempi."
+00:06:14,860 --> 00:06:17,180
+Tämähän on vain Pariisin lento.
 
 82
-00:32:05,000 --> 00:32:16,000
-"Aivan. Thom on jo siellä kämpillä, joten otetaan taksi ja suunnataan sinne."
+00:06:18,280 --> 00:06:19,440
+Menee yhdessä hujauksessa.
 
 83
-00:32:16,000 --> 00:32:30,000
-"Mutta ei täältä taksitolpilta, minä tiedän paremman paikan."
+00:06:19,580 --> 00:06:20,620
+Pariisiin.
 
 84
-00:32:30,000 --> 00:33:27,000
-Pääsette taksiin. Sää on tänään miellyttävä, ei sada eikä tuule. Taivas on harmaa, mutta sellainen kaunis myöhäissyksyn päivä. Puun lehdet ovat ruskeita ja keltaisia. Puistot alkavat näyttää enemmän kuihtuneilta kuin elämää täynnä olevilta.
+00:06:21,400 --> 00:06:26,380
+Ja tästä lähtee sellainen hienoinen rant
+siitä, kuinka Pariisi on kaiken kulttuurin
 
 85
-00:33:27,000 --> 00:34:33,000
-Ajatte Pariisin läpi, ohitatte miljoona kirkkoa ja upeita taloja. Taksi pysähtyy Rue du Dragonille. Astutte ulos. Siinä on se porttikongi. Valurautainen lohikäärme katsoo teitä yläpuolelta. Se näyttää komealta, mutta vähän makaaberilta. Epäkesko.
+00:06:26,380 --> 00:06:31,360
+keskus ja niin edelleen.
 
 86
-00:34:33,000 --> 00:34:56,000
-Astelette sisäpihalle. Sen kivetys on märkien lätäköiden peittämä epätasainen perunapelto. Toisella puolella näkyy se rappu.
+00:06:35,360 --> 00:06:38,990
+Sitten, minkälaisista lähtökohdista sinä
 
 87
-00:34:56,000 --> 00:35:14,000
-Syötätte ovikoodin ja päädytte samaan kapeaan rappukäytävään.
+00:06:38,990 --> 00:06:42,620
+olet lähdössä kohti Pariisia?
 
 88
-00:35:14,000 --> 00:35:30,000
-Didi, mene sinä hissillä. Minä lähden kantamaan matkalaukkua portaita pitkin.
+00:06:44,860 --> 00:06:50,380
+Stenin koti on sellainen
 
 89
-00:35:30,000 --> 00:36:10,000
-Kävellen olisit melkein nopeammin perillä, mutta tällä kertaa Didi voittaa kisan ja saapuu neljänteen kerrokseen ennen Steniä. Ovi on vihreäksi maalattu, koodilukolla varustettu. Kuuluuko sisältä jotain?
+00:06:50,380 --> 00:06:55,900
+elegantti, skandinaavisen,
+minimalistinen kerrostalokämppä.
 
 90
-00:36:10,000 --> 00:36:42,000
-Oven edustalla näkyy muutamia märkiä jalanjälkiä. Sisäpuolelta kuuluu radion valkoista kohinaa, sellaista radiohäiriötä. Kevyttä, ei mitään voimakasta.
+00:06:57,740 --> 00:07:00,840
+Elegantti, mutta ei superrahakas.
 
 91
-00:36:42,000 --> 00:36:50,000
-Onko siinä ovikelloa vai pelkkä koodilukko?
+00:07:01,400 --> 00:07:07,780
+Semmoista vähän parempaa Ikeaa
+ja ehkä jotkut kalliit vanget.
 
 92
-00:36:50,000 --> 00:37:03,000
-Siinä on koodilukko, mutta voit koputtaa.
+00:07:07,780 --> 00:07:09,560
+Se on ollut se vain, mikä se nyt onkaan.
 
 93
-00:37:03,000 --> 00:38:53,000
-Sisempi ovi avautuu ja tumma siluetti, vähän laihahko, avaa oven. Thomilla on lyhyet vaaleat hiukset. Rapun valo valaisee kasvot. Thom näyttää ihan samalta kuin Teamsissa, mutta ilman niitä taustasuodattimia. Thom on 30–40-vuotias, kalvakka mies, jolla on kevyt etukumara. Hän slouchaa hieman. Olemus on yhdistelmä Michael Fassbenderin esittämää androidia elokuvasta Prometheus ja Watchmen-leffan Rorschachin näyttelijää Jackie Earle Halya. Korostuneet etuhampaat, kevyt virne. Tummanharmaa kauluspaita, pari ylintä nappia auki, hihat kääritty. Jalassa on kaupunkitutkimukseen sopivat mustat maiharit. Thom tuoksuu kevyesti mintulle. "Tervetuloa."
+00:07:10,240 --> 00:07:10,720
+Stereot.
 
 94
-00:38:53,000 --> 00:39:25,000
-Didi ottaa käden vastaan ja antaa taas ne ranskalaiset ilmasuukot. "Hei Thom!" Thom varmaan huomaa Didin parfymin, se on sellainen juhlavan oloinen tuoksu.
+00:07:11,840 --> 00:07:14,560
+Mutta myötä myös sitä Ikeaa.
 
 95
-00:39:25,000 --> 00:40:10,000
-Normaalisti kavahtaisin kosketusta, mutta Didi on kuin aurinko, jonka kohdatessa heijastaa vähän takaisin. Otan teidän kantamukset vastaan ja siirrän ne pois tieltä. "Pääsette sisään ensimmäisenä. Otin vapauden tilata meille vähän tarjoilua tänne."
+00:07:14,860 --> 00:07:17,040
+Siistiä.
 
 96
-00:40:10,000 --> 00:40:20,000
-"Ihanaa! Ja anteeksi, kuvittelin ehkä ettet välttämättä pidä kosketuksesta ensitapaamisella, mutta se tuli niin automaattisesti."
+00:07:18,100 --> 00:07:24,980
+Kaapin päällä on erinäinen
+kasa tällaisia sukulaiskuvia.
 
 97
-00:40:20,000 --> 00:40:49,000
-"Ollaanhan me Teamsissa jo monta kertaa nähty, ei se haittaa."
+00:07:25,660 --> 00:07:31,160
+Keskeisellä paikalla
+tällainen naisen valokuva.
 
 98
-00:40:49,000 --> 00:41:20,000
-Pistän ovet kiinni. Olohuone on varmaan paras paikka tässä.
+00:07:31,420 --> 00:07:34,300
+Ehkä noin kolmessa kymmenissä olevan.
 
 99
-00:41:20,000 --> 00:42:20,000
-Siellä odottaakin jo kaksi puhelinta, joissa on vara-akut vieressä, ja paperille printattuja suunnitelmia, jotka mahtuvat pieneen taskuun. Sellaista ihan "essential" tavaraa, joita ilman ei pärjää. Litteillä näytöillä on uutiskanavia päällä ja siirrän radion eteiseen.
+00:07:35,120 --> 00:07:41,360
+Ja sen vieressä on myöskin hääkuva
+Stenistä ja tästä naisesta.
 
 100
-00:42:20,000 --> 00:42:35,000
-Miten kauan me ollaan oltu yhteyksissä ennen tätä? Vuoden verran?
+00:07:42,740 --> 00:07:44,380
+Sten pakkailee.
 
 101
-00:42:35,000 --> 00:42:54,000
-Vähintään vuoden. Thom on vaikuttanut ehkä vähän vainoharhaiselta tai ainakin ammatillisesti valmistautuneelta kaikenlaiseen espionageen. Foliohattu on vähän niin kuin puolivälissä.
+00:07:44,860 --> 00:07:49,680
+Siistä ja tällaisia
 
 102
-00:42:54,000 --> 00:43:10,000
-Thom on ollut vähän sellainen, ettei halua pitää videopalavereita tietyillä softilla ja haluaa käyttää salattuja sähköposteja.
+00:07:49,680 --> 00:07:54,500
+keski-ikäisen miehen vaatteita.
 
 103
-00:43:10,000 --> 00:44:00,000
-Mä mietin, että Didi tuli mukaan siinä vaiheessa, kun New Horizonsin rahoitus varmistui. New Horizons on sellainen taho, jolla on osaamista alueilla, missä teillä on puutetta.
+00:07:54,500 --> 00:08:00,780
+Eli perustason takkeja, släksejä.
 
 104
-00:44:00,000 --> 00:44:15,000
-Rahahan on ehdottomasti kelvannut. Mikä on New Horizonsin maine?
+00:08:01,880 --> 00:08:05,560
+Siistiä, mutta hyvin
+tällaista nondeskriptiä.
 
 105
-00:44:15,000 --> 00:44:40,000
-Se on biotekniikkayhtiö. Se on sun alalla vähän kuin Google, mutta ehkä muutama askel epäilyttävämpään suuntaan. Ei mikään täysi konnakabinetti, mutta tarpeeksi epämääräinen.
+00:08:07,020 --> 00:08:12,600
+Ei ole mitään erityisen
+räiskyvä, mutta perustyylikäs.
 
 106
-00:44:40,000 --> 00:45:20,000
-No, raha on tullut tarpeeseen. Ja Didi on ollut hyvin näkyvä tiedeviestijä Norjassa ja Ruotsissa, joten kontakti otettiin ilolla vastaan.
+00:08:12,600 --> 00:08:13,900
+Se on näin.
 
 107
-00:45:20,000 --> 00:46:07,000
-Didillä on oma tiedetausta, vaikka onkin keskittynyt viestintään. Voidaan speksata tarkempi tutkinto myöhemmin, mutta Sten on se biologian asiantuntija.
+00:08:14,860 --> 00:08:19,080
+Onko sun matkalaukku
 
 108
-00:46:07,000 --> 00:46:40,000
-Jossain biolääketieteen paikkeilla ollaan varmaan.
+00:08:19,080 --> 00:08:23,300
+kuinka kokeneella otteella pakattu?
 
 109
-00:46:40,000 --> 00:47:00,000
-Asettaudutte aloillenne, käytte suihkussa ja syötte sitä cateringia, mitä Thom on tilannut.
+00:08:24,980 --> 00:08:31,320
+Kyllä sitä on selvästi
+pakattu moneen kertaan.
 
 110
-00:47:00,000 --> 00:47:49,000
-Olen tilannut kohtalaisen korkeatasoista ruokaa ja ottanut huomioon erityisruokavaliot. Lisäksi olen tilannut jotain odottamatonta viihteeksi rikkoakseni jäätä. Se ei ole Kimble.
+00:08:32,380 --> 00:08:35,900
+Pakkaaminen on myös
+hyvin järjestelmällistä.
 
 111
-00:47:49,000 --> 00:48:00,000
-Mulle tulee mieleen SingStar tai karaoke.
+00:08:35,900 --> 00:08:41,620
+Erilaisia Clas Ohlson matkaputeleita.
 
 112
-00:48:00,000 --> 00:48:58,000
-Kyllä! Thom on tilannut karaoke-laitteiston. Meillä on muutama tunti aikaa ennen hiljaisuutta. Olen hihattomassa valkoisessa paidassa, vähän hontelo ja kalvakka mies, mutta minulla on yllättävän hyvä lauluääni. Mikä olisi ensimmäinen biisi?
+00:08:42,420 --> 00:08:43,900
+Eri...
 
 113
-00:48:58,000 --> 00:49:10,000
-Joku yllättävä... joku moderni hitti. Tyyliin Taylor Swiftia.
+00:08:43,900 --> 00:08:47,160
+Erilaisille kosmetiikoille ja muille.
 
 114
-00:49:10,000 --> 00:50:00,000
-Kyllä, Taylor Swiftin Karma. Se menee kohtalaisen okei. Sitten annan mikin Didille.
+00:08:47,380 --> 00:08:51,040
+Kaikki on siististi omalla
+paikallaan paketissa.
 
 115
-00:50:00,000 --> 00:51:15,000
-Didi on se rasittava ihminen, joka on todella hyvä laulamaan. Lauletaan joku klassikko... Frank Sinatran My Way. Laulettu tunteella, vaikkei ehkä aivan täydellisesti. Sen jälkeen Didi kerää kaikki yhteislauluun: We Will Rock You.
+00:08:55,620 --> 00:08:59,160
+Naishenkilö ei kuitenkaan näy
+kotona, kun olisi lähdössä.
 
 116
-00:51:15,000 --> 00:51:22,000
-Onko meillä viiniä?
+00:09:00,020 --> 00:09:00,680
+Näy kotona.
 
 117
-00:51:22,000 --> 00:51:29,000
-Ollaan Ranskassa, totta kai on viiniä.
+00:09:03,360 --> 00:09:07,420
+Stenillä on kuitenkin sormus nimettömässä.
 
 118
-00:51:29,000 --> 00:51:47,000
-Kun viimeistelette yhteislaulua, kuuluu erittäin vaativa ovikellon soitto.
+00:09:07,420 --> 00:09:07,680
+Sään.
 
 119
-00:51:47,000 --> 00:52:00,000
-"Puhuuko kukaan ranskaa?"
+00:09:08,920 --> 00:09:09,180
+Joo.
 
 120
-00:52:00,000 --> 00:52:29,000
-"En... tai en tiedä." Sammutan radion ja menen ovelle. Avaan oven katsomaan, mistä on kyse.
+00:09:10,920 --> 00:09:13,280
+Pistät oven lukkoon.
 
 121
-00:52:29,000 --> 00:52:45,000
-Siellä on vanhempi ranskalainen herrasmies, joka on selvästi sitä mieltä, että olette liian kovaäänisiä. Hän vuodattaa sieltä koko patterin ranskaa.
+00:09:13,900 --> 00:09:15,580
+Lähdet kohti lentokenttä.
 
 122
-00:52:45,000 --> 00:53:40,000
-Katson häntä silmiin ja totean: "Yksi hetki." Pistan oven kiinni ja katson Didiä. "Nyt tarvittaisiin ranskantaitoista."
+00:09:17,760 --> 00:09:19,320
+Thom.
 
 123
-00:53:40,000 --> 00:53:59,000
-Didi menee käytävään ja aloittaa "charm offensiven".
+00:09:20,320 --> 00:09:25,673
+Kysyn alkuun, että
 
 124
-00:53:59,000 --> 00:54:55,000
-Miehellä ei ole mitään mahdollisuuksia. Didi purkaa tilanteen täysin. Mies alkaa muistella omia nuoruudenpäiviään ja ranskalaisia chansoneita. Hän haluaa, että laulat hänelle sellaisen, koska se kuuluu alakertaan niin kovaa.
+00:09:25,673 --> 00:09:31,027
+todennäköisesti sulle on
 
 125
-00:54:55,000 --> 00:55:10,000
-Didi lupaa laulaa sen.
+00:09:31,027 --> 00:09:36,380
+jäänyt tehtäväksi varata teidän Airbnb.
 
 126
-00:55:10,000 --> 00:55:20,000
-Saat tilanteen rauhoittumaan. Laulatko sen?
+00:09:36,380 --> 00:09:43,380
+Joten mikä on sun pääkriteeri?
 
 127
-00:55:20,000 --> 00:55:40,000
-Tietenkin. Ongelma on vain siinä, ettei sitä löydy SingStarista, joten Thomin täytyy etsiä se YouTubesta.
+00:09:43,900 --> 00:09:44,600
+Ja eri sille.
 
 128
-00:55:40,000 --> 00:56:10,000
-Joo, se tapahtuu pienen säätämisen kautta, mutta saadaan se toimimaan.
+00:09:46,720 --> 00:09:47,440
+Sisäpihaikkuna.
 
 129
-00:56:10,000 --> 00:56:47,000
-Saat laulun laulettua ja tunnelma on sen jälkeen oikeastaan todella hyvä. On sellainen olo, että olette olleet kavereita jo pitkään. Punaviinillä ja karaokella on ollut osuutta asiaan.
+00:09:47,760 --> 00:09:48,740
+Sisäpihalle päin.
 
 130
-00:56:47,000 --> 00:57:10,000
-Missä vaiheessa otatte puheeksi sen, miksi olette täällä? Tänä iltana vai vasta huomenna?
+00:09:48,800 --> 00:09:50,400
+Maksimissaan kolmos kerros.
 
 131
-00:57:10,000 --> 00:57:25,000
-Työaika alkaa varmaan huomenna aamulla kello kymmenen. Ei pilata tätä iltaa työasioilla.
+00:09:50,860 --> 00:09:53,260
+Melko lähellä palopoistumisteitä.
 
 132
-00:57:25,000 --> 00:57:25,000
-Mennään näihin juttuihin ensi kerralla. Lopetetaan tähän ja pidetään pieni tauko.
+00:09:53,660 --> 00:09:56,940
+Ja semmoinen, mistä saa
+pelastussuunnitelman englanniksi pdf.
+
+133
+00:10:00,120 --> 00:10:00,840
+Joo.
+
+134
+00:10:01,660 --> 00:10:02,600
+Kaikki muu toisistaan.
+
+135
+00:10:03,600 --> 00:10:05,420
+Yksi huone per heppu ja keittiöpäälle.
+
+136
+00:10:05,520 --> 00:10:05,860
+Ihan kiva.
+
+137
+00:10:07,640 --> 00:10:08,280
+Joo.
+
+138
+00:10:08,980 --> 00:10:11,560
+Sä oot saanut suurin piirtein sellaisen.
+
+139
+00:10:11,560 --> 00:10:13,220
+Se on neljännessä kerroksessa.
+
+140
+00:10:13,220 --> 00:10:18,220
+Mutta muuten kaikki on
+oikein hyvin onnistunut.
+
+141
+00:10:18,880 --> 00:10:21,420
+Alueella on jokin konsertti tai jotain.
+
+142
+00:10:21,580 --> 00:10:26,900
+Joten on ollut vaikea
+
+143
+00:10:26,900 --> 00:10:32,220
+saada täysin kriteeristön
+täyttävää asuntoa.
+
+144
+00:10:33,160 --> 00:10:36,500
+Oletko pyytänyt toimittamaan sinne
+työkalut etukäteen vai roudaatko ne itse
+
+145
+00:10:36,500 --> 00:10:39,840
+mukanasi?
+
+146
+00:10:41,120 --> 00:10:42,720
+Vanhallinen henkilö.
+
+147
+00:10:42,720 --> 00:10:44,340
+Kyllä ne mulla on enimmäkseen mukana.
+
+148
+00:10:44,420 --> 00:10:46,070
+Mulla on jotain varmaa semmoisesta
+hylly-tavaraa, mitä sinne on mennyt
+
+149
+00:10:46,070 --> 00:10:47,720
+vähän etukäteen.
+
+150
+00:10:48,460 --> 00:10:50,600
+Mutta oikeat tavarat tulee
+sitten meitsin mukana.
+
+151
+00:10:50,740 --> 00:10:54,350
+Tai oikeastaan, jos tarkkoja ollaan, niin
+rakennetaan paikan päällä hyllytuotteesta
+
+152
+00:10:54,350 --> 00:10:57,960
+ja sitten sitä todellisuudesta,
+mitä mä kannan mukana.
+
+153
+00:10:58,540 --> 00:11:00,720
+Viattominen sinne puettuna ja nututettuna.
+
+154
+00:11:01,540 --> 00:11:02,240
+Mutta joo.
+
+155
+00:11:02,320 --> 00:11:05,507
+Eli tällä hetkellä mä oon juuri
+laittamassa tämmöistä koukasta
+
+156
+00:11:05,507 --> 00:11:08,693
+sektioitu muovipusseilla erilaisia
+varustekokonaisuuksia, vaatteita, kenkiä
+
+157
+00:11:08,693 --> 00:11:11,880
+päin poies.
+
+158
+00:11:12,720 --> 00:11:17,180
+Vähän sään mukaan pukeutumista niin
+ikään, niin vedän sen ton vetoketjun
+
+159
+00:11:17,240 --> 00:11:20,240
+Ulkopuolella kuuluu ohimenevän veneen
+ääntä ja koko mun asunto keinahtelee
+
+160
+00:11:20,240 --> 00:11:23,240
+verran tässä asuntolaiva kuntoon.
+
+161
+00:11:24,020 --> 00:11:26,470
+Ja tumman ruskeiden kaihtimien takaa
+näkyy valoheijastimien jälkiä siellä
+
+162
+00:11:26,470 --> 00:11:28,920
+verran.
+
+163
+00:11:28,920 --> 00:11:31,713
+Ja mulla on sisällä semmoinen vähän niin
+kuin huono valaistus siinä mielessä, että
+
+164
+00:11:31,713 --> 00:11:34,507
+kaikkea tuntuu olevan pimeitä paitsi
+niissä paikoissa, missä on semmoisen
+
+165
+00:11:34,507 --> 00:11:37,300
+pöytälampu, missä se on todella kirkasta.
+
+166
+00:11:37,720 --> 00:11:38,420
+Mä ite pidän tästä.
+
+167
+00:11:38,680 --> 00:11:41,920
+Tää on semmoinen, missä
+niin kuin mielenmaisema on.
+
+168
+00:11:42,720 --> 00:11:44,640
+On parhaimmillaan ja
+tuntuu oikein hyvältä.
+
+169
+00:11:45,580 --> 00:11:48,640
+Lisäksi mulla on vasemmassa ranteessa
+huomattava määrä tämmöisiä festareiden
+
+170
+00:11:48,640 --> 00:11:51,700
+rannekkeitä, mitkä tässä vaiheessa
+on niin kylmillä metallisaksilla.
+
+171
+00:11:51,700 --> 00:11:55,620
+Mä leikkaan juuri ne poikki ja tiputan ne
+roskakoriin senne päin miettimättä, mutta
+
+172
+00:11:55,620 --> 00:11:59,540
+siinä on ollut vähän tällaista
+lähikuukausien ja puolien vuosien
+
+173
+00:11:59,660 --> 00:12:03,400
+Mä hioran mun vaaleita hiuksia
+ja vähän niskaan niin ikään.
+
+174
+00:12:03,440 --> 00:12:06,910
+Ja mulla näkyy rokotusten tuores sarja
+tuolla käsitaipessa myöskin, että mä oon
+
+175
+00:12:06,910 --> 00:12:10,380
+vastakin ottanut boosterit ja näin
+päin pois, kun ei koskaan voi tietää.
+
+176
+00:12:11,060 --> 00:12:12,700
+Ja nää ilmeisesti firma maksaa meitä.
+
+177
+00:12:12,800 --> 00:12:13,760
+Onks mä ymmärtänyt oikein?
+
+178
+00:12:14,800 --> 00:12:15,100
+Joo.
+
+179
+00:12:15,280 --> 00:12:15,480
+Joo.
+
+180
+00:12:15,480 --> 00:12:19,847
+Firma tässä tapauksessa tarkoittaa siis
+teidän omaa firmaanne, jota Sten
+
+181
+00:12:19,847 --> 00:12:24,213
+pyörittää, mutta oletan, että teillä
+on kuitenkin jonkinlainen tämmönen
+
+182
+00:12:24,213 --> 00:12:28,580
+healthcare-järjestely.
+
+183
+00:12:29,420 --> 00:12:30,260
+Miten Sten?
+
+184
+00:12:31,660 --> 00:12:36,070
+Joo, siis kysymys, että olemmeko myös
+lähtökohtaisesti yhtiö vai jonkinlainen
+
+185
+00:12:36,070 --> 00:12:40,480
+yhtiön...
+
+186
+00:12:40,480 --> 00:12:46,200
+Yhtiön, tota, yhtiörahoituksella toimiva,
+niin kuin, niin kuin järjestö, noissa,
+
+187
+00:12:46,200 --> 00:12:51,920
+tota, tota, se on, tota, mä muistan,
+onks, onks Suomessa sellaista, niin kuin,
+
+188
+00:12:51,920 --> 00:12:57,640
+vastaavaa, mutta ikään kuin tällainen,
+mikä se nyt on, joku tämmönen public,
+
+189
+00:12:57,640 --> 00:13:03,360
+beneficial company tai tyyppinen.
+
+190
+00:13:03,360 --> 00:13:06,860
+Joo, Suomessa vaan vaikku sen vähän, niin
+kuin, ei nyt, niin kuin, yleishyödyllinen
+
+191
+00:13:06,860 --> 00:13:10,360
+yhdistys, mutta...
+
+192
+00:13:10,480 --> 00:13:13,993
+Mutta, tota, mutta mehän voidaan päättää,
+haluammeko olla yhteistä, niin haluammeko
+
+193
+00:13:13,993 --> 00:13:17,507
+olla yhtiömuotoinen toimija, tällaisia
+asioita tulee eski-ikäisen roolipelaajana
+
+194
+00:13:17,507 --> 00:13:21,020
+pohdittua.
+
+195
+00:13:23,380 --> 00:13:27,650
+Mä näkisin, että yhtiömuotoinen toiminta
+olisi varmaan jotain, niin kuin, katsoen,
+
+196
+00:13:27,650 --> 00:13:31,920
+niin kuin, Veni-näkökulmasta, tai siis
+tämän Senti-kin näkökulmasta, tai mitä New
+
+197
+00:13:31,920 --> 00:13:36,190
+Horizons varmasti tukisi, koska sitten
+voisi saada mahdollisesti osakkeita tai,
+
+198
+00:13:36,190 --> 00:13:40,460
+kuin, parempaa kontrollia tästä.
+
+199
+00:13:40,480 --> 00:13:44,540
+Entityydestä verrattuna jonkinlaiseen
+yleishyödylliseen yhdistykseen, jonka,
+
+200
+00:13:44,540 --> 00:13:48,600
+kuin, perustus, joihin on voitu merkitä
+jotain tiettyjä tämmöisiä
+
+201
+00:13:48,600 --> 00:13:52,660
+siitä, ettei sitä koskaan voi käyttää
+huonoihin tarkoituksiin tai myydä jonnekin
+
+202
+00:13:52,660 --> 00:13:56,720
+yrityksillä.
+
+203
+00:14:00,200 --> 00:14:01,480
+Unustaa hyvältä.
+
+204
+00:14:02,460 --> 00:14:04,500
+Tääkin kunnia diipadaapa-jutuille.
+
+205
+00:14:06,160 --> 00:14:09,440
+Mites, muottuuko se diipadaapa
+aina tonne rokotteisiin asti?
+
+206
+00:14:10,480 --> 00:14:11,220
+Sitten menee käytännössä.
+
+207
+00:14:12,120 --> 00:14:16,860
+Onks tää itse maksettu omasta kupesta,
+vai onks tää tullut nyt yhteisön toivosta?
+
+208
+00:14:17,980 --> 00:14:22,480
+No, me varmaan oltikin rahoittamassa
+melko kattavasti, eikö se ole?
+
+209
+00:14:22,580 --> 00:14:23,020
+Joo.
+
+210
+00:14:23,020 --> 00:14:28,910
+Niin, tota, kyllä me varmasti, niin
+kuin, meillä on varmaan ihan asiallinen
+
+211
+00:14:28,910 --> 00:14:34,800
+tämmönen, tota, niin kuin,
+health plan ja näin eri tavalla.
+
+212
+00:14:34,940 --> 00:14:36,200
+Ei tarvitse ihan...
+
+213
+00:14:36,200 --> 00:14:38,110
+Et kyllä ne varmaan ois, varmaan ois
+ne Didille ne bisnesluokan lennotkin
+
+214
+00:14:38,110 --> 00:14:40,020
+järjestetty.
+
+215
+00:14:40,480 --> 00:14:43,680
+Nyt, jos niitä, jos niitä olisi pyytänyt.
+
+216
+00:14:44,520 --> 00:14:46,580
+No, viikkaan itse asiassa, niin.
+
+217
+00:14:46,580 --> 00:14:50,933
+Mä mietin, että siitä voisi saada sieltä
+pientä konfliktin alkuun, että jotkut muut
+
+218
+00:14:50,933 --> 00:14:55,287
+jäsenet, joilla voi olla enemmän
+kontrollia kuin Didillä, niin ehkä
+
+219
+00:14:55,287 --> 00:14:59,640
+kuin, nähdä niitä rahoja.
+
+220
+00:14:59,740 --> 00:15:03,100
+Käytetään nyt tässä alkuvaiheessa silloin
+maltillisesti, niin, niin, varsinkin
+
+221
+00:15:03,100 --> 00:15:06,460
+tällaisiin lyhyisiin lentajaisiin, se on
+se, niin kuin, mukavuus, mutta esimerkiksi
+
+222
+00:15:06,460 --> 00:15:09,820
+jollain transatlantik-lennolla, niin,
+
+223
+00:15:09,820 --> 00:15:15,087
+voi olla sitten, että bisnes on ehkä
+vähän enemmän, niin kuin, perusteltu
+
+224
+00:15:15,087 --> 00:15:20,353
+mutta siis Didin näkökulmasta ei ole
+mitään tällaista asiaa kuin premium, että
+
+225
+00:15:20,353 --> 00:15:25,620
+vain bisnes ja ykkösluokka ja kaikki muu,
+siitä on, niin kuin, ei mistään puhuta.
+
+226
+00:15:26,160 --> 00:15:27,820
+Mä oon mahdollisesti varannut lennot.
+
+227
+00:15:29,480 --> 00:15:29,640
+Joo.
+
+228
+00:15:30,860 --> 00:15:33,300
+Joten, tota, onks meillä muuta henkiä?
+
+229
+00:15:34,940 --> 00:15:37,300
+Mä sanoisin, että teillä on...
+
+230
+00:15:39,820 --> 00:15:46,440
+Määrittelemättömästi pari muuta
+henkilöä, mutta katsotaan tarpeen mukaan.
+
+231
+00:15:47,280 --> 00:15:50,810
+Oletan, että on, koska en mä tiedä,
+miten mielenkiintoista esimerkiksi tätä
+
+232
+00:15:50,810 --> 00:15:54,340
+taloushallintoa nyt on pelata pelissä.
+
+233
+00:15:55,560 --> 00:15:57,260
+Meillä ehkä on joku...
+
+234
+00:15:57,260 --> 00:15:57,440
+Etteillä on joku kirjanpitäjä.
+
+235
+00:15:57,440 --> 00:16:02,120
+Niin, meillä on kirjanpitäjä, ehkä joku
+jonkinlainen yleissihteeri, joka hoitaa
+
+236
+00:16:02,120 --> 00:16:06,800
+tyyppiä varauksia ja sen tyyppistä.
+
+237
+00:16:07,540 --> 00:16:08,740
+Sen tyyppistä, come on.
+
+238
+00:16:09,820 --> 00:16:14,160
+Tai ainakin siis hallintohenkilö.
+
+239
+00:16:14,280 --> 00:16:16,800
+En tiedä, että onko
+ehkä yleissihteeri edes.
+
+240
+00:16:17,640 --> 00:16:21,680
+Enemmän veikkaan, että ootte koko luokkaa
+henkilöstöltä sellainen, että sä oot kyllä
+
+241
+00:16:21,680 --> 00:16:25,720
+sinä, joka on ne lennot
+ihan oikeasti varannut.
+
+242
+00:16:26,240 --> 00:16:29,220
+Ja Thom on se, joka on
+tehnyt sen Airbnb-varauksen.
+
+243
+00:16:29,940 --> 00:16:34,760
+Että ei ole sellaista nakkikonetta
+niin sanotusti ainakaan vielä hankittu.
+
+244
+00:16:34,760 --> 00:16:35,760
+Joo.
+
+245
+00:16:39,820 --> 00:16:43,630
+Tosissaan siinä viimeistellään vielä
+pakkaamassa sillä, että mä lappaan mukaan
+
+246
+00:16:43,630 --> 00:16:47,440
+työpöydät ja sammuttelen niitä lampuja
+ja otan pistorasiota irti seinästä.
+
+247
+00:16:47,620 --> 00:16:54,440
+Yksittäisen kirjan mukaan se on täysin
+hiirenkorville luettu sixth-hand-teos.
+
+248
+00:16:55,120 --> 00:16:56,400
+Onko se fakta vai fiktiota?
+
+249
+00:17:00,600 --> 00:17:02,160
+Hyvä kysymys.
+
+250
+00:17:02,160 --> 00:17:02,200
+Yksi kysymys.
+
+251
+00:17:05,200 --> 00:17:09,160
+Mä veikkaan, että Didi tietää
+parhaiten Thomin, joten...
+
+252
+00:17:09,160 --> 00:17:10,280
+Fakta vai fiktiota?
+
+253
+00:17:12,140 --> 00:17:14,720
+Siis onko kirja niin kuin
+fiction vai non-fiction?
+
+254
+00:17:15,080 --> 00:17:15,600
+Täsmälleen.
+
+255
+00:17:16,060 --> 00:17:17,640
+Tämä on se, jota mä
+aion lukea lennon ajan.
+
+256
+00:17:17,740 --> 00:17:19,080
+Ei se ole pitkä matkaa, mutta kumminkin.
+
+257
+00:17:19,340 --> 00:17:21,700
+Ja mä oon oikeasti kiinnostunut
+tästä nimenomaisesta aiheesta.
+
+258
+00:17:23,620 --> 00:17:26,920
+Mä näkisin Thomin kyllä
+semmoisena non-fiction-ihmisenä.
+
+259
+00:17:26,980 --> 00:17:29,380
+Okei, sitten se on näin.
+Hyvä tietää. Kiitos tästä.
+
+260
+00:17:30,740 --> 00:17:35,380
+Voisin heittänyt siihen ehkä vielä
+sellaisen, että jotain siltä väliltä.
+
+261
+00:17:36,540 --> 00:17:37,380
+Jotain niin kuin...
+
+262
+00:17:39,160 --> 00:17:43,340
+En tiedä pseudotieteen, mutta
+spekulatiivisen tieteen.
+
+263
+00:17:43,740 --> 00:17:45,320
+Ei muista suuntaan.
+
+264
+00:17:45,920 --> 00:17:48,400
+No siis tehän teet
+spekulatiivista tietettä.
+
+265
+00:17:48,580 --> 00:17:48,880
+Joo.
+
+266
+00:17:48,880 --> 00:17:52,110
+Te tutkitte niin sanottua
+varjobiosfääriä, eli jotain, jota ei ole
+
+267
+00:17:52,110 --> 00:17:55,340
+olevaksi.
+
+268
+00:17:55,520 --> 00:18:01,740
+Tai ainakaan niin kuin täysin
+yleisesti hyväksytty omaksi ilmiökseen.
+
+269
+00:18:02,200 --> 00:18:03,880
+Mikä nyt on sitten jotain?
+
+270
+00:18:04,480 --> 00:18:06,000
+Ei päätä, mikä nyt on fakta.
+
+271
+00:18:06,540 --> 00:18:08,640
+Mutta hommatta mukaan tämän
+nimenomaisen tiedoksen tässä vaiheessa.
+
+272
+00:18:09,160 --> 00:18:12,040
+Tuonne maihin nousu
+rotsin oikeaisen taskuun.
+
+273
+00:18:12,040 --> 00:18:15,260
+Ei se mahtuu just just niin, että se
+vähän vielä taipuu ne muutamat sivut
+
+274
+00:18:15,360 --> 00:18:16,160
+Ei ole niin väliä.
+
+275
+00:18:17,080 --> 00:18:18,920
+Itse mä en tykkäisi
+tämmöisestä käytöksestä yhtään.
+
+276
+00:18:19,000 --> 00:18:21,240
+Mutta nyt home ei ole minä,
+joten kaikki menee ihan ok.
+
+277
+00:18:21,960 --> 00:18:22,260
+Hyvä.
+
+278
+00:18:22,720 --> 00:18:24,260
+Ja sitten viimeiset valot poistosissa.
+
+279
+00:18:24,420 --> 00:18:25,920
+Ovelta avaimet messiin.
+
+280
+00:18:26,040 --> 00:18:28,700
+Ja katson ympärille, totean vielä ääneen.
+
+281
+00:18:28,860 --> 00:18:30,720
+Nähdään sitten, kun nähdään, jos nähdään.
+
+282
+00:18:30,900 --> 00:18:34,540
+Tyhjälle asunnolle ja poistun
+huoneistostani, asuntolaivastani.
+
+283
+00:18:36,540 --> 00:18:36,980
+Kyllä.
+
+284
+00:18:39,160 --> 00:18:43,640
+Meillä on jonkinlaisia rajoja
+
+285
+00:18:43,640 --> 00:18:48,120
+siinä, mitä me suostutaan kuvailemaan.
+
+286
+00:18:48,380 --> 00:18:51,560
+Ja kauheuksia, joihin
+me suostutaan menemään.
+
+287
+00:18:52,220 --> 00:18:57,860
+Ja joitain asioita, joita me ei
+sivutetaan, vaan viittaamalla niihin.
+
+288
+00:18:58,460 --> 00:19:03,280
+Ja sanon universaalin kauhukokemuksen.
+
+289
+00:19:03,880 --> 00:19:07,320
+Toi Ranskan lentokentät.
+
+290
+00:19:09,160 --> 00:19:13,080
+Te kaikki joudutte kulkemaan
+Vakssin lentokentän läpi.
+
+291
+00:19:13,080 --> 00:19:19,200
+Ja se on epäeuklidinen sokkelo, jossa
+
+292
+00:19:19,200 --> 00:19:25,320
+ei varmasti ikinä löydä
+sinne, minne haluaa.
+
+293
+00:19:27,560 --> 00:19:32,460
+Pääsette sieltä ulos enemmän
+
+294
+00:19:32,460 --> 00:19:37,360
+tai vähemmän arpeutuneena, mutta hengissä.
+
+295
+00:19:38,460 --> 00:19:38,680
+Jei.
+
+296
+00:19:39,160 --> 00:19:44,640
+Te tuutte eri lennoilla, te tuutte
+eri suunnista, te tuutte eri päivinä.
+
+297
+00:19:45,280 --> 00:19:50,860
+Ensimmäinen, joka saapuu paikalle, on
+Thom, koska Airbnb on sinun nimissäsi.
+
+298
+00:19:51,500 --> 00:19:57,460
+Joten sulla on päiväaikaa
+valmistautua ennen muiden saapumista.
+
+299
+00:19:57,460 --> 00:20:02,460
+Pistää omat työkalut kasaan,
+
+300
+00:20:02,460 --> 00:20:07,460
+pultata tutkimusvälineistöä,
+mitä tarvitsetkaan.
+
+301
+00:20:09,160 --> 00:20:11,480
+Sä saavut illalla.
+
+302
+00:20:13,240 --> 00:20:17,480
+On syysilta, myöhäinen syysilta.
+
+303
+00:20:18,480 --> 00:20:21,780
+Pimeää, märkää, kylmää.
+
+304
+00:20:22,360 --> 00:20:25,860
+Ei niin kylmää, mitä oli lähtiessä, mutta
+silti sillä tavalla, että joutuu pistämään
+
+305
+00:20:25,860 --> 00:20:29,360
+päällensä jotain.
+
+306
+00:20:32,380 --> 00:20:34,360
+Airbnb on...
+
+307
+00:20:34,880 --> 00:20:37,360
+Nyt pitää tarkistaa termi, mutta siis...
+
+308
+00:20:37,360 --> 00:20:43,020
+Pariisi on jaettu alueisiin.
+
+309
+00:20:43,060 --> 00:20:44,440
+Mä en muista sitä termiä.
+
+310
+00:20:44,520 --> 00:20:47,940
+Muistaako joku tämän
+Pariisin alueiden noita...
+
+311
+00:20:47,940 --> 00:20:48,980
+Onko se Arrondissement?
+
+312
+00:20:49,640 --> 00:20:50,440
+Arrondissement.
+
+313
+00:20:51,040 --> 00:20:51,180
+Joo.
+
+314
+00:20:54,640 --> 00:20:55,440
+Arrondissement.
+
+315
+00:20:55,460 --> 00:20:56,640
+Arrondissement juuri.
+
+316
+00:20:58,780 --> 00:21:01,360
+Kuudennen asuinalueen.
+
+317
+00:21:01,360 --> 00:21:06,360
+Mä oon törkeä käytä
+tätä arrondissementistä.
+
+318
+00:21:07,360 --> 00:21:08,900
+Suomennosta.
+
+319
+00:21:09,020 --> 00:21:13,700
+Kuudennen asuinalueen
+aika hyvällä paikalla.
+
+320
+00:21:14,320 --> 00:21:17,560
+Eli aika keskeisessä osassa Pariisia.
+
+321
+00:21:19,900 --> 00:21:25,030
+Rennes ja Dragon katujen välissä
+sellaisessa isossa korttelissa, jossa on
+
+322
+00:21:25,030 --> 00:21:30,160
+massiivinen sisäpiha,
+
+323
+00:21:30,160 --> 00:21:36,860
+jonne pääsee sellaisesta pienestä
+porttikongista, jota koristaa lohikäärme.
+
+324
+00:21:37,360 --> 00:21:45,420
+Ja näin niin kuin yöllä sinne tullessa,
+niin se on vähän melkein pahaenteinen se
+
+325
+00:21:45,420 --> 00:21:53,480
+metallinen gargoili
+siinä portin yläpuolella.
+
+326
+00:21:55,440 --> 00:21:57,560
+Eipä sinne mitään salamaa
+välähtää kahteen kertaan.
+
+327
+00:21:57,660 --> 00:21:58,680
+Mä nappasin tämän muutaman kuvan.
+
+328
+00:21:58,860 --> 00:22:01,120
+Niin ikään kuin vähän eri kulmista vielä.
+
+329
+00:22:01,320 --> 00:22:02,440
+Tuosta saa hyvän 3D-mallin.
+
+330
+00:22:03,200 --> 00:22:03,400
+Kyllä.
+
+331
+00:22:05,360 --> 00:22:06,400
+Minä olen sisäpihalla.
+
+332
+00:22:07,360 --> 00:22:12,830
+Etsit oikean rapun, näppäilet
+
+333
+00:22:12,830 --> 00:22:18,300
+numerokoodin, kiipäät
+neljänteen kerrokseen.
+
+334
+00:22:18,660 --> 00:22:24,633
+Tämä on siis vanhaa Pariisia, joka
+tarkoittaa, että kaikki talot on
+
+335
+00:22:24,633 --> 00:22:30,607
+sanomattoman vaalean, ruskeaa, melkein
+valkoista kiveä, hyvin suoria seiniä,
+
+336
+00:22:30,607 --> 00:22:36,580
+jotenkin kuitenkin ylellisen näköistä.
+
+337
+00:22:36,580 --> 00:22:37,280
+Kaikki.
+
+338
+00:22:37,360 --> 00:22:40,920
+Kaikki sisätilat ja käytävät ja muut
+on tosi kaposia, tosi sellaisia vähän
+
+339
+00:22:40,920 --> 00:22:44,480
+klaustrofobisia.
+
+340
+00:22:45,040 --> 00:22:48,350
+Täällä on hissi, mutta se on semmoinen,
+että siihen mahtuu yksi ihminen kerrallaan
+
+341
+00:22:48,350 --> 00:22:51,660
+justi ja just tai vaihtoehtoisesti
+sen yhden ihmisen ostokset.
+
+342
+00:22:52,520 --> 00:22:56,030
+Ja sitä kiertää sellainen kierreportaikko,
+
+343
+00:22:56,030 --> 00:22:59,540
+joka on aivan liian ahdas.
+
+344
+00:22:59,840 --> 00:23:03,120
+Kaksi ihmistä ei pääse
+siitä yhtä aikaa ympäriä.
+
+345
+00:23:04,080 --> 00:23:06,400
+Kierrät sieltä ja vähän narisee.
+
+346
+00:23:06,400 --> 00:23:07,120
+Narisee.
+
+347
+00:23:07,360 --> 00:23:14,713
+Ja jotkut puupaneeloinnit siinä
+välitasoilla ja tulet neljänteen
+
+348
+00:23:14,713 --> 00:23:22,067
+on ovi tommoinen vihertäväksi maalattu
+ovi, jossa on numerolukko, johon syötät
+
+349
+00:23:22,067 --> 00:23:29,420
+jälleen kerran koodin ja ovi aukee.
+
+350
+00:23:30,880 --> 00:23:33,650
+Mä katson vasemmalla, mä katson oikealla
+ja mä katson suurin piirtein, että jos ja
+
+351
+00:23:33,650 --> 00:23:36,420
+kun tulee tulipalo tai
+jonkinlainen semmoinen...
+
+352
+00:23:37,360 --> 00:23:40,840
+Odottamaton tilanne johtuen meistä tai
+jostain muusta, niin mitä kautta pitäisi
+
+353
+00:23:40,840 --> 00:23:44,320
+periaatteessa pyrkiä pois ja toteat,
+että kyllä se kovin vaikeaa tulee olemaan.
+
+354
+00:23:44,780 --> 00:23:48,420
+Ja sen jälkeen sisäpuolelle siinä
+huokasten ja pistän oven perässäni
+
+355
+00:23:48,420 --> 00:23:52,060
+takaraivon oveen nojaista vasten ja
+tiputan kassin siihen pimeän huoneen
+
+356
+00:23:52,060 --> 00:23:55,700
+hengittelen syvään ja kuuntelen, miltä
+tämä rakennus kuulostaa, miltä liikenne
+
+357
+00:23:55,700 --> 00:23:59,340
+kuulostaa ja miltä tämä atmosfäiri tuntuu.
+
+358
+00:24:00,160 --> 00:24:01,280
+Aistin kaikilla aisteilla.
+
+359
+00:24:02,480 --> 00:24:07,340
+Liikenne kuulostaa siltä, mitä sä jo
+ehdit vähän kokea tuossa taksimatkalla.
+
+360
+00:24:07,360 --> 00:24:14,247
+Kaoottiselta, paljon tööttäyksiä, vaikka
+on jo pimeetä, sellainen suurkaupungin
+
+361
+00:24:14,247 --> 00:24:21,133
+kontrolloitu kaos, joka ulospäin näyttää
+siltä, että siinä ei ole mitään järkeä,
+
+362
+00:24:21,133 --> 00:24:28,020
+mutta jotenkin se kuitenkin toimii.
+
+363
+00:24:28,020 --> 00:24:32,520
+Tämä itse rakennus
+
+364
+00:24:32,520 --> 00:24:37,020
+tuntuu kylmältä tuollaiselta.
+
+365
+00:24:37,360 --> 00:24:42,000
+Vakaalta, vakiolta tässä kaikessa.
+
+366
+00:24:42,000 --> 00:24:47,987
+Se on vanha kivitalo Pariisin
+keskustassa, joten se on hyvin sellainen,
+
+367
+00:24:47,987 --> 00:24:53,973
+tunnustelet sitä, niin sä kuulet, että
+joo, jossain tuulee, mutta se ei tule
+
+368
+00:24:53,973 --> 00:24:59,960
+mitenkään tänne taloon sisälle.
+
+369
+00:25:00,940 --> 00:25:03,460
+Tämä on oma hiljainen soppinsa.
+
+370
+00:25:04,300 --> 00:25:05,060
+Joo.
+
+371
+00:25:06,500 --> 00:25:07,260
+Hetki.
+
+372
+00:25:07,360 --> 00:25:10,120
+Muutama menee ja ulko, rotsikin on
+naulakossa ja nää, ja mä laitan tuon
+
+373
+00:25:10,120 --> 00:25:12,880
+veden valumaan siellä, ellei täällä
+säännöstä lämmintä vettä, se on tietenkin
+
+374
+00:25:12,880 --> 00:25:15,640
+juttu.
+
+375
+00:25:15,700 --> 00:25:18,260
+Muuten mä otan putket tavallaan vuotamaan
+siinä ja valmistelin itselleni pienen,
+
+376
+00:25:18,260 --> 00:25:20,820
+onko siellä kylpyammenta,
+riippuu toki siitä ensin.
+
+377
+00:25:20,840 --> 00:25:21,040
+Onhan.
+
+378
+00:25:21,420 --> 00:25:25,080
+Okei, pienen kylvyn itselleni tässä
+vaiheessa, otan radion päälle siinä ja
+
+379
+00:25:25,080 --> 00:25:28,740
+noin, niin patterit vähän lämpimämmälle,
+jos se nyt sitten vaikka toimisi.
+
+380
+00:25:29,220 --> 00:25:31,450
+Ja käyn huoneet läpi muutenkin tavallaan
+siinä, että siellä ei ole mitään
+
+381
+00:25:31,450 --> 00:25:33,680
+mitä nyt ei pitäisi olla.
+
+382
+00:25:34,300 --> 00:25:36,680
+Ei ole mitään, mikä poikkeaisi.
+
+383
+00:25:37,360 --> 00:25:39,840
+Ei ole mitään siitä, mitä
+oletat tai mitä olisi luvattu.
+
+384
+00:25:41,260 --> 00:25:46,020
+Lämpötila on tosiaan vähän alhaisempi
+kuin mitä olet itse ehkä tottunut
+
+385
+00:25:46,020 --> 00:25:50,780
+että joutuu niitä pattereita
+pistämään vähän ylöspäin.
+
+386
+00:25:51,380 --> 00:25:52,560
+Ja mä osan tää säästöliäs.
+
+387
+00:25:53,080 --> 00:25:53,500
+Niin.
+
+388
+00:25:55,340 --> 00:26:00,310
+Mutta tota, vesi lorisee mukavasti ja
+nousee sellaista höyryä, joka kutsuu sut
+
+389
+00:26:00,310 --> 00:26:05,280
+kylpyyn.
+
+390
+00:26:05,900 --> 00:26:07,280
+Sulla on tosiaan suurin piirtein vuoksi.
+
+391
+00:26:07,360 --> 00:26:11,670
+Vuorokausi tässä asetat itsesi aloilleen,
+
+392
+00:26:11,670 --> 00:26:15,980
+haet tarvikkeita, teet ostoksia, jäänee.
+
+393
+00:26:18,980 --> 00:26:22,480
+Sitten sä olet järjestänyt lentoliput.
+
+394
+00:26:23,500 --> 00:26:29,000
+Oletko sinä vai Didi ensin perillä?
+
+395
+00:26:34,280 --> 00:26:34,960
+Kyllä.
+
+396
+00:26:35,840 --> 00:26:36,280
+Varmaan.
+
+397
+00:26:37,360 --> 00:26:43,250
+Vain Didi voisi olla ensin, mutta me
+ollaan ehkä samalle päivälle, jonne mä oon
+
+398
+00:26:43,250 --> 00:26:49,140
+koittanut saada näitä jo
+tultaisi aivan tipoittain.
+
+399
+00:26:50,520 --> 00:26:50,740
+Joo.
+
+400
+00:26:51,460 --> 00:26:55,580
+Ootko sä sopinut tapaamista Didin kanssa
+etukäteen, jos teillä on vain tunti tai
+
+401
+00:26:55,580 --> 00:26:59,700
+kaksi eroa sitten saapumisessa?
+
+402
+00:26:59,700 --> 00:27:03,240
+Jos nyt meillä on riittämät säävät
+lennot, niin me mahdollisesti voidaan
+
+403
+00:27:03,240 --> 00:27:06,780
+lentokentällä ja ottaa yhteinen taksi.
+
+404
+00:27:07,360 --> 00:27:13,890
+Joo. Didi joudut odottamaan pari tuntia
+lentokentällä, joka kasvaa kahteen ja
+
+405
+00:27:13,890 --> 00:27:20,420
+puoleen tuntiin, kun
+Stenin lento on myöhässä.
+
+406
+00:27:20,420 --> 00:27:28,880
+Ja lentokenttä on varmankin
+rahvaanomainen, on se kaikista paras
+
+407
+00:27:28,880 --> 00:27:37,340
+tästä, että miltä se
+tuntuu istuskella siellä.
+
+408
+00:27:37,360 --> 00:27:41,360
+Siellä joko oman matkalaukun päällä tai
+jollakin muovituolilla, jolla ties kuka on
+
+409
+00:27:41,360 --> 00:27:45,360
+istunut ennenä.
+
+410
+00:27:48,620 --> 00:27:50,200
+Siis korjaan.
+
+411
+00:27:51,200 --> 00:27:55,450
+Didihan ei aio odottaa lentokentältä,
+vaan lähimmän lentokenttähotellin aulassa
+
+412
+00:27:55,450 --> 00:27:59,700
+vähintään.
+
+413
+00:28:00,140 --> 00:28:00,360
+Mustavaa.
+
+414
+00:28:00,360 --> 00:28:06,420
+Jopa jollain vanhempien tai mahdollisesti
+omilla kertoinaan lentokenttä.
+
+415
+00:28:07,360 --> 00:28:11,350
+Mistä teillä olet puhunut itselleen
+jotain tämmöistä konferenssihuonetta,
+
+416
+00:28:11,350 --> 00:28:15,340
+olla itsekseen ja laittaa
+kännykän ja tämmöistä?
+
+417
+00:28:16,340 --> 00:28:18,840
+Joo. Ja jotain vähän purtavaakin.
+
+418
+00:28:21,160 --> 00:28:24,630
+Olet huomattavasti paremmassa
+ympäristössä, missä olisit ollut, jos
+
+419
+00:28:24,630 --> 00:28:28,100
+mennyt virran mukana.
+
+420
+00:28:31,420 --> 00:28:33,100
+Tapaatte lentokentän ulkopuolella.
+
+421
+00:28:37,360 --> 00:28:43,000
+Miltä Didi näyttää, kun odottelee Steniä
+saapuvaksi? Minkä näköinen Didi on?
+
+422
+00:28:44,940 --> 00:28:51,840
+Didi on semmoinen niin kuin
+epämääräisesti siinä 30-40 välissä.
+
+423
+00:28:52,100 --> 00:28:57,000
+Ranskalais-geenit on tulleet siinä
+mielessä esiin, että se ikä ei
+
+424
+00:28:57,000 --> 00:29:01,900
+siinä määrin, kuin ehkä
+numerot antaisivat osoittaa.
+
+425
+00:29:01,900 --> 00:29:07,040
+Ja niin kuin iho, vaikka asuikin Norjassa.
+
+426
+00:29:07,360 --> 00:29:11,220
+Onnistuu näyttämään sillä tavalla
+kuitenkin niin kuin lattekahvin tummalta.
+
+427
+00:29:11,380 --> 00:29:15,380
+Ei nyt kauhean tumma, mutta siis
+sillä tavalla niin kuin ei ole kalpea.
+
+428
+00:29:15,940 --> 00:29:17,540
+Vähän semmoista lämmintä sävyä.
+
+429
+00:29:18,060 --> 00:29:22,760
+Ja ruskeat hetki on sillä tavalla niin
+kuin blow-dry, föönattu sillä tavalla
+
+430
+00:29:22,760 --> 00:29:27,460
+laineille ja vasta
+keltuu aivan olkapäille.
+
+431
+00:29:27,460 --> 00:29:30,840
+Ja sitten siitä pukeutumisesta on
+semmoinen niin kuin ranskalaisnaisen
+
+432
+00:29:30,840 --> 00:29:34,220
+charmi.
+
+433
+00:29:34,700 --> 00:29:36,140
+Että siis sillä tavalla
+effortlessly elegant.
+
+434
+00:29:37,360 --> 00:29:44,300
+Niin Didi näyttää siltä, että on oikein
+niin kuin rested ja niin kuin comfortable.
+
+435
+00:29:44,560 --> 00:29:48,100
+Ja kun näkee Stenin, niin siis sillä
+tavalla puhkee semmoisen valloittavan
+
+436
+00:29:48,100 --> 00:29:51,640
+niin kuin vilkut jo sieltä kaukaa.
+
+437
+00:29:52,220 --> 00:29:53,040
+Että sillä tavalla Sten!
+
+438
+00:29:53,040 --> 00:29:57,580
+Ja minkälainen mies Didi tulee
+
+439
+00:29:57,580 --> 00:30:02,120
+vastaan? Mitä vastaan Didi tulee?
+
+440
+00:30:03,220 --> 00:30:06,980
+No Stenhän on siis olemuksellisen.
+
+441
+00:30:07,360 --> 00:30:15,840
+Olemukseltaan unelmavävy, joka on siis
+tosiaan tämmöinen niin kuin tosiaan
+
+442
+00:30:15,840 --> 00:30:24,320
+siellä kolme neljänkymmenen jakoilla
+salskia, urheilullinen, ystävällinen,
+
+443
+00:30:24,320 --> 00:30:32,800
+miellyttävä, kaikin puolin semmoinen
+niin kuin jotenkin mukavan oloinen mies.
+
+444
+00:30:32,800 --> 00:30:35,800
+No tota tota.
+
+445
+00:30:37,360 --> 00:30:42,980
+Ja tuli mainittua niin tosiaan Lea
+Sinisilmäinen pukeutunut semmoisiin niin
+
+446
+00:30:42,980 --> 00:30:48,600
+tylsän siisteihin vaatteisiin.
+
+447
+00:30:48,740 --> 00:30:53,710
+Jotkut ehkä taluiset niin kuin
+chinos-housut ja joku talunen siisti
+
+448
+00:30:53,710 --> 00:30:58,680
+kauluspaita.
+
+449
+00:30:58,680 --> 00:31:02,980
+Ja tota ei kuitenkaan mitään
+krakkaa tai pikkutakia.
+
+450
+00:31:04,080 --> 00:31:04,560
+Ja tota.
+
+451
+00:31:05,840 --> 00:31:06,800
+Tervehtii sieltä.
+
+452
+00:31:07,360 --> 00:31:13,030
+Että niin kuin hyvän tuulisesti, hyvän
+tuulisesti kättä heiluttaen, heiluttaen ja
+
+453
+00:31:13,030 --> 00:31:18,700
+tota rientää sieltä laukkua,
+laukkua perässään vetäen.
+
+454
+00:31:19,900 --> 00:31:20,580
+Joo.
+
+455
+00:31:20,920 --> 00:31:23,580
+Ja kun pääsee etäisyydelle niin pitää
+vaihtaa ranskalaiset ilmaposkisuudelmat
+
+456
+00:31:23,580 --> 00:31:26,240
+tietenkin.
+
+457
+00:31:26,240 --> 00:31:27,680
+Joo kyllä, kyllä.
+
+458
+00:31:28,640 --> 00:31:32,460
+Onpas ilahduttava nähdä vihdoin
+viimein näin tälleen kasvatusten.
+
+459
+00:31:33,080 --> 00:31:36,740
+Onhan näitä, näitä tiimissä
+on nähty jo tarpeeksi.
+
+460
+00:31:37,360 --> 00:31:40,180
+Joo, olen aivan samaa mieltä.
+
+461
+00:31:40,740 --> 00:31:43,920
+Ja sinä olet paljon pidempi
+kuin minä ajattelin.
+
+462
+00:31:45,300 --> 00:31:50,200
+Joo, tuolla, no kyllähän
+sinä pohjoismaiset.
+
+463
+00:31:52,980 --> 00:31:54,140
+Miten lento?
+
+464
+00:31:56,740 --> 00:32:01,740
+Ainahan se on karmeaa
+ja viittaa lentokenttään.
+
+465
+00:32:01,960 --> 00:32:05,260
+Mitä nopeammin pääsemme kalmesta
+tästä hirviästä niin sen parempi.
+
+466
+00:32:05,260 --> 00:32:06,840
+Aivan, aivan.
+
+467
+00:32:07,360 --> 00:32:11,480
+No, avon ilmeisesti siellä kämpillä jo,
+joten ehkä otetaan taksi ja suunnataan
+
+468
+00:32:11,480 --> 00:32:15,600
+sinne.
+
+469
+00:32:17,140 --> 00:32:19,940
+Mutta ei täältä taksitolpolta,
+minä tiedän paremmin.
+
+470
+00:32:20,120 --> 00:32:22,500
+Se on tuolla 500 metriä tuohon suuntaan.
+
+471
+00:32:23,520 --> 00:32:24,120
+Noniin, hyvä.
+
+472
+00:32:25,280 --> 00:32:26,260
+Näytät tietä.
+
+473
+00:32:26,260 --> 00:32:29,180
+Ja pitätte taksitolpalle.
+
+474
+00:32:29,640 --> 00:32:32,220
+Sää on tänään mieluisampi.
+
+475
+00:32:32,620 --> 00:32:35,200
+Ei sada, ei tuule.
+
+476
+00:32:36,240 --> 00:32:37,260
+Aivas on harmaa.
+
+477
+00:32:37,360 --> 00:32:40,880
+Harmaa, mutta sillä tavalla
+
+478
+00:32:40,880 --> 00:32:44,400
+harmaa, mistä paistaa jotain läpi.
+
+479
+00:32:45,160 --> 00:32:50,460
+Eli ei täysin jotenkin masentava, vaan
+enemmän semmoinen kaunis syyspäivä,
+
+480
+00:32:50,460 --> 00:32:55,760
+myöhäissyksyn päivä.
+
+481
+00:32:59,120 --> 00:33:02,940
+Kuiden lehdet on
+
+482
+00:33:02,940 --> 00:33:06,760
+muuttuneet ruskeiksi ja keltaisiksi.
+
+483
+00:33:07,360 --> 00:33:10,820
+Vehreyden sijaan.
+
+484
+00:33:11,120 --> 00:33:16,960
+Ja uistot alkaa olla enemmän
+tuulkeutuneen näköisiä kuin jotenkin
+
+485
+00:33:16,960 --> 00:33:22,800
+olevia petankin pelaajia ei juurikaan näy.
+
+486
+00:33:26,600 --> 00:33:31,240
+Ajatte Pariisiin, Pariisin läpi.
+
+487
+00:33:31,240 --> 00:33:35,700
+Ohitatte miljoona kirkkoa.
+
+488
+00:33:37,360 --> 00:33:39,680
+Ja toinen toistaan.
+
+489
+00:33:40,040 --> 00:33:41,440
+Upeampia taloja.
+
+490
+00:33:43,840 --> 00:33:47,340
+Taksi pysähtyy Rue du Dragonille.
+
+491
+00:33:48,600 --> 00:33:51,560
+Ja astutte ulos.
+
+492
+00:33:53,560 --> 00:33:57,360
+Siinä on porttikongi.
+
+493
+00:33:57,360 --> 00:33:58,840
+Tällainen.
+
+494
+00:34:01,120 --> 00:34:03,040
+Tisennysportti.
+
+495
+00:34:04,040 --> 00:34:06,580
+Valurautainen lohikäärme katsoo.
+
+496
+00:34:06,580 --> 00:34:08,580
+Teitä yläpuolelta.
+
+497
+00:34:10,440 --> 00:34:11,960
+Näyttää aika komealta.
+
+498
+00:34:12,180 --> 00:34:17,740
+Näyttää myös siltä, että joku on ehkä
+joskus yrittänyt kiivetä siitä yli.
+
+499
+00:34:18,080 --> 00:34:20,740
+Joitain osia on vähän
+vääntynyt ja niin edespäin.
+
+500
+00:34:20,860 --> 00:34:27,820
+Ei ihan täydellisen tasapainoisen
+näköinen, vaan enemmänkin makaaberi.
+
+501
+00:34:29,080 --> 00:34:30,040
+Epäkesko.
+
+502
+00:34:34,100 --> 00:34:35,980
+Astelette sisäpihalle.
+
+503
+00:34:36,580 --> 00:34:40,450
+Sen kivetys on märkien,
+
+504
+00:34:40,450 --> 00:34:44,320
+lätäköiden peittämä
+epätasainen perunapelto.
+
+505
+00:34:45,160 --> 00:34:48,340
+Ja sen toisella puolella näkyy
+
+506
+00:34:48,340 --> 00:34:53,260
+tuo rappu, johon olette menossa.
+
+507
+00:34:56,240 --> 00:35:00,460
+Työtätte ovikoodin ja päädette samaan
+
+508
+00:35:00,460 --> 00:35:03,260
+rappukäytävään, jonka kuvasin aiemmin.
+
+509
+00:35:04,180 --> 00:35:05,260
+Hyvin kapea
+
+510
+00:35:06,580 --> 00:35:10,920
+ei sellainen hissi, johon
+mahtuisi useampaa henkilöä.
+
+511
+00:35:14,500 --> 00:35:16,080
+Didi menee hissillä.
+
+512
+00:35:20,340 --> 00:35:21,180
+Hyvä.
+
+513
+00:35:21,420 --> 00:35:26,360
+Mä lähden kantamaan
+matkalaukkuat siinä portaikossa.
+
+514
+00:35:27,000 --> 00:35:33,100
+Didi ei siis tee sitä epäkohtaisesti,
+vaan luo, että hän on käynyt siinä edellä.
+
+515
+00:35:33,100 --> 00:35:35,440
+Sitten hän menee sinne
+hissiin ja vilkuttaa sieltä.
+
+516
+00:35:36,580 --> 00:35:37,420
+Normaalisti.
+
+517
+00:35:38,420 --> 00:35:38,600
+Joo.
+
+518
+00:35:38,960 --> 00:35:44,060
+Hissi menee marginaalisesti
+nopeammin kuin mitä kävely sujuu.
+
+519
+00:35:44,820 --> 00:35:47,960
+Varmastikin, jos reippaasti
+kävelisi ilman matkalaukkua,
+
+520
+00:35:48,060 --> 00:35:49,860
+niin kävellen olisi nopeammin perin.
+
+521
+00:35:50,760 --> 00:35:56,280
+Mutta tällä hetkellä Didi voittaa kilvan
+
+522
+00:35:56,280 --> 00:36:01,440
+ja saavut neljänteen
+kerrokseen ennen Stenia.
+
+523
+00:36:03,240 --> 00:36:06,540
+Siinä on ovi vihreäksi maalattu.
+
+524
+00:36:06,580 --> 00:36:10,300
+Poodilukko.
+
+525
+00:36:11,940 --> 00:36:13,600
+Kuuluuko sisältä jotain?
+
+526
+00:36:16,260 --> 00:36:19,600
+Kuuluu, mutta myös oven edustalla
+näkyy muutamia märkiä jalanjälkiä.
+
+527
+00:36:20,260 --> 00:36:23,620
+Siinä on käynyt jotain, ainakin
+yhdet, kahdet ja aika parit.
+
+528
+00:36:23,880 --> 00:36:25,580
+Mutta sisäpuolta kuuluu.
+
+529
+00:36:29,840 --> 00:36:33,020
+Sitä voisi kuulua hyvinkin
+sellaista radion valkoista ääntä.
+
+530
+00:36:33,100 --> 00:36:35,220
+Sellaista radiokohinaa
+oikeastaan enemmänkin.
+
+531
+00:36:35,580 --> 00:36:35,980
+Kevyttä.
+
+532
+00:36:36,140 --> 00:36:36,560
+Ei mitään hirveästä.
+
+533
+00:36:36,580 --> 00:36:37,700
+Ei hirveän voimakasti.
+
+534
+00:36:37,820 --> 00:36:38,280
+Mutta kuuluu.
+
+535
+00:36:38,760 --> 00:36:38,940
+Kyllä.
+
+536
+00:36:39,200 --> 00:36:40,640
+Antaa tulla kevyistä rakennusta.
+
+537
+00:36:40,660 --> 00:36:40,800
+Kyllä.
+
+538
+00:36:42,040 --> 00:36:45,740
+Oliko siinä ovikelloa vai
+vaan pelkästään se koodilukko?
+
+539
+00:36:45,820 --> 00:36:48,060
+Siinä on ovikello ja siinä on koodilukko.
+
+540
+00:36:50,100 --> 00:36:54,640
+Ovikelloa sitten painaa
+samalla kun odottelee Sten.
+
+541
+00:36:55,540 --> 00:36:58,160
+Tai ottaa kiinni siinä sen välimatkan.
+
+542
+00:36:59,260 --> 00:37:03,700
+Joo, ei mitään.
+
+543
+00:37:03,700 --> 00:37:06,280
+Sisempi ovi avautuu, ulompi ovi avautuu.
+
+544
+00:37:06,280 --> 00:37:07,990
+Se on semmoinen tumma siluetti, joka on
+pikkusen pidempi ja pikkusen laihempi kuin
+
+545
+00:37:07,990 --> 00:37:09,700
+voisi kuvitella.
+
+546
+00:37:09,800 --> 00:37:13,500
+Ne ottaa vastaava yllättäen
+lyhyet vaaleakot hiukset tosissaan.
+
+547
+00:37:13,620 --> 00:37:16,020
+Ja Thom selvästikin näkyy rapun valoiksi.
+
+548
+00:37:16,100 --> 00:37:17,820
+Rapustahan tulee valoa
+sisällepäin jonkun verran.
+
+549
+00:37:17,920 --> 00:37:19,340
+Saadaan kasvotkin näkymään.
+
+550
+00:37:19,600 --> 00:37:19,700
+Joo.
+
+551
+00:37:20,500 --> 00:37:24,520
+Juuri nää keltaisissa näissä happoisissa
+väreissä näkyy olevan tosissaan Thom kuin
+
+552
+00:37:24,520 --> 00:37:28,540
+siellä Teamsissa,
+
+553
+00:37:28,660 --> 00:37:31,280
+mutta ilman taustan
+filtteröintiä nyt ihan oikeasti.
+
+554
+00:37:31,280 --> 00:37:35,280
+Ja Thom on noin 185-senttinen
+vaaleahiuksinen.
+
+555
+00:37:36,280 --> 00:37:38,740
+Hyvinkin kalvakka on mies, ollaan vähän
+semmoinen kevyt etukumara, mikä ei
+
+556
+00:37:38,740 --> 00:37:41,200
+mistään Teamsista välttämättä esiin.
+
+557
+00:37:41,320 --> 00:37:42,720
+Vähän niin kuin slauchaa hieman.
+
+558
+00:37:43,840 --> 00:37:47,780
+Eli muuten olisi pikkusen pidempikin
+vielä, mutta näin ne asiat on.
+
+559
+00:37:48,400 --> 00:37:52,340
+Yhdistelmä ehkäpä Michael Fassbenderin
+näyttelemään joku Walter tai David
+
+560
+00:37:52,340 --> 00:37:56,280
+Androidia Prometheus
+ja Covenant-elokuvista.
+
+561
+00:37:56,280 --> 00:38:00,500
+Ja sitten tuosta Watchmen-leffasta, Zack
+Snyderin pätkästä, niin se Rorschachia
+
+562
+00:38:00,500 --> 00:38:04,720
+näyttelijä Jackie Earl Haley,
+
+563
+00:38:04,920 --> 00:38:06,180
+niin semmoinen kapea kasvuinen.
+
+564
+00:38:06,280 --> 00:38:10,580
+Korostuneet etuhampaat, kevyt
+virne, ilmeisesti sun hymys tarttuu.
+
+565
+00:38:11,280 --> 00:38:14,070
+Ja Thom huomaa, että hänenkin kasvonsa
+sellaan vetäytyy semmoiseen kummalliseen
+
+566
+00:38:14,070 --> 00:38:16,860
+hymyilliseen moodiin, mikä
+on aika harvinaista puuhaa se.
+
+567
+00:38:17,560 --> 00:38:22,780
+Tumman harmaata kauluspaita, kaksitöntä
+nappia auki, jonkun verran hihoja
+
+568
+00:38:22,780 --> 00:38:26,430
+Ja sitten mulla on Urban Exploration,
+kaupunkitutkimusmatkailuun soveltuvat
+
+569
+00:38:26,430 --> 00:38:30,080
+housut jalassa ja semmoiset vaelluskengät.
+
+570
+00:38:31,200 --> 00:38:35,360
+Tuoksu Mintulle kevyesti tässä vaiheessa.
+
+571
+00:38:35,440 --> 00:38:36,200
+Mä oon just jounnut Minttun.
+
+572
+00:38:36,280 --> 00:38:37,700
+Aika reippaasti.
+
+573
+00:38:38,580 --> 00:38:42,330
+Ja tota noin, niin ennen kuin mä
+tajunkaan mitä mä teen, niin mä oon
+
+574
+00:38:42,330 --> 00:38:46,080
+ojentanut kättä ja astunut puoliaskelta
+eteenpäin sinne rapukäytävän puolelle
+
+575
+00:38:46,080 --> 00:38:48,640
+ottamassa vastaan joko sun kättästä
+tai sitten sun matkalaukkuas.
+
+576
+00:38:48,640 --> 00:38:52,180
+Se tulee niin kuin, mä en tiedä, se
+vaan tulee jotenkin sinusta johtuvasti.
+
+577
+00:38:53,880 --> 00:38:59,680
+Tidi, tidi, silloin niin kuin suoraan
+niin kuin ottaa käden vastaan ja sit
+
+578
+00:38:59,680 --> 00:39:05,480
+niin kuin astui vielä sellaisen
+pari senttiä sisemmässä,
+
+579
+00:39:06,280 --> 00:39:10,560
+tarttuu toisella kädellä tietysti
+olkapäästä ja antaa nämä niin kuin
+
+580
+00:39:10,560 --> 00:39:14,840
+ranskalaiset ilmasuukot ja sitten niin
+kuin samalla siinä niin kuin oikein niin
+
+581
+00:39:14,840 --> 00:39:19,120
+ilahtuneen kuuloisena äänestä,
+niin kuin kuulee, että omme.
+
+582
+00:39:19,300 --> 00:39:23,467
+Ja varmaan olet sen verran lähiasteikolla
+ja tuossa Steninkin pitkällä
+
+583
+00:39:23,467 --> 00:39:27,633
+taksimatkalla, että siis se on sellainen
+ihana, sellainen kevyt parfymi, josta
+
+584
+00:39:27,633 --> 00:39:31,800
+sellainen olo niin kuin olisi juhlu.
+
+585
+00:39:31,800 --> 00:39:35,920
+Siis se on se niin kuin
+se jotenkin se no jotenkin.
+
+586
+00:39:36,280 --> 00:39:39,920
+Ehkä mieläyhtymä, mutta siis
+semmoinen olo, kun olisi juhlissa.
+
+587
+00:39:42,160 --> 00:39:45,080
+Joo, otan otan tosissaan mieleeni vastaan
+siinä, että normaasti, että on siis
+
+588
+00:39:45,080 --> 00:39:48,000
+kavahtaa kosketusta sille pääse mihinkään.
+
+589
+00:39:48,180 --> 00:39:51,160
+Että tässä niin kuin on tämmöinen niin
+kuin aurinko, minkä kohdatessaan voi vain
+
+590
+00:39:51,160 --> 00:39:54,140
+olla ihan vähintään kuu itse, keikö
+heijastaisi vähän takaisinpäin.
+
+591
+00:39:54,580 --> 00:39:57,900
+Otan sun kantamukset siinä ja selkänä
+rahtaa saman tien muutaman kerran.
+
+592
+00:39:58,060 --> 00:40:01,100
+Irvistä hieman, mutta en anna liikaa sen
+näkyä ja otan sen vastaan ja siirryn pois
+
+593
+00:40:01,100 --> 00:40:04,140
+myös tietää, että pääset
+sisään ensimmäisenä.
+
+594
+00:40:06,280 --> 00:40:09,560
+Vapauden tilataan meille
+tarjoiluja sisäpuolelle.
+
+595
+00:40:10,460 --> 00:40:11,060
+Totean siinä.
+
+596
+00:40:11,080 --> 00:40:12,360
+Ahaa, ihanaa.
+
+597
+00:40:12,880 --> 00:40:15,720
+Ja sitten Didi menee tähän.
+
+598
+00:40:16,760 --> 00:40:20,190
+Anteeksi, minä kuvittelen varmaan, että
+sinusta ei ole ehkä niin mukavaa, että
+
+599
+00:40:20,190 --> 00:40:23,620
+ensitapaamisella ollaan näin
+tuttavallisia, mutta se tuli vain niin
+
+600
+00:40:23,740 --> 00:40:24,540
+Ei ihan sinua haittaa.
+
+601
+00:40:25,200 --> 00:40:29,680
+Ollaanhan me nyt Teamsissa moneen
+otteeseen nähtyä, että ei se haittaa.
+
+602
+00:40:29,680 --> 00:40:34,840
+Niin, mutta minä vain heittää minun
+ranskalaisen moodiin ja koskettelen
+
+603
+00:40:34,900 --> 00:40:36,240
+Minä tiedän, että se ei ole kaikkea.
+
+604
+00:40:36,280 --> 00:40:37,380
+Ei kyllä välttämättä ole niin mukavaa.
+
+605
+00:40:37,540 --> 00:40:39,520
+Ajaa, ei se nyt haittaa.
+
+606
+00:40:39,640 --> 00:40:40,960
+Pyyhin vähän eli kosketta lualueen.
+
+607
+00:40:40,980 --> 00:40:43,640
+Ei se nyt oikeastaan
+haittaa sitten kuitenkaan.
+
+608
+00:40:44,060 --> 00:40:45,280
+Tuota, yksinkö tulit?
+
+609
+00:40:46,940 --> 00:40:47,820
+Ei, Sten oli...
+
+610
+00:40:47,820 --> 00:40:49,480
+Ei, kyllä meitä kaksi on täällä.
+
+611
+00:40:49,980 --> 00:40:51,820
+Kato sinne päin vähän
+niin kuin niinpä tietenkin.
+
+612
+00:40:52,740 --> 00:40:55,040
+Puikkaa sieltä ovelta.
+
+613
+00:40:55,780 --> 00:40:59,120
+Ovelta ja manoveeraan
+matkalaukkua eteiseen.
+
+614
+00:41:00,080 --> 00:41:00,680
+Joo.
+
+615
+00:41:01,900 --> 00:41:02,440
+Hyvän näkö.
+
+616
+00:41:03,460 --> 00:41:05,520
+Joo, totean. Pistän molemmat ovet kiinni.
+
+617
+00:41:05,860 --> 00:41:06,220
+Joo.
+
+618
+00:41:06,280 --> 00:41:08,520
+Olihan tässä valittavaa.
+
+619
+00:41:08,600 --> 00:41:12,860
+Ja minä osaan ohjata teille takaa nopeasti
+tuonne, mikä onkaan isoin pöytätila
+
+620
+00:41:13,020 --> 00:41:14,700
+Olisiko se pöytäpinta-ala, olisiko se...
+
+621
+00:41:14,700 --> 00:41:15,960
+Siinä varmaan on olukkarissa.
+
+622
+00:41:16,320 --> 00:41:16,900
+Olisiko pinta-ala.
+
+623
+00:41:16,900 --> 00:41:18,580
+Mitä laita olohuone
+on aika hyvä tällaisen.
+
+624
+00:41:20,180 --> 00:41:25,660
+Siellä odottaakin jo kaksi settiä
+puhelimia, missä on aika järjestelmässä.
+
+625
+00:41:25,780 --> 00:41:27,380
+On tietyn mitan päästä toisistaan.
+
+626
+00:41:27,460 --> 00:41:29,320
+Siinä on varaakut vieressä niin ikään.
+
+627
+00:41:29,480 --> 00:41:32,440
+Ja paperille printattuja suunnitelmia,
+mitkä on taitu tietyllä tavalla, että ne
+
+628
+00:41:32,440 --> 00:41:35,400
+mahtuu hyvin pienehköönkin taskuun.
+
+629
+00:41:35,400 --> 00:41:36,220
+Tai käsilaukkuun.
+
+630
+00:41:36,280 --> 00:41:37,140
+On tämäkin huomioitu.
+
+631
+00:41:37,720 --> 00:41:40,580
+Ja muut tämmöistä ihan essentiaalia
+tavaraa, mitä homma miettii.
+
+632
+00:41:40,660 --> 00:41:42,540
+Näitä ilman ei pärjää muun muassa missään.
+
+633
+00:41:43,540 --> 00:41:45,960
+Vähän ylitsee ampumaan,
+mutta siitä huolimatta.
+
+634
+00:41:45,960 --> 00:41:49,120
+Ja ne on täsmällisesti
+aseteltu sinne pöydän ääreen.
+
+635
+00:41:49,220 --> 00:41:52,300
+Ja samaan aikaan minulla on siellä
+muutama lisänäyttö, joita olen ottanut
+
+636
+00:41:52,400 --> 00:41:54,720
+Siellä on useampia uutiskanavia päällä.
+
+637
+00:41:54,780 --> 00:41:56,160
+Ja nyt otan tästä radioa
+vähän hiljaisemmalle.
+
+638
+00:41:56,540 --> 00:41:58,120
+Ja itse asiassa enpä muuten laita.
+
+639
+00:41:58,220 --> 00:41:59,820
+Siirrän radion tässä vaiheessa eteiseen.
+
+640
+00:41:59,940 --> 00:42:02,360
+Laitan se vähän lujemmalle,
+että väli on viimein.
+
+641
+00:42:02,440 --> 00:42:03,360
+Nämä ei se homma hoitu.
+
+642
+00:42:03,360 --> 00:42:06,940
+Miten kauan me ollaan oltu
+
+643
+00:42:06,940 --> 00:42:10,520
+yhteyksissä ennen kuin me nyt tavataan?
+
+644
+00:42:12,180 --> 00:42:15,360
+Onko tämä perustettu
+ihan jossain silleen...
+
+645
+00:42:15,960 --> 00:42:19,360
+Mä olen kohdannut, että me ollaan
+tässä vähintäänkin vuoden verran.
+
+646
+00:42:19,980 --> 00:42:24,140
+Vuoden verran, ellei pidempäänkin
+näitä asioita sumplittumaan.
+
+647
+00:42:24,140 --> 00:42:28,020
+Mä siis ihan vaan sitä,
+
+648
+00:42:28,020 --> 00:42:31,900
+että kuinka eksentrinen kautta paranoidi,
+
+649
+00:42:32,720 --> 00:42:33,140
+viva, thom.
+
+650
+00:42:33,360 --> 00:42:36,020
+Mistä on tullut tähän mennessä.
+
+651
+00:42:36,700 --> 00:42:36,960
+Okei.
+
+652
+00:42:37,100 --> 00:42:40,140
+Paranoidi on vahva sana, mutta se voi
+myöskin olla ammatillisesti valmistunut.
+
+653
+00:42:41,500 --> 00:42:44,280
+Tämä on valmiutunut tavalla siihen,
+että osaa ottaa vastaan myöskin
+
+654
+00:42:44,280 --> 00:42:47,120
+tällaiset mahdolliset espionaasiasiat
+tai muut vastaavat ongelmat.
+
+655
+00:42:47,240 --> 00:42:49,880
+Tämä oli tavallaan koulutettu, mutta
+joo, onhan siinä tietty sellainen,
+
+656
+00:42:49,880 --> 00:42:53,580
+että puolen millin
+foliohattu, mutta ei kahden.
+
+657
+00:42:54,440 --> 00:42:59,020
+Onko ollut vähän sillä, että ei
+pidetä videopalaveria tuolla softalla?
+
+658
+00:42:59,380 --> 00:43:03,020
+Ja varmaan parempi tehdä erikseen.
+
+659
+00:43:03,360 --> 00:43:05,180
+Vasti tätä palvelua varten tyyppistä.
+
+660
+00:43:06,440 --> 00:43:06,820
+Sieltä tuli.
+
+661
+00:43:07,440 --> 00:43:10,900
+Mä mietin kanssa, että Didi olisi
+ehkä tullut siinä yhteydessä,
+
+662
+00:43:11,000 --> 00:43:15,580
+kun New Horizonsin tavallaan
+tämä rahoitus on varmistunut.
+
+663
+00:43:15,860 --> 00:43:19,640
+Vähän riippuen, että miten
+oletko te ottanut New Horizonsa
+
+664
+00:43:19,640 --> 00:43:24,180
+heti ensimmäisellä seed
+roundilla vai vasta myöhemmillä.
+
+665
+00:43:24,540 --> 00:43:26,800
+Mutta sitten tavallaan New
+Horizons on ollut sellainen
+
+666
+00:43:26,800 --> 00:43:33,300
+jälkisimmäistä osaamista sellaisilla
+alueilla, missä teillä voi olla puutetta.
+
+667
+00:43:33,360 --> 00:43:35,420
+Kertokaa vaan, että mitä tarvitsette.
+
+668
+00:43:36,360 --> 00:43:40,160
+Meiltä löytyy varmasti tiimistä joku,
+joka voisi toimia sekä yhteyshenkilönä,
+
+669
+00:43:40,280 --> 00:43:43,280
+että sitten paikata tiimin
+mahdollisia puutteita.
+
+670
+00:43:44,300 --> 00:43:47,480
+Rahahan on ehdottomasti kelvannut.
+
+671
+00:43:47,580 --> 00:43:48,620
+Ja New Horizons.
+
+672
+00:43:49,740 --> 00:43:56,260
+Petri, mikä on New
+Horizonsin globaali maine?
+
+673
+00:43:56,260 --> 00:43:57,260
+Onko se...
+
+674
+00:43:57,800 --> 00:44:03,260
+Se on bioteknologia.
+
+675
+00:44:03,360 --> 00:44:04,320
+Tekniikkapirma.
+
+676
+00:44:04,760 --> 00:44:05,760
+Lähtökohtaisesti.
+
+677
+00:44:06,200 --> 00:44:10,610
+Eli se on jossain sun alalla ihan
+
+678
+00:44:10,610 --> 00:44:15,020
+samaa roskaa kuin ne kaikki muutkin isot,
+
+679
+00:44:15,780 --> 00:44:19,800
+joka on ehkä muutama
+
+680
+00:44:19,800 --> 00:44:23,820
+askel alaspäin Googlesta
+epäilyttävyysasteessa.
+
+681
+00:44:23,820 --> 00:44:29,500
+Onhan se ihan hirveän epäilyttävä, mutta
+toisaalta voisi olla paljon huonomminkin.
+
+682
+00:44:30,500 --> 00:44:31,900
+No niin, jos näin on.
+
+683
+00:44:32,240 --> 00:44:32,820
+Sillä tapaa raha on kyllä...
+
+684
+00:44:33,360 --> 00:44:39,790
+Ja tosiaan varmaan myös tämä
+yhteyshenkilö on sitten siihen ollut ihan
+
+685
+00:44:39,790 --> 00:44:46,220
+neuvotella mukaan.
+
+686
+00:44:46,220 --> 00:44:51,220
+Ja totta kai myös siellä on
+ollut suoraan suositella hyvää.
+
+687
+00:44:54,160 --> 00:44:57,690
+Ja tosiaan sitten, jos niiden
+
+688
+00:44:57,690 --> 00:45:01,220
+on ollut myöskin hyvin
+näkyvä tiedeviestiä,
+
+689
+00:45:02,040 --> 00:45:03,220
+niin varmaan kuitenkin kun...
+
+690
+00:45:03,360 --> 00:45:07,400
+Tässä niin kuin jos sinä olet
+ollut Norjassa ja Ruotsissa,
+
+691
+00:45:07,520 --> 00:45:11,800
+niin ei välttämättä mitenkään
+ihan vieras naama myöskään.
+
+692
+00:45:12,040 --> 00:45:15,200
+Niin jos tämmöinen kontakti
+on helposti syntynyt,
+
+693
+00:45:15,340 --> 00:45:17,960
+niin se on varmaan otettu
+kyllä ihan ilolla vastaan.
+
+694
+00:45:19,560 --> 00:45:22,380
+Minulla oli myös miettämässä,
+kun puhuttiin vähän siitä,
+
+695
+00:45:22,520 --> 00:45:26,960
+että kaikki tässä tiimissä
+pystyy tekemään tekemätä,
+
+696
+00:45:27,820 --> 00:45:30,960
+niin minä mietin just siis sitä,
+että niillä olisi oma tiedettausta,
+
+697
+00:45:31,600 --> 00:45:32,960
+vaikka se on ehkä enemmän keskittynyt.
+
+698
+00:45:33,360 --> 00:45:38,560
+Viime aikoina tähän tieteen
+kommenttiin ja viestintään ja tähän.
+
+699
+00:45:38,900 --> 00:45:43,720
+Mutta minä mietin, että sillä olisi
+ainakin opiskeluajalta joku tutkinto.
+
+700
+00:45:43,720 --> 00:45:47,060
+Niin minä mietin, että
+olisiko meillä niin kuin...
+
+701
+00:45:47,060 --> 00:45:50,720
+Vai jätetäänkö se vaan auki ja
+sitten speksutaan myöhemmin joku...
+
+702
+00:45:50,720 --> 00:45:54,380
+Meillä pitäisi olla tiimissä myös,
+niin sitten Didi täyttää sen.
+
+703
+00:45:54,820 --> 00:45:57,520
+Vai haluaako joku nyt
+ja sillä lailla visioida,
+
+704
+00:45:57,620 --> 00:46:01,600
+että onko meillä pakko olla
+fyysikko tai joku tiimissä.
+
+705
+00:46:02,000 --> 00:46:02,720
+Koska Stenhän...
+
+706
+00:46:03,360 --> 00:46:05,080
+Tämä oli siis nyt se biologi ainakin.
+
+707
+00:46:06,740 --> 00:46:10,410
+Tässä on siellä biologi ja
+
+708
+00:46:10,410 --> 00:46:14,080
+biolääketiede on varmaan
+se ehkä lähimpänä...
+
+709
+00:46:14,080 --> 00:46:17,040
+Mutta joo, sitten minusta toi
+itse asiassa ihan hauska idea,
+
+710
+00:46:17,180 --> 00:46:21,340
+että se voidaan speksata tarpeen mukaan,
+
+711
+00:46:21,380 --> 00:46:25,980
+jos sinulla ei pitäisi olla kauhean
+vahvaa visiota siitä toistaiseksi.
+
+712
+00:46:27,060 --> 00:46:27,480
+Ei vielä.
+
+713
+00:46:28,280 --> 00:46:31,640
+Didi on avoin kirja, johon voidaan
+kirjoittaa sitten tarvittaessa.
+
+714
+00:46:32,040 --> 00:46:32,640
+Mahtavaa.
+
+715
+00:46:33,360 --> 00:46:35,600
+Tuota...
+
+716
+00:46:35,600 --> 00:46:37,100
+Joo.
+
+717
+00:46:39,200 --> 00:46:43,000
+Katosi kaikki hetkeksi näkymistä.
+
+718
+00:46:44,040 --> 00:46:48,500
+Te asettaudutte aloillenne
+
+719
+00:46:48,500 --> 00:46:52,960
+ja ihmiset käy suihkussa.
+
+720
+00:46:54,000 --> 00:46:58,520
+Syötte jotain. Mitä sinä
+olet tilannut tarjoilua?
+
+721
+00:47:00,620 --> 00:47:03,100
+Joo, siis olen ulkoistamassa
+jotenkin semmoisen taholla,
+
+722
+00:47:03,180 --> 00:47:03,240
+joka ymmärtää...
+
+723
+00:47:03,360 --> 00:47:04,940
+Ymmärtää näistä
+tarjoiluista jotain oikeasti.
+
+724
+00:47:05,040 --> 00:47:07,580
+Onko se cateringfirma tai muu,
+jossa tavallaan se luottoraja,
+
+725
+00:47:07,680 --> 00:47:09,140
+mikä meillä nyt ikinä
+onkaan tähän budjettiin,
+
+726
+00:47:09,200 --> 00:47:11,840
+on mennyt sillä lailla niin
+80-pinnaisesti kumminkin sen mukaan,
+
+727
+00:47:11,900 --> 00:47:13,000
+että kohtalaisen korkealle.
+
+728
+00:47:13,360 --> 00:47:17,100
+Ja otettu huomioon nuo
+mahdolliset erityisruokavaliot,
+
+729
+00:47:17,180 --> 00:47:18,480
+jotka totta kai vaikka nyt Pariisi onkin,
+
+730
+00:47:18,560 --> 00:47:21,180
+niin sitä huolimatta, niin eiköhän
+täältäkin löydy ongelmitta...
+
+731
+00:47:21,180 --> 00:47:22,840
+No, ongelmitta ongelmitta, mutta löytyy.
+
+732
+00:47:23,240 --> 00:47:29,460
+Ja lisäksi olen tilannut sinne
+jotain odottamattomampaa,
+
+733
+00:47:29,460 --> 00:47:32,460
+mikä nyt itse asiassa liittyy...
+
+734
+00:47:33,360 --> 00:47:35,960
+Viihteeseen, ja nyt totta kai
+tässä vähän tiimitavarien apua,
+
+735
+00:47:36,040 --> 00:47:37,180
+mitä minä olen tajunnut tilata,
+
+736
+00:47:37,520 --> 00:47:39,180
+niin kuin semmoinen, mikä
+saattaa jopa kolahtaa kohdille,
+
+737
+00:47:39,220 --> 00:47:40,140
+jos puhutaan viihteestä,
+
+738
+00:47:40,200 --> 00:47:42,360
+mikä saattaa mahdollistaa
+vaikka small talkamisen
+
+739
+00:47:42,360 --> 00:47:43,880
+tai jäiden rikkomisen tai muun vastaavan.
+
+740
+00:47:43,980 --> 00:47:45,020
+Kimble-peli se ei ole.
+
+741
+00:47:49,320 --> 00:47:50,720
+Siis minulle tulee klassikko...
+
+742
+00:47:50,720 --> 00:47:54,780
+Klassikkona minulle tulee
+mieleen Karaoke Sing Start.
+
+743
+00:47:56,060 --> 00:47:57,580
+Kyllä nyt nimittäin on niin,
+
+744
+00:47:57,580 --> 00:48:03,340
+että Thom Lindell on tilannut
+paikapäälle Karaoke-laitteen,
+
+745
+00:48:03,360 --> 00:48:08,640
+ja senkin takia näyttäjä on
+sellaisen vähän useampi kappale,
+
+746
+00:48:08,760 --> 00:48:13,000
+ja Thom asentelee sen paikolle
+siinä ja kokeilee mic-checkin,
+
+747
+00:48:13,120 --> 00:48:15,440
+ja tämä on se, että suurin piirtein
+meillä on vielä muutama tunti aikaa
+
+748
+00:48:15,440 --> 00:48:18,400
+ennen mahdollista
+hiljaisuutta ja näin päin pois.
+
+749
+00:48:18,940 --> 00:48:23,360
+Kokeilen mikrofonin siinä, ja
+koska asetan itseni alttiksi,
+
+750
+00:48:24,280 --> 00:48:28,220
+niin päräytän ensimmäisen
+musiikkinumeron siinä,
+
+751
+00:48:28,380 --> 00:48:30,500
+ja olen hihattomassa
+valkoisessa paidassa siinä,
+
+752
+00:48:30,500 --> 00:48:32,500
+ja vähän kalvakkaan pitkään,
+ja vähän hontelomiesi,
+
+753
+00:48:32,500 --> 00:48:35,000
+ja vähän kumarassa siinä, ja
+minulla on yllättävän hyvä laulua,
+
+754
+00:48:35,080 --> 00:48:36,320
+ja minulla on yllättävän hyvä laulua,
+
+755
+00:48:36,380 --> 00:48:38,500
+niin sitten ei pääse mihinkään,
+varsinkin kun minä laulan...
+
+756
+00:48:40,240 --> 00:48:41,640
+Minähän laulaankin.
+
+757
+00:48:42,620 --> 00:48:44,280
+Musiikkilaji järjettää
+vastaan hyvin mielellään.
+
+758
+00:48:44,380 --> 00:48:47,360
+Haluaisin kuulla, millainen
+on Thomin lempimusiikkilaji.
+
+759
+00:48:48,700 --> 00:48:49,800
+Ai että.
+
+760
+00:48:50,840 --> 00:48:52,640
+Tämä on valta ja vastuu.
+
+761
+00:48:54,280 --> 00:48:55,180
+Hikolleen jo nyt.
+
+762
+00:48:57,960 --> 00:49:01,500
+Se voisi olla siis mielestäni
+joku sellainen vähän yllättävä.
+
+763
+00:49:01,500 --> 00:49:02,180
+Vähän yllättävää.
+
+764
+00:49:02,500 --> 00:49:05,580
+Sanoisin, että joku sellainen moderni,
+
+765
+00:49:05,580 --> 00:49:08,960
+kohtuullisen mainstream-hitti,
+
+766
+00:49:09,240 --> 00:49:13,620
+tyyli jotain Taylor Swiftiä
+tai jotain muuta vastaavaa.
+
+767
+00:49:14,020 --> 00:49:16,140
+Kyllä, joo, ilman muuta.
+
+768
+00:49:16,340 --> 00:49:20,160
+Taylor Swiftin äänilaji
+muodittuna sen mukaan,
+
+769
+00:49:20,180 --> 00:49:24,260
+että se sopii myöskin Lindellin
+omaan voiceboxia näin,
+
+770
+00:49:24,260 --> 00:49:28,880
+ja Karma lienee myös
+kappaleena voisinpä kuvitella.
+
+771
+00:49:29,680 --> 00:49:30,800
+Joo, kyllä lähtee.
+
+772
+00:49:30,920 --> 00:49:32,260
+Ja se menee...
+
+773
+00:49:32,500 --> 00:49:33,740
+Kohtalas, jookoo.
+
+774
+00:49:33,880 --> 00:49:36,220
+Baarissa voisi ehkä tulla muutama
+tuopillinen, mutta onneksi ei olla.
+
+775
+00:49:36,440 --> 00:49:37,580
+Ollaan kotioloissa.
+
+776
+00:49:37,940 --> 00:49:40,080
+Ja sen jälkeen mä laitan
+mikin kiertämään seuraavalla,
+
+777
+00:49:40,460 --> 00:49:42,300
+joka on luonnollisesti Didi.
+
+778
+00:49:42,500 --> 00:49:43,340
+Totta kai se on Didi.
+
+779
+00:49:44,920 --> 00:49:45,500
+Totta kai.
+
+780
+00:49:45,780 --> 00:49:50,060
+Mä just tässä mietin, että
+mikä on Didin bravuurikappale.
+
+781
+00:49:50,160 --> 00:49:52,620
+Siis Didi on hyvä karaoke.
+
+782
+00:49:52,840 --> 00:49:55,800
+Se on vasittavia ihmisiä.
+
+783
+00:49:56,020 --> 00:49:57,660
+Se on sellainen, että en minä nyt tiedä.
+
+784
+00:49:57,840 --> 00:50:00,080
+Ja sit laulaa aivan täysästi.
+
+785
+00:50:01,680 --> 00:50:02,260
+Ää...
+
+786
+00:50:02,500 --> 00:50:07,500
+Mä miettin, että voisi olla
+ehkä ihan joku klassikko,
+
+787
+00:50:07,600 --> 00:50:10,500
+niinkuin I wanna dance with somebody.
+
+788
+00:50:10,600 --> 00:50:14,500
+Klassikot on klassikoita syystä.
+
+789
+00:50:14,600 --> 00:50:19,500
+Joo, tota...
+
+790
+00:50:19,600 --> 00:50:23,500
+Sten laulaa ei kauheen hyvin,
+
+791
+00:50:23,600 --> 00:50:28,500
+mutta tunteella Frank Sinatra My Way.
+
+792
+00:50:28,600 --> 00:50:30,440
+Ooo.
+
+793
+00:50:30,540 --> 00:50:32,440
+Mut tota...
+
+794
+00:50:32,600 --> 00:50:34,500
+Eee...
+
+795
+00:50:34,600 --> 00:50:37,000
+Kaikesta niinkuin muuten
+erinomaisuudestaan huolimatta,
+
+796
+00:50:37,100 --> 00:50:43,200
+niin laulu, se menee niinkuin
+riittävästi sinne päin.
+
+797
+00:50:43,300 --> 00:50:45,900
+Mutta ei täällä niinkuin tuoppeja...
+
+798
+00:50:46,000 --> 00:50:49,100
+Tuoppeja anna.
+
+799
+00:50:49,200 --> 00:50:52,700
+Ehkä mummoja hymyilemään,
+mutta niinkuin...
+
+800
+00:50:52,800 --> 00:50:53,500
+That's about it.
+
+801
+00:50:53,600 --> 00:50:57,100
+Jos niillä ei kauhean hyvää kuuloa.
+
+802
+00:50:57,200 --> 00:51:02,400
+Ja sitten sen jälkeen Didi kerää kaikki
+ehdottomasti johonkin yhteislauluun.
+
+803
+00:51:02,600 --> 00:51:05,050
+Ehkä We will rock you, tai joku tämmönen
+niinkuin just semmonen, missä saa hyvää,
+
+804
+00:51:05,050 --> 00:51:07,500
+tiedätkö.
+
+805
+00:51:07,600 --> 00:51:08,500
+Ilman muuta.
+
+806
+00:51:08,600 --> 00:51:10,500
+Onks meillä tässä mahdollista...
+
+807
+00:51:10,600 --> 00:51:14,500
+Musta tää kuulostaa ikään kuin siltä,
+että mahdollisesti on tilattu myös,
+
+808
+00:51:14,600 --> 00:51:19,500
+siis esimerkiksi niinkuin pullo tai
+kaks viiniä näitten tarjoilujen kanssa.
+
+809
+00:51:19,600 --> 00:51:20,500
+Joo.
+
+810
+00:51:20,600 --> 00:51:21,500
+Hyvin mahdollista.
+
+811
+00:51:21,600 --> 00:51:22,500
+Siis me ollaan Ranskassa tietenkin.
+
+812
+00:51:22,600 --> 00:51:24,500
+Niin, juuri näin, juuri näin.
+
+813
+00:51:24,600 --> 00:51:26,500
+Siis ei voi tilata mitään kotiin ilman,
+että siinä on mahdollisuus saada mukaan
+
+814
+00:51:26,500 --> 00:51:28,400
+pulloviiniä.
+
+815
+00:51:28,500 --> 00:51:30,400
+Joo.
+
+816
+00:51:30,500 --> 00:51:32,400
+Siinä tota...
+
+817
+00:51:32,400 --> 00:51:38,350
+Jos koneistelette We will rock you, niin
+kuulostaa hyvin niinkuin vaativa ovikellon
+
+818
+00:51:38,350 --> 00:51:44,300
+soitto.
+
+819
+00:51:44,400 --> 00:51:48,300
+Puhutko meistä kukaan Ranskaa?
+
+820
+00:51:48,400 --> 00:51:49,300
+Jaha.
+
+821
+00:51:49,400 --> 00:51:51,300
+No Didi varmaan.
+
+822
+00:51:51,400 --> 00:51:53,850
+Mutta siis Didi kääntyy Thomin puoleen,
+tai itseasiassa Thomin ja Stenin puoleen,
+
+823
+00:51:53,850 --> 00:51:56,300
+että sellainen
+
+824
+00:51:56,400 --> 00:51:59,300
+aah, olette kutsuneet kavereita.
+
+825
+00:51:59,400 --> 00:52:00,300
+Ei.
+
+826
+00:52:00,400 --> 00:52:01,300
+Ei.
+
+827
+00:52:01,400 --> 00:52:02,300
+Ei.
+
+828
+00:52:02,400 --> 00:52:03,300
+Enpä taida olla.
+
+829
+00:52:03,400 --> 00:52:05,300
+Me laitetaan saman tien ääntä
+vähän matalammalle siinä.
+
+830
+00:52:05,400 --> 00:52:08,300
+Laitetaan sen tota mikrofonin kiinni
+ennenkuin me laitetaan sen pöytään vasten.
+
+831
+00:52:08,400 --> 00:52:13,300
+Äähm, minäpä tota, minäpä voisin
+katsoa mistä, mistä on kyse.
+
+832
+00:52:13,400 --> 00:52:19,080
+Mä otan mun kauluspaitani
+
+833
+00:52:19,080 --> 00:52:24,760
+ja puhun sen yllä it
+
+834
+00:52:24,900 --> 00:52:29,300
+on two'уєe.
+
+835
+00:52:29,300 --> 00:52:31,580
+tuun
+
+836
+00:52:31,580 --> 00:52:34,180
+hakkausovea vasten.
+
+837
+00:52:37,080 --> 00:52:38,060
+Nosta vähän kulmaa.
+
+838
+00:52:39,600 --> 00:52:40,660
+Onko se turvaketju?
+
+839
+00:52:40,660 --> 00:52:42,100
+Tässä vaiheessa
+
+840
+00:52:42,100 --> 00:52:43,940
+kuuluvasti päälle ja avaan ovet.
+
+841
+00:52:45,100 --> 00:52:46,240
+Siellä on
+
+842
+00:52:46,240 --> 00:52:48,760
+vanhempi ranskalainen herrasmies,
+
+843
+00:52:49,080 --> 00:52:49,200
+joka
+
+844
+00:52:49,200 --> 00:52:52,400
+et ymmärrä, mitä hän sanoo, mutta
+
+845
+00:52:52,400 --> 00:52:54,660
+ymmärrät, mitä hän tarkoittaa.
+
+846
+00:52:56,360 --> 00:52:58,660
+Olette liian kovaäänisiä.
+
+847
+00:52:59,300 --> 00:53:02,620
+Anna hänen vuodetta ja kokonaan
+
+848
+00:53:02,620 --> 00:53:05,060
+sen koko patterin
+tyhjäksi, jos mahdollista.
+
+849
+00:53:05,520 --> 00:53:06,400
+Ei välttämättä ole, mutta kun
+
+850
+00:53:06,400 --> 00:53:08,680
+katson vähän aikaa, katson
+silmiin ja nyökyttelen siinä.
+
+851
+00:53:11,680 --> 00:53:12,320
+Totean
+
+852
+00:53:12,320 --> 00:53:13,680
+hetki vain.
+
+853
+00:53:13,920 --> 00:53:15,260
+Ei ole ainakaan toki yksi hetki.
+
+854
+00:53:15,340 --> 00:53:17,100
+Pistän oven kiinni tai työnnän sen kiinni.
+
+855
+00:53:17,200 --> 00:53:18,680
+Olettaen, mikä onkaan tilanne.
+
+856
+00:53:19,780 --> 00:53:20,800
+Ja käyn ympäri siinä.
+
+857
+00:53:21,060 --> 00:53:21,400
+Nyt
+
+858
+00:53:21,400 --> 00:53:24,040
+tarvittaisiin ranskantaitoinen.
+
+859
+00:53:24,320 --> 00:53:26,320
+Katson vähän Didin suuntaan,
+mutta en kysy suoraan.
+
+860
+00:53:27,980 --> 00:53:28,900
+Didi on
+
+861
+00:53:28,900 --> 00:53:31,520
+tullut sen verran lähelle, että on kuullut
+
+862
+00:53:31,520 --> 00:53:33,420
+jo, mistä on kyse, mutta on antanut
+
+863
+00:53:33,420 --> 00:53:35,280
+Thomin hoitaa se kunnes hänet on
+
+864
+00:53:35,280 --> 00:53:37,080
+pyydetty paikalle ja tulee
+
+865
+00:53:37,080 --> 00:53:39,120
+tietysti.
+
+866
+00:53:40,060 --> 00:53:40,580
+Miten voidaan?
+
+867
+00:53:40,680 --> 00:53:43,000
+Avaan ovea, mutta pidän
+kahvasta kiinni niin, että
+
+868
+00:53:43,000 --> 00:53:44,720
+mitään odottamatonta ei
+
+869
+00:53:44,720 --> 00:53:46,160
+vanhempi herrasmies saa aikaan.
+
+870
+00:53:46,460 --> 00:53:48,820
+Didi työntyy sun ohi sinne käytävään.
+
+871
+00:53:51,200 --> 00:53:51,380
+Joo.
+
+872
+00:53:52,180 --> 00:53:54,280
+Sitten menee
+
+873
+00:53:54,280 --> 00:53:57,160
+charm offensive on the defenseless
+
+874
+00:53:57,160 --> 00:53:58,480
+old french man.
+
+875
+00:53:58,900 --> 00:54:00,920
+Joo. Miehellä ei ole
+
+876
+00:54:00,920 --> 00:54:03,240
+mitään mahdollisuuksia.
+
+877
+00:54:03,420 --> 00:54:04,520
+Siis silleen se
+
+878
+00:54:04,520 --> 00:54:06,720
+saa kaksi vihaista
+
+879
+00:54:06,720 --> 00:54:08,280
+sanaa sanottua
+
+880
+00:54:08,280 --> 00:54:10,700
+ennen kuin Didi alkaa
+
+881
+00:54:10,700 --> 00:54:12,560
+purkamaan sitä pommia, mikä
+
+882
+00:54:12,560 --> 00:54:13,880
+se on.
+
+883
+00:54:14,520 --> 00:54:16,240
+Ja tota
+
+884
+00:54:16,240 --> 00:54:18,860
+annaksä sinne
+
+885
+00:54:18,860 --> 00:54:20,560
+pullon punaviiniä
+
+886
+00:54:20,560 --> 00:54:22,480
+matkaa vai pärjäksä ilman?
+
+887
+00:54:23,780 --> 00:54:25,180
+Ah, se pärjää ilman.
+
+888
+00:54:25,620 --> 00:54:26,720
+Joo, se on ihan tyypillinen.
+
+889
+00:54:26,720 --> 00:54:28,720
+Sitten mä muistutan sitä sen omistaan.
+
+890
+00:54:28,900 --> 00:54:30,200
+Ja nuoruudenpäivistä.
+
+891
+00:54:30,860 --> 00:54:31,900
+Ja varmaan, niin kun
+
+892
+00:54:31,900 --> 00:54:34,360
+jäätään jotain laulumuistoja
+
+893
+00:54:34,360 --> 00:54:36,700
+yhtäkkiä. Ranskalaiset chansonit
+
+894
+00:54:36,700 --> 00:54:38,860
+on ehdottomasti parhaita.
+
+895
+00:54:38,960 --> 00:54:40,660
+Mua sitten ranskaksi, mutta
+
+896
+00:54:40,660 --> 00:54:42,900
+eihän nää kato osaa nää ulkomaalaiset
+
+897
+00:54:42,900 --> 00:54:43,940
+näitä chansoneja, mutta
+
+898
+00:54:43,940 --> 00:54:46,760
+minun pitää varmaan seuraavaksi
+
+899
+00:54:46,760 --> 00:54:47,640
+laulaa kyllä chanson.
+
+900
+00:54:48,620 --> 00:54:50,700
+Ai, se sanoo jonkun
+
+901
+00:54:50,700 --> 00:54:52,580
+hänen lempichansoninsa ja
+
+902
+00:54:52,580 --> 00:54:54,460
+on silleen, että voitko laulaa sen.
+
+903
+00:54:54,620 --> 00:54:56,680
+Se kuuluu tuohon alakertaan niin kovin
+
+904
+00:54:56,680 --> 00:54:57,620
+voimakkaasti.
+
+905
+00:54:58,900 --> 00:55:01,780
+Ja Didi tietääkin
+
+906
+00:55:01,780 --> 00:55:02,540
+lupaa laulaa sen.
+
+907
+00:55:03,180 --> 00:55:05,420
+Joo, siis sulla ei ole
+
+908
+00:55:05,420 --> 00:55:07,340
+toi on niin kun herttainen
+
+909
+00:55:07,340 --> 00:55:09,200
+vanhus syvin
+
+910
+00:55:09,200 --> 00:55:11,600
+deep down inside, joten
+
+911
+00:55:11,600 --> 00:55:13,900
+ei sulla ole mitään ongelmaa sen kanssa.
+
+912
+00:55:14,300 --> 00:55:15,460
+Etkö sä saisi sitä
+
+913
+00:55:15,460 --> 00:55:17,860
+tekemään niin kuin
+
+914
+00:55:17,860 --> 00:55:19,800
+haluat, eli rauhoittumaan
+
+915
+00:55:19,800 --> 00:55:20,740
+tässä tapauksessa.
+
+916
+00:55:22,140 --> 00:55:22,820
+Laulatko?
+
+917
+00:55:25,200 --> 00:55:25,920
+Tietenkin.
+
+918
+00:55:25,920 --> 00:55:27,620
+Ongelma on vaan todennäköisesti, että
+
+919
+00:55:27,620 --> 00:55:29,200
+tämä ranskalainen chanson ei löydy
+
+920
+00:55:29,200 --> 00:55:31,200
+Singstarista, jota me joudutaan etsimään
+
+921
+00:55:31,200 --> 00:55:33,420
+YouTubesta, sen niin kuin karaoke track
+
+922
+00:55:33,420 --> 00:55:33,960
+versio.
+
+923
+00:55:34,540 --> 00:55:37,240
+Joo, se tapahtuu vähän vaikeammin kuin
+
+924
+00:55:37,240 --> 00:55:38,500
+luulisi, että se ei ole
+ihan noin vaan, että
+
+925
+00:55:38,500 --> 00:55:40,260
+YouTubesta jotain, vaan se tapahtuu
+
+926
+00:55:40,260 --> 00:55:42,820
+muutaman välietapin kautta, mutta
+
+927
+00:55:42,820 --> 00:55:44,600
+tapahtuu lopulta kyllä, ei siinä mitään.
+
+928
+00:55:44,780 --> 00:55:46,560
+Hommat tapahtuu, mutta aina on pieni
+
+929
+00:55:46,560 --> 00:55:48,620
+semmoinen Thom-lisäys mukana, että
+
+930
+00:55:48,620 --> 00:55:49,820
+tehdään hommat turvallisesti.
+
+931
+00:55:50,960 --> 00:55:51,140
+Kyllä.
+
+932
+00:55:51,740 --> 00:55:54,280
+Ja siis Didi odottaa kärsivällisesti
+
+933
+00:55:54,280 --> 00:55:56,900
+Thom, selkeästi osaa tämän asian.
+
+934
+00:55:57,620 --> 00:56:02,940
+Joo, saat laulun laulettua ja
+
+935
+00:56:02,940 --> 00:56:09,140
+tunnelma on oikeastaan sen jäljiltä,
+
+936
+00:56:09,220 --> 00:56:12,160
+että kaiken, mitä tässä nyt on
+
+937
+00:56:12,160 --> 00:56:16,020
+laulamista ja vihaista naapuria ja
+
+938
+00:56:16,020 --> 00:56:19,700
+niin edespäin, niin se on aika
+
+939
+00:56:19,700 --> 00:56:20,700
+aseista riisuva.
+
+940
+00:56:21,840 --> 00:56:24,640
+On sellainen olo, että tässä nyt
+
+941
+00:56:24,640 --> 00:56:27,600
+ollaan oltu yökavereita jo ties kuin
+
+942
+00:56:27,620 --> 00:56:29,800
+aika pitkään, että eipä tämä nyt
+
+943
+00:56:29,800 --> 00:56:32,460
+niin kuin, ei tämä ole niin
+
+944
+00:56:32,460 --> 00:56:35,280
+vaivaannuttavaa kuin mitä voisi olla
+
+945
+00:56:35,280 --> 00:56:37,400
+tavata ihmisiä ensimmäistä kertaa.
+
+946
+00:56:38,860 --> 00:56:40,940
+Punaviinilla saattaa olla osuus asiaan,
+
+947
+00:56:41,040 --> 00:56:42,920
+mutta karaokella todennäköisesti enemmän.
+
+948
+00:56:47,520 --> 00:56:52,440
+Missä vaiheessa joku ottaa puheeksi
+
+949
+00:56:52,440 --> 00:56:54,220
+sen, mitä te olette täällä tekemässä?
+
+950
+00:56:54,360 --> 00:56:56,200
+Tapahtuuko se tänä iltana vai vasta
+
+951
+00:56:56,200 --> 00:56:57,240
+seuraavana päivänä?
+
+952
+00:56:57,620 --> 00:57:01,800
+Mä luulen, että ehkä jos vaikuttaa
+
+953
+00:57:01,800 --> 00:57:03,720
+siltä, että tässä on nyt hyvä
+
+954
+00:57:03,720 --> 00:57:06,220
+meininki ja näin, niin ei ruveta nyt
+
+955
+00:57:06,220 --> 00:57:11,760
+tätä työasioilla pilaamaan, vaan että
+
+956
+00:57:11,760 --> 00:57:15,920
+työaika alkaa huomenna aamulla
+
+957
+00:57:15,920 --> 00:57:17,680
+kello yli.
+
+958
+00:57:19,860 --> 00:57:21,360
+Sitten vaikka mennään näihin
+
+959
+00:57:21,360 --> 00:57:21,840
+juttuihin.
+
+960
+00:57:23,480 --> 00:57:24,320
+Hyvä.
+
+961
+00:57:25,320 --> 00:57:27,500
+Mennään näihin juttuihin seuraavalla
+
+962
+00:57:27,500 --> 00:57:27,600
+keskustelussa.
+
+963
+00:57:27,620 --> 00:57:31,380
+Ja lopetetaan me tähän.
+
+964
+00:57:31,600 --> 00:57:32,900
+Pidetään pieni tauko.
+

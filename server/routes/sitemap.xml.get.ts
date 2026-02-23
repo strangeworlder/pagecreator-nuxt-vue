@@ -2,7 +2,9 @@ import { serverQueryContent } from "#content/server";
 
 export default defineEventHandler(async (event) => {
   const baseUrl: string = useRuntimeConfig(event).public.siteUrl;
-  const docs = await serverQueryContent(event).only(["_path", "dateModified", "canonical", "aliases"]).find();
+  const docs = await serverQueryContent(event)
+    .only(["_path", "dateModified", "canonical", "aliases"])
+    .find();
 
   const urls: string[] = [];
 
@@ -20,7 +22,9 @@ export default defineEventHandler(async (event) => {
     const path = loc === "/" ? "" : loc.replace(/\/$/, "");
     const lastmod = new Date(d.dateModified || Date.now()).toISOString();
 
-    urls.push(`<url><loc>${baseUrl.replace(/\/$/, "")}${path}</loc><lastmod>${lastmod}</lastmod></url>`);
+    urls.push(
+      `<url><loc>${baseUrl.replace(/\/$/, "")}${path}</loc><lastmod>${lastmod}</lastmod></url>`,
+    );
 
     // 2. If aliases exist, we SHOULD NOT add them to sitemap automatically as duplicates,
     // unless they are canonical interactions, but standard practice is listing ONLY the canonical URL.

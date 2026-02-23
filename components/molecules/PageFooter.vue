@@ -25,7 +25,7 @@ const isHome = computed(() => route.path === "/");
 footer {
   display: flex;
   justify-content: center;
-  padding: 2rem;
+  padding: var(--space-xl);
 }
 .footer-link {
   font-family: var(--font-sans);
@@ -33,7 +33,7 @@ footer {
   color: var(--color-fg);
   text-decoration: none;
   border-bottom: 2px solid transparent;
-  transition: border-color 0.2s;
+  transition: border-color var(--transition-fast);
 }
 .footer-link:hover {
   text-decoration: none;

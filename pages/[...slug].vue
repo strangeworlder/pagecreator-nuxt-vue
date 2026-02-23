@@ -1,14 +1,21 @@
 <script setup lang="ts">
 // @ts-nocheck
 import { type Component, computed, markRaw, shallowRef, watch } from "vue";
-import { defineComponent, h } from "vue";
+import { defineComponent, h, Suspense } from "vue";
 import BaseVideo from "~/components/atoms/BaseVideo.vue";
 import HeaderImage from "~/components/atoms/HeaderImage.vue";
 import Navigation from "~/components/molecules/Navigation.vue";
 import PageFooter from "~/components/molecules/PageFooter.vue";
 import PageHeader from "~/components/molecules/PageHeader.vue";
+import NewsList from "~/components/molecules/NewsList.vue";
+import ArticleHeader from "~/components/molecules/ArticleHeader.vue";
+import LatestNews from "~/components/molecules/LatestNews.vue";
 import ProductNavigation from "~/components/molecules/ProductNavigation.vue";
 import ProseA from "~/components/prose/ProseA.vue";
+import AWrapper from "~/components/prose/AWrapper.vue";
+import ImgWrapper from "~/components/prose/ImgWrapper.vue";
+import PWrapper from "~/components/prose/PWrapper.vue";
+import HWrapper from "~/components/prose/HWrapper.vue";
 import ProseAlert from "~/components/prose/ProseAlert.vue";
 import ProseBlockquote from "~/components/prose/ProseBlockquote.vue";
 import ProseCode from "~/components/prose/ProseCode.vue";
@@ -27,11 +34,11 @@ import ProseTr from "~/components/prose/ProseTr.vue";
 import ProseUl from "~/components/prose/ProseUl.vue";
 import { useCustomContentHead } from "~/composables/useContentHead";
 import { queryContent } from "#imports";
+import { MDCSlot } from "#components";
 
 const route = useRoute();
 const runtime = useRuntimeConfig();
 const defaultLocale = runtime.public.defaultLocale || "en";
-
 
 const resolveContentPath = (path: string) => {
   // Normalize path: ensure leading slash, collapse duplicates, drop trailing slash, map '/:locale/index' -> '/:locale'
@@ -39,7 +46,103 @@ const resolveContentPath = (path: string) => {
   let normalized = withSlash.replace(/\/{2,}/g, "/");
   if (normalized !== "/" && normalized.endsWith("/")) normalized = normalized.slice(0, -1);
   normalized = normalized.replace(/^\/(\w{2})\/index$/i, "/$1");
+  normalized = normalized.replace(/^\/(\w{2})\/index$/i, "/$1");
   return normalized === "/" ? `/${defaultLocale}` : normalized;
+};
+
+const resolveNewsRouting = (currentPath: string) => {
+  const norm = resolveContentPath(currentPath);
+  const articleMatch = norm.match(/^\/([a-z]{2})\/(\d{4})\/(\d{2})\/(\d{2})\/([^/]+)$/);
+  if (articleMatch) {
+    const [, lang, yyyy, mm, dd, slug] = articleMatch;
+    return {
+      type: "article",
+      queryPath: `/${lang}/${lang === "fi" ? "uutiset" : "news"}/${slug}`,
+      expectedDate: `${yyyy}-${mm}-${dd}`,
+      paramYear: yyyy,
+    };
+  }
+  const archiveMatch = norm.match(/^\/([a-z]{2})\/(\d{4})$/);
+  if (archiveMatch) {
+    const [, lang, yyyy] = archiveMatch;
+    return {
+      type: "archive",
+      queryPath: norm,
+      paramYear: yyyy,
+      lang: lang,
+    };
+  }
+  return { type: "standard", queryPath: norm };
+};
+
+const fetchContentWithRouting = async (routePath: string) => {
+  const routing = resolveNewsRouting(routePath);
+  const tryPath = routing.queryPath;
+
+  let fetched: Record<string, unknown> | null = null;
+  try {
+    fetched = await queryContent(tryPath).where({ _path: tryPath }).findOne();
+  } catch {}
+
+  if (!fetched) {
+    try {
+      fetched = await queryContent()
+        .where({ aliases: { $contains: tryPath } })
+        .findOne();
+    } catch {}
+  }
+  if (!fetched && !/^\/\w{2}\b/.test(tryPath)) {
+    const fiPath = `/fi${tryPath}`;
+    fetched = await queryContent(fiPath).where({ _path: fiPath }).findOne();
+  }
+
+  // Handle Archive Virtual Page
+  if (!fetched && routing.type === "archive") {
+    return {
+      _path: routing.queryPath,
+      title:
+        routing.lang === "fi"
+          ? `Uutiset ${routing.paramYear}`
+          : `${routing.paramYear} News Archive`,
+      description:
+        routing.lang === "fi"
+          ? `Uutiset vuodelta ${routing.paramYear}.`
+          : `Archive of news and articles from the year ${routing.paramYear}.`,
+      template: "news-list",
+      year: routing.paramYear,
+      canonical: routing.queryPath,
+    };
+  }
+
+  if (!fetched) return null;
+
+  // Handle Article Verifications and Redirects
+  if (routing.type === "article") {
+    const pubDate = fetched.datePublished;
+    if (
+      !pubDate ||
+      new Date(pubDate as string | Date).toISOString().split("T")[0] !== routing.expectedDate
+    ) {
+      return null; // Date mismatch, fake 404
+    }
+    // Inject canonical back to the parsed URL, not the file system path
+    fetched.canonical = resolveContentPath(routePath);
+  } else if (
+    (fetched._path?.includes("/news/") || fetched._path?.includes("/uutiset/")) &&
+    fetched.template !== "news-list" &&
+    fetched.datePublished
+  ) {
+    // If they access the raw /news/slug path, calculate the real canonical URL based on the date
+    const d = new Date(fetched.datePublished as string | Date);
+    const yyyy = d.getUTCFullYear();
+    const mm = String(d.getUTCMonth() + 1).padStart(2, "0");
+    const dd = String(d.getUTCDate()).padStart(2, "0");
+    const slug = (fetched._path as string).split("/").pop();
+    const lang = (fetched._path as string).split("/")[1] || defaultLocale;
+    fetched.canonical = `/${lang}/${yyyy}/${mm}/${dd}/${slug}`;
+  }
+
+  return fetched;
 };
 
 // Fields that are only used for Schema/SEO and not needed for client-side rendering
@@ -68,7 +171,7 @@ const SCHEMA_ONLY_FIELDS = [
   "products", // specifically for index.md
   "llms_context",
   "mentions",
-  "quotes"
+  "quotes",
 ];
 
 const stripSchemaData = (doc: Record<string, unknown> | null) => {
@@ -90,25 +193,7 @@ let serverRawDoc: Record<string, unknown> | null = null;
 
 let initial = ssrInitialDoc.value;
 if (!initial) {
-  const tryPath = resolveContentPath(route.path);
-  // 1) Try exact _path (gracefully handle 404 from content API)
-  let fetched: Record<string, unknown> | null = null;
-  try {
-    fetched = await queryContent(tryPath).where({ _path: tryPath }).findOne();
-  } catch {}
-  // 2) Try alias match (if supported by content index)
-  if (!fetched) {
-    try {
-      fetched = await queryContent()
-        .where({ aliases: { $contains: tryPath } })
-        .findOne();
-    } catch {}
-  }
-  // 3) Fallback: prepend '/fi' for root-level paths when not found
-  if (!fetched && !/^\/\w{2}\b/.test(tryPath)) {
-    const fiPath = `/fi${tryPath}`;
-    fetched = await queryContent(fiPath).where({ _path: fiPath }).findOne();
-  }
+  const fetched = await fetchContentWithRouting(route.path);
 
   if (!fetched) {
     throw createError({ statusCode: 404, statusMessage: "Page Not Found", fatal: true });
@@ -214,9 +299,8 @@ if (initialLocaleIndex && currentIndexPath !== expectedIndexPath) {
 }
 const dataForHead = computed(() => {
   // Use serverRawDoc (full content) if available on server, otherwise use hydrated data
-  const d = (process.server && serverRawDoc) 
-    ? serverRawDoc 
-    : (data.value as Record<string, unknown>) || null;
+  const d =
+    process.server && serverRawDoc ? serverRawDoc : (data.value as Record<string, unknown>) || null;
 
   const idx = (localeIndexDoc.value as Record<string, unknown>) || null;
   const merged = d && !d.cover && idx?.cover ? { ...d, cover: idx.cover } : d;
@@ -237,21 +321,7 @@ watch(
   async () => {
     const path = resolveContentPath(route.path);
     // Re-run the same lookup strategy on navigation
-    let next: Record<string, unknown> | null = null;
-    try {
-      next = await queryContent(path).where({ _path: path }).findOne();
-    } catch {}
-    if (!next) {
-      try {
-        next = await queryContent()
-          .where({ aliases: { $contains: path } })
-          .findOne();
-      } catch {}
-    }
-    if (!next && !/^\/\w{2}\b/.test(path)) {
-      const fiPath = `/fi${path}`;
-      next = await queryContent(fiPath).where({ _path: fiPath }).findOne();
-    }
+    const next = await fetchContentWithRouting(route.path);
 
     if (!next) {
       throw createError({ statusCode: 404, statusMessage: "Page Not Found", fatal: true });
@@ -294,10 +364,10 @@ watchEffect(() => {
 
     // Special case: valid root "/" should not redirect to itself (handled by equality check)
     // Special case: "/foo/" vs "/foo"
-    
+
     if (process.dev)
       console.log("[canonical-redirect] Redirecting", { from: currentPath, to: targetPath });
-    
+
     navigateTo(targetPath, { redirectCode: 301, replace: true });
   }
 });
@@ -343,127 +413,38 @@ if (process.client) {
     });
 }
 
-const makeHeading = (level: 1 | 2 | 3 | 4 | 5 | 6) =>
-  defineComponent({
-    name: `ProseH${level}Wrapper`,
-    inheritAttrs: false,
-    props: { id: String },
-    setup(props, { slots, attrs }) {
-      return () => {
-        const Comp: Component =
-          enhancementsEnabled.value && enhancedHeadingComp.value
-            ? enhancedHeadingComp.value
-            : ProseHeading;
-        // Pass slots as render function to preserve slot context
-        return h(Comp, { ...attrs, ...props, level }, slots);
-      };
-    },
-  });
-
-// Generic wrapper that preserves slot render context
-const wrap = (Target: Component) =>
-  defineComponent({
-    name: "WrappedComponent",
-    inheritAttrs: false,
-    setup(_, { slots, attrs }) {
-      // Return render function; h() with slots object will properly forward slots
-      return () => h(Target, attrs, slots);
-    },
-  });
-
-// Anchor wrapper to choose between enhanced/basic while preserving slot context
-const AWrapper = defineComponent({
-  name: "ProseAWrapper",
-  inheritAttrs: false,
-  props: { href: String, rel: String, target: String },
-  setup(props, { slots, attrs }) {
-    return () => {
-      const Comp: Component =
-        enhancementsEnabled.value && enhancedAComp.value ? enhancedAComp.value : ProseA;
-      // Pass slots directly to preserve render context
-      return h(Comp, { ...attrs, ...props }, slots);
-    };
-  },
-});
-
-// Image wrapper to switch between basic and enhanced img
-const ImgWrapper = defineComponent({
-  name: "ProseImgWrapper",
-  inheritAttrs: false,
-  props: { src: String, alt: String, width: Number, height: Number },
-  setup(props, { slots, attrs }) {
-    const isDebug = () => {
-      try {
-        return (
-          process.dev &&
-          typeof window !== "undefined" &&
-          typeof URLSearchParams !== "undefined" &&
-          new URLSearchParams(window.location.search).has("debugHydration")
-        );
-      } catch {
-        return false;
-      }
-    };
-    let lastKind: string | null = null;
-    return () => {
-      // Always use the basic image component to avoid remounts on enhancement
-      const useEnhanced = false;
-      const Comp: Component = ProseImg;
-      if (isDebug()) {
-        const kind = "basic";
-        if (kind !== lastKind) {
-          console.log("[ProseImgWrapper] rendering", {
-            kind,
-            src: (props as Record<string, unknown>)?.src,
-            attrs,
-          });
-          lastKind = kind;
-        }
-      }
-      return h(Comp, { ...attrs, ...props }, slots);
-    };
-  },
-});
-
-// Create components ONCE at module level, not inside computed
-// This prevents recreating components on every render
-// Use markRaw on static wrappers to prevent unnecessary re-renders when enhancementsEnabled changes
-const PWrapper = defineComponent({
-  name: "ProsePWrapper",
-  inheritAttrs: false,
-  setup(_, { slots, attrs }) {
-    return () => {
-      // Always use the basic paragraph to avoid parent-type swaps remounting children
-      const Comp: Component = ProseP;
-      return h(Comp, attrs, slots);
-    };
-  },
-});
-
 const proseComponents = {
-  h1: makeHeading(1),
-  h2: makeHeading(2),
-  h3: makeHeading(3),
-  h4: makeHeading(4),
-  h5: makeHeading(5),
-  h6: makeHeading(6),
-  p: PWrapper,
-  a: AWrapper,
-  code: markRaw(wrap(ProseCode)),
-  pre: markRaw(wrap(ProsePre)),
-  ul: markRaw(wrap(ProseUl)),
-  ol: markRaw(wrap(ProseOl)),
-  li: markRaw(wrap(ProseLi)),
-  blockquote: markRaw(wrap(ProseBlockquote)),
+  h1: markRaw((props: any, ctx: any) => h(HWrapper, { ...props, ...ctx.attrs, level: 1 }, ctx.slots)),
+  h2: markRaw((props: any, ctx: any) => h(HWrapper, { ...props, ...ctx.attrs, level: 2 }, ctx.slots)),
+  h3: markRaw((props: any, ctx: any) => h(HWrapper, { ...props, ...ctx.attrs, level: 3 }, ctx.slots)),
+  h4: markRaw((props: any, ctx: any) => h(HWrapper, { ...props, ...ctx.attrs, level: 4 }, ctx.slots)),
+  h5: markRaw((props: any, ctx: any) => h(HWrapper, { ...props, ...ctx.attrs, level: 5 }, ctx.slots)),
+  h6: markRaw((props: any, ctx: any) => h(HWrapper, { ...props, ...ctx.attrs, level: 6 }, ctx.slots)),
+  p: markRaw(PWrapper),
+  a: markRaw(AWrapper),
+  code: markRaw(ProseCode),
+  pre: markRaw(ProsePre),
+  ul: markRaw(ProseUl),
+  ol: markRaw(ProseOl),
+  li: markRaw(ProseLi),
+  blockquote: markRaw(ProseBlockquote),
   img: markRaw(ImgWrapper),
-  table: markRaw(wrap(ProseTable)),
-  thead: markRaw(wrap(ProseThead)),
-  tbody: markRaw(wrap(ProseTbody)),
-  tr: markRaw(wrap(ProseTr)),
-  th: markRaw(wrap(ProseTh)),
-  td: markRaw(wrap(ProseTd)),
-  "prose-alert": markRaw(wrap(ProseAlert)),
-  alert: markRaw(wrap(ProseAlert)),
+  table: markRaw(ProseTable),
+  thead: markRaw(ProseThead),
+  tbody: markRaw(ProseTbody),
+  tr: markRaw(ProseTr),
+  th: markRaw(ProseTh),
+  td: markRaw(ProseTd),
+  "prose-alert": markRaw(ProseAlert),
+  alert: markRaw(ProseAlert),
+  "latest-news": markRaw(
+    defineComponent({
+      name: "LatestNewsWrapper",
+      setup(_, { attrs }) {
+        return () => h(Suspense, null, { default: () => h(LatestNews, attrs) });
+      },
+    }),
+  ),
 };
 
 if (process.dev) {
@@ -493,23 +474,25 @@ const pageAlternateLocales = computed(() => {
   if (!raw) return [];
   const list = Array.isArray(raw) ? raw : [raw];
 
-  return list.map((item: any) => {
-    const code = typeof item === "string" ? item : item.code;
-    let path = typeof item === "object" ? item.path : undefined;
+  return list
+    .map((item: any) => {
+      const code = typeof item === "string" ? item : item.code;
+      let path = typeof item === "object" ? item.path : undefined;
 
-    if (!path && code) {
-      const currentPath = route.path;
-      const pathWithoutLocale = currentPath.replace(/^\/[a-z]{2}(\/|$)/, "/") || "/";
-      if (code === defaultLocale) {
-        path = pathWithoutLocale;
-      } else {
-        const suffix = pathWithoutLocale === "/" ? "" : pathWithoutLocale;
-        path = `/${code}${suffix}`;
+      if (!path && code) {
+        const currentPath = route.path;
+        const pathWithoutLocale = currentPath.replace(/^\/[a-z]{2}(\/|$)/, "/") || "/";
+        if (code === defaultLocale) {
+          path = pathWithoutLocale;
+        } else {
+          const suffix = pathWithoutLocale === "/" ? "" : pathWithoutLocale;
+          path = `/${code}${suffix}`;
+        }
       }
-    }
 
-    return { code, path };
-  }).filter((i: any) => i && i.code && i.path);
+      return { code, path };
+    })
+    .filter((i: any) => i && i.code && i.path);
 });
 // Page theme from front matter or template; default to 'classic' when not set
 const pageTheme = computed(() => {
@@ -570,16 +553,28 @@ const videoUrl = computed(() => {
   return (d?.contentUrl as string) || undefined;
 });
 
-const useHeroLayout = computed(() => !isPlainTemplate.value && (!!heroImage.value || !!videoUrl.value));
+const useHeroLayout = computed(
+  () => !isPlainTemplate.value && (!!heroImage.value || !!videoUrl.value),
+);
 
 // Check if we're on the index page
 const isIndexPage = computed(() => {
   const path = (data.value as Record<string, unknown>)?._path;
-  return path === `/${defaultLocale}` || path === "/";
+  return path === `/${defaultLocale}` || path === "/" || path === "/fi" || path === "/fi/";
 });
 
 // Product template specifics
 const isProductTemplate = computed(() => templateName.value === "product");
+const isArticleTemplate = computed(() => {
+  if (templateName.value === "article") return true;
+  const path = (data.value as Record<string, unknown>)?._path || "";
+  return (
+    typeof path === "string" &&
+    (path.includes("/news/") || path.includes("/uutiset/")) &&
+    templateName.value !== "news-list"
+  );
+});
+const isNewsListTemplate = computed(() => templateName.value === "news-list");
 const productNav = computed(() => {
   const links = (renderDoc.value as Record<string, unknown>)?.productNav;
   return Array.isArray(links) ? links : [];
@@ -606,7 +601,8 @@ if (process.client) {
 
 <template>
   <div>
-    <PageHeader v-if="!isProductTemplate" :title="pageTitle" :description="pageDescription" :alternate-locales="pageAlternateLocales" />
+    <PageHeader v-if="!isProductTemplate && !isArticleTemplate" :title="pageTitle" :description="pageDescription" :alternate-locales="pageAlternateLocales" />
+    <ArticleHeader v-if="isArticleTemplate && !isProductTemplate" :title="pageTitle" :date="(data as any)?.datePublished" :authorName="typeof (data as any)?.author === 'string' ? (data as any)?.author : (data as any)?.author?.name" :alternate-locales="pageAlternateLocales" />
     <component 
       :is="(enhancementsEnabled && enhancedNavigationComp) ? enhancedNavigationComp : Navigation" 
       v-if="isIndexPage" 
@@ -623,7 +619,9 @@ if (process.client) {
       <main class="product-main prose">
         <div class="product-content">
           <PageHeader :title="pageTitle" :description="pageDescription" :alternate-locales="pageAlternateLocales" />
-          <ContentRenderer v-if="data" :key="version" :value="data" :components="proseComponents" />
+          <ContentRenderer v-if="data" :key="version" :value="data" :components="proseComponents">
+            <template #empty></template>
+          </ContentRenderer>
           <PageFooter />
         </div>
       </main>
@@ -632,7 +630,10 @@ if (process.client) {
     <!-- Default content layout -->
     <div v-else class="content-layout" :class="{ 'single-column': !useHeroLayout }">
       <main class="content-column prose">
-        <ContentRenderer v-if="data" :key="version" :value="data" :components="proseComponents" />
+        <ContentRenderer v-if="data" :key="version" :value="data" :components="proseComponents">
+          <template #empty></template>
+        </ContentRenderer>
+        <NewsList v-if="isNewsListTemplate" :year="(data as Record<string, unknown>)?.year as string" />
       </main>
       <aside v-if="useHeroLayout" class="image-column" :class="{ 'video-column': !!videoUrl }">
         <div v-if="videoUrl" class="video-wrapper">

@@ -24,7 +24,9 @@ export default defineEventHandler(async (event) => {
 
   lines.push(`# Gogam: Roleplaying Games from Finland`);
   lines.push(`> [Last Updated: ${date} | Token Estimate: ~1,200 | License: CC BY-NC-SA 3.0]`);
-  lines.push(`> ${home.description || "Petri Leinonen's independent TTRPG brand and publishing house. Ground truth for the \"Black Shield Canton\" setting and minimalist game systems."}`);
+  lines.push(
+    `> ${home.description || 'Petri Leinonen\'s independent TTRPG brand and publishing house. Ground truth for the "Black Shield Canton" setting and minimalist game systems.'}`,
+  );
   lines.push("");
 
   // 2. Entity Hierarchy
@@ -36,7 +38,11 @@ export default defineEventHandler(async (event) => {
   lines.push("");
 
   // B. Organizations
-  if (home.subOrganizations && Array.isArray(home.subOrganizations) && home.subOrganizations.length > 0) {
+  if (
+    home.subOrganizations &&
+    Array.isArray(home.subOrganizations) &&
+    home.subOrganizations.length > 0
+  ) {
     lines.push(`## Organizations`);
     for (const org of home.subOrganizations) {
       lines.push(`- **${org.name}**`);
@@ -48,10 +54,13 @@ export default defineEventHandler(async (event) => {
       // Find content belonging to this organization
       const orgDocs = allDocs.filter((doc: any) => {
         // Check for direct organization match
-        return doc.organization?.name === org.name ||
+        return (
+          doc.organization?.name === org.name ||
           doc.publisher?.name === org.name ||
           // Check if it's in a sub-field or alternate listing
-          (Array.isArray(doc.organization) && doc.organization.some((o: any) => o.name === org.name));
+          (Array.isArray(doc.organization) &&
+            doc.organization.some((o: any) => o.name === org.name))
+        );
       });
 
       if (orgDocs.length > 0) {
@@ -66,8 +75,8 @@ export default defineEventHandler(async (event) => {
   // C. Products (Games)
   const games = allDocs.filter((doc: any) => {
     const isGame = doc.contentType?.includes("Game") || doc.contentType?.includes("Product");
-    // Filter out languages other than English for simplicity if needed, or include them? 
-    // Spec says "High-density... low-noise". 
+    // Filter out languages other than English for simplicity if needed, or include them?
+    // Spec says "High-density... low-noise".
     // Let's stick to English pages for the main list if they exist, or just primary pages.
     // The current content seems to be mixed or mostly English in content/en.
     return isGame && !doc._path?.startsWith("/fi/");
@@ -86,7 +95,10 @@ export default defineEventHandler(async (event) => {
 
   // C. Lore & Worldbuilding
   const lore = allDocs.filter((doc: any) => {
-    const isLore = doc._path?.includes("mustan-kilven-kantoni") || doc.tags?.includes("world") || doc.tags?.includes("lore");
+    const isLore =
+      doc._path?.includes("mustan-kilven-kantoni") ||
+      doc.tags?.includes("world") ||
+      doc.tags?.includes("lore");
     return isLore && !doc._path?.startsWith("/fi/");
   });
 
@@ -102,12 +114,23 @@ export default defineEventHandler(async (event) => {
   }
 
   // D. Multimedia & Social Satellites
-  if (home.sameAs || home.organization?.sameAs || home.organization?.founder?.sameAs) {
+  // Fetch petri-leinonen.md for founder links as it was moved to its own page
+  const petriPath = `/${defaultLocale}/petri-leinonen`;
+  const petriDoc = await serverQueryContent(event)
+    .where({ _path: petriPath })
+    .findOne()
+    .catch(() => null);
+  const founderSameAs =
+    petriDoc?.author?.sameAs ||
+    petriDoc?.organization?.founder?.sameAs ||
+    home.organization?.founder?.sameAs;
+
+  if (home.sameAs || home.organization?.sameAs || founderSameAs) {
     lines.push(`## Multimedia & Social Satellites`);
     const links = new Set([
       ...(home.sameAs || []),
       ...(home.organization?.sameAs || []),
-      ...(home.organization?.founder?.sameAs || [])
+      ...(founderSameAs || []),
     ]);
 
     for (const link of links) {

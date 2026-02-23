@@ -49,15 +49,13 @@ label span[aria-hidden="true"] {
   color: #dc2626;
 }
 p[id$="-help"] {
-  margin-top: 0.25rem;
+  margin-top: var(--space-xs);
   font-size: var(--size-1);
   color: var(--color-muted);
 }
 p[id$="-error"] {
-  margin-top: 0.25rem;
+  margin-top: var(--space-xs);
   font-size: var(--size-1);
   color: #dc2626;
 }
 </style>
-
-

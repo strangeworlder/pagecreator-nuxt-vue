@@ -14,7 +14,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 const getLanguageName = (code: string) => {
   try {
-    const name = new Intl.DisplayNames([code], { type: 'language' }).of(code);
+    const name = new Intl.DisplayNames([code], { type: "language" }).of(code);
     return name ? name.charAt(0).toUpperCase() + name.slice(1) : code.toUpperCase();
   } catch {
     return code.toUpperCase();
@@ -37,10 +37,10 @@ const getLanguageName = (code: string) => {
 .language-switcher {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--space-sm);
   font-size: var(--size-2);
   color: var(--color-muted, #666);
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-sm);
 }
 
 .language-switcher a {

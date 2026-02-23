@@ -21,7 +21,7 @@ button {
   justify-content: center;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: 0.25rem 0.75rem;
+  padding: var(--space-xs) var(--space-md);
   font-size: var(--size-2);
   background: transparent;
   color: var(--color-fg);
@@ -31,4 +31,3 @@ button:focus {
   outline-offset: 2px;
 }
 </style>
-

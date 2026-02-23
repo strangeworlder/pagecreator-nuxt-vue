@@ -1,7 +1,7 @@
 ---
 trigger: model_decision
 description: rules for editing the json-ld frontmatter schema
-dateModified: 2026-01-08
+dateModified: 2026-02-23
 ---
 
 ---
@@ -20,16 +20,21 @@ You must designate **Primary Subject Authorities**.
 ### 1.1 Home Page (`/`)
 *   **Role**: The Identity Hub.
 *   **Exclusive Authority**: This is the *only* place authorized to host:
-    *   Full **Person** biography (`#petri`).
     *   **Organization** metadata (`#organization`).
-    *   Every social link (`sameAs`), founder detail, and high-level brand description.
+    *   Every organizational social link (`sameAs`), and high-level brand description.
 
-### 1.2 Product Pages
+### 1.2 Person Page (`/[lang]/petri-leinonen`)
+*   **Role**: The Person Identity Hub.
+*   **Exclusive Authority**: This is the *only* place authorized to host:
+    *   Full **Person** biography (`#petri`).
+    *   Petri Leinonen's personal social links (`sameAs`), affiliations, and `knowsAbout` details.
+
+### 1.3 Product Pages
 *   **Role**: The Master Node for that specific entity (Game/Book).
 *   **Exclusive Authority**: Description, offers, and detailed attributes for that specific game.
 
-### 1.3 The Rule of Stubs
-On any page where you reference an entity that is *not* the primary subject (e.g., referencing Petri on a game page), you are **strictly forbidden** from repeating its full metadata.
+### 1.4 The Rule of Stubs
+On any page where you reference an entity that is *not* the primary subject (e.g., referencing Petri on a game page, or referencing the Founder on the Home page), you are **strictly forbidden** from repeating its full metadata.
 *   **Requirement**: You must use a "Stub Reference" consisting **only** of:
     *   `@id`
     *   `@type`
@@ -47,7 +52,7 @@ An ID must distinguish the **Abstract Entity** from the **Physical Document**.
 | Entity | ID Format | Example |
 | :--- | :--- | :--- |
 | **Organization** | `/#organization` | `https://gogam.eu/#organization` |
-| **Person** | `/#petri` | `https://gogam.eu/#petri` |
+| **Person** | `/en/petri-leinonen#petri` | `https://gogam.eu/en/petri-leinonen#petri` |
 | **Game/Book** | `[URL]#game` | `https://gogam.eu/en/cars-and-family#game` |
 
 **Why**: This allows agents to perform entity resolution, connecting authority across platforms (RPGGeek, Itch.io) back to this specific "Ground Truth."
@@ -128,7 +133,7 @@ The subcontractor must strictly distinguish between what the page is *about* (th
 This page is not a Product. It is an Article (or Analysis).
 *   **Requirement**: Use `@type: Article` or `@type: TechArticle` (if it’s a design analysis).
 *   **Fulfillment**:
-    *   `author`: Stub reference to `/#petri`.
+    *   `author`: Stub reference to `https://gogam.eu/en/petri-leinonen#petri`.
     *   `publisher`: Stub reference to `/#organization`.
     *   `headline`: Must match the `<h1>` exactly.
     *   `abstract`: Use your summary frontmatter here for AEO ingestion.
@@ -145,6 +150,7 @@ This article is the "Master of Truth" for your design philosophy (Melancholy, Re
 | **Lore Article** | `/en/mustan-kilven-kantoni` | `headline`, `articleBody` (or `abstract`), `about`, `mentions` | `@id`, `@type`, `headline` |
 | **World Concept** | `/en/mustan-kilven-kantoni` | `@id: ...#world`, `name`, `description` | `@id`, `name` |
 | **Game/Book** | Product Subpage | `offers`, `isBasedOn`, `numberOfPlayers` | `@id`, `name` |
+| **News Article** | `/[lang]/news/[slug]` | `datePublished` (YYYY-MM-DD), `author` (Stub to `https://gogam.eu/en/petri-leinonen#petri`), `publisher` (Stub to `#organization`), `headline` | `@id`, `name` |
 
 ### 7.6 Section: Lore & Analysis Articles
 *   **MainEntity**: The `WebPage` must have `mainEntity` pointing to `[URL]#article`.
@@ -153,6 +159,16 @@ This article is the "Master of Truth" for your design philosophy (Melancholy, Re
     *   Include the `@id` for the "Black Shield Canton" world.
 *   **Cross-Linking**: Use the `mentions` array to link to every product described in the analysis. Do not repeat product descriptions or offers. Only use IDs.
 *   **Language Integrity**: This specific page has an alternate link to the Finnish version (e.g. `/fi/mustan-kilven-kantoni`). The `WebPage` node must include `alternateLanguage` pointing to the Finnish URL.
+
+### 7.7 News and Blog Articles
+News articles follow specific routing rules to maintain a clean content folder while providing SEO-friendly date URLs.
+*   **Routing**: Placed in `content/[lang]/news/[slug].md`, but dynamically served at `/[lang]/YYYY/MM/DD/[slug]`.
+*   **Requirement**: Must include `datePublished` (YYYY-MM-DD) in frontmatter.
+*   **MainEntity**: The `WebPage` node must define its `mainEntity` pointing to the Article ID.
+*   **Schema Fields**:
+    *   `@type`: `NewsArticle` or `Article` (handled dynamically if `template: article` or `datePublished` is present).
+    *   `author`: Stub reference to `https://gogam.eu/en/petri-leinonen#petri`.
+    *   `publisher`: Stub reference to `/#organization`.
 
 ---
 

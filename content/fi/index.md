@@ -3,7 +3,7 @@ title: 'Gogam: Roolipelejä Suomesta'
 description: >-
   Petri Leinosen roolipelejä. Indie-pöytäroolipelejä kuten Autot & Perhe, ja
   Vuosisata.
-dateModified: 2026-01-08
+dateModified: 2026-02-23
 datePublished: 2025-12-26
 tags:
   - starter
@@ -26,30 +26,7 @@ organization:
   description: Suomalainen indie-roolipelibrändi ja -kustantamo.
   founder:
     name: Petri Leinonen
-    jobTitle:
-      - Roolipelisuunnittelija
-      - TTRPG Developer
-      - Roolipelijulkaisija
-      - Taittaja
-      - Taiteilija
-      - Kuvittaja
-    url: 'https://gogam.eu'
-    description: >-
-      Suomalainen roolipelisuunnittelija ja Gogamin perustaja, tunnettu
-      minimalistisista peleistään ja korkealaatuisista suomenkielisistä
-      lisäosista.
-    sameAs:
-      - 'https://rpggeek.com/rpgdesigner/111688/petri-leinonen'
-      - 'https://www.drivethrurpg.com/en/browse?author=%22Petri%20Leinonen%22'
-      - 'https://strangeworlder.itch.io/'
-      - 'https://strangeworlder.medium.com/'
-      - 'https://bsky.app/profile/strangeworlder.bsky.social'
-      - 'https://www.threads.com/@gogam.eu'
-    knowsAbout:
-      - 'https://www.wikidata.org/wiki/Q1643932'
-      - 'https://www.wikidata.org/wiki/Q858057'
-      - 'https://www.wikidata.org/wiki/Q91825444'
-      - 'https://www.wikidata.org/wiki/Q108357966'
+    '@id': 'https://gogam.eu/en/petri-leinonen#petri'
   games:
     - name: Cars & Family
       '@id': 'https://gogam.eu/#game-cars-and-family'
@@ -117,6 +94,9 @@ llms_context: >
 ## Gogam
 
 Gogam on täysiverinen indie-tehopakkaus, joka puskee ulos pieniä, super-innovatiivisia pelejä toinen toisensa perään.
+
+::latest-news
+::
 
 ### Avainfaktoja
 

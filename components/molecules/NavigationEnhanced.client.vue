@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from "vue";
+import { onMounted, onUnmounted, ref, computed } from "vue";
+import { useRoute } from "#imports";
 
 const navRef = ref<HTMLElement>();
 const floatingNavRef = ref<HTMLElement>();
@@ -38,13 +39,33 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener("scroll", handleScroll);
 });
+
+const route = useRoute();
+const isFinnish = computed(() => route.path.startsWith("/fi"));
 </script>
 
 <template>
   <div>
     <!-- Original navigation -->
     <nav ref="navRef">
-      <ul>
+      <ul v-if="isFinnish">
+        <li>
+          <a href="#gogam" @click.prevent="scrollToSection('header-gogam')">Gogam</a> &mdash; "Online indie-pelit" -brändini. Asioita joita teen ja nykyään julkaisen ilmaiseksi, enimmäkseen itch.io:ssa.
+        </li>
+        <li>
+          <a href="#kustannusosakeyhtiö-gogam" @click.prevent="scrollToSection('header-kustannusosakeyhtiö-gogam')">Kustannusosakeyhtiö Gogam</a> &mdash; Pääasiassa suomenkielinen kustantamo, joka vastaa myös indie-pelieni fyysisistä versioista.
+        </li>
+        <li>
+          <a href="#gogam-entertainment" @click.prevent="scrollToSection('header-gogam-entertainment')">Gogam Entertainment</a> &mdash; Roolipeliviihteeseen keskittyvä yritys. Kauttaaltaan tuotan mm. pelautuksia (Actual Play).
+        </li>
+        <li>
+          <a href="#muilta-julkaisijoilta" @click.prevent="scrollToSection('header-muilta-julkaisijoilta')">Muilta julkaisijoilta</a> &mdash; Muut julkaisijat joiden kanssa olen työskennellyt tai joille olen julkaissut pelejä.
+        </li>
+        <li>
+          <a href="#artikkeleita-luettavaksi-ilmaiseksi" @click.prevent="scrollToSection('header-artikkeleita-luettavaksi-ilmaiseksi')">Artikkelit</a> &mdash; Ilmaiseksi kirjoittamani artikkelit, enimmäkseen blogissani.
+        </li>
+      </ul>
+      <ul v-else>
         <li>
           <a href="#gogam" @click.prevent="scrollToSection('header-gogam')">Gogam</a> &mdash; My "online indie games" brand. Stuff I make and these days publish for free, mostly on itch.io.
         </li>
@@ -69,7 +90,24 @@ onUnmounted(() => {
       class="floating-nav"
       :class="{ 'floating-nav--visible': isFloating }"
     >
-      <ul>
+      <ul v-if="isFinnish">
+        <li>
+          <a href="#gogam" @click.prevent="scrollToSection('header-gogam')">Gogam</a>
+        </li>
+        <li>
+          <a href="#kustannusosakeyhtiö-gogam" @click.prevent="scrollToSection('header-kustannusosakeyhtiö-gogam')">Kustannusosakeyhtiö Gogam</a>
+        </li>
+        <li>
+          <a href="#gogam-entertainment" @click.prevent="scrollToSection('header-gogam-entertainment')">Gogam Entertainment</a>
+        </li>
+        <li>
+          <a href="#muilta-julkaisijoilta" @click.prevent="scrollToSection('header-muilta-julkaisijoilta')">Muilta julkaisijoilta</a>
+        </li>
+        <li>
+          <a href="#artikkeleita-luettavaksi-ilmaiseksi" @click.prevent="scrollToSection('header-artikkeleita-luettavaksi-ilmaiseksi')">Artikkelit</a>
+        </li>
+      </ul>
+      <ul v-else>
         <li>
           <a href="#gogam" @click.prevent="scrollToSection('header-gogam')">Gogam</a>
         </li>
@@ -101,8 +139,8 @@ onUnmounted(() => {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   transform: translateY(-100%);
-  transition: transform 0.3s ease-in-out;
-  padding: 0.75rem 1rem;
+  transition: transform var(--transition-normal);
+  padding: var(--space-sm) var(--space-md);
   @media (max-width: 768px) {
     display: none;
   }
@@ -116,7 +154,7 @@ onUnmounted(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: var(--space-xl);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -131,11 +169,11 @@ onUnmounted(() => {
 .floating-nav a {
   text-decoration: none;
   color: #333;
-  font-weight: 500;
-  font-size: 0.9rem;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.375rem;
-  transition: all 0.2s ease;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--size-2);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
   white-space: nowrap;
 }
 
@@ -164,25 +202,25 @@ onUnmounted(() => {
 /* Responsive design */
 @media (max-width: 768px) {
   .floating-nav ul {
-    gap: 1rem;
+    gap: var(--space-md);
     flex-wrap: wrap;
     justify-content: center;
   }
   
   .floating-nav a {
-    font-size: 0.8rem;
-    padding: 0.4rem 0.6rem;
+    font-size: var(--size-1);
+    padding: var(--space-xs) var(--space-sm);
   }
 }
 
 @media (max-width: 480px) {
   .floating-nav ul {
-    gap: 0.5rem;
+    gap: var(--space-sm);
   }
   
   .floating-nav a {
-    font-size: 0.75rem;
-    padding: 0.3rem 0.5rem;
+    font-size: var(--size-1);
+    padding: var(--space-xs) var(--space-sm);
   }
 }
 </style>

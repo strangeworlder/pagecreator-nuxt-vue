@@ -1,7 +1,7 @@
 ---
 title: JSON-LD & AEO Ecosystem Guide
 description: Internal guide for AEO structure and Knowledge Graph philosophy.
-dateModified: 2026-01-08
+dateModified: 2026-02-23
 ---
 # JSON-LD & AEO Ecosystem Guide
 
@@ -14,7 +14,7 @@ Instead of independent pages, we build a **Knowledge Graph**. Every entity (Pers
 ### 1. Stable IDs (`@id`)
 We use stable IDs to ensure that "Petri Leinonen" mentioned on the front page is the *same* entity as the "Author" of a game page.
 - **Organization**: `https://gogam.eu/#organization`
-- **Founder**: `https://gogam.eu/#petri`
+- **Founder**: `https://gogam.eu/en/petri-leinonen#petri`
 - **WebSite**: `https://gogam.eu/#website` (The abstract site entity)
 - **WebPage**: `[Current URL]#webpage` (The specific page content)
 
@@ -30,11 +30,11 @@ Our JSON-LD output is a single root object containing a `@graph` array. This all
       "@type": "Organization",
       "@id": "https://gogam.eu/#organization",
       "name": "Gogam",
-      "founder": { "@id": "https://gogam.eu/#petri" }
+      "founder": { "@id": "https://gogam.eu/en/petri-leinonen#petri" }
     },
     {
       "@type": "Person",
-      "@id": "https://gogam.eu/#petri",
+      "@id": "https://gogam.eu/en/petri-leinonen#petri",
       "name": "Petri Leinonen"
     },
     {
@@ -71,7 +71,7 @@ organization:
 
 ### Game Pages
 For standard game pages, the system automatically links them to the graph.
-- **Author**: If you set `author: Petri Leinonen`, the system matches it to the `#petri` node if possible, or creates a connected Person node.
+- **Author**: If you set `author: Petri Leinonen`, the system matches it to the `/en/petri-leinonen#petri` node if possible, or creates a connected Person node.
 - **FAQ**: FAQs are automatically embedded and linked.
 
 ### Linking Entities

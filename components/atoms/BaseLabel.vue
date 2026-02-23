@@ -11,11 +11,9 @@ defineProps<{ forId?: string }>();
 <style scoped>
 label {
   display: block;
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--space-xs);
   font-size: var(--size-2);
   font-weight: 500;
   color: var(--color-fg);
 }
 </style>
-
-

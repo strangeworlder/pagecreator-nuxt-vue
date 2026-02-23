@@ -44,7 +44,16 @@ for (const file of contentFiles) {
   } catch { }
 }
 const contentRoutes = Array.from(
-  new Set(["/", `/${DEFAULT_LOCALE}`, "/llms.txt", "/llms-full.txt", ...contentFiles.map(fileToRoute), ...aliasRoutes]),
+  new Set([
+    "/",
+    `/${DEFAULT_LOCALE}`,
+    "/llms.txt",
+    "/llms-full.txt",
+    "/en/rss.xml",
+    "/fi/rss.xml",
+    ...contentFiles.map(fileToRoute),
+    ...aliasRoutes,
+  ]),
 );
 export default {
   components: [{ path: "~/components", pathPrefix: false }],
@@ -83,11 +92,32 @@ export default {
         { name: "msapplication-TileColor", content: "#304e85" },
       ],
       link: [
+        // Google Fonts preconnect and stylesheet
+        { rel: "preconnect", href: "https://fonts.googleapis.com" },
+        { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@900&display=swap"
+        },
         { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
         { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
         { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
         { rel: "manifest", href: "/site.webmanifest" },
         { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#405e95" },
+        {
+          rel: "alternate",
+          type: "application/rss+xml",
+          title: "Gogam News (English)",
+          href: "/en/rss.xml",
+          hreflang: "en",
+        },
+        {
+          rel: "alternate",
+          type: "application/rss+xml",
+          title: "Gogam Uutiset (Suomi)",
+          href: "/fi/rss.xml",
+          hreflang: "fi",
+        },
       ],
     },
   },
@@ -122,6 +152,8 @@ export default {
     "/": { isr: ISR_TTL },
     "/llms.txt": { prerender: true },
     "/llms-full.txt": { prerender: true },
+    "/en/rss.xml": { prerender: true },
+    "/fi/rss.xml": { prerender: true },
     "/en/**": { isr: ISR_TTL },
     "/fi/**": { isr: ISR_TTL },
     "/sv/**": { isr: ISR_TTL },

@@ -3,7 +3,7 @@ title: 'Gogam: Roleplaying games from Finland'
 description: >-
   Roleplaying games by Petri Leinonen. Indie tabletop RPGs like Cars & Family,
   and Vuosisata.
-dateModified: 2026-02-15
+dateModified: 2026-02-23
 datePublished: 2025-12-29
 tags:
   - starter
@@ -27,29 +27,7 @@ organization:
     Finland.
   founder:
     name: Petri Leinonen
-    jobTitle:
-      - TTRPG Designer
-      - TTRPG Developer
-      - TTRPG Publisher
-      - Layout artist
-      - Artist
-      - Illustrator
-    url: 'https://gogam.eu'
-    description: >-
-      Finnish TTRPG designer and founder of Gogam, known for minimalist games
-      and high-quality Finnish supplements.
-    sameAs:
-      - 'https://rpggeek.com/rpgdesigner/111688/petri-leinonen'
-      - 'https://www.drivethrurpg.com/en/browse?author=%22Petri%20Leinonen%22'
-      - 'https://strangeworlder.itch.io/'
-      - 'https://strangeworlder.medium.com/'
-      - 'https://bsky.app/profile/strangeworlder.bsky.social'
-      - 'https://www.threads.com/@gogam.eu'
-    knowsAbout:
-      - 'https://www.wikidata.org/wiki/Q1643932'
-      - 'https://www.wikidata.org/wiki/Q858057'
-      - 'https://www.wikidata.org/wiki/Q91825444'
-      - 'https://www.wikidata.org/wiki/Q108357966'
+    '@id': 'https://gogam.eu/en/petri-leinonen#petri'
   games:
     - name: Cars & Family
       '@id': 'https://gogam.eu/#game-cars-and-family'
@@ -114,6 +92,9 @@ llms_context: >
 ## Gogam
 
 Gogam is the indie tabletop roleplaying game brand of designer Petri Leinonen. Based in Finland, Gogam publishes minimalist games and supplements like *Cyberpunk is Dead* and *Cars & Family*. A full-on indie powerhouse, churning out small, super-innovative games one after the other. The "Gogam" part of the business focuses on digital releases and indie games.
+
+::latest-news
+::
 
 ### Key Facts
 

@@ -119,8 +119,9 @@ interface CreativeWorkBase {
 
 // Global Identifiers
 const PETRI_IDENTITY = {
-  "@id": "https://gogam.eu/#petri", // Base URL will be prepended or logic used to keep this consistent
+  "@id": "https://gogam.eu/en/petri-leinonen#petri", // Base URL will be prepended or logic used to keep this consistent
   name: "Petri Leinonen",
+  url: "https://gogam.eu/en/petri-leinonen",
   sameAs: [
     "https://rpggeek.com/rpgdesigner/111688/petri-leinonen",
     "https://www.drivethrurpg.com/en/browse?author=%22Petri%20Leinonen%22",
@@ -298,9 +299,7 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
     if (hasDefaultLocaleVariant) {
       const defaultCode = formatHreflang(defaultLocale);
       let defaultHrefPath: string;
-      const explicitDefault = alternates.find(
-        (a) => formatHreflang(a.code) === defaultCode
-      );
+      const explicitDefault = alternates.find((a) => formatHreflang(a.code) === defaultCode);
 
       if (defaultCode === formattedDocumentLocale) {
         defaultHrefPath = path;
@@ -319,7 +318,7 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
 
     // 1. MASTER NODE DEFINITIONS
     const ORG_MASTER_ID = `${baseUrl}/#organization`;
-    const PERSON_MASTER_ID = `${baseUrl}/#petri`;
+    const PERSON_MASTER_ID = `${baseUrl}/en/petri-leinonen#petri`;
     const WEBSITE_MASTER_ID = `${baseUrl}/#website`;
 
     // Page-Specific IDs
@@ -327,8 +326,11 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
     const faqId = `${url}#faq`;
     const breadcrumbId = `${url}#breadcrumb`;
 
-    // Identity Hub Condition: The Home Page (/) is the Master for Org and Person
+    // Identity Hub Condition: The Home Page (/) is the Master for Org
     const isIdentityHub = doc._path === "/" || doc.canonical === "/";
+    const isPersonIdentityHub = !!(
+      doc._path?.includes("petri-leinonen") || doc.canonical?.includes("petri-leinonen")
+    );
     const graph: Record<string, unknown>[] = [];
 
     // 2. ORGANIZATION NODE
@@ -396,17 +398,17 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
 
     // 3. PERSON NODE
     if (doc.organization?.founder || doc.author) {
-      const f = doc.organization?.founder || doc.author || {};
+      const f = doc.author || doc.organization?.founder || {};
       const personName =
         f.name || (typeof doc.author === "string" ? doc.author : PETRI_IDENTITY.name);
 
-      if (isIdentityHub) {
+      if (isPersonIdentityHub) {
         // [MASTER NODE] - Full Metadata
         const personNode: Record<string, unknown> = {
           "@type": "Person",
           "@id": PERSON_MASTER_ID,
           name: personName,
-          url: toAbsolute(f.url) || siteUrl,
+          url: toAbsolute(f.url) || PETRI_IDENTITY.url || siteUrl,
           jobTitle: f.jobTitle,
           description: f.description,
           sameAs: PETRI_IDENTITY.sameAs,
@@ -454,16 +456,14 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
       // START BREADCRUMB INJECTION
       // Check for Series Membership (partOfSeries)
       if (doc.partOfSeries) {
-        const seriesRaw = Array.isArray(doc.partOfSeries)
-          ? doc.partOfSeries[0]
-          : doc.partOfSeries;
+        const seriesRaw = Array.isArray(doc.partOfSeries) ? doc.partOfSeries[0] : doc.partOfSeries;
 
         // Only proceed if we have an object with name and url
         if (
           seriesRaw &&
-          typeof seriesRaw === 'object' &&
-          'name' in seriesRaw &&
-          'url' in seriesRaw
+          typeof seriesRaw === "object" &&
+          "name" in seriesRaw &&
+          "url" in seriesRaw
         ) {
           itemListElement.push({
             "@type": "ListItem",
@@ -585,9 +585,8 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
       if (doc.license) itemNode.license = doc.license;
 
       // VideoObject / TVEpisode Specifics
-      const isVideoOrEpisode = (Array.isArray(schemaType) ? schemaType : [schemaType]).some(
-        (t) =>
-          ["VideoObject", "TVEpisode"].includes(t as string)
+      const isVideoOrEpisode = (Array.isArray(schemaType) ? schemaType : [schemaType]).some((t) =>
+        ["VideoObject", "TVEpisode"].includes(t as string),
       );
 
       if (isVideoOrEpisode) {
@@ -612,7 +611,11 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
         }
 
         // WatchAction
-        if (doc.contentUrl && typeof doc.contentUrl === 'string' && doc.contentUrl.includes('youtube.com')) {
+        if (
+          doc.contentUrl &&
+          typeof doc.contentUrl === "string" &&
+          doc.contentUrl.includes("youtube.com")
+        ) {
           itemNode.potentialAction = {
             "@type": "WatchAction",
             target: {
@@ -620,13 +623,13 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
               urlTemplate: doc.contentUrl,
               actionPlatform: [
                 "http://schema.org/DesktopWebPlatform",
-                "http://schema.org/MobileWebPlatform"
-              ]
+                "http://schema.org/MobileWebPlatform",
+              ],
             },
             expectsAcceptanceOf: {
               "@type": "Offer",
-              category: "free"
-            }
+              category: "free",
+            },
           };
         }
       }
@@ -650,7 +653,7 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
       // If external, full Stub (Name + ID/URL).
       // Lineage (isBasedOn)
       if (doc.isBasedOn) {
-        if (typeof doc.isBasedOn === 'string') {
+        if (typeof doc.isBasedOn === "string") {
           itemNode.isBasedOn = doc.isBasedOn;
         } else {
           const based = doc.isBasedOn as any;
@@ -661,9 +664,9 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
             url: based.url,
             author: based.author
               ? {
-                "@type": "Person",
-                name: based.author.name || based.author,
-              }
+                  "@type": "Person",
+                  name: based.author.name || based.author,
+                }
               : undefined,
           };
         }
@@ -710,7 +713,14 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
           // Pedantic Rule: Use 'character' for VideoObject/Series
           if (
             (Array.isArray(schemaType) ? schemaType : [schemaType]).some((t) =>
-              ["VideoObject", "TVEpisode", "CreativeWorkSeries", "Movie", "TVSeries", "RadioSeries"].includes(t as string)
+              [
+                "VideoObject",
+                "TVEpisode",
+                "CreativeWorkSeries",
+                "Movie",
+                "TVSeries",
+                "RadioSeries",
+              ].includes(t as string),
             )
           ) {
             itemNode.character = entities;
@@ -734,9 +744,9 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
             name: c.name,
             author: c.author
               ? {
-                "@type": "Person",
-                name: typeof c.author === "string" ? c.author : c.author.name,
-              }
+                  "@type": "Person",
+                  name: typeof c.author === "string" ? c.author : c.author.name,
+                }
               : undefined,
             datePublished: c.datePublished,
             isbn: c.isbn,
@@ -890,12 +900,17 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
     };
 
     // Social Meta Tags Logic
-    const isVideoContent = (Array.isArray(schemaType) ? schemaType : [schemaType]).some(t =>
-      ["VideoObject", "TVEpisode"].includes(t as string)
+    const isVideoContent = (Array.isArray(schemaType) ? schemaType : [schemaType]).some((t) =>
+      ["VideoObject", "TVEpisode"].includes(t as string),
     );
 
-    if (isVideoContent && doc.contentUrl && typeof doc.contentUrl === 'string' && doc.contentUrl.includes('youtube.com')) {
-      const videoId = doc.contentUrl.split('v=')[1]?.split('&')[0];
+    if (
+      isVideoContent &&
+      doc.contentUrl &&
+      typeof doc.contentUrl === "string" &&
+      doc.contentUrl.includes("youtube.com")
+    ) {
+      const videoId = doc.contentUrl.split("v=")[1]?.split("&")[0];
       if (videoId) {
         const embedUrl = `https://www.youtube.com/embed/${videoId}`;
         meta.push({ property: "og:video", content: embedUrl });

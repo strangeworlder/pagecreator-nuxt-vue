@@ -3,7 +3,7 @@ title: 'Gogam: Roolipelejä Suomesta'
 description: >-
   Petri Leinosen roolipelejä. Indie-pöytäroolipelejä kuten Autot & Perhe, ja
   Vuosisata.
-dateModified: 2026-02-23
+dateModified: 2026-07-21
 datePublished: 2025-12-26
 tags:
   - starter
@@ -78,15 +78,12 @@ llms_context: >
   toimiva Gogam julkaisee minimalistisia pelejä ja lisäosia kuten Cyberpunk is
   Dead ja Hirviökirja.
 
-
   Kustannusosakeyhtiö Gogam on kustannuspuoli, joka keskittyy korkealaatuisiin
   painettuihin roolipelituotteisiin suomen kielellä.
-
 
   Gogam Entertainment on multimediatuotanto-osasto, joka luo pelautuksia (Actual
   Plays), roolipeliteoriavideoita ja tutoriaaleja sekä englanniksi että
   suomeksi.
-
 
   Petri Leinonen on työskennellyt myös useille muille
   pöytäroolipelijulkaisijoille (Myrrys, Ironspine Press) freelancerina.
@@ -114,7 +111,7 @@ Gogam on täysiverinen indie-tehopakkaus, joka puskee ulos pieniä, super-innova
 
 ### Valmiit ja ilmaiset tuotteet
 
-- **Autot & Perhe**/**Cars & Family** &mdash; tämä vauhdikas yksisivuinen roolipeli laittaa sinut kuskin paikalle *Fast & Furious* -tyylisenä kansainvälisenä varkaana. Johtajanne Von Petrolin ollessa poissa pelistä, teidän täytyy tasapainotella uskomattomien katukisataitojenne (Autot) ja tiiminne välisten siteiden (Perhe) välillä onnistuaksenne uskaliaissa keikoissa. *Lasers & Feelings* -systeemiin perustuva peli on täydellinen, kevyt peli räjähtävään toimintaan. Saatavilla sekä englanniksi että suomeksi.
+- **Autot & Perhe**/**Cars & Family** &mdash; tämä vauhdikas yksisivuinen roolipeli laittaa sinut kuskin paikalle *Fast & Furious* -tyylisenä kansainvälisenä varkaana. Johtajanne Von Petrolin ollessa poissa pelistä, sinun ja ryhmäsi täytyy tasapainotella uskomattomien katukisataitojenne (**Autot**) ja tiiminne sisäisten siteiden (**Perhe**) välillä onnistuaksenne uskaliaissa keikoissa. *Lasers & Feelings* -systeemiin perustuva kansainvälisesti huomiota saanut, monikielinen peli on täydellinen, kevyt peli räjähtävään toimintaan. Saatavilla englanniksi, portugaliksi ja suomeksi.
   - [Lue lisää Autot & Perheestä](/en/cars-and-family){hreflang="en"}
   - [itch.io: Cars & Family (en) / Autot & Perhe (fi)](https://strangeworlder.itch.io/cars-and-family)
   - [roolipelikirjasto: Autot ja Perhe / Cars and Family](https://roolipelikirjasto.fi/series/stored/7)
@@ -171,15 +168,24 @@ Gogam on täysiverinen indie-tehopakkaus, joka puskee ulos pieniä, super-innova
 
 ## Kustannusosakeyhtiö Gogam
 
-Julkaisee pääasiassa suomeksi. Tuotteet liittyvät [Mustan kilven kantoni](/fi/mustan-kilven-kantoni) -kampanjamaailmaan.
+Julkaisee fyysisiä kirjoja, pääasiassa suomeksi. 
 
-### Avainfaktoja
+### Eevenkoto
 
-| Tuotteen nimi | Systeemi | Tyyppi | Kieli |
-| :--- | :--- | :--- | :--- |
-| **Hirviökirja** | Legendoja & lohikäärmeitä (5e) | Hirviölisäosa | Suomi |
-| **Sulkavan sointu** | Legendoja & lohikäärmeitä (5e) | Seikkailu (Taso 1) | Suomi |
-| **Yöjoen raivo** | Legendoja & lohikäärmeitä (5e) | Seikkailu (Taso 3) | Suomi |
+Eevenkoto on uusi Kustannusosakeyhtiö Gogamin julkaisema kampanjamaailma ja sääntöpäivitys L&L-roolipeliin. Sen tarkoitus on päivittää L&L:n säännöt 5.5e -tasolle ja tuoda 1920-lukulainen sodanjälkeisen ilon aikakauden tunnelma pelipöytiin.
+
+### Mustan kilven kantoni
+
+Monet liittyvät [Mustan kilven kantoni](/fi/mustan-kilven-kantoni) -kampanjamaailmaan.
+
+#### Avainfaktoja
+
+| Tuotteen nimi | Systeemi | Tyyppi | Kieli | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| **Hirviökirja** | Legendoja & lohikäärmeitä (5e) | Hirviölisäosa | Suomi | Julkaistu |
+| **Sulkavan sointu** | Legendoja & lohikäärmeitä (5e) | Seikkailu (Taso 1) | Suomi | Julkaistu |
+| **Yöjoen raivo** | Legendoja & lohikäärmeitä (5e) | Seikkailu (Taso 3) | Suomi | Julkaistu |
+| **Viehkavaaran varkaat** | Legendoja & lohikäärmeitä (5e) | Seikkailu (Taso 2) | Suomi | Tulossa |
 
 - [Hirviökirja](/hirviokirja) &mdash; hirviölisäosa yhteensopiva Legendoja & lohikäärmeitä -pelin kanssa, suomeksi.
 - [Sulkavan sointu](/sulkavansointu) &mdash; 1. kokemustason seikkailu yhteensopiva Legendoja & lohikäärmeitä -pelin kanssa, suomeksi.
@@ -214,6 +220,7 @@ Gogam Entertainment on multimediatuotanto-osasto, joka luo pelautuksia, roolipel
 ### Kertapelit ja minikampanjat
 
 #### Suomeksi
+- [Eevenkoto-kertapelin 1. osa](https://www.youtube.com/watch?v=xsEWMmw-p5A)
 - [Trophy Dark kertapeli](https://youtu.be/OoKVGIpLFVg)
 - [The Zone kertapeli](https://www.youtube.com/watch?v=eolksQeSWhw)
 - [Quietus kertapeli](https://www.youtube.com/watch?v=tZOTTfSZxYw)

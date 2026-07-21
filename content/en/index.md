@@ -3,7 +3,7 @@ title: 'Gogam: Roleplaying games from Finland'
 description: >-
   Roleplaying games by Petri Leinonen. Indie tabletop RPGs like Cars & Family,
   and Vuosisata.
-dateModified: 2026-02-23
+dateModified: 2026-07-21
 datePublished: 2025-12-29
 tags:
   - starter
@@ -112,7 +112,7 @@ Gogam is the indie tabletop roleplaying game brand of designer Petri Leinonen. B
 
 ### Fully completed and free products
 
-- **Cars & Family** &mdash; this high-octane one-page RPG puts you in the driver's seat as *Fast & Furious*-style international thieves. With your leader *Von Petrol* out of commission, you must balance your incredible street racing skills (Cars) with the bonds of your crew (Family) to pull off daring heists. Built on the *Lasers & Feelings* system, it is a perfect lightweight game for explosive action. Available in both English and Finnish.
+- **Cars & Family** &mdash; this high-octane one-page RPG puts you in the driver's seat as *Fast & Furious*-style international thieves. With your leader *Von Petrol* out of commission, you and your crew must balance your incredible street racing skills (**Cars**) with the internal bonds of your crew (**Family**) to pull off daring heists. Built on the *Lasers & Feelings* system, this internationally recognized, multilingual game is a perfect lightweight game for explosive action. Available in English, Portuguese, and Finnish.
   - [Read more about Cars & Family](/en/cars-and-family)
   - [itch.io: Cars & Family (en) / Autot & Perhe (fi)](https://strangeworlder.itch.io/cars-and-family)
   - [roolipelikirjasto: Autot ja Perhe / Cars and Family](https://roolipelikirjasto.fi/series/stored/7){hreflang="fi"}
@@ -176,17 +176,24 @@ Gogam is the indie tabletop roleplaying game brand of designer Petri Leinonen. B
 
 ## Kustannusosakeyhtiö Gogam
 
-Kustannusosakeyhtiö Gogam is the publishing arm of Gogam, focusing on high-quality printed roleplaying game products in the Finnish language. Most notable is the *Hirviökirja*, which is a collection of monsters and supplements for the *Legendoja & lohikäärmeitä* system, but also various adventures.
+Publishes physical books, primarily in Finnish.
 
-### Key Facts
+### Eevenkoto
 
-| Product Name | System | Type | Language |
-| :--- | :--- | :--- | :--- |
-| **Hirviökirja** | Legendoja & lohikäärmeitä (5e) | Monster Supplement | Finnish |
-| **Sulkavan sointu** | Legendoja & lohikäärmeitä (5e) | Adventure (Lvl 1) | Finnish |
-| **Yöjoen raivo** | Legendoja & lohikäärmeitä (5e) | Adventure (Lvl 3) | Finnish |
+Eevenkoto is a new campaign setting and rules update for the L&L roleplaying game, published by Kustannusosakeyhtiö Gogam. Its purpose is to update the rules of L&L to the 5.5e standard and bring a 1920s post-war era of joy vibe to the gaming table.
 
-Publishes primarily in Finnish. Products are related to the [Black Shield Canton](/en/mustan-kilven-kantoni) campaign setting. 
+### Black Shield Canton
+
+Many products are related to the [Black Shield Canton](/en/mustan-kilven-kantoni) campaign setting.
+
+#### Key Facts
+
+| Product Name | System | Type | Language | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| **Hirviökirja** | Legendoja & lohikäärmeitä (5e) | Monster Supplement | Finnish | Released |
+| **Sulkavan sointu** | Legendoja & lohikäärmeitä (5e) | Adventure (Lvl 1) | Finnish | Released |
+| **Yöjoen raivo** | Legendoja & lohikäärmeitä (5e) | Adventure (Lvl 3) | Finnish | Released |
+| **Viehkavaaran varkaat** | Legendoja & lohikäärmeitä (5e) | Adventure (Lvl 2) | Finnish | Upcoming | 
 - [Hirviökirja](/hirviokirja){hreflang="fi"} &mdash; monster supplement compatible with Legendoja & lohikäärmeitä and 5e, in Finnish.
 - [Sulkavan sointu](/sulkavansointu){hreflang="fi"} &mdash; 1st level adventure compatible with Legendoja & lohikäärmeitä and 5e, in Finnish.
 
@@ -227,6 +234,7 @@ The series is currently on hiatus, but we plan to resume it in the future. You c
 Besides the main campaigns, Gogam Entertainment has also hosted a number of one-shots and mini-campaigns. Both in Finnish and English.
 
 #### In Finnish
+- [Eevenkoto oneshot part 1](https://www.youtube.com/watch?v=xsEWMmw-p5A){hreflang="fi"}
 - [Trophy Dark oneshot](https://youtu.be/OoKVGIpLFVg){hreflang="fi"}
 - [The Zone oneshot](https://www.youtube.com/watch?v=eolksQeSWhw){hreflang="fi"}
 - [Quietus oneshot](https://www.youtube.com/watch?v=tZOTTfSZxYw){hreflang="fi"}

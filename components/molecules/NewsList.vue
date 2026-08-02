@@ -11,7 +11,7 @@ const route = useRoute();
 // extract locale
 const locale = computed(() => {
   const match = route.path.match(/^\/([a-z]{2})\b/);
-  return match ? match[1] : "en";
+  return match ? match[1] : "fi";
 });
 
 // Fetch news articles

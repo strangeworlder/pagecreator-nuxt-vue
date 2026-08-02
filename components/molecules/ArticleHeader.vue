@@ -18,7 +18,7 @@ const props = defineProps<{
 const route = useRoute();
 const locale = computed(() => {
   const match = route.path.match(/^\/([a-z]{2})\b/);
-  return match ? match[1] : "en";
+  return match ? match[1] : "fi";
 });
 
 const formattedDate = computed(() => {

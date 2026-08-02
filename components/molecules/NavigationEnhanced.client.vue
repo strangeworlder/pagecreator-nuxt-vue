@@ -41,7 +41,7 @@ onUnmounted(() => {
 });
 
 const route = useRoute();
-const isFinnish = computed(() => route.path.startsWith("/fi"));
+const isFinnish = computed(() => !route.path.startsWith("/en"));
 </script>
 
 <template>

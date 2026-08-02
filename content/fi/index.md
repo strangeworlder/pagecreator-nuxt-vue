@@ -182,12 +182,13 @@ Monet liittyvät [Mustan kilven kantoni](/fi/mustan-kilven-kantoni) -kampanjamaa
 
 #### Avainfaktoja
 
-| Tuotteen nimi | Systeemi | Tyyppi | Kieli | Status |
-| :--- | :--- | :--- | :--- | :--- |
-| **Hirviökirja** | Legendoja & lohikäärmeitä (5e) | Hirviölisäosa | Suomi | Julkaistu |
-| **Sulkavan sointu** | Legendoja & lohikäärmeitä (5e) | Seikkailu (Taso 1) | Suomi | Julkaistu |
-| **Yöjoen raivo** | Legendoja & lohikäärmeitä (5e) | Seikkailu (Taso 3) | Suomi | Julkaistu |
-| **Viehkavaaran varkaat** | Legendoja & lohikäärmeitä (5e) | Seikkailu (Taso 2) | Suomi | Tulossa |
+| Tuotteen nimi | Systeemi | Tyyppi | Kieli | Status | Julkaisuajankohta |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Hirviökirja** | Legendoja & lohikäärmeitä (5e) | Hirviölisäosa | Suomi | Julkaistu | Joulu 2022 |
+| **Sulkavan sointu** | Legendoja & lohikäärmeitä (5e) | Seikkailu (Taso 1) | Suomi | Julkaistu | Ropecon 2023 |
+| **Viehkavaaran varkaat** | Legendoja & lohikäärmeitä (5e) | Seikkailu (Taso 2) | Suomi | Tulossa | Tulossa |
+| **Yöjoen raivo** | Legendoja & lohikäärmeitä (5e) | Seikkailu (Taso 3) | Suomi | Julkaistu | Kevät 2024 |
+| **Tervetuloa Eevenkotoon** | Legendoja & lohikäärmeitä (5.5e) | Opaskirja maailmaan | Suomi | Julkaistu | Ropecon 2026 |
 
 - [Hirviökirja](/hirviokirja) &mdash; hirviölisäosa yhteensopiva Legendoja & lohikäärmeitä -pelin kanssa, suomeksi.
 - [Sulkavan sointu](/sulkavansointu) &mdash; 1. kokemustason seikkailu yhteensopiva Legendoja & lohikäärmeitä -pelin kanssa, suomeksi.
@@ -243,9 +244,9 @@ Gogam Entertainment on multimediatuotanto-osasto, joka luo pelautuksia, roolipel
 
 Petri Leinonen on työskennellyt useille muille pöytäroolipelijulkaisijoille vuosien varrella freelancerina.
 
-### Myrrys
+### Myrrys Oy
 
-Myrrys on Legendoja & lohikäärmeitä -pelin julkaisija, Suomen suosituin pöytäroolipeli.
+Myrrys on Legendoja & lohikäärmeitä -pelin julkaisija. L&L on Suomen suosituin pöytäroolipeli joka perustuu maailman suosituimman roolipelin viidenteen laitokseen. Petri Leinonen on ollut Legendoja & lohikäärmeitä -projektissa mukana sen alkuvaiheista asti, ja hänen roolinsa on tulevan 2. laitoksen myötä kasvanut pelin sääntösuunnittelijakksi.
 
 #### Painetut kirjat
 
@@ -254,6 +255,9 @@ Myrrys on Legendoja & lohikäärmeitä -pelin julkaisija, Suomen suosituin pöyt
   - **Pelinjohtajan kirja**: Pelisuunnittelu, kehitys, taitto
   - **Suuri Seikkailu**: Suunnittelu, taitto
   - **Velhon torni**: Pelisuunnittelu, taitto
+  - **Kaukasalo: Maailmakirja**: taitto
+- **Legendoja & lohikäärmeitä 2. laitos**: Suomenkielinen 5.5e-yhteensopiva fantasia-roolipeli.
+  - Sääntösuunnittelija.
 - [The Quick](http://www.drivethrurpg.com/product/245906/The-Quick): Roolipeli kuolemasta ja aaveista ja Nordic Noirista. Rooli projektissa: Pelisuunnittelija.
 - [Katso Petri Leinonen DriveThruRPG:ssä](https://www.drivethrurpg.com/en/browse?author=%22Petri%20Leinonen%22)
 

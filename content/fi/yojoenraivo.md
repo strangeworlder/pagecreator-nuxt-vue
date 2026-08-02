@@ -79,6 +79,7 @@ mentions:
       name: Wille Ruotsalainen
       jobTitle: Pelisuunnittelija
     datePublished: 2026-01-01T00:00:00.000Z
+isbn: '9789526503066'
 offers:
   - name: Fantasiapelit
     url: >-

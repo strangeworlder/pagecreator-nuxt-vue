@@ -14,7 +14,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   // Track the timestamp of the version currently shown to the user
   // Start at 0 so the first client poll can always reconcile against the file mtime
   const shownAtState = useState<number>("content-shown-at", () => 0);
-  const defaultLocale = runtime.public.defaultLocale || "en";
+  const defaultLocale = runtime.public.defaultLocale || "fi";
   // Enrichment gating: disabled until first successful client-side reload
   const enhancementsEnabled = useState<boolean>("content-enhance-ready", () => false);
   const firstCheckDone = useState<boolean>("content-first-check-done", () => false);

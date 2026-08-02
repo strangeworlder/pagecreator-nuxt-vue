@@ -38,7 +38,7 @@ import { MDCSlot } from "#components";
 
 const route = useRoute();
 const runtime = useRuntimeConfig();
-const defaultLocale = runtime.public.defaultLocale || "en";
+const defaultLocale = runtime.public.defaultLocale || "fi";
 
 const resolveContentPath = (path: string) => {
   // Normalize path: ensure leading slash, collapse duplicates, drop trailing slash, map '/:locale/index' -> '/:locale'

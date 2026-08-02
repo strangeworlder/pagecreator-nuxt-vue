@@ -79,7 +79,7 @@ function generateAsciiTree(paths: string[]): string {
 export default defineEventHandler(async (event) => {
   const runtime = useRuntimeConfig(event);
   const siteUrl: string = runtime.public.siteUrl;
-  const defaultLocale = runtime.public.defaultLocale || "en";
+  const defaultLocale = runtime.public.defaultLocale || "fi";
 
   // Re-fetch Home for the "North Star" description
   const homePath = `/${defaultLocale}`;

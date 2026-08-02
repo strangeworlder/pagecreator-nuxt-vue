@@ -21,7 +21,7 @@ export function useContentLinkPreview() {
   const getContentPreview = async (path: string): Promise<ContentPreview | null> => {
     const route = useRoute();
     const runtime = useRuntimeConfig();
-    const defaultLocale = (runtime.public?.defaultLocale as string) || "en";
+    const defaultLocale = (runtime.public?.defaultLocale as string) || "fi";
     const SUPPORTED_LOCALES = new Set(["en", "fi", "sv"]);
     const firstSeg = (p: string) => (p.split("/")[1] || "").trim();
     const routeFirst = firstSeg(route.path);

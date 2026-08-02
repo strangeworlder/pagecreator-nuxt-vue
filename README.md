@@ -1,3 +1,6 @@
+---
+dateModified: 2026-08-02
+---
 ## TSS: Generative‑Engine‑Optimized Vue SSR Starter (Nuxt 3 + Markdown)
 
 ### Overview
@@ -41,7 +44,7 @@ git clone <this-repo-url> tss && cd tss
 # Create .env (adjust values as needed)
 cat > .env << 'EOF'
 NUXT_PUBLIC_SITE_URL=http://localhost:3000
-NUXT_PUBLIC_DEFAULT_LOCALE=en
+NUXT_PUBLIC_DEFAULT_LOCALE=fi
 NUXT_PUBLIC_SUPPORTED_LOCALES=en,fi,sv
 # Dev server ports (override if needed)
 APP_PORT=3000

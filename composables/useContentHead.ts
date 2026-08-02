@@ -149,7 +149,7 @@ function removeTrailingSlash(path: string): string {
 
 export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null | undefined>) {
   const runtime = useRuntimeConfig();
-  const defaultLocale = runtime.public.defaultLocale || "en";
+  const defaultLocale = runtime.public.defaultLocale || "fi";
   const siteUrl: string = runtime.public.siteUrl || "";
   const siteName: string = runtime.public.siteName || "Gogam";
 

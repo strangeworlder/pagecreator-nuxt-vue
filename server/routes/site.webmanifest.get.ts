@@ -2,7 +2,7 @@ import { serverQueryContent } from "#content/server";
 
 export default defineEventHandler(async (event) => {
   const runtime = useRuntimeConfig();
-  const defaultLocale = runtime.public.defaultLocale || "en";
+  const defaultLocale = runtime.public.defaultLocale || "fi";
 
   const homePath = `/${defaultLocale}`;
   const home = await serverQueryContent(event).where({ _path: homePath }).findOne();

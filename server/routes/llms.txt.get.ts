@@ -3,7 +3,7 @@ import { serverQueryContent } from "#content/server";
 export default defineEventHandler(async (event) => {
   const runtime = useRuntimeConfig(event);
   const siteUrl: string = runtime.public.siteUrl;
-  const defaultLocale: string = runtime.public.defaultLocale || "en";
+  const defaultLocale: string = runtime.public.defaultLocale || "fi";
 
   // Fetch Home for definition and metadata
   const homePath = `/${defaultLocale}`;

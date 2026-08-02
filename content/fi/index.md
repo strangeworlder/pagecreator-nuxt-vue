@@ -1,8 +1,10 @@
 ---
 title: 'Gogam: Roolipelejä Suomesta'
 description: >-
-  Petri Leinosen roolipelejä. Indie-pöytäroolipelejä kuten Autot & Perhe, ja
-  Vuosisata.
+  Petri Leinosen roolipelejä. Legendoja & lohikäärmeitä -yhteensopiva maailmoja
+  ja lähdekirjoja Eevenkoto -maailmaan ja Mustan kilven kantoniin.
+  Indie-pöytäroolipelejä kuten Autot & Perhe, ja Vuosisata. Muuta
+  julkaisutoimintaa.
 dateModified: 2026-08-02
 datePublished: 2025-12-26
 tags:
@@ -189,6 +191,7 @@ Monet liittyvät [Mustan kilven kantoni](/fi/mustan-kilven-kantoni) -kampanjamaa
 
 - [Hirviökirja](/hirviokirja) &mdash; hirviölisäosa yhteensopiva Legendoja & lohikäärmeitä -pelin kanssa, suomeksi.
 - [Sulkavan sointu](/sulkavansointu) &mdash; 1. kokemustason seikkailu yhteensopiva Legendoja & lohikäärmeitä -pelin kanssa, suomeksi.
+- [Yöjoen raivo](/yojoenraivo) &mdash; 3. kokemustason seikkailu yhteensopiva Legendoja & lohikäärmeitä -pelin kanssa, suomeksi.
 
 ## Gogam Entertainment
 

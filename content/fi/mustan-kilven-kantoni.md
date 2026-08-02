@@ -20,7 +20,7 @@ author:
     - 'https://bsky.app/profile/strangeworlder.bsky.social'
     - 'https://www.threads.com/@gogam.eu'
 datePublished: 2025-12-28
-dateModified: 2026-01-12
+dateModified: 2026-08-02
 tags:
   - L&L
   - maailma
@@ -56,6 +56,7 @@ hasPart:
     url: 'https://gogam.eu/sulkavansointu'
   - '@type': Book
     name: Yöjoen raivo
+    url: 'https://gogam.eu/yojoenraivo'
 faq:
   - q: Mikä on Mustan kilven kantoni?
     a: >-
@@ -191,4 +192,4 @@ Kyllä, maailman painotus tutkimusmatkailuun, proseduraaliseen generointiin (*Th
 *   **Them Deeper Bones**: [https://themdeeperbones.com/](https://themdeeperbones.com/), [Fantasiapelit](https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_221393)
 *   **Hirviökirja**: [/hirviokirja](http://gogam.eu/hirviokirja), [Puolenkuun pelit](https://www.puolenkuunpelit.com/kauppa/product_info.php?products_id=168296), [Fantasiapelit](https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_221394), [Laiska Pelikaani](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-hirviokirja-84744) / [PDF](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-hirviokirja-vesileimattu-pdf-81049)
 *   **Sulkavan sointu**: [/sulkavansointu/](http://gogam.eu/sulkavansointu/), [Puolenkuun pelit](https://www.puolenkuunpelit.com/kauppa/product_info.php?products_id=179450), [Fantasiapelit](https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_225693), [Laiska pelikaani](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-sulkavan-sointu-84879) / [PDF](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-sulkavan-sointu-vesileimattu-pdf-84945), [Pelikrypta Ikamaa](https://pelikrypta.fi/products/sulkavan-sointu)
-*   **Yöjoen raivo**: [Puolenkuun pelit](https://www.puolenkuunpelit.com/kauppa/product_info.php?products_id=189358), [Fantasiapelit](https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_230989), [Laiska pelikaani](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-yojoen-raivo-81803), [Pelikrypta Ikamaa](https://pelikrypta.fi/products/yojoen-raivo)
+*   **Yöjoen raivo**: [/yojoenraivo/](http://gogam.eu/yojoenraivo/), [Puolenkuun pelit](https://www.puolenkuunpelit.com/kauppa/product_info.php?products_id=189358), [Fantasiapelit](https://www.fantasiapelit.com/index.php?main=ai&kat=single&mista=indeksi&etsittava=_230989), [Laiska pelikaani](https://www.laiskapelikaani.fi/en/shop/legendoja-lohikaarmeita-yojoen-raivo-81803), [Pelikrypta Ikamaa](https://pelikrypta.fi/products/yojoen-raivo)

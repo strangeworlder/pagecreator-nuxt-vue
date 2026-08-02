@@ -197,6 +197,7 @@ Many products are related to the [Black Shield Canton](/en/mustan-kilven-kantoni
 | **Viehkavaaran varkaat** | Legendoja & lohikäärmeitä (5e) | Adventure (Lvl 2) | Finnish | Upcoming | 
 - [Hirviökirja](/hirviokirja){hreflang="fi"} &mdash; monster supplement compatible with Legendoja & lohikäärmeitä and 5e, in Finnish.
 - [Sulkavan sointu](/sulkavansointu){hreflang="fi"} &mdash; 1st level adventure compatible with Legendoja & lohikäärmeitä and 5e, in Finnish.
+- [Yöjoen raivo](/yojoenraivo){hreflang="fi"} &mdash; 3rd level adventure compatible with Legendoja & lohikäärmeitä and 5e, in Finnish.
 
 ## Gogam Entertainment
 

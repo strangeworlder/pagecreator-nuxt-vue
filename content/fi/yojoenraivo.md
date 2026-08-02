@@ -54,12 +54,14 @@ organization:
   sameAs:
     - 'https://instagram.com/gogam.eu'
     - 'https://gogameu.substack.com/'
-illustrator: Juno Viinikka
+illustrator:
+  name: Juno Viinikka
+  url: 'https://linktr.ee/junowski'
 facts:
   - label: System
     value: Legendoja & lohikäärmeitä (5e)
   - label: Tone
-    value: Tukkilaisromantiikka
+    value: Ekokatastrofi
 stats:
   - metric: Sivumäärä
     value: '24'
@@ -78,7 +80,7 @@ mentions:
       '@type': Person
       name: Wille Ruotsalainen
       jobTitle: Pelisuunnittelija
-    datePublished: 2026-01-01T00:00:00.000Z
+    datePublished: 2024-04-25T00:00:00.000Z
 isbn: '9789526503066'
 offers:
   - name: Fantasiapelit
@@ -141,10 +143,11 @@ Yöjoen raivo noudattaa Myrrysmiehet Oy:n Legendoja & lohikäärmeitä -roolipel
 ## Mikä on Yöjoen raivo?
 
 - 24 sivua L&L -yhteensopivaa materiaalia.
-- 3. tason hahmoille tarkoitettu seikkailu.
+- Kolmannen tason hahmoille tarkoitettu seikkailu.
 - Tasapainoisen kattauksen tutkimista, sosiaalista kanssakäyntiä ja taistelua.
 - Lisää tietoa Hirviökirjasta ja Sulkavan soinnusta tutun Mustan kilven kantonin jokialueista.
-- Julkaisija pelistudio Gogam.
+- Julkaisija Kustannusosakeyhtiö Gogam.
+- Kirjoittanut Wille Ruotsalainen ja kuvittanut Juno Viinikka.
 
 ![Mörkö, muinainen olento.](/images/products/yojoenraivo/morko.webp)
 

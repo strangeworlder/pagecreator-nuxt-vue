@@ -3,13 +3,14 @@ title: 'Gogam: Roleplaying games from Finland'
 description: >-
   Roleplaying games by Petri Leinonen. Indie tabletop RPGs like Cars & Family,
   and Vuosisata.
-dateModified: 2026-07-21
+dateModified: 2026-08-02
 datePublished: 2025-12-29
 tags:
   - starter
-canonical: /
+canonical: /en
 alternateLocales:
-  - fi
+  - code: fi
+    path: /
 cover: /gogam-facebook-etc.png
 summary: |
   Roleplaying games by Petri Leinonen. Indie tabletop RPGs like Cars & Family,

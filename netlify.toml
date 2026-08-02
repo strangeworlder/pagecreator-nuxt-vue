@@ -5,6 +5,7 @@
 [build.environment]
   NODE_VERSION = "20"
   NODE_ENV = "production"
+  NUXT_PUBLIC_DEFAULT_LOCALE = "fi"
   NUXT_PUBLIC_STATIC_HOSTING = "0"
   NUXT_PUBLIC_DISABLE_FRESHNESS = "0"
   PNPM_FLAGS = "--no-frozen-lockfile"

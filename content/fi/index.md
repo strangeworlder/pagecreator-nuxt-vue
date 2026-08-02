@@ -3,14 +3,14 @@ title: 'Gogam: Roolipelejä Suomesta'
 description: >-
   Petri Leinosen roolipelejä. Indie-pöytäroolipelejä kuten Autot & Perhe, ja
   Vuosisata.
-dateModified: 2026-07-21
+dateModified: 2026-08-02
 datePublished: 2025-12-26
 tags:
   - starter
-canonical: /fi
+canonical: /
 alternateLocales:
   - code: en
-    path: /
+    path: /en
 cover: /gogam-facebook-etc.png
 summary: |
   Petri Leinosen roolipelejä. Indie-pöytäroolipelejä kuten Autot & Perhe,

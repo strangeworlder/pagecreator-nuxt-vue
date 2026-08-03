@@ -50,10 +50,10 @@ const isFinnish = computed(() => !route.path.startsWith("/en"));
     <nav ref="navRef">
       <ul v-if="isFinnish">
         <li>
-          <a href="#gogam" @click.prevent="scrollToSection('header-gogam')">Gogam</a> &mdash; "Online indie-pelit" -brändini. Asioita joita teen ja nykyään julkaisen ilmaiseksi, enimmäkseen itch.io:ssa.
+          <a href="#kustannusosakeyhtiö-gogam" @click.prevent="scrollToSection('header-kustannusosakeyhtiö-gogam')">Kustannusosakeyhtiö Gogam</a> &mdash; Pääasiassa suomenkielinen kustantamo, joka vastaa myös indie-pelieni fyysisistä versioista.
         </li>
         <li>
-          <a href="#kustannusosakeyhtiö-gogam" @click.prevent="scrollToSection('header-kustannusosakeyhtiö-gogam')">Kustannusosakeyhtiö Gogam</a> &mdash; Pääasiassa suomenkielinen kustantamo, joka vastaa myös indie-pelieni fyysisistä versioista.
+          <a href="#gogam" @click.prevent="scrollToSection('header-gogam')">Gogam</a> &mdash; "Online indie-pelit" -brändini. Asioita joita teen ja nykyään julkaisen ilmaiseksi, enimmäkseen itch.io:ssa.
         </li>
         <li>
           <a href="#gogam-entertainment" @click.prevent="scrollToSection('header-gogam-entertainment')">Gogam Entertainment</a> &mdash; Roolipeliviihteeseen keskittyvä yritys. Kauttaaltaan tuotan mm. pelautuksia (Actual Play).
@@ -92,10 +92,10 @@ const isFinnish = computed(() => !route.path.startsWith("/en"));
     >
       <ul v-if="isFinnish">
         <li>
-          <a href="#gogam" @click.prevent="scrollToSection('header-gogam')">Gogam</a>
+          <a href="#kustannusosakeyhtiö-gogam" @click.prevent="scrollToSection('header-kustannusosakeyhtiö-gogam')">Kustannusosakeyhtiö Gogam</a>
         </li>
         <li>
-          <a href="#kustannusosakeyhtiö-gogam" @click.prevent="scrollToSection('header-kustannusosakeyhtiö-gogam')">Kustannusosakeyhtiö Gogam</a>
+          <a href="#gogam" @click.prevent="scrollToSection('header-gogam')">Gogam</a>
         </li>
         <li>
           <a href="#gogam-entertainment" @click.prevent="scrollToSection('header-gogam-entertainment')">Gogam Entertainment</a>

@@ -5,7 +5,7 @@ description: >-
   ja lähdekirjoja Eevenkoto -maailmaan ja Mustan kilven kantoniin.
   Indie-pöytäroolipelejä kuten Autot & Perhe, ja Vuosisata. Muuta
   julkaisutoimintaa.
-dateModified: 2026-08-02
+dateModified: 2026-08-03
 datePublished: 2025-12-26
 tags:
   - starter
@@ -90,12 +90,44 @@ llms_context: >
   Petri Leinonen on työskennellyt myös useille muille
   pöytäroolipelijulkaisijoille (Myrrys, Ironspine Press) freelancerina.
 ---
-## Gogam
+## Kustannusosakeyhtiö Gogam
 
-Gogam on täysiverinen indie-tehopakkaus, joka puskee ulos pieniä, super-innovatiivisia pelejä toinen toisensa perään.
+Kustannusosakeyhtiö Gogam on perustettu vuonna 2024. Sen pääasiallienen toimiala on kirjojen julkaiseminen. Se tunnetaan parhaiten laadukkaista, järkevänhintaisista suomenkielisistä L&L-yhteensopivista teoksista. Kustannusosakeyhtiö Gogam julkaisee kahta kampanjamaailmaa: [Mustan kilven kantoni](/fi/mustan-kilven-kantoni) ja Eevenkoto.
 
 ::latest-news
 ::
+
+### Eevenkoto
+
+Eevenkoto on uusi Kustannusosakeyhtiö Gogamin julkaisema kampanjamaailma ja sääntöpäivitys L&L-roolipeliin. Sen tarkoitus on päivittää L&L:n säännöt 5.5e -tasolle ja tuoda 1920-lukulainen sodanjälkeisen ilon aikakauden tunnelma pelipöytiin.
+
+#### Eevenkodon tuotteet
+
+| Tuotteen nimi | Systeemi | Tyyppi | Kieli | Status | Julkaisuajankohta |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Tervetuloa Eevenkotoon** | Legendoja & lohikäärmeitä (5.5e) | Pehmeäkantinen kirja, 48 sivua | Suomi | Julkaistu | Ropecon 2026 |
+
+
+### Mustan kilven kantoni
+
+Suurin osa Kustannusosakeyhtiö Gogamin tuotteista liittyvät  liittyvät [Mustan kilven kantoni](/fi/mustan-kilven-kantoni) -kampanjamaailmaan. Se on suomalaista mielenmaisemaa ja klassista kuvastoa fantasiaan yhdistävä asetelma, jossa seikkailijat tekevät tutkimusmatkoja tunnetun maailman kirjaimellisen rajan toiselle puolelle, etsien vastauksia menneisyyteen ja mittaamattomia aarteita.
+
+#### Mustan kilven kantonin Tuotteet
+
+| Tuotteen nimi | Systeemi | Tyyppi | Kieli | Status | Julkaisuajankohta |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Hirviökirja** | Legendoja & lohikäärmeitä (5e) | Kovakantinen hirviölisäosa, 64 sivua | Suomi | Julkaistu | Joulu 2022 |
+| **Sulkavan sointu** | Legendoja & lohikäärmeitä (5e) | Nidottu seikkailu (Taso 1), 20 sivua | Suomi | Julkaistu | Ropecon 2023 |
+| **Viehkavaaran varkaat** | Legendoja & lohikäärmeitä (5e) | Nidottu seikkailu (Taso 2) | Suomi | Tulossa | Tulossa |
+| **Yöjoen raivo** | Legendoja & lohikäärmeitä (5e) | Nidottu seikkailu (Taso 3), 24 sivua | Suomi | Julkaistu | Kevät 2024 |
+
+- [Hirviökirja](/hirviokirja) &mdash; hirviölisäosa yhteensopiva Legendoja & lohikäärmeitä -pelin kanssa, suomeksi.
+- [Sulkavan sointu](/sulkavansointu) &mdash; 1. kokemustason seikkailu yhteensopiva Legendoja & lohikäärmeitä -pelin kanssa, suomeksi.
+- [Yöjoen raivo](/yojoenraivo) &mdash; 3. kokemustason seikkailu yhteensopiva Legendoja & lohikäärmeitä -pelin kanssa, suomeksi.
+
+## Gogam
+
+Gogam on toiminimi, jolla Petri Leinonen on puolestaan julkaissut paljon pienempiä indie-roolipelejä. 
 
 ### Avainfaktoja
 
@@ -104,8 +136,8 @@ Gogam on täysiverinen indie-tehopakkaus, joka puskee ulos pieniä, super-innova
 | **Autot & Perhe** / **Cars & Family** | Lasers & Feelings | Valmis | Englanti, Suomi, Portugali |
 | **Pros & Cons** | Lasers & Feelings | Valmis | Englanti, Japani |
 | **Cyberpunk is Dead** | Forged in the Dark | Valmis | Englanti |
-| **The Necessary Eagle vs. The Good Cad** | Custom Card Game | Valmis | Englanti |
-| **Vuosisata.** | Tarot System | Valmis | Englanti |
+| **The Necessary Eagle vs. The Good Cad** | Korttipeli | Valmis | Englanti |
+| **Vuosisata.** | Tarot-pohjainen systeemi | Valmis | Englanti |
 | **We can't stop here...** | Mörk Borg Compatible | Valmis, Lisäosa | Englanti |
 | **Night of the Thirteenth** | d13 System | Työn alla | Englanti |
 | **Them Deeper Bones** | OSR / Custom | Työn alla | Englanti |
@@ -113,21 +145,21 @@ Gogam on täysiverinen indie-tehopakkaus, joka puskee ulos pieniä, super-innova
 
 ### Valmiit ja ilmaiset tuotteet
 
-- **Autot & Perhe**/**Cars & Family** &mdash; tämä vauhdikas yksisivuinen roolipeli laittaa sinut kuskin paikalle *Fast & Furious* -tyylisenä kansainvälisenä varkaana. Johtajanne Von Petrolin ollessa poissa pelistä, sinun ja ryhmäsi täytyy tasapainotella uskomattomien katukisataitojenne (**Autot**) ja tiiminne sisäisten siteiden (**Perhe**) välillä onnistuaksenne uskaliaissa keikoissa. *Lasers & Feelings* -systeemiin perustuva kansainvälisesti huomiota saanut, monikielinen peli on täydellinen, kevyt peli räjähtävään toimintaan. Saatavilla englanniksi, portugaliksi ja suomeksi.
+- **Autot & Perhe**/**Cars & Family** &mdash; vauhdikas yksisivuinen roolipeli laittaa pelaajn kuskin paikalle *Fast & Furious* -elokuvien hengessä tekemään varkauksia. Tiimin pomo, Von Petrol, on poissa pelistä ja hahmoryhmän pitää käyttää erinomaisia ajotaitojaan ("**Autot**") ja tiiminne sisäisten siteiden ("**Perhe**") onnistuaksenne mielikuvituksellisissa keikoissa. *Lasers & Feelings* -systeemiin perustuva kansainvälisestikin huomiota saanut, usealla kielellä julkaistu peli on täydellinen, kevyt peli räjähtävään toimintaan. Saatavilla englanniksi, portugaliksi ja suomeksi.
   - [Lue lisää Autot & Perheestä](/en/cars-and-family){hreflang="en"}
   - [itch.io: Cars & Family (en) / Autot & Perhe (fi)](https://strangeworlder.itch.io/cars-and-family)
   - [roolipelikirjasto: Autot ja Perhe / Cars and Family](https://roolipelikirjasto.fi/series/stored/7)
   - [Carros & Família](/downloads/carros-and-familia.pdf){hreflang="pt"} &mdash; Portugalinkielinen käännös Autot & Perheestä, kääntänyt ja parannellut Vila Nova.
-- **Pros & Cons** heittää sinut korkeiden panosten ryöstöelokuvaan kuten *Ocean's Eleven* tai *Leverage*. Nokkela *Lasers & Feelings* -hakkerointi korvaa nopat tavallisella korttipakalla. Hahmosi määrittelee yksi kortti (2-9), joka tasapainottaa ammattilaisuutta (**Pro**, professional) ja rikollista improvisaatiota (**Con**, criminal). Kuvakortit laukaisevat narratiivisia käänteitä (Twists), ja Takaumat (Flashbacks) antavat sinun kirjoittaa epäonnistumisesi uusiksi.
+- **Pros & Cons** nappaa tunnelmakseen ryöstögenren vielä tiukemmin otteeseensa. Sen esikuvina toimii heist-materiaali kuten *Rajahpaja*, *Ocean's Eleven* ja *Leverage*. Ainutlaatuinen *Lasers & Feelings* -hakkerointi korvaa perinteiset nopat korttipakalla. Hahmoa määrittää numeron sijaan yksi pelikortti (2-9), joka kertoo hahmon tyylistä ammattilaissuuden ("**Pro**", ammattimainen) ja improvisaation ("**Con**", huijari) välillä. Kuvakortit laukaisevat tarinallisia käänteitä (Twists), ja Takaumat (Flashbacks) antavat sinun kirjoittaa epäonnistumisesi uusiksi.
   - [Lue lisää Pros & Consista](/en/pros-and-cons){hreflang="en"}
   - [itch.io: Pros & Cons](https://strangeworlder.itch.io/pros-and-cons)
   - [roolipelikirjasto: Pros & Cons](https://roolipelikirjasto.fi/book/147)
   - [コンズ & プロズ](https://twitter.com/feltk/status/1376309603734937600){hreflang="ja"} &mdash; Japaninkielinen käännös Pros & Consista, kääntänyt [@feltk](https://twitter.com/feltk).
-- **Cyberpunk is Dead** &mdash; tämä *Forged in the Dark* -peli kääntää cyberpunk-genren päälaelleen: ette ole kapinallisia sankareita taistelemassa korporaatioita vastaan — olette niiden kertakäyttöisiä, alipalkattuja palkkamurhaajia, jotka valvovat pikkumaisia etuja usein sympaattisia kohteita vastaan. Peli kääntää esikuvansa *Blades in the Darkin* asetelman päälaelleen korvaamalla hahmokirjat numeroiduilla, vaihdettavilla "Operatiiveilla" ja hyödyntää uniikkia 3d12-systeemiä, jossa menestys tuo usein mukanaan "Ylireagointia", ja selviytyminen tarkoittaa velkaannuttavaa kuolemanspiraalia pakollisten kyberimplanttien myötä. Se on lohduttoman kiehtova kritiikki cyberpunk-troopeista elegantin minimalististen, paineistettujen mekaniikoiden kautta.
+- **Cyberpunk is Dead**: Tämä *Forged in the Dark* -peli kääntää perinteisen cyberpunk-genren päälaelleen: ette ole kapinallisia sankareita taistelemassa korporaatioita vastaan vaan olette niiden kertakäyttöisiä, alipalkattuja palkkasotureita, jotka valvovat firmojen pikkumaisia etuja usein sympaattisia kohteita vastaan. Peli kääntää esikuvansa *Blades in the Darkin* asetelman päälaelleen korvaamalla personoidut hahmokirjat numeroiduilla, keskenään vaihdettavilla "Operatiiveilla" ja hyödyntää uniikkia 3d12-systeemiä, jossa menestys tuo usein mukanaan "ylireagointia". Selviytyminen tarkoittaa velkaannuttavaa kuolemanspiraalia pakollisten kyberimplanttien myötä. Se on lohduton kritiikki cyberpunk-trooppeja ja nykyistäm maailmanmenoa kohtaan elegantin minimalististen, paineistettujen mekaniikoiden kautta.
   - [Lue lisää Cyberpunk is Deadista](/en/cyberpunk-is-dead){hreflang="en"}
   - [itch.io: Cyberpunk is Dead](https://strangeworlder.itch.io/cyberpunk-is-dead)
   - [roolipelikirjasto: Cyberpunk is Dead](https://roolipelikirjasto.fi/book/148)
-- **The Necessary Eagle vs. The Good Cad** &mdash; kilpailullinen kahden pelaajan korttipeli epäsymmetrisestä sodasta sosiopaattisen supersankarin ja kostonhimoisen kuolevaisen välillä. Kanavoiden *The Boys* -sarjan kyynistä energiaa, toinen pelaaja käyttää jumalallisia voimia ja hallitsee PR-katastrofeja, kun taas toinen tonkii sivullisten uhrien seasta rakentaakseen täydellisen aseen tappaakseen hänet.
+- **The Necessary Eagle vs. The Good Cad** &mdash; kilpailullinen kahden pelaajan PvP-korttiroolipeli epäsymmetrisestä sodasta sosiopaattisen supersankarin ja kostonhimoisen kuolevaisen välillä. Kanavoiden *The Boys* -sarjan kyynistä energiaa, toinen pelaaja pelaa jumalallisia voimia omaavaa rakastettua sankaria pyrkien hallita PR-katastrofeja, kun taas toinen tonkii sivullisten uhrien seasta rojua ja salaisuuksia rakentaakseen täydellisen aseen tappaakseen hänet.
   - [Lue lisää The Necessary Eagle vs. The Good Cadista](/en/the-necessary-eagle-vs-the-good-cad){hreflang="en"}
   - [itch.io: The Necessary Eagle vs. The Good Cad](https://strangeworlder.itch.io/the-necessary-eagle-vs-the-good-cad)
 - **Bike on Fire** &mdash; kahden pelaajan korttipohjainen kilpailullinen roolipeli traagisesta harrastusobsessiosta. Saatavilla englanniksi ja suomeksi.
@@ -168,37 +200,11 @@ Gogam on täysiverinen indie-tehopakkaus, joka puskee ulos pieniä, super-innova
 - **Fate of Atreus** &mdash; Fate Core -hakkerointi jättiläisroboteille, paljolti kuten Battletech.
   - [google docs: Fate of Atreus](https://docs.google.com/document/d/11tqoXZCX3p7sl_kwvq--pNPFoup_oV5gRu1eXELQ9m4/edit?usp=sharing)
 
-## Kustannusosakeyhtiö Gogam
-
-Julkaisee fyysisiä kirjoja, pääasiassa suomeksi. 
-
-### Eevenkoto
-
-Eevenkoto on uusi Kustannusosakeyhtiö Gogamin julkaisema kampanjamaailma ja sääntöpäivitys L&L-roolipeliin. Sen tarkoitus on päivittää L&L:n säännöt 5.5e -tasolle ja tuoda 1920-lukulainen sodanjälkeisen ilon aikakauden tunnelma pelipöytiin.
-
-### Mustan kilven kantoni
-
-Monet liittyvät [Mustan kilven kantoni](/fi/mustan-kilven-kantoni) -kampanjamaailmaan.
-
-#### Avainfaktoja
-
-| Tuotteen nimi | Systeemi | Tyyppi | Kieli | Status | Julkaisuajankohta |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Hirviökirja** | Legendoja & lohikäärmeitä (5e) | Hirviölisäosa | Suomi | Julkaistu | Joulu 2022 |
-| **Sulkavan sointu** | Legendoja & lohikäärmeitä (5e) | Seikkailu (Taso 1) | Suomi | Julkaistu | Ropecon 2023 |
-| **Viehkavaaran varkaat** | Legendoja & lohikäärmeitä (5e) | Seikkailu (Taso 2) | Suomi | Tulossa | Tulossa |
-| **Yöjoen raivo** | Legendoja & lohikäärmeitä (5e) | Seikkailu (Taso 3) | Suomi | Julkaistu | Kevät 2024 |
-| **Tervetuloa Eevenkotoon** | Legendoja & lohikäärmeitä (5.5e) | Opaskirja maailmaan | Suomi | Julkaistu | Ropecon 2026 |
-
-- [Hirviökirja](/hirviokirja) &mdash; hirviölisäosa yhteensopiva Legendoja & lohikäärmeitä -pelin kanssa, suomeksi.
-- [Sulkavan sointu](/sulkavansointu) &mdash; 1. kokemustason seikkailu yhteensopiva Legendoja & lohikäärmeitä -pelin kanssa, suomeksi.
-- [Yöjoen raivo](/yojoenraivo) &mdash; 3. kokemustason seikkailu yhteensopiva Legendoja & lohikäärmeitä -pelin kanssa, suomeksi.
-
 ## Gogam Entertainment
 
-Gogam Entertainment on multimediatuotanto-osasto, joka luo pelautuksia, roolipeliteoriavideoita ja tutoriaaleja sekä englanniksi että suomeksi.
+Gogam Entertainment on sivutoiminimi ja Petri Leinosen multimedia-harrastusprojekti, joka tuottaa pelautuksia, roolipeliteoriavideoita ja tutoriaaleja sekä englanniksi että suomeksi.
 
-### Avainfaktoja
+### Merkittävimmät sarjat lyhyesti
 
 | Sarjan nimi | Tyyppi | Kieli | Jaksomäärä |
 | :--- | :--- | :--- | :--- |

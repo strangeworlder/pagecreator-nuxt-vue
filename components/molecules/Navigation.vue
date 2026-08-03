@@ -10,10 +10,10 @@ const isFinnish = computed(() => !route.path.startsWith("/en"));
   <nav>
     <ul v-if="isFinnish">
       <li>
-        <a href="#gogam">Gogam</a> &mdash; "Online indie-pelit" -brändini. Asioita joita teen ja nykyään julkaisen ilmaiseksi, enimmäkseen itch.io:ssa.
+        <a href="#kustannusosakeyhtiö-gogam">Kustannusosakeyhtiö Gogam</a> &mdash; Pääasiassa suomenkielinen kustantamo, joka vastaa myös indie-pelieni fyysisistä versioista.
       </li>
       <li>
-        <a href="#kustannusosakeyhtiö-gogam">Kustannusosakeyhtiö Gogam</a> &mdash; Pääasiassa suomenkielinen kustantamo, joka vastaa myös indie-pelieni fyysisistä versioista.
+        <a href="#gogam">Gogam</a> &mdash; "Online indie-pelit" -brändini. Asioita joita teen ja nykyään julkaisen ilmaiseksi, enimmäkseen itch.io:ssa.
       </li>
       <li>
         <a href="#gogam-entertainment">Gogam Entertainment</a> &mdash; Roolipeliviihteeseen keskittyvä yritys. Kauttaaltaan tuotan mm. pelautuksia (Actual Play).

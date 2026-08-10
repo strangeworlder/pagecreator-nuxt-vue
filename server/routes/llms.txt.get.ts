@@ -1,4 +1,4 @@
-import { serverQueryContent } from "#content/server";
+import { queryCollection } from "@nuxt/content/server";
 
 export default defineEventHandler(async (event) => {
   const runtime = useRuntimeConfig(event);
@@ -7,10 +7,11 @@ export default defineEventHandler(async (event) => {
 
   // Fetch Home for definition and metadata
   const homePath = `/${defaultLocale}`;
-  const home = await serverQueryContent(event).where({ _path: homePath }).findOne();
+  const home = await queryCollection(event, 'content').path(homePath).first();
+  if (!home) return '';
 
   // Fetch all docs for filtering
-  const allDocs = await serverQueryContent(event).where({ _partial: false }).find();
+  const allDocs = await queryCollection(event, 'content').all();
 
   // Helper to ensure absolute URLs
   const toAbsolute = (path: string) => {
@@ -65,7 +66,7 @@ export default defineEventHandler(async (event) => {
 
       if (orgDocs.length > 0) {
         for (const doc of orgDocs) {
-          lines.push(`  - [${doc.title}](${toAbsolute(doc._path)})`);
+          lines.push(`  - [${doc.title}](${toAbsolute(doc.path)})`);
         }
       }
     }
@@ -79,13 +80,13 @@ export default defineEventHandler(async (event) => {
     // Spec says "High-density... low-noise".
     // Let's stick to English pages for the main list if they exist, or just primary pages.
     // The current content seems to be mixed or mostly English in content/en.
-    return isGame && !doc._path?.startsWith("/fi/");
+    return isGame && !doc.path?.startsWith("/fi/");
   });
 
   if (games.length > 0) {
     lines.push(`## Products (Games)`);
     for (const game of games) {
-      lines.push(`- [${game.title}](${toAbsolute(game._path)})`);
+      lines.push(`- [${game.title}](${toAbsolute(game.path)})`);
       if (game.description) {
         lines.push(`  - ${game.description.trim()}`);
       }
@@ -96,16 +97,16 @@ export default defineEventHandler(async (event) => {
   // C. Lore & Worldbuilding
   const lore = allDocs.filter((doc: any) => {
     const isLore =
-      doc._path?.includes("mustan-kilven-kantoni") ||
+      doc.path?.includes("mustan-kilven-kantoni") ||
       doc.tags?.includes("world") ||
       doc.tags?.includes("lore");
-    return isLore && !doc._path?.startsWith("/fi/");
+    return isLore && !doc.path?.startsWith("/fi/");
   });
 
   if (lore.length > 0) {
     lines.push(`## Lore & Worldbuilding`);
     for (const item of lore) {
-      lines.push(`- [${item.title}](${toAbsolute(item._path)})`);
+      lines.push(`- [${item.title}](${toAbsolute(item.path)})`);
       if (item.description) {
         lines.push(`  - ${item.description.trim()}`);
       }
@@ -116,12 +117,12 @@ export default defineEventHandler(async (event) => {
   // D. Multimedia & Social Satellites
   // Fetch petri-leinonen.md for founder links as it was moved to its own page
   const petriPath = `/${defaultLocale}/petri-leinonen`;
-  const petriDoc = await serverQueryContent(event)
-    .where({ _path: petriPath })
-    .findOne()
+  const petriDoc = await queryCollection(event, 'content')
+    .path(petriPath)
+    .first()
     .catch(() => null);
   const founderSameAs =
-    petriDoc?.author?.sameAs ||
+    (typeof petriDoc?.author === 'object' ? petriDoc.author.sameAs : null) ||
     petriDoc?.organization?.founder?.sameAs ||
     home.organization?.founder?.sameAs;
 

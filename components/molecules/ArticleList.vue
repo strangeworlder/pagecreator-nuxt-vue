@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useRoute, useAsyncData } from "#imports";
-import { queryContent } from "#imports";
 
 const props = defineProps<{
   year?: string;
@@ -19,9 +18,10 @@ const { data: articles } = await useAsyncData(
   `article-list-${locale.value}-${props.year || "all"}`,
   async () => {
     const articlePath = `/${locale.value}/eevenkoto/artikkelit`;
-    const query = queryContent(articlePath).sort({ datePublished: -1 });
-
-    let results = await query.where({ _path: { $ne: articlePath } }).find();
+    let results = await queryCollection('content')
+      .where('path', 'LIKE', `${articlePath}/%`)
+      .order('datePublished', 'DESC')
+      .all();
     
     // Filter by year if provided
     if (props.year) {
@@ -50,8 +50,8 @@ const formatDate = (dateString: string) => {
       {{ locale === 'fi' ? 'Ei artikkeleita.' : 'No articles found.' }}
     </div>
     <ul v-else class="article-items">
-      <li v-for="article in articles" :key="article._path" class="article-item">
-        <NuxtLink :to="article._path" class="article-link">
+      <li v-for="article in articles" :key="article.path" class="article-item">
+        <NuxtLink :to="article.path" class="article-link">
           <time v-if="article.datePublished" :datetime="new Date(article.datePublished).toISOString()" class="article-date">
             {{ formatDate(article.datePublished) }}
           </time>

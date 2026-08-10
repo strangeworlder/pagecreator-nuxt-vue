@@ -1,11 +1,11 @@
-import { serverQueryContent } from "#content/server";
+import { queryCollection } from "@nuxt/content/server";
 
 export default defineEventHandler(async (event) => {
   const runtime = useRuntimeConfig();
   const defaultLocale = runtime.public.defaultLocale || "fi";
 
   const homePath = `/${defaultLocale}`;
-  const home = await serverQueryContent(event).where({ _path: homePath }).findOne();
+  const home = await queryCollection(event, 'content').path(homePath).first();
 
   const name = String(home?.title || "Gogam");
   const shortName = "Gogam";
@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
     name,
     short_name: shortName,
     description,
-    lang: (home as Record<string, unknown>)?.language || defaultLocale,
+    lang: (home as unknown as Record<string, unknown>)?.language || defaultLocale,
     id: "/",
     start_url: "/",
     scope: "/",

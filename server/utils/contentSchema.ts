@@ -173,8 +173,8 @@ export const frontMatterSchema = z.object({
   theme: z.string().optional(),
   cover: z.string().optional(),
   heroImage: z.string().optional(),
-  productTheme: z.any().optional(),
-  productNav: z.any().optional(),
+  productTheme: z.record(z.string()).optional(),
+  productNav: z.array(z.object({ href: z.string(), text: z.string() })).optional(),
   aliases: z.array(z.string()).optional(),
   alternateLocales: z
     .array(z.union([z.string(), z.object({ code: z.string(), path: z.string() })]))

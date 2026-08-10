@@ -1,4 +1,4 @@
-import { serverQueryContent } from "#content/server";
+import { queryCollection } from "@nuxt/content/server";
 import { promises as fs } from "node:fs";
 import path from "node:path";
 
@@ -83,17 +83,17 @@ export default defineEventHandler(async (event) => {
 
   // Re-fetch Home for the "North Star" description
   const homePath = `/${defaultLocale}`;
-  const home = await serverQueryContent(event).where({ _path: homePath }).findOne();
+  const home = await queryCollection(event, 'content').path(homePath).first();
 
-  const allDocs = await serverQueryContent(event).where({ _partial: false }).find();
+  const allDocs = await queryCollection(event, 'content').all();
 
-  const sortedDocs = allDocs.sort((a: any, b: any) => {
+  const sortedDocs = [...allDocs].sort((a, b) => {
     const getPriority = (doc: any) => {
       // 1. Identity
-      if (doc._path === "/en" || doc._path === "/") return 1;
+      if (doc.path === "/en" || doc.path === "/") return 1;
       // 2. World Model
       if (
-        doc._path?.includes("mustan-kilven-kantoni") ||
+        doc.path?.includes("mustan-kilven-kantoni") ||
         doc.tags?.includes("world") ||
         doc.tags?.includes("lore")
       )
@@ -132,7 +132,7 @@ export default defineEventHandler(async (event) => {
   // Table of Contents
   fullText += `### Table of Contents\n`;
   sortedDocs.forEach((doc) => {
-    fullText += `- [${doc.title}](${toAbsolute(doc._path)})\n`;
+    fullText += `- [${doc.title}](${toAbsolute(doc.path)})\n`;
   });
   fullText += `\n`;
 
@@ -140,7 +140,7 @@ export default defineEventHandler(async (event) => {
   fullText += `### Directory Structure\n`;
   fullText += "```\n";
   // Get relative file paths for the tree
-  const filePaths = sortedDocs.map((d) => d._file);
+  const filePaths = sortedDocs.map((d) => d.path);
   fullText += generateAsciiTree(filePaths);
   fullText += "```\n\n";
 
@@ -152,7 +152,7 @@ export default defineEventHandler(async (event) => {
     if (doc.datePublished) fullText += `Date Published: ${doc.datePublished}\n`;
     if (doc.author)
       fullText += `Author: ${typeof doc.author === "string" ? doc.author : doc.author.name}\n`;
-    fullText += `URL: ${toAbsolute(doc._path)}\n`;
+    fullText += `URL: ${toAbsolute(doc.path)}\n`;
     fullText += `\n`;
 
     let content = "";
@@ -161,7 +161,7 @@ export default defineEventHandler(async (event) => {
     // STRATEGY 1: Raw File via Storage (Server Assets)
     try {
       const storage = useStorage("assets:content");
-      const fileKey = doc._file.replace(/^\//, "");
+      const fileKey = (doc.id || doc.path).replace(/^\//, "");
       content = (await storage.getItem(fileKey)) as string;
       if (!content) {
         const colonKey = fileKey.replace(/\//g, ":");
@@ -173,7 +173,7 @@ export default defineEventHandler(async (event) => {
     // STRATEGY 2: Raw File via FS (Build Time)
     if (!content) {
       try {
-        const filePath = path.resolve(process.cwd(), "content", doc._file);
+        const filePath = path.resolve(process.cwd(), "content", (doc.id || doc.path).replace(/^\//, ""));
         content = await fs.readFile(filePath, "utf-8");
         if (content) strategyUsed = "FS (Raw)";
       } catch {}

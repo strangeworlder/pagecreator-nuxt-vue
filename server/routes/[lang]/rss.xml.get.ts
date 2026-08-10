@@ -1,4 +1,4 @@
-import { serverQueryContent } from "#content/server";
+import { queryCollection } from "@nuxt/content/server";
 
 export default defineEventHandler(async (event) => {
   const lang = getRouterParam(event, "lang");
@@ -11,10 +11,11 @@ export default defineEventHandler(async (event) => {
   const siteName = useRuntimeConfig(event).public.siteName;
 
   const newsPath = `/${lang}/${lang === "fi" ? "uutiset" : "news"}`;
-  const docs = await serverQueryContent(event, newsPath)
-    .where({ template: "article" })
-    .sort({ datePublished: -1 })
-    .find();
+  const docs = await queryCollection(event, 'content')
+    .where('path', 'LIKE', `${newsPath}/%`)
+    .where('template', '=', 'article')
+    .order('datePublished', 'DESC')
+    .all();
 
   const title = lang === "fi" ? `${siteName} Uutiset` : `${siteName} News`;
   const description =
@@ -32,7 +33,7 @@ export default defineEventHandler(async (event) => {
   xml += `    <atom:link href="${baseUrl}/${lang}/rss.xml" rel="self" type="application/rss+xml"/>\n`;
 
   for (const doc of docs) {
-    let loc = doc._path;
+    let loc = doc.path;
     if (doc.canonical && typeof doc.canonical === "string" && doc.canonical.startsWith("/")) {
       loc = doc.canonical;
     }

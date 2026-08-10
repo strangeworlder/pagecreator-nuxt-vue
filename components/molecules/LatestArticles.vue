@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useRoute, useAsyncData } from "#imports";
-import { queryContent } from "#imports";
 import BasePanel from "~/components/atoms/BasePanel.vue";
 
 const route = useRoute();
@@ -13,7 +12,11 @@ const locale = computed(() => {
 const { data: articles } = await useAsyncData(`latest-articles-${locale.value}`, async () => {
   const articlePath = `/${locale.value}/eevenkoto/artikkelit`;
   // We need to query the content where the path starts with the articlePath but is not the articlePath itself
-  let results = await queryContent(articlePath).sort({ datePublished: -1 }).where({ _path: { $ne: articlePath } }).limit(3).find();
+  let results = await queryCollection('content')
+    .where('path', 'LIKE', `${articlePath}/%`)
+    .order('datePublished', 'DESC')
+    .limit(3)
+    .all();
   return results;
 });
 
@@ -29,8 +32,8 @@ const formatDate = (dateString: string) => {
   <BasePanel v-if="articles && articles.length > 0" class="latest-articles">
     <h3 class="latest-articles-heading">{{ locale === 'fi' ? 'Uusimmat artikkelit' : 'Latest Articles' }}</h3>
     <ul class="latest-articles-list">
-      <li v-for="article in articles" :key="article._path" class="latest-articles-item">
-        <NuxtLink :to="article._path" class="latest-articles-link">
+      <li v-for="article in articles" :key="article.path" class="latest-articles-item">
+        <NuxtLink :to="article.path" class="latest-articles-link">
           <time v-if="article.datePublished" :datetime="new Date(article.datePublished).toISOString()" class="latest-articles-date">
             {{ formatDate(article.datePublished) }}
           </time>

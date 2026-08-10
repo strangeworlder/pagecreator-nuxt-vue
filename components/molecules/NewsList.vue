@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useRoute, useAsyncData } from "#imports";
-import { queryContent } from "#imports";
 
 const props = defineProps<{
   year?: string;
@@ -19,9 +18,10 @@ const { data: articles } = await useAsyncData(
   `news-list-${locale.value}-${props.year || "all"}`,
   async () => {
     const newsPath = `/${locale.value}/${locale.value === "fi" ? "uutiset" : "news"}`;
-    const query = queryContent(newsPath).sort({ datePublished: -1 });
-
-    let results = await query.where({ _path: { $ne: newsPath } }).find();
+    let results = await queryCollection('content')
+      .where('path', 'LIKE', `${newsPath}/%`)
+      .order('datePublished', 'DESC')
+      .all();
     
     results = results.filter((a: any) => a.datePublished);
 
@@ -39,14 +39,14 @@ const { data: articles } = await useAsyncData(
 );
 
 const getArticleUrl = (article: any) => {
-  if (!article.datePublished) return article._path;
+  if (!article.datePublished) return article.path;
   const date = new Date(article.datePublished);
   const yyyy = date.getUTCFullYear();
   const mm = String(date.getUTCMonth() + 1).padStart(2, "0");
   const dd = String(date.getUTCDate()).padStart(2, "0");
 
   // Extract slug from path like /en/news/example -> example
-  const slug = article._path.split("/").pop();
+  const slug = article.path.split("/").pop();
 
   return `/${locale.value}/${yyyy}/${mm}/${dd}/${slug}`;
 };
@@ -64,7 +64,7 @@ const formatDate = (dateString: string) => {
       {{ locale === 'fi' ? 'Ei uutisia.' : 'No articles found.' }}
     </div>
     <ul v-else class="article-items">
-      <li v-for="article in articles" :key="article._path" class="article-item">
+      <li v-for="article in articles" :key="article.path" class="article-item">
         <NuxtLink :to="getArticleUrl(article)" class="article-link">
           <time v-if="article.datePublished" :datetime="new Date(article.datePublished).toISOString()" class="article-date">
             {{ formatDate(article.datePublished) }}

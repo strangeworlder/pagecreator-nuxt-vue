@@ -35,7 +35,6 @@ import ProseThead from "~/components/prose/ProseThead.vue";
 import ProseTr from "~/components/prose/ProseTr.vue";
 import ProseUl from "~/components/prose/ProseUl.vue";
 import { useCustomContentHead } from "~/composables/useContentHead";
-import { queryContent } from "#imports";
 import { MDCSlot } from "#components";
 
 const route = useRoute();
@@ -85,25 +84,25 @@ const fetchContentWithRouting = async (routePath: string) => {
 
   let fetched: Record<string, unknown> | null = null;
   try {
-    fetched = await nuxtApp.runWithContext(() => queryContent(tryPath).where({ _path: tryPath }).findOne());
+    fetched = await nuxtApp.runWithContext(() => queryCollection('content').path(tryPath).first());
   } catch {}
 
   if (!fetched) {
     try {
-      fetched = await nuxtApp.runWithContext(() => queryContent()
-        .where({ aliases: { $contains: tryPath } })
-        .findOne());
+      fetched = await nuxtApp.runWithContext(() => queryCollection('content')
+        .where('aliases', 'LIKE', `%${tryPath}%`)
+        .first());
     } catch {}
   }
   if (!fetched && !/^\/\w{2}\b/.test(tryPath)) {
     const fiPath = `/fi${tryPath}`;
-    fetched = await nuxtApp.runWithContext(() => queryContent(fiPath).where({ _path: fiPath }).findOne());
+    fetched = await nuxtApp.runWithContext(() => queryCollection('content').path(fiPath).first());
   }
 
   // Handle Archive Virtual Page
   if (!fetched && routing.type === "archive") {
     return {
-      _path: routing.queryPath,
+      path: routing.queryPath,
       title:
         routing.lang === "fi"
           ? `Uutiset ${routing.paramYear}`
@@ -132,7 +131,7 @@ const fetchContentWithRouting = async (routePath: string) => {
     // Inject canonical back to the parsed URL, not the file system path
     fetched.canonical = resolveContentPath(routePath);
   } else if (
-    (fetched._path?.includes("/news/") || fetched._path?.includes("/uutiset/")) &&
+    (fetched.path?.includes("/news/") || fetched.path?.includes("/uutiset/")) &&
     fetched.template !== "news-list" &&
     fetched.datePublished
   ) {
@@ -141,11 +140,14 @@ const fetchContentWithRouting = async (routePath: string) => {
     const yyyy = d.getUTCFullYear();
     const mm = String(d.getUTCMonth() + 1).padStart(2, "0");
     const dd = String(d.getUTCDate()).padStart(2, "0");
-    const slug = (fetched._path as string).split("/").pop();
-    const lang = (fetched._path as string).split("/")[1] || defaultLocale;
+    const slug = (fetched.path as string).split("/").pop();
+    const lang = (fetched.path as string).split("/")[1] || defaultLocale;
     fetched.canonical = `/${lang}/${yyyy}/${mm}/${dd}/${slug}`;
   }
 
+  if (fetched && fetched.meta) {
+    Object.assign(fetched, fetched.meta);
+  }
   return fetched;
 };
 
@@ -216,14 +218,14 @@ if (!initial) {
   if (process.dev)
     console.log("[initial-doc] fetched initial doc", {
       path: resolveContentPath(route.path),
-      _path: (fetched as Record<string, unknown>)?._path,
+      _path: (fetched as Record<string, unknown>)?.path,
       stripped: true,
     });
 } else {
   if (process.dev)
     console.log("[initial-doc] using SSR-cached initial doc", {
       path: resolveContentPath(route.path),
-      _path: (initial as Record<string, unknown>)?._path,
+      _path: (initial as Record<string, unknown>)?.path,
     });
 }
 
@@ -238,8 +240,8 @@ const getLocaleFromPath = (path: string) => {
 // Prefer locale from the fetched document when the route lacks locale
 const initialLocale = (() => {
   const docPath =
-    typeof (initial as Record<string, unknown>)?._path === "string"
-      ? ((initial as Record<string, unknown>)?._path as string)
+    typeof (initial as Record<string, unknown>)?.path === "string"
+      ? ((initial as Record<string, unknown>)?.path as string)
       : "";
   const fromDoc = (docPath.split("/")[1] || "").trim();
   if (/^[a-z]{2}$/i.test(fromDoc)) return fromDoc;
@@ -249,26 +251,26 @@ const ssrIdxKey = `ssr-locale-index:${initialLocale}`;
 const ssrLocaleIndex = useState<Record<string, unknown> | null>(ssrIdxKey, () => null);
 let initialLocaleIndex = ssrLocaleIndex.value;
 if (!initialLocaleIndex) {
-  const fetchedIdx = await queryContent(`/${initialLocale}`)
-    .where({ _path: `/${initialLocale}` })
-    .only(["_path", "cover"])
-    .findOne();
+  const fetchedIdx = await queryCollection('content')
+    .path(`/${initialLocale}`)
+    .select('path', 'cover')
+    .first();
   // Strictly filter to ensure no extra properties leak into hydration state
   const strippedIdx = fetchedIdx
-    ? { _path: (fetchedIdx as any)._path, cover: (fetchedIdx as any).cover }
+    ? { path: (fetchedIdx as any).path, cover: (fetchedIdx as any).cover }
     : null;
   ssrLocaleIndex.value = strippedIdx;
   initialLocaleIndex = strippedIdx;
   if (process.dev)
     console.log("[initial-index] fetched initial locale index", {
       locale: initialLocale,
-      _path: (strippedIdx as Record<string, unknown>)?._path,
+      _path: (strippedIdx as Record<string, unknown>)?.path,
     });
 } else {
   if (process.dev)
     console.log("[initial-index] using SSR-cached locale index", {
       locale: initialLocale,
-      _path: (initialLocaleIndex as Record<string, unknown>)?._path,
+      _path: (initialLocaleIndex as Record<string, unknown>)?.path,
     });
 }
 
@@ -276,13 +278,13 @@ const docState = useState<Record<string, unknown> | null>("content-doc", () => n
 const version = useState<number>("content-doc-version", () => 0);
 // Ensure page shows the correct document immediately on navigation
 const expectedPath = resolveContentPath(route.path);
-const currentDocPath = (docState.value as Record<string, unknown>)?._path;
+const currentDocPath = (docState.value as Record<string, unknown>)?.path;
 if (initial && currentDocPath !== expectedPath) {
   if (process.dev)
     console.log("[initial-doc-sync] setting docState to initial for path", {
       expectedPath,
       currentDocPath,
-      got: (initial as Record<string, unknown>)?._path,
+      got: (initial as Record<string, unknown>)?.path,
     });
   docState.value = initial;
   version.value = (version.value || 0) + 1;
@@ -297,7 +299,7 @@ const data = computed(() => {
 });
 // Sync locale index state to current locale immediately to avoid stale fallback
 const expectedIndexPath = `/${initialLocale}`;
-const currentIndexPath = (localeIndexDoc.value as Record<string, unknown>)?._path;
+const currentIndexPath = (localeIndexDoc.value as Record<string, unknown>)?.path;
 if (initialLocaleIndex && currentIndexPath !== expectedIndexPath) {
   localeIndexDoc.value = initialLocaleIndex;
 }
@@ -331,19 +333,19 @@ watch(
       throw createError({ statusCode: 404, statusMessage: "Page Not Found", fatal: true });
     }
     const nextLocale = getLocaleFromPath(route.path);
-    const nextIndex = await queryContent(`/${nextLocale}`)
-      .where({ _path: `/${nextLocale}` })
-      .only(["_path", "cover"])
-      .findOne();
-    const currentPath = (data.value as Record<string, unknown>)?._path;
-    if (next && next._path !== currentPath) {
+    const nextIndex = await queryCollection('content')
+      .path(`/${nextLocale}`)
+      .select('path', 'cover')
+      .first();
+    const currentPath = (data.value as Record<string, unknown>)?.path;
+    if (next && next.path !== currentPath) {
       if (process.dev)
-        console.log("[route-doc-swap] swapping doc", { from: currentPath, to: next._path, path });
+        console.log("[route-doc-swap] swapping doc", { from: currentPath, to: next.path, path });
       docState.value = next;
       version.value = (version.value || 0) + 1;
     }
     if (nextIndex) {
-      localeIndexDoc.value = { _path: (nextIndex as any)._path, cover: (nextIndex as any).cover };
+      localeIndexDoc.value = { path: (nextIndex as any).path, cover: (nextIndex as any).cover };
     }
   },
 );
@@ -580,7 +582,7 @@ const useHeroLayout = computed(
 
 // Check if we're on the index page
 const isIndexPage = computed(() => {
-  const path = (data.value as Record<string, unknown>)?._path;
+  const path = (data.value as Record<string, unknown>)?.path;
   return path === `/${defaultLocale}` || path === "/" || path === "/fi" || path === "/fi/";
 });
 
@@ -588,7 +590,7 @@ const isIndexPage = computed(() => {
 const isProductTemplate = computed(() => templateName.value === "product");
 const isArticleTemplate = computed(() => {
   if (templateName.value === "article") return true;
-  const path = (data.value as Record<string, unknown>)?._path || "";
+  const path = (data.value as Record<string, unknown>)?.path || "";
   return (
     typeof path === "string" &&
     (path.includes("/news/") || path.includes("/uutiset/") || path.includes("/artikkelit/")) &&

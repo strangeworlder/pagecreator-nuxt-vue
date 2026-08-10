@@ -1,16 +1,16 @@
-import { serverQueryContent } from "#content/server";
+import { queryCollection } from "@nuxt/content/server";
 
 export default defineEventHandler(async (event) => {
   const baseUrl: string = useRuntimeConfig(event).public.siteUrl;
-  const docs = await serverQueryContent(event)
-    .only(["_path", "dateModified", "canonical", "aliases"])
-    .find();
+  const docs = await queryCollection(event, 'content')
+    .select('path', 'dateModified', 'canonical', 'aliases')
+    .all();
 
   const urls: string[] = [];
 
   for (const d of docs) {
     // 1. Determine the primary URL for this document
-    let loc = d._path;
+    let loc = d.path;
 
     // If canonical is specified and matches a path format, use it as the primary location
     // (e.g. content/en/index.md having canonical: "/" means we list https://site.com/)

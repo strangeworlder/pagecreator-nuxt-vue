@@ -1,6 +1,6 @@
+import { queryCollection } from "@nuxt/content/server";
 // @ts-nocheck
 import { getQuery, setHeader } from "h3";
-import { serverQueryContent } from "#content/server";
 
 export default defineEventHandler(async (event) => {
   const { path } = getQuery(event);
@@ -22,7 +22,7 @@ export default defineEventHandler(async (event) => {
 
   let doc: Record<string, unknown> | null = null;
   for (const p of candidates) {
-    const found = await serverQueryContent(event).where({ _path: p, _partial: false }).findOne();
+    const found = await queryCollection(event, 'content').path(p).first();
     if (found) {
       doc = found;
       break;

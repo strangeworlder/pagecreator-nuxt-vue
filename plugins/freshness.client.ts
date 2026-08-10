@@ -63,7 +63,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     };
     // Prefer the currently rendered document's path (includes locale) to avoid wrong-locale lookups
     const currentDoc = useState<Record<string, unknown> | null>("content-doc", () => null).value;
-    const docPath = typeof currentDoc?._path === "string" ? (currentDoc._path as string) : null;
+    const docPath = typeof currentDoc?.path === "string" ? (currentDoc.path as string) : null;
     const candidatePath = normalize(
       docPath ||
         (isLocalized
@@ -77,10 +77,10 @@ export default defineNuxtPlugin((nuxtApp) => {
       ? `/content-index.json?ts=${Date.now()}`
       : `/api/content-index?ts=${Date.now()}&locale=${encodeURIComponent(localeForApi)}&path=${encodeURIComponent(candidatePath)}`;
     const { data } = await useFetch<{
-      items: Array<{ _path: string; dateModified?: string | number }>;
+      items: Array<{ path: string; dateModified?: string | number }>;
     }>(url, { server: false, headers: { "cache-control": "no-cache" } });
     const items = data.value?.items || [];
-    const current = items.find((i) => i._path === candidatePath || i._path === route.path);
+    const current = items.find((i) => i.path === candidatePath || i.path === route.path);
     if (current?.dateModified) {
       const modified = new Date(current.dateModified).getTime();
       const built = new Date(buildAt).getTime();
@@ -109,13 +109,13 @@ export default defineNuxtPlugin((nuxtApp) => {
       if (shouldUpdate) {
         // On static hosting, skip API and use content query
         const fresh = staticHosting
-          ? await queryContent(normalize(candidatePath)).findOne()
+          ? await queryCollection('content').path(normalize(candidatePath)).first()
           : (
               await $fetch<{ doc: Record<string, unknown> | null }>("/api/content-doc", {
                 params: { path: candidatePath, ts: Date.now() },
                 headers: { "cache-control": "no-cache" },
               })
-            ).doc || (await queryContent(normalize(candidatePath)).findOne());
+            ).doc || (await queryCollection('content').path(normalize(candidatePath)).first());
         if (fresh) {
           // Log exactly where we swap in the fresh document
           const prev = useState<Record<string, unknown> | null>("content-doc", () => null).value;
@@ -126,9 +126,9 @@ export default defineNuxtPlugin((nuxtApp) => {
               modified,
               built,
               shown,
-              previous: prev ? { _path: prev?._path, dateModified: prev?.dateModified } : null,
+              previous: prev ? { path: prev?.path, dateModified: prev?.dateModified } : null,
               next: {
-                _path: (fresh as Record<string, unknown>)?._path,
+                path: (fresh as Record<string, unknown>)?.path,
                 dateModified: (fresh as Record<string, unknown>)?.dateModified,
               },
             });

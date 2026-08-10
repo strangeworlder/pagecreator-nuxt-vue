@@ -1,5 +1,5 @@
 import { computed, ref } from "vue";
-import { queryContent, useRoute, useRuntimeConfig, useState } from "#imports";
+import { useRoute, useRuntimeConfig, useState } from "#imports";
 
 export interface ContentPreview {
   title?: string;
@@ -71,28 +71,11 @@ export function useContentLinkPreview() {
         loading.value.add(p);
       }
 
-      // Single request across all candidates and their canonical/aliases
-      const orClauses: Record<string, unknown>[] = [];
-      for (const p of unique) {
-        orClauses.push({ _path: p });
-        orClauses.push({ canonical: p });
-        orClauses.push({ aliases: { $contains: p } });
-      }
-
-      const fields = [
-        "title",
-        "description",
-        "summary",
-        "cover",
-        "image",
-        "datePublished",
-        "dateModified",
-        "tags",
-        "_path",
-        "canonical",
-        "aliases",
-      ];
-      const results = await queryContent().where({ $or: orClauses }).only(fields).find();
+      const results = await queryCollection('content')
+        .where('path', 'IN', unique)
+        .orWhere(q => q.where('canonical', 'IN', unique))
+        .select('title', 'description', 'summary', 'cover', 'meta', 'datePublished', 'dateModified', 'tags', 'path', 'canonical', 'aliases')
+        .all();
 
       if (Array.isArray(results) && results.length) {
         // Pick the best match based on candidate order
@@ -104,27 +87,27 @@ export function useContentLinkPreview() {
               : doc.aliases
                 ? [doc.aliases]
                 : [];
-            if (doc._path === p || doc.canonical === p || aliases.includes(p)) {
+            if (doc.path === p || doc.canonical === p || aliases.includes(p)) {
               return i;
             }
           }
           return Number.MAX_SAFE_INTEGER;
         };
 
-        const best = results.slice().sort((a, b) => pickScore(a) - pickScore(b))[0];
+        const best = results.slice().sort((a, b) => pickScore(a as Record<string, unknown>) - pickScore(b as Record<string, unknown>))[0];
         if (best) {
           const preview: ContentPreview = {
-            title: best.title,
-            description: best.description,
-            summary: best.summary,
-            cover: best.cover,
-            image: best.image,
-            datePublished: best.datePublished,
-            dateModified: best.dateModified,
-            tags: best.tags,
-            _path: best._path,
+            title: best.title as string,
+            description: best.description as string,
+            summary: best.summary as string,
+            cover: best.cover as string,
+            image: (best.meta as any)?.image,
+            datePublished: best.datePublished as string,
+            dateModified: best.dateModified as string,
+            tags: best.tags as string[],
+            _path: best.path as string,
           };
-          previewCache.value.set(best._path, preview);
+          previewCache.value.set(best.path as string, preview);
           return preview;
         }
       }

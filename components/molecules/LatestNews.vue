@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useRoute, useAsyncData } from "#imports";
-import { queryContent } from "#imports";
 
 const route = useRoute();
 const locale = computed(() => {
@@ -11,16 +10,20 @@ const locale = computed(() => {
 
 const { data: articles } = await useAsyncData(`latest-news-${locale.value}`, async () => {
   const newsPath = `/${locale.value}/${locale.value === "fi" ? "uutiset" : "news"}`;
-  return await queryContent(newsPath).sort({ datePublished: -1 }).limit(3).find();
+  return await queryCollection('content')
+    .where('path', 'LIKE', `${newsPath}/%`)
+    .order('datePublished', 'DESC')
+    .limit(3)
+    .all();
 });
 
 const getArticleUrl = (article: any) => {
-  if (!article.datePublished) return article._path;
+  if (!article.datePublished) return article.path;
   const date = new Date(article.datePublished);
   const yyyy = date.getUTCFullYear();
   const mm = String(date.getUTCMonth() + 1).padStart(2, "0");
   const dd = String(date.getUTCDate()).padStart(2, "0");
-  const slug = article._path.split("/").pop();
+  const slug = article.path.split("/").pop();
   return `/${locale.value}/${yyyy}/${mm}/${dd}/${slug}`;
 };
 
@@ -35,7 +38,7 @@ const formatDate = (dateString: string) => {
   <BasePanel v-if="articles && articles.length > 0" class="latest-news">
     <h3 class="latest-news-heading">{{ locale === 'fi' ? 'Uutisia' : 'Latest News' }}</h3>
     <ul class="latest-news-list">
-      <li v-for="article in articles" :key="article._path" class="latest-news-item">
+      <li v-for="article in articles" :key="article.path" class="latest-news-item">
         <NuxtLink :to="getArticleUrl(article)" class="latest-news-link">
           <time v-if="article.datePublished" :datetime="new Date(article.datePublished).toISOString()" class="latest-news-date">
             {{ formatDate(article.datePublished) }}

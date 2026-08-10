@@ -15,7 +15,7 @@ const headerWidths = [768, 1024, 1200, 1280, 1536];
 const headerSizes = "(min-width: 1280px) 1200px, 100vw";
 const headerImgStyle = {
   height: "100%",
-  objectFit: "contain",
+  objectFit: "contain" as const,
 };
 
 const imageSrc = computed(() => props.image?.trim() ?? "");

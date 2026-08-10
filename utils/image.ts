@@ -14,6 +14,9 @@ export function normalizeImageWidths(widths?: number[]): number[] {
     )
     .sort((a, b) => a - b);
 
+  return sanitized.length ? sanitized : [...DEFAULT_IMAGE_WIDTHS];
+}
+
 export function buildImageUrl(src: string | undefined, size: number, format?: ImageFormat): string {
   if (!src) return "";
 

@@ -53,3 +53,8 @@
   for = "/*.svg"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["better-sqlite3"]
+  included_files = ["node_modules/better-sqlite3/**"]

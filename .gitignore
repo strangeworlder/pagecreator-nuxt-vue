@@ -21,6 +21,7 @@ node_modules/
 # Nuxt / build output
 .nuxt/
 .output/
+.netlify/
 dist/
 build/
 .cache/

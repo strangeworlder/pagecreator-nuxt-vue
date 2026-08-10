@@ -145,6 +145,9 @@ export default {
         dir: "content",
       },
     ],
+    externals: {
+      traceInclude: ["node_modules/better-sqlite3/**"]
+    }
   },
 
   routeRules: {

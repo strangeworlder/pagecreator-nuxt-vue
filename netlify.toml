@@ -1,6 +1,6 @@
 [build]
   command = "corepack enable && corepack prepare pnpm@10.19.0 --activate && pnpm install --no-frozen-lockfile && pnpm generate"
-  publish = ".output/public"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20"

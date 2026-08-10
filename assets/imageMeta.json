@@ -95,30 +95,6 @@
     "width": 150,
     "height": 150
   },
-  "/images/products/yojoenraivo/TDB-logo.webp": {
-    "width": 338,
-    "height": 538
-  },
-  "/images/products/yojoenraivo/morko.webp": {
-    "width": 1280,
-    "height": 939
-  },
-  "/images/products/yojoenraivo/logo.webp": {
-    "width": 1256,
-    "height": 1114
-  },
-  "/images/products/yojoenraivo/kansi.webp": {
-    "width": 1240,
-    "height": 1624
-  },
-  "/images/products/yojoenraivo/background.webp": {
-    "width": 842,
-    "height": 1920
-  },
-  "/images/products/yojoenraivo/background-full.webp": {
-    "width": 4800,
-    "height": 4500
-  },
   "/images/products/sulkavansointu/TDB-logo.webp": {
     "width": 338,
     "height": 538
@@ -144,6 +120,30 @@
     "height": 1920
   },
   "/images/products/sulkavansointu/background-full.webp": {
+    "width": 4800,
+    "height": 4500
+  },
+  "/images/products/yojoenraivo/TDB-logo.webp": {
+    "width": 338,
+    "height": 538
+  },
+  "/images/products/yojoenraivo/morko.webp": {
+    "width": 1280,
+    "height": 939
+  },
+  "/images/products/yojoenraivo/logo.webp": {
+    "width": 1256,
+    "height": 1114
+  },
+  "/images/products/yojoenraivo/kansi.webp": {
+    "width": 1240,
+    "height": 1624
+  },
+  "/images/products/yojoenraivo/background.webp": {
+    "width": 842,
+    "height": 1920
+  },
+  "/images/products/yojoenraivo/background-full.webp": {
     "width": 4800,
     "height": 4500
   },
@@ -199,18 +199,6 @@
     "width": 1200,
     "height": 1572
   },
-  "/gen_images/images/products/yojoenraivo/morko-1536.webp": {
-    "width": 1536,
-    "height": 1127
-  },
-  "/gen_images/images/products/yojoenraivo/kansi-1536.webp": {
-    "width": 1536,
-    "height": 2012
-  },
-  "/gen_images/images/products/yojoenraivo/kansi-150-canvas.webp": {
-    "width": 150,
-    "height": 150
-  },
   "/gen_images/images/products/hirviokirja/sulkava-1536.webp": {
     "width": 1536,
     "height": 1536
@@ -238,6 +226,18 @@
   "/gen_images/images/products/hirviokirja/kansi-1200.webp": {
     "width": 1200,
     "height": 1572
+  },
+  "/gen_images/images/products/yojoenraivo/morko-1536.webp": {
+    "width": 1536,
+    "height": 1127
+  },
+  "/gen_images/images/products/yojoenraivo/kansi-1536.webp": {
+    "width": 1536,
+    "height": 2012
+  },
+  "/gen_images/images/products/yojoenraivo/kansi-150-canvas.webp": {
+    "width": 150,
+    "height": 150
   },
   "/images/spinskull.gif": {
     "width": 100,

@@ -3,7 +3,7 @@
   publish = ".netlify/publish"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "22"
   NODE_ENV = "production"
   NUXT_PUBLIC_DEFAULT_LOCALE = "fi"
   NUXT_PUBLIC_STATIC_HOSTING = "0"

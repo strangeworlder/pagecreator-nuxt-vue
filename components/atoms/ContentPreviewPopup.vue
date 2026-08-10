@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import type { ContentPreview } from "~/composables/useContentLinkPreview";
+import { buildImageUrl } from "~/utils/image";
 
 interface Props {
   preview: ContentPreview | null;
@@ -20,8 +21,7 @@ const popupRef = ref<HTMLElement>();
 
 const getThumbnailUrl = (imageUrl: string | undefined): string => {
   if (!imageUrl) return "";
-  // Use the image API to get 150px thumbnail with canvas background
-  return `/api/image?src=${encodeURIComponent(imageUrl)}&size=150&canvas=true`;
+  return buildImageUrl(imageUrl, 150);
 };
 
 const adjustedPosition = computed(() => {

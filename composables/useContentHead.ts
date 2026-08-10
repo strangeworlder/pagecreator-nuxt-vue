@@ -185,7 +185,7 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
       }
       const encodedSrc = encodeURIComponent(ensureLeadingSlash(imagePath));
       return {
-        url: `${siteUrl}/api/image?src=${encodedSrc}&size=1200&format=png&canvas=true`,
+        url: `${siteUrl}/.netlify/images?url=${encodedSrc}&w=1200&fm=png&fit=contain`,
         type: "image/png",
       };
     };
@@ -193,7 +193,7 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
     const socialImage = rawImage ? getSocialImage(rawImage) : undefined;
     const image: string | undefined = socialImage?.url;
     const finalImageType =
-      socialImage?.type || (image?.includes("/api/image") ? "image/png" : undefined);
+      socialImage?.type || (image?.includes(".netlify/images") ? "image/png" : undefined);
     const noindex: boolean | undefined = doc.noindex === true;
 
     const docType = doc.contentType || (doc.datePublished ? "article" : "website");

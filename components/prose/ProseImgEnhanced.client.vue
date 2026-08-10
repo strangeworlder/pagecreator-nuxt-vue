@@ -18,6 +18,7 @@
 
 <script setup lang="ts">
 import { computed, onMounted, onUpdated, ref, watch } from "vue";
+import { buildImageUrl } from "~/utils/image";
 
 const props = defineProps<{
   src: string;
@@ -91,7 +92,7 @@ const handleLoad = () => {
 const widths = [320, 480, 768, 1024, 1280, 1536];
 
 // Use on-demand processing endpoint
-const getProcessedPath = (w: number) => `/api/image?src=${encodeURIComponent(props.src)}&size=${w}`;
+const getProcessedPath = (w: number) => buildImageUrl(props.src, w);
 
 // Keep a simple fade-in only; no wrapper/placeholder to remain inline-friendly
 

@@ -8,8 +8,10 @@ import Navigation from "~/components/molecules/Navigation.vue";
 import PageFooter from "~/components/molecules/PageFooter.vue";
 import PageHeader from "~/components/molecules/PageHeader.vue";
 import NewsList from "~/components/molecules/NewsList.vue";
+import ArticleList from "~/components/molecules/ArticleList.vue";
 import ArticleHeader from "~/components/molecules/ArticleHeader.vue";
 import LatestNews from "~/components/molecules/LatestNews.vue";
+import LatestArticles from "~/components/molecules/LatestArticles.vue";
 import ProductNavigation from "~/components/molecules/ProductNavigation.vue";
 import ProseA from "~/components/prose/ProseA.vue";
 import AWrapper from "~/components/prose/AWrapper.vue";
@@ -457,6 +459,14 @@ const proseComponents = {
       },
     }),
   ),
+  "latest-articles": markRaw(
+    defineComponent({
+      name: "LatestArticlesWrapper",
+      setup(_, { attrs }) {
+        return () => h(Suspense, null, { default: () => h(LatestArticles, attrs) });
+      },
+    }),
+  ),
 };
 
 if (process.dev) {
@@ -562,8 +572,10 @@ const videoUrl = computed(() => {
   return (d?.contentUrl as string) || undefined;
 });
 
+const isArticleListTemplate = computed(() => templateName.value === "article-list");
+
 const useHeroLayout = computed(
-  () => !isPlainTemplate.value && !isNewsListTemplate.value && !isArticleTemplate.value && (!!heroImage.value || !!videoUrl.value),
+  () => !isPlainTemplate.value && !isNewsListTemplate.value && !isArticleListTemplate.value && !isArticleTemplate.value && (!!heroImage.value || !!videoUrl.value),
 );
 
 // Check if we're on the index page
@@ -579,8 +591,8 @@ const isArticleTemplate = computed(() => {
   const path = (data.value as Record<string, unknown>)?._path || "";
   return (
     typeof path === "string" &&
-    (path.includes("/news/") || path.includes("/uutiset/")) &&
-    templateName.value !== "news-list"
+    (path.includes("/news/") || path.includes("/uutiset/") || path.includes("/artikkelit/")) &&
+    templateName.value !== "news-list" && templateName.value !== "article-list"
   );
 });
 const isNewsListTemplate = computed(() => templateName.value === "news-list");
@@ -643,6 +655,7 @@ if (process.client) {
           <template #empty></template>
         </ContentRenderer>
         <NewsList v-if="isNewsListTemplate" :year="(data as Record<string, unknown>)?.year as string" />
+        <ArticleList v-if="isArticleListTemplate" :year="(data as Record<string, unknown>)?.year as string" />
       </main>
       <aside v-if="useHeroLayout" class="image-column" :class="{ 'video-column': !!videoUrl }">
         <div v-if="videoUrl" class="video-wrapper">

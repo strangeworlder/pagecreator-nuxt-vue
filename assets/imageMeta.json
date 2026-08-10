@@ -79,6 +79,34 @@
     "width": 1280,
     "height": 720
   },
+  "/images/products/yojoenraivo/TDB-logo.webp": {
+    "width": 338,
+    "height": 538
+  },
+  "/images/products/yojoenraivo/morko.webp": {
+    "width": 1280,
+    "height": 939
+  },
+  "/images/products/yojoenraivo/logo.webp": {
+    "width": 1256,
+    "height": 1114
+  },
+  "/images/products/yojoenraivo/kansi.webp": {
+    "width": 1240,
+    "height": 1624
+  },
+  "/images/products/yojoenraivo/background.webp": {
+    "width": 842,
+    "height": 1920
+  },
+  "/images/products/yojoenraivo/background-full.webp": {
+    "width": 4800,
+    "height": 4500
+  },
+  "/images/products/sulkavansointu/TDB-logo.webp": {
+    "width": 338,
+    "height": 538
+  },
   "/images/products/sulkavansointu/sulkava.webp": {
     "width": 500,
     "height": 500
@@ -103,7 +131,7 @@
     "width": 4800,
     "height": 4500
   },
-  "/images/products/sulkavansointu/TDB-logo.webp": {
+  "/images/products/hirviokirja/TDB-logo.webp": {
     "width": 338,
     "height": 538
   },
@@ -131,10 +159,6 @@
     "width": 4800,
     "height": 4500
   },
-  "/images/products/hirviokirja/TDB-logo.webp": {
-    "width": 338,
-    "height": 538
-  },
   "/gen_images/images/products/hirviokirja/sulkava-1200.webp": {
     "width": 1200,
     "height": 1200
@@ -144,6 +168,18 @@
     "height": 1200
   },
   "/gen_images/images/products/hirviokirja/kansi-1200.webp": {
+    "width": 1200,
+    "height": 1572
+  },
+  "/gen_images/images/products/sulkavansointu/sulkava-1200.webp": {
+    "width": 1200,
+    "height": 1200
+  },
+  "/gen_images/images/products/sulkavansointu/silmat-1200.webp": {
+    "width": 1200,
+    "height": 800
+  },
+  "/gen_images/images/products/sulkavansointu/kansi-1200.webp": {
     "width": 1200,
     "height": 1572
   },

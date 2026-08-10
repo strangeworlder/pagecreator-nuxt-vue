@@ -58,6 +58,7 @@ const contentRoutes = Array.from(
 export default {
   components: [{ path: "~/components", pathPrefix: false }],
   modules: ["@nuxt/content"],
+
   vue: {
     compilerOptions: {
       warnHandler: (msg: string) => {
@@ -70,15 +71,18 @@ export default {
       },
     },
   },
+
   experimental: {
     appManifest: false,
   },
+
   css: [
     "~/assets/styles/tokens.css",
     "~/assets/styles/prose.css",
     "~/assets/styles/components.css",
     "~/assets/styles/product.css",
   ],
+
   app: {
     head: {
       meta: [
@@ -114,10 +118,12 @@ export default {
       ],
     },
   },
+
   typescript: {
     strict: true,
     shim: false,
   },
+
   nitro: {
     preset: "netlify",
     compatibilityDate: "2025-10-24",
@@ -140,6 +146,7 @@ export default {
       },
     ],
   },
+
   routeRules: {
     // Root should serve canonical homepage at '/' and use ISR like other pages
     "/": { isr: ISR_TTL },
@@ -158,6 +165,7 @@ export default {
     "/api/ws": { cors: true, websocket: true },
     // "/api/image": { cache: { maxAge: 300, swr: 300 } },
   },
+
   runtimeConfig: {
     public: {
       siteUrl: env.NUXT_PUBLIC_SITE_URL || "http://localhost:3000",
@@ -170,6 +178,7 @@ export default {
       siteName: env.NUXT_PUBLIC_SITE_NAME || "Gogam",
     },
   },
+
   // Using custom /api/i endpoint for transforms to avoid native deps
   content: {
     highlight: {
@@ -177,4 +186,6 @@ export default {
     },
     ws: false,
   },
+
+  compatibilityDate: "2026-08-10"
 } as unknown;

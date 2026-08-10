@@ -8,11 +8,12 @@ withDefaults(defineProps<{ href?: string; rel?: string; target?: string; hreflan
 });
 
 const EXTERNAL_RE = /^(https?:)?\/\//;
+const STATIC_FILE_RE = /\.(pdf|zip|png|jpe?g|gif|svg|txt)$/i;
 </script>
 
 <template>
   <NuxtLink
-    v-if="href && !EXTERNAL_RE.test(href) && !href.startsWith('#') && !target"
+    v-if="href && !EXTERNAL_RE.test(href) && !STATIC_FILE_RE.test(href) && !href.startsWith('#') && !target"
     :to="href"
     :hreflang="hreflang"
     v-bind="$attrs"

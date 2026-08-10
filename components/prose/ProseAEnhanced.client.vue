@@ -18,10 +18,11 @@ const linkRef = ref<HTMLElement | ComponentPublicInstance | null>(null);
 const previewTimeout = ref<NodeJS.Timeout>();
 
 const EXTERNAL_RE = /^(https?:)?\/\//;
+const STATIC_FILE_RE = /\.(pdf|zip|png|jpe?g|gif|svg|txt)$/i;
 const isLocal = () => {
   if (props.target) return false;
   const href = props.href || "";
-  return !!href && !EXTERNAL_RE.test(href) && !href.startsWith("#");
+  return !!href && !EXTERNAL_RE.test(href) && !STATIC_FILE_RE.test(href) && !href.startsWith("#");
 };
 
 const handleMouseEnter = async () => {
@@ -139,7 +140,7 @@ onUnmounted(() => {
 </script>
 <template>
   <NuxtLink
-    v-if="href && !EXTERNAL_RE.test(href) && !href.startsWith('#') && !target"
+    v-if="href && !EXTERNAL_RE.test(href) && !STATIC_FILE_RE.test(href) && !href.startsWith('#') && !target"
     ref="linkRef"
     :to="href"
     v-bind="$attrs"

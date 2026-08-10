@@ -24,7 +24,7 @@ export default defineEventHandler(async (event) => {
   for (const p of candidates) {
     const found = await queryCollection(event, 'content').path(p).first();
     if (found) {
-      doc = found;
+      doc = found as any;
       break;
     }
   }

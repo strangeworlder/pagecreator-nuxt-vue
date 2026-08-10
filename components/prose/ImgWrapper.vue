@@ -1,13 +1,16 @@
 <script setup lang="ts">
-import { computed } from "vue";
 import ProseImg from "~/components/prose/ProseImg.vue";
 
-// ImgWrapper previously only rendered ProseImg in pages/[...slug].vue
-// If it needs enhancement later, we can add it here.
+const props = defineProps<{
+  src: string;
+  alt?: string;
+  width?: number;
+  height?: number;
+}>();
 </script>
 
 <template>
-  <component :is="ProseImg" v-bind="$attrs">
+  <component :is="ProseImg as any" v-bind="{ ...props, ...$attrs }">
     <slot />
   </component>
 </template>

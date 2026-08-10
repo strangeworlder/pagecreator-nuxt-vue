@@ -146,7 +146,7 @@ const fetchContentWithRouting = async (routePath: string) => {
   }
 
   if (fetched && fetched.meta) {
-    Object.assign(fetched, fetched.meta);
+    fetched = { ...fetched, ...(fetched.meta as Record<string, unknown>) };
   }
   return fetched;
 };

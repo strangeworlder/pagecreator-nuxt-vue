@@ -175,18 +175,6 @@
     "width": 4800,
     "height": 4500
   },
-  "/gen_images/images/products/yojoenraivo/morko-1536.webp": {
-    "width": 1536,
-    "height": 1127
-  },
-  "/gen_images/images/products/yojoenraivo/kansi-1536.webp": {
-    "width": 1536,
-    "height": 2012
-  },
-  "/gen_images/images/products/yojoenraivo/kansi-150-canvas.webp": {
-    "width": 150,
-    "height": 150
-  },
   "/gen_images/images/products/sulkavansointu/sulkava-1200.webp": {
     "width": 1200,
     "height": 1200
@@ -210,6 +198,18 @@
   "/gen_images/images/products/sulkavansointu/kansi-1200.webp": {
     "width": 1200,
     "height": 1572
+  },
+  "/gen_images/images/products/yojoenraivo/morko-1536.webp": {
+    "width": 1536,
+    "height": 1127
+  },
+  "/gen_images/images/products/yojoenraivo/kansi-1536.webp": {
+    "width": 1536,
+    "height": 2012
+  },
+  "/gen_images/images/products/yojoenraivo/kansi-150-canvas.webp": {
+    "width": 150,
+    "height": 150
   },
   "/gen_images/images/products/hirviokirja/sulkava-1536.webp": {
     "width": 1536,

@@ -45,13 +45,12 @@ export default defineEventHandler(async (event) => {
     home.subOrganizations.length > 0
   ) {
     lines.push(`## Organizations`);
-    for (const org of home.subOrganizations) {
+    for (const org of home.subOrganizations as any[]) {
       lines.push(`- **${org.name}**`);
       if (org.description) {
         lines.push(`  - ${org.description}`);
       }
 
-      // Find content belonging to this organization
       // Find content belonging to this organization
       const orgDocs = allDocs.filter((doc: any) => {
         // Check for direct organization match
@@ -122,15 +121,15 @@ export default defineEventHandler(async (event) => {
     .first()
     .catch(() => null);
   const founderSameAs =
-    (typeof petriDoc?.author === 'object' ? petriDoc.author.sameAs : null) ||
-    petriDoc?.organization?.founder?.sameAs ||
-    home.organization?.founder?.sameAs;
+    (typeof (petriDoc as any)?.author === 'object' ? (petriDoc as any).author.sameAs : null) ||
+    (petriDoc as any)?.organization?.founder?.sameAs ||
+    (home as any).organization?.founder?.sameAs;
 
-  if (home.sameAs || home.organization?.sameAs || founderSameAs) {
+  if ((home as any).sameAs || (home as any).organization?.sameAs || founderSameAs) {
     lines.push(`## Multimedia & Social Satellites`);
     const links = new Set([
-      ...(home.sameAs || []),
-      ...(home.organization?.sameAs || []),
+      ...((home as any).sameAs || []),
+      ...((home as any).organization?.sameAs || []),
       ...(founderSameAs || []),
     ]);
 
@@ -153,9 +152,9 @@ export default defineEventHandler(async (event) => {
   }
 
   // 3. The FAQ Payload
-  if (home.faq && Array.isArray(home.faq)) {
+  if ((home as any).faq && Array.isArray((home as any).faq)) {
     lines.push(`## FAQ`);
-    for (const item of home.faq) {
+    for (const item of (home as any).faq) {
       lines.push(`Q: ${item.q}`);
       lines.push(`A: ${item.a}`);
       lines.push("");

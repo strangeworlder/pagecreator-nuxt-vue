@@ -12,7 +12,7 @@ const props = withDefaults(defineProps<{ href?: string; rel?: string; target?: s
 const { getPreviewForLink } = useContentLinkPreview();
 
 const showPreview = ref(false);
-const previewData = ref(null);
+const previewData = ref<any>(null);
 const previewPosition = ref({ x: 0, y: 0 });
 const linkRef = ref<HTMLElement | ComponentPublicInstance | null>(null);
 const previewTimeout = ref<NodeJS.Timeout>();
@@ -33,7 +33,7 @@ const handleMouseEnter = async () => {
 
   previewTimeout.value = setTimeout(async () => {
     try {
-      const preview = await getPreviewForLink(props.href);
+      const preview = await getPreviewForLink(props.href!);
       if (preview && showPreview.value === false) {
         previewData.value = preview;
         updatePreviewPosition();
@@ -100,7 +100,7 @@ const handleFocus = async () => {
 
   previewTimeout.value = setTimeout(async () => {
     try {
-      const preview = await getPreviewForLink(props.href);
+      const preview = await getPreviewForLink(props.href!);
       if (preview && showPreview.value === false) {
         previewData.value = preview;
         updatePreviewPosition();

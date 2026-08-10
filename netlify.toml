@@ -1,17 +1,13 @@
 [build]
-  command = "corepack enable && corepack prepare pnpm@10.19.0 --activate && pnpm install --no-frozen-lockfile && pnpm build && echo '--- DEBUG ---' && ls -R .output/public || true && rm -rf .netlify/publish && mkdir -p .netlify/publish && if [ -d .output/public ]; then cp -a .output/public/. .netlify/publish/; fi && if [ -d .nuxt/dist/client ]; then cp -a .nuxt/dist/client/. .netlify/publish/; fi && if [ -d public ]; then cp -a public/. .netlify/publish/; fi && echo '--- PUBLISH TOP ---' && ls -la .netlify/publish | sed -n '1,200p' && echo '--- PUBLISH _nUXT ---' && ls -la .netlify/publish/_nuxt | sed -n '1,200p' && echo '--- PUBLISH _nUXT BUILDS/META ---' && ls -la .netlify/publish/_nuxt/builds/meta | sed -n '1,200p' || true"
-  publish = ".netlify/publish"
+  publish = ".output/public"
 
 [build.environment]
-  NODE_VERSION = "22"
+  NODE_VERSION = "20"
   NODE_ENV = "production"
-  NODE_OPTIONS = "--experimental-sqlite"
   NUXT_PUBLIC_DEFAULT_LOCALE = "fi"
   NUXT_PUBLIC_STATIC_HOSTING = "0"
   NUXT_PUBLIC_DISABLE_FRESHNESS = "0"
   PNPM_FLAGS = "--no-frozen-lockfile"
-
-# SSR hosting: Nitro functions handle APIs and dynamic images
 
 # Headers for security and performance
 [[headers]]

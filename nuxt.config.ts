@@ -188,9 +188,6 @@ export default {
       theme: "github-dark",
     },
     ws: false,
-    experimental: {
-      nativeSqlite: true,
-    },
   },
 
   compatibilityDate: "2026-08-10"

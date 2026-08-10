@@ -158,7 +158,7 @@ const handleMouseLeave = () => {
 .preview-thumbnail {
   width: 150px;
   height: 150px;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 

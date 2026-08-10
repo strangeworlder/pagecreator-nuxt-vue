@@ -159,18 +159,6 @@
     "width": 4800,
     "height": 4500
   },
-  "/gen_images/images/products/hirviokirja/sulkava-1200.webp": {
-    "width": 1200,
-    "height": 1200
-  },
-  "/gen_images/images/products/hirviokirja/nokiporo-1200.webp": {
-    "width": 1200,
-    "height": 1200
-  },
-  "/gen_images/images/products/hirviokirja/kansi-1200.webp": {
-    "width": 1200,
-    "height": 1572
-  },
   "/gen_images/images/products/sulkavansointu/sulkava-1200.webp": {
     "width": 1200,
     "height": 1200
@@ -180,6 +168,18 @@
     "height": 800
   },
   "/gen_images/images/products/sulkavansointu/kansi-1200.webp": {
+    "width": 1200,
+    "height": 1572
+  },
+  "/gen_images/images/products/hirviokirja/sulkava-1200.webp": {
+    "width": 1200,
+    "height": 1200
+  },
+  "/gen_images/images/products/hirviokirja/nokiporo-1200.webp": {
+    "width": 1200,
+    "height": 1200
+  },
+  "/gen_images/images/products/hirviokirja/kansi-1200.webp": {
     "width": 1200,
     "height": 1572
   },

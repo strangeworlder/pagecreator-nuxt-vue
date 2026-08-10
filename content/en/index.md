@@ -3,7 +3,7 @@ title: 'Gogam: Roleplaying games from Finland'
 description: >-
   Roleplaying games by Petri Leinonen. Indie tabletop RPGs like Cars & Family,
   and Vuosisata.
-dateModified: 2026-08-02
+dateModified: 2026-08-10
 datePublished: 2025-12-29
 tags:
   - starter
@@ -181,7 +181,8 @@ Publishes physical books, primarily in Finnish.
 
 ### Eevenkoto
 
-Eevenkoto is a new campaign setting and rules update for the L&L roleplaying game, published by Kustannusosakeyhtiö Gogam. Its purpose is to update the rules of L&L to the 5.5e standard and bring a 1920s post-war era of joy vibe to the gaming table.
+[Eevenkoto](/eevenkoto){hreflang="fi"} is a new campaign setting and rules update for the L&L roleplaying game, published by Kustannusosakeyhtiö Gogam. Its purpose is to update the rules of L&L to the 5.5e standard and bring a 1920s post-war era of joy vibe to the gaming table.
+
 
 ### Black Shield Canton
 

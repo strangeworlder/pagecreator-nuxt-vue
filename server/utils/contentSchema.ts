@@ -43,14 +43,48 @@ export const frontMatterSchema = z.object({
   // Pedagogical Payload
   gameItem: z.array(z.string()).optional(),
 
-  // Rule: isBasedOn must be a CreativeWork object (Pedagogical Hub)
+  // Rule: isBasedOn must be a CreativeWork object, string, or array (Pedagogical Hub)
   isBasedOn: z
-    .object({
-      "@type": z.literal("CreativeWork").optional(),
-      name: z.string(),
-      url: z.string().url().optional(),
-      "@id": z.string().optional(),
-    })
+    .union([
+      z.string(),
+      z.object({
+        "@type": z.string().optional(),
+        type: z.string().optional(),
+        name: z.string(),
+        url: z.string().url().optional(),
+        "@id": z.string().optional(),
+        author: z
+          .union([
+            z.string(),
+            z.object({
+              name: z.string(),
+              url: z.string().url().optional(),
+            }),
+          ])
+          .optional(),
+      }),
+      z.array(
+        z.union([
+          z.string(),
+          z.object({
+            "@type": z.string().optional(),
+            type: z.string().optional(),
+            name: z.string(),
+            url: z.string().url().optional(),
+            "@id": z.string().optional(),
+            author: z
+              .union([
+                z.string(),
+                z.object({
+                  name: z.string(),
+                  url: z.string().url().optional(),
+                }),
+              ])
+              .optional(),
+          }),
+        ]),
+      ),
+    ])
     .optional(),
 
   // Entities & Graph

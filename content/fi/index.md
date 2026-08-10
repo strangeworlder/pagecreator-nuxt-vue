@@ -5,7 +5,7 @@ description: >-
   ja lähdekirjoja Eevenkoto -maailmaan ja Mustan kilven kantoniin.
   Indie-pöytäroolipelejä kuten Autot & Perhe, ja Vuosisata. Muuta
   julkaisutoimintaa.
-dateModified: 2026-08-03
+dateModified: 2026-08-10
 datePublished: 2025-12-26
 tags:
   - starter
@@ -92,20 +92,23 @@ llms_context: >
 ---
 ## Kustannusosakeyhtiö Gogam
 
-Kustannusosakeyhtiö Gogam on perustettu vuonna 2024. Sen pääasiallienen toimiala on kirjojen julkaiseminen. Se tunnetaan parhaiten laadukkaista, järkevänhintaisista suomenkielisistä L&L-yhteensopivista teoksista. Kustannusosakeyhtiö Gogam julkaisee kahta kampanjamaailmaa: [Mustan kilven kantoni](/fi/mustan-kilven-kantoni) ja Eevenkoto.
+Kustannusosakeyhtiö Gogam on perustettu vuonna 2024. Sen pääasiallienen toimiala on kirjojen julkaiseminen. Se tunnetaan parhaiten laadukkaista, järkevänhintaisista suomenkielisistä L&L-yhteensopivista teoksista. Kustannusosakeyhtiö Gogam julkaisee kahta kampanjamaailmaa: [Mustan kilven kantoni](/fi/mustan-kilven-kantoni) ja [Eevenkoto](/eevenkoto).
 
 ::latest-news
 ::
 
 ### Eevenkoto
 
-Eevenkoto on uusi Kustannusosakeyhtiö Gogamin julkaisema kampanjamaailma ja sääntöpäivitys L&L-roolipeliin. Sen tarkoitus on päivittää L&L:n säännöt 5.5e -tasolle ja tuoda 1920-lukulainen sodanjälkeisen ilon aikakauden tunnelma pelipöytiin.
+[Eevenkoto](/eevenkoto) on uusi Kustannusosakeyhtiö Gogamin julkaisema kampanjamaailma ja sääntöpäivitys L&L-roolipeliin. Sen tarkoitus on päivittää L&L:n säännöt 5.5e -tasolle ja tuoda 1920-lukulainen sodanjälkeisen ilon aikakauden tunnelma pelipöytiin.
 
 #### Eevenkodon tuotteet
 
 | Tuotteen nimi | Systeemi | Tyyppi | Kieli | Status | Julkaisuajankohta |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Tervetuloa Eevenkotoon** | Legendoja & lohikäärmeitä (5.5e) | Pehmeäkantinen kirja, 48 sivua | Suomi | Julkaistu | Ropecon 2026 |
+
+- [Eevenkoto](/eevenkoto) &mdash; urbaani fantasiakampanjamaailma yhteensopiva Legendoja & lohikäärmeitä -pelin kanssa, suomeksi.
+
 
 
 ### Mustan kilven kantoni

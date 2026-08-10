@@ -173,17 +173,24 @@ export default defineEventHandler(async (event) => {
     // STRATEGY 2: Raw File via FS (Build Time)
     if (!content) {
       try {
-        const filePath = path.resolve(process.cwd(), "content", (doc.id || doc.path).replace(/^\//, ""));
-        content = await fs.readFile(filePath, "utf-8");
-        if (content) strategyUsed = "FS (Raw)";
+        const basePath = path.resolve(process.cwd(), "content", doc.path.replace(/^\//, ""));
+        for (const ext of [".md", "/index.md", ".mdx"]) {
+          try {
+            content = await fs.readFile(basePath + ext, "utf-8");
+            if (content) {
+              strategyUsed = "FS (Raw)";
+              break;
+            }
+          } catch {}
+        }
       } catch {}
     }
 
     // STRATEGY 3: AST Reconstruction (Runtime/Cache Fallback)
     // If raw access failed, we rely on the parsed AST which provided 'doc' in the first place.
-    if (!content && doc.body) {
+    if (!content && (doc as any).body) {
       try {
-        content = astToText(doc.body);
+        content = astToText((doc as any).body);
         if (content) strategyUsed = "AST (Parsed)";
       } catch {}
     }

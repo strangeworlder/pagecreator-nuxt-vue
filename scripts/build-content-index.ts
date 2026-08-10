@@ -1,9 +1,6 @@
 // @ts-nocheck
 import { mkdir, writeFile } from "node:fs/promises";
-import { createRequire } from "node:module";
 import { dirname, join } from "node:path";
-import { load } from "std-env";
-
 // Nuxt content is static at build time; we can read from .content/cache via queryContent
 // Since we don't have Nuxt runtime here, we will emit a minimal index by globbing content paths at build time
 

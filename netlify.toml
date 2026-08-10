@@ -5,6 +5,7 @@
 [build.environment]
   NODE_VERSION = "22"
   NODE_ENV = "production"
+  NODE_OPTIONS = "--experimental-sqlite"
   NUXT_PUBLIC_DEFAULT_LOCALE = "fi"
   NUXT_PUBLIC_STATIC_HOSTING = "0"
   NUXT_PUBLIC_DISABLE_FRESHNESS = "0"
@@ -53,8 +54,3 @@
   for = "/*.svg"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-
-[functions]
-  node_bundler = "esbuild"
-  external_node_modules = ["better-sqlite3"]
-  included_files = ["node_modules/better-sqlite3/**"]

@@ -16,7 +16,7 @@ tags:
   - eevenkoto
   - kampanjamaailma
 datePublished: 2026-08-10
-dateModified: 2026-08-10
+dateModified: 2026-08-24
 organization:
   name: Kustannusosakeyhtiö Gogam
   url: 'https://gogam.eu'
@@ -104,6 +104,11 @@ Eevenkoto-maailmaan sijoittuvia tuotteita ja julkaisuja:
 ### Digitaalinen SRD ja tulevat aineistot
 
 Eevenkodon sääntö- ja maailmamateriaaleista on tarkoitus julkaista avoin digitaalinen SRD-aineisto verkossa, mikä mahdollistaa materiaalin laajan hyödyntämisen ja verkkopohjaisen tarkastelun.
+
+### Ladattavat resurssit ja pelimateriaalit
+
+Pelipöydän avuksi on ladattavissa tulostettavia materiaaleja:
+* [Ladattavia resursseja Eevenkotoon](/fi/eevenkoto/ladattavat-resurssit) – Tulostettava hahmolomake ja Eevenkodon kaupunkikartta (PDF).
 
 ## Artikkelit
 

@@ -41,6 +41,24 @@ for (const file of contentFiles) {
       const route = aliases.startsWith("/") ? aliases : `/${aliases}`;
       aliasRoutes.add(route);
     }
+    
+    // Auto-generate canonical date-based routes for news for prerendering
+    if ((file.includes("/uutiset/") || file.includes("/news/")) && !file.endsWith("index.md")) {
+      const pubDate = fm.datePublished;
+      if (pubDate) {
+        const d = new Date(pubDate as string);
+        if (!isNaN(d.getTime())) {
+          const yyyy = d.getUTCFullYear();
+          const mm = String(d.getUTCMonth() + 1).padStart(2, "0");
+          const dd = String(d.getUTCDate()).padStart(2, "0");
+          const slug = file.split("/").pop()?.replace(/\.(md|mdx|markdown)$/i, "");
+          const lang = file.split("/")[1] || DEFAULT_LOCALE;
+          if (slug) {
+            aliasRoutes.add(`/${lang}/${yyyy}/${mm}/${dd}/${slug}`);
+          }
+        }
+      }
+    }
   } catch { }
 }
 const contentRoutes = Array.from(

@@ -38,7 +38,7 @@ function resolveDocumentLocale(doc: Record<string, unknown>, fallback: string): 
     return String(explicit).trim();
   }
 
-  const pathCandidates = [doc._path, doc._id, doc._file, doc.canonical];
+  const pathCandidates = [doc.path, doc._path, doc._id, doc._file, doc.canonical];
   for (const candidate of pathCandidates) {
     const locale = localeFromPathLike(typeof candidate === "string" ? candidate : undefined);
     if (locale) return locale;
@@ -165,9 +165,9 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
     if (!doc) return;
 
     // Strict trailing slash removal for consistent canonical URLs
-    const rawPath = ensureLeadingSlash(doc.canonical || doc._path || "/");
+    const rawPath = ensureLeadingSlash(doc.canonical || doc.path || doc._path || "/");
     const path: string = removeTrailingSlash(rawPath);
-    const sourcePath: string = ensureLeadingSlash(doc._path || path);
+    const sourcePath: string = ensureLeadingSlash(doc.path || doc._path || path);
     const url = `${siteUrl}${path}`;
 
     const documentLocale = resolveDocumentLocale(doc, defaultLocale);
@@ -327,9 +327,11 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
     const breadcrumbId = `${url}#breadcrumb`;
 
     // Identity Hub Condition: The Home Page (/) is the Master for Org
-    const isIdentityHub = doc._path === "/" || doc.canonical === "/";
+    const isIdentityHub = doc.path === "/" || doc._path === "/" || doc.canonical === "/";
     const isPersonIdentityHub = !!(
-      doc._path?.includes("petri-leinonen") || doc.canonical?.includes("petri-leinonen")
+      (typeof doc.path === 'string' && doc.path.includes("petri-leinonen")) ||
+      (typeof doc._path === 'string' && doc._path.includes("petri-leinonen")) ||
+      (typeof doc.canonical === 'string' && doc.canonical.includes("petri-leinonen"))
     );
     const graph: Record<string, unknown>[] = [];
 

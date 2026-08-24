@@ -2,13 +2,13 @@ import { queryCollection } from "@nuxt/content/server";
 
 export default defineEventHandler(async (event) => {
   const baseUrl: string = useRuntimeConfig(event).public.siteUrl;
-  const docs = await queryCollection(event, "content")
-    .select("path", "dateModified", "canonical", "aliases")
-    .all();
+  const docs = await queryCollection(event, "content").all();
 
   const urls: string[] = [];
 
   for (const d of docs) {
+    if ((d as any).noindex) continue;
+
     // 1. Determine the primary URL for this document
     let loc = d.path;
 
@@ -19,8 +19,13 @@ export default defineEventHandler(async (event) => {
     }
 
     // Ensure no trailing slash for consistency (unless root)
-    const path = loc === "/" ? "" : loc.replace(/\/$/, "");
-    const lastmod = new Date(d.dateModified || Date.now()).toISOString();
+    const path = loc === "/" ? "" : loc?.replace(/\/$/, "");
+
+    let lastmodDate = d.dateModified ? new Date(d.dateModified as string | Date) : new Date();
+    if (Number.isNaN(lastmodDate.getTime())) {
+      lastmodDate = new Date();
+    }
+    const lastmod = lastmodDate.toISOString();
 
     urls.push(
       `<url><loc>${baseUrl.replace(/\/$/, "")}${path}</loc><lastmod>${lastmod}</lastmod></url>`,
@@ -36,7 +41,7 @@ export default defineEventHandler(async (event) => {
   const uniqueUrls = Array.from(new Set(urls));
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${uniqueUrls.join("")}</urlset>`;
-  setHeader(event, "Content-Type", "application/xml");
+  setHeader(event, "Content-Type", "application/xml; charset=utf-8");
   setHeader(event, "Cache-Control", "public, max-age=600, stale-while-revalidate=86400");
   return xml;
 });

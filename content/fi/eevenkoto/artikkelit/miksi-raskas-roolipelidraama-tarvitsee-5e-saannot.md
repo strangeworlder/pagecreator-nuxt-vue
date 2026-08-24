@@ -44,7 +44,7 @@ summary: >-
 ---
 
 ::alert{type="note" title="TL;DR"}
-Eevenkoto on kaikenkaikkiaan vahvasti politiikkaan ja ihmissuhdedraamaan painottava maailma. Vaikka monet tällaiset pelit pyörivät draamapainotteisilla järjestelmillä, joiden pelimekaaninen fokus on sosiaalisessa pilarissa, Eevenkoto nojaa tietoisesti 5.5e / Legendoja & Lohikäärmeitä -peleistä tuttuun sääntömoottoriin. Selkeä mekaaninen sääntöpohja, joka ei vaikuta liikaa sosiaaliseen peliin toimii turvallisena pohjana rakentaa hahmoa eikä tule roolipelaamisen tielle.
+[Eevenkoto](/eevenkoto) on kaikenkaikkiaan vahvasti politiikkaan ja ihmissuhdedraamaan painottava maailma. Vaikka monet tällaiset pelit pyörivät draamapainotteisilla järjestelmillä, joiden pelimekaaninen fokus on sosiaalisessa pilarissa, Eevenkoto nojaa tietoisesti 5.5e / Legendoja & Lohikäärmeitä -peleistä tuttuun sääntömoottoriin. Selkeä mekaaninen sääntöpohja, joka ei vaikuta liikaa sosiaaliseen peliin toimii turvallisena pohjana rakentaa hahmoa eikä tule roolipelaamisen tielle.
 ::
 
 Eevenkotoa on rakennettu aika vahvasti sosiaalisten rakenteiden päälle. On luokkasortoa ja kapinaa. On poliittista valtapeliä uuden ja vanhan rahan välillä. Musiikkiskene on kaiken ytimessä. Ja sopivalla romanttisella alavireella varustettu ihmissuhdedraama kaupungissa vaatii pelaajiltaan usein yllättävän paljon eläytymistä.

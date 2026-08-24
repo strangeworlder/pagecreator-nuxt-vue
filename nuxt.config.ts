@@ -68,6 +68,8 @@ const contentRoutes = Array.from(
   new Set([
     "/",
     `/${DEFAULT_LOCALE}`,
+    "/sitemap.xml",
+    "/robots.txt",
     "/llms.txt",
     "/llms-full.txt",
     "/en/rss.xml",
@@ -175,6 +177,8 @@ export default {
   routeRules: {
     // Root should serve canonical homepage at '/' and use ISR like other pages
     "/": { isr: ISR_TTL },
+    "/sitemap.xml": { prerender: true },
+    "/robots.txt": { prerender: true },
     "/llms.txt": { prerender: true },
     "/llms-full.txt": { prerender: true },
     "/en/rss.xml": { prerender: true },

@@ -1,11 +1,8 @@
 ---
-title: >-
-  Miksi raskas roolipelidraama tarvitsee 5e-säännöt? — Eevenkodon
-  suunnittelufilosofia
+title: Miksi Eevenkodon vahva sosiaalinen peli tarvitsee taustalleen 5.5e-säännöt?
 description: >-
-  Eevenkoto nojaa raskaaseen poliittiseen draamaan, mutta käyttää tietoisesti
-  5e-sääntömoottoria. Miksi selkeä mekaaninen sääntöpohja on paras turvasatama
-  ja paineventtiili syvälliselle eläytymiselle?
+  Eevenkoto on kaikenkaikkiaan vahvasti politiikkaan ja ihmissuhdedraamaan
+  painottava maailma. Miksi?
 datePublished: 2026-08-24
 dateModified: 2026-08-24
 template: article
@@ -14,7 +11,7 @@ inLanguage:
 tags:
   - eevenkoto
   - pelisuunnittelu
-  - dnd5e
+  - dnd5.5e
   - legendoja-ja-lohikaarmeita
   - roolipelit
 author:

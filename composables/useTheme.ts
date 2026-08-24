@@ -1,6 +1,6 @@
 export type UiTheme = "light" | "dark";
 
-import { onBeforeUnmount } from 'vue';
+import { onBeforeUnmount } from "vue";
 
 export function useTheme() {
   const theme = useState<UiTheme>("ui-theme", () => "light");
@@ -38,6 +38,6 @@ export function useTheme() {
     }
   }
 
-  const toggleTheme = () => applyTheme(theme.value === 'light' ? 'dark' : 'light');
+  const toggleTheme = () => applyTheme(theme.value === "light" ? "dark" : "light");
   return { theme, applyTheme, toggleTheme };
 }

@@ -83,9 +83,9 @@ export default defineEventHandler(async (event) => {
 
   // Re-fetch Home for the "North Star" description
   const homePath = `/${defaultLocale}`;
-  const home = await queryCollection(event, 'content').path(homePath).first();
+  const home = await queryCollection(event, "content").path(homePath).first();
 
-  const allDocs = await queryCollection(event, 'content').all();
+  const allDocs = await queryCollection(event, "content").all();
 
   const sortedDocs = [...allDocs].sort((a, b) => {
     const getPriority = (doc: any) => {

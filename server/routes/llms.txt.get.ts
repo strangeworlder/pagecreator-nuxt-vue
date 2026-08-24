@@ -7,11 +7,11 @@ export default defineEventHandler(async (event) => {
 
   // Fetch Home for definition and metadata
   const homePath = `/${defaultLocale}`;
-  const home = await queryCollection(event, 'content').path(homePath).first();
-  if (!home) return '';
+  const home = await queryCollection(event, "content").path(homePath).first();
+  if (!home) return "";
 
   // Fetch all docs for filtering
-  const allDocs = await queryCollection(event, 'content').all();
+  const allDocs = await queryCollection(event, "content").all();
 
   // Helper to ensure absolute URLs
   const toAbsolute = (path: string) => {
@@ -116,12 +116,12 @@ export default defineEventHandler(async (event) => {
   // D. Multimedia & Social Satellites
   // Fetch petri-leinonen.md for founder links as it was moved to its own page
   const petriPath = `/${defaultLocale}/petri-leinonen`;
-  const petriDoc = await queryCollection(event, 'content')
+  const petriDoc = await queryCollection(event, "content")
     .path(petriPath)
     .first()
     .catch(() => null);
   const founderSameAs =
-    (typeof (petriDoc as any)?.author === 'object' ? (petriDoc as any).author.sameAs : null) ||
+    (typeof (petriDoc as any)?.author === "object" ? (petriDoc as any).author.sameAs : null) ||
     (petriDoc as any)?.organization?.founder?.sameAs ||
     (home as any).organization?.founder?.sameAs;
 

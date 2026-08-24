@@ -1,10 +1,10 @@
-import { defineCollection } from '@nuxt/content'
-import { frontMatterSchema } from './server/utils/contentSchema'
+import { defineCollection } from "@nuxt/content";
+import { frontMatterSchema } from "./server/utils/contentSchema";
 
 export const collections = {
   content: defineCollection({
-    type: 'page',
-    source: '**/*.md',
-    schema: frontMatterSchema
-  })
-}
+    type: "page",
+    source: "**/*.md",
+    schema: frontMatterSchema,
+  }),
+};

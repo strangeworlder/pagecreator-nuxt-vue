@@ -109,13 +109,13 @@ export default defineNuxtPlugin((nuxtApp) => {
       if (shouldUpdate) {
         // On static hosting, skip API and use content query
         const fresh = staticHosting
-          ? await queryCollection('content').path(normalize(candidatePath)).first()
+          ? await queryCollection("content").path(normalize(candidatePath)).first()
           : (
               await $fetch<{ doc: Record<string, unknown> | null }>("/api/content-doc", {
                 params: { path: candidatePath, ts: Date.now() },
                 headers: { "cache-control": "no-cache" },
               })
-            ).doc || (await queryCollection('content').path(normalize(candidatePath)).first());
+            ).doc || (await queryCollection("content").path(normalize(candidatePath)).first());
         if (fresh) {
           // Log exactly where we swap in the fresh document
           const prev = useState<Record<string, unknown> | null>("content-doc", () => null).value;

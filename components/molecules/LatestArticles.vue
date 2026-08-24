@@ -12,19 +12,21 @@ const locale = computed(() => {
 const { data: articles } = await useAsyncData(`latest-articles-${locale.value}`, async () => {
   const articlePath = `/${locale.value}/eevenkoto/artikkelit`;
   // We need to query the content where the path starts with the articlePath but is not the articlePath itself
-  let results = await queryCollection('content')
-    .where('path', 'LIKE', `${articlePath}/%`)
-    .order('datePublished', 'DESC')
+  let results = await queryCollection("content")
+    .where("path", "LIKE", `${articlePath}/%`)
+    .order("datePublished", "DESC")
     .limit(3)
     .all();
   return results;
 });
 
 const formatDate = (dateString: string) => {
-  if (!dateString) return '';
+  if (!dateString) return "";
   const d = new Date(dateString);
-  if (locale.value === "fi") return d.toLocaleDateString("fi-FI").replace(/\s+/g, '\u00A0');
-  return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }).replace(/\s+/g, '\u00A0');
+  if (locale.value === "fi") return d.toLocaleDateString("fi-FI").replace(/\s+/g, "\u00A0");
+  return d
+    .toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })
+    .replace(/\s+/g, "\u00A0");
 };
 </script>
 

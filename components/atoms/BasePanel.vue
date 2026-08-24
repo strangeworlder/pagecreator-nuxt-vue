@@ -7,7 +7,7 @@ const props = withDefaults(
   {
     as: "div",
     variant: "default",
-  }
+  },
 );
 </script>
 

@@ -11,10 +11,10 @@ export default defineEventHandler(async (event) => {
   const siteName = useRuntimeConfig(event).public.siteName;
 
   const newsPath = `/${lang}/${lang === "fi" ? "uutiset" : "news"}`;
-  const docs = await queryCollection(event, 'content')
-    .where('path', 'LIKE', `${newsPath}/%`)
-    .where('template', '=', 'article')
-    .order('datePublished', 'DESC')
+  const docs = await queryCollection(event, "content")
+    .where("path", "LIKE", `${newsPath}/%`)
+    .where("template", "=", "article")
+    .order("datePublished", "DESC")
     .all();
 
   const title = lang === "fi" ? `${siteName} Uutiset` : `${siteName} News`;

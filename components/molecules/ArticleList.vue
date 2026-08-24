@@ -18,11 +18,11 @@ const { data: articles } = await useAsyncData(
   `article-list-${locale.value}-${props.year || "all"}`,
   async () => {
     const articlePath = `/${locale.value}/eevenkoto/artikkelit`;
-    let results = await queryCollection('content')
-      .where('path', 'LIKE', `${articlePath}/%`)
-      .order('datePublished', 'DESC')
+    let results = await queryCollection("content")
+      .where("path", "LIKE", `${articlePath}/%`)
+      .order("datePublished", "DESC")
       .all();
-    
+
     // Filter by year if provided
     if (props.year) {
       results = results.filter((article: any) => {
@@ -37,10 +37,12 @@ const { data: articles } = await useAsyncData(
 );
 
 const formatDate = (dateString: string) => {
-  if (!dateString) return '';
+  if (!dateString) return "";
   const d = new Date(dateString);
-  if (locale.value === "fi") return d.toLocaleDateString("fi-FI").replace(/\s+/g, '\u00A0');
-  return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }).replace(/\s+/g, '\u00A0');
+  if (locale.value === "fi") return d.toLocaleDateString("fi-FI").replace(/\s+/g, "\u00A0");
+  return d
+    .toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })
+    .replace(/\s+/g, "\u00A0");
 };
 </script>
 

@@ -10,9 +10,9 @@ const locale = computed(() => {
 
 const { data: articles } = await useAsyncData(`latest-news-${locale.value}`, async () => {
   const newsPath = `/${locale.value}/${locale.value === "fi" ? "uutiset" : "news"}`;
-  return await queryCollection('content')
-    .where('path', 'LIKE', `${newsPath}/%`)
-    .order('datePublished', 'DESC')
+  return await queryCollection("content")
+    .where("path", "LIKE", `${newsPath}/%`)
+    .order("datePublished", "DESC")
     .limit(3)
     .all();
 });
@@ -29,8 +29,10 @@ const getArticleUrl = (article: any) => {
 
 const formatDate = (dateString: string) => {
   const d = new Date(dateString);
-  if (locale.value === "fi") return d.toLocaleDateString("fi-FI").replace(/\s+/g, '\u00A0');
-  return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }).replace(/\s+/g, '\u00A0');
+  if (locale.value === "fi") return d.toLocaleDateString("fi-FI").replace(/\s+/g, "\u00A0");
+  return d
+    .toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })
+    .replace(/\s+/g, "\u00A0");
 };
 </script>
 

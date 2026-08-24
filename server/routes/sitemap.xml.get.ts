@@ -2,8 +2,8 @@ import { queryCollection } from "@nuxt/content/server";
 
 export default defineEventHandler(async (event) => {
   const baseUrl: string = useRuntimeConfig(event).public.siteUrl;
-  const docs = await queryCollection(event, 'content')
-    .select('path', 'dateModified', 'canonical', 'aliases')
+  const docs = await queryCollection(event, "content")
+    .select("path", "dateModified", "canonical", "aliases")
     .all();
 
   const urls: string[] = [];

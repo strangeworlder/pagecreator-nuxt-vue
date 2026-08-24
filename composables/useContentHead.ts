@@ -329,9 +329,9 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
     // Identity Hub Condition: The Home Page (/) is the Master for Org
     const isIdentityHub = doc.path === "/" || doc._path === "/" || doc.canonical === "/";
     const isPersonIdentityHub = !!(
-      (typeof doc.path === 'string' && doc.path.includes("petri-leinonen")) ||
-      (typeof doc._path === 'string' && doc._path.includes("petri-leinonen")) ||
-      (typeof doc.canonical === 'string' && doc.canonical.includes("petri-leinonen"))
+      (typeof doc.path === "string" && doc.path.includes("petri-leinonen")) ||
+      (typeof doc._path === "string" && doc._path.includes("petri-leinonen")) ||
+      (typeof doc.canonical === "string" && doc.canonical.includes("petri-leinonen"))
     );
     const graph: Record<string, unknown>[] = [];
 
@@ -666,9 +666,9 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
             url: based.url,
             author: based.author
               ? {
-                "@type": "Person",
-                name: based.author.name || based.author,
-              }
+                  "@type": "Person",
+                  name: based.author.name || based.author,
+                }
               : undefined,
           };
         }
@@ -746,9 +746,9 @@ export function useCustomContentHead(docRef: Ref<Record<string, unknown> | null 
             name: c.name,
             author: c.author
               ? {
-                "@type": "Person",
-                name: typeof c.author === "string" ? c.author : c.author.name,
-              }
+                  "@type": "Person",
+                  name: typeof c.author === "string" ? c.author : c.author.name,
+                }
               : undefined,
             datePublished: c.datePublished,
             isbn: c.isbn,

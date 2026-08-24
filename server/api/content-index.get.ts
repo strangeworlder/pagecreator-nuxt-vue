@@ -13,17 +13,25 @@ async function handler(event: H3Event) {
   const { locale, path } = getQuery(event);
   const base = typeof locale === "string" && locale ? `/${locale}` : undefined;
 
-  let q = queryCollection(event, 'content')
-    .select("path", "title", "description", "datePublished", "dateModified", "tags", "id", "meta");
+  let q = queryCollection(event, "content").select(
+    "path",
+    "title",
+    "description",
+    "datePublished",
+    "dateModified",
+    "tags",
+    "id",
+    "meta",
+  );
 
   // If a specific path is requested, filter to just that page
   if (typeof path === "string" && path) {
-    q = q.where('path', '=', path);
+    q = q.where("path", "=", path);
   } else if (base) {
     // Otherwise, filter by locale if provided
-    q = q.where('path', 'LIKE', `${base}%`);
+    q = q.where("path", "LIKE", `${base}%`);
   }
-  const rawItems = await q.order('datePublished', 'DESC').all();
+  const rawItems = await q.order("datePublished", "DESC").all();
   const contentRoot = join(process.cwd(), "content");
   type ContentItem = {
     path: string;

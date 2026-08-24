@@ -84,19 +84,19 @@ const fetchContentWithRouting = async (routePath: string) => {
 
   let fetched: Record<string, unknown> | null = null;
   try {
-    fetched = await nuxtApp.runWithContext(() => queryCollection('content').path(tryPath).first());
+    fetched = await nuxtApp.runWithContext(() => queryCollection("content").path(tryPath).first());
   } catch {}
 
   if (!fetched) {
     try {
-      fetched = await nuxtApp.runWithContext(() => queryCollection('content')
-        .where('aliases', 'LIKE', `%${tryPath}%`)
-        .first());
+      fetched = await nuxtApp.runWithContext(() =>
+        queryCollection("content").where("aliases", "LIKE", `%${tryPath}%`).first(),
+      );
     } catch {}
   }
   if (!fetched && !/^\/\w{2}\b/.test(tryPath)) {
     const fiPath = `/fi${tryPath}`;
-    fetched = await nuxtApp.runWithContext(() => queryCollection('content').path(fiPath).first());
+    fetched = await nuxtApp.runWithContext(() => queryCollection("content").path(fiPath).first());
   }
 
   // Handle Archive Virtual Page
@@ -251,9 +251,9 @@ const ssrIdxKey = `ssr-locale-index:${initialLocale}`;
 const ssrLocaleIndex = useState<Record<string, unknown> | null>(ssrIdxKey, () => null);
 let initialLocaleIndex = ssrLocaleIndex.value;
 if (!initialLocaleIndex) {
-  const fetchedIdx = await queryCollection('content')
+  const fetchedIdx = await queryCollection("content")
     .path(`/${initialLocale}`)
-    .select('path', 'cover')
+    .select("path", "cover")
     .first();
   // Strictly filter to ensure no extra properties leak into hydration state
   const strippedIdx = fetchedIdx
@@ -333,9 +333,9 @@ watch(
       throw createError({ statusCode: 404, statusMessage: "Page Not Found", fatal: true });
     }
     const nextLocale = getLocaleFromPath(route.path);
-    const nextIndex = await queryCollection('content')
+    const nextIndex = await queryCollection("content")
       .path(`/${nextLocale}`)
-      .select('path', 'cover')
+      .select("path", "cover")
       .first();
     const currentPath = (data.value as Record<string, unknown>)?.path;
     if (next && next.path !== currentPath) {
@@ -419,14 +419,14 @@ if (process.client) {
     });
 }
 
-const makeHWrapper = (level: 1 | 2 | 3 | 4 | 5 | 6) => 
+const makeHWrapper = (level: 1 | 2 | 3 | 4 | 5 | 6) =>
   markRaw(
     defineComponent({
       name: `ProseH${level}Wrapper`,
       setup(props, { attrs, slots }) {
         return () => h(HWrapper, { ...props, ...attrs, level }, slots);
       },
-    })
+    }),
   );
 
 const proseComponents = {
@@ -577,7 +577,12 @@ const videoUrl = computed(() => {
 const isArticleListTemplate = computed(() => templateName.value === "article-list");
 
 const useHeroLayout = computed(
-  () => !isPlainTemplate.value && !isNewsListTemplate.value && !isArticleListTemplate.value && !isArticleTemplate.value && (!!heroImage.value || !!videoUrl.value),
+  () =>
+    !isPlainTemplate.value &&
+    !isNewsListTemplate.value &&
+    !isArticleListTemplate.value &&
+    !isArticleTemplate.value &&
+    (!!heroImage.value || !!videoUrl.value),
 );
 
 // Check if we're on the index page
@@ -594,7 +599,8 @@ const isArticleTemplate = computed(() => {
   return (
     typeof path === "string" &&
     (path.includes("/news/") || path.includes("/uutiset/") || path.includes("/artikkelit/")) &&
-    templateName.value !== "news-list" && templateName.value !== "article-list"
+    templateName.value !== "news-list" &&
+    templateName.value !== "article-list"
   );
 });
 const isNewsListTemplate = computed(() => templateName.value === "news-list");

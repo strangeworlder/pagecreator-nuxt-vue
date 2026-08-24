@@ -22,7 +22,7 @@ export default defineEventHandler(async (event) => {
 
   let doc: Record<string, unknown> | null = null;
   for (const p of candidates) {
-    const found = await queryCollection(event, 'content').path(p).first();
+    const found = await queryCollection(event, "content").path(p).first();
     if (found) {
       doc = found as any;
       break;

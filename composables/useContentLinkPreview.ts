@@ -71,10 +71,22 @@ export function useContentLinkPreview() {
         loading.value.add(p);
       }
 
-      const results = await queryCollection('content')
-        .where('path', 'IN', unique)
-        .orWhere(q => q.where('canonical', 'IN', unique))
-        .select('title', 'description', 'summary', 'cover', 'meta', 'datePublished', 'dateModified', 'tags', 'path', 'canonical', 'aliases')
+      const results = await queryCollection("content")
+        .where("path", "IN", unique)
+        .orWhere((q) => q.where("canonical", "IN", unique))
+        .select(
+          "title",
+          "description",
+          "summary",
+          "cover",
+          "meta",
+          "datePublished",
+          "dateModified",
+          "tags",
+          "path",
+          "canonical",
+          "aliases",
+        )
         .all();
 
       if (Array.isArray(results) && results.length) {
@@ -94,7 +106,12 @@ export function useContentLinkPreview() {
           return Number.MAX_SAFE_INTEGER;
         };
 
-        const best = results.slice().sort((a, b) => pickScore(a as Record<string, unknown>) - pickScore(b as Record<string, unknown>))[0];
+        const best = results
+          .slice()
+          .sort(
+            (a, b) =>
+              pickScore(a as Record<string, unknown>) - pickScore(b as Record<string, unknown>),
+          )[0];
         if (best) {
           const preview: ContentPreview = {
             title: best.title as string,

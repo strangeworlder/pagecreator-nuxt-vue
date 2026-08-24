@@ -99,7 +99,7 @@ Eevenkoto-maailmaan sijoittuvia tuotteita ja julkaisuja:
 
 ### Tervetuloa Eevenkotoon (2026)
 
-*Tervetuloa Eevenkotoon* on 48-sivuinen opas ja ensikatsaus kampanjamaailman saloihin. Kirja esittelee maailman perusteet, keskeiset toimijat sekä Pasi Seppäsen kirjoittaman *Kojeeseensa kadonnut* -seikkailun. Kirja julkaistiin Ropeconissa 2026 ja se on saatavilla hyvin varustetuilta roolipelien jälleenmyyjiltä.
+*Tervetuloa Eevenkotoon* on 48-sivuinen opas ja ensikatsaus kampanjamaailman saloihin. Kirja esittelee maailman perusteet, keskeiset toimijat sekä Pasi Seppäsen kirjoittaman *Kojeeseen kadonnut* -seikkailun. Kirja julkaistiin Ropeconissa 2026 ja se on saatavilla hyvin varustetuilta roolipelien jälleenmyyjiltä.
 
 ### Digitaalinen SRD ja tulevat aineistot
 

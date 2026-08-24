@@ -151,6 +151,7 @@ export default {
     // When deploying SSR (Netlify functions), don't override output dir
     prerender: {
       crawlLinks: true,
+      autoSubfolderIndex: false,
       routes: contentRoutes,
       // Don't fail the whole build on missing content during prerender
       failOnError: false,

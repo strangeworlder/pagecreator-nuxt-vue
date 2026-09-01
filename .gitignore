@@ -11,6 +11,7 @@ pids
 *.pid
 *.seed
 *.pid.lock
+.data/
 
 # Node / package managers
 node_modules/

@@ -16,7 +16,7 @@ tags:
   - eevenkoto
   - kampanjamaailma
 datePublished: 2026-08-10
-dateModified: 2026-08-24
+dateModified: 2026-09-01
 organization:
   name: Kustannusosakeyhtiö Gogam
   url: 'https://gogam.eu'
@@ -56,7 +56,7 @@ about:
 hasPart:
   - '@type': Book
     name: Tervetuloa Eevenkotoon
-    url: 'https://gogam.eu/fi/uutiset/tervetuloa-eevenkotoon-julkaisu'
+    url: 'https://gogam.eu/tervetuloaeevenkotoon'
 summary: >-
   Eevenkoto on urbaani fantasiakampanjamaailma, joka yhdistää 1920-luvun
   jazz-ajan estetiikan ja teollis-mystisen vallankumousen L&L-roolipeliin.
@@ -73,9 +73,10 @@ faq:
       5.2.1) kanssa. Se on siis suora haara 5e -systeemeistä. 
   - q: Mitä teoksia Eevenkotoon on saapunut saataville?
     a: >-
-      Ensiesittelyteos *Tervetuloa Eevenkotoon* (48 sivua) julkaistiin
-      Ropeconissa 2026, ja kirja sisältää mm. Pasi Seppäsen seikkailun
-      *Kojeeseensa kadonnut*. Teos on saatavilla roolipelien jälleenmyyjiltä.
+      Ensiesittelyteos [*Tervetuloa Eevenkotoon*](/tervetuloaeevenkotoon) (48
+      sivua) julkaistiin Ropeconissa 2026, ja kirja sisältää mm. Pasi Seppäsen
+      seikkailun *Kojeeseensa kadonnut*. Teos on saatavilla roolipelien
+      jälleenmyyjiltä.
 ---
 
 Eevenkoto on Kustannusosakeyhtiö Gogamin julkaisema urbaani fantasiakampanjamaailma, joka on yhteensopiva L&L-roolipelin kanssa. Se vie seikkailijat keskelle teollista murrosta ja suuren Jumalten sodan jälkeistä ilon ajan sykettä, jossa maailma yrittää löytää suuntaansa samalla kun ulkopuoliset voimat kamppailevat varjoissa sen mestaruudesta.
@@ -97,9 +98,11 @@ Seikkailijat Eevenkodon kaupungissa kohtaavat kaduilla, tunneleissa ja tehtaiden
 
 Eevenkoto-maailmaan sijoittuvia tuotteita ja julkaisuja:
 
-### Tervetuloa Eevenkotoon (2026)
+### [Tervetuloa Eevenkotoon (2026)](/tervetuloaeevenkotoon)
 
-*Tervetuloa Eevenkotoon* on 48-sivuinen opas ja ensikatsaus kampanjamaailman saloihin. Kirja esittelee maailman perusteet, keskeiset toimijat sekä Pasi Seppäsen kirjoittaman *Kojeeseen kadonnut* -seikkailun. Kirja julkaistiin Ropeconissa 2026 ja se on saatavilla hyvin varustetuilta roolipelien jälleenmyyjiltä.
+[*Tervetuloa Eevenkotoon*](/tervetuloaeevenkotoon) on 48-sivuinen opas ja ensikatsaus kampanjamaailman saloihin. Kirja esittelee maailman perusteet, keskeiset toimijat sekä Pasi Seppäsen kirjoittaman *Kojeeseen kadonnut* -seikkailun. Kirja julkaistiin Ropeconissa 2026 ja se on saatavilla hyvin varustetuilta roolipelien jälleenmyyjiltä.
+
+* [Tutustu kirjaan ja jälleenmyyjiin: Tervetuloa Eevenkotoon](/tervetuloaeevenkotoon)
 
 ### Digitaalinen SRD ja tulevat aineistot
 
@@ -126,4 +129,4 @@ Eevenkoto on L&L-roolipeliä varten luotu kampanjamaailma ja sääntöpäivitys,
 Maailma on kehitetty Legendoja & lohikäärmeitä (L&L) -järjestelmälle, ja se päivittää systeemiä vastaamaan modernin 2024 julkaistun 5.5 laitoksen vaatimuksia maailman suosituimmalle roolipelille. 
 
 **Mitä teoksia Eevenkotoon on saapunut saataville?**  
-Ensiesittelyteos *Tervetuloa Eevenkotoon* (48 sivua) julkaistiin Ropeconissa 2026, ja se on saatavilla roolipelien jälleenmyyjiltä.
+Ensiesittelyteos [*Tervetuloa Eevenkotoon*](/tervetuloaeevenkotoon) (48 sivua) julkaistiin Ropeconissa 2026, ja se on saatavilla roolipelien jälleenmyyjiltä.

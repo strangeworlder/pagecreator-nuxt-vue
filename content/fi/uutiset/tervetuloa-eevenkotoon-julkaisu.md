@@ -11,10 +11,10 @@ author: Petri Leinonen
 alternateLocales:
   - code: en
     path: /en/2026/08/02/tervetuloa-eevenkotoon-julkaisu
-dateModified: 2026-08-24
+dateModified: 2026-09-01
 ---
 
-Kustannusyhtiö Gogam julkaisi uuden urbaanin Eevenkoto -kampanjaympäristönsä ensikatsauksen *Tervetuloa Eevenkotoon* -kirjan [Ropecon 2026](https://ropecon.fi/) -tapahtumassa 24.7.2026 Helsingin Messukeskuksessa. Viikonlopun aikana teos sais tapahtumakävijöiltä, pelaajilta ja jälleenmyyjiltä erittäin myönteisen vastaanoton. 
+Kustannusyhtiö Gogam julkaisi uuden urbaanin Eevenkoto -kampanjaympäristönsä ensikatsauksen [*Tervetuloa Eevenkotoon*](/tervetuloaeevenkotoon) -kirjan [Ropecon 2026](https://ropecon.fi/) -tapahtumassa 24.7.2026 Helsingin Messukeskuksessa. Viikonlopun aikana teos sais tapahtumakävijöiltä, pelaajilta ja jälleenmyyjiltä erittäin myönteisen vastaanoton. 
 
 Myrryksen ja Gogamin yhteisellä myyntipöydällä oli tasainen kuhina läpi koko viikonlopun, ja 48-sivuisen opaskirjan kysyntä ylitti ennakko-odotukset. Erityisesti Eevenkodon teollisen murroksen ja maagisen historian yhdistävä tunnelma sekä modernisoidut sääntövaikutteet saivat kiitosta ja herättivät keskustelua.
 
@@ -22,6 +22,8 @@ Tapahtumassa pelautettiin Pasi Seppäsen *Kojeeseen kadonnut* -seikkailua kirjas
 
 ## Tervetuloa Eevenkotoon -kirjan saatavuus jatkossa
 
-Ropeconin menestyksekkään lanseerauksen jälkeen *Tervetuloa Eevenkotoon* on saapunut saataville hyvin varustettuihin roolipelien jälleenmyyjäliikkeisiin. Kustannusosakeyhtiö Gogam kiittää lämpimästi kaikkia Ropeconissa myyntipisteellä vierailleita, esittelypeleihin osallistuneita ja osallistuvia sekä kirjan jo omakseen hankkineita.
+Ropeconin menestyksekkään lanseerauksen jälkeen [*Tervetuloa Eevenkotoon*](/tervetuloaeevenkotoon) on saapunut saataville hyvin varustettuihin roolipelien jälleenmyyjäliikkeisiin. Kustannusosakeyhtiö Gogam kiittää lämpimästi kaikkia Ropeconissa myyntipisteellä vierailleita, esittelypeleihin osallistuneita ja osallistuvia sekä kirjan jo omakseen hankkineita.
+
+* [Tutustu kirjaan ja jälleenmyyjiin: Tervetuloa Eevenkotoon](/tervetuloaeevenkotoon)
 
 Tarkoitus on julkaista Eevenkodon SRD digitaalisessa muodossa ja tuoda kampanjamaailma kaikkien saataville myös verkon kautta.

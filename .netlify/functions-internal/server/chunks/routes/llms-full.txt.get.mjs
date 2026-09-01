@@ -1,4 +1,4 @@
-import { d as defineEventHandler, b as useRuntimeConfig, q as queryCollection, k as useStorage, s as setHeader } from '../_/nitro.mjs';
+import { d as defineEventHandler, f as useRuntimeConfig, q as queryCollection, h as useStorage, s as setHeader } from '../_/nitro.mjs';
 import { promises } from 'node:fs';
 import path from 'node:path';
 import 'node:http';
@@ -154,9 +154,17 @@ const llmsFull_txt_get = defineEventHandler(async (event) => {
     }
     if (!content) {
       try {
-        const filePath = path.resolve(process.cwd(), "content", (doc.id || doc.path).replace(/^\//, ""));
-        content = await promises.readFile(filePath, "utf-8");
-        if (content) strategyUsed = "FS (Raw)";
+        const basePath = path.resolve(process.cwd(), "content", doc.path.replace(/^\//, ""));
+        for (const ext of [".md", "/index.md", ".mdx"]) {
+          try {
+            content = await promises.readFile(basePath + ext, "utf-8");
+            if (content) {
+              strategyUsed = "FS (Raw)";
+              break;
+            }
+          } catch {
+          }
+        }
       } catch {
       }
     }

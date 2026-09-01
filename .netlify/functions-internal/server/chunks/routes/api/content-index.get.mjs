@@ -14,7 +14,16 @@ const API_STALE = Number(process.env.NUXT_API_STALE || 600);
 async function handler(event) {
   const { locale, path } = getQuery(event);
   const base = typeof locale === "string" && locale ? `/${locale}` : void 0;
-  let q = queryCollection(event, "content").select("path", "title", "description", "datePublished", "dateModified", "tags", "id", "meta");
+  let q = queryCollection(event, "content").select(
+    "path",
+    "title",
+    "description",
+    "datePublished",
+    "dateModified",
+    "tags",
+    "id",
+    "meta"
+  );
   if (typeof path === "string" && path) {
     q = q.where("path", "=", path);
   } else if (base) {

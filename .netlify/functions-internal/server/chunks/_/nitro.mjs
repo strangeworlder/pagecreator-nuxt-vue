@@ -1485,17 +1485,6 @@ function mergeHeaders$1(defaults, ...inputs) {
   }
   return merged;
 }
-function defineWebSocketHandler(hooks) {
-  return defineEventHandler({
-    handler() {
-      throw createError$1({
-        statusCode: 426,
-        statusMessage: "Upgrade Required"
-      });
-    },
-    websocket: hooks
-  });
-}
 
 class H3Event {
   "__is_event__" = true;
@@ -4101,7 +4090,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "f683f8de-c807-4c52-b073-ccca3f50ad0f",
+    "buildId": "063b12e2-ff26-47a3-a37f-f0abc912b790",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
@@ -4113,6 +4102,12 @@ const _inlineRuntimeConfig = {
       },
       "/": {
         "isr": 21600
+      },
+      "/sitemap.xml": {
+        "prerender": true
+      },
+      "/robots.txt": {
+        "prerender": true
       },
       "/llms.txt": {
         "prerender": true
@@ -4187,7 +4182,7 @@ const _inlineRuntimeConfig = {
   },
   "public": {
     "siteUrl": "http://localhost:3000",
-    "buildAt": "2026-08-10T08:47:58.841Z",
+    "buildAt": "2026-09-01T06:04:50.938Z",
     "redirectContentWS": "1",
     "defaultLocale": "fi",
     "disableFreshness": "0",
@@ -4721,7 +4716,7 @@ async function decompressSQLDump(base64Str, compressionType = "gzip") {
 }
 
 const checksums = {
-  "content": "v3.5.0--ktb06oGxyEVZ0i4PUxXSQjhQfUkKqMJTj53Q-Yg6iLI"
+  "content": "v3.5.0--ijkklsaHUnEwfQcbxMzimOAF8VG-noO224UhCvz6e7Y"
 };
 const checksumsStructure = {
   "content": "iOdz6sRw9jstj5ClbpDSxL_yNgqy8WzV-2e1KUdEj7Q"
@@ -5426,28 +5421,20 @@ const _XSf3z9 = eventHandler(async (event) => {
 
 const _lazy_2H89jl = () => import('../routes/api/content-doc.get.mjs');
 const _lazy_gUm_tA = () => import('../routes/api/content-index.get.mjs');
-const _lazy_LBeA2F = () => import('../routes/api/health.get.mjs');
-const _lazy_FMavcu = () => import('../routes/api/image.get.mjs');
-const _lazy_ed7CrT = () => import('../routes/api/ws.mjs');
 const _lazy_ywrd2x = () => import('../routes/_lang/rss.xml.get.mjs');
 const _lazy_B0XjCU = () => import('../routes/llms-full.txt.get.mjs');
 const _lazy_ytaZWP = () => import('../routes/llms.txt.get.mjs');
 const _lazy_W4Rl8l = () => import('../routes/robots.txt.get.mjs');
-const _lazy_8iSSti = () => import('../routes/site.webmanifest.get.mjs');
 const _lazy_5oTZMq = () => import('../routes/sitemap.xml.get.mjs');
 const _lazy_J9G9wU = () => import('../routes/renderer.mjs');
 
 const handlers = [
   { route: '/api/content-doc', handler: _lazy_2H89jl, lazy: true, middleware: false, method: "get" },
   { route: '/api/content-index', handler: _lazy_gUm_tA, lazy: true, middleware: false, method: "get" },
-  { route: '/api/health', handler: _lazy_LBeA2F, lazy: true, middleware: false, method: "get" },
-  { route: '/api/image', handler: _lazy_FMavcu, lazy: true, middleware: false, method: "get" },
-  { route: '/api/ws', handler: _lazy_ed7CrT, lazy: true, middleware: false, method: undefined },
   { route: '/:lang/rss.xml', handler: _lazy_ywrd2x, lazy: true, middleware: false, method: "get" },
   { route: '/llms-full.txt', handler: _lazy_B0XjCU, lazy: true, middleware: false, method: "get" },
   { route: '/llms.txt', handler: _lazy_ytaZWP, lazy: true, middleware: false, method: "get" },
   { route: '/robots.txt', handler: _lazy_W4Rl8l, lazy: true, middleware: false, method: "get" },
-  { route: '/site.webmanifest', handler: _lazy_8iSSti, lazy: true, middleware: false, method: "get" },
   { route: '/sitemap.xml', handler: _lazy_5oTZMq, lazy: true, middleware: false, method: "get" },
   { route: '/__nuxt_error', handler: _lazy_J9G9wU, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_content/content/sql_dump.txt', handler: _ZNm2H7, lazy: false, middleware: false, method: undefined },
@@ -5455,6 +5442,8 @@ const handlers = [
   { route: '/__nuxt_island/**', handler: _SxA8c9, lazy: false, middleware: false, method: undefined },
   { route: '/__nuxt_content/content/query', handler: _XSf3z9, lazy: false, middleware: false, method: undefined },
   { route: '/__nuxt_content/info/query', handler: _XSf3z9, lazy: false, middleware: false, method: undefined },
+  { route: '/api/image', handler: _lazy_J9G9wU, lazy: true, middleware: false, method: undefined },
+  { route: '/api/ws', handler: _lazy_J9G9wU, lazy: true, middleware: false, method: undefined },
   { route: '/api/**', handler: _lazy_J9G9wU, lazy: true, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_J9G9wU, lazy: true, middleware: false, method: undefined }
 ];
@@ -5600,5 +5589,5 @@ function useNitroApp() {
 }
 runNitroPlugins(nitroApp);
 
-export { $fetch$1 as $, isScriptProtocol as A, withQuery as B, sanitizeStatusCode as C, getContext as D, baseURL as E, defu as F, createHooks as G, executeAsync as H, pascalCase as I, kebabCase as J, withoutTrailingSlash as K, parseQuery as L, withTrailingSlash as M, destr as N, getRequestHeaders as O, getQuery as a, useRuntimeConfig as b, cachedEventHandler as c, defineEventHandler as d, createError$1 as e, getRequestHeader as f, getRouteRulesForPath as g, defineWebSocketHandler as h, getRouterParam as i, joinHeaders as j, useStorage as k, buildAssetsURL as l, getResponseStatusText as m, normalizeCookieHeader as n, getResponseStatus as o, publicAssetsURL as p, queryCollection as q, encodePath as r, setHeader as s, defineRenderHandler as t, useNitroApp as u, getRouteRules as v, joinURL as w, parseURL as x, decodePath as y, hasProtocol as z };
+export { $fetch$1 as $, sanitizeStatusCode as A, getContext as B, baseURL as C, defu as D, createHooks as E, executeAsync as F, pascalCase as G, kebabCase as H, withoutTrailingSlash as I, parseQuery as J, withTrailingSlash as K, destr as L, getRequestHeaders as M, getQuery as a, getRouterParam as b, cachedEventHandler as c, defineEventHandler as d, createError$1 as e, useRuntimeConfig as f, getRouteRulesForPath as g, useStorage as h, buildAssetsURL as i, joinHeaders as j, getResponseStatusText as k, getResponseStatus as l, encodePath as m, normalizeCookieHeader as n, defineRenderHandler as o, publicAssetsURL as p, queryCollection as q, getRouteRules as r, setHeader as s, joinURL as t, useNitroApp as u, parseURL as v, decodePath as w, hasProtocol as x, isScriptProtocol as y, withQuery as z };
 //# sourceMappingURL=nitro.mjs.map

@@ -12,7 +12,7 @@ const API_STALE = Number(env.NUXT_API_STALE || (env.NODE_ENV === "production" ? 
 const DEFAULT_LOCALE = env.NUXT_PUBLIC_DEFAULT_LOCALE || "fi";
 
 // Prerender all content routes for static export
-const contentFiles = globSync("content/**/*.{md,mdx,markdown}", { dot: false });
+const contentFiles = globSync("content/**/*.{md,mdx,markdown}", { dot: false }).map(f => f.replace(/\\/g, "/"));
 const fileToRoute = (file: string) => {
   const rel = file.replace(/^content\//, "").replace(/\.(md|mdx|markdown)$/i, "");
   // Map .../index to its directory root

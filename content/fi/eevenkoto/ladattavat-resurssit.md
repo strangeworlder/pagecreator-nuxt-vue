@@ -18,7 +18,7 @@ tags:
   - L&L
   - roolipelit
 datePublished: 2026-08-24
-dateModified: 2026-08-24
+dateModified: 2026-09-01
 author:
   name: Petri Leinonen
   url: 'https://gogam.eu'
@@ -62,7 +62,7 @@ Eevenkodon hahmolomake on räätälöity Legendoja & lohikäärmeitä -sääntö
 
 ## 2. Eevenkodon kartta
 
-Eevenkodon vapaakaupungin kartta auttaa hahmottamaan kaupungin asuinalueita.
+[*Tervetuloa Eevenkotoon*](/tervetuloaeevenkotoon) -kirjasta tuttu Eevenkodon vapaakaupungin kartta auttaa hahmottamaan kaupungin asuinalueita.
 
 ::alert{type="note" title="Lataa kaupunkikartta"}
 * **Tiedostomuoto:** PDF (korkearesoluutioinen)
@@ -74,6 +74,7 @@ Eevenkodon vapaakaupungin kartta auttaa hahmottamaan kaupungin asuinalueita.
 
 ## Lisää Eevenkoto-materiaalia
 
+* [Tervetuloa Eevenkotoon -kirjan esittely ja jälleenmyyjät](/tervetuloaeevenkotoon)
 * [Eevenkodon pääsivu ja esittely](/fi/eevenkoto)
 * [Eevenkoto: Artikkelit ja pelisuunnittelu](/fi/eevenkoto/artikkelit)
 * [Uutinen: Tervetuloa Eevenkotoon -julkaisu](/fi/uutiset/tervetuloa-eevenkotoon-julkaisu)

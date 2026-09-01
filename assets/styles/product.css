@@ -31,6 +31,12 @@ html[data-page-theme="product"] .product-nav {
   flex-direction: column;
 }
 
+html[data-page-theme="product"] .theme-eevenkoto .product-nav {
+  background-attachment: fixed;
+  border-left: 2px var(--color-accent) solid;
+  border-right: 2px var(--color-accent) solid;
+}
+
 html[data-page-theme="product"] .product-logo {
   width: 30%;
   margin: 20px 22%;
@@ -43,10 +49,30 @@ html[data-page-theme="product"] .product-logo {
 
 /* Content column visuals */
 html[data-page-theme="product"] .product-main {
-  border-top: 3px black solid;
+  border-top: 3px var(--color-border, black) solid;
 }
+
 html[data-page-theme="product"] .product-content {
-  background: rgba(240, 246, 255, 0.6);
+  background: var(--color-bg-content, rgba(240, 246, 255, 0.6));
+  padding: 30px;
+}
+
+/* Tervetuloa Eevenkotoon specific structure override */
+html[data-page-theme="product"] .product-content.theme-eevenkoto {
+  background: transparent;
+  padding: 0;
+}
+
+html[data-page-theme="product"] .product-content.theme-eevenkoto>header {
+  padding: 30px 30px 0 30px;
+}
+
+html[data-page-theme="product"] .product-content.theme-eevenkoto>footer {
+  padding: 0 30px 30px 30px;
+}
+
+html[data-page-theme="product"] .product-content.theme-eevenkoto>div {
+  background: var(--color-bg-content, rgba(240, 246, 255, 0.6));
   padding: 30px;
 }
 
@@ -71,14 +97,16 @@ html[data-page-theme="product"] .prose h2 {
 
 /* Links styling */
 html[data-page-theme="product"] a {
-  color: #00095e;
+  color: var(--color-accent, #00095e);
   font-weight: 700;
   text-decoration: none;
 }
+
 html[data-page-theme="product"] a:hover {
-  color: #0000dd;
+  color: var(--color-accent-hover, #0000dd);
   text-decoration: underline;
 }
+
 html[data-page-theme="product"] a[rel="external"]::after {
   display: inline-block;
   content: "↗";
@@ -99,23 +127,28 @@ html[data-page-theme="product"] .product-main img {
   html[data-page-theme="product"] .product-layout {
     flex-direction: column;
   }
+
   html[data-page-theme="product"] .product-nav {
     flex-direction: row-reverse;
     max-width: 100%;
     justify-content: space-between;
     background-size: 200% auto;
   }
+
   html[data-page-theme="product"] .product-logo {
     margin: 20px 40px;
     width: 90px;
   }
+
   html[data-page-theme="product"] .product-nav nav {
     display: flex;
   }
 }
+
 html[data-page-theme="product"] body {
   margin: 0px;
 }
+
 html[data-page-theme="product"] header {
   margin-bottom: 24px;
 }

@@ -545,6 +545,11 @@ useHead(() => {
     pt.bgTile ? `--product-bg-tile: url(${pt.bgTile})` : "",
     pt.h1Logo ? `--product-h1-logo: url(${pt.h1Logo})` : "",
     pt.sideLogo ? `--product-side-logo: url(${pt.sideLogo})` : "",
+    pt.colorAccent ? `--color-accent: ${pt.colorAccent}` : "",
+    pt.colorBg ? `--color-bg: ${pt.colorBg}` : "",
+    pt.colorBgContent ? `--color-bg-content: ${pt.colorBgContent}` : "",
+    pt.colorBorder ? `--color-border: ${pt.colorBorder}` : "",
+    pt.colorAccentHover ? `--color-accent-hover: ${pt.colorAccentHover}` : "",
   ]
     .filter(Boolean)
     .join("; ");
@@ -615,13 +620,21 @@ if (process.client) {
     (pt) => {
       if (!pt) return;
       const html = document.documentElement as HTMLElement;
-      const setVar = (k: string, v?: string) => {
+      const setUrlVar = (k: string, v?: string) => {
         if (typeof v === "string" && v) html.style.setProperty(k, `url(${v})`);
       };
-      setVar("--product-bg-full", (pt as Record<string, string>).bgFull);
-      setVar("--product-bg-tile", (pt as Record<string, string>).bgTile);
-      setVar("--product-h1-logo", (pt as Record<string, string>).h1Logo);
-      setVar("--product-side-logo", (pt as Record<string, string>).sideLogo);
+      const setColorVar = (k: string, v?: string) => {
+        if (typeof v === "string" && v) html.style.setProperty(k, v);
+      };
+      setUrlVar("--product-bg-full", (pt as Record<string, string>).bgFull);
+      setUrlVar("--product-bg-tile", (pt as Record<string, string>).bgTile);
+      setUrlVar("--product-h1-logo", (pt as Record<string, string>).h1Logo);
+      setUrlVar("--product-side-logo", (pt as Record<string, string>).sideLogo);
+      setColorVar("--color-accent", (pt as Record<string, string>).colorAccent);
+      setColorVar("--color-bg", (pt as Record<string, string>).colorBg);
+      setColorVar("--color-bg-content", (pt as Record<string, string>).colorBgContent);
+      setColorVar("--color-border", (pt as Record<string, string>).colorBorder);
+      setColorVar("--color-accent-hover", (pt as Record<string, string>).colorAccentHover);
     },
     { immediate: true, deep: true },
   );
@@ -638,7 +651,7 @@ if (process.client) {
     />
 
     <!-- Product template layout -->
-    <div v-if="isProductTemplate" class="product-layout">
+    <div v-if="isProductTemplate" class="product-layout" :class="(data as any)?.productTheme?.customClass">
       <aside class="product-nav">
         <component
           :is="(enhancementsEnabled && enhancedProductNavigationComp) ? enhancedProductNavigationComp : ProductNavigation"
@@ -646,7 +659,7 @@ if (process.client) {
         />
       </aside>
       <main class="product-main prose">
-        <div class="product-content">
+        <div class="product-content" :class="(data as any)?.productTheme?.customClass">
           <PageHeader :title="pageTitle" :description="pageDescription" :alternate-locales="pageAlternateLocales" />
           <ContentRenderer v-if="data" :key="version" :value="data" :components="proseComponents">
             <template #empty></template>
@@ -744,6 +757,10 @@ if (process.client) {
   display: flex;
   flex-direction: row;
   min-height: 100vh;
+}
+.product-layout.theme-eevenkoto {
+  gap: 10%;
+  margin: 0 32px;
 }
 .product-nav {
   flex: 1 1 232px;

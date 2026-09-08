@@ -45,6 +45,7 @@ const formattedDate = computed(() => {
   </header>
 </template>
 
+
 <style scoped>
 .article-header {
   margin-bottom: var(--space-2xl);
@@ -67,7 +68,7 @@ const formattedDate = computed(() => {
 .article-title {
   margin-bottom: 0;
   font-size: var(--h1-font-size);
-  line-height: var(--line-height);
+  line-height: var(--h1-line-height, 1);
 }
 .article-meta {
   display: flex;

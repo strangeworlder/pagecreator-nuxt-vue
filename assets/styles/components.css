@@ -13,6 +13,7 @@ h1 {
   font-family: var(--font-sans);
   font-size: var(--h1-font-size, var(--size-6));
   font-weight: var(--h1-font-weight, 600);
+  line-height: var(--h1-line-height, 1);
 }
 
 h2 {

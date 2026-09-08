@@ -146,6 +146,7 @@ html[data-page-theme="product"] .product-main img {
 }
 
 html[data-page-theme="product"] body {
+  max-width: none;
   margin: 0px;
 }
 

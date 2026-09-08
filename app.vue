@@ -34,6 +34,18 @@ html {
   padding: 0;
 }
 body {
+  max-width: 66ch;
+  margin: 16px auto;
+}
+
+body:has(.product-layout),
+html[data-page-theme="product"] body {
+  max-width: none;
+  margin: 0px;
+}
+
+body:has(.image-column) {
+  max-width: none;
   margin: 16px;
 }
 </style>

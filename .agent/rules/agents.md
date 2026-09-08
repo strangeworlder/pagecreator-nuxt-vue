@@ -1,10 +1,6 @@
 ---
 trigger: always_on
-dateModified: 2026-01-12
----
-
----
-dateModified: 2026-01-04
+dateModified: 2026-09-08
 ---
 # AI Agent Guide: TSS (Generative‑Engine‑Optimized Vue Starter)
 
@@ -18,14 +14,13 @@ This document provides high-level context, architectural decisions, and coding c
 
 ## Tech Stack
 - **Framework**: Nuxt 3 (SSR enabled) + TypeScript (Strict)
-- **Content**: `@nuxt/content` v2 (Markdown → JSON AST)
-- **Validation**: `Zod` (Schema enforcement via `contentSchema.ts`).
+- **Content**: `@nuxt/content` v3 (`content.config.ts`, Markdown AST, MDC components)
+- **Validation**: `Zod` (Schema enforcement via `server/utils/contentSchema.ts`).
 - **Styling**: Vanilla CSS variables + Custom Token System (`assets/styles/tokens.css`). **No Tailwind.**
 - **Linting/Formatting**: Biome (`biomejs`)
 - **Testing**: Vitest (Unit), @vitest/ui (Visual), @vitest/coverage-v8 (Coverage) (Playwright E2E planned).
-- **Task Runner**: `Make` (Primary Interface). **Do not use `npm` or `pnpm` directly.**
-- **Package Manager**: `pnpm` (encapsulated via Docker).
-- **Infrastructure**: Netlify (Nitro Preset) via Docker build process.
+- **Scripts**: `npm run <script>` (defined in `package.json`).
+- **Infrastructure**: Netlify (Nitro Preset).
 
 ## Architectural Patterns
 
@@ -66,21 +61,23 @@ Components are strictly categorized to manage complexity.
 - `content/`: Markdown source of truth.
 - `server/routes/`: Root-level AEO endpoints.
 - `server/utils/`: Shared server logic and schemas.
-- `scripts/`: Maintenance & Build hooks (`generate-image-meta`, `build-content-index`).
+- `scripts/`: Maintenance & Build hooks (`generate-image-meta`, `build-content-index`, `validate-content`, `update-modified-date`).
 - `.agent/rules/`: Definitive documentation for Schema and LLM text generation.
+- `.agent/skills/`: Workspace-specific procedural skills.
 
 ## Coding Conventions
 - **TypeScript**: Strict mode. No `any`. Explicit returns.
 - **Styles**: Use CSS variables from `tokens.css`. Themes reassign these variables.
 - **Testing**: Unit test Atoms. Integration test Molecules.
 
-## Common Workflows (Docker/Make)
-- **Start Dev**: `make dev` (runs on port 3000).
-- **Lint/Format**: `make biome-check` / `make biome-format`.
-- **Unit Tests**: `make test`.
-- **Typecheck**: `make typecheck`.
-- **Validate Content**: `make validate-content`.
-- **Generate**: `make generate`.
+## Common Workflows (npm run)
+- **Start Dev**: `npm run dev` (runs on port 3000).
+- **Validate Content**: `npm run validate:content`.
+- **Lint/Format**: `npm run biome:check` / `npm run biome:format`.
+- **Unit Tests**: `npm run test` (or `npm run test:run`).
+- **Typecheck**: `npm run typecheck`.
+- **Build / Generate**: `npm run build` / `npm run generate`.
+- **Update Modified Date**: `npm run update-date`.
 
 ## User Rules to Remember
 - **Aesthetics**: "Sleek and unobtrusive."

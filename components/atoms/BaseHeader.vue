@@ -9,7 +9,7 @@ withDefaults(defineProps<{ level?: 1 | 2 | 3 | 4 | 5 | 6 }>(), { level: 1 });
 </template>
 
 <style scoped>
-h1 { font-family: var(--font-sans); font-size: var(--h1-font-size); font-weight: var(--h1-font-weight); line-height: var(--line-height); color: var(--color-fg); }
+h1 { font-family: var(--font-sans); font-size: var(--h1-font-size); font-weight: var(--h1-font-weight); line-height: var(--h1-line-height, 1); color: var(--color-fg); }
 h2 { font-family: var(--font-sans); font-size: var(--h2-font-size); font-weight: var(--h2-font-weight); line-height: var(--line-height); color: var(--color-fg); }
 h3 { font-family: var(--font-sans); font-size: var(--h3-font-size); font-weight: var(--h3-font-weight); line-height: var(--line-height); color: var(--color-fg); }
 h4 { font-family: var(--font-sans); font-size: var(--h4-font-size); font-weight: var(--h4-font-weight); line-height: var(--line-height); color: var(--color-fg); }

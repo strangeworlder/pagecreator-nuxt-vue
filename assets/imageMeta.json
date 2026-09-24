@@ -67,13 +67,17 @@
     "width": 1772,
     "height": 642
   },
+  "/images/test-troll.webp": {
+    "width": 1024,
+    "height": 1536
+  },
   "/gen_images/gogam-facebook-etc-1200.webp": {
     "width": 1200,
     "height": 1200
   },
-  "/images/test-troll.webp": {
-    "width": 1024,
-    "height": 1536
+  "/images/rajatiloja/raja-1.webp": {
+    "width": 1280,
+    "height": 720
   },
   "/gen_images/images/pros-and-cons-cover-1536.webp": {
     "width": 1536,
@@ -90,10 +94,6 @@
   "/gen_images/images/cars-and-family-cover-150-canvas.webp": {
     "width": 150,
     "height": 150
-  },
-  "/images/rajatiloja/raja-1.webp": {
-    "width": 1280,
-    "height": 720
   },
   "/images/products/yojoenraivo/TDB-logo.webp": {
     "width": 338,
@@ -116,34 +116,6 @@
     "height": 1920
   },
   "/images/products/yojoenraivo/background-full.webp": {
-    "width": 4800,
-    "height": 4500
-  },
-  "/images/products/hirviokirja/TDB-logo.webp": {
-    "width": 338,
-    "height": 538
-  },
-  "/images/products/hirviokirja/sulkava.webp": {
-    "width": 500,
-    "height": 500
-  },
-  "/images/products/hirviokirja/nokiporo.webp": {
-    "width": 600,
-    "height": 600
-  },
-  "/images/products/hirviokirja/logo.webp": {
-    "width": 2616,
-    "height": 520
-  },
-  "/images/products/hirviokirja/kansi.webp": {
-    "width": 458,
-    "height": 600
-  },
-  "/images/products/hirviokirja/background.webp": {
-    "width": 842,
-    "height": 1920
-  },
-  "/images/products/hirviokirja/background-full.webp": {
     "width": 4800,
     "height": 4500
   },
@@ -172,6 +144,38 @@
     "height": 1920
   },
   "/images/products/sulkavansointu/background-full.webp": {
+    "width": 4800,
+    "height": 4500
+  },
+  "/images/products/kantamaa/hahmoja.webp": {
+    "width": 2000,
+    "height": 1500
+  },
+  "/images/products/hirviokirja/TDB-logo.webp": {
+    "width": 338,
+    "height": 538
+  },
+  "/images/products/hirviokirja/sulkava.webp": {
+    "width": 500,
+    "height": 500
+  },
+  "/images/products/hirviokirja/nokiporo.webp": {
+    "width": 600,
+    "height": 600
+  },
+  "/images/products/hirviokirja/logo.webp": {
+    "width": 2616,
+    "height": 520
+  },
+  "/images/products/hirviokirja/kansi.webp": {
+    "width": 458,
+    "height": 600
+  },
+  "/images/products/hirviokirja/background.webp": {
+    "width": 842,
+    "height": 1920
+  },
+  "/images/products/hirviokirja/background-full.webp": {
     "width": 4800,
     "height": 4500
   },

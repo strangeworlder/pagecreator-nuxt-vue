@@ -54,6 +54,7 @@ Publishing company Gogam and game designer **Manu Kuhmonen** (known for his chan
 Targeted for a **Ropecon 2027** release as a hardcover book, the creative team consists of lead designer Manu Kuhmonen (worldbuilding, maps, and design), game designer **Petri Leinonen**, illustrator **Ronja Metso** ([@snaillesnaille](https://www.instagram.com/snaillesnaille/)), and layout designer **Nuutti Karjalainen**.
 
 ![Character artwork for Kantamaan seikkailut by Ronja Metso](/images/products/kantamaa/hahmoja.webp)
+*Illustration: Ronja Metso*
 
 ## Nordic Year Zero Engine Meets Finnish Myth
 

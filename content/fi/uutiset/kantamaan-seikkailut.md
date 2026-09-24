@@ -52,6 +52,7 @@ Kustannusosakeyhtiö Gogam ja roolipelisuunnittelija **Manu Kuhmonen** (tunnettu
 Kovakantisena kirjana julkaistavan pelin tavoitteena on saapua pelaajien käsiin kesän **2027 Ropeconissa**. Teoksen tekijätiimiin kuuluvat Kuhmosen (pääsuunnittelu, maailma ja kartat) lisäksi pelisuunnittelija **Petri Leinonen**, kuvittaja **Ronja Metso** ([@snaillesnaille](https://www.instagram.com/snaillesnaille/)) sekä taittaja **Nuutti Karjalainen**.
 
 ![Kantamaan seikkailut -pelin hahmokuvitusta: peikko, haltia, tonttu, vetehinen ja ilmes](/images/products/kantamaa/hahmoja.webp)
+*Kuvitus: Ronja Metso*
 
 ## Uusi aluevaltaus: Pohjoismainen Year Zero Engine suomeksi
 

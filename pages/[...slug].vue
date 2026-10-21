@@ -1,31 +1,34 @@
 <script setup lang="ts">
-// @ts-nocheck
-import { type Component, computed, markRaw, shallowRef, watch } from "vue";
-import { defineComponent, h, Suspense } from "vue";
+import {
+  type Component,
+  Suspense,
+  computed,
+  defineComponent,
+  h,
+  markRaw,
+  shallowRef,
+  watch,
+} from "vue";
 import BaseVideo from "~/components/atoms/BaseVideo.vue";
 import HeaderImage from "~/components/atoms/HeaderImage.vue";
+import ArticleHeader from "~/components/molecules/ArticleHeader.vue";
+import ArticleList from "~/components/molecules/ArticleList.vue";
+import LatestArticles from "~/components/molecules/LatestArticles.vue";
+import LatestNews from "~/components/molecules/LatestNews.vue";
 import Navigation from "~/components/molecules/Navigation.vue";
+import NewsList from "~/components/molecules/NewsList.vue";
 import PageFooter from "~/components/molecules/PageFooter.vue";
 import PageHeader from "~/components/molecules/PageHeader.vue";
-import NewsList from "~/components/molecules/NewsList.vue";
-import ArticleList from "~/components/molecules/ArticleList.vue";
-import ArticleHeader from "~/components/molecules/ArticleHeader.vue";
-import LatestNews from "~/components/molecules/LatestNews.vue";
-import LatestArticles from "~/components/molecules/LatestArticles.vue";
 import ProductNavigation from "~/components/molecules/ProductNavigation.vue";
-import ProseA from "~/components/prose/ProseA.vue";
 import AWrapper from "~/components/prose/AWrapper.vue";
+import HWrapper from "~/components/prose/HWrapper.vue";
 import ImgWrapper from "~/components/prose/ImgWrapper.vue";
 import PWrapper from "~/components/prose/PWrapper.vue";
-import HWrapper from "~/components/prose/HWrapper.vue";
 import ProseAlert from "~/components/prose/ProseAlert.vue";
 import ProseBlockquote from "~/components/prose/ProseBlockquote.vue";
 import ProseCode from "~/components/prose/ProseCode.vue";
-import ProseHeading from "~/components/prose/ProseHeading.vue";
-import ProseImg from "~/components/prose/ProseImg.vue";
 import ProseLi from "~/components/prose/ProseLi.vue";
 import ProseOl from "~/components/prose/ProseOl.vue";
-import ProseP from "~/components/prose/ProseP.vue";
 import ProsePre from "~/components/prose/ProsePre.vue";
 import ProseTable from "~/components/prose/ProseTable.vue";
 import ProseTbody from "~/components/prose/ProseTbody.vue";
@@ -35,68 +38,44 @@ import ProseThead from "~/components/prose/ProseThead.vue";
 import ProseTr from "~/components/prose/ProseTr.vue";
 import ProseUl from "~/components/prose/ProseUl.vue";
 import { useCustomContentHead } from "~/composables/useContentHead";
-import { MDCSlot } from "#components";
+import {
+  buildNewsArticlePath,
+  getLocaleFromPath,
+  resolveContentPath,
+  resolveNewsRouting,
+} from "~/utils/routing";
 
 const route = useRoute();
 const runtime = useRuntimeConfig();
-const defaultLocale = runtime.public.defaultLocale || "fi";
-
-const resolveContentPath = (path: string) => {
-  // Normalize path: ensure leading slash, collapse duplicates, drop trailing slash, map '/:locale/index' -> '/:locale'
-  const withSlash = path.startsWith("/") ? path : `/${path}`;
-  let normalized = withSlash.replace(/\/{2,}/g, "/");
-  if (normalized !== "/" && normalized.endsWith("/")) normalized = normalized.slice(0, -1);
-  normalized = normalized.replace(/^\/(\w{2})\/index$/i, "/$1");
-  normalized = normalized.replace(/^\/(\w{2})\/index$/i, "/$1");
-  return normalized === "/" ? `/${defaultLocale}` : normalized;
-};
-
-const resolveNewsRouting = (currentPath: string) => {
-  const norm = resolveContentPath(currentPath);
-  const articleMatch = norm.match(/^\/([a-z]{2})\/(\d{4})\/(\d{2})\/(\d{2})\/([^/]+)$/);
-  if (articleMatch) {
-    const [, lang, yyyy, mm, dd, slug] = articleMatch;
-    return {
-      type: "article",
-      queryPath: `/${lang}/${lang === "fi" ? "uutiset" : "news"}/${slug}`,
-      expectedDate: `${yyyy}-${mm}-${dd}`,
-      paramYear: yyyy,
-    };
-  }
-  const archiveMatch = norm.match(/^\/([a-z]{2})\/(\d{4})$/);
-  if (archiveMatch) {
-    const [, lang, yyyy] = archiveMatch;
-    return {
-      type: "archive",
-      queryPath: norm,
-      paramYear: yyyy,
-      lang: lang,
-    };
-  }
-  return { type: "standard", queryPath: norm };
-};
-
+const defaultLocale = String(runtime.public.defaultLocale || "fi");
 const nuxtApp = useNuxtApp();
 
-const fetchContentWithRouting = async (routePath: string) => {
-  const routing = resolveNewsRouting(routePath);
+const fetchContentWithRouting = async (
+  routePath: string,
+): Promise<Record<string, unknown> | null> => {
+  const routing = resolveNewsRouting(routePath, defaultLocale);
   const tryPath = routing.queryPath;
 
   let fetched: Record<string, unknown> | null = null;
   try {
-    fetched = await nuxtApp.runWithContext(() => queryCollection("content").path(tryPath).first());
+    const res = await nuxtApp.runWithContext(() =>
+      queryCollection("content").path(tryPath).first(),
+    );
+    fetched = (res as unknown as Record<string, unknown>) || null;
   } catch {}
 
   if (!fetched) {
     try {
-      fetched = await nuxtApp.runWithContext(() =>
+      const res = await nuxtApp.runWithContext(() =>
         queryCollection("content").where("aliases", "LIKE", `%${tryPath}%`).first(),
       );
+      fetched = (res as unknown as Record<string, unknown>) || null;
     } catch {}
   }
   if (!fetched && !/^\/\w{2}\b/.test(tryPath)) {
     const fiPath = `/fi${tryPath}`;
-    fetched = await nuxtApp.runWithContext(() => queryCollection("content").path(fiPath).first());
+    const res = await nuxtApp.runWithContext(() => queryCollection("content").path(fiPath).first());
+    fetched = (res as unknown as Record<string, unknown>) || null;
   }
 
   // Handle Archive Virtual Page
@@ -119,6 +98,10 @@ const fetchContentWithRouting = async (routePath: string) => {
 
   if (!fetched) return null;
 
+  if (fetched.meta && typeof fetched.meta === "object") {
+    fetched = { ...fetched, ...(fetched.meta as Record<string, unknown>) };
+  }
+
   // Handle Article Verifications and Redirects
   if (routing.type === "article") {
     const pubDate = fetched.datePublished;
@@ -126,28 +109,25 @@ const fetchContentWithRouting = async (routePath: string) => {
       !pubDate ||
       new Date(pubDate as string | Date).toISOString().split("T")[0] !== routing.expectedDate
     ) {
-      return null; // Date mismatch, fake 404
+      return null; // Date mismatch, 404
     }
-    // Inject canonical back to the parsed URL, not the file system path
-    fetched.canonical = resolveContentPath(routePath);
+    fetched.canonical = resolveContentPath(routePath, defaultLocale);
   } else if (
-    (fetched.path?.includes("/news/") || fetched.path?.includes("/uutiset/")) &&
+    typeof fetched.path === "string" &&
+    (fetched.path.includes("/news/") || fetched.path.includes("/uutiset/")) &&
     fetched.template !== "news-list" &&
     fetched.datePublished
   ) {
-    // If they access the raw /news/slug path, calculate the real canonical URL based on the date
-    const d = new Date(fetched.datePublished as string | Date);
-    const yyyy = d.getUTCFullYear();
-    const mm = String(d.getUTCMonth() + 1).padStart(2, "0");
-    const dd = String(d.getUTCDate()).padStart(2, "0");
-    const slug = (fetched.path as string).split("/").pop();
-    const lang = (fetched.path as string).split("/")[1] || defaultLocale;
-    fetched.canonical = `/${lang}/${yyyy}/${mm}/${dd}/${slug}`;
+    const canonicalNewsUrl = buildNewsArticlePath(
+      fetched.path,
+      fetched.datePublished as string | Date,
+      defaultLocale,
+    );
+    if (canonicalNewsUrl) {
+      fetched.canonical = canonicalNewsUrl;
+    }
   }
 
-  if (fetched && fetched.meta) {
-    fetched = { ...fetched, ...(fetched.meta as Record<string, unknown>) };
-  }
   return fetched;
 };
 
@@ -174,13 +154,14 @@ const SCHEMA_ONLY_FIELDS = [
   "license",
   "author",
   "marketingText",
-  "products", // specifically for index.md
+  "products",
+  "games",
   "llms_context",
   "mentions",
   "quotes",
 ];
 
-const stripSchemaData = (doc: Record<string, unknown> | null) => {
+const stripSchemaData = (doc: Record<string, unknown> | null): Record<string, unknown> | null => {
   if (!doc) return null;
   const clone = { ...doc };
   for (const key of SCHEMA_ONLY_FIELDS) {
@@ -190,11 +171,10 @@ const stripSchemaData = (doc: Record<string, unknown> | null) => {
 };
 
 // SSR-first initial doc with hydration cache to avoid client refetch overriding SSR
-const ssrDocKey = `ssr-initial-doc:${resolveContentPath(route.path)}`;
+const ssrDocKey = `ssr-initial-doc:${resolveContentPath(route.path, defaultLocale)}`;
 const ssrInitialDoc = useState<Record<string, unknown> | null>(ssrDocKey, () => null);
 
 // Temporary server-only ref to hold the FULL document for Head generation
-// This will NOT be hydrated to the client via useState, keeping __NUXT_DATA__ small.
 let serverRawDoc: Record<string, unknown> | null = null;
 
 let initial = ssrInitialDoc.value;
@@ -205,112 +185,66 @@ if (!initial) {
     throw createError({ statusCode: 404, statusMessage: "Page Not Found", fatal: true });
   }
 
-  // Preserve full doc on server for Head generation
-  if (process.server) {
+  if (import.meta.server) {
     serverRawDoc = fetched;
   }
 
-  // Optimize payload: strip schema-only fields for hydration
   const stripped = stripSchemaData(fetched);
-
   ssrInitialDoc.value = stripped;
   initial = stripped;
-  if (process.dev)
-    console.log("[initial-doc] fetched initial doc", {
-      path: resolveContentPath(route.path),
-      _path: (fetched as Record<string, unknown>)?.path,
-      stripped: true,
-    });
-} else {
-  if (process.dev)
-    console.log("[initial-doc] using SSR-cached initial doc", {
-      path: resolveContentPath(route.path),
-      _path: (initial as Record<string, unknown>)?.path,
-    });
 }
 
-const getLocaleFromPath = (path: string) => {
-  const p = resolveContentPath(path);
-  const parts = p.split("/");
-  const first = parts[1] || "";
-  // Only treat a 2-letter code as locale; otherwise fall back to default
-  return /^[a-z]{2}$/i.test(first) ? first : defaultLocale;
-};
-
-// Prefer locale from the fetched document when the route lacks locale
 const initialLocale = (() => {
-  const docPath =
-    typeof (initial as Record<string, unknown>)?.path === "string"
-      ? ((initial as Record<string, unknown>)?.path as string)
-      : "";
+  const docPath = typeof initial?.path === "string" ? initial.path : "";
   const fromDoc = (docPath.split("/")[1] || "").trim();
   if (/^[a-z]{2}$/i.test(fromDoc)) return fromDoc;
-  return getLocaleFromPath(route.path);
+  return getLocaleFromPath(route.path, defaultLocale);
 })();
+
 const ssrIdxKey = `ssr-locale-index:${initialLocale}`;
-const ssrLocaleIndex = useState<Record<string, unknown> | null>(ssrIdxKey, () => null);
+const ssrLocaleIndex = useState<{ path?: string; cover?: string } | null>(ssrIdxKey, () => null);
 let initialLocaleIndex = ssrLocaleIndex.value;
 if (!initialLocaleIndex) {
   const fetchedIdx = await queryCollection("content")
     .path(`/${initialLocale}`)
     .select("path", "cover")
     .first();
-  // Strictly filter to ensure no extra properties leak into hydration state
-  const strippedIdx = fetchedIdx
-    ? { path: (fetchedIdx as any).path, cover: (fetchedIdx as any).cover }
-    : null;
+  const rawIdx = fetchedIdx as { path?: string; cover?: string } | null;
+  const strippedIdx = rawIdx ? { path: rawIdx.path, cover: rawIdx.cover } : null;
   ssrLocaleIndex.value = strippedIdx;
   initialLocaleIndex = strippedIdx;
-  if (process.dev)
-    console.log("[initial-index] fetched initial locale index", {
-      locale: initialLocale,
-      _path: (strippedIdx as Record<string, unknown>)?.path,
-    });
-} else {
-  if (process.dev)
-    console.log("[initial-index] using SSR-cached locale index", {
-      locale: initialLocale,
-      _path: (initialLocaleIndex as Record<string, unknown>)?.path,
-    });
 }
 
 const docState = useState<Record<string, unknown> | null>("content-doc", () => null);
 const version = useState<number>("content-doc-version", () => 0);
-// Ensure page shows the correct document immediately on navigation
-const expectedPath = resolveContentPath(route.path);
-const currentDocPath = (docState.value as Record<string, unknown>)?.path;
+
+const expectedPath = resolveContentPath(route.path, defaultLocale);
+const currentDocPath = docState.value?.path;
 if (initial && currentDocPath !== expectedPath) {
-  if (process.dev)
-    console.log("[initial-doc-sync] setting docState to initial for path", {
-      expectedPath,
-      currentDocPath,
-      got: (initial as Record<string, unknown>)?.path,
-    });
   docState.value = initial;
   version.value = (version.value || 0) + 1;
 }
-const localeIndexDoc = useState<Record<string, unknown> | null>(
+
+const localeIndexDoc = useState<{ path?: string; cover?: string } | null>(
   "locale-index-doc",
   () => initialLocaleIndex ?? null,
 );
-const data = computed(() => {
-  void version.value; // depend on version updates
+
+const data = computed<Record<string, unknown> | null>(() => {
+  void version.value;
   return docState.value ?? initial;
 });
-// Sync locale index state to current locale immediately to avoid stale fallback
+
 const expectedIndexPath = `/${initialLocale}`;
-const currentIndexPath = (localeIndexDoc.value as Record<string, unknown>)?.path;
+const currentIndexPath = localeIndexDoc.value?.path;
 if (initialLocaleIndex && currentIndexPath !== expectedIndexPath) {
   localeIndexDoc.value = initialLocaleIndex;
 }
-const dataForHead = computed(() => {
-  // Use serverRawDoc (full content) if available on server, otherwise use hydrated data
-  const d =
-    process.server && serverRawDoc ? serverRawDoc : (data.value as Record<string, unknown>) || null;
 
-  const idx = (localeIndexDoc.value as Record<string, unknown>) || null;
+const dataForHead = computed<Record<string, unknown> | null>(() => {
+  const d = import.meta.server && serverRawDoc ? serverRawDoc : data.value || null;
+  const idx = localeIndexDoc.value || null;
   const merged = d && !d.cover && idx?.cover ? { ...d, cover: idx.cover } : d;
-  // Force canonical to '/' when rendering the homepage at root URL
   if (route.path === "/" && merged) {
     return { ...merged, canonical: "/" };
   }
@@ -319,103 +253,61 @@ const dataForHead = computed(() => {
 
 useCustomContentHead(dataForHead);
 
-// Use a render doc that includes cover fallback so hero can rely on it consistently
-const renderDoc = computed(() => dataForHead.value as Record<string, unknown>);
+const renderDoc = computed<Record<string, unknown>>(() => dataForHead.value || {});
 
 watch(
   () => route.fullPath,
   async () => {
-    const path = resolveContentPath(route.path);
-    // Re-run the same lookup strategy on navigation
     const next = await fetchContentWithRouting(route.path);
 
     if (!next) {
       throw createError({ statusCode: 404, statusMessage: "Page Not Found", fatal: true });
     }
-    const nextLocale = getLocaleFromPath(route.path);
+    const nextLocale = getLocaleFromPath(route.path, defaultLocale);
     const nextIndex = await queryCollection("content")
       .path(`/${nextLocale}`)
       .select("path", "cover")
       .first();
-    const currentPath = (data.value as Record<string, unknown>)?.path;
+    const currentPath = data.value?.path;
     if (next && next.path !== currentPath) {
-      if (process.dev)
-        console.log("[route-doc-swap] swapping doc", { from: currentPath, to: next.path, path });
       docState.value = next;
       version.value = (version.value || 0) + 1;
     }
     if (nextIndex) {
-      localeIndexDoc.value = { path: (nextIndex as any).path, cover: (nextIndex as any).cover };
+      const rawNextIdx = nextIndex as { path?: string; cover?: string };
+      localeIndexDoc.value = { path: rawNextIdx.path, cover: rawNextIdx.cover };
     }
   },
 );
 
 // Canonical URL enforcement
 watchEffect(() => {
-  const doc = data.value as Record<string, unknown> | null;
+  const doc = data.value;
   const currentPath = route.path;
 
-  // 1. Determine the "ideal" canonical path
-  let targetPath = (doc?.canonical as string) || currentPath;
-
-  // 2. Normalize: Remove trailing slashes (except for root "/")
-  //    e.g. "/foo/" -> "/foo", "/" -> "/"
+  let targetPath = (typeof doc?.canonical === "string" && doc.canonical) || currentPath;
   targetPath = targetPath.replace(/\/+$/, "") || "/";
 
-  // 3. Check if we need to redirect
-  //    Compare strict equality. If current is "/foo/", target is "/foo" -> Redirect.
   if (currentPath !== targetPath) {
-    // Prevent redirect loop if the only difference is the slash but we are already at the target semantically?
-    // No, we want distinct URLs. "/foo/" != "/foo".
-
-    // Special case: valid root "/" should not redirect to itself (handled by equality check)
-    // Special case: "/foo/" vs "/foo"
-
-    if (process.dev)
-      console.log("[canonical-redirect] Redirecting", { from: currentPath, to: targetPath });
-
     navigateTo(targetPath, { redirectCode: 301, replace: true });
   }
 });
 
 const enhancementsEnabled = useState<boolean>("content-enhance-ready", () => false);
-
-// Store the dynamically loaded enhanced components
-const enhancedHeadingComp = shallowRef<Component | null>(null);
-const enhancedAComp = shallowRef<Component | null>(null);
 const enhancedNavigationComp = shallowRef<Component | null>(null);
 const enhancedProductNavigationComp = shallowRef<Component | null>(null);
-const enhancedImgComp = shallowRef<Component | null>(null);
-const enhancedPComp = shallowRef<Component | null>(null);
 
-// Track when enhanced components are loaded
-const enhancedComponentsLoaded = useState<boolean>("enhanced-components-loaded", () => false);
-
-// Load enhanced components on client
-if (process.client) {
+if (import.meta.client) {
   Promise.all([
-    import("~/components/prose/ProseHeadingEnhanced.client.vue"),
-    import("~/components/prose/ProseAEnhanced.client.vue"),
     import("~/components/molecules/NavigationEnhanced.client.vue"),
     import("~/components/molecules/ProductNavigationEnhanced.client.vue"),
-    import("~/components/prose/ProseImgEnhanced.client.vue"),
-    import("~/components/prose/ProsePEnhanced.client.vue"),
   ])
-    .then(([heading, anchor, nav, pnav, imgEnh, pEnh]) => {
-      enhancedHeadingComp.value = heading.default;
-      enhancedAComp.value = anchor.default;
+    .then(([nav, pnav]) => {
       enhancedNavigationComp.value = nav.default;
       enhancedProductNavigationComp.value = pnav.default;
-      enhancedImgComp.value = imgEnh.default;
-      enhancedPComp.value = pEnh.default;
-      if (process.dev) console.log("[enhancements] Enhanced components loaded and ready");
     })
     .catch((err) => {
-      if (process.dev) console.warn("[enhancements] Failed to load enhanced components", err);
-    })
-    .finally(() => {
-      // Always signal that we're done loading, success or fail
-      enhancedComponentsLoaded.value = true;
+      if (import.meta.dev) console.warn("[enhancements] Failed to load enhanced navigation", err);
     });
 }
 
@@ -471,34 +363,46 @@ const proseComponents = {
   ),
 };
 
-if (process.dev) {
-  for (const [k, v] of Object.entries(proseComponents)) {
-    if (!v) {
-      // eslint-disable-next-line no-console
-      console.warn("[proseComponents] Missing component for key:", k);
-    }
+const pageTitle = computed<string>(() => {
+  return typeof data.value?.title === "string" ? data.value.title : "Welcome";
+});
+
+const pageDescription = computed<string | undefined>(() => {
+  return typeof data.value?.description === "string" ? data.value.description : undefined;
+});
+
+const pageDatePublished = computed<string | Date | undefined>(() => {
+  const raw = data.value?.datePublished;
+  return typeof raw === "string" || raw instanceof Date ? raw : undefined;
+});
+
+const pageAuthorName = computed<string | undefined>(() => {
+  const raw = data.value?.author;
+  if (typeof raw === "string") return raw;
+  if (raw && typeof raw === "object" && "name" in raw && typeof raw.name === "string") {
+    return raw.name;
   }
-}
-
-// Get title and description from front-matter
-const pageTitle = computed(() => {
-  return (data.value as Record<string, unknown>)?.title || "Welcome";
+  return undefined;
 });
 
-const pageDescription = computed(() => {
-  return (data.value as Record<string, unknown>)?.description as string | undefined;
-});
-
-const pageAlternateLocales = computed(() => {
-  const d = renderDoc.value as Record<string, unknown>;
+const pageAlternateLocales = computed<Array<{ code: string; path: string }>>(() => {
+  const d = renderDoc.value;
   const raw = d?.alternateLocales;
   if (!raw) return [];
   const list = Array.isArray(raw) ? raw : [raw];
 
   return list
-    .map((item: any) => {
-      const code = typeof item === "string" ? item : item.code;
-      let path = typeof item === "object" ? item.path : undefined;
+    .map((item: unknown) => {
+      const code =
+        typeof item === "string"
+          ? item
+          : item && typeof item === "object" && "code" in item && typeof item.code === "string"
+            ? item.code
+            : undefined;
+      let path =
+        item && typeof item === "object" && "path" in item && typeof item.path === "string"
+          ? item.path
+          : undefined;
 
       if (!path && code) {
         const currentPath = route.path;
@@ -511,22 +415,20 @@ const pageAlternateLocales = computed(() => {
         }
       }
 
-      return { code, path };
+      return code && path ? { code, path } : null;
     })
-    .filter((i: any) => i && i.code && i.path);
+    .filter((i): i is { code: string; path: string } => i !== null);
 });
-// Page theme from front matter or template; default to 'classic' when not set
+
 const pageTheme = computed(() => {
-  const tpl = String((renderDoc.value as Record<string, unknown>)?.template || "").toLowerCase();
+  const tpl = String(renderDoc.value?.template || "").toLowerCase();
   if (tpl === "product") return "product" as const;
-  const raw =
-    (renderDoc.value as Record<string, unknown>)?.theme ||
-    (renderDoc.value as Record<string, unknown>)?.pageTheme ||
-    "classic";
+  const raw = renderDoc.value?.theme || renderDoc.value?.pageTheme || "classic";
   const theme = String(raw).toLowerCase();
   return ["classic", "modern", "product"].includes(theme) ? theme : "classic";
 });
-if (process.client) {
+
+if (import.meta.client) {
   watch(
     pageTheme,
     (t) => {
@@ -536,10 +438,10 @@ if (process.client) {
     { immediate: true },
   );
 }
-// Ensure SSR also sets page theme and product CSS variables on <html>
+
 useHead(() => {
-  const d: Record<string, unknown> = renderDoc.value || {};
-  const pt = (d?.productTheme as Record<string, string>) || {};
+  const d = renderDoc.value || {};
+  const pt = (d.productTheme as Record<string, string>) || {};
   const cssVarStyle = [
     pt.bgFull ? `--product-bg-full: url(${pt.bgFull})` : "",
     pt.bgTile ? `--product-bg-tile: url(${pt.bgTile})` : "",
@@ -556,51 +458,33 @@ useHead(() => {
   return {
     htmlAttrs: {
       "data-page-theme": pageTheme.value,
-      // inline CSS variables on the html element so SSR has visuals
       style: cssVarStyle || undefined,
     },
   };
 });
-// Template selection and hero image handling (decoupled from `cover`)
-const templateName = computed(() =>
-  String((renderDoc.value as Record<string, unknown>)?.template || "").toLowerCase(),
-);
+
+const templateName = computed(() => String(renderDoc.value?.template || "").toLowerCase());
 const isPlainTemplate = computed(() => !templateName.value || templateName.value === "plain");
-const heroImage = computed(() => {
-  const d = renderDoc.value as Record<string, unknown>;
-  return d?.heroImage || d?.hero || d?.image || d?.cover || undefined;
+const heroImage = computed<string | undefined>(() => {
+  const d = renderDoc.value;
+  const candidate = d.heroImage || d.hero || d.image || d.cover;
+  return typeof candidate === "string" ? candidate : undefined;
 });
 
-// Episode template video logic
 const isEpisodeTemplate = computed(() => templateName.value === "episode");
-const videoUrl = computed(() => {
+const videoUrl = computed<string | undefined>(() => {
   if (!isEpisodeTemplate.value) return undefined;
-  const d = renderDoc.value as Record<string, unknown>;
-  return (d?.contentUrl as string) || undefined;
+  const url = renderDoc.value?.contentUrl;
+  return typeof url === "string" ? url : undefined;
 });
 
 const isArticleListTemplate = computed(() => templateName.value === "article-list");
-
-const useHeroLayout = computed(
-  () =>
-    !isPlainTemplate.value &&
-    !isNewsListTemplate.value &&
-    !isArticleListTemplate.value &&
-    !isArticleTemplate.value &&
-    (!!heroImage.value || !!videoUrl.value),
-);
-
-// Check if we're on the index page
-const isIndexPage = computed(() => {
-  const path = (data.value as Record<string, unknown>)?.path;
-  return path === `/${defaultLocale}` || path === "/" || path === "/fi" || path === "/fi/";
-});
-
-// Product template specifics
+const isNewsListTemplate = computed(() => templateName.value === "news-list");
 const isProductTemplate = computed(() => templateName.value === "product");
+
 const isArticleTemplate = computed(() => {
   if (templateName.value === "article") return true;
-  const path = (data.value as Record<string, unknown>)?.path || "";
+  const path = data.value?.path || "";
   return (
     typeof path === "string" &&
     (path.includes("/news/") || path.includes("/uutiset/") || path.includes("/artikkelit/")) &&
@@ -608,33 +492,58 @@ const isArticleTemplate = computed(() => {
     templateName.value !== "article-list"
   );
 });
-const isNewsListTemplate = computed(() => templateName.value === "news-list");
-const productNav = computed(() => {
-  const links = (renderDoc.value as Record<string, unknown>)?.productNav;
-  return Array.isArray(links) ? links : [];
+
+const useHeroLayout = computed(
+  () =>
+    !isPlainTemplate.value &&
+    !isNewsListTemplate.value &&
+    !isArticleListTemplate.value &&
+    !isArticleTemplate.value &&
+    (Boolean(heroImage.value) || Boolean(videoUrl.value)),
+);
+
+const isIndexPage = computed(() => {
+  const path = data.value?.path;
+  return path === `/${defaultLocale}` || path === "/" || path === "/fi" || path === "/fi/";
 });
-// Apply product CSS variables from front matter to <html> for theming
-if (process.client) {
+
+const productNav = computed<Array<{ href: string; text: string }>>(() => {
+  const links = renderDoc.value?.productNav;
+  return Array.isArray(links) ? (links as Array<{ href: string; text: string }>) : [];
+});
+
+const productCustomClass = computed<string | undefined>(() => {
+  const pt = data.value?.productTheme as Record<string, string> | undefined;
+  return pt?.customClass;
+});
+
+const archiveYear = computed<string | undefined>(() => {
+  const y = data.value?.year;
+  return typeof y === "string" ? y : undefined;
+});
+
+if (import.meta.client) {
   watch(
-    () => (renderDoc.value as Record<string, unknown>)?.productTheme,
+    () => renderDoc.value?.productTheme,
     (pt) => {
-      if (!pt) return;
-      const html = document.documentElement as HTMLElement;
+      if (!pt || typeof pt !== "object") return;
+      const themeMap = pt as Record<string, string>;
+      const html = document.documentElement;
       const setUrlVar = (k: string, v?: string) => {
         if (typeof v === "string" && v) html.style.setProperty(k, `url(${v})`);
       };
       const setColorVar = (k: string, v?: string) => {
         if (typeof v === "string" && v) html.style.setProperty(k, v);
       };
-      setUrlVar("--product-bg-full", (pt as Record<string, string>).bgFull);
-      setUrlVar("--product-bg-tile", (pt as Record<string, string>).bgTile);
-      setUrlVar("--product-h1-logo", (pt as Record<string, string>).h1Logo);
-      setUrlVar("--product-side-logo", (pt as Record<string, string>).sideLogo);
-      setColorVar("--color-accent", (pt as Record<string, string>).colorAccent);
-      setColorVar("--color-bg", (pt as Record<string, string>).colorBg);
-      setColorVar("--color-bg-content", (pt as Record<string, string>).colorBgContent);
-      setColorVar("--color-border", (pt as Record<string, string>).colorBorder);
-      setColorVar("--color-accent-hover", (pt as Record<string, string>).colorAccentHover);
+      setUrlVar("--product-bg-full", themeMap.bgFull);
+      setUrlVar("--product-bg-tile", themeMap.bgTile);
+      setUrlVar("--product-h1-logo", themeMap.h1Logo);
+      setUrlVar("--product-side-logo", themeMap.sideLogo);
+      setColorVar("--color-accent", themeMap.colorAccent);
+      setColorVar("--color-bg", themeMap.colorBg);
+      setColorVar("--color-bg-content", themeMap.colorBgContent);
+      setColorVar("--color-border", themeMap.colorBorder);
+      setColorVar("--color-accent-hover", themeMap.colorAccentHover);
     },
     { immediate: true, deep: true },
   );
@@ -644,14 +553,14 @@ if (process.client) {
 <template>
   <div>
     <PageHeader v-if="!isProductTemplate && !isArticleTemplate" :title="pageTitle" :description="pageDescription" :alternate-locales="pageAlternateLocales" />
-    <ArticleHeader v-if="isArticleTemplate && !isProductTemplate" :title="pageTitle" :date="(data as any)?.datePublished" :authorName="typeof (data as any)?.author === 'string' ? (data as any)?.author : (data as any)?.author?.name" :alternate-locales="pageAlternateLocales" />
-    <component 
-      :is="(enhancementsEnabled && enhancedNavigationComp) ? enhancedNavigationComp : Navigation" 
-      v-if="isIndexPage" 
+    <ArticleHeader v-if="isArticleTemplate && !isProductTemplate" :title="pageTitle" :date="pageDatePublished" :author-name="pageAuthorName" :alternate-locales="pageAlternateLocales" />
+    <component
+      :is="(enhancementsEnabled && enhancedNavigationComp) ? enhancedNavigationComp : Navigation"
+      v-if="isIndexPage"
     />
 
     <!-- Product template layout -->
-    <div v-if="isProductTemplate" class="product-layout" :class="(data as any)?.productTheme?.customClass">
+    <div v-if="isProductTemplate" class="product-layout" :class="productCustomClass">
       <aside class="product-nav">
         <component
           :is="(enhancementsEnabled && enhancedProductNavigationComp) ? enhancedProductNavigationComp : ProductNavigation"
@@ -659,7 +568,7 @@ if (process.client) {
         />
       </aside>
       <main class="product-main prose">
-        <div class="product-content" :class="(data as any)?.productTheme?.customClass">
+        <div class="product-content" :class="productCustomClass">
           <PageHeader :title="pageTitle" :description="pageDescription" :alternate-locales="pageAlternateLocales" />
           <ContentRenderer v-if="data" :key="version" :value="data" :components="proseComponents">
             <template #empty></template>
@@ -675,8 +584,8 @@ if (process.client) {
         <ContentRenderer v-if="data" :key="version" :value="data" :components="proseComponents">
           <template #empty></template>
         </ContentRenderer>
-        <NewsList v-if="isNewsListTemplate" :year="(data as Record<string, unknown>)?.year as string" />
-        <ArticleList v-if="isArticleListTemplate" :year="(data as Record<string, unknown>)?.year as string" />
+        <NewsList v-if="isNewsListTemplate" :year="archiveYear" />
+        <ArticleList v-if="isArticleListTemplate" :year="archiveYear" />
       </main>
       <aside v-if="useHeroLayout" class="image-column" :class="{ 'video-column': !!videoUrl }">
         <div v-if="videoUrl" class="video-wrapper">

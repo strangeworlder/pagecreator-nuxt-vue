@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// @ts-nocheck
 withDefaults(defineProps<{ href?: string; rel?: string; target?: string; hreflang?: string }>(), {
   href: undefined,
   rel: undefined,

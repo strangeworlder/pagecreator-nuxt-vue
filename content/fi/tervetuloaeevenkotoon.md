@@ -51,13 +51,8 @@ isBasedOn:
     url: 'https://myrrys.com'
 author:
   name: TBD
-  url: 'https://gogam.eu'
 organization:
   name: Kustannusosakeyhtiö Gogam
-  url: 'https://gogam.eu'
-  sameAs:
-    - 'https://instagram.com/gogam.eu'
-    - 'https://gogameu.substack.com/'
 facts:
   - label: System
     value: Legendoja & lohikäärmeitä (5.5e)

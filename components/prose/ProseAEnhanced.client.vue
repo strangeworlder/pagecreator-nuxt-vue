@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { type ComponentPublicInstance, onMounted, onUnmounted, ref } from "vue";
 import ContentPreviewPopup from "~/components/atoms/ContentPreviewPopup.vue";
-import { useContentLinkPreview } from "~/composables/useContentLinkPreview";
+import { type ContentPreview, useContentLinkPreview } from "~/composables/useContentLinkPreview";
 
 const props = withDefaults(defineProps<{ href?: string; rel?: string; target?: string }>(), {
   href: undefined,
@@ -12,7 +12,7 @@ const props = withDefaults(defineProps<{ href?: string; rel?: string; target?: s
 const { getPreviewForLink } = useContentLinkPreview();
 
 const showPreview = ref(false);
-const previewData = ref<any>(null);
+const previewData = ref<ContentPreview | null>(null);
 const previewPosition = ref({ x: 0, y: 0 });
 const linkRef = ref<HTMLElement | ComponentPublicInstance | null>(null);
 const previewTimeout = ref<NodeJS.Timeout>();
@@ -26,7 +26,8 @@ const isLocal = () => {
 };
 
 const handleMouseEnter = async () => {
-  if (!isLocal() || !props.href) return;
+  const href = props.href;
+  if (!isLocal() || !href) return;
 
   if (previewTimeout.value) {
     clearTimeout(previewTimeout.value);
@@ -34,7 +35,7 @@ const handleMouseEnter = async () => {
 
   previewTimeout.value = setTimeout(async () => {
     try {
-      const preview = await getPreviewForLink(props.href!);
+      const preview = await getPreviewForLink(href);
       if (preview && showPreview.value === false) {
         previewData.value = preview;
         updatePreviewPosition();
@@ -93,7 +94,8 @@ const handleMouseMove = () => {
 };
 
 const handleFocus = async () => {
-  if (!isLocal() || !props.href) return;
+  const href = props.href;
+  if (!isLocal() || !href) return;
 
   if (previewTimeout.value) {
     clearTimeout(previewTimeout.value);
@@ -101,7 +103,7 @@ const handleFocus = async () => {
 
   previewTimeout.value = setTimeout(async () => {
     try {
-      const preview = await getPreviewForLink(props.href!);
+      const preview = await getPreviewForLink(href);
       if (preview && showPreview.value === false) {
         previewData.value = preview;
         updatePreviewPosition();

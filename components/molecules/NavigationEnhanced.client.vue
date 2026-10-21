@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref, computed } from "vue";
+import { computed, onMounted, onUnmounted, ref } from "vue";
+import { NAVIGATION_ITEMS } from "~/utils/navigationItems";
 import { useRoute } from "#imports";
 
 const navRef = ref<HTMLElement>();
@@ -41,87 +42,31 @@ onUnmounted(() => {
 });
 
 const route = useRoute();
-const isFinnish = computed(() => !route.path.startsWith("/en"));
+const items = computed(() =>
+  route.path.startsWith("/en") ? NAVIGATION_ITEMS.en : NAVIGATION_ITEMS.fi,
+);
 </script>
 
 <template>
   <div>
     <!-- Original navigation -->
     <nav ref="navRef">
-      <ul v-if="isFinnish">
-        <li>
-          <a href="#kustannusosakeyhtiö-gogam" @click.prevent="scrollToSection('header-kustannusosakeyhtiö-gogam')">Kustannusosakeyhtiö Gogam</a> &mdash; Pääasiassa suomenkielinen kustantamo, joka vastaa myös indie-pelieni fyysisistä versioista.
-        </li>
-        <li>
-          <a href="#gogam" @click.prevent="scrollToSection('header-gogam')">Gogam</a> &mdash; "Online indie-pelit" -brändini. Asioita joita teen ja nykyään julkaisen ilmaiseksi, enimmäkseen itch.io:ssa.
-        </li>
-        <li>
-          <a href="#gogam-entertainment" @click.prevent="scrollToSection('header-gogam-entertainment')">Gogam Entertainment</a> &mdash; Roolipeliviihteeseen keskittyvä yritys. Kauttaaltaan tuotan mm. pelautuksia (Actual Play).
-        </li>
-        <li>
-          <a href="#muilta-julkaisijoilta" @click.prevent="scrollToSection('header-muilta-julkaisijoilta')">Muilta julkaisijoilta</a> &mdash; Muut julkaisijat joiden kanssa olen työskennellyt tai joille olen julkaissut pelejä.
-        </li>
-        <li>
-          <a href="#artikkeleita-luettavaksi-ilmaiseksi" @click.prevent="scrollToSection('header-artikkeleita-luettavaksi-ilmaiseksi')">Artikkelit</a> &mdash; Ilmaiseksi kirjoittamani artikkelit, enimmäkseen blogissani.
-        </li>
-      </ul>
-      <ul v-else>
-        <li>
-          <a href="#gogam" @click.prevent="scrollToSection('header-gogam')">Gogam</a> &mdash; My "online indie games" brand. Stuff I make and these days publish for free, mostly on itch.io.
-        </li>
-        <li>
-          <a href="#kustannusosakeyhtiö-gogam" @click.prevent="scrollToSection('header-kustannusosakeyhtiö-gogam')">Kustannusosakeyhtiö Gogam</a> &mdash; A mainly Finnish language publishing house that is also in charge of print versions of my indie games.
-        </li>
-        <li>
-          <a href="#gogam-entertainment" @click.prevent="scrollToSection('header-gogam-entertainment')">Gogam Entertainment</a> &mdash; A TTRPG entertainment company. I create actual plays under this banner.
-        </li>
-        <li>
-          <a href="#from-other-publishers" @click.prevent="scrollToSection('header-from-other-publishers')">Other publishers</a> &mdash; Other publishers I have worked with or published games for.
-        </li>
-        <li>
-          <a href="#articles-for-free-for-you-to-read" @click.prevent="scrollToSection('header-articles-for-free-for-you-to-read')">Articles</a> &mdash; Articles I have written for free, mostly on my blog.
+      <ul>
+        <li v-for="item in items" :key="item.href">
+          <a :href="item.href" @click.prevent="scrollToSection(item.targetId)">{{ item.label }}</a> &mdash; {{ item.description }}
         </li>
       </ul>
     </nav>
 
     <!-- Floating navigation -->
-    <nav 
+    <nav
       ref="floatingNavRef"
       class="floating-nav"
       :class="{ 'floating-nav--visible': isFloating }"
     >
-      <ul v-if="isFinnish">
-        <li>
-          <a href="#kustannusosakeyhtiö-gogam" @click.prevent="scrollToSection('header-kustannusosakeyhtiö-gogam')">Kustannusosakeyhtiö Gogam</a>
-        </li>
-        <li>
-          <a href="#gogam" @click.prevent="scrollToSection('header-gogam')">Gogam</a>
-        </li>
-        <li>
-          <a href="#gogam-entertainment" @click.prevent="scrollToSection('header-gogam-entertainment')">Gogam Entertainment</a>
-        </li>
-        <li>
-          <a href="#muilta-julkaisijoilta" @click.prevent="scrollToSection('header-muilta-julkaisijoilta')">Muilta julkaisijoilta</a>
-        </li>
-        <li>
-          <a href="#artikkeleita-luettavaksi-ilmaiseksi" @click.prevent="scrollToSection('header-artikkeleita-luettavaksi-ilmaiseksi')">Artikkelit</a>
-        </li>
-      </ul>
-      <ul v-else>
-        <li>
-          <a href="#gogam" @click.prevent="scrollToSection('header-gogam')">Gogam</a>
-        </li>
-        <li>
-          <a href="#kustannusosakeyhtiö-gogam" @click.prevent="scrollToSection('header-kustannusosakeyhtiö-gogam')">Kustannusosakeyhtiö Gogam</a>
-        </li>
-        <li>
-          <a href="#gogam-entertainment" @click.prevent="scrollToSection('header-gogam-entertainment')">Gogam Entertainment</a>
-        </li>
-        <li>
-          <a href="#from-other-publishers" @click.prevent="scrollToSection('header-from-other-publishers')">Other publishers</a>
-        </li>
-        <li>
-          <a href="#articles-for-free-for-you-to-read" @click.prevent="scrollToSection('header-articles-for-free-for-you-to-read')">Articles</a>
+      <ul>
+        <li v-for="item in items" :key="item.href">
+          <a :href="item.href" @click.prevent="scrollToSection(item.targetId)">{{ item.label }}</a>
         </li>
       </ul>
     </nav>

@@ -1,9 +1,8 @@
 <script setup lang="ts">
-// @ts-nocheck
 import { computed } from "vue";
 import BaseHeader from "~/components/atoms/BaseHeader.vue";
-import BaseParagraph from "~/components/atoms/BaseParagraph.vue";
 import BaseLanguageSwitcher from "~/components/atoms/BaseLanguageSwitcher.vue";
+import BaseParagraph from "~/components/atoms/BaseParagraph.vue";
 
 interface AlternateLocale {
   code: string;

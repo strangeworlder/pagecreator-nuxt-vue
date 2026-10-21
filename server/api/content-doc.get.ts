@@ -1,5 +1,4 @@
 import { queryCollection } from "@nuxt/content/server";
-// @ts-nocheck
 import { getQuery, setHeader } from "h3";
 
 export default defineEventHandler(async (event) => {
@@ -24,7 +23,11 @@ export default defineEventHandler(async (event) => {
   for (const p of candidates) {
     const found = await queryCollection(event, "content").path(p).first();
     if (found) {
-      doc = found as any;
+      const raw = found as unknown as Record<string, unknown>;
+      doc =
+        raw.meta && typeof raw.meta === "object"
+          ? { ...raw, ...(raw.meta as Record<string, unknown>) }
+          : raw;
       break;
     }
   }

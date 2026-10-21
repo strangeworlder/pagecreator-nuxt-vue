@@ -1,9 +1,33 @@
-import { queryCollection } from "@nuxt/content/server";
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import { queryCollection } from "@nuxt/content/server";
+
+interface AstNode {
+  type?: string;
+  tag?: string;
+  value?: string;
+  children?: AstNode[];
+}
+
+interface AsciiTreeNode {
+  [key: string]: AsciiTreeNode;
+}
+
+interface LlmFullContentDoc {
+  id?: string;
+  path?: string;
+  title?: string;
+  description?: string;
+  datePublished?: string | Date;
+  author?: string | { name?: string };
+  contentType?: string | string[];
+  tags?: string[];
+  body?: AstNode;
+  meta?: Record<string, unknown>;
+}
 
 // Helper to extract text from Nuxt Content AST
-function astToText(node: any): string {
+function astToText(node: AstNode | null | undefined): string {
   if (!node) return "";
 
   // Text node
@@ -19,6 +43,7 @@ function astToText(node: any): string {
 
       // Add spacing for block elements to preserve readability
       if (
+        child.tag &&
         [
           "p",
           "h1",
@@ -46,7 +71,7 @@ function astToText(node: any): string {
 
 // Helper to generate ASCII tree from file paths
 function generateAsciiTree(paths: string[]): string {
-  const root: Record<string, any> = {};
+  const root: AsciiTreeNode = {};
   for (const p of paths) {
     const parts = p.split("/").filter(Boolean);
     let current = root;
@@ -57,22 +82,23 @@ function generateAsciiTree(paths: string[]): string {
   }
 
   let output = "";
-  function traverse(node: Record<string, any>, prefix: string, isLast: boolean) {
+  function traverse(node: AsciiTreeNode, prefix: string) {
     const keys = Object.keys(node).sort();
     for (let i = 0; i < keys.length; i++) {
       const key = keys[i];
+      if (!key) continue;
       const display = key.replace(/\.md$/, ""); // Clean up extensions for readability
       const lastItem = i === keys.length - 1;
       const marker = lastItem ? "└── " : "├── ";
       output += `${prefix}${marker}${display}\n`;
 
       const children = node[key];
-      if (Object.keys(children).length > 0) {
-        traverse(children, prefix + (lastItem ? "    " : "│   "), true); // simplify children indentation
+      if (children && Object.keys(children).length > 0) {
+        traverse(children, prefix + (lastItem ? "    " : "│   "));
       }
     }
   }
-  traverse(root, "", true);
+  traverse(root, "");
   return output;
 }
 
@@ -81,14 +107,34 @@ export default defineEventHandler(async (event) => {
   const siteUrl: string = runtime.public.siteUrl;
   const defaultLocale = runtime.public.defaultLocale || "fi";
 
+  const unwrapDoc = (raw: unknown): LlmFullContentDoc | null => {
+    if (!raw || typeof raw !== "object") return null;
+    const doc = raw as LlmFullContentDoc;
+    if (doc.meta && typeof doc.meta === "object") {
+      return { ...doc, ...(doc.meta as Partial<LlmFullContentDoc>) };
+    }
+    return doc;
+  };
+
+  const hasContentType = (doc: LlmFullContentDoc, target: string): boolean => {
+    const ct = doc.contentType;
+    if (Array.isArray(ct)) return ct.includes(target);
+    if (typeof ct === "string") return ct.includes(target);
+    return false;
+  };
+
   // Re-fetch Home for the "North Star" description
   const homePath = `/${defaultLocale}`;
-  const home = await queryCollection(event, "content").path(homePath).first();
+  const rawHome = await queryCollection(event, "content").path(homePath).first();
+  const home = unwrapDoc(rawHome);
 
-  const allDocs = await queryCollection(event, "content").all();
+  const rawDocs = await queryCollection(event, "content").all();
+  const allDocs = rawDocs
+    .map((d) => unwrapDoc(d))
+    .filter((d): d is LlmFullContentDoc => d !== null);
 
   const sortedDocs = [...allDocs].sort((a, b) => {
-    const getPriority = (doc: any) => {
+    const getPriority = (doc: LlmFullContentDoc) => {
       // 1. Identity
       if (doc.path === "/en" || doc.path === "/") return 1;
       // 2. World Model
@@ -101,7 +147,7 @@ export default defineEventHandler(async (event) => {
       // 3. Systems
       if (doc.tags?.includes("system") || doc.tags?.includes("rules")) return 3;
       // 4. Inventory
-      if (doc.contentType?.includes("Game") || doc.contentType?.includes("Product")) return 4;
+      if (hasContentType(doc, "Game") || hasContentType(doc, "Product")) return 4;
       // 5. Other
       return 5;
     };
@@ -111,49 +157,50 @@ export default defineEventHandler(async (event) => {
     return (a.title || "").localeCompare(b.title || "");
   });
 
-  const toAbsolute = (path: string) => {
-    if (path.startsWith("http")) return path;
-    return `${siteUrl}${path}`;
+  const toAbsolute = (p: string) => {
+    if (p.startsWith("http")) return p;
+    return `${siteUrl}${p}`;
   };
 
   let fullText = "";
 
   // 1. The Header and Project "North Star"
-  fullText += `# Gogam: Roleplaying Games from Finland (Full Context)\n`;
+  fullText += "# Gogam: Roleplaying Games from Finland (Full Context)\n";
   fullText += `> [Version: ${new Date().toISOString().split("T")[0]}]\n`;
-  if (home && home.description) {
+  if (home?.description) {
     fullText += `> ${home.description}\n`;
   }
-  fullText += `\n`;
+  fullText += "\n";
 
   // 2. The Project Map (Navigation)
-  fullText += `## Project Map\n\n`;
+  fullText += "## Project Map\n\n";
 
   // Table of Contents
-  fullText += `### Table of Contents\n`;
-  sortedDocs.forEach((doc) => {
-    fullText += `- [${doc.title}](${toAbsolute(doc.path)})\n`;
-  });
-  fullText += `\n`;
+  fullText += "### Table of Contents\n";
+  for (const doc of sortedDocs) {
+    fullText += `- [${doc.title}](${toAbsolute(doc.path || "/")})\n`;
+  }
+  fullText += "\n";
 
   // Directory Structure (Tree)
-  fullText += `### Directory Structure\n`;
+  fullText += "### Directory Structure\n";
   fullText += "```\n";
   // Get relative file paths for the tree
-  const filePaths = sortedDocs.map((d) => d.path);
+  const filePaths = sortedDocs.map((d) => d.path || "/");
   fullText += generateAsciiTree(filePaths);
   fullText += "```\n\n";
 
-  fullText += `## Content\n`;
+  fullText += "## Content\n";
 
   for (const doc of sortedDocs) {
-    fullText += `\n---\n`;
+    const docPath = doc.path || "/";
+    fullText += "\n---\n";
     fullText += `Title: ${doc.title}\n`;
     if (doc.datePublished) fullText += `Date Published: ${doc.datePublished}\n`;
     if (doc.author)
       fullText += `Author: ${typeof doc.author === "string" ? doc.author : doc.author.name}\n`;
-    fullText += `URL: ${toAbsolute(doc.path)}\n`;
-    fullText += `\n`;
+    fullText += `URL: ${toAbsolute(docPath)}\n`;
+    fullText += "\n";
 
     let content = "";
     let strategyUsed = "";
@@ -161,7 +208,7 @@ export default defineEventHandler(async (event) => {
     // STRATEGY 1: Raw File via Storage (Server Assets)
     try {
       const storage = useStorage("assets:content");
-      const fileKey = (doc.id || doc.path).replace(/^\//, "");
+      const fileKey = (doc.id || docPath).replace(/^\//, "");
       content = (await storage.getItem(fileKey)) as string;
       if (!content) {
         const colonKey = fileKey.replace(/\//g, ":");
@@ -173,7 +220,7 @@ export default defineEventHandler(async (event) => {
     // STRATEGY 2: Raw File via FS (Build Time)
     if (!content) {
       try {
-        const basePath = path.resolve(process.cwd(), "content", doc.path.replace(/^\//, ""));
+        const basePath = path.resolve(process.cwd(), "content", docPath.replace(/^\//, ""));
         for (const ext of [".md", "/index.md", ".mdx"]) {
           try {
             content = await fs.readFile(basePath + ext, "utf-8");
@@ -188,9 +235,9 @@ export default defineEventHandler(async (event) => {
 
     // STRATEGY 3: AST Reconstruction (Runtime/Cache Fallback)
     // If raw access failed, we rely on the parsed AST which provided 'doc' in the first place.
-    if (!content && (doc as any).body) {
+    if (!content && doc.body) {
       try {
-        content = astToText((doc as any).body);
+        content = astToText(doc.body);
         if (content) strategyUsed = "AST (Parsed)";
       } catch {}
     }
@@ -206,7 +253,7 @@ export default defineEventHandler(async (event) => {
 
       fullText += `## ${doc.title}\n\n`;
       fullText += content.trim();
-      fullText += `\n\n`;
+      fullText += "\n\n";
     } else {
       // Absolute failure
       console.error(`Failed to retrieve content for ${doc.title}`);

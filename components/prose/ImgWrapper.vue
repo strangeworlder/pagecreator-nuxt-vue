@@ -10,7 +10,8 @@ const props = defineProps<{
 </script>
 
 <template>
-  <component :is="ProseImg as any" v-bind="{ ...props, ...$attrs }">
+  <ProseImg v-bind="{ ...props, ...$attrs }">
     <slot />
-  </component>
+  </ProseImg>
 </template>
+

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import { useRoute, useAsyncData } from "#imports";
+import { useAsyncData, useRoute } from "#imports";
 
 const props = defineProps<{
   year?: string;
@@ -25,7 +25,7 @@ const { data: articles } = await useAsyncData(
 
     // Filter by year if provided
     if (props.year) {
-      results = results.filter((article: any) => {
+      results = results.filter((article) => {
         if (!article.datePublished) return false;
         const date = new Date(article.datePublished as string | Date);
         return date.getFullYear().toString() === props.year;

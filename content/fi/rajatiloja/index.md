@@ -23,14 +23,10 @@ author:
     - 'https://www.youtube.com/@Roachsphere'
 publisher:
   name: Gogam
-  url: 'https://gogam.eu'
 organization:
   '@type': Organization
   name: Gogam Entertainment
   '@id': 'https://gogam.eu/#gogam-entertainment'
-  url: 'https://gogam.eu'
-  sameAs:
-    - 'https://www.youtube.com/@gogameu'
 datePublished: 2024-02-05
 dateModified: 2026-02-23
 canonical: /fi/rajatiloja

@@ -1,7 +1,6 @@
-import { queryCollection } from "@nuxt/content/server";
-// @ts-nocheck
 import fs from "node:fs/promises";
 import { join } from "node:path";
+import { queryCollection } from "@nuxt/content/server";
 import { getQuery, setHeader } from "h3";
 
 const API_MAX_AGE = Number(process.env.NUXT_API_MAX_AGE || 60);

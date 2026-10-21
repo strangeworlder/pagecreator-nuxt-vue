@@ -118,7 +118,7 @@ export function useContentLinkPreview() {
             description: best.description as string,
             summary: best.summary as string,
             cover: best.cover as string,
-            image: (best.meta as any)?.image,
+            image: (best.meta as Record<string, unknown> | undefined)?.image as string | undefined,
             datePublished: best.datePublished as string,
             dateModified: best.dateModified as string,
             tags: best.tags as string[],

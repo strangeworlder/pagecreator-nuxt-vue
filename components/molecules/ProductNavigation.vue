@@ -1,5 +1,6 @@
 <script setup lang="ts">
-// @ts-nocheck
+import { computed } from "vue";
+
 interface LinkItem {
   href: string;
   text: string;
@@ -7,7 +8,7 @@ interface LinkItem {
   target?: string;
 }
 const props = defineProps<{ links?: LinkItem[] }>();
-const links = Array.isArray(props.links) ? props.links : [];
+const links = computed(() => (Array.isArray(props.links) ? props.links : []));
 </script>
 
 <template>

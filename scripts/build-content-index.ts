@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 // Nuxt content is static at build time; we can read from .content/cache via queryContent

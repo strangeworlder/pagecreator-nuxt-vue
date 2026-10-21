@@ -17,6 +17,7 @@
 
 <script setup lang="ts">
 import { computed, onMounted, onUpdated, ref } from "vue";
+import imageMetaData from "~/assets/imageMeta.json";
 import { buildImageSrcset, buildImageUrl, normalizeImageWidths } from "~/utils/image";
 
 const props = defineProps<{
@@ -49,12 +50,7 @@ const imgSrcset = computed(() => {
 const sizes = "(min-width: 1280px) 1200px, (min-width: 768px) 768px, 100vw";
 
 // SSR-friendly: use provided props or optional metadata to set aspect-ratio
-let meta: Record<string, { width: number; height: number }> = {};
-try {
-  meta = (await import("~/assets/imageMeta.json")).default as typeof meta;
-} catch (_) {
-  // optional file, ignore when missing
-}
+const meta = imageMetaData as Record<string, { width: number; height: number }>;
 
 const dimensions = computed(() => {
   if (props.width && props.height) return { width: props.width, height: props.height };

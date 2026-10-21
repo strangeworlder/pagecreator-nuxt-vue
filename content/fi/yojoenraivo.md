@@ -50,10 +50,6 @@ author:
     - 'https://roolipelikirjasto.fi/author/pubold/2'
 organization:
   name: Kustannusosakeyhtiö Gogam
-  url: 'https://gogam.eu'
-  sameAs:
-    - 'https://instagram.com/gogam.eu'
-    - 'https://gogameu.substack.com/'
 illustrator:
   name: Juno Viinikka
   url: 'https://linktr.ee/junowski'

@@ -29,6 +29,7 @@
 
 <script setup lang="ts">
 import { type CSSProperties, computed } from "vue";
+import imageMetaData from "~/assets/imageMeta.json";
 import { buildImageSrcset, buildImageUrl, normalizeImageWidths } from "~/utils/image";
 
 const props = defineProps<{
@@ -49,13 +50,7 @@ const defaultSizes = "(min-width: 1280px) 1200px, (min-width: 768px) 768px, 100v
 const resolvedSizes = computed(() => props.sizes ?? defaultSizes);
 
 // Optional: width/height metadata to reserve space and avoid CLS
-// Add entries in assets/imageMeta.json like { "/images/foo.jpg": { width: 1600, height: 900 } }
-let meta: Record<string, { width: number; height: number }> = {};
-try {
-  meta = (await import("~/assets/imageMeta.json")).default as typeof meta;
-} catch (_) {
-  // optional file, ignore when missing
-}
+const meta = imageMetaData as Record<string, { width: number; height: number }>;
 
 const dimensions = computed(() => {
   if (props.width && props.height) return { width: props.width, height: props.height };

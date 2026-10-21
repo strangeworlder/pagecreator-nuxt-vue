@@ -1,25 +1,25 @@
 import { queryCollection } from "@nuxt/content/server";
+import { type CanonicalizableDoc, resolveCanonicalPath } from "~/utils/routing";
 
 export default defineEventHandler(async (event) => {
-  const baseUrl: string = useRuntimeConfig(event).public.siteUrl;
+  const runtime = useRuntimeConfig(event);
+  const baseUrl = String(runtime.public.siteUrl || "");
+  const defaultLocale = String(runtime.public.defaultLocale || "fi");
   const docs = await queryCollection(event, "content").all();
 
   const urls: string[] = [];
 
-  for (const d of docs) {
-    if ((d as any).noindex) continue;
+  for (const rawDoc of docs) {
+    const record = rawDoc as unknown as Record<string, unknown>;
+    const d: Record<string, unknown> =
+      record.meta && typeof record.meta === "object"
+        ? { ...record, ...(record.meta as Record<string, unknown>) }
+        : record;
 
-    // 1. Determine the primary URL for this document
-    let loc = d.path;
+    if (d.noindex) continue;
 
-    // If canonical is specified and matches a path format, use it as the primary location
-    // (e.g. content/en/index.md having canonical: "/" means we list https://site.com/)
-    if (d.canonical && typeof d.canonical === "string" && d.canonical.startsWith("/")) {
-      loc = d.canonical;
-    }
-
-    // Ensure no trailing slash for consistency (unless root)
-    const path = loc === "/" ? "" : loc?.replace(/\/$/, "");
+    const loc = resolveCanonicalPath(d as CanonicalizableDoc, defaultLocale);
+    const path = loc === "/" ? "" : loc.replace(/\/$/, "");
 
     let lastmodDate = d.dateModified ? new Date(d.dateModified as string | Date) : new Date();
     if (Number.isNaN(lastmodDate.getTime())) {
@@ -30,14 +30,8 @@ export default defineEventHandler(async (event) => {
     urls.push(
       `<url><loc>${baseUrl.replace(/\/$/, "")}${path}</loc><lastmod>${lastmod}</lastmod></url>`,
     );
-
-    // 2. If aliases exist, we SHOULD NOT add them to sitemap automatically as duplicates,
-    // unless they are canonical interactions, but standard practice is listing ONLY the canonical URL.
-    // However, if the user explicitly mapped content/fi/hirviokirja -> canonical: /hirviokirja,
-    // then the above check handles it.
   }
 
-  // Filter out duplicates in case multiple files claim the same canonical URL (though that would be an error arguably)
   const uniqueUrls = Array.from(new Set(urls));
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${uniqueUrls.join("")}</urlset>`;

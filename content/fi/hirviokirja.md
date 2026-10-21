@@ -47,19 +47,8 @@ isBasedOn:
 isbn: '9789526503028'
 author:
   name: Petri Leinonen
-  url: 'https://gogam.eu'
-  sameAs:
-    - 'https://rpggeek.com/rpgdesigner/111688/petri-leinonen'
-    - 'https://www.drivethrurpg.com/en/browse?author=%22Petri%20Leinonen%22'
-    - 'https://strangeworlder.itch.io/'
-    - 'https://strangeworlder.medium.com/'
-    - 'https://bsky.app/profile/strangeworlder.bsky.social'
-    - 'https://www.threads.com/@gogam.eu'
 organization:
   name: Kustannusosakeyhtiö Gogam
-  sameAs:
-    - 'https://instagram.com/gogam.eu'
-    - 'https://gogameu.substack.com/'
 illustrator: Petri Leinonen
 facts:
   - label: System

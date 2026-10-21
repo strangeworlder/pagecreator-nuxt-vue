@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import { useRoute, useAsyncData } from "#imports";
+import { type CanonicalizableDoc, resolveCanonicalPath } from "~/utils/routing";
+import { useAsyncData, useRoute } from "#imports";
 
 const props = defineProps<{
   year?: string;
@@ -23,11 +24,11 @@ const { data: articles } = await useAsyncData(
       .order("datePublished", "DESC")
       .all();
 
-    results = results.filter((a: any) => a.datePublished);
+    results = results.filter((a) => Boolean(a.datePublished));
 
     // Filter by year if provided
     if (props.year) {
-      results = results.filter((article: any) => {
+      results = results.filter((article) => {
         if (!article.datePublished) return false;
         const date = new Date(article.datePublished as string | Date);
         return date.getFullYear().toString() === props.year;
@@ -38,17 +39,8 @@ const { data: articles } = await useAsyncData(
   },
 );
 
-const getArticleUrl = (article: any) => {
-  if (!article.datePublished) return article.path;
-  const date = new Date(article.datePublished);
-  const yyyy = date.getUTCFullYear();
-  const mm = String(date.getUTCMonth() + 1).padStart(2, "0");
-  const dd = String(date.getUTCDate()).padStart(2, "0");
-
-  // Extract slug from path like /en/news/example -> example
-  const slug = article.path.split("/").pop();
-
-  return `/${locale.value}/${yyyy}/${mm}/${dd}/${slug}`;
+const getArticleUrl = (article: CanonicalizableDoc): string => {
+  return resolveCanonicalPath(article, locale.value);
 };
 
 const formatDate = (dateString: string) => {

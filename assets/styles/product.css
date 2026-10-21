@@ -63,15 +63,15 @@ html[data-page-theme="product"] .product-content.theme-eevenkoto {
   padding: 0;
 }
 
-html[data-page-theme="product"] .product-content.theme-eevenkoto>header {
+html[data-page-theme="product"] .product-content.theme-eevenkoto > header {
   padding: 30px 30px 0 30px;
 }
 
-html[data-page-theme="product"] .product-content.theme-eevenkoto>footer {
+html[data-page-theme="product"] .product-content.theme-eevenkoto > footer {
   padding: 0 30px 30px 30px;
 }
 
-html[data-page-theme="product"] .product-content.theme-eevenkoto>div {
+html[data-page-theme="product"] .product-content.theme-eevenkoto > div {
   background: var(--color-bg-content, rgba(240, 246, 255, 0.6));
   padding: 30px;
 }

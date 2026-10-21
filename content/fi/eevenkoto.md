@@ -19,20 +19,8 @@ datePublished: 2026-08-10
 dateModified: 2026-09-01
 organization:
   name: Kustannusosakeyhtiö Gogam
-  url: 'https://gogam.eu'
-  sameAs:
-    - 'https://instagram.com/gogam.eu'
-    - 'https://gogameu.substack.com/'
 author:
   name: Petri Leinonen
-  url: 'https://gogam.eu'
-  sameAs:
-    - 'https://rpggeek.com/rpgdesigner/111688/petri-leinonen'
-    - 'https://www.drivethrurpg.com/en/browse?author=%22Petri%20Leinonen%22'
-    - 'https://strangeworlder.itch.io/'
-    - 'https://strangeworlder.medium.com/'
-    - 'https://bsky.app/profile/strangeworlder.bsky.social'
-    - 'https://www.threads.com/@gogam.eu'
 isBasedOn:
   - type: Game
     name: Legendoja & lohikäärmeitä

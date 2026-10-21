@@ -172,12 +172,13 @@ News articles follow specific routing rules to maintain a clean content folder w
 
 ---
 
-## 8. Author and Organization Identity (Exception to Stubs)
+## 8. Author and Organization Identity (Strict Stubs vs. External Authors)
 
-While "The Rule of Stubs" applies to general entity references, for **Author** (Petri Leinonen) and **Organization** (Gogam / Kustannusosakeyhtiö Gogam) fields on product pages, we prioritize **Explicit Identity Resolution**.
+"The Rule of Stubs" (Section 1.4) applies strictly to **Petri Leinonen** and **Gogam** organizations (`Gogam`, `Kustannusosakeyhtiö Gogam`, `Gogam Entertainment`) on all subpages:
 
-*   **Requirement**: You MUST include the `sameAs` array for the `author` and `organization` entities.
-*   **Execution**: Do not rely solely on the `@id`. Duplicate the canonical `sameAs` links (e.g., RPGGeek, Itch.io, Instagram) to ensure immediate resolution.
+*   **Internal Entities (Petri & Gogam)**: Do **not** duplicate `sameAs` or `url` on product, lore, or article subpages. Reference them by `name` (and optional `@id` / `@type`); their full `sameAs` metadata is defined exclusively on their Master Hub pages (`/` and `/[lang]/petri-leinonen`).
+*   **External / Third-Party Authors**: When a work is authored by an external creator without a dedicated identity hub on `gogam.eu` (e.g., Wille Ruotsalainen, Roachsphere), include their `url` and `sameAs` array directly in the `author` block on that work's Master Node page.
+
 
 ---
 

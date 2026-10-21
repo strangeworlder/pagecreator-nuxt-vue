@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import { useRoute, useAsyncData } from "#imports";
+import { type CanonicalizableDoc, resolveCanonicalPath } from "~/utils/routing";
+import { useAsyncData, useRoute } from "#imports";
 
 const route = useRoute();
 const locale = computed(() => {
@@ -17,14 +18,8 @@ const { data: articles } = await useAsyncData(`latest-news-${locale.value}`, asy
     .all();
 });
 
-const getArticleUrl = (article: any) => {
-  if (!article.datePublished) return article.path;
-  const date = new Date(article.datePublished);
-  const yyyy = date.getUTCFullYear();
-  const mm = String(date.getUTCMonth() + 1).padStart(2, "0");
-  const dd = String(date.getUTCDate()).padStart(2, "0");
-  const slug = article.path.split("/").pop();
-  return `/${locale.value}/${yyyy}/${mm}/${dd}/${slug}`;
+const getArticleUrl = (article: CanonicalizableDoc): string => {
+  return resolveCanonicalPath(article, locale.value);
 };
 
 const formatDate = (dateString: string) => {

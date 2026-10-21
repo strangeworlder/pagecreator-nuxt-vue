@@ -1,12 +1,9 @@
----
-dateModified: 2026-09-08
----
-# AI Agent Guide: TSS (Generative‑Engine‑Optimized Vue Starter)
+# AI Agent Guide: Gogam.eu website
 
 This document provides high-level context, architectural decisions, and coding conventions for AI agents working on this codebase.
 
 ## Project Overview
-**TSS** is a production-ready **Nuxt 3 SSR** starter designed for **Answer Engine Optimization (AEO)**.
+**Gogam.eu website** is a production-ready **Nuxt 3 SSR** starter designed for **Answer Engine Optimization (AEO)**.
 - **Core Goal**: Structured, source-of-truth content allowing LLMs (Answer Engines) to extract factual answers with high confidence.
 - **Data Source**: Markdown files in `content/` with strict front-matter adherence to rules in `.agent/rules/schema.md`.
 - **Rendering**: SSR by default with aggressive caching (ISR/SWR) for edge performance.
@@ -81,4 +78,3 @@ Components are strictly categorized to manage complexity.
 ## User Rules to Remember
 - **Aesthetics**: "Sleek and unobtrusive."
 - **SEO/AEO**: "Automatically implement SEO best practices."
-- **Workspaces**: Only edit files in `c:\Users\alvan\gogameu`.

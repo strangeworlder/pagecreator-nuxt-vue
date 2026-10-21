@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import { useRoute, useAsyncData } from "#imports";
 import BasePanel from "~/components/atoms/BasePanel.vue";
+import { useAsyncData, useRoute } from "#imports";
 
 const route = useRoute();
 const locale = computed(() => {
@@ -12,7 +12,7 @@ const locale = computed(() => {
 const { data: articles } = await useAsyncData(`latest-articles-${locale.value}`, async () => {
   const articlePath = `/${locale.value}/eevenkoto/artikkelit`;
   // We need to query the content where the path starts with the articlePath but is not the articlePath itself
-  let results = await queryCollection("content")
+  const results = await queryCollection("content")
     .where("path", "LIKE", `${articlePath}/%`)
     .order("datePublished", "DESC")
     .limit(3)

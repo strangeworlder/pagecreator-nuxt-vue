@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import { useRoute } from "#imports";
 import BaseLanguageSwitcher from "~/components/atoms/BaseLanguageSwitcher.vue";
+import { useRoute } from "#imports";
 
 interface AlternateLocale {
   code: string;

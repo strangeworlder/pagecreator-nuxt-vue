@@ -147,7 +147,7 @@ export function buildKnowledgeGraph(
       }
 
       const subOrgs = doc.subOrganizations as
-        | Array<{ name: string; description?: string; url?: string }>
+        | Array<{ name: string; description?: string; url?: string; sameAs?: string[] }>
         | undefined;
       if (subOrgs && Array.isArray(subOrgs)) {
         orgNode.subOrganization = subOrgs.map((sub) => {
@@ -158,6 +158,7 @@ export function buildKnowledgeGraph(
             name: sub.name,
             description: sub.description,
             url: sub.url ? toAbsolute(sub.url) : undefined,
+            sameAs: sub.sameAs,
             parentOrganization: { "@id": ORG_MASTER_ID },
           };
         });
@@ -179,6 +180,12 @@ export function buildKnowledgeGraph(
         name: orgName,
       });
     }
+  } else if (!isIdentityHub) {
+    graph.push({
+      "@type": "Organization",
+      "@id": ORG_MASTER_ID,
+      name: GOGAM_IDENTITY.name,
+    });
   }
 
   // 3. AUTHOR / PERSON NODE
@@ -213,10 +220,20 @@ export function buildKnowledgeGraph(
         };
 
         if (authorObj.knowsAbout && Array.isArray(authorObj.knowsAbout)) {
-          personNode.knowsAbout = authorObj.knowsAbout.map((topic: unknown) => ({
-            "@type": "Thing",
-            name: String(topic),
-          }));
+          personNode.knowsAbout = authorObj.knowsAbout.map((topic: unknown) => {
+            const topicStr = String(topic);
+            if (topicStr.startsWith("http")) {
+              return {
+                "@type": "Thing",
+                "@id": topicStr,
+                sameAs: topicStr,
+              };
+            }
+            return {
+              "@type": "Thing",
+              name: topicStr,
+            };
+          });
         }
         graph.push(personNode);
       } else {
@@ -589,6 +606,43 @@ export function buildKnowledgeGraph(
     graph.push(itemNode);
   }
 
+  // 7b. ARTICLE NODE (NEWS & ARTICLES)
+  const isArticle =
+    !isCreativeWork &&
+    !isIdentityHub &&
+    !isPersonIdentityHub &&
+    doc.template !== "news-list" &&
+    doc.template !== "article-list" &&
+    (schemaType.includes("Article") || doc.template === "article");
+  const articleId = `${url}#article`;
+
+  if (isArticle) {
+    const articleNode: UnknownRecord = {
+      "@type": "Article",
+      "@id": articleId,
+      headline: title,
+      name: title,
+      description,
+      url,
+      author: resolvedAuthorStub,
+      publisher: { "@id": ORG_MASTER_ID, name: asString(orgRaw?.name) || siteName },
+      mainEntityOfPage: { "@id": webPageId },
+    };
+    if (doc.datePublished) articleNode.datePublished = doc.datePublished;
+    if (doc.dateModified) articleNode.dateModified = doc.dateModified;
+    if (documentLocale) articleNode.inLanguage = documentLocale;
+    if (image) {
+      articleNode.image = {
+        "@type": "ImageObject",
+        "@id": `${image}#primaryimage`,
+        url: image,
+        width: "1200",
+        height: "630",
+      };
+    }
+    graph.push(articleNode);
+  }
+
   // 8. FAQ NODE
   let hasFaq = false;
   const faq = doc.faq as Array<{ q: string; a: string }> | undefined;
@@ -630,6 +684,8 @@ export function buildKnowledgeGraph(
         .filter((p) => Boolean(p))
         .pop();
     webPageNode.mainEntity = { "@id": `${baseUrl}/#game-${slug}` };
+  } else if (isArticle) {
+    webPageNode.mainEntity = { "@id": articleId };
   } else {
     const entities: Array<{ "@id": string }> = [];
     if (hasFaq) entities.push({ "@id": faqId });

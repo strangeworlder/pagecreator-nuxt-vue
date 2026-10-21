@@ -34,6 +34,9 @@ tags:
   - PbtA
   - tabletop
 canonical: /fi/plus-h
+alternateLocales:
+  - code: en
+    path: /en/plus-h
 template: hero
 theme: modern
 cover: /images/new-horizons-logo.png

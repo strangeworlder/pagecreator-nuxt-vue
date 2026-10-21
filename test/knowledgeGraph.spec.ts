@@ -75,7 +75,7 @@ describe("buildKnowledgeGraph", () => {
           name: "Petri Leinonen",
           jobTitle: "Game Designer",
           sameAs: PETRI_IDENTITY.sameAs,
-          knowsAbout: ["Tabletop role-playing games"],
+          knowsAbout: ["Tabletop role-playing games", "https://www.wikidata.org/wiki/Q1643932"],
         },
       },
       defaultOptions,
@@ -95,6 +95,14 @@ describe("buildKnowledgeGraph", () => {
     expect(personNode?.["@id"]).toBe(PETRI_IDENTITY["@id"]);
     expect(personNode?.sameAs).toEqual(PETRI_IDENTITY.sameAs);
     expect(personNode?.jobTitle).toBe("Game Designer");
+    expect(personNode?.knowsAbout).toEqual([
+      { "@type": "Thing", name: "Tabletop role-playing games" },
+      {
+        "@type": "Thing",
+        "@id": "https://www.wikidata.org/wiki/Q1643932",
+        sameAs: "https://www.wikidata.org/wiki/Q1643932",
+      },
+    ]);
   });
 
   it("emits strict Person and Organization stubs on Game subpages", () => {
@@ -168,6 +176,36 @@ describe("buildKnowledgeGraph", () => {
     expect(gameNode?.author).toEqual({
       "@id": "https://gogam.eu/#author-wille-ruotsalainen",
       name: "Wille Ruotsalainen",
+    });
+  });
+
+  it("emits Article node and links WebPage.mainEntity on news posts", () => {
+    const graphResult = buildKnowledgeGraph(
+      {
+        title: "Kantamaan seikkailut",
+        description: "New RPG announcement",
+        path: "/fi/uutiset/kantamaan-seikkailut",
+        canonical: "/fi/2026/09/24/kantamaan-seikkailut",
+        template: "article",
+        datePublished: "2026-09-24",
+        author: {
+          name: "Petri Leinonen",
+        },
+      },
+      { ...defaultOptions, documentLocale: "fi" },
+    );
+
+    const nodes = graphResult["@graph"];
+    const articleNode = nodes.find((n) => n["@type"] === "Article");
+    expect(articleNode).toBeDefined();
+    expect(articleNode?.["@id"]).toBe(
+      "https://gogam.eu/fi/2026/09/24/kantamaan-seikkailut#article",
+    );
+    expect(articleNode?.datePublished).toBe("2026-09-24");
+
+    const webPageNode = nodes.find((n) => n["@type"] === "WebPage");
+    expect(webPageNode?.mainEntity).toEqual({
+      "@id": "https://gogam.eu/fi/2026/09/24/kantamaan-seikkailut#article",
     });
   });
 });

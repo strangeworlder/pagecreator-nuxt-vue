@@ -1,6 +1,7 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { queryCollection } from "@nuxt/content/server";
+import { type CanonicalizableDoc, resolveCanonicalPath } from "~/utils/routing";
 
 interface AstNode {
   type?: string;
@@ -16,6 +17,8 @@ interface AsciiTreeNode {
 interface LlmFullContentDoc {
   id?: string;
   path?: string;
+  canonical?: string;
+  template?: string;
   title?: string;
   description?: string;
   datePublished?: string | Date;
@@ -105,7 +108,7 @@ function generateAsciiTree(paths: string[]): string {
 export default defineEventHandler(async (event) => {
   const runtime = useRuntimeConfig(event);
   const siteUrl: string = runtime.public.siteUrl;
-  const defaultLocale = runtime.public.defaultLocale || "fi";
+  const defaultLocale = String(runtime.public.defaultLocale || "fi");
 
   const unwrapDoc = (raw: unknown): LlmFullContentDoc | null => {
     if (!raw || typeof raw !== "object") return null;
@@ -123,9 +126,13 @@ export default defineEventHandler(async (event) => {
     return false;
   };
 
-  // Re-fetch Home for the "North Star" description
-  const homePath = `/${defaultLocale}`;
-  const rawHome = await queryCollection(event, "content").path(homePath).first();
+  // Re-fetch English Home for the "North Star" description, fallback to defaultLocale
+  const rawHomeEn = await queryCollection(event, "content")
+    .path("/en")
+    .first()
+    .catch(() => null);
+  const rawHome =
+    rawHomeEn || (await queryCollection(event, "content").path(`/${defaultLocale}`).first());
   const home = unwrapDoc(rawHome);
 
   const rawDocs = await queryCollection(event, "content").all();
@@ -136,7 +143,7 @@ export default defineEventHandler(async (event) => {
   const sortedDocs = [...allDocs].sort((a, b) => {
     const getPriority = (doc: LlmFullContentDoc) => {
       // 1. Identity
-      if (doc.path === "/en" || doc.path === "/") return 1;
+      if (doc.path === "/en" || doc.path === "/fi" || doc.path === "/") return 1;
       // 2. World Model
       if (
         doc.path?.includes("mustan-kilven-kantoni") ||
@@ -162,6 +169,11 @@ export default defineEventHandler(async (event) => {
     return `${siteUrl}${p}`;
   };
 
+  const toDocUrl = (doc: LlmFullContentDoc) => {
+    const canonicalPath = resolveCanonicalPath(doc as CanonicalizableDoc, defaultLocale);
+    return toAbsolute(canonicalPath);
+  };
+
   let fullText = "";
 
   // 1. The Header and Project "North Star"
@@ -178,7 +190,7 @@ export default defineEventHandler(async (event) => {
   // Table of Contents
   fullText += "### Table of Contents\n";
   for (const doc of sortedDocs) {
-    fullText += `- [${doc.title}](${toAbsolute(doc.path || "/")})\n`;
+    fullText += `- [${doc.title}](${toDocUrl(doc)})\n`;
   }
   fullText += "\n";
 
@@ -199,7 +211,7 @@ export default defineEventHandler(async (event) => {
     if (doc.datePublished) fullText += `Date Published: ${doc.datePublished}\n`;
     if (doc.author)
       fullText += `Author: ${typeof doc.author === "string" ? doc.author : doc.author.name}\n`;
-    fullText += `URL: ${toAbsolute(docPath)}\n`;
+    fullText += `URL: ${toDocUrl(doc)}\n`;
     fullText += "\n";
 
     let content = "";
@@ -234,7 +246,6 @@ export default defineEventHandler(async (event) => {
     }
 
     // STRATEGY 3: AST Reconstruction (Runtime/Cache Fallback)
-    // If raw access failed, we rely on the parsed AST which provided 'doc' in the first place.
     if (!content && doc.body) {
       try {
         content = astToText(doc.body);
@@ -255,7 +266,6 @@ export default defineEventHandler(async (event) => {
       fullText += content.trim();
       fullText += "\n\n";
     } else {
-      // Absolute failure
       console.error(`Failed to retrieve content for ${doc.title}`);
       if (doc.description) {
         fullText += `> ${doc.description}\n\n`;

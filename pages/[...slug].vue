@@ -194,6 +194,17 @@ if (!initial) {
   initial = stripped;
 }
 
+const initialCurrentPath = route.path.replace(/\/+$/, "") || "/";
+const initialTargetPath =
+  ((typeof initial?.canonical === "string" && initial.canonical) || initialCurrentPath).replace(
+    /\/+$/,
+    "",
+  ) || "/";
+
+if (initialCurrentPath !== initialTargetPath) {
+  await navigateTo(initialTargetPath, { redirectCode: 301, replace: true });
+}
+
 const initialLocale = (() => {
   const docPath = typeof initial?.path === "string" ? initial.path : "";
   const fromDoc = (docPath.split("/")[1] || "").trim();
@@ -407,8 +418,8 @@ const pageAlternateLocales = computed<Array<{ code: string; path: string }>>(() 
       if (!path && code) {
         const currentPath = route.path;
         const pathWithoutLocale = currentPath.replace(/^\/[a-z]{2}(\/|$)/, "/") || "/";
-        if (code === defaultLocale) {
-          path = pathWithoutLocale;
+        if (code === defaultLocale && pathWithoutLocale === "/") {
+          path = "/";
         } else {
           const suffix = pathWithoutLocale === "/" ? "" : pathWithoutLocale;
           path = `/${code}${suffix}`;

@@ -8,7 +8,7 @@ dateModified: 2026-02-23
 canonical: /fi/petri-leinonen
 alternateLocales:
   - code: en
-    path: /petri-leinonen
+    path: /en/petri-leinonen
 organization:
   name: Gogam
 author:

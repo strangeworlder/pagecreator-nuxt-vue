@@ -28,7 +28,7 @@ export default defineEventHandler(async (event) => {
   xml += `<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n`;
   xml += "  <channel>\n";
   xml += `    <title><![CDATA[${title}]]></title>\n`;
-  xml += `    <link>${baseUrl}/${lang}/news</link>\n`;
+  xml += `    <link>${baseUrl}${newsPath}</link>\n`;
   xml += `    <description><![CDATA[${description}]]></description>\n`;
   xml += `    <language>${lang}</language>\n`;
   xml += `    <atom:link href="${baseUrl}/${lang}/rss.xml" rel="self" type="application/rss+xml"/>\n`;

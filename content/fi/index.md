@@ -117,7 +117,7 @@ Kustannusosakeyhtiö Gogam on perustettu vuonna 2024. Sen pääasiallienen toimi
 
 ### Mustan kilven kantoni
 
-Suurin osa Kustannusosakeyhtiö Gogamin tuotteista liittyvät  liittyvät [Mustan kilven kantoni](/fi/mustan-kilven-kantoni) -kampanjamaailmaan. Se on suomalaista mielenmaisemaa ja klassista kuvastoa fantasiaan yhdistävä asetelma, jossa seikkailijat tekevät tutkimusmatkoja tunnetun maailman kirjaimellisen rajan toiselle puolelle, etsien vastauksia menneisyyteen ja mittaamattomia aarteita.
+Suurin osa Kustannusosakeyhtiö Gogamin tuotteista liittyvät [Mustan kilven kantoni](/fi/mustan-kilven-kantoni) -kampanjamaailmaan. Se on suomalaista mielenmaisemaa ja klassista kuvastoa fantasiaan yhdistävä asetelma, jossa seikkailijat tekevät tutkimusmatkoja tunnetun maailman kirjaimellisen rajan toiselle puolelle, etsien vastauksia menneisyyteen ja mittaamattomia aarteita.
 
 #### Mustan kilven kantonin Tuotteet
 

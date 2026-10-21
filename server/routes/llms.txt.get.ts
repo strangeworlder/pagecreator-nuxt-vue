@@ -1,13 +1,18 @@
 import { queryCollection } from "@nuxt/content/server";
+import { type CanonicalizableDoc, resolveCanonicalPath } from "~/utils/routing";
 
 interface LlmSubOrg {
   name: string;
   description?: string;
+  sameAs?: string[];
 }
 
 interface LlmContentDoc {
   id?: string;
   path?: string;
+  canonical?: string;
+  datePublished?: string | Date;
+  template?: string;
   title?: string;
   description?: string;
   contentType?: string | string[];
@@ -49,9 +54,13 @@ export default defineEventHandler(async (event) => {
     return false;
   };
 
-  // Fetch Home for definition and metadata
-  const homePath = `/${defaultLocale}`;
-  const rawHome = await queryCollection(event, "content").path(homePath).first();
+  // Fetch English Home first for consistent English llms.txt briefing, fallback to defaultLocale
+  const rawHomeEn = await queryCollection(event, "content")
+    .path("/en")
+    .first()
+    .catch(() => null);
+  const rawHome =
+    rawHomeEn || (await queryCollection(event, "content").path(`/${defaultLocale}`).first());
   const home = unwrapDoc(rawHome);
   if (!home) return "";
 
@@ -59,10 +68,15 @@ export default defineEventHandler(async (event) => {
   const rawDocs = await queryCollection(event, "content").all();
   const allDocs = rawDocs.map((d) => unwrapDoc(d)).filter((d): d is LlmContentDoc => d !== null);
 
-  // Helper to ensure absolute URLs
+  // Helper to ensure canonical absolute URLs
   const toAbsolute = (path: string) => {
     if (path.startsWith("http")) return path;
     return `${siteUrl}${path}`;
+  };
+
+  const toDocUrl = (doc: LlmContentDoc) => {
+    const canonicalPath = resolveCanonicalPath(doc as CanonicalizableDoc, defaultLocale);
+    return toAbsolute(canonicalPath);
   };
 
   // 1. Preamble
@@ -110,7 +124,7 @@ export default defineEventHandler(async (event) => {
 
       if (orgDocs.length > 0) {
         for (const doc of orgDocs) {
-          lines.push(`  - [${doc.title}](${toAbsolute(doc.path || "/")})`);
+          lines.push(`  - [${doc.title}](${toDocUrl(doc)})`);
         }
       }
     }
@@ -126,7 +140,7 @@ export default defineEventHandler(async (event) => {
   if (games.length > 0) {
     lines.push("## Products (Games)");
     for (const game of games) {
-      lines.push(`- [${game.title}](${toAbsolute(game.path || "/")})`);
+      lines.push(`- [${game.title}](${toDocUrl(game)})`);
       if (game.description) {
         lines.push(`  - ${game.description.trim()}`);
       }
@@ -146,7 +160,7 @@ export default defineEventHandler(async (event) => {
   if (lore.length > 0) {
     lines.push("## Lore & Worldbuilding");
     for (const item of lore) {
-      lines.push(`- [${item.title}](${toAbsolute(item.path || "/")})`);
+      lines.push(`- [${item.title}](${toDocUrl(item)})`);
       if (item.description) {
         lines.push(`  - ${item.description.trim()}`);
       }
@@ -154,28 +168,34 @@ export default defineEventHandler(async (event) => {
     lines.push("");
   }
 
-  // D. Multimedia & Social Satellites
-  // Fetch petri-leinonen.md for founder links as it was moved to its own page
-  const petriPath = `/${defaultLocale}/petri-leinonen`;
-  const rawPetriDoc = await queryCollection(event, "content")
-    .path(petriPath)
+  // E. Multimedia & Social Satellites
+  const rawPetriEn = await queryCollection(event, "content")
+    .path("/en/petri-leinonen")
     .first()
     .catch(() => null);
+  const rawPetriDoc =
+    rawPetriEn ||
+    (await queryCollection(event, "content")
+      .path(`/${defaultLocale}/petri-leinonen`)
+      .first()
+      .catch(() => null));
   const petriDoc = unwrapDoc(rawPetriDoc);
 
   const petriOrg = !Array.isArray(petriDoc?.organization) ? petriDoc?.organization : undefined;
   const homeOrg = !Array.isArray(home.organization) ? home.organization : undefined;
+  const subOrgLinks = (home.subOrganizations || []).flatMap((sub) => sub.sameAs || []);
 
   const founderSameAs =
     (typeof petriDoc?.author === "object" ? petriDoc.author.sameAs : null) ||
     petriOrg?.founder?.sameAs ||
     homeOrg?.founder?.sameAs;
 
-  if (home.sameAs || homeOrg?.sameAs || founderSameAs) {
+  if (home.sameAs || homeOrg?.sameAs || subOrgLinks.length > 0 || founderSameAs) {
     lines.push("## Multimedia & Social Satellites");
     const links = new Set([
       ...(home.sameAs || []),
       ...(homeOrg?.sameAs || []),
+      ...subOrgLinks,
       ...(founderSameAs || []),
     ]);
 

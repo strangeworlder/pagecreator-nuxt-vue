@@ -92,9 +92,9 @@ Eevenkoto-maailmaan sijoittuvia tuotteita ja julkaisuja:
 
 * [Tutustu kirjaan ja jälleenmyyjiin: Tervetuloa Eevenkotoon](/tervetuloaeevenkotoon)
 
-### Digitaalinen SRD ja tulevat aineistot
+### [Eevenko.to – Digitaalinen sääntöteos ja avoin SRD](https://eevenko.to)
 
-Eevenkodon sääntö- ja maailmamateriaaleista on tarkoitus julkaista avoin digitaalinen SRD-aineisto verkossa, mikä mahdollistaa materiaalin laajan hyödyntämisen ja verkkopohjaisen tarkastelun.
+Eevenkodon sääntö- ja maailmamateriaalit ovat luettavissa verkossa osoitteessa [**eevenko.to**](https://eevenko.to). Verkkopalvelu tarjoaa kaikille avoimen, CC-BY 4.0 -lisensoidun SRD-sääntöpohjan nopeaan tarkistukseen pelipöydässä, ja ilmaisella Steady-kirjautumisella sekä uutiskirjetilauksella käyttöön avautuvat myös laajat tarinatekstit, kehitysvaiheen *Vedos*-betasisällöt ja Markdown-tiedostolataukset.
 
 ### Ladattavat resurssit ja pelimateriaalit
 
